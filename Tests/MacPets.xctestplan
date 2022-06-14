@@ -1,0 +1,50 @@
+{
+  "configurations" : [
+    {
+      "id" : "AFB8C82A-5EEF-4CCC-AB47-725B9B8136CC",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MacPets.xcodeproj",
+      "identifier" : "A65FE35C283D80C900D1F5C8",
+      "name" : "MacPets"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MacPets.xcodeproj",
+        "identifier" : "A65FE36D283D80CB00D1F5C8",
+        "name" : "MacPetsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Physics",
+        "identifier" : "PhysicsTests",
+        "name" : "PhysicsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Schwifty",
+        "identifier" : "SchwiftyTests",
+        "name" : "SchwiftyTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Squanch",
+        "identifier" : "SquanchTests",
+        "name" : "SquanchTests"
+      }
+    }
+  ],
+  "version" : 1
+}
