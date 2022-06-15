@@ -6,7 +6,7 @@ import Foundation
 
 extension Pet {
     
-    static let sloth = Pet(
+    public static let sloth = Pet(
         id: "sloth",
         doesFly: false,
         behaviors: [

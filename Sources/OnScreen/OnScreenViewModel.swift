@@ -3,6 +3,7 @@
 //
 
 import DesignSystem
+import Pets
 import Physics
 import SwiftUI
 import Schwifty

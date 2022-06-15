@@ -4,6 +4,8 @@
 
 import Combine
 import DesignSystem
+import InAppPurchases
+import Pets
 import Physics
 import Squanch
 import SwiftUI
@@ -51,7 +53,7 @@ private struct SelectionIndicator: View {
     }
 }
 
-struct PetPriceOverlay: View {
+public struct PetPriceOverlay: View {
     
     let species: Pet
     
@@ -60,7 +62,7 @@ struct PetPriceOverlay: View {
     var hasBeenPaid: Bool { pricing.didPay(for: species) }
     var canBuy: Bool { !isFree && !hasBeenPaid }
     
-    var body: some View {
+    public var body: some View {
         if canBuy {
             PetPriceView(species: species)
                 .positioned(.bottom)

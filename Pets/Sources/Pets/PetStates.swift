@@ -5,7 +5,7 @@
 import Foundation
 import SpriteKit
 
-enum PetState: Equatable {
+public enum PetState: Equatable {
     
     case freeFall
     case smokeOut
@@ -14,7 +14,7 @@ enum PetState: Equatable {
     case move
     case action(action: PetAction)
     
-    var description: String {
+    public var description: String {
         switch self {
         case .smokeOut: return "smokeOut"
         case .freeFall: return "freeFall"

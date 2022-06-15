@@ -3,8 +3,11 @@
 // 
 
 import DesignSystem
+import InAppPurchases
+import Lang
 import LaunchAtLogin
 import SwiftUI
+import Tracking
 
 // MARK: - Settings
 
@@ -27,14 +30,19 @@ struct SettingsView: View {
 // MARK: - Anonymous Tracking
 
 private struct AnonymousTracking: View {
-    
-    @EnvironmentObject var appState: AppState
-    
+        
     @State var showingDetails = false
+    
+    var enabled: Binding<Bool> = Binding {
+        AppState.global.statusBarIconEnabled
+    } set: { isEnabled in
+        AppState.global.trackingEnabled = isEnabled
+        Tracking.isEnabled = isEnabled
+    }
     
     var body: some View {
         HStack(spacing: .sm) {
-            Switch(Lang.Settings.anonymousTracking, appState.$trackingEnabled)
+            Switch(Lang.Settings.anonymousTracking, enabled)
             Image(systemName: "info.circle.fill")
                 .font(.regular, .icon)
                 .onTapGesture {

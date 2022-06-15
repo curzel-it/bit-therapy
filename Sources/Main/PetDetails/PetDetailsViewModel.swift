@@ -2,7 +2,10 @@
 // Pet Therapy.
 // 
 
+import Lang
+import InAppPurchases
 import SwiftUI
+import Tracking
 
 class PetDetailsViewModel: ObservableObject {
     
@@ -19,7 +22,7 @@ class PetDetailsViewModel: ObservableObject {
     var hasBeenPaid: Bool { pricing.didPay(for: child.species) }
     var canSelect: Bool { isFree || hasBeenPaid }
     var canBuy: Bool { !isFree && !hasBeenPaid }
-    var price: PetPrice? { pricing.prices[child.species.id] }
+    var price: PetPrice? { pricing.price(for: child.species) }
         
     init(isShown: Binding<Bool>, child: PetEntity) {
         self._isShown = isShown

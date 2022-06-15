@@ -3,8 +3,10 @@
 //
 
 import DesignSystem
+import LaunchAtLogin
 import SwiftUI
 import Schwifty
+import Tracking
 
 struct MainWindow: Scene {
     
@@ -20,6 +22,7 @@ struct MainWindow: Scene {
             return
         }
         showMainWindow()
+        trackAppLaunched()
     }
     
     static func hide() {
@@ -42,6 +45,16 @@ struct MainWindow: Scene {
         window.contentView?.addSubview(view)
         view.constrainToFillParent()
         window.show()
+    }
+    
+    private static func trackAppLaunched() {
+        let appState = AppState.global
+        Tracking.didLaunchApp(
+            gravityEnabled: appState.gravityEnabled,
+            petSize: appState.petSize,
+            launchAtLogin: LaunchAtLogin.isEnabled,
+            selectedPet: appState.selectedPet?.id ?? "none"
+        )
     }
 }
 

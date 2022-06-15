@@ -7,16 +7,16 @@ import Physics
 
 // MARK: - Action
 
-struct PetAction: Equatable {
+public struct PetAction: Equatable {
     
-    let id: String
-    let chance: Double
-    let facingDirection: CGVector?
+    public let id: String
+    public let chance: Double
+    public let facingDirection: CGVector?
     
     let size: CGSize?
     let position: PetActionPosition
     
-    var hasCustomPosition: Bool { position != .inPlace }
+    public var hasCustomPosition: Bool { position != .inPlace }
     
     init(
         id: String,
@@ -32,14 +32,14 @@ struct PetAction: Equatable {
         self.facingDirection = facingDirection
     }
     
-    func frame(from petFrame: CGRect, in habitatBounds: CGRect) -> CGRect {
+    public func frame(from petFrame: CGRect, in habitatBounds: CGRect) -> CGRect {
         CGRect(
             origin: position(from: petFrame, in: habitatBounds),
             size: size ?? petFrame.size
         )
     }
     
-    func position(from petFrame: CGRect, in habitatBounds: CGRect) -> CGPoint {
+    public func position(from petFrame: CGRect, in habitatBounds: CGRect) -> CGPoint {
         switch position {
         case .inPlace: return petFrame.origin
         case .topLeftCorner: return habitatBounds.topLeft
@@ -54,7 +54,7 @@ struct PetAction: Equatable {
 
 extension PetAction: CustomStringConvertible {
     
-    var description: String { id }
+    public var description: String { id }
 }
 
 // MARK: - Position

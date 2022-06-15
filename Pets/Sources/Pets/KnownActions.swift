@@ -7,7 +7,7 @@ import Physics
 
 extension PetAction {
     
-    static let idleFront = PetAction(id: "idle_front")
+    public static let idleFront = PetAction(id: "idle_front")
     
     static let backflip = PetAction(id: "backflip")
     static let eat = PetAction(id: "eat")

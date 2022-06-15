@@ -7,15 +7,15 @@ import Foundation
 
 // MARK: - Pet
 
-struct Pet: Equatable {
+public struct Pet: Equatable {
     
-    let id: String
-    let doesFly: Bool
-    let behaviors: [PetBehavior]
-    let speed: CGFloat 
-    let isPaid: Bool
+    public let id: String
+    public let doesFly: Bool
+    public let behaviors: [PetBehavior]
+    public let speed: CGFloat
+    public let isPaid: Bool
     
-    static func == (lhs: Pet, rhs: Pet) -> Bool {
+    public static func == (lhs: Pet, rhs: Pet) -> Bool {
         lhs.id == rhs.id
     }
 }

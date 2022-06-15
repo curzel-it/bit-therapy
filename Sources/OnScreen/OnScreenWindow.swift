@@ -3,6 +3,7 @@
 // 
 
 import Combine
+import Pets
 import Physics
 import Schwifty
 import SwiftUI

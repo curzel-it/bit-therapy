@@ -2,10 +2,11 @@
 // Pet Therapy.
 //
 
+import Pets
 import Physics
+import Schwifty
 import Squanch
 import SwiftUI
-import Schwifty
 
 class PetSprite: Sprite, ObservableObject {
     

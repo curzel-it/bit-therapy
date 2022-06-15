@@ -3,13 +3,19 @@
 //
 
 import DesignSystem
+import Lang
 import SwiftUI
+import Tracking
 
-struct RestorePurchasesButton: View {
+public struct RestorePurchasesButton: View {
     
     @StateObject private var viewModel = ViewModel()
     
-    var body: some View {
+    public init() {
+        // ...
+    }
+    
+    public var body: some View {
         Button(viewModel.title) {
             viewModel.restore()
             Tracking.didRestorePurchases()

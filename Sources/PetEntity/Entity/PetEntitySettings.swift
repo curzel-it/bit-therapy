@@ -2,9 +2,10 @@
 // Pet Therapy.
 //
 
-import DesignSystem
-import Physics
 import AppKit
+import DesignSystem
+import Pets
+import Physics
 
 // MARK: - Id
 

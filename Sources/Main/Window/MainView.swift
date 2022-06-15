@@ -3,10 +3,13 @@
 //
 
 import DesignSystem
+import Lang
 import SwiftUI
 import Schwifty
 
 struct MainView: View {
+    
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
         VStack(spacing: .lg) {
@@ -20,13 +23,12 @@ struct MainView: View {
         .foregroundColor(.label)
         .font(.regular, .md)
         .environmentObject(AppState.global)
-        .onAppear { Tracking.didLaunchApp() }
     }
 }
 
 extension AppPage: Tabbable {
     
-    var description: String { title }
+    var description: String { "page.title.\(rawValue)".localized() }
 }
 
 private struct Header: View {
@@ -59,7 +61,7 @@ private struct PageTitle: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        Text(appState.selectedPage.title)
+        Text(appState.selectedPage.description)
             .textAlign(.center)
             .font(.bold, .title)
             .padding()

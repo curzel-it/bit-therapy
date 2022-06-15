@@ -6,7 +6,7 @@ import Foundation
 
 extension Pet {
     
-    static let species: [Pet] = [
+    public static let species: [Pet] = [
         .sloth, .slothSwag
     ]
 }
