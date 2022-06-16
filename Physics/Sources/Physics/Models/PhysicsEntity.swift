@@ -10,6 +10,7 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     @Published public private(set) var direction: CGVector = .zero
     @Published public var speed: CGFloat = 0
     @Published public var angle: CGFloat = 0
+    @Published public var isAlive = true
     
     public let id: String
     
@@ -20,16 +21,12 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     public var isEphemeral: Bool = false
     public var backgroundColor: Color = .clear
     
-    private var isAlive = true
+    public let habitatBounds: CGRect
     
-    public init(
-        id: String,
-        frame: CGRect,
-        behaviors: [EntityBehavior.Type] = []
-    ) {
+    public init(id: String, frame: CGRect, in habitatBounds: CGRect) {
         self.id = id
         self.frame = frame
-        self.behaviors = behaviors.map { $0.init(with: self) }
+        self.habitatBounds = habitatBounds
     }
     
     // MARK: - Direction
@@ -43,10 +40,10 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     // MARK: - Update
     
     open func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isAlive else { return }
-        
-        behaviors.forEach {
-            $0.update(with: collisions, after: time)
+        if isAlive {
+            behaviors.forEach {
+                $0.update(with: collisions, after: time)
+            }
         }
         sprites.forEach {
             $0.update(with: collisions, after: time)
@@ -54,6 +51,18 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     }
     
     // MARK: - Behaviors
+    
+    @discardableResult
+    public func install<T: EntityBehavior>(_ bType: T.Type) -> T {
+        let behavior = bType.init(with: self)
+        behaviors.append(behavior)
+        return behavior
+    }
+    
+    @discardableResult
+    public func installAll<T: EntityBehavior>(_ bTypes: [T.Type]) -> [T] {
+        bTypes.map { install($0) }
+    }
     
     public func behavior<T: EntityBehavior>(for bType: T.Type) -> T? {
         behaviors.first { $0 as? T != nil } as? T
@@ -70,7 +79,12 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     }
     
     // MARK: - Memory Management
-    
+
+    open func kill(animated: Bool, onCompletion: @escaping () -> Void) {
+        kill()
+        onCompletion()
+    }
+
     open func kill() {
         uninstallAllBehaviors()
         sprites.forEach { $0.kill() }

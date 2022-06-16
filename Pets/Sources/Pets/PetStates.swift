@@ -8,7 +8,7 @@ import SpriteKit
 public enum PetState: Equatable {
     
     case freeFall
-    case smokeOut
+    case smokeBomb
     case drag
     case jump
     case move
@@ -16,7 +16,7 @@ public enum PetState: Equatable {
     
     public var description: String {
         switch self {
-        case .smokeOut: return "smokeOut"
+        case .smokeBomb: return "smokeBomb"
         case .freeFall: return "freeFall"
         case .jump: return "jump"
         case .drag: return "drag"

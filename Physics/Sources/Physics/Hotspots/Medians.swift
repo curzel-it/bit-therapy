@@ -4,15 +4,16 @@
 
 import Foundation
 
-func verticalCenter(habitatSize: CGSize) -> PhysicsEntity {
+func verticalCenter(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.verticalCenter.rawValue,
         frame: CGRect(
             x: 0,
-            y: habitatSize.height/2,
-            width: habitatSize.width,
+            y: habitatBounds.height/2,
+            width: habitatBounds.width,
             height: 1
-        )
+        ),
+        in: habitatBounds
     )
     entity.isEphemeral = true
     entity.isStatic = true
@@ -21,15 +22,16 @@ func verticalCenter(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func horizontalCenter(habitatSize: CGSize) -> PhysicsEntity {
+func horizontalCenter(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.horizontalCenter.rawValue,
         frame: CGRect(
-            x: habitatSize.width/2,
+            x: habitatBounds.width/2,
             y: 0,
             width: 1,
-            height: habitatSize.height
-        )
+            height: habitatBounds.height
+        ),
+        in: habitatBounds
     )
     entity.isEphemeral = true
     entity.isStatic = true
@@ -38,15 +40,16 @@ func horizontalCenter(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func center(habitatSize: CGSize) -> PhysicsEntity {
+func center(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.center.rawValue,
         frame: CGRect(
-            x: habitatSize.width/2,
-            y: habitatSize.height/2,
+            x: habitatBounds.width/2,
+            y: habitatBounds.height/2,
             width: 1,
             height: 1
-        )
+        ),
+        in: habitatBounds
     )
     entity.isEphemeral = true
     entity.isStatic = true

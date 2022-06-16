@@ -12,7 +12,7 @@ open class HabitatViewModel: ObservableObject {
     public var timer: Timer!
     
     private var lastUpdate: TimeInterval
-    
+        
     let fps: Double = 15
     
     public init() {
@@ -43,9 +43,25 @@ open class HabitatViewModel: ObservableObject {
         timer = nil
     }
     
-    public func kill() {
-        pauseRendering()
-        state.children.forEach { $0.kill() }
-        state.children.removeAll()
+    open func kill(animated: Bool) {
+        if animated {
+            state.children
+                .enumerated()
+                .forEach { index, item in
+                    if index == 0 {
+                        item.kill(animated: true) { [weak self] in
+                            self?.kill(animated: false)
+                        }
+                    } else {
+                        item.kill(animated: true) { }
+                    }
+                }
+            printDebug("Habitat", "Terminating...")
+        } else {
+            pauseRendering()
+            state.children.forEach { $0.kill() }
+            state.children.removeAll()
+            printDebug("Habitat", "Terminated.")
+        }
     }
 }

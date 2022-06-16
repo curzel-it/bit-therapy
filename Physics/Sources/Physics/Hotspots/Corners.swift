@@ -4,7 +4,7 @@
 
 import Foundation
 
-func topLeftCorner(habitatSize: CGSize) -> PhysicsEntity {
+func topLeftCorner(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.topLeftCorner.rawValue,
         frame: CGRect(
@@ -12,7 +12,8 @@ func topLeftCorner(habitatSize: CGSize) -> PhysicsEntity {
             y: 0,
             width: 1,
             height: 1
-        )
+        ),
+        in: habitatBounds
     )
     entity.isEphemeral = true
     entity.isStatic = true
@@ -21,15 +22,16 @@ func topLeftCorner(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func bottomLeftCorner(habitatSize: CGSize) -> PhysicsEntity {
+func bottomLeftCorner(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.bottomLeftCorner.rawValue,
         frame: CGRect(
             x: 0,
-            y: habitatSize.height,
+            y: habitatBounds.height,
             width: 1,
             height: 1
-        )
+        ),
+        in: habitatBounds
     )
     entity.isEphemeral = true
     entity.isStatic = true
@@ -38,15 +40,16 @@ func bottomLeftCorner(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func topRightCorner(habitatSize: CGSize) -> PhysicsEntity {
+func topRightCorner(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.topRightCorner.rawValue,
         frame: CGRect(
-            x: habitatSize.width,
+            x: habitatBounds.width,
             y: 0,
             width: 1,
             height: 1
-        )
+        ),
+        in: habitatBounds
     )
     entity.isEphemeral = true
     entity.isStatic = true
@@ -55,15 +58,16 @@ func topRightCorner(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func bottomRightCorner(habitatSize: CGSize) -> PhysicsEntity {
+func bottomRightCorner(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.bottomRightCorner.rawValue,
         frame: CGRect(
-            x: habitatSize.width,
-            y: habitatSize.height,
+            x: habitatBounds.width,
+            y: habitatBounds.height,
             width: 1,
             height: 1
-        )
+        ),
+        in: habitatBounds
     )
     entity.isEphemeral = true
     entity.isStatic = true

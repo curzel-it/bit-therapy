@@ -2,33 +2,94 @@
 // Pet Therapy.
 //
 
-import DesignSystem
+import AppKit
+import AppState
+import EntityWindow
+import PetEntity
 import Pets
 import Physics
-import SwiftUI
-import Schwifty
 
 class OnScreenViewModel: HabitatViewModel {
     
-    var positionBeforeDrag: CGPoint?
+    fileprivate var windowsManager: WindowsManager?
     
-    var pet: PetEntity!
-    
-    init(for preferredSpecies: Pet?) {
-        let species = preferredSpecies ?? AppState.global.selectedPet ?? .sloth
+    override init() {
         super.init()
-        pet = PetEntity(species, in: state.bounds)
+        addSelectedPet()
+    }
+    
+    func spawnWindows() {
+        windowsManager = WindowsManager(for: self)
+        
+        state.children
+            .filter { $0.isDrawable }
+            .map { window(representing: $0) }
+            .forEach { window in
+                window.delegate = windowsManager
+                window.show()
+            }
+    }
+    
+    func addSelectedPet() {
+        addPet(for: AppState.global.selectedPet ?? .sloth)
+    }
+    
+    private func addPet(for species: Pet) {
+        let pet = PetEntity(species, in: state.bounds)
+        pet.install(MouseDraggablePet.self)
+        pet.install(ShowsMenuOnRightClick.self)
+        pet.install(MovesLinearly.self)
+        pet.install(ChangesStateOnHotspot.self)
+        pet.install(ResumeMovementAfterAnimations.self)
+        pet.install(BouncesOnCollision.self)
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
     }
     
-    func onTouchDown() {
-        pet.set(state: .drag)
-        pet.movement?.isEnabled = false
+    private func window(representing entity: PhysicsEntity) -> EntityWindow {
+        if let pet = entity as? PetEntity {
+            return PetWindow(representing: pet, in: self)
+        } else {
+            return EntityWindow(representing: entity, in: self)
+        }
     }
     
-    func onTouchUp() {
-        pet.set(state: .move)
-        pet.movement?.isEnabled = true
+    override func kill(animated: Bool) {
+        super.kill(animated: animated)
+        if !animated {
+            windowsManager?.viewModel = nil
+            windowsManager?.kill()
+            windowsManager = nil
+        }
+    }
+}
+
+private class WindowsManager: NSObject, NSWindowDelegate {
+    
+    private var windows: [EntityWindow] = []
+    
+    weak var viewModel: OnScreenViewModel?
+    
+    init(for viewModel: OnScreenViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    func windowWillClose(_ notification: Notification) {
+        guard windows.count > 0 else { return }
+        guard let windowBeingClosed = notification.object as? EntityWindow else { return }
+        windows.removeAll { $0 == windowBeingClosed }
+        if windows.count == 0 { kill() }
+    }
+    
+    func kill() {
+        windows.forEach { window in
+            window.delegate = nil
+            if window.isVisible {
+                window.close()
+            }
+        }
+        windows = []
+        viewModel?.windowsManager = nil
+        viewModel?.kill(animated: false)
     }
 }

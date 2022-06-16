@@ -7,15 +7,16 @@ import Foundation
 private let boundDistanceAfterScreenEnd: CGFloat = 100
 private let boundsThickness: CGFloat = 200
 
-func bottomBound(habitatSize: CGSize) -> PhysicsEntity {
+func bottomBound(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.bottomBound.rawValue,
         frame: CGRect(
             x: -boundDistanceAfterScreenEnd,
-            y: habitatSize.height,
-            width: habitatSize.width + boundDistanceAfterScreenEnd*2,
+            y: habitatBounds.height,
+            width: habitatBounds.width + boundDistanceAfterScreenEnd*2,
             height: boundsThickness
-        )
+        ),
+        in: habitatBounds
     )
     entity.isStatic = true
     entity.isDrawable = false
@@ -23,15 +24,16 @@ func bottomBound(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func topBound(habitatSize: CGSize) -> PhysicsEntity {
+func topBound(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.topBound.rawValue,
         frame: CGRect(
             x: 0,
             y: -boundsThickness,
-            width: habitatSize.width,
+            width: habitatBounds.width,
             height: boundsThickness
-        )
+        ),
+        in: habitatBounds
     )
     entity.isStatic = true
     entity.isDrawable = false
@@ -39,15 +41,16 @@ func topBound(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func leftBound(habitatSize: CGSize) -> PhysicsEntity {
+func leftBound(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.leftBound.rawValue,
         frame: CGRect(
             x: 0 - boundsThickness - boundDistanceAfterScreenEnd,
             y: 0,
             width: boundsThickness,
-            height: habitatSize.height
-        )
+            height: habitatBounds.height
+        ),
+        in: habitatBounds
     )
     entity.isStatic = true
     entity.isDrawable = false
@@ -55,15 +58,16 @@ func leftBound(habitatSize: CGSize) -> PhysicsEntity {
     return entity
 }
 
-func rightBound(habitatSize: CGSize) -> PhysicsEntity {
+func rightBound(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.rightBound.rawValue,
         frame: CGRect(
-            x: habitatSize.width + boundDistanceAfterScreenEnd,
+            x: habitatBounds.width + boundDistanceAfterScreenEnd,
             y: 0,
             width: boundsThickness,
-            height: habitatSize.height
-        )
+            height: habitatBounds.height
+        ),
+        in: habitatBounds
     )
     entity.isStatic = true
     entity.isDrawable = false

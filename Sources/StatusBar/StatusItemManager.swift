@@ -3,6 +3,7 @@
 // 
 
 import AppKit
+import AppState
 import SwiftUI
 
 class StatusBarItems {
@@ -71,11 +72,11 @@ class MainStatusBarItem: NSObject {
     }
     
     @objc private func hidePet() {
-        OnScreenWindow.hide()
+        OnScreen.hide()
     }
     
     @objc private func showPet() {
-        OnScreenWindow.show(onlyIfNeeded: true)
+        OnScreen.show()
     }
     
     @objc private func closeApp() {

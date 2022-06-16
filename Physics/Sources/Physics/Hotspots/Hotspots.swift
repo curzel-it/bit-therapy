@@ -26,19 +26,19 @@ extension World {
     
     func hotspots() -> [PhysicsEntity] {
         [
-            topBound(habitatSize: bounds.size),
-            bottomBound(habitatSize: bounds.size),
-            leftBound(habitatSize: bounds.size),
-            rightBound(habitatSize: bounds.size),
+            topBound(in: bounds),
+            bottomBound(in: bounds),
+            leftBound(in: bounds),
+            rightBound(in: bounds),
             
-            center(habitatSize: bounds.size),
-            horizontalCenter(habitatSize: bounds.size),
-            verticalCenter(habitatSize: bounds.size),
+            center(in: bounds),
+            horizontalCenter(in: bounds),
+            verticalCenter(in: bounds),
             
-            topLeftCorner(habitatSize: bounds.size),
-            bottomLeftCorner(habitatSize: bounds.size),
-            topRightCorner(habitatSize: bounds.size),
-            bottomRightCorner(habitatSize: bounds.size)
+            topLeftCorner(in: bounds),
+            bottomLeftCorner(in: bounds),
+            topRightCorner(in: bounds),
+            bottomRightCorner(in: bounds)
         ]
     }
 }

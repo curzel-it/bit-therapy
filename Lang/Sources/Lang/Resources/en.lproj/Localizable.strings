@@ -27,7 +27,6 @@
 // MARK: - Pet Selection
 
 "petSelection.showPet" = "Show Pet";
-"petSelection.trackingAlert" = "We send anonymous usage stats, you can opt-out from settings!";
 
 // MARK: - Settings
 

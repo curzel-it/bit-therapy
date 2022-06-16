@@ -16,14 +16,6 @@ open class Sprite: Identifiable {
         self.currentFrame = nil
     }
     
-    public init(fixedImage: NSImage?) {
-        self.currentFrame = fixedImage
-    }
-    
-    public init(fixedImage: String?) {
-        self.currentFrame = NSImage(named: fixedImage ?? "")
-    }
-    
     open func update(with collisions: Collisions, after time: TimeInterval) {
         // ...
     }

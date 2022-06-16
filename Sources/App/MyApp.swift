@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import AppState
 import InAppPurchases
 import SwiftUI
 import Schwifty
@@ -14,7 +15,7 @@ struct MyApp: App {
         Tracking.setup(isEnabled: AppState.global.trackingEnabled)
         PricingService.global.setup()
         Task { @MainActor in
-            OnScreenWindow.show(onlyIfNeeded: true)
+            OnScreen.show()
             StatusBarItems.main.setup()
         }
     }

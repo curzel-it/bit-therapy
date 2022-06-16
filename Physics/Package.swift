@@ -11,6 +11,7 @@ let package = Package(
             targets: ["Physics"])
     ],
     dependencies: [
+        .package(path: "../DesignSystem"),
         .package(path: "../Squanch"),
         .package(path: "../Schwifty")
     ],
@@ -18,6 +19,7 @@ let package = Package(
         .target(
             name: "Physics",
             dependencies: [
+                .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Schwifty", package: "Schwifty")
             ]),

@@ -6,7 +6,7 @@ import SwiftUI
 
 public struct World {
     
-    public var bounds: CGRect
+    public let bounds: CGRect
     public var children: [PhysicsEntity] = []
     
     public init(bounds rect: CGRect) {
@@ -16,10 +16,11 @@ public struct World {
     }
     
     public mutating func update(after time: TimeInterval) {
-        children.forEach { child in
-            guard !child.isStatic else { return }
-            let collisions = child.collisions(with: children)
-            child.update(with: collisions, after: time)
-        }
+        children
+            .filter { !$0.isStatic }
+            .forEach { child in
+                let collisions = child.collisions(with: children)
+                child.update(with: collisions, after: time)
+            }
     }
 }

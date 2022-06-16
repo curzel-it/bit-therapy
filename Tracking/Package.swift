@@ -12,6 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(path: "../Lang"),
         .package(path: "../Pets"),
         .package(path: "../Squanch")
     ],
@@ -19,6 +20,7 @@ let package = Package(
         .target(
             name: "Tracking",
             dependencies: [
+                .product(name: "Lang", package: "Lang"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Squanch", package: "Squanch")
             ]

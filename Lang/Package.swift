@@ -13,12 +13,14 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(path: "../AppState"),
         .package(path: "../Pets")
     ],
     targets: [
         .target(
             name: "Lang",
             dependencies: [
+                .product(name: "AppState", package: "AppState"),
                 .product(name: "Pets", package: "Pets")
             ],
             resources: [

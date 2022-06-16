@@ -2,9 +2,10 @@
 // Pet Therapy.
 //
 
-import Foundation
+import Lang
 import Pets
 import Squanch
+import SwiftUI
 
 // MARK: - Setup
 
@@ -38,11 +39,11 @@ extension Tracking {
         // ...
     }
     
-    public static func didEnterDetails(of pet: Pet) {
+    public static func didEnterDetails(of pet: Pet, price: Double, purchased: Bool) {
         // ...
     }
     
-    public static func didBuy(_ pet: Pet, success: Bool) {
+    public static func purchased(pet: Pet, price: Double, success: Bool) {
         // ...
     }
 }

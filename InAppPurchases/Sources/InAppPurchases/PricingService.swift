@@ -19,19 +19,19 @@ public class PricingService: ObservableObject {
     // MARK: - Restore
     
     func restorePurchases() async -> Bool {
-        return true
+        return false
     }
     
     // MARK: - Buy
     
     public func buy(_ item: PetPrice) async -> Bool {
-        return true
+        return false
     }
     
     // MARK: - Purchases
     
     public func didPay(for species: Pet) -> Bool {
-        return false
+        return true
     }
     
     public func price(for species: Pet) -> PetPrice? {
@@ -44,6 +44,8 @@ public class PricingService: ObservableObject {
 public struct PetPrice {
     
     public var price: Decimal { 0 }
+    
+    public var doublePrice: Double { 0 }
     
     public var formattedPrice: String? { nil }
 }

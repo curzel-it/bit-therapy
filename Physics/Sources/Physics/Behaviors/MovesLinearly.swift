@@ -23,3 +23,10 @@ public class MovesLinearly: EntityBehavior {
         )
     }
 }
+
+extension PhysicsEntity {
+    
+    public var movement: MovesLinearly? {
+        behavior(for: MovesLinearly.self)
+    }
+}

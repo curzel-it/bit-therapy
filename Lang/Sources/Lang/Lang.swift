@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import AppState
 import Foundation
 import Pets
 
@@ -50,7 +51,6 @@ public class Lang {
     public class PetSelection {
         
         public static let showPet = "petSelection.showPet".localized()
-        public static let trackingAlert = "petSelection.trackingAlert".localized()
     }
     
     // MARK: - Purchases
@@ -70,6 +70,13 @@ extension Pet {
     
     public var name: String { "pet.name.\(id)".localized() }
     public var about: String { "pet.about.\(id)".localized() }
+}
+
+// MARK: - App Page
+
+extension AppPage {
+    
+    public var description: String { "page.title.\(rawValue)".localized() }
 }
 
 // MARK: - Utils

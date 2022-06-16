@@ -43,8 +43,7 @@ public class AnimatedImage {
         leftoverTime = timeSinceLastFrameChange - usedTime
         
         let nextFrame = currentFrameIndex + framesSkipped
-        let currentFrameIndex = nextFrame % frames.count
-        self.currentFrameIndex = currentFrameIndex
+        currentFrameIndex = nextFrame % frames.count
     }
 }
 
