@@ -124,7 +124,7 @@ public struct PetPrice {
     }
     
     public var price: Decimal {
-        package.storeProduct.price        
+        package.storeProduct.price
     }
     
     public var doublePrice: Double {

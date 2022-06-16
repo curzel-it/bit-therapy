@@ -33,19 +33,47 @@ public struct PetAction: Equatable {
     }
     
     public func frame(from petFrame: CGRect, in habitatBounds: CGRect) -> CGRect {
-        CGRect(
-            origin: position(from: petFrame, in: habitatBounds),
-            size: size ?? petFrame.size
+        let newSize = size(for: petFrame.size)
+        let newPosition = position(
+            originalFrame: petFrame,
+            newSize: newSize,
+            in: habitatBounds
+        )
+        return CGRect(origin: newPosition, size: newSize)
+    }
+    
+    private func size(for originalSize: CGSize) -> CGSize {
+        guard let customSize = size else { return originalSize }
+        return CGSize(
+            width: customSize.width * originalSize.width,
+            height: customSize.height * originalSize.height
         )
     }
     
-    public func position(from petFrame: CGRect, in habitatBounds: CGRect) -> CGPoint {
+    private func position(
+        originalFrame petFrame: CGRect,
+        newSize: CGSize,
+        in habitatBounds: CGRect
+    ) -> CGPoint {
         switch position {
-        case .inPlace: return petFrame.origin
-        case .topLeftCorner: return habitatBounds.topLeft
-        case .topRightCorner: return habitatBounds.topRight.offset(x: -petFrame.width)
-        case .bottomRightCorner: return habitatBounds.bottomRight.offset(by: petFrame.size.oppositeSign())
-        case .bottomLeftCorner: return habitatBounds.bottomLeft.offset(y: -petFrame.height)
+            
+        case .inPlace:
+            return petFrame
+                .origin
+                .offset(x: -newSize.width / 2)
+                .offset(y: -newSize.height / 2)
+            
+        case .topLeftCorner:
+            return habitatBounds.topLeft
+            
+        case .topRightCorner:
+            return habitatBounds.topRight.offset(x: -petFrame.width)
+            
+        case .bottomRightCorner:
+            return habitatBounds.bottomRight.offset(by: petFrame.size.oppositeSign())
+            
+        case .bottomLeftCorner:
+            return habitatBounds.bottomLeft.offset(y: -petFrame.height)
         }
     }
 }

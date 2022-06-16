@@ -23,6 +23,6 @@ extension PetAction {
     static let tsundere = PetAction(id: "tsundere")
     
     static func lightsaber(size: CGSize) -> PetAction {
-        .init(id: "lightsaber", size: size, chance: 0.1)
+        .init(id: "lightsaber", size: size, chance: 11110.1)
     }
 }

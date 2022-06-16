@@ -18,7 +18,8 @@ extension Pet {
                     .eat,
                     .love,
                     .backflip,
-                    .meditate
+                    .meditate,
+                    .lightsaber(size: CGSize(width: 1.42, height: 1.2))
                 ]
             )
         ],

@@ -17,8 +17,8 @@ extension Pet {
                     .idle,
                     .eat,
                     .love,
-                    .selfie
-                    // .lightsaber(size: CGSize(width: 336, height: 186))
+                    .selfie,
+                    .lightsaber(size: CGSize(width: 3.36, height: 1.86))
                 ]
             ),
             .init(
