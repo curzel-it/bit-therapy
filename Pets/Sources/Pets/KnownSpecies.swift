@@ -3,10 +3,26 @@
 // 
 
 import Foundation
+import Squanch
 
 extension Pet {
     
-    public static let species: [Pet] = [
-        .sloth, .slothSwag
+    private static let allSpecies: [Pet] = [
+        .sloth, .slothSwag,
+        .trex, .trexBlue, .trexViolet, .trexYellow,
+        .crow, .crowWhite,
+        .panda, .pandaVest,
+        .koala, .koalaPirate,
+        .betta
     ]
+    
+    public static let availableSpecies: [Pet] = {
+        allSpecies
+            .filter { species in
+                let frame = "\(species.id)_idle_front-0"
+                let path = Bundle.main.path(forResource: frame, ofType: "png")
+                if path == nil { printDebug("Pet", species.id, "is not available") }
+                return path != nil
+            }
+    }()
 }

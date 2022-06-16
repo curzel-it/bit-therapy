@@ -18,15 +18,6 @@ Hope you like them too!
 
 ![Screenshot of my mac running the app](Gallery/2.png)
 
-## Open Source vs Production Code
-
-The open source version of the App is missing a few pieces when compared to the App Store version: 
-* Integration with Firebase has been removed
-* In-App purchases have been removed
-* Only a subset of pets are available 
-
-This does sound fair to me, but I am open to discussions about the openness of the project! 
-
 ## Running the Project
 
 1. Download and setup Xcode

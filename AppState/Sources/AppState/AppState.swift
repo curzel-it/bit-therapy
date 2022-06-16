@@ -43,7 +43,7 @@ public class AppState: ObservableObject {
     @AppStorage("petId") private var petId: String = Pet.sloth.id
         
     private init() {
-        if let pet = Pet.species.first(where: { $0.id == petId }) {
+        if let pet = Pet.availableSpecies.first(where: { $0.id == petId }) {
             selectedPet = pet
         }
         petSize = petSizeValue

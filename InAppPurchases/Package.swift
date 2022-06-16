@@ -12,6 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0"),
         .package(path: "../Lang"),
         .package(path: "../Physics"),
         .package(path: "../Squanch"),
@@ -21,6 +22,7 @@ let package = Package(
         .target(
             name: "InAppPurchases",
             dependencies: [
+                .product(name: "RevenueCat", package: "purchases-ios"),
                 .product(name: "Lang", package: "Lang"),
                 .product(name: "Physics", package: "Physics"),
                 .product(name: "Squanch", package: "Squanch"),

@@ -28,7 +28,7 @@ class PetSelectionViewModel: HabitatViewModel {
     
     override init() {
         super.init()
-        let pets = Pet.species.map {
+        let pets = Pet.availableSpecies.map {
             SelectablePet($0, size: petSize, in: state.bounds)
         }
         state.children.append(contentsOf: pets)

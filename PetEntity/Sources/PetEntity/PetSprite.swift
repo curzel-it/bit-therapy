@@ -45,7 +45,7 @@ class PetSprite: Sprite, ObservableObject {
     }
     
     private func animationPathForLastState() -> String {
-        if case .smokeBomb = lastState { return "smoke_out" }
+        if case .smokeBomb = lastState { return "smoke_bomb" }
         let action = lastState.actionPath(for: species)
         return "\(species.id)_\(action)"
     }
@@ -65,7 +65,7 @@ extension PetState {
     
     func actionPath(for pet: Pet) -> String {
         switch self {
-        case .smokeBomb: return "smoke_out"
+        case .smokeBomb: return "smoke_bomb"
         case .freeFall: return "drag"
         case .jump: return "jump"
         case .drag: return "drag"
