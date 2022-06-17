@@ -47,7 +47,7 @@ class FullScreenViewModel: HabitatViewModel {
         pet.install(LinearMovement.self)
         pet.install(ReactToHotspots.self)
         pet.install(ResumeMovementAfterAnimations.self)
-        pet.install(BounceOnLateralCollision.self)
+        pet.install(BounceOffLateralBounds.self)
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
     }

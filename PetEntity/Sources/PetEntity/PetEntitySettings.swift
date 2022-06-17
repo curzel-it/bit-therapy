@@ -55,11 +55,11 @@ extension Pet {
         switch movement {
         case .fly: return [
             LinearMovement.self,
-            BounceOnLateralCollision.self
+            BounceOffLateralBounds.self
         ]            
         case .walk: return [
             LinearMovement.self,
-            BounceOnLateralCollision.self,
+            BounceOffLateralBounds.self,
             PetGravity.self
         ]
         case .wallCrawler: return [

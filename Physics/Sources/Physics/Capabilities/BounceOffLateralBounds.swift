@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-open class BounceOnLateralCollision: Capability {
+open class BounceOffLateralBounds: Capability {
     
     override open func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
