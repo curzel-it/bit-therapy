@@ -13,7 +13,6 @@
 		A60BAAB8283D82C30030F8F0 /* Dogica_Pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60B9C09283D82BE0030F8F0 /* Dogica_Pixel.ttf */; };
 		A60BAAB9283D82C30030F8F0 /* Dogica_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60B9C0A283D82BE0030F8F0 /* Dogica_Bold.ttf */; };
 		A60BAABA283D82C30030F8F0 /* Dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60B9C0B283D82BE0030F8F0 /* Dogica.ttf */; };
-		A60BAAC0283D83EA0030F8F0 /* MacPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B8C9D283D81E40030F8F0 /* MacPetsTests.swift */; };
 		A62039F9284CB23A00E42468 /* smoke_bomb-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6202ED7284CB23500E42468 /* smoke_bomb-8.png */; };
 		A62039FA284CB23A00E42468 /* smoke_bomb-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6202ED8284CB23500E42468 /* smoke_bomb-9.png */; };
 		A62039FB284CB23A00E42468 /* smoke_bomb-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6202ED9284CB23500E42468 /* smoke_bomb-2.png */; };
@@ -505,6 +504,67 @@
 		A67373CA2853881E002DC8FA /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A67373C92853881E002DC8FA /* Schwifty */; };
 		A67373CC28538974002DC8FA /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A67373CB28538974002DC8FA /* DesignSystem */; };
 		A67373CE28538974002DC8FA /* Physics in Frameworks */ = {isa = PBXBuildFile; productRef = A67373CD28538974002DC8FA /* Physics */; };
+		A6C0315C285BEF3D001C49D1 /* snail_idle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C030FC285BEF3C001C49D1 /* snail_idle-2.png */; };
+		A6C0315D285BEF3D001C49D1 /* snail_idle-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C030FD285BEF3C001C49D1 /* snail_idle-3.png */; };
+		A6C0315E285BEF3D001C49D1 /* snail_idle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C030FE285BEF3C001C49D1 /* snail_idle-1.png */; };
+		A6C0315F285BEF3D001C49D1 /* snail_idle-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C030FF285BEF3C001C49D1 /* snail_idle-0.png */; };
+		A6C03160285BEF3D001C49D1 /* snail_idle-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03100285BEF3C001C49D1 /* snail_idle-4.png */; };
+		A6C03161285BEF3D001C49D1 /* snail_idle-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03101285BEF3C001C49D1 /* snail_idle-5.png */; };
+		A6C03162285BEF3D001C49D1 /* snail_idle-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03102285BEF3C001C49D1 /* snail_idle-7.png */; };
+		A6C03163285BEF3D001C49D1 /* snail_idle-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03103285BEF3C001C49D1 /* snail_idle-6.png */; };
+		A6C03164285BEF3D001C49D1 /* snail_idle-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03104285BEF3C001C49D1 /* snail_idle-14.png */; };
+		A6C03165285BEF3D001C49D1 /* snail_idle-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03105285BEF3C001C49D1 /* snail_idle-10.png */; };
+		A6C03166285BEF3D001C49D1 /* snail_idle-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03106285BEF3C001C49D1 /* snail_idle-11.png */; };
+		A6C03167285BEF3D001C49D1 /* snail_idle-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03107285BEF3C001C49D1 /* snail_idle-13.png */; };
+		A6C03168285BEF3D001C49D1 /* snail_idle-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03108285BEF3C001C49D1 /* snail_idle-12.png */; };
+		A6C03169285BEF3D001C49D1 /* snail_idle-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03109285BEF3C001C49D1 /* snail_idle-8.png */; };
+		A6C0316A285BEF3D001C49D1 /* snail_idle-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0310A285BEF3C001C49D1 /* snail_idle-9.png */; };
+		A6C0316B285BEF3D001C49D1 /* snail_idle_front-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0310C285BEF3C001C49D1 /* snail_idle_front-14.png */; };
+		A6C0316C285BEF3D001C49D1 /* snail_idle_front-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0310D285BEF3C001C49D1 /* snail_idle_front-8.png */; };
+		A6C0316D285BEF3D001C49D1 /* snail_idle_front-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0310E285BEF3C001C49D1 /* snail_idle_front-12.png */; };
+		A6C0316E285BEF3D001C49D1 /* snail_idle_front-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0310F285BEF3C001C49D1 /* snail_idle_front-13.png */; };
+		A6C0316F285BEF3D001C49D1 /* snail_idle_front-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03110285BEF3C001C49D1 /* snail_idle_front-9.png */; };
+		A6C03170285BEF3D001C49D1 /* snail_idle_front-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03111285BEF3C001C49D1 /* snail_idle_front-11.png */; };
+		A6C03171285BEF3D001C49D1 /* snail_idle_front-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03112285BEF3C001C49D1 /* snail_idle_front-10.png */; };
+		A6C03172285BEF3D001C49D1 /* snail_idle_front-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03113285BEF3C001C49D1 /* snail_idle_front-7.png */; };
+		A6C03173285BEF3D001C49D1 /* snail_idle_front-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03114285BEF3C001C49D1 /* snail_idle_front-6.png */; };
+		A6C03174285BEF3D001C49D1 /* snail_idle_front-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03115285BEF3C001C49D1 /* snail_idle_front-4.png */; };
+		A6C03175285BEF3D001C49D1 /* snail_idle_front-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03116285BEF3C001C49D1 /* snail_idle_front-5.png */; };
+		A6C03176285BEF3D001C49D1 /* snail_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03117285BEF3C001C49D1 /* snail_idle_front-1.png */; };
+		A6C03177285BEF3D001C49D1 /* snail_idle_front-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03118285BEF3C001C49D1 /* snail_idle_front-0.png */; };
+		A6C03178285BEF3D001C49D1 /* snail_idle_front-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03119285BEF3C001C49D1 /* snail_idle_front-2.png */; };
+		A6C03179285BEF3D001C49D1 /* snail_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0311A285BEF3C001C49D1 /* snail_idle_front-3.png */; };
+		A6C0317A285BEF3D001C49D1 /* snail_drag-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0311C285BEF3C001C49D1 /* snail_drag-10.png */; };
+		A6C0317B285BEF3D001C49D1 /* snail_drag-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0311D285BEF3C001C49D1 /* snail_drag-11.png */; };
+		A6C0317C285BEF3D001C49D1 /* snail_drag-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0311E285BEF3C001C49D1 /* snail_drag-13.png */; };
+		A6C0317D285BEF3D001C49D1 /* snail_drag-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0311F285BEF3C001C49D1 /* snail_drag-12.png */; };
+		A6C0317E285BEF3D001C49D1 /* snail_drag-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03120285BEF3C001C49D1 /* snail_drag-14.png */; };
+		A6C0317F285BEF3D001C49D1 /* snail_drag-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03121285BEF3C001C49D1 /* snail_drag-8.png */; };
+		A6C03180285BEF3D001C49D1 /* snail_drag-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03122285BEF3C001C49D1 /* snail_drag-9.png */; };
+		A6C03181285BEF3D001C49D1 /* snail_drag-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03123285BEF3C001C49D1 /* snail_drag-4.png */; };
+		A6C03182285BEF3D001C49D1 /* snail_drag-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03124285BEF3C001C49D1 /* snail_drag-5.png */; };
+		A6C03183285BEF3D001C49D1 /* snail_drag-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03125285BEF3C001C49D1 /* snail_drag-7.png */; };
+		A6C03184285BEF3D001C49D1 /* snail_drag-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03126285BEF3C001C49D1 /* snail_drag-6.png */; };
+		A6C03185285BEF3D001C49D1 /* snail_drag-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03127285BEF3C001C49D1 /* snail_drag-2.png */; };
+		A6C03186285BEF3D001C49D1 /* snail_drag-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03128285BEF3C001C49D1 /* snail_drag-3.png */; };
+		A6C03187285BEF3D001C49D1 /* snail_drag-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C03129285BEF3C001C49D1 /* snail_drag-1.png */; };
+		A6C03188285BEF3D001C49D1 /* snail_drag-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C0312A285BEF3C001C49D1 /* snail_drag-0.png */; };
+		A6C031E5285BF05B001C49D1 /* snail_walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031D6285BF05A001C49D1 /* snail_walk-4.png */; };
+		A6C031E6285BF05B001C49D1 /* snail_walk-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031D7285BF05A001C49D1 /* snail_walk-5.png */; };
+		A6C031E7285BF05B001C49D1 /* snail_walk-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031D8285BF05A001C49D1 /* snail_walk-7.png */; };
+		A6C031E8285BF05B001C49D1 /* snail_walk-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031D9285BF05A001C49D1 /* snail_walk-6.png */; };
+		A6C031E9285BF05B001C49D1 /* snail_walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031DA285BF05A001C49D1 /* snail_walk-2.png */; };
+		A6C031EA285BF05B001C49D1 /* snail_walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031DB285BF05A001C49D1 /* snail_walk-3.png */; };
+		A6C031EB285BF05B001C49D1 /* snail_walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031DC285BF05A001C49D1 /* snail_walk-1.png */; };
+		A6C031EC285BF05B001C49D1 /* snail_walk-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031DD285BF05A001C49D1 /* snail_walk-0.png */; };
+		A6C031ED285BF05B001C49D1 /* snail_walk-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031DE285BF05A001C49D1 /* snail_walk-14.png */; };
+		A6C031EE285BF05B001C49D1 /* snail_walk-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031DF285BF05A001C49D1 /* snail_walk-13.png */; };
+		A6C031EF285BF05B001C49D1 /* snail_walk-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031E0285BF05A001C49D1 /* snail_walk-12.png */; };
+		A6C031F0285BF05B001C49D1 /* snail_walk-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031E1285BF05A001C49D1 /* snail_walk-10.png */; };
+		A6C031F1285BF05B001C49D1 /* snail_walk-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031E2285BF05B001C49D1 /* snail_walk-11.png */; };
+		A6C031F2285BF05B001C49D1 /* snail_walk-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031E3285BF05B001C49D1 /* snail_walk-8.png */; };
+		A6C031F3285BF05B001C49D1 /* snail_walk-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6C031E4285BF05B001C49D1 /* snail_walk-9.png */; };
+		A6C031F5285CB586001C49D1 /* MacPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C031F4285CB566001C49D1 /* MacPetsTests.swift */; };
 		A6C3CFD52855F7C800028289 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD42855F7C800028289 /* StatusItemManager.swift */; };
 		A6C3CFD9285686F600028289 /* RightClickMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD8285686F600028289 /* RightClickMenu.swift */; };
 		A6C57A9528539D8D00BBDCF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */; };
@@ -522,7 +582,6 @@
 
 /* Begin PBXFileReference section */
 		A60629142857442900966923 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A60B8C9D283D81E40030F8F0 /* MacPetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacPetsTests.swift; sourceTree = "<group>"; };
 		A60B8CA0283D82BB0030F8F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A60B8CA1283D82BB0030F8F0 /* MacPets.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MacPets.entitlements; sourceTree = "<group>"; };
 		A60B9C08283D82BE0030F8F0 /* Dogica_Pixel_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dogica_Pixel_Bold.ttf; sourceTree = "<group>"; };
@@ -999,7 +1058,7 @@
 		A63E000B28578F9D00704841 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		A65CD4222854940000F0584E /* PetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsViewModel.swift; sourceTree = "<group>"; };
 		A65CD4262854B6D700F0584E /* PetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
-		A65FE35D283D80C900D1F5C8 /* MacPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A672094B2859FB8A00023189 /* PetEntity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PetEntity; sourceTree = "<group>"; };
 		A672094E2859FD8700023189 /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
@@ -1023,6 +1082,67 @@
 		A67373C728538800002DC8FA /* Physics */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Physics; sourceTree = "<group>"; };
 		A67373C82853880D002DC8FA /* Squanch */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Squanch; sourceTree = "<group>"; };
 		A6982612283D885300C70E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6C030FC285BEF3C001C49D1 /* snail_idle-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-2.png"; sourceTree = "<group>"; };
+		A6C030FD285BEF3C001C49D1 /* snail_idle-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-3.png"; sourceTree = "<group>"; };
+		A6C030FE285BEF3C001C49D1 /* snail_idle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-1.png"; sourceTree = "<group>"; };
+		A6C030FF285BEF3C001C49D1 /* snail_idle-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-0.png"; sourceTree = "<group>"; };
+		A6C03100285BEF3C001C49D1 /* snail_idle-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-4.png"; sourceTree = "<group>"; };
+		A6C03101285BEF3C001C49D1 /* snail_idle-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-5.png"; sourceTree = "<group>"; };
+		A6C03102285BEF3C001C49D1 /* snail_idle-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-7.png"; sourceTree = "<group>"; };
+		A6C03103285BEF3C001C49D1 /* snail_idle-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-6.png"; sourceTree = "<group>"; };
+		A6C03104285BEF3C001C49D1 /* snail_idle-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-14.png"; sourceTree = "<group>"; };
+		A6C03105285BEF3C001C49D1 /* snail_idle-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-10.png"; sourceTree = "<group>"; };
+		A6C03106285BEF3C001C49D1 /* snail_idle-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-11.png"; sourceTree = "<group>"; };
+		A6C03107285BEF3C001C49D1 /* snail_idle-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-13.png"; sourceTree = "<group>"; };
+		A6C03108285BEF3C001C49D1 /* snail_idle-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-12.png"; sourceTree = "<group>"; };
+		A6C03109285BEF3C001C49D1 /* snail_idle-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-8.png"; sourceTree = "<group>"; };
+		A6C0310A285BEF3C001C49D1 /* snail_idle-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle-9.png"; sourceTree = "<group>"; };
+		A6C0310C285BEF3C001C49D1 /* snail_idle_front-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-14.png"; sourceTree = "<group>"; };
+		A6C0310D285BEF3C001C49D1 /* snail_idle_front-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-8.png"; sourceTree = "<group>"; };
+		A6C0310E285BEF3C001C49D1 /* snail_idle_front-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-12.png"; sourceTree = "<group>"; };
+		A6C0310F285BEF3C001C49D1 /* snail_idle_front-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-13.png"; sourceTree = "<group>"; };
+		A6C03110285BEF3C001C49D1 /* snail_idle_front-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-9.png"; sourceTree = "<group>"; };
+		A6C03111285BEF3C001C49D1 /* snail_idle_front-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-11.png"; sourceTree = "<group>"; };
+		A6C03112285BEF3C001C49D1 /* snail_idle_front-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-10.png"; sourceTree = "<group>"; };
+		A6C03113285BEF3C001C49D1 /* snail_idle_front-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-7.png"; sourceTree = "<group>"; };
+		A6C03114285BEF3C001C49D1 /* snail_idle_front-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-6.png"; sourceTree = "<group>"; };
+		A6C03115285BEF3C001C49D1 /* snail_idle_front-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-4.png"; sourceTree = "<group>"; };
+		A6C03116285BEF3C001C49D1 /* snail_idle_front-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-5.png"; sourceTree = "<group>"; };
+		A6C03117285BEF3C001C49D1 /* snail_idle_front-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-1.png"; sourceTree = "<group>"; };
+		A6C03118285BEF3C001C49D1 /* snail_idle_front-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-0.png"; sourceTree = "<group>"; };
+		A6C03119285BEF3C001C49D1 /* snail_idle_front-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-2.png"; sourceTree = "<group>"; };
+		A6C0311A285BEF3C001C49D1 /* snail_idle_front-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-3.png"; sourceTree = "<group>"; };
+		A6C0311C285BEF3C001C49D1 /* snail_drag-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-10.png"; sourceTree = "<group>"; };
+		A6C0311D285BEF3C001C49D1 /* snail_drag-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-11.png"; sourceTree = "<group>"; };
+		A6C0311E285BEF3C001C49D1 /* snail_drag-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-13.png"; sourceTree = "<group>"; };
+		A6C0311F285BEF3C001C49D1 /* snail_drag-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-12.png"; sourceTree = "<group>"; };
+		A6C03120285BEF3C001C49D1 /* snail_drag-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-14.png"; sourceTree = "<group>"; };
+		A6C03121285BEF3C001C49D1 /* snail_drag-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-8.png"; sourceTree = "<group>"; };
+		A6C03122285BEF3C001C49D1 /* snail_drag-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-9.png"; sourceTree = "<group>"; };
+		A6C03123285BEF3C001C49D1 /* snail_drag-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-4.png"; sourceTree = "<group>"; };
+		A6C03124285BEF3C001C49D1 /* snail_drag-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-5.png"; sourceTree = "<group>"; };
+		A6C03125285BEF3C001C49D1 /* snail_drag-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-7.png"; sourceTree = "<group>"; };
+		A6C03126285BEF3C001C49D1 /* snail_drag-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-6.png"; sourceTree = "<group>"; };
+		A6C03127285BEF3C001C49D1 /* snail_drag-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-2.png"; sourceTree = "<group>"; };
+		A6C03128285BEF3C001C49D1 /* snail_drag-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-3.png"; sourceTree = "<group>"; };
+		A6C03129285BEF3C001C49D1 /* snail_drag-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-1.png"; sourceTree = "<group>"; };
+		A6C0312A285BEF3C001C49D1 /* snail_drag-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_drag-0.png"; sourceTree = "<group>"; };
+		A6C031D6285BF05A001C49D1 /* snail_walk-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-4.png"; sourceTree = "<group>"; };
+		A6C031D7285BF05A001C49D1 /* snail_walk-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-5.png"; sourceTree = "<group>"; };
+		A6C031D8285BF05A001C49D1 /* snail_walk-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-7.png"; sourceTree = "<group>"; };
+		A6C031D9285BF05A001C49D1 /* snail_walk-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-6.png"; sourceTree = "<group>"; };
+		A6C031DA285BF05A001C49D1 /* snail_walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-2.png"; sourceTree = "<group>"; };
+		A6C031DB285BF05A001C49D1 /* snail_walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-3.png"; sourceTree = "<group>"; };
+		A6C031DC285BF05A001C49D1 /* snail_walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-1.png"; sourceTree = "<group>"; };
+		A6C031DD285BF05A001C49D1 /* snail_walk-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-0.png"; sourceTree = "<group>"; };
+		A6C031DE285BF05A001C49D1 /* snail_walk-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-14.png"; sourceTree = "<group>"; };
+		A6C031DF285BF05A001C49D1 /* snail_walk-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-13.png"; sourceTree = "<group>"; };
+		A6C031E0285BF05A001C49D1 /* snail_walk-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-12.png"; sourceTree = "<group>"; };
+		A6C031E1285BF05A001C49D1 /* snail_walk-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-10.png"; sourceTree = "<group>"; };
+		A6C031E2285BF05B001C49D1 /* snail_walk-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-11.png"; sourceTree = "<group>"; };
+		A6C031E3285BF05B001C49D1 /* snail_walk-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-8.png"; sourceTree = "<group>"; };
+		A6C031E4285BF05B001C49D1 /* snail_walk-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_walk-9.png"; sourceTree = "<group>"; };
+		A6C031F4285CB566001C49D1 /* MacPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPetsTests.swift; sourceTree = "<group>"; };
 		A6C3CFD42855F7C800028289 /* StatusItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
 		A6C3CFD8285686F600028289 /* RightClickMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightClickMenu.swift; sourceTree = "<group>"; };
 		A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -1063,7 +1183,7 @@
 			isa = PBXGroup;
 			children = (
 				A63E000928574ECF00704841 /* MacPets.xctestplan */,
-				A60B8C9D283D81E40030F8F0 /* MacPetsTests.swift */,
+				A6C031F4285CB566001C49D1 /* MacPetsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1761,7 +1881,7 @@
 		A65FE35E283D80C900D1F5C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A65FE35D283D80C900D1F5C8 /* MacPets.app */,
+				A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */,
 				A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */,
 			);
 			name = Products;
@@ -1878,8 +1998,116 @@
 			isa = PBXGroup;
 			children = (
 				A6203821284CB23900E42468 /* sloth */,
+				A6C030F9285BEF3C001C49D1 /* snail */,
 			);
 			path = Pets;
+			sourceTree = "<group>";
+		};
+		A6C030F9285BEF3C001C49D1 /* snail */ = {
+			isa = PBXGroup;
+			children = (
+				A6C030FA285BEF3C001C49D1 /* original */,
+			);
+			path = snail;
+			sourceTree = "<group>";
+		};
+		A6C030FA285BEF3C001C49D1 /* original */ = {
+			isa = PBXGroup;
+			children = (
+				A6C0311B285BEF3C001C49D1 /* drag */,
+				A6C030FB285BEF3C001C49D1 /* idle */,
+				A6C0310B285BEF3C001C49D1 /* idle_front */,
+				A6C031D5285BF05A001C49D1 /* walk */,
+			);
+			path = original;
+			sourceTree = "<group>";
+		};
+		A6C030FB285BEF3C001C49D1 /* idle */ = {
+			isa = PBXGroup;
+			children = (
+				A6C030FC285BEF3C001C49D1 /* snail_idle-2.png */,
+				A6C030FD285BEF3C001C49D1 /* snail_idle-3.png */,
+				A6C030FE285BEF3C001C49D1 /* snail_idle-1.png */,
+				A6C030FF285BEF3C001C49D1 /* snail_idle-0.png */,
+				A6C03100285BEF3C001C49D1 /* snail_idle-4.png */,
+				A6C03101285BEF3C001C49D1 /* snail_idle-5.png */,
+				A6C03102285BEF3C001C49D1 /* snail_idle-7.png */,
+				A6C03103285BEF3C001C49D1 /* snail_idle-6.png */,
+				A6C03104285BEF3C001C49D1 /* snail_idle-14.png */,
+				A6C03105285BEF3C001C49D1 /* snail_idle-10.png */,
+				A6C03106285BEF3C001C49D1 /* snail_idle-11.png */,
+				A6C03107285BEF3C001C49D1 /* snail_idle-13.png */,
+				A6C03108285BEF3C001C49D1 /* snail_idle-12.png */,
+				A6C03109285BEF3C001C49D1 /* snail_idle-8.png */,
+				A6C0310A285BEF3C001C49D1 /* snail_idle-9.png */,
+			);
+			path = idle;
+			sourceTree = "<group>";
+		};
+		A6C0310B285BEF3C001C49D1 /* idle_front */ = {
+			isa = PBXGroup;
+			children = (
+				A6C0310C285BEF3C001C49D1 /* snail_idle_front-14.png */,
+				A6C0310D285BEF3C001C49D1 /* snail_idle_front-8.png */,
+				A6C0310E285BEF3C001C49D1 /* snail_idle_front-12.png */,
+				A6C0310F285BEF3C001C49D1 /* snail_idle_front-13.png */,
+				A6C03110285BEF3C001C49D1 /* snail_idle_front-9.png */,
+				A6C03111285BEF3C001C49D1 /* snail_idle_front-11.png */,
+				A6C03112285BEF3C001C49D1 /* snail_idle_front-10.png */,
+				A6C03113285BEF3C001C49D1 /* snail_idle_front-7.png */,
+				A6C03114285BEF3C001C49D1 /* snail_idle_front-6.png */,
+				A6C03115285BEF3C001C49D1 /* snail_idle_front-4.png */,
+				A6C03116285BEF3C001C49D1 /* snail_idle_front-5.png */,
+				A6C03117285BEF3C001C49D1 /* snail_idle_front-1.png */,
+				A6C03118285BEF3C001C49D1 /* snail_idle_front-0.png */,
+				A6C03119285BEF3C001C49D1 /* snail_idle_front-2.png */,
+				A6C0311A285BEF3C001C49D1 /* snail_idle_front-3.png */,
+			);
+			path = idle_front;
+			sourceTree = "<group>";
+		};
+		A6C0311B285BEF3C001C49D1 /* drag */ = {
+			isa = PBXGroup;
+			children = (
+				A6C0311C285BEF3C001C49D1 /* snail_drag-10.png */,
+				A6C0311D285BEF3C001C49D1 /* snail_drag-11.png */,
+				A6C0311E285BEF3C001C49D1 /* snail_drag-13.png */,
+				A6C0311F285BEF3C001C49D1 /* snail_drag-12.png */,
+				A6C03120285BEF3C001C49D1 /* snail_drag-14.png */,
+				A6C03121285BEF3C001C49D1 /* snail_drag-8.png */,
+				A6C03122285BEF3C001C49D1 /* snail_drag-9.png */,
+				A6C03123285BEF3C001C49D1 /* snail_drag-4.png */,
+				A6C03124285BEF3C001C49D1 /* snail_drag-5.png */,
+				A6C03125285BEF3C001C49D1 /* snail_drag-7.png */,
+				A6C03126285BEF3C001C49D1 /* snail_drag-6.png */,
+				A6C03127285BEF3C001C49D1 /* snail_drag-2.png */,
+				A6C03128285BEF3C001C49D1 /* snail_drag-3.png */,
+				A6C03129285BEF3C001C49D1 /* snail_drag-1.png */,
+				A6C0312A285BEF3C001C49D1 /* snail_drag-0.png */,
+			);
+			path = drag;
+			sourceTree = "<group>";
+		};
+		A6C031D5285BF05A001C49D1 /* walk */ = {
+			isa = PBXGroup;
+			children = (
+				A6C031D6285BF05A001C49D1 /* snail_walk-4.png */,
+				A6C031D7285BF05A001C49D1 /* snail_walk-5.png */,
+				A6C031D8285BF05A001C49D1 /* snail_walk-7.png */,
+				A6C031D9285BF05A001C49D1 /* snail_walk-6.png */,
+				A6C031DA285BF05A001C49D1 /* snail_walk-2.png */,
+				A6C031DB285BF05A001C49D1 /* snail_walk-3.png */,
+				A6C031DC285BF05A001C49D1 /* snail_walk-1.png */,
+				A6C031DD285BF05A001C49D1 /* snail_walk-0.png */,
+				A6C031DE285BF05A001C49D1 /* snail_walk-14.png */,
+				A6C031DF285BF05A001C49D1 /* snail_walk-13.png */,
+				A6C031E0285BF05A001C49D1 /* snail_walk-12.png */,
+				A6C031E1285BF05A001C49D1 /* snail_walk-10.png */,
+				A6C031E2285BF05B001C49D1 /* snail_walk-11.png */,
+				A6C031E3285BF05B001C49D1 /* snail_walk-8.png */,
+				A6C031E4285BF05B001C49D1 /* snail_walk-9.png */,
+			);
+			path = walk;
 			sourceTree = "<group>";
 		};
 		A6C3CFDF2857286A00028289 /* StatusBar */ = {
@@ -1923,7 +2151,7 @@
 				A672094F2859FE4F00023189 /* AppState */,
 			);
 			productName = MacPets;
-			productReference = A65FE35D283D80C900D1F5C8 /* MacPets.app */;
+			productReference = A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A65FE36D283D80CB00D1F5C8 /* MacPetsTests */ = {
@@ -1997,14 +2225,18 @@
 				A6204385284CB23D00E42468 /* sloth_eat-7.png in Resources */,
 				A62043D3284CB23E00E42468 /* sloth_swag_climb-10.png in Resources */,
 				A62043E4284CB23E00E42468 /* sloth_swag_climb-24.png in Resources */,
+				A6C031EC285BF05B001C49D1 /* snail_walk-0.png in Resources */,
+				A6C031EB285BF05B001C49D1 /* snail_walk-1.png in Resources */,
 				A620445F284CB23E00E42468 /* sloth_swag_idle_front-10.png in Resources */,
 				A6204398284CB23D00E42468 /* sloth_swag_idle-5.png in Resources */,
 				A6203A00284CB23A00E42468 /* smoke_bomb-5.png in Resources */,
 				A62043EA284CB23E00E42468 /* sloth_swag_climb-23.png in Resources */,
 				A6204359284CB23D00E42468 /* sloth_idle_front-29.png in Resources */,
 				A6204405284CB23E00E42468 /* sloth_swag_walk-8.png in Resources */,
+				A6C03169285BEF3D001C49D1 /* snail_idle-8.png in Resources */,
 				A6204361284CB23D00E42468 /* sloth_idle_front-32.png in Resources */,
 				A6204379284CB23D00E42468 /* sloth_drag-2.png in Resources */,
+				A6C03182285BEF3D001C49D1 /* snail_drag-5.png in Resources */,
 				A62042FB284CB23D00E42468 /* sloth_climb-0.png in Resources */,
 				A62042F1284CB23D00E42468 /* sloth_climb-28.png in Resources */,
 				A6204366284CB23D00E42468 /* sloth_idle_front-0.png in Resources */,
@@ -2013,11 +2245,14 @@
 				A60BAABA283D82C30030F8F0 /* Dogica.ttf in Resources */,
 				A620444B284CB23E00E42468 /* sloth_swag_idle_front-33.png in Resources */,
 				A62043A0284CB23E00E42468 /* sloth_swag_idle-11.png in Resources */,
+				A6C031F2285BF05B001C49D1 /* snail_walk-8.png in Resources */,
 				A620438A284CB23D00E42468 /* sloth_eat-16.png in Resources */,
 				A6204396284CB23D00E42468 /* sloth_swag_idle-6.png in Resources */,
 				A62043F4284CB23E00E42468 /* sloth_swag_climb-47.png in Resources */,
 				A6204306284CB23D00E42468 /* sloth_climb-23.png in Resources */,
 				A620436D284CB23D00E42468 /* sloth_idle_front-5.png in Resources */,
+				A6C03180285BEF3D001C49D1 /* snail_drag-9.png in Resources */,
+				A6C03176285BEF3D001C49D1 /* snail_idle_front-1.png in Resources */,
 				A620430A284CB23D00E42468 /* sloth_climb-26.png in Resources */,
 				A620432B284CB23D00E42468 /* sloth_love-33.png in Resources */,
 				A62043DA284CB23E00E42468 /* sloth_swag_climb-17.png in Resources */,
@@ -2025,12 +2260,15 @@
 				A6204357284CB23D00E42468 /* sloth_idle_front-14.png in Resources */,
 				A6204328284CB23D00E42468 /* sloth_love-32.png in Resources */,
 				A6204397284CB23D00E42468 /* sloth_swag_idle-7.png in Resources */,
+				A6C0317F285BEF3D001C49D1 /* snail_drag-8.png in Resources */,
 				A6204400284CB23E00E42468 /* sloth_swag_walk-1.png in Resources */,
 				A62043B6284CB23E00E42468 /* sloth_swag_selfie-1.png in Resources */,
+				A6C0316B285BEF3D001C49D1 /* snail_idle_front-14.png in Resources */,
 				A6204358284CB23D00E42468 /* sloth_idle_front-28.png in Resources */,
 				A620431B284CB23D00E42468 /* sloth_love-13.png in Resources */,
 				A6204422284CB23E00E42468 /* sloth_swag_love-32.png in Resources */,
 				A620433F284CB23D00E42468 /* sloth_love-22.png in Resources */,
+				A6C03186285BEF3D001C49D1 /* snail_drag-3.png in Resources */,
 				A6204443284CB23E00E42468 /* sloth_swag_idle_front-34.png in Resources */,
 				A62043F9284CB23E00E42468 /* sloth_swag_climb-43.png in Resources */,
 				A6204384284CB23D00E42468 /* sloth_eat-18.png in Resources */,
@@ -2061,6 +2299,7 @@
 				A6204321284CB23D00E42468 /* sloth_love-14.png in Resources */,
 				A62043EE284CB23E00E42468 /* sloth_swag_climb-34.png in Resources */,
 				A62042D4284CB23D00E42468 /* sloth_selfie-19.png in Resources */,
+				A6C03171285BEF3D001C49D1 /* snail_idle_front-10.png in Resources */,
 				A6204431284CB23E00E42468 /* sloth_swag_lightsaber-11.png in Resources */,
 				A6204336284CB23D00E42468 /* sloth_love-20.png in Resources */,
 				A62043BC284CB23E00E42468 /* sloth_swag_selfie-17.png in Resources */,
@@ -2074,6 +2313,7 @@
 				A6204451284CB23E00E42468 /* sloth_swag_idle_front-6.png in Resources */,
 				A60BAAB9283D82C30030F8F0 /* Dogica_Bold.ttf in Resources */,
 				A62042D9284CB23D00E42468 /* sloth_selfie-18.png in Resources */,
+				A6C0317D285BEF3D001C49D1 /* snail_drag-12.png in Resources */,
 				A62042F8284CB23D00E42468 /* sloth_climb-17.png in Resources */,
 				A620439A284CB23D00E42468 /* sloth_swag_idle-14.png in Resources */,
 				A62042DC284CB23D00E42468 /* sloth_selfie-0.png in Resources */,
@@ -2084,6 +2324,7 @@
 				A6204387284CB23D00E42468 /* sloth_eat-4.png in Resources */,
 				A62043C8284CB23E00E42468 /* sloth_swag_selfie-22.png in Resources */,
 				A62043A4284CB23E00E42468 /* sloth_swag_idle-22.png in Resources */,
+				A6C031EE285BF05B001C49D1 /* snail_walk-13.png in Resources */,
 				A6204435284CB23E00E42468 /* sloth_swag_lightsaber-14.png in Resources */,
 				A62043BA284CB23E00E42468 /* sloth_swag_selfie-3.png in Resources */,
 				A62043ED284CB23E00E42468 /* sloth_swag_climb-20.png in Resources */,
@@ -2103,6 +2344,7 @@
 				A62043B3284CB23E00E42468 /* sloth_swag_selfie-11.png in Resources */,
 				A620434D284CB23D00E42468 /* sloth_lightsaber-5.png in Resources */,
 				A62043D7284CB23E00E42468 /* sloth_swag_climb-13.png in Resources */,
+				A6C0315D285BEF3D001C49D1 /* snail_idle-3.png in Resources */,
 				A6204455284CB23E00E42468 /* sloth_swag_idle_front-0.png in Resources */,
 				A62043A5284CB23E00E42468 /* sloth_swag_idle-23.png in Resources */,
 				A620439E284CB23E00E42468 /* sloth_swag_idle-12.png in Resources */,
@@ -2126,10 +2368,13 @@
 				A62042D5284CB23D00E42468 /* sloth_selfie-25.png in Resources */,
 				A620439D284CB23E00E42468 /* sloth_swag_idle-16.png in Resources */,
 				A62043C0284CB23E00E42468 /* sloth_swag_selfie-25.png in Resources */,
+				A6C03160285BEF3D001C49D1 /* snail_idle-4.png in Resources */,
 				A6204392284CB23D00E42468 /* sloth_swag_idle-0.png in Resources */,
 				A62043A8284CB23E00E42468 /* sloth_swag_idle-25.png in Resources */,
+				A6C0317B285BEF3D001C49D1 /* snail_drag-11.png in Resources */,
 				A620436F284CB23D00E42468 /* sloth_idle_front-20.png in Resources */,
 				A6204317284CB23D00E42468 /* sloth_walk-5.png in Resources */,
+				A6C03174285BEF3D001C49D1 /* snail_idle_front-4.png in Resources */,
 				A62043F5284CB23E00E42468 /* sloth_swag_climb-45.png in Resources */,
 				A620440F284CB23E00E42468 /* sloth_swag_love-11.png in Resources */,
 				A6204450284CB23E00E42468 /* sloth_swag_idle_front-7.png in Resources */,
@@ -2142,23 +2387,28 @@
 				A62043D5284CB23E00E42468 /* sloth_swag_climb-39.png in Resources */,
 				A6204478284CB23E00E42468 /* sloth_swag_eat-12.png in Resources */,
 				A620442A284CB23E00E42468 /* sloth_swag_love-18.png in Resources */,
+				A6C03181285BEF3D001C49D1 /* snail_drag-4.png in Resources */,
 				A6204479284CB23E00E42468 /* sloth_swag_eat-16.png in Resources */,
 				A6204326284CB23D00E42468 /* sloth_love-17.png in Resources */,
 				A620440A284CB23E00E42468 /* sloth_swag_love-16.png in Resources */,
 				A62042C3284CB23D00E42468 /* sloth_idle-14.png in Resources */,
 				A620443C284CB23E00E42468 /* sloth_swag_idle_front-22.png in Resources */,
 				A6204303284CB23D00E42468 /* sloth_climb-21.png in Resources */,
+				A6C03165285BEF3D001C49D1 /* snail_idle-10.png in Resources */,
+				A6C031F3285BF05B001C49D1 /* snail_walk-9.png in Resources */,
 				A620447A284CB23E00E42468 /* sloth_swag_eat-17.png in Resources */,
 				A62042D8284CB23D00E42468 /* sloth_selfie-24.png in Resources */,
 				A62042E7284CB23D00E42468 /* sloth_selfie-11.png in Resources */,
 				A62039FE284CB23A00E42468 /* smoke_bomb-0.png in Resources */,
 				A62042D1284CB23D00E42468 /* sloth_idle-9.png in Resources */,
+				A6C03170285BEF3D001C49D1 /* snail_idle_front-11.png in Resources */,
 				A620430C284CB23D00E42468 /* sloth_climb-24.png in Resources */,
 				A62042EC284CB23D00E42468 /* sloth_selfie-16.png in Resources */,
 				A62042D3284CB23D00E42468 /* sloth_idle-23.png in Resources */,
 				A62043B1284CB23E00E42468 /* sloth_swag_selfie-5.png in Resources */,
 				A62042FD284CB23D00E42468 /* sloth_climb-13.png in Resources */,
 				A620433C284CB23D00E42468 /* sloth_love-0.png in Resources */,
+				A6C03167285BEF3D001C49D1 /* snail_idle-13.png in Resources */,
 				A6204432284CB23E00E42468 /* sloth_swag_lightsaber-6.png in Resources */,
 				A620432E284CB23D00E42468 /* sloth_love-25.png in Resources */,
 				A620434A284CB23D00E42468 /* sloth_lightsaber-2.png in Resources */,
@@ -2167,9 +2417,11 @@
 				A620435F284CB23D00E42468 /* sloth_idle_front-3.png in Resources */,
 				A6204330284CB23D00E42468 /* sloth_love-6.png in Resources */,
 				A6204376284CB23D00E42468 /* sloth_idle_front-23.png in Resources */,
+				A6C031E9285BF05B001C49D1 /* snail_walk-2.png in Resources */,
 				A6204323284CB23D00E42468 /* sloth_love-16.png in Resources */,
 				A620444E284CB23E00E42468 /* sloth_swag_idle_front-4.png in Resources */,
 				A62043CC284CB23E00E42468 /* sloth_swag_climb-2.png in Resources */,
+				A6C03164285BEF3D001C49D1 /* snail_idle-14.png in Resources */,
 				A6204308284CB23D00E42468 /* sloth_climb-9.png in Resources */,
 				A620445B284CB23E00E42468 /* sloth_swag_idle_front-28.png in Resources */,
 				A620434C284CB23D00E42468 /* sloth_lightsaber-1.png in Resources */,
@@ -2187,6 +2439,7 @@
 				A62043BE284CB23E00E42468 /* sloth_swag_selfie-27.png in Resources */,
 				A620444C284CB23E00E42468 /* sloth_swag_idle_front-32.png in Resources */,
 				A62042FF284CB23D00E42468 /* sloth_climb-11.png in Resources */,
+				A6C031ED285BF05B001C49D1 /* snail_walk-14.png in Resources */,
 				A62042F7284CB23D00E42468 /* sloth_climb-5.png in Resources */,
 				A62042F2284CB23D00E42468 /* sloth_climb-14.png in Resources */,
 				A6204362284CB23D00E42468 /* sloth_idle_front-26.png in Resources */,
@@ -2199,26 +2452,34 @@
 				A620430E284CB23D00E42468 /* sloth_climb-19.png in Resources */,
 				A620432F284CB23D00E42468 /* sloth_love-19.png in Resources */,
 				A6204476284CB23E00E42468 /* sloth_swag_eat-11.png in Resources */,
+				A6C03161285BEF3D001C49D1 /* snail_idle-5.png in Resources */,
 				A6204370284CB23D00E42468 /* sloth_idle_front-34.png in Resources */,
+				A6C031E7285BF05B001C49D1 /* snail_walk-7.png in Resources */,
 				A6204444284CB23E00E42468 /* sloth_swag_idle_front-18.png in Resources */,
+				A6C03175285BEF3D001C49D1 /* snail_idle_front-5.png in Resources */,
 				A6204447284CB23E00E42468 /* sloth_swag_idle_front-25.png in Resources */,
+				A6C031E6285BF05B001C49D1 /* snail_walk-5.png in Resources */,
 				A620446D284CB23E00E42468 /* sloth_swag_eat-6.png in Resources */,
 				A6204441284CB23E00E42468 /* sloth_swag_idle_front-21.png in Resources */,
 				A620434F284CB23D00E42468 /* sloth_lightsaber-6.png in Resources */,
 				A62042BC284CB23D00E42468 /* sloth_idle-13.png in Resources */,
 				A6204457284CB23E00E42468 /* sloth_swag_idle_front-9.png in Resources */,
 				A6204354284CB23D00E42468 /* sloth_idle_front-9.png in Resources */,
+				A6C031F1285BF05B001C49D1 /* snail_walk-11.png in Resources */,
 				A6204373284CB23D00E42468 /* sloth_idle_front-6.png in Resources */,
+				A6C03168285BEF3D001C49D1 /* snail_idle-12.png in Resources */,
 				A62042D2284CB23D00E42468 /* sloth_idle-22.png in Resources */,
 				A620435C284CB23D00E42468 /* sloth_idle_front-16.png in Resources */,
 				A62043D1284CB23E00E42468 /* sloth_swag_climb-5.png in Resources */,
 				A6204335284CB23D00E42468 /* sloth_love-34.png in Resources */,
+				A6C03184285BEF3D001C49D1 /* snail_drag-6.png in Resources */,
 				A620438E284CB23D00E42468 /* sloth_eat-11.png in Resources */,
 				A6204307284CB23D00E42468 /* sloth_climb-27.png in Resources */,
 				A6204331284CB23D00E42468 /* sloth_love-7.png in Resources */,
 				A6204315284CB23D00E42468 /* sloth_walk-6.png in Resources */,
 				A620446C284CB23E00E42468 /* sloth_swag_eat-4.png in Resources */,
 				A620442D284CB23E00E42468 /* sloth_swag_lightsaber-12.png in Resources */,
+				A6C03179285BEF3D001C49D1 /* snail_idle_front-3.png in Resources */,
 				A62043DD284CB23E00E42468 /* sloth_swag_climb-14.png in Resources */,
 				A620446E284CB23E00E42468 /* sloth_swag_eat-7.png in Resources */,
 				A62043FF284CB23E00E42468 /* sloth_swag_walk-0.png in Resources */,
@@ -2243,11 +2504,14 @@
 				A6204339284CB23D00E42468 /* sloth_love-21.png in Resources */,
 				A62043B0284CB23E00E42468 /* sloth_swag_selfie-10.png in Resources */,
 				A6204469284CB23E00E42468 /* sloth_swag_drag-2.png in Resources */,
+				A6C03188285BEF3D001C49D1 /* snail_drag-0.png in Resources */,
 				A6204452284CB23E00E42468 /* sloth_swag_idle_front-2.png in Resources */,
+				A6C031E5285BF05B001C49D1 /* snail_walk-4.png in Resources */,
 				A62042C2284CB23D00E42468 /* sloth_idle-1.png in Resources */,
 				A6204310284CB23D00E42468 /* sloth_walk-1.png in Resources */,
 				A6204411284CB23E00E42468 /* sloth_swag_love-9.png in Resources */,
 				A6204439284CB23E00E42468 /* sloth_swag_lightsaber-0.png in Resources */,
+				A6C0316E285BEF3D001C49D1 /* snail_idle_front-13.png in Resources */,
 				A62042EE284CB23D00E42468 /* sloth_selfie-15.png in Resources */,
 				A6204334284CB23D00E42468 /* sloth_love-30.png in Resources */,
 				A62043A3284CB23E00E42468 /* sloth_swag_idle-20.png in Resources */,
@@ -2257,15 +2521,18 @@
 				A620438C284CB23D00E42468 /* sloth_eat-14.png in Resources */,
 				A6204312284CB23D00E42468 /* sloth_walk-2.png in Resources */,
 				A6204383284CB23D00E42468 /* sloth_eat-6.png in Resources */,
+				A6C03162285BEF3D001C49D1 /* snail_idle-7.png in Resources */,
 				A620435D284CB23D00E42468 /* sloth_idle_front-27.png in Resources */,
 				A6204327284CB23D00E42468 /* sloth_love-26.png in Resources */,
 				A62043BF284CB23E00E42468 /* sloth_swag_selfie-19.png in Resources */,
 				A62042BF284CB23D00E42468 /* sloth_idle-11.png in Resources */,
 				A6204414284CB23E00E42468 /* sloth_swag_love-1.png in Resources */,
 				A62043D6284CB23E00E42468 /* sloth_swag_climb-11.png in Resources */,
+				A6C03187285BEF3D001C49D1 /* snail_drag-1.png in Resources */,
 				A620431E284CB23D00E42468 /* sloth_love-11.png in Resources */,
 				A620441E284CB23E00E42468 /* sloth_swag_love-23.png in Resources */,
 				A620433D284CB23D00E42468 /* sloth_love-1.png in Resources */,
+				A6C031EF285BF05B001C49D1 /* snail_walk-12.png in Resources */,
 				A6204378284CB23D00E42468 /* sloth_drag-0.png in Resources */,
 				A62043AD284CB23E00E42468 /* sloth_swag_selfie-6.png in Resources */,
 				A62043FC284CB23E00E42468 /* sloth_swag_walk-7.png in Resources */,
@@ -2277,6 +2544,7 @@
 				A6204338284CB23D00E42468 /* sloth_love-2.png in Resources */,
 				A6204437284CB23E00E42468 /* sloth_swag_lightsaber-1.png in Resources */,
 				A620437F284CB23D00E42468 /* sloth_eat-0.png in Resources */,
+				A6C0316A285BEF3D001C49D1 /* snail_idle-9.png in Resources */,
 				A6204408284CB23E00E42468 /* sloth_swag_love-28.png in Resources */,
 				A620444F284CB23E00E42468 /* sloth_swag_idle_front-5.png in Resources */,
 				A62042EB284CB23D00E42468 /* sloth_selfie-12.png in Resources */,
@@ -2298,8 +2566,10 @@
 				A62043DF284CB23E00E42468 /* sloth_swag_climb-25.png in Resources */,
 				A6204427284CB23E00E42468 /* sloth_swag_love-25.png in Resources */,
 				A62043A1284CB23E00E42468 /* sloth_swag_idle-10.png in Resources */,
+				A6C0317A285BEF3D001C49D1 /* snail_drag-10.png in Resources */,
 				A62043B4284CB23E00E42468 /* sloth_swag_selfie-15.png in Resources */,
 				A6204305284CB23D00E42468 /* sloth_climb-22.png in Resources */,
+				A6C0317C285BEF3D001C49D1 /* snail_drag-13.png in Resources */,
 				A6204418284CB23E00E42468 /* sloth_swag_love-7.png in Resources */,
 				A620443B284CB23E00E42468 /* sloth_swag_lightsaber-9.png in Resources */,
 				A6204343284CB23D00E42468 /* sloth_lightsaber-15.png in Resources */,
@@ -2311,8 +2581,10 @@
 				A62042EF284CB23D00E42468 /* sloth_selfie-28.png in Resources */,
 				A620435E284CB23D00E42468 /* sloth_idle_front-33.png in Resources */,
 				A62043EB284CB23E00E42468 /* sloth_swag_climb-22.png in Resources */,
+				A6C03185285BEF3D001C49D1 /* snail_drag-2.png in Resources */,
 				A6204472284CB23E00E42468 /* sloth_swag_eat-1.png in Resources */,
 				A62043E6284CB23E00E42468 /* sloth_swag_climb-26.png in Resources */,
+				A6C0315C285BEF3D001C49D1 /* snail_idle-2.png in Resources */,
 				A6204391284CB23D00E42468 /* sloth_eat-13.png in Resources */,
 				A6204425284CB23E00E42468 /* sloth_swag_love-19.png in Resources */,
 				A620441F284CB23E00E42468 /* sloth_swag_love-36.png in Resources */,
@@ -2339,11 +2611,13 @@
 				A6204409284CB23E00E42468 /* sloth_swag_love-14.png in Resources */,
 				A62039FD284CB23A00E42468 /* smoke_bomb-1.png in Resources */,
 				A6204438284CB23E00E42468 /* sloth_swag_lightsaber-16.png in Resources */,
+				A6C031EA285BF05B001C49D1 /* snail_walk-3.png in Resources */,
 				A62043F8284CB23E00E42468 /* sloth_swag_climb-41.png in Resources */,
 				A6204386284CB23D00E42468 /* sloth_eat-5.png in Resources */,
 				A6204319284CB23D00E42468 /* sloth_walk-10.png in Resources */,
 				A62043B9284CB23E00E42468 /* sloth_swag_selfie-16.png in Resources */,
 				A62043CB284CB23E00E42468 /* sloth_swag_climb-3.png in Resources */,
+				A6C03178285BEF3D001C49D1 /* snail_idle_front-2.png in Resources */,
 				A62043D8284CB23E00E42468 /* sloth_swag_climb-12.png in Resources */,
 				A6204302284CB23D00E42468 /* sloth_climb-10.png in Resources */,
 				A62042BA284CB23D00E42468 /* sloth_idle-7.png in Resources */,
@@ -2362,6 +2636,8 @@
 				A620446B284CB23E00E42468 /* sloth_swag_eat-5.png in Resources */,
 				A6204403284CB23E00E42468 /* sloth_swag_walk-10.png in Resources */,
 				A62043E3284CB23E00E42468 /* sloth_swag_climb-30.png in Resources */,
+				A6C03163285BEF3D001C49D1 /* snail_idle-6.png in Resources */,
+				A6C0316D285BEF3D001C49D1 /* snail_idle_front-12.png in Resources */,
 				A62042CB284CB23D00E42468 /* sloth_idle-18.png in Resources */,
 				A62042CC284CB23D00E42468 /* sloth_idle-19.png in Resources */,
 				A62042DE284CB23D00E42468 /* sloth_selfie-23.png in Resources */,
@@ -2376,13 +2652,17 @@
 				A620443D284CB23E00E42468 /* sloth_swag_idle_front-36.png in Resources */,
 				A6204389284CB23D00E42468 /* sloth_eat-17.png in Resources */,
 				A620439B284CB23D00E42468 /* sloth_swag_idle-15.png in Resources */,
+				A6C0316C285BEF3D001C49D1 /* snail_idle_front-8.png in Resources */,
 				A62042DA284CB23D00E42468 /* sloth_selfie-26.png in Resources */,
 				A6204372284CB23D00E42468 /* sloth_idle_front-36.png in Resources */,
 				A6204430284CB23E00E42468 /* sloth_swag_lightsaber-10.png in Resources */,
+				A6C0316F285BEF3D001C49D1 /* snail_idle_front-9.png in Resources */,
 				A62043C3284CB23E00E42468 /* sloth_swag_selfie-20.png in Resources */,
 				A62042E8284CB23D00E42468 /* sloth_selfie-13.png in Resources */,
 				A62042BE284CB23D00E42468 /* sloth_idle-4.png in Resources */,
 				A6204415284CB23E00E42468 /* sloth_swag_love-0.png in Resources */,
+				A6C03173285BEF3D001C49D1 /* snail_idle_front-6.png in Resources */,
+				A6C03166285BEF3D001C49D1 /* snail_idle-11.png in Resources */,
 				A620443E284CB23E00E42468 /* sloth_swag_idle_front-37.png in Resources */,
 				A620437E284CB23D00E42468 /* sloth_drag-5.png in Resources */,
 				A6204371284CB23D00E42468 /* sloth_idle_front-22.png in Resources */,
@@ -2410,7 +2690,9 @@
 				A62042DD284CB23D00E42468 /* sloth_selfie-27.png in Resources */,
 				A62042FA284CB23D00E42468 /* sloth_climb-4.png in Resources */,
 				A62043F0284CB23E00E42468 /* sloth_swag_climb-21.png in Resources */,
+				A6C031F0285BF05B001C49D1 /* snail_walk-10.png in Resources */,
 				A6204446284CB23E00E42468 /* sloth_swag_idle_front-24.png in Resources */,
+				A6C031E8285BF05B001C49D1 /* snail_walk-6.png in Resources */,
 				A620431F284CB23D00E42468 /* sloth_love-29.png in Resources */,
 				A6204320284CB23D00E42468 /* sloth_love-15.png in Resources */,
 				A62043E1284CB23E00E42468 /* sloth_swag_climb-19.png in Resources */,
@@ -2421,9 +2703,11 @@
 				A6204322284CB23D00E42468 /* sloth_love-28.png in Resources */,
 				A62043C9284CB23E00E42468 /* sloth_swag_climb-0.png in Resources */,
 				A6204429284CB23E00E42468 /* sloth_swag_love-30.png in Resources */,
+				A6C0315E285BEF3D001C49D1 /* snail_idle-1.png in Resources */,
 				A6204448284CB23E00E42468 /* sloth_swag_idle_front-31.png in Resources */,
 				A6204368284CB23D00E42468 /* sloth_idle_front-25.png in Resources */,
 				A620440C284CB23E00E42468 /* sloth_swag_love-13.png in Resources */,
+				A6C03172285BEF3D001C49D1 /* snail_idle_front-7.png in Resources */,
 				A6204458284CB23E00E42468 /* sloth_swag_idle_front-17.png in Resources */,
 				A620436B284CB23D00E42468 /* sloth_idle_front-35.png in Resources */,
 				A6204407284CB23E00E42468 /* sloth_swag_love-29.png in Resources */,
@@ -2431,6 +2715,7 @@
 				A620438B284CB23D00E42468 /* sloth_eat-8.png in Resources */,
 				A6204377284CB23D00E42468 /* sloth_drag-1.png in Resources */,
 				A620438D284CB23D00E42468 /* sloth_eat-15.png in Resources */,
+				A6C0315F285BEF3D001C49D1 /* snail_idle-0.png in Resources */,
 				A6204416284CB23E00E42468 /* sloth_swag_love-4.png in Resources */,
 				A6204367284CB23D00E42468 /* sloth_idle_front-1.png in Resources */,
 				A62042C0284CB23D00E42468 /* sloth_idle-10.png in Resources */,
@@ -2439,6 +2724,7 @@
 				A620434E284CB23D00E42468 /* sloth_lightsaber-4.png in Resources */,
 				A6204341284CB23D00E42468 /* sloth_lightsaber-8.png in Resources */,
 				A620447B284CB23E00E42468 /* sloth_swag_eat-15.png in Resources */,
+				A6C03177285BEF3D001C49D1 /* snail_idle_front-0.png in Resources */,
 				A6204364284CB23D00E42468 /* sloth_idle_front-30.png in Resources */,
 				A62043B2284CB23E00E42468 /* sloth_swag_selfie-4.png in Resources */,
 				A620430D284CB23D00E42468 /* sloth_climb-18.png in Resources */,
@@ -2446,6 +2732,7 @@
 				A62042C6284CB23D00E42468 /* sloth_idle-2.png in Resources */,
 				A62043AA284CB23E00E42468 /* sloth_swag_idle-9.png in Resources */,
 				A6204394284CB23D00E42468 /* sloth_swag_idle-3.png in Resources */,
+				A6C0317E285BEF3D001C49D1 /* snail_drag-14.png in Resources */,
 				A62042CA284CB23D00E42468 /* sloth_idle-24.png in Resources */,
 				A620441B284CB23E00E42468 /* sloth_swag_love-20.png in Resources */,
 				A62042BB284CB23D00E42468 /* sloth_idle-12.png in Resources */,
@@ -2454,6 +2741,7 @@
 				A62042CE284CB23D00E42468 /* sloth_idle-8.png in Resources */,
 				A6204344284CB23D00E42468 /* sloth_lightsaber-14.png in Resources */,
 				A62043E9284CB23E00E42468 /* sloth_swag_climb-37.png in Resources */,
+				A6C03183285BEF3D001C49D1 /* snail_drag-7.png in Resources */,
 				A6204445284CB23E00E42468 /* sloth_swag_idle_front-30.png in Resources */,
 				A620430F284CB23D00E42468 /* sloth_climb-25.png in Resources */,
 				A62042DB284CB23D00E42468 /* sloth_selfie-1.png in Resources */,
@@ -2541,7 +2829,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60BAAC0283D83EA0030F8F0 /* MacPetsTests.swift in Sources */,
+				A6C031F5285CB586001C49D1 /* MacPetsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2679,7 +2967,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1015;
+				CURRENT_PROJECT_VERSION = 1019;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2697,7 +2985,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Desktop Pets";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -2711,7 +2999,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1015;
+				CURRENT_PROJECT_VERSION = 1019;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2729,7 +3017,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Desktop Pets";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -2750,7 +3038,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacPets.app/Contents/MacOS/MacPets";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desktop Pets.app/Contents/MacOS/Desktop Pets";
 			};
 			name = Debug;
 		};
@@ -2769,7 +3057,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacPets.app/Contents/MacOS/MacPets";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desktop Pets.app/Contents/MacOS/Desktop Pets";
 			};
 			name = Release;
 		};

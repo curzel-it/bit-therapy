@@ -41,6 +41,7 @@ class PetSprite: Sprite, ObservableObject {
     private func update() {
         let path = animationPathForLastState()
         guard path != animation.baseName else { return }
+        printDebug("PetSprite", "Loaded", path)
         animation = AnimatedImage(path, fps: 10)
     }
     
@@ -69,7 +70,7 @@ extension PetState {
         case .freeFall: return "drag"
         case .jump: return "jump"
         case .drag: return "drag"
-        case .move: return pet.doesFly ? "fly" : "walk"
+        case .move: return pet.movement == .fly ? "fly" : "walk"
         case .action(let action): return action.id
         }
     }

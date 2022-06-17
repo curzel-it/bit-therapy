@@ -19,13 +19,6 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:MacPets.xcodeproj",
-        "identifier" : "A65FE36D283D80CB00D1F5C8",
-        "name" : "MacPetsTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Physics",
         "identifier" : "PhysicsTests",
         "name" : "PhysicsTests"

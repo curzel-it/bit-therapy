@@ -8,7 +8,7 @@ extension Pet {
     
     public static let sloth = Pet(
         id: "sloth",
-        doesFly: false,
+        movement: .walk,
         behaviors: [
             .init(
                 trigger: .onAnyCorner,

@@ -6,7 +6,7 @@ import AppKit
 import Physics
 import Squanch
 
-open class MouseDraggable: EntityBehavior {
+open class MouseDraggable: Capability {
     
     public var isBeingDragged: Bool = false
     
@@ -36,7 +36,7 @@ open class MouseDraggable: EntityBehavior {
 
 extension PhysicsEntity {
     
-    var mouseDrag: MouseDraggable? { behavior(for: MouseDraggable.self) }
+    var mouseDrag: MouseDraggable? { capability(for: MouseDraggable.self) }
 }
 
 extension PhysicsEntity {

@@ -49,18 +49,23 @@ extension PetEntity {
 
 // MARK: - Behaviors
 
-extension PetEntity {
+extension Pet {
     
-    public static func behaviors(for pet: Pet) -> [EntityBehavior.Type] {
-        var behaviors = [
-            MovesLinearly.self,
-            ChangesStateOnHotspot.self,
-            ResumeMovementAfterAnimations.self,
-            BouncesOnCollision.self
+    public func movementCapabilities() -> [Capability.Type] {
+        switch movement {
+        case .fly: return [
+            LinearMovement.self,
+            BounceOnLateralCollision.self
+        ]            
+        case .walk: return [
+            LinearMovement.self,
+            BounceOnLateralCollision.self,
+            PetGravity.self
         ]
-        if !pet.doesFly {
-            behaviors.append(IsAffectedByGravity.self)
+        case .wallCrawler: return [
+            LinearMovement.self,
+            WallCrawler.self
+        ]
         }
-        return behaviors
     }
 }

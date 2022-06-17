@@ -13,6 +13,7 @@ extension Pet {
         .crow, .crowWhite,
         .panda, .pandaVest,
         .koala, .koalaPirate,
+        .snail,
         .betta
     ]
     

@@ -8,7 +8,7 @@ import Squanch
 import SwiftUI
 import Schwifty
 
-public class ResumeMovementAfterAnimations: EntityBehavior {
+public class ResumeMovementAfterAnimations: Capability {
     
     var pet: PetEntity? { body as? PetEntity }
     var tag: String { "KeepMoving-\(pet?.id ?? "?")" }

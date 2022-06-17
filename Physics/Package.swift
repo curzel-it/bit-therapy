@@ -25,7 +25,10 @@ let package = Package(
             ]),
         .testTarget(
             name: "PhysicsTests",
-            dependencies: ["Physics"]
+            dependencies: [
+                "Physics",
+                .product(name: "Squanch", package: "Squanch")
+            ]
         )
     ]
 )

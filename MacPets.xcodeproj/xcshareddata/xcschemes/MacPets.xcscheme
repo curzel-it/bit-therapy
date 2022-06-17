@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A65FE35C283D80C900D1F5C8"
-               BuildableName = "MacPets.app"
+               BuildableName = "Desktop Pets.app"
                BlueprintName = "MacPets"
                ReferencedContainer = "container:MacPets.xcodeproj">
             </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A65FE35C283D80C900D1F5C8"
-            BuildableName = "MacPets.app"
+            BuildableName = "Desktop Pets.app"
             BlueprintName = "MacPets"
             ReferencedContainer = "container:MacPets.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A65FE35C283D80C900D1F5C8"
-            BuildableName = "MacPets.app"
+            BuildableName = "Desktop Pets.app"
             BlueprintName = "MacPets"
             ReferencedContainer = "container:MacPets.xcodeproj">
          </BuildableReference>

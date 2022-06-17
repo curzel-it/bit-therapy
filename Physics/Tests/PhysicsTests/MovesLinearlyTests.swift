@@ -3,17 +3,19 @@
 //
 
 import XCTest
+import Squanch
 
 @testable import Physics
 
-class MovesLinearlyTests: XCTestCase {
+class LinearMovementTests: XCTestCase {
     
     func testPositionProperlyUpdates() {
         let entity = PhysicsEntity(
             id: "entity",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            behaviors: [MovesLinearly.self]
+            in: CGRect(x: 0, y: 0, width: 1000, height: 1000)
         )
+        entity.install(LinearMovement.self)
         entity.set(direction: .init(dx: 1, dy: 0))
         entity.speed = 1
         

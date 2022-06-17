@@ -5,15 +5,15 @@
 import Foundation
 
 private let boundDistanceAfterScreenEnd: CGFloat = 100
-private let boundsThickness: CGFloat = 200
+private let boundsThickness: CGFloat = 1000
 
 func bottomBound(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.bottomBound.rawValue,
         frame: CGRect(
-            x: -boundDistanceAfterScreenEnd,
+            x: -boundsThickness,
             y: habitatBounds.height,
-            width: habitatBounds.width + boundDistanceAfterScreenEnd*2,
+            width: habitatBounds.width + boundsThickness*2,
             height: boundsThickness
         ),
         in: habitatBounds
@@ -28,9 +28,9 @@ func topBound(in habitatBounds: CGRect) -> PhysicsEntity {
     let entity = PhysicsEntity(
         id: Hotspot.topBound.rawValue,
         frame: CGRect(
-            x: 0,
+            x: -boundsThickness,
             y: -boundsThickness,
-            width: habitatBounds.width,
+            width: habitatBounds.width + boundsThickness*2,
             height: boundsThickness
         ),
         in: habitatBounds

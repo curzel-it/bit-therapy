@@ -9,13 +9,13 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     @Published public private(set) var frame: CGRect
     @Published public private(set) var direction: CGVector = .zero
     @Published public var speed: CGFloat = 0
-    @Published public var angle: CGFloat = 0
     @Published public var isAlive = true
+    @Published public var isUpsideDown = false
     
     public let id: String
     
     public var sprites: [Sprite] = []
-    public var behaviors: [EntityBehavior] = []
+    public var capabilities: [Capability] = []
     public var isStatic: Bool = false
     public var isDrawable: Bool = true
     public var isEphemeral: Bool = false
@@ -41,7 +41,7 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     
     open func update(with collisions: Collisions, after time: TimeInterval) {
         if isAlive {
-            behaviors.forEach {
+            capabilities.forEach {
                 $0.update(with: collisions, after: time)
             }
         }
@@ -53,24 +53,24 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     // MARK: - Behaviors
     
     @discardableResult
-    public func install<T: EntityBehavior>(_ bType: T.Type) -> T {
-        let behavior = bType.init(with: self)
-        behaviors.append(behavior)
-        return behavior
+    public func install<T: Capability>(_ type: T.Type) -> T {
+        let capability = type.init(with: self)
+        capabilities.append(capability)
+        return capability
     }
     
     @discardableResult
-    public func installAll<T: EntityBehavior>(_ bTypes: [T.Type]) -> [T] {
-        bTypes.map { install($0) }
+    public func installAll<T: Capability>(_ types: [T.Type]) -> [T] {
+        types.map { install($0) }
     }
     
-    public func behavior<T: EntityBehavior>(for bType: T.Type) -> T? {
-        behaviors.first { $0 as? T != nil } as? T
+    public func capability<T: Capability>(for someType: T.Type) -> T? {
+        capabilities.first { $0 as? T != nil } as? T
     }
     
-    public func uninstall<T: EntityBehavior>(_ type: T.Type) {
-        behaviors = behaviors.filter { behavior in
-            if let targeted = behavior as? T {
+    public func uninstall<T: Capability>(_ type: T.Type) {
+        capabilities = capabilities.filter { capability in
+            if let targeted = capability as? T {
                 targeted.uninstall()
                 return false
             }
@@ -86,14 +86,14 @@ open class PhysicsEntity: Identifiable, ObservableObject {
     }
 
     open func kill() {
-        uninstallAllBehaviors()
+        uninstallAllCapabilities()
         sprites.forEach { $0.kill() }
         isAlive = false
     }
     
-    public func uninstallAllBehaviors() {
-        behaviors.forEach { $0.uninstall() }
-        behaviors = []
+    public func uninstallAllCapabilities() {
+        capabilities.forEach { $0.uninstall() }
+        capabilities = []
     }
     
     // MARK: - Frame

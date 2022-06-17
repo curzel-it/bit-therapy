@@ -8,7 +8,7 @@ extension Pet {
     
     static let panda = Pet(
         id: "panda",
-        doesFly: false,
+        movement: .walk,
         behaviors: [
             .init(
                 trigger: .onAnyCorner,

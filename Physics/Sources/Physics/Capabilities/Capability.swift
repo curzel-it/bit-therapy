@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-open class EntityBehavior {
+open class Capability {
     
     public weak var body: PhysicsEntity?
     

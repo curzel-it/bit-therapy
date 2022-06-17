@@ -43,7 +43,7 @@ extension Tracking {
     }
     
     public static func didSelect(_ pet: Pet) {
-        log("did_delect_pet", with: ["pet": pet.id])
+        log("did_select_pet", with: ["pet": pet.id])
     }
     
     public static func didEnterDetails(of pet: Pet, price: Double, purchased: Bool) {

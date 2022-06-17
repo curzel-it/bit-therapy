@@ -58,10 +58,9 @@ public struct PetAction: Equatable {
         switch position {
             
         case .inPlace:
-            return petFrame
-                .origin
-                .offset(x: -newSize.width / 2)
-                .offset(y: -newSize.height / 2)
+            return petFrame.origin
+                .offset(x: (petFrame.size.width - newSize.width) / 2)
+                .offset(y: (petFrame.size.height - newSize.height) / 2)
             
         case .topLeftCorner:
             return habitatBounds.topLeft

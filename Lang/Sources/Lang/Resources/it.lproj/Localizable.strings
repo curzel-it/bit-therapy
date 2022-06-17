@@ -68,6 +68,7 @@
 "pet.name.panda_vest" = "Panda Dorato";
 "pet.name.sloth" = "Bradipo";
 "pet.name.sloth_swag" = "Bradipo Stiloso";
+"pet.name.snail" = "Lumacamicio";
 "pet.name.trex" = "T-Rex";
 "pet.name.trex_blue" = "Ceratosaurus";
 "pet.name.trex_violet" = "T-Rex Viola";
@@ -84,6 +85,7 @@
 "pet.about.panda_vest" = "Non c'è prezzo per la miticità... Neppure per l'attraenza.";
 "pet.about.sloth" = "Lo sapevate che sono così lenti e pigri che gli crescono alghe sul pelo?";
 "pet.about.sloth_swag" = "Lento, ma con stile...";
+"pet.about.snail" = "Miao! Sei tu Gary?";
 "pet.about.trex" = "Charmander Tarocco";
 "pet.about.trex_blue" = "Praticamente T-Rex con un corno!";
 "pet.about.trex_violet" = "Questo sembra il dinosauro dei Flintstones :D";

@@ -7,7 +7,7 @@ import Physics
 import Squanch
 import SwiftUI
 
-public class ChangesStateOnHotspot: EntityBehavior {
+public class ReactToHotspots: Capability {
     
     var pet: PetEntity? { body as? PetEntity }
     var tag: String { "Hotspot-\(pet?.id ?? "?")" }

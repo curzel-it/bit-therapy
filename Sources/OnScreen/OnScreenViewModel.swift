@@ -36,12 +36,13 @@ class OnScreenViewModel: HabitatViewModel {
     
     private func addPet(for species: Pet) {
         let pet = PetEntity(species, in: state.bounds)
+        
         pet.install(MouseDraggablePet.self)
         pet.install(ShowsMenuOnRightClick.self)
-        pet.install(MovesLinearly.self)
-        pet.install(ChangesStateOnHotspot.self)
+        pet.install(ReactToHotspots.self)
         pet.install(ResumeMovementAfterAnimations.self)
-        pet.install(BouncesOnCollision.self)
+        pet.installAll(pet.species.movementCapabilities())
+        
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
     }

@@ -6,7 +6,7 @@ import AppKit
 import Physics
 import Squanch
 
-open class RightClickable: EntityBehavior {
+open class RightClickable: Capability {
         
     open func onRightClick(with event: NSEvent) {
         // ...
@@ -15,5 +15,5 @@ open class RightClickable: EntityBehavior {
 
 extension PhysicsEntity {
     
-    var rightClick: RightClickable? { behavior(for: RightClickable.self) }
+    var rightClick: RightClickable? { capability(for: RightClickable.self) }
 }

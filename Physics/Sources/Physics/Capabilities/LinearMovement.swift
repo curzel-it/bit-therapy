@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-public class MovesLinearly: EntityBehavior {
+public class LinearMovement: Capability {
     
     override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled, let body = body else { return }
@@ -26,7 +26,7 @@ public class MovesLinearly: EntityBehavior {
 
 extension PhysicsEntity {
     
-    public var movement: MovesLinearly? {
-        behavior(for: MovesLinearly.self)
+    public var movement: LinearMovement? {
+        capability(for: LinearMovement.self)
     }
 }

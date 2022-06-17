@@ -8,7 +8,7 @@ extension Pet {
     
     static let trex = Pet(
         id: "trex",
-        doesFly: false,
+        movement: .walk,
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
