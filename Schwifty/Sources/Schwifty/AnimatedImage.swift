@@ -24,9 +24,9 @@ public class AnimatedImage {
     
     private var leftoverTime: TimeInterval = 0
     
-    public init(_ name: String, fps: Double, frames: [NSImage]? = nil) {
+    public init(_ name: String, frameTime: Double, frames: [NSImage]? = nil) {
         self.baseName = name
-        self.frameTime = 1 / fps
+        self.frameTime = frameTime
         self.frames = frames ?? AnimatedImage.frames(for: name)
     }
     
@@ -71,5 +71,5 @@ private extension AnimatedImage {
 
 extension AnimatedImage {
  
-    public static let none = AnimatedImage("", fps: 1)
+    public static let none = AnimatedImage("", frameTime: 1)
 }

@@ -12,6 +12,7 @@ public struct PetAction: Equatable {
     public let id: String
     public let chance: Double
     public let facingDirection: CGVector?
+    public let frameTime: TimeInterval?
     
     let size: CGSize?
     let position: PetActionPosition
@@ -23,13 +24,15 @@ public struct PetAction: Equatable {
         size: CGSize? = nil,
         position: PetActionPosition = .inPlace,
         facingDirection: CGVector? = nil,
+        frameTime: TimeInterval? = nil,
         chance: Double = 1
     ) {
         self.id = id
         self.size = size
         self.position = position
-        self.chance = chance
         self.facingDirection = facingDirection
+        self.frameTime = frameTime
+        self.chance = chance
     }
     
     public func frame(from petFrame: CGRect, in habitatBounds: CGRect) -> CGRect {

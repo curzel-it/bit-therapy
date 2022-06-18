@@ -9,8 +9,8 @@ extension Pet {
     static let snail = Pet(
         id: "snail",
         movement: .wallCrawler,
-        behaviors: [],
-        speed: 0.2,
-        isPaid: false
+        usesIdleFrontAsMovement: true,
+        frameTime: 0.4,
+        speed: 0.2
     )
 }

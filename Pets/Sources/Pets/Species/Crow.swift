@@ -20,8 +20,7 @@ extension Pet {
                 ]
             )
         ],
-        speed: 1.4,
-        isPaid: false
+        speed: 1.4
     )
     
     static let crowWhite = Pet.crow.shiny(

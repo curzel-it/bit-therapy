@@ -42,7 +42,14 @@ class PetSprite: Sprite, ObservableObject {
         let path = animationPathForLastState()
         guard path != animation.baseName else { return }
         printDebug("PetSprite", "Loaded", path)
-        animation = AnimatedImage(path, fps: 10)
+        animation = AnimatedImage(path, frameTime: frameTime())
+    }
+    
+    private func frameTime() -> TimeInterval {
+        if case .action(let action) = lastState, let time = action.frameTime {
+            return time
+        }
+        return species.frameTime
     }
     
     private func animationPathForLastState() -> String {
@@ -65,13 +72,25 @@ class PetSprite: Sprite, ObservableObject {
 extension PetState {
     
     func actionPath(for pet: Pet) -> String {
+        if pet.usesIdleFrontAsMovement && isMovement {
+            return "idle_front"
+        }
         switch self {
-        case .smokeBomb: return "smoke_bomb"
         case .freeFall: return "drag"
-        case .jump: return "jump"
         case .drag: return "drag"
         case .move: return pet.movement == .fly ? "fly" : "walk"
+        case .jump: return "jump"
+        case .smokeBomb: return "smoke_bomb"
         case .action(let action): return action.id
+        }
+    }
+    
+    private var isMovement: Bool {
+        switch self {
+        case .freeFall: return true
+        case .drag: return true
+        case .move: return true
+        default: return false
         }
     }
 }

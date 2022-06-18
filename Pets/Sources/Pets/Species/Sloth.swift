@@ -8,7 +8,6 @@ extension Pet {
     
     public static let sloth = Pet(
         id: "sloth",
-        movement: .walk,
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
@@ -34,8 +33,7 @@ extension Pet {
                 ]
             )
         ],
-        speed: 0.6,
-        isPaid: false
+        speed: 0.6
     )
     
     static let slothSwag = Pet.sloth.shiny(

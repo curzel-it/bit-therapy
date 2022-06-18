@@ -19,7 +19,6 @@ extension Pet {
                 ]
             )
         ],
-        speed: 1.3,
-        isPaid: false
+        speed: 1.3
     )
 }

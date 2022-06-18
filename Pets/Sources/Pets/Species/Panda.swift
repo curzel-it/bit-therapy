@@ -8,7 +8,6 @@ extension Pet {
     
     static let panda = Pet(
         id: "panda",
-        movement: .walk,
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
@@ -23,8 +22,7 @@ extension Pet {
                 ]
             )
         ],
-        speed: 0.8,
-        isPaid: false
+        speed: 0.8
     )
     
     static let pandaVest = Pet.panda.shiny(

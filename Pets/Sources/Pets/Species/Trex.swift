@@ -8,7 +8,6 @@ extension Pet {
     
     static let trex = Pet(
         id: "trex",
-        movement: .walk,
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
@@ -23,8 +22,7 @@ extension Pet {
                 ]
             )
         ],
-        speed: 1,
-        isPaid: false
+        speed: 1
     )
     
     static let trexBlue = Pet.trex.shiny(id: "trex_blue")
