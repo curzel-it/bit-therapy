@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import AppState
 import Combine
 import DesignSystem
 import Pets
@@ -26,7 +27,7 @@ open class PetEntity: PhysicsEntity {
         species = pet
         super.init(
             id: PetEntity.id(for: species),
-            frame: PetEntity.initialFrame(for: size, in: habitatBounds),
+            frame: PetEntity.initialFrame(in: habitatBounds, prefers: size),
             in: habitatBounds
         )
         speed = PetEntity.speed(for: species, size: frame.width)

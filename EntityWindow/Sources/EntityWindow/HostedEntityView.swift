@@ -39,6 +39,7 @@ class HostedEntityView: NSView {
             .hosted()
         
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.frame = self.bounds
         self.addSubview(view)
         view.constrainToFillParent()
         onScreenView = view

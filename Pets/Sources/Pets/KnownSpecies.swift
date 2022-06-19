@@ -13,8 +13,9 @@ extension Pet {
         .crow, .crowWhite,
         .panda, .pandaVest,
         .koala, .koalaPirate,
+        .betta,
         .snail,
-        .betta
+        .nyan
     ]
     
     public static let availableSpecies: [Pet] = {

@@ -72,25 +72,13 @@ class PetSprite: Sprite, ObservableObject {
 extension PetState {
     
     func actionPath(for pet: Pet) -> String {
-        if pet.usesIdleFrontAsMovement && isMovement {
-            return "idle_front"
-        }
         switch self {
-        case .freeFall: return "drag"
-        case .drag: return "drag"
-        case .move: return pet.movement == .fly ? "fly" : "walk"
+        case .freeFall: return pet.movement.dragPath
+        case .drag: return pet.movement.dragPath
+        case .move: return pet.movement.path
         case .jump: return "jump"
         case .smokeBomb: return "smoke_bomb"
         case .action(let action): return action.id
-        }
-    }
-    
-    private var isMovement: Bool {
-        switch self {
-        case .freeFall: return true
-        case .drag: return true
-        case .move: return true
-        default: return false
         }
     }
 }

@@ -36,8 +36,8 @@ extension PetEntity {
 
 extension PetEntity {
     
-    static func initialFrame(for preferredSize: CGSize?, in habitatBounds: CGRect) -> CGRect {
-        let size = preferredSize ?? CGSize(square: AppState.global.petSize)
+    static func initialFrame(in habitatBounds: CGRect, prefers: CGSize?) -> CGRect {
+        let size = prefers ?? CGSize(square: AppState.global.petSize)
         let position = habitatBounds
             .bottomLeft
             .offset(x: habitatBounds.width/4)
@@ -52,7 +52,7 @@ extension PetEntity {
 extension Pet {
     
     public func movementCapabilities() -> [Capability.Type] {
-        switch movement {
+        switch movement.type {
         case .fly: return [
             LinearMovement.self,
             BounceOffLateralBounds.self
