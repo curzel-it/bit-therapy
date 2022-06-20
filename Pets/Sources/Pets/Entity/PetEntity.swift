@@ -3,10 +3,9 @@
 //
 
 import AppState
+import Biosphere
 import Combine
 import DesignSystem
-import Pets
-import Biosphere
 import Squanch
 import SwiftUI
 

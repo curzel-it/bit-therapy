@@ -2,11 +2,11 @@
 // Pet Therapy.
 //
 
+import Biosphere
 import DesignSystem
 import InAppPurchases
 import Lang
-import PetEntity
-import Biosphere
+import Pets
 import Schwifty
 import Squanch
 import SwiftUI

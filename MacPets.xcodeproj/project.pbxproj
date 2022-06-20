@@ -32,11 +32,8 @@
 		A65C128A285389F7001F2B70 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A65C1289285389F7001F2B70 /* Squanch */; };
 		A65CD4232854940000F0584E /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4222854940000F0584E /* PetDetailsViewModel.swift */; };
 		A65CD4272854B6D700F0584E /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4262854B6D700F0584E /* PetGridItem.swift */; };
-		A672094D2859FCC300023189 /* PetEntity in Frameworks */ = {isa = PBXBuildFile; productRef = A672094C2859FCC300023189 /* PetEntity */; };
 		A67209502859FE4F00023189 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A672094F2859FE4F00023189 /* AppState */; };
 		A6720952285A16E300023189 /* MouseDraggablePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720951285A16E300023189 /* MouseDraggablePet.swift */; };
-		A6720955285B1D3000023189 /* FullScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720954285B1D3000023189 /* FullScreenViewModel.swift */; };
-		A6720957285B206600023189 /* FullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720956285B206600023189 /* FullScreen.swift */; };
 		A67373A52853858B002DC8FA /* OnScreenWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */; };
 		A67373A62853858B002DC8FA /* PetWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736D2853858A002DC8FA /* PetWindow.swift */; };
 		A67373A82853858B002DC8FA /* OnScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736F2853858A002DC8FA /* OnScreenViewModel.swift */; };
@@ -65,14 +62,12 @@
 		A6E5AACA2860525A008AA653 /* OnScreenWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */; };
 		A6E5AACB2860525A008AA653 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4222854940000F0584E /* PetDetailsViewModel.swift */; };
 		A6E5AACC2860525A008AA653 /* RightClickMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD8285686F600028289 /* RightClickMenu.swift */; };
-		A6E5AACD2860525A008AA653 /* FullScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720954285B1D3000023189 /* FullScreenViewModel.swift */; };
 		A6E5AACE2860525A008AA653 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373762853858B002DC8FA /* PetSelectionViewModel.swift */; };
 		A6E5AACF2860525A008AA653 /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373752853858B002DC8FA /* PetSelectionGrid.swift */; };
 		A6E5AAD02860525A008AA653 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373712853858A002DC8FA /* MyApp.swift */; };
 		A6E5AAD12860525A008AA653 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373782853858B002DC8FA /* SettingsView.swift */; };
 		A6E5AAD22860525A008AA653 /* OnScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736F2853858A002DC8FA /* OnScreenViewModel.swift */; };
 		A6E5AAD32860525A008AA653 /* PetWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736D2853858A002DC8FA /* PetWindow.swift */; };
-		A6E5AAD42860525A008AA653 /* FullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720956285B206600023189 /* FullScreen.swift */; };
 		A6E5AAD52860525A008AA653 /* MouseDraggablePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720951285A16E300023189 /* MouseDraggablePet.swift */; };
 		A6E5AAD62860525A008AA653 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373802853858B002DC8FA /* MainWindow.swift */; };
 		A6E5AAD82860525A008AA653 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAC12860525A008AA653 /* AppState */; };
@@ -3354,11 +3349,8 @@
 		A65CD4262854B6D700F0584E /* PetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
 		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A672094B2859FB8A00023189 /* PetEntity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PetEntity; sourceTree = "<group>"; };
 		A672094E2859FD8700023189 /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
 		A6720951285A16E300023189 /* MouseDraggablePet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseDraggablePet.swift; sourceTree = "<group>"; };
-		A6720954285B1D3000023189 /* FullScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewModel.swift; sourceTree = "<group>"; };
-		A6720956285B206600023189 /* FullScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreen.swift; sourceTree = "<group>"; };
 		A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreenWindowManager.swift; sourceTree = "<group>"; };
 		A673736D2853858A002DC8FA /* PetWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetWindow.swift; sourceTree = "<group>"; };
 		A673736F2853858A002DC8FA /* OnScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreenViewModel.swift; sourceTree = "<group>"; };
@@ -6122,7 +6114,6 @@
 				A634991B2859BC5100488588 /* Pets in Frameworks */,
 				A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */,
 				A63499252859CDF900488588 /* EntityWindow in Frameworks */,
-				A672094D2859FCC300023189 /* PetEntity in Frameworks */,
 				A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */,
 				A67373CA2853881E002DC8FA /* Schwifty in Frameworks */,
 				A63499172859B90600488588 /* Tracking in Frameworks */,
@@ -6261,7 +6252,6 @@
 			children = (
 				A673737D2853858B002DC8FA /* About */,
 				A67373702853858A002DC8FA /* App */,
-				A6720953285B1CAA00023189 /* FullScreen */,
 				A673737F2853858B002DC8FA /* MainWindow */,
 				A673736A2853858A002DC8FA /* OnScreen */,
 				A65CD421285493F300F0584E /* PetDetails */,
@@ -6270,15 +6260,6 @@
 				A6C3CFDF2857286A00028289 /* StatusBar */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		A6720953285B1CAA00023189 /* FullScreen */ = {
-			isa = PBXGroup;
-			children = (
-				A6720954285B1D3000023189 /* FullScreenViewModel.swift */,
-				A6720956285B206600023189 /* FullScreen.swift */,
-			);
-			path = FullScreen;
 			sourceTree = "<group>";
 		};
 		A673736A2853858A002DC8FA /* OnScreen */ = {
@@ -6346,7 +6327,6 @@
 				A63499232859CCD700488588 /* EntityWindow */,
 				A634991D2859C13D00488588 /* InAppPurchases */,
 				A63499202859C2C600488588 /* Lang */,
-				A672094B2859FB8A00023189 /* PetEntity */,
 				A63499192859BB9800488588 /* Pets */,
 				A67373C5285387EC002DC8FA /* Schwifty */,
 				A67373C82853880D002DC8FA /* Squanch */,
@@ -10454,7 +10434,6 @@
 				A634991E2859C15900488588 /* InAppPurchases */,
 				A63499212859C43300488588 /* Lang */,
 				A63499242859CDF900488588 /* EntityWindow */,
-				A672094C2859FCC300023189 /* PetEntity */,
 				A672094F2859FE4F00023189 /* AppState */,
 				A6E5CDCF286092A6008AA653 /* Biosphere */,
 			);
@@ -13909,14 +13888,12 @@
 				A67373A52853858B002DC8FA /* OnScreenWindowManager.swift in Sources */,
 				A65CD4232854940000F0584E /* PetDetailsViewModel.swift in Sources */,
 				A6C3CFD9285686F600028289 /* RightClickMenu.swift in Sources */,
-				A6720955285B1D3000023189 /* FullScreenViewModel.swift in Sources */,
 				A67373AC2853858B002DC8FA /* PetSelectionViewModel.swift in Sources */,
 				A67373AB2853858B002DC8FA /* PetSelectionGrid.swift in Sources */,
 				A67373A92853858B002DC8FA /* MyApp.swift in Sources */,
 				A67373AD2853858B002DC8FA /* SettingsView.swift in Sources */,
 				A67373A82853858B002DC8FA /* OnScreenViewModel.swift in Sources */,
 				A67373A62853858B002DC8FA /* PetWindow.swift in Sources */,
-				A6720957285B206600023189 /* FullScreen.swift in Sources */,
 				A6720952285A16E300023189 /* MouseDraggablePet.swift in Sources */,
 				A67373B12853858B002DC8FA /* MainWindow.swift in Sources */,
 			);
@@ -13943,14 +13920,12 @@
 				A6E5AACA2860525A008AA653 /* OnScreenWindowManager.swift in Sources */,
 				A6E5AACB2860525A008AA653 /* PetDetailsViewModel.swift in Sources */,
 				A6E5AACC2860525A008AA653 /* RightClickMenu.swift in Sources */,
-				A6E5AACD2860525A008AA653 /* FullScreenViewModel.swift in Sources */,
 				A6E5AACE2860525A008AA653 /* PetSelectionViewModel.swift in Sources */,
 				A6E5AACF2860525A008AA653 /* PetSelectionGrid.swift in Sources */,
 				A6E5AAD02860525A008AA653 /* MyApp.swift in Sources */,
 				A6E5AAD12860525A008AA653 /* SettingsView.swift in Sources */,
 				A6E5AAD22860525A008AA653 /* OnScreenViewModel.swift in Sources */,
 				A6E5AAD32860525A008AA653 /* PetWindow.swift in Sources */,
-				A6E5AAD42860525A008AA653 /* FullScreen.swift in Sources */,
 				A6E5AAD52860525A008AA653 /* MouseDraggablePet.swift in Sources */,
 				A6E5AAD62860525A008AA653 /* MainWindow.swift in Sources */,
 			);
@@ -14332,10 +14307,6 @@
 		A65C1289285389F7001F2B70 /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Squanch;
-		};
-		A672094C2859FCC300023189 /* PetEntity */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PetEntity;
 		};
 		A672094F2859FE4F00023189 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;

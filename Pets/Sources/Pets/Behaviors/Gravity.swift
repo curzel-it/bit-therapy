@@ -3,7 +3,6 @@
 //
 
 import AppState
-import Pets
 import Biosphere
 import Squanch
 import SwiftUI

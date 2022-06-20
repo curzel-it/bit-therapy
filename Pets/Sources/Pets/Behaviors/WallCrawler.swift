@@ -2,8 +2,8 @@
 // Pet Therapy.
 //
 
-import SwiftUI
 import Biosphere
+import SwiftUI
 
 open class WallCrawler: Capability {
     

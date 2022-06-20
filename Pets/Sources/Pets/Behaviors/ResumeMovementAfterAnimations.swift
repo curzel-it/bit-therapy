@@ -4,9 +4,9 @@
 
 import Combine
 import Biosphere
+import Schwifty
 import Squanch
 import SwiftUI
-import Schwifty
 
 public class ResumeMovementAfterAnimations: Capability {
     

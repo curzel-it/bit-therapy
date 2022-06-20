@@ -3,13 +3,12 @@
 // 
 
 import AppState
+import Biosphere
 import Combine
 import EntityWindow
 import Pets
-import Biosphere
 import Schwifty
 import SwiftUI
-import PetEntity
 
 struct OnScreen {
     

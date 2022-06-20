@@ -4,7 +4,7 @@
 
 import AppKit
 import EntityWindow
-import PetEntity
+import Pets
 
 class MouseDraggablePet: MouseDraggable {
     

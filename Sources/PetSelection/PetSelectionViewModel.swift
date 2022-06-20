@@ -3,13 +3,12 @@
 //
 
 import AppState
-import DesignSystem
-import PetEntity
-import Pets
 import Biosphere
+import DesignSystem
+import Pets
+import Schwifty
 import Squanch
 import SwiftUI
-import Schwifty
 
 class PetSelectionViewModel: HabitatViewModel {
     

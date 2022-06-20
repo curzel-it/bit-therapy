@@ -3,14 +3,14 @@
 //
 
 import AppState
+import Biosphere
 import Combine
 import DesignSystem
 import InAppPurchases
 import Pets
-import Biosphere
+import Schwifty
 import Squanch
 import SwiftUI
-import Schwifty
 
 struct PetGridItem: View {
     
@@ -20,7 +20,7 @@ struct PetGridItem: View {
     
     let pet: SelectablePet
     
-    var isSelected: Bool { appState.selectedPet == pet.species }
+    var isSelected: Bool { appState.selectedPet == pet.species.id }
     
     var body: some View {
         ZStack {

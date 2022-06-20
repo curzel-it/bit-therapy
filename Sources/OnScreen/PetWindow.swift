@@ -3,11 +3,10 @@
 // 
 
 import AppState
+import Biosphere
 import Combine
 import EntityWindow
-import PetEntity
 import Pets
-import Biosphere
 import Schwifty
 import SwiftUI
 

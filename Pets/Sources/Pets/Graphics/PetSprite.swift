@@ -2,7 +2,6 @@
 // Pet Therapy.
 //
 
-import Pets
 import Biosphere
 import Schwifty
 import Squanch

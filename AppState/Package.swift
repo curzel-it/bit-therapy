@@ -12,15 +12,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "../DesignSystem"),
-        .package(path: "../Pets")
+        .package(path: "../DesignSystem")
     ],
     targets: [
         .target(
             name: "AppState",
             dependencies: [
-                .product(name: "DesignSystem", package: "DesignSystem"),
-                .product(name: "Pets", package: "Pets")
+                .product(name: "DesignSystem", package: "DesignSystem")
             ]
         )
     ]

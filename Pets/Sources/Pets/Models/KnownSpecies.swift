@@ -28,4 +28,8 @@ extension Pet {
                 return path != nil
             }
     }()
+    
+    public static func by(id: String) -> Pet? {
+        availableSpecies.first { $0.id == id }
+    }
 }

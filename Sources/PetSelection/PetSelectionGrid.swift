@@ -3,12 +3,12 @@
 //
 
 import AppState
+import Biosphere
 import Combine
 import DesignSystem
-import Biosphere
+import Schwifty
 import Squanch
 import SwiftUI
-import Schwifty
 
 struct PetSelectionGrid: View {
     

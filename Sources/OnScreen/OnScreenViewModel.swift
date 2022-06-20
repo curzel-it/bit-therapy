@@ -4,10 +4,9 @@
 
 import AppKit
 import AppState
-import EntityWindow
-import PetEntity
-import Pets
 import Biosphere
+import EntityWindow
+import Pets
 
 class OnScreenViewModel: HabitatViewModel {
     
@@ -31,7 +30,8 @@ class OnScreenViewModel: HabitatViewModel {
     }
     
     func addSelectedPet() {
-        addPet(for: AppState.global.selectedPet ?? .sloth)
+        let selected = Pet.by(id: AppState.global.selectedPet)
+        addPet(for: selected ?? .sloth)
     }
     
     private func addPet(for species: Pet) {

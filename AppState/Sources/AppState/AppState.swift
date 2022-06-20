@@ -4,7 +4,6 @@
 
 import Combine
 import DesignSystem
-import Pets
 import SwiftUI
 
 public class AppState: ObservableObject {
@@ -12,14 +11,7 @@ public class AppState: ObservableObject {
     public static var global = AppState()
     
     @Published public var selectedPage: AppPage = .home
-    
-    @Published public var selectedPet: Pet? {
-        didSet {
-            guard let id = selectedPet?.id else { return }
-            petId = id
-        }
-    }
-    
+        
     @Published public var petSize: CGFloat = PetSize.defaultSize {
         didSet {
             petSizeValue = petSize
@@ -32,6 +24,8 @@ public class AppState: ObservableObject {
         }
     }
     
+    @AppStorage("petId") public var selectedPet: String = "sloth"
+    
     @AppStorage("gravityEnabled") public var gravityEnabled = false
     
     @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
@@ -40,12 +34,8 @@ public class AppState: ObservableObject {
     
     @AppStorage("speedMultiplier") private var speedMultiplierValue: Double = 1
     @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize
-    @AppStorage("petId") private var petId: String = Pet.sloth.id
         
     private init() {
-        if let pet = Pet.availableSpecies.first(where: { $0.id == petId }) {
-            selectedPet = pet
-        }
         petSize = petSizeValue
         speedMultiplier = speedMultiplierValue
     }

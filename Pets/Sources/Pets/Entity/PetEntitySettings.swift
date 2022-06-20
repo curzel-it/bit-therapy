@@ -4,9 +4,8 @@
 
 import AppKit
 import AppState
-import DesignSystem
-import Pets
 import Biosphere
+import DesignSystem
 
 // MARK: - Id
 

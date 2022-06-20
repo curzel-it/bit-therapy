@@ -5,7 +5,7 @@
 import AppState
 import Lang
 import InAppPurchases
-import PetEntity
+import Pets
 import SwiftUI
 import Tracking
 
@@ -44,7 +44,7 @@ class PetDetailsViewModel: ObservableObject {
     }
     
     func select() {
-        AppState.global.selectedPet = child.species
+        AppState.global.selectedPet = child.species.id
         OnScreen.show()
         Tracking.didSelect(child.species)
         close()
