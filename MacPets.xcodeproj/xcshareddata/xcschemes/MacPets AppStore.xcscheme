@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A6E5AAB42860525A008AA653"
-               BuildableName = "MacPets copy.app"
+               BuildableName = "MacPets AppStore.app"
                BlueprintName = "MacPets AppStore"
                ReferencedContainer = "container:MacPets.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A6E5AAB42860525A008AA653"
-            BuildableName = "MacPets copy.app"
+            BuildableName = "MacPets AppStore.app"
             BlueprintName = "MacPets AppStore"
             ReferencedContainer = "container:MacPets.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A6E5AAB42860525A008AA653"
-            BuildableName = "MacPets copy.app"
+            BuildableName = "MacPets AppStore.app"
             BlueprintName = "MacPets AppStore"
             ReferencedContainer = "container:MacPets.xcodeproj">
          </BuildableReference>
