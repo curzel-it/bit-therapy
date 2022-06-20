@@ -43,7 +43,7 @@ extension Pet {
 
 extension PetAction {
     
-    static func climb(to position: PetActionPosition) -> PetAction {
+    static func climb(to position: Position) -> PetAction {
         let left = position == .topLeftCorner
         let direction: CGVector = .init(dx: left ? -1 : 1, dy: 0)
         

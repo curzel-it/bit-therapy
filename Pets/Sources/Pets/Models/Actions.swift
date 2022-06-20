@@ -5,8 +5,6 @@
 import Biosphere
 import Foundation
 
-// MARK: - Action
-
 public struct PetAction: Equatable {
     
     public let id: String
@@ -15,14 +13,14 @@ public struct PetAction: Equatable {
     public let frameTime: TimeInterval?
     
     let size: CGSize?
-    let position: PetActionPosition
+    let position: Position
     
     public var hasCustomPosition: Bool { position != .inPlace }
     
     init(
         id: String,
         size: CGSize? = nil,
-        position: PetActionPosition = .inPlace,
+        position: Position = .inPlace,
         facingDirection: CGVector? = nil,
         frameTime: TimeInterval? = nil,
         chance: Double = 1
@@ -80,19 +78,18 @@ public struct PetAction: Equatable {
     }
 }
 
-// MARK: - Description
-
 extension PetAction: CustomStringConvertible {
     
     public var description: String { id }
 }
 
-// MARK: - Position
-
-enum PetActionPosition {
-    case inPlace
-    case topLeftCorner
-    case bottomLeftCorner
-    case topRightCorner
-    case bottomRightCorner
+extension PetAction {
+    
+    enum Position {
+        case inPlace
+        case topLeftCorner
+        case bottomLeftCorner
+        case topRightCorner
+        case bottomRightCorner
+    }
 }
