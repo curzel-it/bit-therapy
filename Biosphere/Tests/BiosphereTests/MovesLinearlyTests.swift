@@ -5,12 +5,12 @@
 import XCTest
 import Squanch
 
-@testable import Physics
+@testable import Biosphere
 
 class LinearMovementTests: XCTestCase {
     
     func testPositionProperlyUpdates() {
-        let entity = PhysicsEntity(
+        let entity = Entity(
             id: "entity",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
             in: CGRect(x: 0, y: 0, width: 1000, height: 1000)

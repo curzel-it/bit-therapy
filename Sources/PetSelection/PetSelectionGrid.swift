@@ -5,7 +5,7 @@
 import AppState
 import Combine
 import DesignSystem
-import Physics
+import Biosphere
 import Squanch
 import SwiftUI
 import Schwifty

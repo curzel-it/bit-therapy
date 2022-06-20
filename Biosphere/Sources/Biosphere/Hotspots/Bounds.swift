@@ -7,8 +7,8 @@ import Foundation
 private let boundDistanceAfterScreenEnd: CGFloat = 100
 private let boundsThickness: CGFloat = 1000
 
-func bottomBound(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func bottomBound(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.bottomBound.rawValue,
         frame: CGRect(
             x: -boundsThickness,
@@ -24,8 +24,8 @@ func bottomBound(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func topBound(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func topBound(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.topBound.rawValue,
         frame: CGRect(
             x: -boundsThickness,
@@ -41,8 +41,8 @@ func topBound(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func leftBound(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func leftBound(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.leftBound.rawValue,
         frame: CGRect(
             x: 0 - boundsThickness - boundDistanceAfterScreenEnd,
@@ -58,8 +58,8 @@ func leftBound(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func rightBound(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func rightBound(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.rightBound.rawValue,
         frame: CGRect(
             x: habitatBounds.width + boundDistanceAfterScreenEnd,

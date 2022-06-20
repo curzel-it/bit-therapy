@@ -52,7 +52,6 @@
 		A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A67373C2285386D1002DC8FA /* LaunchAtLogin */; };
 		A67373CA2853881E002DC8FA /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A67373C92853881E002DC8FA /* Schwifty */; };
 		A67373CC28538974002DC8FA /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A67373CB28538974002DC8FA /* DesignSystem */; };
-		A67373CE28538974002DC8FA /* Physics in Frameworks */ = {isa = PBXBuildFile; productRef = A67373CD28538974002DC8FA /* Physics */; };
 		A6C031F5285CB586001C49D1 /* MacPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C031F4285CB566001C49D1 /* MacPetsTests.swift */; };
 		A6C3CFD52855F7C800028289 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD42855F7C800028289 /* StatusItemManager.swift */; };
 		A6C3CFD9285686F600028289 /* RightClickMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD8285686F600028289 /* RightClickMenu.swift */; };
@@ -88,7 +87,6 @@
 		A6E5AAE12860525A008AA653 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAB82860525A008AA653 /* DesignSystem */; };
 		A6E5AAE22860525A008AA653 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABD2860525A008AA653 /* InAppPurchases */; };
 		A6E5AAE32860525A008AA653 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABE2860525A008AA653 /* Lang */; };
-		A6E5AAE42860525A008AA653 /* Physics in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAB92860525A008AA653 /* Physics */; };
 		A6E5AB122860525A008AA653 /* smoke_bomb-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6202EDE284CB23500E42468 /* smoke_bomb-5.png */; };
 		A6E5AB3A2860525A008AA653 /* Dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60B9C0B283D82BE0030F8F0 /* Dogica.ttf */; };
 		A6E5ABE12860525A008AA653 /* smoke_bomb-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6202EDF284CB23500E42468 /* smoke_bomb-7.png */; };
@@ -3312,6 +3310,8 @@
 		A6E5CDC5286066E0008AA653 /* ufo_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E5CDAB286066CA008AA653 /* ufo_idle_front-1.png */; };
 		A6E5CDC7286066E0008AA653 /* ufo_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E5CDA9286066CA008AA653 /* ufo_idle_front-3.png */; };
 		A6E5CDCA286066E0008AA653 /* ufo_idle_front-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E5CDA8286066CA008AA653 /* ufo_idle_front-4.png */; };
+		A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5CDCD2860929E008AA653 /* Biosphere */; };
+		A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5CDCF286092A6008AA653 /* Biosphere */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3373,7 +3373,6 @@
 		A67373812853858B002DC8FA /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A67373C5285387EC002DC8FA /* Schwifty */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Schwifty; sourceTree = "<group>"; };
 		A67373C6285387F7002DC8FA /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DesignSystem; sourceTree = "<group>"; };
-		A67373C728538800002DC8FA /* Physics */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Physics; sourceTree = "<group>"; };
 		A67373C82853880D002DC8FA /* Squanch */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Squanch; sourceTree = "<group>"; };
 		A6982612283D885300C70E49 /* Info-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dev.plist"; sourceTree = "<group>"; };
 		A6C031F4285CB566001C49D1 /* MacPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPetsTests.swift; sourceTree = "<group>"; };
@@ -6110,6 +6109,7 @@
 		A6E5CDA9286066CA008AA653 /* ufo_idle_front-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-3.png"; sourceTree = "<group>"; };
 		A6E5CDAA286066CA008AA653 /* ufo_idle_front-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-2.png"; sourceTree = "<group>"; };
 		A6E5CDAB286066CA008AA653 /* ufo_idle_front-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-1.png"; sourceTree = "<group>"; };
+		A6E5CDCC28609210008AA653 /* Biosphere */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Biosphere; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -6120,6 +6120,7 @@
 				A67209502859FE4F00023189 /* AppState in Frameworks */,
 				A6C57A9528539D8D00BBDCF6 /* StoreKit.framework in Frameworks */,
 				A634991B2859BC5100488588 /* Pets in Frameworks */,
+				A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */,
 				A63499252859CDF900488588 /* EntityWindow in Frameworks */,
 				A672094D2859FCC300023189 /* PetEntity in Frameworks */,
 				A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */,
@@ -6129,7 +6130,6 @@
 				A67373CC28538974002DC8FA /* DesignSystem in Frameworks */,
 				A634991F2859C15900488588 /* InAppPurchases in Frameworks */,
 				A63499222859C43300488588 /* Lang in Frameworks */,
-				A67373CE28538974002DC8FA /* Physics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6147,6 +6147,7 @@
 				A6E5AAD82860525A008AA653 /* AppState in Frameworks */,
 				A6E5AAD92860525A008AA653 /* StoreKit.framework in Frameworks */,
 				A6E5AADA2860525A008AA653 /* Pets in Frameworks */,
+				A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */,
 				A6E5AADB2860525A008AA653 /* EntityWindow in Frameworks */,
 				A6E5AADC2860525A008AA653 /* PetEntity in Frameworks */,
 				A6E5AADD2860525A008AA653 /* LaunchAtLogin in Frameworks */,
@@ -6156,7 +6157,6 @@
 				A6E5AAE12860525A008AA653 /* DesignSystem in Frameworks */,
 				A6E5AAE22860525A008AA653 /* InAppPurchases in Frameworks */,
 				A6E5AAE32860525A008AA653 /* Lang in Frameworks */,
-				A6E5AAE42860525A008AA653 /* Physics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6341,13 +6341,13 @@
 			isa = PBXGroup;
 			children = (
 				A672094E2859FD8700023189 /* AppState */,
+				A6E5CDCC28609210008AA653 /* Biosphere */,
 				A67373C6285387F7002DC8FA /* DesignSystem */,
 				A63499232859CCD700488588 /* EntityWindow */,
 				A634991D2859C13D00488588 /* InAppPurchases */,
 				A63499202859C2C600488588 /* Lang */,
 				A672094B2859FB8A00023189 /* PetEntity */,
 				A63499192859BB9800488588 /* Pets */,
-				A67373C728538800002DC8FA /* Physics */,
 				A67373C5285387EC002DC8FA /* Schwifty */,
 				A67373C82853880D002DC8FA /* Squanch */,
 				A63499152859B6B100488588 /* Tracking */,
@@ -10448,7 +10448,6 @@
 				A67373C2285386D1002DC8FA /* LaunchAtLogin */,
 				A67373C92853881E002DC8FA /* Schwifty */,
 				A67373CB28538974002DC8FA /* DesignSystem */,
-				A67373CD28538974002DC8FA /* Physics */,
 				A65C1289285389F7001F2B70 /* Squanch */,
 				A63499162859B90600488588 /* Tracking */,
 				A634991A2859BC5100488588 /* Pets */,
@@ -10457,6 +10456,7 @@
 				A63499242859CDF900488588 /* EntityWindow */,
 				A672094C2859FCC300023189 /* PetEntity */,
 				A672094F2859FE4F00023189 /* AppState */,
+				A6E5CDCF286092A6008AA653 /* Biosphere */,
 			);
 			productName = MacPets;
 			productReference = A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */;
@@ -10499,7 +10499,6 @@
 				A6E5AAB52860525A008AA653 /* LaunchAtLogin */,
 				A6E5AAB72860525A008AA653 /* Schwifty */,
 				A6E5AAB82860525A008AA653 /* DesignSystem */,
-				A6E5AAB92860525A008AA653 /* Physics */,
 				A6E5AABA2860525A008AA653 /* Squanch */,
 				A6E5AABB2860525A008AA653 /* Tracking */,
 				A6E5AABC2860525A008AA653 /* Pets */,
@@ -10508,6 +10507,7 @@
 				A6E5AABF2860525A008AA653 /* EntityWindow */,
 				A6E5AAC02860525A008AA653 /* PetEntity */,
 				A6E5AAC12860525A008AA653 /* AppState */,
+				A6E5CDCD2860929E008AA653 /* Biosphere */,
 			);
 			productName = MacPets;
 			productReference = A6E5B59F2860525A008AA653 /* MacPets AppStore.app */;
@@ -14354,10 +14354,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
 		};
-		A67373CD28538974002DC8FA /* Physics */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Physics;
-		};
 		A6E5AAB52860525A008AA653 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A6E5AAB62860525A008AA653 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
@@ -14370,10 +14366,6 @@
 		A6E5AAB82860525A008AA653 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
-		};
-		A6E5AAB92860525A008AA653 /* Physics */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Physics;
 		};
 		A6E5AABA2860525A008AA653 /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -14406,6 +14398,14 @@
 		A6E5AAC12860525A008AA653 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppState;
+		};
+		A6E5CDCD2860929E008AA653 /* Biosphere */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Biosphere;
+		};
+		A6E5CDCF286092A6008AA653 /* Biosphere */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Biosphere;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

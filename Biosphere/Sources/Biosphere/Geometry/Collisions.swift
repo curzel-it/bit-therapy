@@ -28,7 +28,7 @@ public struct Collision: Equatable {
     public let isEphemeral: Bool
     public let intersection: CGRect
     
-    init(with body: PhysicsEntity, in rect: CGRect) {
+    init(with body: Entity, in rect: CGRect) {
         self.bodyId = body.id
         self.isEphemeral = body.isEphemeral
         self.intersection = rect
@@ -41,15 +41,15 @@ public struct Collision: Equatable {
     }
 }
 
-extension PhysicsEntity {
+extension Entity {
     
-    func collisions(with neighbors: [PhysicsEntity]) -> Collisions {
+    func collisions(with neighbors: [Entity]) -> Collisions {
         neighbors
             .filter { $0 != self }
             .compactMap { self.collision(with: $0) }
     }
     
-    func collision(with other: PhysicsEntity) -> Collision? {
+    func collision(with other: Entity) -> Collision? {
         let intersection = frame.intersection(other.frame)
         if !intersection.isNull && !intersection.isInfinite {
             return Collision(with: other, in: intersection)

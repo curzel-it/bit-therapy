@@ -6,7 +6,7 @@ import AppState
 import DesignSystem
 import PetEntity
 import Pets
-import Physics
+import Biosphere
 import Squanch
 import SwiftUI
 import Schwifty

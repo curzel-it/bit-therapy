@@ -6,11 +6,11 @@ import AppState
 import Combine
 import DesignSystem
 import Pets
-import Physics
+import Biosphere
 import Squanch
 import SwiftUI
 
-open class PetEntity: PhysicsEntity {
+open class PetEntity: Entity {
     
     @Published fileprivate(set) var petState: PetState = .move
     

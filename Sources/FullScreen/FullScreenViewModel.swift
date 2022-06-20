@@ -7,7 +7,7 @@ import AppState
 import EntityWindow
 import PetEntity
 import Pets
-import Physics
+import Biosphere
 import SwiftUI
 
 class FullScreenViewModel: HabitatViewModel {

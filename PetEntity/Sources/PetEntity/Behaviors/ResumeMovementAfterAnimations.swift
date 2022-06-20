@@ -3,7 +3,7 @@
 //
 
 import Combine
-import Physics
+import Biosphere
 import Squanch
 import SwiftUI
 import Schwifty
@@ -17,7 +17,7 @@ public class ResumeMovementAfterAnimations: Capability {
     
     private var actionCanc: AnyCancellable!
 
-    public required init(with body: PhysicsEntity) {
+    public required init(with body: Entity) {
         super.init(with: body)
         Task { @MainActor in
             setResumeMovementAfterAnimations()

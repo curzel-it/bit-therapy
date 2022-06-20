@@ -10,9 +10,9 @@ public struct EntityView: View {
     
     @EnvironmentObject var viewModel: HabitatViewModel
     
-    @ObservedObject var child: PhysicsEntity
+    @ObservedObject var child: Entity
     
-    public init(child: PhysicsEntity) {
+    public init(child: Entity) {
         self.child = child
     }
     
@@ -36,7 +36,7 @@ public struct EntityView: View {
 
 private extension View {
     
-    func lookingTowardsDirection(of entity: PhysicsEntity) -> some View {
+    func lookingTowardsDirection(of entity: Entity) -> some View {
         let direction = entity.facingDirection()
         let xAngle = xAngle(for: direction, isUpsideDown: entity.isUpsideDown)
         let yAngle = yAngle(for: direction, isUpsideDown: entity.isUpsideDown)

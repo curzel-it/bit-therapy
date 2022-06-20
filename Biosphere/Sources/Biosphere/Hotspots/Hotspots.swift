@@ -22,9 +22,9 @@ public enum Hotspot: String, CaseIterable {
 
 // MARK: - Default Hotspots
 
-extension World {
+extension Environment {
     
-    func hotspots() -> [PhysicsEntity] {
+    func hotspots() -> [Entity] {
         [
             topBound(in: bounds),
             bottomBound(in: bounds),

@@ -7,7 +7,7 @@ import Combine
 import EntityWindow
 import PetEntity
 import Pets
-import Physics
+import Biosphere
 import Schwifty
 import SwiftUI
 
@@ -15,7 +15,7 @@ class PetWindow: EntityWindow {
     
     private var sizeCanc: AnyCancellable!
     
-    public override init(representing entity: PhysicsEntity, in habitat: HabitatViewModel) {
+    public override init(representing entity: Entity, in habitat: HabitatViewModel) {
         super.init(representing: entity, in: habitat)
         bindToSizeSettings()
     }

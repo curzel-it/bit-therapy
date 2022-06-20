@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0"),
         .package(path: "../Lang"),
-        .package(path: "../Physics"),
+        .package(path: "../Biosphere"),
         .package(path: "../Squanch"),
         .package(path: "../Tracking")
     ],
@@ -24,7 +24,7 @@ let package = Package(
             dependencies: [
                 .product(name: "RevenueCat", package: "purchases-ios"),
                 .product(name: "Lang", package: "Lang"),
-                .product(name: "Physics", package: "Physics"),
+                .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Tracking", package: "Tracking")
             ]

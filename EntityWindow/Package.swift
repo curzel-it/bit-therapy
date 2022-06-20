@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../AppState"),
-        .package(path: "../Physics"),
+        .package(path: "../Biosphere"),
         .package(path: "../Schwifty"),
         .package(path: "../Squanch")
     ],
@@ -22,7 +22,7 @@ let package = Package(
             name: "EntityWindow",
             dependencies: [
                 .product(name: "AppState", package: "AppState"),
-                .product(name: "Physics", package: "Physics"),
+                .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch")
             ]

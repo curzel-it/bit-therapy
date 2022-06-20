@@ -4,8 +4,8 @@
 
 import Foundation
 
-func topLeftCorner(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func topLeftCorner(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.topLeftCorner.rawValue,
         frame: CGRect(
             x: 0,
@@ -22,8 +22,8 @@ func topLeftCorner(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func bottomLeftCorner(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func bottomLeftCorner(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.bottomLeftCorner.rawValue,
         frame: CGRect(
             x: 0,
@@ -40,8 +40,8 @@ func bottomLeftCorner(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func topRightCorner(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func topRightCorner(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.topRightCorner.rawValue,
         frame: CGRect(
             x: habitatBounds.width,
@@ -58,8 +58,8 @@ func topRightCorner(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func bottomRightCorner(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func bottomRightCorner(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.bottomRightCorner.rawValue,
         frame: CGRect(
             x: habitatBounds.width,

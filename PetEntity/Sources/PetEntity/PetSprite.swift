@@ -3,7 +3,7 @@
 //
 
 import Pets
-import Physics
+import Biosphere
 import Schwifty
 import Squanch
 import SwiftUI

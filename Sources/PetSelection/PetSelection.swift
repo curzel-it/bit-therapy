@@ -5,7 +5,7 @@
 import DesignSystem
 import InAppPurchases
 import Lang
-import Physics
+import Biosphere
 import Schwifty
 import SwiftUI
 

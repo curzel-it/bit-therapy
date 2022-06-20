@@ -2,7 +2,7 @@
 // Pet Therapy.
 //
 
-import Physics
+import Biosphere
 import Squanch
 
 // MARK: - Behavior

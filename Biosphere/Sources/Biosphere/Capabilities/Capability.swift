@@ -6,11 +6,11 @@ import SwiftUI
 
 open class Capability {
     
-    public weak var body: PhysicsEntity?
+    public weak var body: Entity?
     
     public var isEnabled: Bool = true
     
-    public required init(with body: PhysicsEntity) {
+    public required init(with body: Entity) {
         self.body = body
     }
     

@@ -4,7 +4,7 @@
 
 import XCTest
 
-@testable import Physics
+@testable import Biosphere
 
 class BounceOffLateralBoundsTests: XCTestCase {
     
@@ -12,11 +12,11 @@ class BounceOffLateralBoundsTests: XCTestCase {
     private lazy var testRightBound = { rightBound(in: testBounds) }()
     private lazy var testLeftBound = { leftBound(in: testBounds) }()
     
-    private var testEntity: PhysicsEntity!
+    private var testEntity: Entity!
     private var bounce: BounceOffLateralBounds!
     
     override func setUp() {
-        testEntity = PhysicsEntity(
+        testEntity = Entity(
             id: "entity",
             frame: CGRect(x: 10, y: 10, width: 10, height: 10),
             in: testBounds

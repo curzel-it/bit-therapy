@@ -19,13 +19,6 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:Physics",
-        "identifier" : "PhysicsTests",
-        "name" : "PhysicsTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Schwifty",
         "identifier" : "SchwiftyTests",
         "name" : "SchwiftyTests"
@@ -36,6 +29,13 @@
         "containerPath" : "container:Squanch",
         "identifier" : "SquanchTests",
         "name" : "SquanchTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Biosphere",
+        "identifier" : "BiosphereTests",
+        "name" : "BiosphereTests"
       }
     }
   ],

@@ -4,10 +4,10 @@
 
 import SwiftUI
 
-public struct World {
+public struct Environment {
     
     public let bounds: CGRect
-    public var children: [PhysicsEntity] = []
+    public var children: [Entity] = []
     
     public init(bounds rect: CGRect) {
         bounds = rect

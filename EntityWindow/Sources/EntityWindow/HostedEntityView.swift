@@ -4,20 +4,20 @@
 
 import AppState
 import DesignSystem
-import Physics
+import Biosphere
 import Squanch
 import Schwifty
 import SwiftUI
 
 class HostedEntityView: NSView {
     
-    let entity: PhysicsEntity
+    let entity: Entity
     let habitat: HabitatViewModel
         
     weak var onScreenView: NSView!
     weak var rightClickMenu: NSView!
     
-    public init(representing entity: PhysicsEntity, in habitat: HabitatViewModel) {
+    public init(representing entity: Entity, in habitat: HabitatViewModel) {
         self.entity = entity
         self.habitat = habitat
         super.init(frame: CGRect(size: entity.frame.size))

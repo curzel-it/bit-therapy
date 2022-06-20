@@ -4,7 +4,7 @@
 
 import AppState
 import Pets
-import Physics
+import Biosphere
 import Squanch
 import SwiftUI
 

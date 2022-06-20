@@ -15,7 +15,7 @@ let package = Package(
         .package(path: "../AppState"),
         .package(path: "../DesignSystem"),
         .package(path: "../Pets"),
-        .package(path: "../Physics"),
+        .package(path: "../Biosphere"),
         .package(path: "../Schwifty"),
         .package(path: "../Squanch")
     ],
@@ -26,7 +26,7 @@ let package = Package(
                 .product(name: "AppState", package: "AppState"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "Pets", package: "Pets"),
-                .product(name: "Physics", package: "Physics"),
+                .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch")
             ]

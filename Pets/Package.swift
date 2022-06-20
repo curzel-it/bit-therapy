@@ -12,14 +12,14 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "../Physics"),
+        .package(path: "../Biosphere"),
         .package(path: "../Squanch")
     ],
     targets: [
         .target(
             name: "Pets",
             dependencies: [
-                .product(name: "Physics", package: "Physics"),
+                .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "Squanch", package: "Squanch")
             ]
         )

@@ -10,13 +10,13 @@ class AnimatedImageTests: XCTestCase {
     
     func testLoopDuracyIsProperlyCalculated() {
         let frames = (0..<10).map { _ in NSImage() }
-        let animation = AnimatedImage("", fps: 10, frames: frames)
+        let animation = AnimatedImage("", frameTime: 0.1, frames: frames)
         XCTAssertEqual(animation.loopDuracy, 1)
     }
     
     func testFramesUpdateWhenNeeded() {
         let frames = (0..<10).map { _ in NSImage() }
-        let animation = AnimatedImage("", fps: 10, frames: frames)
+        let animation = AnimatedImage("", frameTime: 0.1, frames: frames)
         XCTAssertEqual(animation.currentFrameIndex, 0)
         animation.update(after: 0.05)
         XCTAssertEqual(animation.currentFrameIndex, 0)

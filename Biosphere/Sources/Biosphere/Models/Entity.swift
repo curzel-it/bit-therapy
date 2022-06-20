@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-open class PhysicsEntity: Identifiable, ObservableObject {
+open class Entity: Identifiable, ObservableObject {
     
     @Published public private(set) var frame: CGRect
     @Published public private(set) var direction: CGVector = .zero
@@ -116,9 +116,9 @@ open class PhysicsEntity: Identifiable, ObservableObject {
 
 // MARK: - Equatable
 
-extension PhysicsEntity: Equatable {
+extension Entity: Equatable {
     
-    public static func == (lhs: PhysicsEntity, rhs: PhysicsEntity) -> Bool {
+    public static func == (lhs: Entity, rhs: Entity) -> Bool {
         lhs.id == rhs.id
     }
 }

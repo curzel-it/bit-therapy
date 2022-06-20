@@ -3,7 +3,7 @@
 // 
 
 import Combine
-import Physics
+import Biosphere
 import Squanch
 import SwiftUI
 
@@ -14,7 +14,7 @@ public class ReactToHotspots: Capability {
         
     var lastTouched: [Hotspot] = []
     
-    public required init(with body: PhysicsEntity) {
+    public required init(with body: Entity) {
         super.init(with: body)
         setResetLastTouchedOnDrag()
     }

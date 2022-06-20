@@ -7,7 +7,7 @@ import SwiftUI
 
 open class HabitatViewModel: ObservableObject {
         
-    @Published public var state: World
+    @Published public var state: Environment
     
     public var timer: Timer!
     
@@ -19,7 +19,7 @@ open class HabitatViewModel: ObservableObject {
         lastUpdate = Date.timeIntervalSinceReferenceDate
         let screen = NSScreen.main ?? NSScreen.screens.first
         let screenBounds = CGRect(origin: .zero, size: screen?.frame.size ?? .zero)
-        state = World(bounds: screenBounds)
+        state = Environment(bounds: screenBounds)
         startRendering()
     }
     

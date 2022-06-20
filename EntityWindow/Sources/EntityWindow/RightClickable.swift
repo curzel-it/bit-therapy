@@ -3,7 +3,7 @@
 //
 
 import AppKit
-import Physics
+import Biosphere
 import Squanch
 
 open class RightClickable: Capability {
@@ -13,7 +13,7 @@ open class RightClickable: Capability {
     }
 }
 
-extension PhysicsEntity {
+extension Entity {
     
     var rightClick: RightClickable? { capability(for: RightClickable.self) }
 }

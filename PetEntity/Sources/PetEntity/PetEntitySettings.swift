@@ -6,7 +6,7 @@ import AppKit
 import AppState
 import DesignSystem
 import Pets
-import Physics
+import Biosphere
 
 // MARK: - Id
 

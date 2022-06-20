@@ -4,12 +4,12 @@
 
 import AppKit
 import Combine
-import Physics
+import Biosphere
 import SwiftUI
 
 open class EntityWindow: NSWindow {
     
-    public let entity: PhysicsEntity
+    public let entity: Entity
     public let habitat: HabitatViewModel
     
     public weak var entityView: NSView!
@@ -17,7 +17,7 @@ open class EntityWindow: NSWindow {
     private var boundsCanc: AnyCancellable!
     private var aliveCanc: AnyCancellable!
     
-    public init(representing entity: PhysicsEntity, in habitat: HabitatViewModel) {
+    public init(representing entity: Entity, in habitat: HabitatViewModel) {
         self.entity = entity
         self.habitat = habitat
         

@@ -3,7 +3,7 @@
 //
 
 import AppKit
-import Physics
+import Biosphere
 import Squanch
 
 open class MouseDraggable: Capability {
@@ -34,12 +34,12 @@ open class MouseDraggable: Capability {
     }
 }
 
-extension PhysicsEntity {
+extension Entity {
     
     var mouseDrag: MouseDraggable? { capability(for: MouseDraggable.self) }
 }
 
-extension PhysicsEntity {
+extension Entity {
     
     func setPosition(fromWindow window: NSWindow?) {
         guard let position = window?.frame.origin else { return }

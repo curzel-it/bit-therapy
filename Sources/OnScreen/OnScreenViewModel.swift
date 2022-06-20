@@ -7,7 +7,7 @@ import AppState
 import EntityWindow
 import PetEntity
 import Pets
-import Physics
+import Biosphere
 
 class OnScreenViewModel: HabitatViewModel {
     
@@ -47,7 +47,7 @@ class OnScreenViewModel: HabitatViewModel {
         state.children.append(pet)
     }
     
-    private func window(representing entity: PhysicsEntity) -> EntityWindow {
+    private func window(representing entity: Entity) -> EntityWindow {
         if let pet = entity as? PetEntity {
             return PetWindow(representing: pet, in: self)
         } else {

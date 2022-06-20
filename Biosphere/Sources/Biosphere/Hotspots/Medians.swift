@@ -4,8 +4,8 @@
 
 import Foundation
 
-func verticalCenter(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func verticalCenter(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.verticalCenter.rawValue,
         frame: CGRect(
             x: 0,
@@ -22,8 +22,8 @@ func verticalCenter(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func horizontalCenter(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func horizontalCenter(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.horizontalCenter.rawValue,
         frame: CGRect(
             x: habitatBounds.width/2,
@@ -40,8 +40,8 @@ func horizontalCenter(in habitatBounds: CGRect) -> PhysicsEntity {
     return entity
 }
 
-func center(in habitatBounds: CGRect) -> PhysicsEntity {
-    let entity = PhysicsEntity(
+func center(in habitatBounds: CGRect) -> Entity {
+    let entity = Entity(
         id: Hotspot.center.rawValue,
         frame: CGRect(
             x: habitatBounds.width/2,

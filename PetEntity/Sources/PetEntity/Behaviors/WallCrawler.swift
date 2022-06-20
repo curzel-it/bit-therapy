@@ -3,7 +3,7 @@
 //
 
 import SwiftUI
-import Physics
+import Biosphere
 
 open class WallCrawler: Capability {
     

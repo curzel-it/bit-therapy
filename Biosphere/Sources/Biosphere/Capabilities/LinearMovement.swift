@@ -24,7 +24,7 @@ public class LinearMovement: Capability {
     }
 }
 
-extension PhysicsEntity {
+extension Entity {
     
     public var movement: LinearMovement? {
         capability(for: LinearMovement.self)

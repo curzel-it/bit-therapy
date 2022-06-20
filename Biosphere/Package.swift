@@ -3,12 +3,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "Physics",
+    name: "Biosphere",
     platforms: [.macOS(.v12)],
     products: [
         .library(
-            name: "Physics",
-            targets: ["Physics"])
+            name: "Biosphere",
+            targets: ["Biosphere"])
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
@@ -17,16 +17,16 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Physics",
+            name: "Biosphere",
             dependencies: [
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Schwifty", package: "Schwifty")
             ]),
         .testTarget(
-            name: "PhysicsTests",
+            name: "BiosphereTests",
             dependencies: [
-                "Physics",
+                "Biosphere",
                 .product(name: "Squanch", package: "Squanch")
             ]
         )

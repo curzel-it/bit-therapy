@@ -6,7 +6,7 @@ import AppState
 import Combine
 import EntityWindow
 import Pets
-import Physics
+import Biosphere
 import Schwifty
 import SwiftUI
 import PetEntity
