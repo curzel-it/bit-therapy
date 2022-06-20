@@ -12,7 +12,7 @@ extension Pet {
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
-                actions: [
+                possibleAnimations: [
                     .idleFront,
                     .idle,
                     .eat,
@@ -23,13 +23,13 @@ extension Pet {
             ),
             .init(
                 trigger: .on(spot: .leftBound),
-                actions: [
+                possibleAnimations: [
                     .climb(to: .topLeftCorner)
                 ]
             ),
             .init(
                 trigger: .on(spot: .rightBound),
-                actions: [
+                possibleAnimations: [
                     .climb(to: .topRightCorner)
                 ]
             )
@@ -41,9 +41,9 @@ extension Pet {
     )
 }
 
-extension PetAction {
+extension PetAnimation {
     
-    static func climb(to position: Position) -> PetAction {
+    static func climb(to position: Position) -> PetAnimation {
         let left = position == .topLeftCorner
         let direction: CGVector = .init(dx: left ? -1 : 1, dy: 0)
         

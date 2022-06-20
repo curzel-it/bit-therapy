@@ -12,7 +12,7 @@ extension Pet {
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
-                actions: [
+                possibleAnimations: [
                     .jump,
                     .crack
                 ]
@@ -23,7 +23,7 @@ extension Pet {
     static let goldenEgg = Pet.egg.shiny(id: "egg_gold")
 }
 
-extension PetAction {
+extension PetAnimation {
     
-    static let crack = PetAction(id: "crack")
+    static let crack = PetAnimation(id: "crack")
 }

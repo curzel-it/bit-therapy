@@ -5,7 +5,7 @@
 import Biosphere
 import Foundation
 
-public struct PetAction: Equatable {
+public struct PetAnimation: Equatable {
     
     public let id: String
     public let chance: Double
@@ -14,8 +14,6 @@ public struct PetAction: Equatable {
     
     let size: CGSize?
     let position: Position
-    
-    public var hasCustomPosition: Bool { position != .inPlace }
     
     init(
         id: String,
@@ -78,12 +76,12 @@ public struct PetAction: Equatable {
     }
 }
 
-extension PetAction: CustomStringConvertible {
+extension PetAnimation: CustomStringConvertible {
     
     public var description: String { id }
 }
 
-extension PetAction {
+extension PetAnimation {
     
     enum Position {
         case inPlace

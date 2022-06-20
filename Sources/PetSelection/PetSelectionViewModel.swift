@@ -47,6 +47,6 @@ class SelectablePet: PetEntity {
     init(_ pet: Pet, size: CGFloat, in habitatBounds: CGRect) {
         super.init(pet, size: CGSize(square: size), in: habitatBounds)
         set(direction: .zero)
-        set(state: .action(action: .idleFront))
+        set(state: .animation(animation: .idleFront))
     }
 }

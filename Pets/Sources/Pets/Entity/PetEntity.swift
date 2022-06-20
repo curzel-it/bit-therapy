@@ -36,8 +36,8 @@ open class PetEntity: Entity {
     // MARK: - Facing Direction
     
     public override func facingDirection() -> CGVector {
-        if case .action(let action) = petState {
-            if let direction = action.facingDirection {
+        if case .animation(let animation) = petState {
+            if let direction = animation.facingDirection {
                 return direction
             }
         }
@@ -78,9 +78,9 @@ extension PetEntity {
     }
     
     private func updatePhysicBody(accordingTo state: PetState) {
-        if case .action(let action) = state {
+        if case .animation(let animation) = state {
             storeDirectionAndFrame()
-            set(frame: action.frame(from: frame, in: habitatBounds))
+            set(frame: animation.frame(from: frame, in: habitatBounds))
             set(direction: .zero)
         } else {
             restoreDirectionAndFrame()

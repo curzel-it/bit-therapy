@@ -45,7 +45,8 @@ class PetSprite: Sprite, ObservableObject {
     }
     
     private func frameTime() -> TimeInterval {
-        if case .action(let action) = lastState, let time = action.frameTime {
+        if case .animation(let animation) = lastState,
+           let time = animation.frameTime {
             return time
         }
         return species.frameTime
@@ -53,8 +54,8 @@ class PetSprite: Sprite, ObservableObject {
     
     private func animationPathForLastState() -> String {
         if case .smokeBomb = lastState { return "smoke_bomb" }
-        let action = lastState.actionPath(for: species)
-        return "\(species.id)_\(action)"
+        let animation = lastState.actionPath(for: species)
+        return "\(species.id)_\(animation)"
     }
     
     override func update(with collisions: Collisions, after time: TimeInterval) {
@@ -77,7 +78,7 @@ extension PetState {
         case .move: return pet.movement.path
         case .jump: return "jump"
         case .smokeBomb: return "smoke_bomb"
-        case .action(let action): return action.id
+        case .animation(let animation): return animation.id
         }
     }
 }

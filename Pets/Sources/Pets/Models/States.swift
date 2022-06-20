@@ -12,7 +12,7 @@ public enum PetState: Equatable {
     case drag
     case jump
     case move
-    case action(action: PetAction)
+    case animation(animation: PetAnimation)
     
     public var description: String {
         switch self {
@@ -21,7 +21,7 @@ public enum PetState: Equatable {
         case .jump: return "jump"
         case .drag: return "drag"
         case .move: return "move"
-        case .action(let action): return action.id
+        case .animation(let animation): return animation.id
         }
     }
 }

@@ -15,7 +15,7 @@ public class ResumeMovementAfterAnimations: Capability {
     
     let minTimePerAnimation: TimeInterval = 4
     
-    private var actionCanc: AnyCancellable!
+    private var stateCanc: AnyCancellable!
 
     public required init(with body: Entity) {
         super.init(with: body)
@@ -25,9 +25,9 @@ public class ResumeMovementAfterAnimations: Capability {
     }
     
     private func setResumeMovementAfterAnimations() {
-        actionCanc = pet?.$petState.sink { state in
+        stateCanc = pet?.$petState.sink { state in
             guard self.isEnabled else { return }
-            guard case .action = state else { return }
+            guard case .animation = state else { return }
             self.keepMovingAfterCurentAnimationCompleted()
         }
     }
@@ -36,7 +36,7 @@ public class ResumeMovementAfterAnimations: Capability {
         let loopDuracy = pet?.mainSprite.loopDuracy ?? 0
         let loops = ceil(minTimePerAnimation / loopDuracy)
         let delay = loopDuracy * loops
-        printDebug(tag, "Killing action in \(delay)")
+        printDebug(tag, "Killing animation in \(delay)")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
             guard let self = self else { return }
@@ -49,7 +49,7 @@ public class ResumeMovementAfterAnimations: Capability {
             
     public override func uninstall() {
         super.uninstall()
-        actionCanc?.cancel()
-        actionCanc = nil
+        stateCanc?.cancel()
+        stateCanc = nil
     }
 }

@@ -23,9 +23,9 @@ public class ReactToHotspots: Capability {
     
     private func handle(touched spot: Hotspot) {
         guard let pet = pet else { return }
-        if let action = pet.species.action(whenTouching: spot) {
-            printDebug(tag, "Picked", action.description)
-            pet.set(state: .action(action: action))
+        if let animation = pet.species.action(whenTouching: spot) {
+            printDebug(tag, "Picked", animation.description)
+            pet.set(state: .animation(animation: animation))
         }
     }
     

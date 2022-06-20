@@ -12,7 +12,7 @@ extension Pet {
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
-                actions: [
+                possibleAnimations: [
                     .idleFront,
                     .idle,
                     .eat,
