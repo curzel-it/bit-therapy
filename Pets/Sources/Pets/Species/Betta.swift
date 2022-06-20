@@ -8,7 +8,7 @@ extension Pet {
     
     static let betta = Pet(
         id: "betta",
-        movement: .fly,
+        movement: Movement(type: .fly, speed: 1.3),
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
@@ -18,7 +18,6 @@ extension Pet {
                     .tsundere
                 ]
             )
-        ],
-        speed: 1.3
+        ]
     )
 }

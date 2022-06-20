@@ -7,6 +7,7 @@ import Foundation
 extension Pet {
     
     static let missingNo = Pet(
-        id: "missingno"
+        id: "missingno",
+        movement: Movement(type: .walk)
     )
 }

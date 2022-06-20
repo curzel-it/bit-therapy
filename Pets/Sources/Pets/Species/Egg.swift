@@ -8,6 +8,7 @@ extension Pet {
     
     static let egg = Pet(
         id: "egg",
+        movement: Movement(type: .walk, speed: 0.4),
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
@@ -16,8 +17,7 @@ extension Pet {
                     .crack
                 ]
             )
-        ],
-        speed: 0.4
+        ]
     )
     
     static let goldenEgg = Pet.egg.shiny(id: "egg_gold")

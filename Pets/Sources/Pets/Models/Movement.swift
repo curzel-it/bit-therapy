@@ -7,15 +7,14 @@ import Foundation
 
 public struct Movement: Equatable {
     
-    static let fly = Movement(type: .fly)
-    static let walk = Movement(type: .walk)
-    
     public let type: MovementType
+    public let speed: CGFloat
     public let path: String
     public let dragPath: String
     
-    init(type: MovementType, path: String? = nil) {
+    init(type: MovementType, speed: CGFloat = 1, path: String? = nil) {
         self.type = type
+        self.speed = speed
         self.path = path ?? (type == .fly ? "fly" : "walk")
         self.dragPath = path ?? "drag"
     }

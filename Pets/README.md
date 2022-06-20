@@ -1,3 +1,3 @@
 # Pets
 
-Definition of all species, states, behaviors and action triggers.
+Definition of all pet species, states, behaviors and capabilities.
