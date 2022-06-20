@@ -13,12 +13,14 @@ struct MainView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        VStack(spacing: .lg) {
+        VStack(spacing: .zero) {
             Header()
+                .padding(.top, .md)
+                .padding(.horizontal, .md)
+                .padding(.bottom, .sm)
             PageContents()
                 .positioned(.middle)
         }
-        .padding(.md)
         .frame(minWidth: 600)
         .frame(minHeight: 600)
         .foregroundColor(.label)

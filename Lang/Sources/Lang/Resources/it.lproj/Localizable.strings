@@ -64,6 +64,7 @@
 "pet.name.crow_white" = "Corvo Bianco";
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Koala Pirata";
+"pet.name.nyan" = "Nyan D. Cat";
 "pet.name.panda" = "Panda";
 "pet.name.panda_vest" = "Panda Dorato";
 "pet.name.sloth" = "Bradipo";
@@ -73,6 +74,7 @@
 "pet.name.trex_blue" = "Ceratosaurus";
 "pet.name.trex_violet" = "T-Rex Viola";
 "pet.name.trex_yellow" = "T-Rex Dorato";
+"pet.name.ufo" = "UFO";
 
 // MARK: - Pet Descriptions
 
@@ -81,6 +83,7 @@
 "pet.about.crow_white" = "L'inverno è arrivato...";
 "pet.about.koala" = "Funzionalmente estinto!? Ma funzionalmente estinto sarai te!";
 "pet.about.koala_pirate" = "Facciamo i pirati, dicevano. Sarà divertente, dicevano...";
+"pet.about.nyan" = "Homage to one of the internet most famous cats.";
 "pet.about.panda" = "L'universo ci ha portato il Guerriero Dragone!";
 "pet.about.panda_vest" = "Non c'è prezzo per la miticità... Neppure per l'attraenza.";
 "pet.about.sloth" = "Lo sapevate che sono così lenti e pigri che gli crescono alghe sul pelo?";
@@ -90,3 +93,4 @@
 "pet.about.trex_blue" = "Praticamente T-Rex con un corno!";
 "pet.about.trex_violet" = "Questo sembra il dinosauro dei Flintstones :D";
 "pet.about.trex_yellow" = "Una versione dorata doveva pur esserci, no?";
+"pet.about.ufo" = "Chiamarlo UAP ti farebbe sentire meglio?";

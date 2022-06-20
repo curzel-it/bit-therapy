@@ -27,15 +27,12 @@ struct AboutView: View {
                 message: Lang.About.mailMessage,
                 linkTitle: Lang.About.mail,
                 link: mailto
-            )
-            
-            PrivacyPolicy()
-                .padding(.top, .xl)
-            
-            Socials()
-                .padding(.top, .lg)
+            )            
+            PrivacyPolicy().padding(.top, .xl)
+            Socials().padding(.top, .lg)
         }
         .multilineTextAlignment(.center)
+        .padding(.md)
     }
 }
 

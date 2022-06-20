@@ -14,12 +14,18 @@ struct PetSelection: View {
     @StateObject var viewModel = PetSelectionViewModel()
     
     var body: some View {
-        VStack {
+        ZStack {
             ScrollView {
                 PetSelectionGrid()
+                    .padding(.leading, .md)
+                    .padding(.top, .md)
+                    .padding(.bottom, 200)
             }
-            Footer()
-        }        
+            Button(Lang.PetSelection.showPet) { OnScreen.show() }
+                .buttonStyle(.regular)
+                .positioned(.trailingBottom)
+                .padding(.lg)
+        }
         .environmentObject(viewModel)
         .environmentObject(viewModel as HabitatViewModel)
         .environmentObject(PricingService.global)
@@ -27,17 +33,5 @@ struct PetSelection: View {
             MainWindowDelegate.setup(for: window, with: viewModel)
             window.styleMask.remove(.miniaturizable)
         }
-    }
-}
-
-private struct Footer: View {
-    
-    var body: some View {
-        HStack {
-            Spacer()
-            Button(Lang.PetSelection.showPet) { OnScreen.show() }
-                .buttonStyle(.regular)
-        }
-        .frame(height: DesignSystem.buttonsHeight)
     }
 }

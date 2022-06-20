@@ -74,6 +74,7 @@
 "pet.name.trex_blue" = "Ceratosaurus";
 "pet.name.trex_violet" = "Violet T-Rex";
 "pet.name.trex_yellow" = "Golden T-Rex";
+"pet.name.ufo" = "UFO";
 
 // MARK: - Pet Descriptions
 
@@ -92,3 +93,4 @@
 "pet.about.trex_blue" = "Just a T-Rex with a horne!";
 "pet.about.trex_violet" = "This one gives off some Flintstones vibes :D";
 "pet.about.trex_yellow" = "Gotta have a golden one";
+"pet.about.ufo" = "Does calling it an UAP makes you more comfortable?";

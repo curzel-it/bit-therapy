@@ -19,7 +19,8 @@ struct PetSelectionGrid: View {
     var columns: [GridItem] {
         [GridItem](
             repeating: .init(
-                .fixed(viewModel.petSize),
+                .adaptive(minimum: viewModel.petSize, maximum: viewModel.petSize*2),
+                // .fixed(viewModel.petSize),
                 spacing: Spacing.lg.rawValue
             ),
             count: 5
@@ -36,6 +37,7 @@ struct PetSelectionGrid: View {
                     PetGridItem(pet: pet)
                 }
             }
+            Spacer()
         }
         .sheet(isPresented: viewModel.showingDetails) {
             if let pet = viewModel.selectedPet {

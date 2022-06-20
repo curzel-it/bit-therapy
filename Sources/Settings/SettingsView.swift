@@ -25,6 +25,7 @@ struct SettingsView: View {
             AnonymousTracking()
             RestorePurchasesButton()
         }
+        .padding(.md)
     }
 }
 
