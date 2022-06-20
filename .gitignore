@@ -1,10 +1,11 @@
 *.gif
 *.aseprite
 Secrets.plist
-Resources/PixelArt/Pets
-!Resources/PixelArt/Pets/nyan
-!Resources/PixelArt/Pets/sloth
-!Resources/PixelArt/Pets/snail
+Resources/PixelArt/Pets/betta
+Resources/PixelArt/Pets/crow
+Resources/PixelArt/Pets/koala
+Resources/PixelArt/Pets/panda
+Resources/PixelArt/Pets/trex
 
 # Xcode
 #

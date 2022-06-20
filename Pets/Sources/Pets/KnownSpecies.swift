@@ -15,13 +15,14 @@ extension Pet {
         .koala, .koalaPirate,
         .betta,
         .snail,
+        .ufo,
         .nyan
     ]
     
     public static let availableSpecies: [Pet] = {
         allSpecies
             .filter { species in
-                let frame = "\(species.id)_idle_front-0"
+                let frame = "\(species.id)_idle_front-1"
                 let path = Bundle.main.path(forResource: frame, ofType: "png")
                 if path == nil { printDebug("Pet", species.id, "is not available") }
                 return path != nil

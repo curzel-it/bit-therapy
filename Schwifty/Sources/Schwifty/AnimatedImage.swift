@@ -54,14 +54,19 @@ private extension AnimatedImage {
     static func frames(for name: String) -> [NSImage] {
         var frames: [NSImage] = []
         var frameIndex = 0
+        if name == "ufo" {
+            print("aaa")
+        }
         while true {
             if let path = Bundle.main.path(forResource: "\(name)-\(frameIndex)", ofType: "png"),
                let image = NSImage(contentsOfFile: path) {
                 frames.append(image)
-                frameIndex += 1
             } else {
-                break
+                if frameIndex != 0 {
+                    break
+                }
             }
+            frameIndex += 1
         }
         return frames
     }
