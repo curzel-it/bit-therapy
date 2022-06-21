@@ -41,7 +41,7 @@ class OnScreenViewModel: HabitatViewModel {
         pet.install(ShowsMenuOnRightClick.self)
         pet.install(ReactToHotspots.self)
         pet.install(ResumeMovementAfterAnimations.self)
-        pet.installAll(pet.species.movementCapabilities())
+        pet.installAll(pet.species.capabilities)
         
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)

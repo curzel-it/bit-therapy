@@ -8,7 +8,6 @@ extension Pet {
     
     static let crow = Pet(
         id: "crow",
-        movement: Movement(type: .fly, speed: 1.4),
         behaviors: [
             .init(
                 trigger: .onAnyCorner,
@@ -19,7 +18,8 @@ extension Pet {
                     .love
                 ]
             )
-        ]
+        ],
+        movement: Movement(type: .fly, speed: 1.4)
     )
     
     static let crowWhite = Pet.crow.shiny(id: "crow_white", isPaid: true)

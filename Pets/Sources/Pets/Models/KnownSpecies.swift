@@ -14,7 +14,7 @@ extension Pet {
         .panda, .pandaVest,
         .koala, .koalaPirate,
         .betta,
-        .snail,
+        .snail, .nickySnail,
         .ufo,
         .nyan
     ]

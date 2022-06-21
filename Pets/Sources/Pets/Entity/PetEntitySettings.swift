@@ -45,26 +45,3 @@ extension PetEntity {
         return CGRect(origin: position, size: size)
     }
 }
-
-// MARK: - Behaviors
-
-extension Pet {
-    
-    public func movementCapabilities() -> [Capability.Type] {
-        switch movement.type {
-        case .fly: return [
-            LinearMovement.self,
-            BounceOffLateralBounds.self
-        ]            
-        case .walk: return [
-            LinearMovement.self,
-            BounceOffLateralBounds.self,
-            PetGravity.self
-        ]
-        case .wallCrawler: return [
-            LinearMovement.self,
-            WallCrawler.self
-        ]
-        }
-    }
-}

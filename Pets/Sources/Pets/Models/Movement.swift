@@ -4,6 +4,9 @@
 
 import CoreGraphics
 import Foundation
+import Biosphere
+
+// MARK: - Movement
 
 public struct Movement: Equatable {
     
@@ -20,8 +23,33 @@ public struct Movement: Equatable {
     }
 }
 
+// MARK: - Movement Type
+
 public enum MovementType {
     case walk
     case fly
     case wallCrawler
+}
+
+// MARK: - Capabilities
+
+extension Movement {
+    
+    public func capabilities() -> [Capability.Type] {
+        switch type {
+        case .fly: return [
+            LinearMovement.self,
+            BounceOffLateralBounds.self
+        ]
+        case .walk: return [
+            LinearMovement.self,
+            BounceOffLateralBounds.self,
+            PetGravity.self
+        ]
+        case .wallCrawler: return [
+            LinearMovement.self,
+            WallCrawler.self
+        ]
+        }
+    }
 }

@@ -32,6 +32,14 @@
 		A65C128A285389F7001F2B70 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A65C1289285389F7001F2B70 /* Squanch */; };
 		A65CD4232854940000F0584E /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4222854940000F0584E /* PetDetailsViewModel.swift */; };
 		A65CD4272854B6D700F0584E /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4262854B6D700F0584E /* PetGridItem.swift */; };
+		A66BFACC2860BE6800136F92 /* snail_nicky_idle_front-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */; };
+		A66BFACD2860BE6800136F92 /* snail_nicky_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */; };
+		A66BFACE2860BE6800136F92 /* snail_nicky_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */; };
+		A66BFACF2860BE6800136F92 /* snail_nicky_idle_front-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */; };
+		A66BFAD12860BE9400136F92 /* snail_nicky_idle_front-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */; };
+		A66BFAD22860BE9400136F92 /* snail_nicky_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */; };
+		A66BFAD32860BE9400136F92 /* snail_nicky_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */; };
+		A66BFAD42860BE9400136F92 /* snail_nicky_idle_front-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */; };
 		A67209502859FE4F00023189 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A672094F2859FE4F00023189 /* AppState */; };
 		A6720952285A16E300023189 /* MouseDraggablePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720951285A16E300023189 /* MouseDraggablePet.swift */; };
 		A67373A52853858B002DC8FA /* OnScreenWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */; };
@@ -74,7 +82,6 @@
 		A6E5AAD92860525A008AA653 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */; };
 		A6E5AADA2860525A008AA653 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABC2860525A008AA653 /* Pets */; };
 		A6E5AADB2860525A008AA653 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABF2860525A008AA653 /* EntityWindow */; };
-		A6E5AADC2860525A008AA653 /* PetEntity in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAC02860525A008AA653 /* PetEntity */; };
 		A6E5AADD2860525A008AA653 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAB52860525A008AA653 /* LaunchAtLogin */; };
 		A6E5AADE2860525A008AA653 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAB72860525A008AA653 /* Schwifty */; };
 		A6E5AADF2860525A008AA653 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABB2860525A008AA653 /* Tracking */; };
@@ -3349,6 +3356,10 @@
 		A65CD4262854B6D700F0584E /* PetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
 		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-0.png"; sourceTree = "<group>"; };
+		A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-1.png"; sourceTree = "<group>"; };
+		A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-3.png"; sourceTree = "<group>"; };
+		A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-2.png"; sourceTree = "<group>"; };
 		A672094E2859FD8700023189 /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
 		A6720951285A16E300023189 /* MouseDraggablePet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseDraggablePet.swift; sourceTree = "<group>"; };
 		A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreenWindowManager.swift; sourceTree = "<group>"; };
@@ -6140,7 +6151,6 @@
 				A6E5AADA2860525A008AA653 /* Pets in Frameworks */,
 				A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */,
 				A6E5AADB2860525A008AA653 /* EntityWindow in Frameworks */,
-				A6E5AADC2860525A008AA653 /* PetEntity in Frameworks */,
 				A6E5AADD2860525A008AA653 /* LaunchAtLogin in Frameworks */,
 				A6E5AADE2860525A008AA653 /* Schwifty in Frameworks */,
 				A6E5AADF2860525A008AA653 /* Tracking in Frameworks */,
@@ -6260,6 +6270,25 @@
 				A6C3CFDF2857286A00028289 /* StatusBar */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		A66BFAC32860BE6800136F92 /* nicky */ = {
+			isa = PBXGroup;
+			children = (
+				A66BFAC52860BE6800136F92 /* idle_front */,
+			);
+			path = nicky;
+			sourceTree = "<group>";
+		};
+		A66BFAC52860BE6800136F92 /* idle_front */ = {
+			isa = PBXGroup;
+			children = (
+				A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */,
+				A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */,
+				A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */,
+				A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */,
+			);
+			path = idle_front;
 			sourceTree = "<group>";
 		};
 		A673736A2853858A002DC8FA /* OnScreen */ = {
@@ -10371,6 +10400,7 @@
 		A6E5C9B5286053B8008AA653 /* snail */ = {
 			isa = PBXGroup;
 			children = (
+				A66BFAC32860BE6800136F92 /* nicky */,
 				A6E5C9B6286053B8008AA653 /* original */,
 			);
 			path = snail;
@@ -10484,7 +10514,6 @@
 				A6E5AABD2860525A008AA653 /* InAppPurchases */,
 				A6E5AABE2860525A008AA653 /* Lang */,
 				A6E5AABF2860525A008AA653 /* EntityWindow */,
-				A6E5AAC02860525A008AA653 /* PetEntity */,
 				A6E5AAC12860525A008AA653 /* AppState */,
 				A6E5CDCD2860929E008AA653 /* Biosphere */,
 			);
@@ -10635,6 +10664,7 @@
 				A6E5CA0B286053B8008AA653 /* sloth_selfie-22.png in Resources */,
 				A6E5CC9B286053B9008AA653 /* sloth_swag_love-30.png in Resources */,
 				A6E5CA47286053B8008AA653 /* sloth_climb-11.png in Resources */,
+				A66BFACF2860BE6800136F92 /* snail_nicky_idle_front-2.png in Resources */,
 				A6E5CD61286053B9008AA653 /* nyan_idle_front-7.png in Resources */,
 				A6E5C9CD286053B8008AA653 /* sloth_idle-1.png in Resources */,
 				A6E5CCB3286053B9008AA653 /* sloth_swag_lightsaber-14.png in Resources */,
@@ -10800,6 +10830,7 @@
 				A6E5CA5F286053B8008AA653 /* sloth_climb-30.png in Resources */,
 				A6E5CD4F286053B9008AA653 /* nyan_idle_front-11.png in Resources */,
 				A62039FC284CB23A00E42468 /* smoke_bomb-3.png in Resources */,
+				A66BFACC2860BE6800136F92 /* snail_nicky_idle_front-0.png in Resources */,
 				A6E5CD4B286053B9008AA653 /* nyan_idle_front-12.png in Resources */,
 				A6E5CC0B286053B9008AA653 /* sloth_swag_climb-19.png in Resources */,
 				A6E5CC81286053B9008AA653 /* sloth_swag_love-21.png in Resources */,
@@ -10846,6 +10877,7 @@
 				A6E5CAF3286053B9008AA653 /* sloth_idle_front-8.png in Resources */,
 				A6E5CB2F286053B9008AA653 /* sloth_idle_front-6.png in Resources */,
 				A6E5CC4D286053B9008AA653 /* sloth_swag_walk-2.png in Resources */,
+				A66BFACE2860BE6800136F92 /* snail_nicky_idle_front-3.png in Resources */,
 				A60629152857442900966923 /* README.md in Resources */,
 				A6E5CC77286053B9008AA653 /* sloth_swag_love-5.png in Resources */,
 				A6E5CAEB286053B8008AA653 /* sloth_idle_front-12.png in Resources */,
@@ -10933,6 +10965,7 @@
 				A6E5CC49286053B9008AA653 /* sloth_swag_walk-1.png in Resources */,
 				A6E5CBC9286053B9008AA653 /* sloth_swag_selfie-25.png in Resources */,
 				A6E5CD65286053B9008AA653 /* nyan-long.aseprite in Resources */,
+				A66BFACD2860BE6800136F92 /* snail_nicky_idle_front-1.png in Resources */,
 				A6E5CA21286053B8008AA653 /* sloth_selfie-16.png in Resources */,
 				A6E5CADB286053B8008AA653 /* sloth_lightsaber-3.png in Resources */,
 				A6E5C9F3286053B8008AA653 /* sloth_selfie-25.png in Resources */,
@@ -12032,6 +12065,7 @@
 				A6E5C57A286053AF008AA653 /* trex_yellow_roar-6.png in Resources */,
 				A6E5C61E286053AF008AA653 /* koala_pirate_idle_front-29.png in Resources */,
 				A6E5C68C286053AF008AA653 /* koala_love-54.png in Resources */,
+				A66BFAD32860BE9400136F92 /* snail_nicky_idle_front-3.png in Resources */,
 				A6E5C1E8286053AD008AA653 /* panda_vest_idle_front-35.png in Resources */,
 				A6E5C50D286053AE008AA653 /* trex_yellow_send_text-1.png in Resources */,
 				A6E5CA18286053B8008AA653 /* sloth_selfie-11.png in Resources */,
@@ -12483,6 +12517,7 @@
 				A6E5C78F286053AF008AA653 /* betta_drag-10.png in Resources */,
 				A6E5BF4C286053AD008AA653 /* crow_fly-13.png in Resources */,
 				A6E5C723286053AF008AA653 /* koala_backflip-9.png in Resources */,
+				A66BFAD12860BE9400136F92 /* snail_nicky_idle_front-2.png in Resources */,
 				A6E5C15E286053AD008AA653 /* panda_vest_idle-20.png in Resources */,
 				A6E5C9F8286053B8008AA653 /* sloth_selfie-3.png in Resources */,
 				A6E5C6B8286053AF008AA653 /* koala_love-6.png in Resources */,
@@ -12873,6 +12908,7 @@
 				A6E5C790286053AF008AA653 /* betta_drag-12.png in Resources */,
 				A6E5C2BA286053AE008AA653 /* trex_blue_idle-12.png in Resources */,
 				A6E5C0C7286053AD008AA653 /* panda_lightsaber-25.png in Resources */,
+				A66BFAD22860BE9400136F92 /* snail_nicky_idle_front-1.png in Resources */,
 				A6E5BF70286053AD008AA653 /* crow_idle_front-4.png in Resources */,
 				A6E5C3F2286053AE008AA653 /* trex_drag-4.png in Resources */,
 				A6E5CA2A286053B8008AA653 /* sloth_selfie-14.png in Resources */,
@@ -12922,6 +12958,7 @@
 				A6E5C26D286053AE008AA653 /* egg_drag-3.png in Resources */,
 				A6E5C740286053AF008AA653 /* betta_tsundere-9.png in Resources */,
 				A6E5C754286053AF008AA653 /* betta_idle-3.png in Resources */,
+				A66BFAD42860BE9400136F92 /* snail_nicky_idle_front-0.png in Resources */,
 				A6E5C565286053AF008AA653 /* trex_yellow_fireball-4.png in Resources */,
 				A6E5CC78286053B9008AA653 /* sloth_swag_love-5.png in Resources */,
 				A6E5CD12286053B9008AA653 /* sloth_swag_drag-5.png in Resources */,
@@ -14167,7 +14204,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1022;
+				CURRENT_PROJECT_VERSION = 1023;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -14199,7 +14236,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1022;
+				CURRENT_PROJECT_VERSION = 1023;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -14361,10 +14398,6 @@
 		A6E5AABF2860525A008AA653 /* EntityWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EntityWindow;
-		};
-		A6E5AAC02860525A008AA653 /* PetEntity */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PetEntity;
 		};
 		A6E5AAC12860525A008AA653 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;

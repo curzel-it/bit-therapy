@@ -4,26 +4,30 @@
 
 import CoreGraphics
 import Foundation
+import Biosphere
 
 public struct Pet {
     
     public let id: String
-    public let movement: Movement
     public let behaviors: [PetBehavior]
-    public let isPaid: Bool
+    public let capabilities: [Capability.Type]
     public let frameTime: TimeInterval
+    public let isPaid: Bool
+    public let movement: Movement
     
     init(
         id: String,
-        movement: Movement,
-        frameTime: TimeInterval = 0.1,
         behaviors: [PetBehavior] = [],
-        isPaid: Bool = false
+        capabilities: [Capability.Type] = [],
+        frameTime: TimeInterval = 0.1,
+        isPaid: Bool = false,
+        movement: Movement
     ) {
         self.id = id
+        self.behaviors = behaviors
+        self.capabilities = capabilities + movement.capabilities()
         self.movement = movement
         self.frameTime = frameTime
-        self.behaviors = behaviors
         self.isPaid = isPaid
     }
 }
@@ -44,10 +48,11 @@ extension Pet {
     func shiny(id shinyId: String, isPaid shinyPaid: Bool = false) -> Pet {
         return Pet(
             id: shinyId,
-            movement: movement,
-            frameTime: frameTime,
             behaviors: behaviors,
-            isPaid: shinyPaid
+            capabilities: capabilities,
+            frameTime: frameTime,
+            isPaid: shinyPaid,
+            movement: movement
         )
     }
 }
