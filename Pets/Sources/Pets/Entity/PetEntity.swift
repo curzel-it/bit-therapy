@@ -105,7 +105,7 @@ extension PetEntity {
 extension PetEntity {
     
     public func loadMainSprite() {
-        mainSprite = PetSprite(pet: species)
+        mainSprite = PetSprite(pet: species, id: id)
         mainSprite.directionChanged(to: direction)
         mainSprite.stateChanged(to: petState)
         sprites.append(mainSprite)

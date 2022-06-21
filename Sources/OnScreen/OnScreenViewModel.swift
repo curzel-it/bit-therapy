@@ -19,14 +19,10 @@ class OnScreenViewModel: HabitatViewModel {
     
     func spawnWindows() {
         windowsManager = WindowsManager(for: self)
-        
         state.children
             .filter { $0.isDrawable }
             .map { window(representing: $0) }
-            .forEach { window in
-                window.delegate = windowsManager
-                window.show()
-            }
+            .forEach { windowsManager?.registerAndShow($0) }
     }
     
     func addSelectedPet() {
@@ -48,6 +44,9 @@ class OnScreenViewModel: HabitatViewModel {
     }
     
     private func window(representing entity: Entity) -> EntityWindow {
+        if let existingWindow = windowsManager?.existingWindow(representing: entity) {
+            return existingWindow
+        }
         if let pet = entity as? PetEntity {
             return PetWindow(representing: pet, in: self)
         } else {
@@ -73,6 +72,19 @@ private class WindowsManager: NSObject, NSWindowDelegate {
     
     init(for viewModel: OnScreenViewModel) {
         self.viewModel = viewModel
+    }
+    
+    func registerAndShow(_ window: EntityWindow) {
+        let alreadyPresent = windows.contains { $0.entity.id == window.entity.id }
+        guard !alreadyPresent else { return }
+        
+        windows.append(window)
+        window.delegate = self
+        window.show()
+    }
+    
+    func existingWindow(representing entity: Entity) -> EntityWindow? {
+        windows.first { $0.entity == entity }
     }
     
     func windowWillClose(_ notification: Notification) {

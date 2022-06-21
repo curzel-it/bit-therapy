@@ -20,8 +20,8 @@ extension Pet {
                 ]
             )
         ],
-        movement: Movement(type: .walk, speed: 0.9)
+        movement: Movement(type: .walk, speed: 0.8)
     )
     
-    static let koalaPirate = Pet.panda.shiny(id: "koala_pirate", isPaid: false)
+    static let koalaPirate = Pet.koala.shiny(id: "koala_pirate", isPaid: false)
 }

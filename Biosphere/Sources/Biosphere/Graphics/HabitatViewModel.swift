@@ -45,18 +45,15 @@ open class HabitatViewModel: ObservableObject {
     
     open func kill(animated: Bool) {
         if animated {
+            printDebug("Habitat", "Terminating...")
             state.children
-                .enumerated()
-                .forEach { index, item in
-                    if index == 0 {
-                        item.kill(animated: true) { [weak self] in
+                .forEach { item in
+                    item.kill(animated: true) { [weak self] in
+                        if item.isDrawable {
                             self?.kill(animated: false)
                         }
-                    } else {
-                        item.kill(animated: true) { }
                     }
                 }
-            printDebug("Habitat", "Terminating...")
         } else {
             pauseRendering()
             state.children.forEach { $0.kill() }

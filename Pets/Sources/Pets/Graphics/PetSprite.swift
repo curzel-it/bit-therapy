@@ -11,18 +11,26 @@ class PetSprite: Sprite, ObservableObject {
     
     var loopDuracy: TimeInterval { animation.loopDuracy }
     
+    private let entityId: String
     private let species: Pet
     private var animation: AnimatedImage = .none
     private var lastState: PetState = .drag
     private var lastDirection: CGVector = .zero
+    private var tag: String { "PetSprite-\(entityId)" }
     
-    init(pet: Pet) {
+    init(pet: Pet, id: String) {
         species = pet
+        entityId = id
         super.init()
     }
     
-    convenience init(pet: Pet, state: PetState, direction: CGVector = .zero) {
-        self.init(pet: pet)
+    convenience init(
+        pet: Pet,
+        entityId: String,
+        state: PetState,
+        direction: CGVector = .zero
+    ) {
+        self.init(pet: pet, id: entityId)
         self.directionChanged(to: direction)
         self.stateChanged(to: state)
     }
@@ -40,7 +48,7 @@ class PetSprite: Sprite, ObservableObject {
     private func update() {
         let path = animationPathForLastState()
         guard path != animation.baseName else { return }
-        printDebug("PetSprite", "Loaded", path)
+        printDebug(tag, "Loaded", path)
         animation = AnimatedImage(path, frameTime: frameTime())
     }
     
