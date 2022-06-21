@@ -23,11 +23,6 @@ extension Pet {
                 ]
             )
         ],
-        capabilities: [
-            LinearMovement.self,
-            BounceOffLateralBounds.self,
-            PetGravity.self
-        ],
         movementPath: .walk,
         speed: 1
     )

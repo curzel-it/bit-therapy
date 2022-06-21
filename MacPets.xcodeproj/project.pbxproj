@@ -32,14 +32,12 @@
 		A65C128A285389F7001F2B70 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A65C1289285389F7001F2B70 /* Squanch */; };
 		A65CD4232854940000F0584E /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4222854940000F0584E /* PetDetailsViewModel.swift */; };
 		A65CD4272854B6D700F0584E /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4262854B6D700F0584E /* PetGridItem.swift */; };
-		A66BFACC2860BE6800136F92 /* snail_nicky_idle_front-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */; };
 		A66BFACD2860BE6800136F92 /* snail_nicky_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */; };
 		A66BFACE2860BE6800136F92 /* snail_nicky_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */; };
 		A66BFACF2860BE6800136F92 /* snail_nicky_idle_front-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */; };
 		A66BFAD12860BE9400136F92 /* snail_nicky_idle_front-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */; };
 		A66BFAD22860BE9400136F92 /* snail_nicky_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */; };
 		A66BFAD32860BE9400136F92 /* snail_nicky_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */; };
-		A66BFAD42860BE9400136F92 /* snail_nicky_idle_front-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */; };
 		A67209502859FE4F00023189 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A672094F2859FE4F00023189 /* AppState */; };
 		A6720952285A16E300023189 /* MouseDraggablePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720951285A16E300023189 /* MouseDraggablePet.swift */; };
 		A67373A52853858B002DC8FA /* OnScreenWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */; };
@@ -3314,6 +3312,55 @@
 		A6E5CDCA286066E0008AA653 /* ufo_idle_front-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E5CDA8286066CA008AA653 /* ufo_idle_front-4.png */; };
 		A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5CDCD2860929E008AA653 /* Biosphere */; };
 		A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5CDCF286092A6008AA653 /* Biosphere */; };
+		A6EDF7D32861BEEE000960F5 /* ufo_abduction-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BA2861BEEE000960F5 /* ufo_abduction-8.png */; };
+		A6EDF7D42861BEEE000960F5 /* ufo_abduction-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BB2861BEEE000960F5 /* ufo_abduction-9.png */; };
+		A6EDF7D52861BEEE000960F5 /* ufo_abduction-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BC2861BEEE000960F5 /* ufo_abduction-22.png */; };
+		A6EDF7D62861BEEE000960F5 /* ufo_abduction-23.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BD2861BEEE000960F5 /* ufo_abduction-23.png */; };
+		A6EDF7D72861BEEE000960F5 /* ufo_abduction-21.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BE2861BEEE000960F5 /* ufo_abduction-21.png */; };
+		A6EDF7D82861BEEE000960F5 /* ufo_abduction-20.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BF2861BEEE000960F5 /* ufo_abduction-20.png */; };
+		A6EDF7D92861BEEE000960F5 /* ufo_abduction-24.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C02861BEEE000960F5 /* ufo_abduction-24.png */; };
+		A6EDF7DA2861BEEE000960F5 /* ufo_abduction-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C12861BEEE000960F5 /* ufo_abduction-18.png */; };
+		A6EDF7DB2861BEEE000960F5 /* ufo_abduction-19.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C22861BEEE000960F5 /* ufo_abduction-19.png */; };
+		A6EDF7DC2861BEEE000960F5 /* ufo_abduction-17.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C32861BEEE000960F5 /* ufo_abduction-17.png */; };
+		A6EDF7DD2861BEEE000960F5 /* ufo_abduction-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C42861BEEE000960F5 /* ufo_abduction-16.png */; };
+		A6EDF7DE2861BEEE000960F5 /* ufo_abduction-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C52861BEEE000960F5 /* ufo_abduction-14.png */; };
+		A6EDF7DF2861BEEE000960F5 /* ufo_abduction-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C62861BEEE000960F5 /* ufo_abduction-15.png */; };
+		A6EDF7E02861BEEE000960F5 /* ufo_abduction-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C72861BEEE000960F5 /* ufo_abduction-11.png */; };
+		A6EDF7E12861BEEE000960F5 /* ufo_abduction-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C82861BEEE000960F5 /* ufo_abduction-10.png */; };
+		A6EDF7E22861BEEE000960F5 /* ufo_abduction-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C92861BEEE000960F5 /* ufo_abduction-12.png */; };
+		A6EDF7E32861BEEE000960F5 /* ufo_abduction-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CA2861BEEE000960F5 /* ufo_abduction-13.png */; };
+		A6EDF7E42861BEEE000960F5 /* ufo_abduction-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CB2861BEEE000960F5 /* ufo_abduction-4.png */; };
+		A6EDF7E52861BEEE000960F5 /* ufo_abduction-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CC2861BEEE000960F5 /* ufo_abduction-5.png */; };
+		A6EDF7E62861BEEE000960F5 /* ufo_abduction-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CD2861BEEE000960F5 /* ufo_abduction-7.png */; };
+		A6EDF7E72861BEEE000960F5 /* ufo_abduction-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CE2861BEEE000960F5 /* ufo_abduction-6.png */; };
+		A6EDF7E92861BEEE000960F5 /* ufo_abduction-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7D02861BEEE000960F5 /* ufo_abduction-2.png */; };
+		A6EDF7EA2861BEEE000960F5 /* ufo_abduction-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7D12861BEEE000960F5 /* ufo_abduction-3.png */; };
+		A6EDF7EB2861BEEE000960F5 /* ufo_abduction-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7D22861BEEE000960F5 /* ufo_abduction-1.png */; };
+		A6EDF7EC2861BEF8000960F5 /* ufo_abduction-24.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C02861BEEE000960F5 /* ufo_abduction-24.png */; };
+		A6EDF7ED2861BEF8000960F5 /* ufo_abduction-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CD2861BEEE000960F5 /* ufo_abduction-7.png */; };
+		A6EDF7EE2861BEF8000960F5 /* ufo_abduction-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C72861BEEE000960F5 /* ufo_abduction-11.png */; };
+		A6EDF7EF2861BEF8000960F5 /* ufo_abduction-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BC2861BEEE000960F5 /* ufo_abduction-22.png */; };
+		A6EDF7F02861BEF8000960F5 /* ufo_abduction-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C42861BEEE000960F5 /* ufo_abduction-16.png */; };
+		A6EDF7F12861BEF8000960F5 /* ufo_abduction-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7D12861BEEE000960F5 /* ufo_abduction-3.png */; };
+		A6EDF7F22861BEF8000960F5 /* ufo_abduction-19.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C22861BEEE000960F5 /* ufo_abduction-19.png */; };
+		A6EDF7F32861BEF8000960F5 /* ufo_abduction-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C52861BEEE000960F5 /* ufo_abduction-14.png */; };
+		A6EDF7F42861BEF8000960F5 /* ufo_abduction-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CB2861BEEE000960F5 /* ufo_abduction-4.png */; };
+		A6EDF7F52861BEF8000960F5 /* ufo_abduction-23.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BD2861BEEE000960F5 /* ufo_abduction-23.png */; };
+		A6EDF7F62861BEF8000960F5 /* ufo_abduction-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C92861BEEE000960F5 /* ufo_abduction-12.png */; };
+		A6EDF7F72861BEF8000960F5 /* ufo_abduction-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C82861BEEE000960F5 /* ufo_abduction-10.png */; };
+		A6EDF7F82861BEF8000960F5 /* ufo_abduction-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7D22861BEEE000960F5 /* ufo_abduction-1.png */; };
+		A6EDF7F92861BEF8000960F5 /* ufo_abduction-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BB2861BEEE000960F5 /* ufo_abduction-9.png */; };
+		A6EDF7FA2861BEF8000960F5 /* ufo_abduction-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CC2861BEEE000960F5 /* ufo_abduction-5.png */; };
+		A6EDF7FB2861BEF8000960F5 /* ufo_abduction-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CE2861BEEE000960F5 /* ufo_abduction-6.png */; };
+		A6EDF7FC2861BEF8000960F5 /* ufo_abduction-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7D02861BEEE000960F5 /* ufo_abduction-2.png */; };
+		A6EDF7FD2861BEF8000960F5 /* ufo_abduction-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BA2861BEEE000960F5 /* ufo_abduction-8.png */; };
+		A6EDF7FE2861BEF8000960F5 /* ufo_abduction-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7CA2861BEEE000960F5 /* ufo_abduction-13.png */; };
+		A6EDF7FF2861BEF8000960F5 /* ufo_abduction-21.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BE2861BEEE000960F5 /* ufo_abduction-21.png */; };
+		A6EDF8002861BEF8000960F5 /* ufo_abduction-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C62861BEEE000960F5 /* ufo_abduction-15.png */; };
+		A6EDF8012861BEF8000960F5 /* ufo_abduction-17.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C32861BEEE000960F5 /* ufo_abduction-17.png */; };
+		A6EDF8022861BEF8000960F5 /* ufo_abduction-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7C12861BEEE000960F5 /* ufo_abduction-18.png */; };
+		A6EDF8032861BEF8000960F5 /* ufo_abduction-20.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF7BF2861BEEE000960F5 /* ufo_abduction-20.png */; };
+		A6EDF8052861C026000960F5 /* snail_nicky_idle_front-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF8042861C026000960F5 /* snail_nicky_idle_front-4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3356,7 +3403,6 @@
 		A65CD4262854B6D700F0584E /* PetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
 		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-0.png"; sourceTree = "<group>"; };
 		A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-1.png"; sourceTree = "<group>"; };
 		A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-3.png"; sourceTree = "<group>"; };
 		A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-2.png"; sourceTree = "<group>"; };
@@ -6113,6 +6159,31 @@
 		A6E5CDAA286066CA008AA653 /* ufo_idle_front-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-2.png"; sourceTree = "<group>"; };
 		A6E5CDAB286066CA008AA653 /* ufo_idle_front-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-1.png"; sourceTree = "<group>"; };
 		A6E5CDCC28609210008AA653 /* Biosphere */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Biosphere; sourceTree = "<group>"; };
+		A6EDF7BA2861BEEE000960F5 /* ufo_abduction-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-8.png"; sourceTree = "<group>"; };
+		A6EDF7BB2861BEEE000960F5 /* ufo_abduction-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-9.png"; sourceTree = "<group>"; };
+		A6EDF7BC2861BEEE000960F5 /* ufo_abduction-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-22.png"; sourceTree = "<group>"; };
+		A6EDF7BD2861BEEE000960F5 /* ufo_abduction-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-23.png"; sourceTree = "<group>"; };
+		A6EDF7BE2861BEEE000960F5 /* ufo_abduction-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-21.png"; sourceTree = "<group>"; };
+		A6EDF7BF2861BEEE000960F5 /* ufo_abduction-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-20.png"; sourceTree = "<group>"; };
+		A6EDF7C02861BEEE000960F5 /* ufo_abduction-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-24.png"; sourceTree = "<group>"; };
+		A6EDF7C12861BEEE000960F5 /* ufo_abduction-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-18.png"; sourceTree = "<group>"; };
+		A6EDF7C22861BEEE000960F5 /* ufo_abduction-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-19.png"; sourceTree = "<group>"; };
+		A6EDF7C32861BEEE000960F5 /* ufo_abduction-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-17.png"; sourceTree = "<group>"; };
+		A6EDF7C42861BEEE000960F5 /* ufo_abduction-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-16.png"; sourceTree = "<group>"; };
+		A6EDF7C52861BEEE000960F5 /* ufo_abduction-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-14.png"; sourceTree = "<group>"; };
+		A6EDF7C62861BEEE000960F5 /* ufo_abduction-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-15.png"; sourceTree = "<group>"; };
+		A6EDF7C72861BEEE000960F5 /* ufo_abduction-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-11.png"; sourceTree = "<group>"; };
+		A6EDF7C82861BEEE000960F5 /* ufo_abduction-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-10.png"; sourceTree = "<group>"; };
+		A6EDF7C92861BEEE000960F5 /* ufo_abduction-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-12.png"; sourceTree = "<group>"; };
+		A6EDF7CA2861BEEE000960F5 /* ufo_abduction-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-13.png"; sourceTree = "<group>"; };
+		A6EDF7CB2861BEEE000960F5 /* ufo_abduction-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-4.png"; sourceTree = "<group>"; };
+		A6EDF7CC2861BEEE000960F5 /* ufo_abduction-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-5.png"; sourceTree = "<group>"; };
+		A6EDF7CD2861BEEE000960F5 /* ufo_abduction-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-7.png"; sourceTree = "<group>"; };
+		A6EDF7CE2861BEEE000960F5 /* ufo_abduction-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-6.png"; sourceTree = "<group>"; };
+		A6EDF7D02861BEEE000960F5 /* ufo_abduction-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-2.png"; sourceTree = "<group>"; };
+		A6EDF7D12861BEEE000960F5 /* ufo_abduction-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-3.png"; sourceTree = "<group>"; };
+		A6EDF7D22861BEEE000960F5 /* ufo_abduction-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_abduction-1.png"; sourceTree = "<group>"; };
+		A6EDF8042861C026000960F5 /* snail_nicky_idle_front-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-4.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -6283,7 +6354,7 @@
 		A66BFAC52860BE6800136F92 /* idle_front */ = {
 			isa = PBXGroup;
 			children = (
-				A66BFAC62860BE6800136F92 /* snail_nicky_idle_front-0.png */,
+				A6EDF8042861C026000960F5 /* snail_nicky_idle_front-4.png */,
 				A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */,
 				A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */,
 				A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */,
@@ -6401,6 +6472,7 @@
 		A6E5B5A12860533C008AA653 /* ufo */ = {
 			isa = PBXGroup;
 			children = (
+				A6EDF7B92861BEEE000960F5 /* abduction */,
 				A6E5CDA7286066CA008AA653 /* idle_front */,
 			);
 			path = ufo;
@@ -10436,6 +10508,37 @@
 			path = idle_front;
 			sourceTree = "<group>";
 		};
+		A6EDF7B92861BEEE000960F5 /* abduction */ = {
+			isa = PBXGroup;
+			children = (
+				A6EDF7D22861BEEE000960F5 /* ufo_abduction-1.png */,
+				A6EDF7D02861BEEE000960F5 /* ufo_abduction-2.png */,
+				A6EDF7D12861BEEE000960F5 /* ufo_abduction-3.png */,
+				A6EDF7CB2861BEEE000960F5 /* ufo_abduction-4.png */,
+				A6EDF7CC2861BEEE000960F5 /* ufo_abduction-5.png */,
+				A6EDF7CE2861BEEE000960F5 /* ufo_abduction-6.png */,
+				A6EDF7CD2861BEEE000960F5 /* ufo_abduction-7.png */,
+				A6EDF7BA2861BEEE000960F5 /* ufo_abduction-8.png */,
+				A6EDF7BB2861BEEE000960F5 /* ufo_abduction-9.png */,
+				A6EDF7C82861BEEE000960F5 /* ufo_abduction-10.png */,
+				A6EDF7C72861BEEE000960F5 /* ufo_abduction-11.png */,
+				A6EDF7C92861BEEE000960F5 /* ufo_abduction-12.png */,
+				A6EDF7CA2861BEEE000960F5 /* ufo_abduction-13.png */,
+				A6EDF7C52861BEEE000960F5 /* ufo_abduction-14.png */,
+				A6EDF7C62861BEEE000960F5 /* ufo_abduction-15.png */,
+				A6EDF7C42861BEEE000960F5 /* ufo_abduction-16.png */,
+				A6EDF7C32861BEEE000960F5 /* ufo_abduction-17.png */,
+				A6EDF7C12861BEEE000960F5 /* ufo_abduction-18.png */,
+				A6EDF7C22861BEEE000960F5 /* ufo_abduction-19.png */,
+				A6EDF7BF2861BEEE000960F5 /* ufo_abduction-20.png */,
+				A6EDF7BE2861BEEE000960F5 /* ufo_abduction-21.png */,
+				A6EDF7BC2861BEEE000960F5 /* ufo_abduction-22.png */,
+				A6EDF7BD2861BEEE000960F5 /* ufo_abduction-23.png */,
+				A6EDF7C02861BEEE000960F5 /* ufo_abduction-24.png */,
+			);
+			path = abduction;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -10594,6 +10697,7 @@
 				A6E5CC05286053B9008AA653 /* sloth_swag_climb-28.png in Resources */,
 				A6E5CCE3286053B9008AA653 /* sloth_swag_idle_front-26.png in Resources */,
 				A6E5CB59286053B9008AA653 /* sloth_eat-9.png in Resources */,
+				A6EDF7DA2861BEEE000960F5 /* ufo_abduction-18.png in Resources */,
 				A6E5CB8F286053B9008AA653 /* sloth_swag_idle-20.png in Resources */,
 				A6E5CC73286053B9008AA653 /* sloth_swag_love-0.png in Resources */,
 				A60BAABA283D82C30030F8F0 /* Dogica.ttf in Resources */,
@@ -10661,6 +10765,7 @@
 				A6E5CC29286053B9008AA653 /* sloth_swag_climb-21.png in Resources */,
 				A6E5C9EB286053B8008AA653 /* sloth_idle-9.png in Resources */,
 				A6E5CB75286053B9008AA653 /* sloth_swag_idle-6.png in Resources */,
+				A6EDF7E42861BEEE000960F5 /* ufo_abduction-4.png in Resources */,
 				A6E5CA0B286053B8008AA653 /* sloth_selfie-22.png in Resources */,
 				A6E5CC9B286053B9008AA653 /* sloth_swag_love-30.png in Resources */,
 				A6E5CA47286053B8008AA653 /* sloth_climb-11.png in Resources */,
@@ -10680,6 +10785,7 @@
 				A6E5CA1F286053B8008AA653 /* sloth_selfie-12.png in Resources */,
 				A6E5CAA1286053B8008AA653 /* sloth_love-27.png in Resources */,
 				A6E5CB4B286053B9008AA653 /* sloth_eat-3.png in Resources */,
+				A6EDF7EB2861BEEE000960F5 /* ufo_abduction-1.png in Resources */,
 				A6E5CB27286053B9008AA653 /* sloth_idle_front-20.png in Resources */,
 				A6E5CA87286053B8008AA653 /* sloth_love-29.png in Resources */,
 				A6E5CCFD286053B9008AA653 /* sloth_swag_idle_front-14.png in Resources */,
@@ -10704,6 +10810,8 @@
 				A6E5CA07286053B8008AA653 /* sloth_selfie-4.png in Resources */,
 				A6E5CBC3286053B9008AA653 /* sloth_swag_selfie-26.png in Resources */,
 				A6E5CA91286053B8008AA653 /* sloth_love-9.png in Resources */,
+				A6EDF7D72861BEEE000960F5 /* ufo_abduction-21.png in Resources */,
+				A6EDF7DD2861BEEE000960F5 /* ufo_abduction-16.png in Resources */,
 				A6E5CB51286053B9008AA653 /* sloth_eat-18.png in Resources */,
 				A6E5CD05286053B9008AA653 /* sloth_swag_idle_front-11.png in Resources */,
 				A6E5CA6D286053B8008AA653 /* sloth_walk-2.png in Resources */,
@@ -10719,6 +10827,7 @@
 				A6E5CA65286053B8008AA653 /* sloth_climb-19.png in Resources */,
 				A6E5CB1B286053B9008AA653 /* sloth_idle_front-31.png in Resources */,
 				A6E5CD17286053B9008AA653 /* sloth_swag_drag-1.png in Resources */,
+				A6EDF7DE2861BEEE000960F5 /* ufo_abduction-14.png in Resources */,
 				A6E5CC6B286053B9008AA653 /* sloth_swag_love-9.png in Resources */,
 				A6E5CB43286053B9008AA653 /* sloth_drag-4.png in Resources */,
 				A6E5CB95286053B9008AA653 /* sloth_swag_idle-18.png in Resources */,
@@ -10731,10 +10840,12 @@
 				A6E5CB09286053B9008AA653 /* sloth_idle_front-2.png in Resources */,
 				A6E5CC3B286053B9008AA653 /* sloth_swag_climb-43.png in Resources */,
 				A6E5C9CF286053B8008AA653 /* sloth_idle-14.png in Resources */,
+				A6EDF7D42861BEEE000960F5 /* ufo_abduction-9.png in Resources */,
 				A6E5CBD5286053B9008AA653 /* sloth_swag_selfie-21.png in Resources */,
 				A6E5CA23286053B8008AA653 /* sloth_selfie-17.png in Resources */,
 				A6E5CB17286053B9008AA653 /* sloth_idle_front-1.png in Resources */,
 				A6E5CC07286053B9008AA653 /* sloth_swag_climb-25.png in Resources */,
+				A6EDF7D82861BEEE000960F5 /* ufo_abduction-20.png in Resources */,
 				A6E5CD63286053B9008AA653 /* nyan_idle_front-6.png in Resources */,
 				A6E5CD3F286053B9008AA653 /* sloth_swag_eat-15.png in Resources */,
 				A6E5CB89286053B9008AA653 /* sloth_swag_idle-11.png in Resources */,
@@ -10742,6 +10853,7 @@
 				A6E5CB71286053B9008AA653 /* sloth_swag_idle-3.png in Resources */,
 				A6E5CA43286053B8008AA653 /* sloth_climb-13.png in Resources */,
 				A6E5CB6D286053B9008AA653 /* sloth_swag_idle-0.png in Resources */,
+				A6EDF7EA2861BEEE000960F5 /* ufo_abduction-3.png in Resources */,
 				A6E5CAC3286053B8008AA653 /* sloth_love-1.png in Resources */,
 				A6E5CBBB286053B9008AA653 /* sloth_swag_selfie-16.png in Resources */,
 				A6E5CB07286053B9008AA653 /* sloth_idle_front-3.png in Resources */,
@@ -10751,6 +10863,7 @@
 				A6E5CC1D286053B9008AA653 /* sloth_swag_climb-23.png in Resources */,
 				A6E5CB9F286053B9008AA653 /* sloth_swag_idle-8.png in Resources */,
 				A6E5CB97286053B9008AA653 /* sloth_swag_idle-24.png in Resources */,
+				A6EDF7DC2861BEEE000960F5 /* ufo_abduction-17.png in Resources */,
 				A6E5CC13286053B9008AA653 /* sloth_swag_climb-32.png in Resources */,
 				A6E5CAD7286053B8008AA653 /* sloth_lightsaber-13.png in Resources */,
 				A6E5CB53286053B9008AA653 /* sloth_eat-7.png in Resources */,
@@ -10790,6 +10903,7 @@
 				A6E5CC89286053B9008AA653 /* sloth_swag_love-22.png in Resources */,
 				A6E5CD35286053B9008AA653 /* sloth_swag_eat-11.png in Resources */,
 				A6E5CC25286053B9008AA653 /* sloth_swag_climb-34.png in Resources */,
+				A6EDF7DB2861BEEE000960F5 /* ufo_abduction-19.png in Resources */,
 				A6E5CA1B286053B8008AA653 /* sloth_selfie-8.png in Resources */,
 				A6E5CA7F286053B8008AA653 /* sloth_love-13.png in Resources */,
 				A6E5CBAD286053B9008AA653 /* sloth_swag_selfie-4.png in Resources */,
@@ -10830,7 +10944,6 @@
 				A6E5CA5F286053B8008AA653 /* sloth_climb-30.png in Resources */,
 				A6E5CD4F286053B9008AA653 /* nyan_idle_front-11.png in Resources */,
 				A62039FC284CB23A00E42468 /* smoke_bomb-3.png in Resources */,
-				A66BFACC2860BE6800136F92 /* snail_nicky_idle_front-0.png in Resources */,
 				A6E5CD4B286053B9008AA653 /* nyan_idle_front-12.png in Resources */,
 				A6E5CC0B286053B9008AA653 /* sloth_swag_climb-19.png in Resources */,
 				A6E5CC81286053B9008AA653 /* sloth_swag_love-21.png in Resources */,
@@ -10856,11 +10969,14 @@
 				A6E5CB55286053B9008AA653 /* sloth_eat-5.png in Resources */,
 				A6E5C9D3286053B8008AA653 /* sloth_idle-0.png in Resources */,
 				A6E5CAD3286053B8008AA653 /* sloth_lightsaber-10.png in Resources */,
+				A6EDF7D52861BEEE000960F5 /* ufo_abduction-22.png in Resources */,
 				A6E5CB49286053B9008AA653 /* sloth_eat-1.png in Resources */,
 				A6E5CB37286053B9008AA653 /* sloth_drag-1.png in Resources */,
+				A6EDF7E92861BEEE000960F5 /* ufo_abduction-2.png in Resources */,
 				A6E5CC4F286053B9008AA653 /* sloth_swag_walk-10.png in Resources */,
 				A6E5CD3B286053B9008AA653 /* sloth_swag_eat-16.png in Resources */,
 				A6E5CA8B286053B8008AA653 /* sloth_love-14.png in Resources */,
+				A6EDF7DF2861BEEE000960F5 /* ufo_abduction-15.png in Resources */,
 				A6E5CBFF286053B9008AA653 /* sloth_swag_climb-29.png in Resources */,
 				A6E5CBC1286053B9008AA653 /* sloth_swag_selfie-17.png in Resources */,
 				A6E5CAC1286053B8008AA653 /* sloth_love-0.png in Resources */,
@@ -10900,11 +11016,13 @@
 				A6E5CD49286053B9008AA653 /* nyan_idle_front-13.png in Resources */,
 				A6E5CA11286053B8008AA653 /* sloth_selfie-6.png in Resources */,
 				A62039FD284CB23A00E42468 /* smoke_bomb-1.png in Resources */,
+				A6EDF7E62861BEEE000960F5 /* ufo_abduction-7.png in Resources */,
 				A63E000C28578F9D00704841 /* LICENSE.md in Resources */,
 				A6E5CCA5286053B9008AA653 /* sloth_swag_lightsaber-5.png in Resources */,
 				A6E5CA63286053B8008AA653 /* sloth_climb-18.png in Resources */,
 				A6E5C9E5286053B8008AA653 /* sloth_idle-8.png in Resources */,
 				A6E5CC21286053B9008AA653 /* sloth_swag_climb-36.png in Resources */,
+				A6EDF7E72861BEEE000960F5 /* ufo_abduction-6.png in Resources */,
 				A6E5C9CB286053B8008AA653 /* sloth_idle-5.png in Resources */,
 				A62039F9284CB23A00E42468 /* smoke_bomb-8.png in Resources */,
 				A6E5CC1F286053B9008AA653 /* sloth_swag_climb-22.png in Resources */,
@@ -10918,12 +11036,14 @@
 				A6E5C9C1286053B8008AA653 /* sloth_idle-13.png in Resources */,
 				A6E5CCA1286053B9008AA653 /* sloth_swag_lightsaber-13.png in Resources */,
 				A6E5CC65286053B9008AA653 /* sloth_swag_love-10.png in Resources */,
+				A6EDF7E52861BEEE000960F5 /* ufo_abduction-5.png in Resources */,
 				A6E5CBA3286053B9008AA653 /* sloth_swag_selfie-6.png in Resources */,
 				A6E5CD2F286053B9008AA653 /* sloth_swag_eat-9.png in Resources */,
 				A6E5CBE1286053B9008AA653 /* sloth_swag_climb-2.png in Resources */,
 				A6E5CB83286053B9008AA653 /* sloth_swag_idle-16.png in Resources */,
 				A6E5CB05286053B9008AA653 /* sloth_idle_front-33.png in Resources */,
 				A6E5CCDD286053B9008AA653 /* sloth_swag_idle_front-27.png in Resources */,
+				A6EDF8052861C026000960F5 /* snail_nicky_idle_front-4.png in Resources */,
 				A6E5CB77286053B9008AA653 /* sloth_swag_idle-7.png in Resources */,
 				A6E5CABD286053B8008AA653 /* sloth_love-35.png in Resources */,
 				A6E5CC95286053B9008AA653 /* sloth_swag_love-31.png in Resources */,
@@ -10934,7 +11054,9 @@
 				A6E5CBC7286053B9008AA653 /* sloth_swag_selfie-19.png in Resources */,
 				A6E5CCCB286053B9008AA653 /* sloth_swag_idle_front-21.png in Resources */,
 				A6E5CC3F286053B9008AA653 /* sloth_swag_walk-6.png in Resources */,
+				A6EDF7E12861BEEE000960F5 /* ufo_abduction-10.png in Resources */,
 				A6E5CB99286053B9008AA653 /* sloth_swag_idle-25.png in Resources */,
+				A6EDF7E02861BEEE000960F5 /* ufo_abduction-11.png in Resources */,
 				A6E5CB11286053B9008AA653 /* sloth_idle_front-30.png in Resources */,
 				A6E5CBCF286053B9008AA653 /* sloth_swag_selfie-20.png in Resources */,
 				A6E5CCE7286053B9008AA653 /* sloth_swag_idle_front-5.png in Resources */,
@@ -10988,6 +11110,7 @@
 				A6E5CC27286053B9008AA653 /* sloth_swag_climb-35.png in Resources */,
 				A6E5CAAF286053B8008AA653 /* sloth_love-24.png in Resources */,
 				A6E5CC31286053B9008AA653 /* sloth_swag_climb-47.png in Resources */,
+				A6EDF7E22861BEEE000960F5 /* ufo_abduction-12.png in Resources */,
 				A6E5CC03286053B9008AA653 /* sloth_swag_climb-14.png in Resources */,
 				A6E5CA4D286053B8008AA653 /* sloth_climb-10.png in Resources */,
 				A6E5CB73286053B9008AA653 /* sloth_swag_idle-2.png in Resources */,
@@ -10998,6 +11121,7 @@
 				A6E5C9E1286053B8008AA653 /* sloth_idle-19.png in Resources */,
 				A6E5CAD9286053B8008AA653 /* sloth_lightsaber-12.png in Resources */,
 				A6E5CAF9286053B9008AA653 /* sloth_idle_front-28.png in Resources */,
+				A6EDF7D92861BEEE000960F5 /* ufo_abduction-24.png in Resources */,
 				A6E5CB21286053B9008AA653 /* sloth_idle_front-21.png in Resources */,
 				A6E5CCD1286053B9008AA653 /* sloth_swag_idle_front-18.png in Resources */,
 				A6E5CBE9286053B9008AA653 /* sloth_swag_climb-48.png in Resources */,
@@ -11015,6 +11139,7 @@
 				A6E5CA2F286053B8008AA653 /* sloth_climb-6.png in Resources */,
 				A6E5CB57286053B9008AA653 /* sloth_eat-4.png in Resources */,
 				A6E5CB6F286053B9008AA653 /* sloth_swag_idle-1.png in Resources */,
+				A6EDF7D32861BEEE000960F5 /* ufo_abduction-8.png in Resources */,
 				A6E5CAC7286053B8008AA653 /* sloth_love-22.png in Resources */,
 				A6E5CC67286053B9008AA653 /* sloth_swag_love-11.png in Resources */,
 				A6E5CB9B286053B9008AA653 /* sloth_swag_idle-19.png in Resources */,
@@ -11053,6 +11178,7 @@
 				A6E5CDCA286066E0008AA653 /* ufo_idle_front-4.png in Resources */,
 				A6E5CADF286053B8008AA653 /* sloth_lightsaber-0.png in Resources */,
 				A6E5C9D5286053B8008AA653 /* sloth_idle-2.png in Resources */,
+				A6EDF7D62861BEEE000960F5 /* ufo_abduction-23.png in Resources */,
 				A6E5CA27286053B8008AA653 /* sloth_selfie-28.png in Resources */,
 				A6E5C9FF286053B8008AA653 /* sloth_selfie-1.png in Resources */,
 				A6E5CCC3286053B9008AA653 /* sloth_swag_idle_front-36.png in Resources */,
@@ -11066,6 +11192,7 @@
 				A6E5CA59286053B8008AA653 /* sloth_climb-9.png in Resources */,
 				A6E5CC85286053B9008AA653 /* sloth_swag_love-23.png in Resources */,
 				A6E5C9D9286053B8008AA653 /* sloth_idle-16.png in Resources */,
+				A6EDF7E32861BEEE000960F5 /* ufo_abduction-13.png in Resources */,
 				A6E5CB2D286053B9008AA653 /* sloth_idle_front-36.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -11133,6 +11260,7 @@
 				A6E5BF02286053AC008AA653 /* crow_idle-10.png in Resources */,
 				A6E5C7C6286053AF008AA653 /* betta_backflip-8.png in Resources */,
 				A6E5C640286053AF008AA653 /* koala_pirate_eat-13.png in Resources */,
+				A6EDF7F42861BEF8000960F5 /* ufo_abduction-4.png in Resources */,
 				A6E5CAFE286053B9008AA653 /* sloth_idle_front-15.png in Resources */,
 				A6E5C40D286053AE008AA653 /* trex_roar-13.png in Resources */,
 				A6E5C2B7286053AE008AA653 /* trex_blue_idle-9.png in Resources */,
@@ -11164,6 +11292,7 @@
 				A6E5C1A9286053AD008AA653 /* panda_vest_lightsaber-35.png in Resources */,
 				A6E5C035286053AD008AA653 /* crow_white_drag-53.png in Resources */,
 				A6E5BF72286053AD008AA653 /* crow_idle_front-14.png in Resources */,
+				A6EDF7F82861BEF8000960F5 /* ufo_abduction-1.png in Resources */,
 				A6E5CA6E286053B8008AA653 /* sloth_walk-2.png in Resources */,
 				A6E5C438286053AE008AA653 /* trex_violet_walk-4.png in Resources */,
 				A6E5C24C286053AE008AA653 /* egg_opening-1.png in Resources */,
@@ -11352,6 +11481,7 @@
 				A6E5C707286053AF008AA653 /* koala_drag-6.png in Resources */,
 				A6E5C4FA286053AE008AA653 /* trex_yellow_unbox_present-1.png in Resources */,
 				A6E5C3FE286053AE008AA653 /* trex_fireball-1.png in Resources */,
+				A6EDF7FE2861BEF8000960F5 /* ufo_abduction-13.png in Resources */,
 				A6E5C045286053AD008AA653 /* crow_white_drag-0.png in Resources */,
 				A6E5C709286053AF008AA653 /* koala_eat-3.png in Resources */,
 				A6E5C2C4286053AE008AA653 /* trex_blue_idle-15.png in Resources */,
@@ -11555,6 +11685,7 @@
 				A6E5C0B8286053AD008AA653 /* panda_love-9.png in Resources */,
 				A6E5CD00286053B9008AA653 /* sloth_swag_idle_front-28.png in Resources */,
 				A6E5C436286053AE008AA653 /* trex_violet_selfie-9.png in Resources */,
+				A6EDF7EE2861BEF8000960F5 /* ufo_abduction-11.png in Resources */,
 				A6E5CC10286053B9008AA653 /* sloth_swag_climb-30.png in Resources */,
 				A6E5C2E5286053AE008AA653 /* trex_blue_unbox_present-1.png in Resources */,
 				A6E5C09E286053AD008AA653 /* panda_selfie-14.png in Resources */,
@@ -11660,6 +11791,7 @@
 				A6E5C599286053AF008AA653 /* koala_pirate_idle-4.png in Resources */,
 				A6E5C665286053AF008AA653 /* koala_idle-18.png in Resources */,
 				A6E5C483286053AE008AA653 /* trex_violet_guitar-4.png in Resources */,
+				A6EDF7FC2861BEF8000960F5 /* ufo_abduction-2.png in Resources */,
 				A6E5C17C286053AD008AA653 /* panda_vest_selfie-18.png in Resources */,
 				A6E5C085286053AD008AA653 /* panda_idle-7.png in Resources */,
 				A6E5CCA6286053B9008AA653 /* sloth_swag_lightsaber-5.png in Resources */,
@@ -11968,6 +12100,7 @@
 				A6E5C2FF286053AE008AA653 /* trex_blue_send_text-4.png in Resources */,
 				A6E5C77F286053AF008AA653 /* betta_drag-21.png in Resources */,
 				A6E5C3CA286053AE008AA653 /* trex_guitar-29.png in Resources */,
+				A6EDF7F02861BEF8000960F5 /* ufo_abduction-16.png in Resources */,
 				A6E5C39B286053AE008AA653 /* trex_unbox_present-13.png in Resources */,
 				A6E5BF9F286053AD008AA653 /* crow_eat-1.png in Resources */,
 				A6E5C00E286053AD008AA653 /* crow_white_idle_front-16.png in Resources */,
@@ -11992,6 +12125,7 @@
 				A6E5C72E286053AF008AA653 /* betta_tsundere-0.png in Resources */,
 				A6E5C62D286053AF008AA653 /* koala_pirate_idle_front-38.png in Resources */,
 				A6E5CAA0286053B8008AA653 /* sloth_love-33.png in Resources */,
+				A6EDF7F32861BEF8000960F5 /* ufo_abduction-14.png in Resources */,
 				A6E5C069286053AD008AA653 /* panda_idle-9.png in Resources */,
 				A6E5C67A286053AF008AA653 /* koala_idle-16.png in Resources */,
 				A6E5C070286053AD008AA653 /* panda_idle-30.png in Resources */,
@@ -12022,6 +12156,7 @@
 				A6E5C2F2286053AE008AA653 /* trex_blue_send_text-16.png in Resources */,
 				A6E5CAB6286053B8008AA653 /* sloth_love-20.png in Resources */,
 				A6E5C761286053AF008AA653 /* betta_fly-0.png in Resources */,
+				A6EDF7FA2861BEF8000960F5 /* ufo_abduction-5.png in Resources */,
 				A6E5CD52286053B9008AA653 /* nyan_idle_front-15.png in Resources */,
 				A6E5C60E286053AF008AA653 /* koala_pirate_idle_front-44.png in Resources */,
 				A6E5C28B286053AE008AA653 /* egg_gold_opening-21.png in Resources */,
@@ -12147,6 +12282,7 @@
 				A6E5C236286053AD008AA653 /* egg_crack-3.png in Resources */,
 				A6E5C12B286053AD008AA653 /* panda_eat-5.png in Resources */,
 				A6E5C7A4286053AF008AA653 /* betta_eat-20.png in Resources */,
+				A6EDF7F12861BEF8000960F5 /* ufo_abduction-3.png in Resources */,
 				A6E5C212286053AD008AA653 /* panda_vest_eat-12.png in Resources */,
 				A6E5CD22286053B9008AA653 /* sloth_swag_eat-4.png in Resources */,
 				A6E5C6B4286053AF008AA653 /* koala_love-10.png in Resources */,
@@ -12201,6 +12337,7 @@
 				A6E5C2B8286053AE008AA653 /* trex_blue_idle-18.png in Resources */,
 				A6E5C01A286053AD008AA653 /* crow_white_idle_front-7.png in Resources */,
 				A6E5C2AC286053AE008AA653 /* egg_gold_jump-2.png in Resources */,
+				A6EDF7F92861BEF8000960F5 /* ufo_abduction-9.png in Resources */,
 				A6E5C0A6286053AD008AA653 /* panda_walk-7.png in Resources */,
 				A6E5BF9B286053AD008AA653 /* crow_eat-14.png in Resources */,
 				A6E5C655286053AF008AA653 /* koala_pirate_backflip-1.png in Resources */,
@@ -12224,6 +12361,7 @@
 				A6E5BFD2286053AD008AA653 /* crow_white_love-1.png in Resources */,
 				A6E5C0B6286053AD008AA653 /* panda_love-5.png in Resources */,
 				A6E5CAD8286053B8008AA653 /* sloth_lightsaber-13.png in Resources */,
+				A6EDF7FF2861BEF8000960F5 /* ufo_abduction-21.png in Resources */,
 				A6E5CBC0286053B9008AA653 /* sloth_swag_selfie-2.png in Resources */,
 				A6E5CB26286053B9008AA653 /* sloth_idle_front-4.png in Resources */,
 				A6E5C78D286053AF008AA653 /* betta_drag-29.png in Resources */,
@@ -12287,6 +12425,7 @@
 				A6E5C7A9286053AF008AA653 /* betta_eat-25.png in Resources */,
 				A6E5CA7A286053B8008AA653 /* sloth_walk-8.png in Resources */,
 				A6E5C261286053AE008AA653 /* egg_idle_front-3.png in Resources */,
+				A6EDF7EC2861BEF8000960F5 /* ufo_abduction-24.png in Resources */,
 				A6E5C714286053AF008AA653 /* koala_eat-22.png in Resources */,
 				A6E5B1DA2860525A008AA653 /* smoke_bomb-2.png in Resources */,
 				A6E5C584286053AF008AA653 /* missingno_idle_front-3.png in Resources */,
@@ -12322,6 +12461,7 @@
 				A6E5C9EE286053B8008AA653 /* sloth_idle-22.png in Resources */,
 				A6E5C2C9286053AE008AA653 /* trex_blue_idle-5.png in Resources */,
 				A6E5C271286053AE008AA653 /* egg_gold_idle-4.png in Resources */,
+				A6EDF7F62861BEF8000960F5 /* ufo_abduction-12.png in Resources */,
 				A6E5CD48286053B9008AA653 /* nyan_idle_front-9.png in Resources */,
 				A6E5C08F286053AD008AA653 /* panda_selfie-20.png in Resources */,
 				A6E5C41D286053AE008AA653 /* trex_violet_idle-17.png in Resources */,
@@ -12343,6 +12483,7 @@
 				A6E5C5F6286053AF008AA653 /* koala_pirate_idle_front-20.png in Resources */,
 				A6E5C238286053AD008AA653 /* egg_crack-6.png in Resources */,
 				A6E5C0D2286053AD008AA653 /* panda_lightsaber-8.png in Resources */,
+				A6EDF8002861BEF8000960F5 /* ufo_abduction-15.png in Resources */,
 				A6E5C0F2286053AD008AA653 /* panda_idle_front-10.png in Resources */,
 				A6E5CBF2286053B9008AA653 /* sloth_swag_climb-38.png in Resources */,
 				A6E5CD5C286053B9008AA653 /* nyan_idle_front-0.png in Resources */,
@@ -12383,10 +12524,12 @@
 				A6E5C210286053AD008AA653 /* panda_vest_eat-11.png in Resources */,
 				A6E5CCCE286053B9008AA653 /* sloth_swag_idle_front-20.png in Resources */,
 				A6E5C1AE286053AD008AA653 /* panda_vest_lightsaber-30.png in Resources */,
+				A6EDF7F72861BEF8000960F5 /* ufo_abduction-10.png in Resources */,
 				A6E5C72B286053AF008AA653 /* koala_backflip-0.png in Resources */,
 				A6E5C0FB286053AD008AA653 /* panda_idle_front-23.png in Resources */,
 				A6E5C588286053AF008AA653 /* koala_pirate_idle-14.png in Resources */,
 				A6E5C5FE286053AF008AA653 /* koala_pirate_idle_front-32.png in Resources */,
+				A6EDF7FB2861BEF8000960F5 /* ufo_abduction-6.png in Resources */,
 				A6E5C35F286053AE008AA653 /* trex_blue_roar-5.png in Resources */,
 				A6E5CA9C286053B8008AA653 /* sloth_love-5.png in Resources */,
 				A6E5C465286053AE008AA653 /* trex_violet_send_text-15.png in Resources */,
@@ -12425,6 +12568,7 @@
 				A6E5C6D4286053AF008AA653 /* koala_idle_front-49.png in Resources */,
 				A6E5C308286053AE008AA653 /* trex_blue_idle_front-1.png in Resources */,
 				A6E5BFFF286053AD008AA653 /* crow_white_idle_front-30.png in Resources */,
+				A6EDF7FD2861BEF8000960F5 /* ufo_abduction-8.png in Resources */,
 				A6E5C506286053AE008AA653 /* trex_yellow_send_text-18.png in Resources */,
 				A6E5C288286053AE008AA653 /* egg_gold_opening-31.png in Resources */,
 				A6E5CCE2286053B9008AA653 /* sloth_swag_idle_front-32.png in Resources */,
@@ -12507,6 +12651,7 @@
 				A6E5C59B286053AF008AA653 /* koala_pirate_idle-22.png in Resources */,
 				A6E5C404286053AE008AA653 /* trex_fireball-4.png in Resources */,
 				A6E5C4DF286053AE008AA653 /* trex_yellow_selfie-7.png in Resources */,
+				A6EDF7EF2861BEF8000960F5 /* ufo_abduction-22.png in Resources */,
 				A6E5C3AA286053AE008AA653 /* trex_send_text-17.png in Resources */,
 				A6E5C311286053AE008AA653 /* trex_blue_idle_front-11.png in Resources */,
 				A6E5C65A286053AF008AA653 /* koala_idle-35.png in Resources */,
@@ -12748,6 +12893,7 @@
 				A6E5C2C0286053AE008AA653 /* trex_blue_idle-3.png in Resources */,
 				A6E5C025286053AD008AA653 /* crow_white_drag-31.png in Resources */,
 				A6E5C4DD286053AE008AA653 /* trex_yellow_idle-12.png in Resources */,
+				A6EDF8022861BEF8000960F5 /* ufo_abduction-18.png in Resources */,
 				A6E5C2E0286053AE008AA653 /* trex_blue_unbox_present-14.png in Resources */,
 				A6E5C0CF286053AD008AA653 /* panda_lightsaber-35.png in Resources */,
 				A6E5C765286053AF008AA653 /* betta_idle_front-11.png in Resources */,
@@ -12820,6 +12966,7 @@
 				A6E5CA8C286053B8008AA653 /* sloth_love-14.png in Resources */,
 				A6E5BFF4286053AD008AA653 /* crow_white_fly-15.png in Resources */,
 				A6E5CBE6286053B9008AA653 /* sloth_swag_climb-6.png in Resources */,
+				A6EDF7ED2861BEF8000960F5 /* ufo_abduction-7.png in Resources */,
 				A6E5C712286053AF008AA653 /* koala_eat-21.png in Resources */,
 				A6E5C3FA286053AE008AA653 /* trex_eat-2.png in Resources */,
 				A6E5C22C286053AD008AA653 /* egg_idle-4.png in Resources */,
@@ -12904,6 +13051,7 @@
 				A6E5C12D286053AD008AA653 /* panda_eat-6.png in Resources */,
 				A6E5C18E286053AD008AA653 /* panda_vest_love-8.png in Resources */,
 				A6E5CC60286053B9008AA653 /* sloth_swag_love-17.png in Resources */,
+				A6EDF8012861BEF8000960F5 /* ufo_abduction-17.png in Resources */,
 				A6E5C036286053AD008AA653 /* crow_white_drag-47.png in Resources */,
 				A6E5C790286053AF008AA653 /* betta_drag-12.png in Resources */,
 				A6E5C2BA286053AE008AA653 /* trex_blue_idle-12.png in Resources */,
@@ -12958,7 +13106,6 @@
 				A6E5C26D286053AE008AA653 /* egg_drag-3.png in Resources */,
 				A6E5C740286053AF008AA653 /* betta_tsundere-9.png in Resources */,
 				A6E5C754286053AF008AA653 /* betta_idle-3.png in Resources */,
-				A66BFAD42860BE9400136F92 /* snail_nicky_idle_front-0.png in Resources */,
 				A6E5C565286053AF008AA653 /* trex_yellow_fireball-4.png in Resources */,
 				A6E5CC78286053B9008AA653 /* sloth_swag_love-5.png in Resources */,
 				A6E5CD12286053B9008AA653 /* sloth_swag_drag-5.png in Resources */,
@@ -13116,6 +13263,7 @@
 				A6E5C051286053AD008AA653 /* crow_white_drag-28.png in Resources */,
 				A6E5CC7E286053B9008AA653 /* sloth_swag_love-34.png in Resources */,
 				A6E5CB72286053B9008AA653 /* sloth_swag_idle-3.png in Resources */,
+				A6EDF7F52861BEF8000960F5 /* ufo_abduction-23.png in Resources */,
 				A6E5C40B286053AE008AA653 /* trex_roar-9.png in Resources */,
 				A6E5C11B286053AD008AA653 /* panda_drag-2.png in Resources */,
 				A6E5C09F286053AD008AA653 /* panda_selfie-16.png in Resources */,
@@ -13353,6 +13501,7 @@
 				A6E5C2D7286053AE008AA653 /* trex_blue_walk-1.png in Resources */,
 				A6E5CAE2286053B8008AA653 /* sloth_lightsaber-1.png in Resources */,
 				A6E5C649286053AF008AA653 /* koala_pirate_eat-22.png in Resources */,
+				A6EDF8032861BEF8000960F5 /* ufo_abduction-20.png in Resources */,
 				A6E5C1C5286053AD008AA653 /* panda_vest_lightsaber-11.png in Resources */,
 				A6E5CB82286053B9008AA653 /* sloth_swag_idle-17.png in Resources */,
 				A6E5CCCA286053B9008AA653 /* sloth_swag_idle_front-35.png in Resources */,
@@ -13469,6 +13618,7 @@
 				A6E5C4EB286053AE008AA653 /* trex_yellow_walk-3.png in Resources */,
 				A6E5C0A2286053AD008AA653 /* panda_walk-9.png in Resources */,
 				A6E5BF80286053AD008AA653 /* crow_drag-7.png in Resources */,
+				A6EDF7F22861BEF8000960F5 /* ufo_abduction-19.png in Resources */,
 				A6E5C13D286053AD008AA653 /* panda_eat-22.png in Resources */,
 				A6E5C741286053AF008AA653 /* betta_tsundere-8.png in Resources */,
 				A6E5BFD8286053AD008AA653 /* crow_white_love-4.png in Resources */,

@@ -19,10 +19,7 @@ extension Pet {
                 ]
             )
         ],
-        capabilities: [
-            LinearMovement.self,
-            BounceOffLateralBounds.self
-        ],
+        capabilities: .defaultsNoGravity,
         movementPath: .fly,
         speed: 1.3
     )

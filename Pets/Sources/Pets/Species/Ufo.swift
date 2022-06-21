@@ -7,11 +7,12 @@ import Biosphere
 
 extension Pet {
     
-    static let ufo = Pet(
+    public static let ufo = Pet(
         id: "ufo",
         capabilities: [
             BounceOffLateralBounds.self,
-            LinearMovement.self
+            LinearMovement.self,
+            Seeker.self
         ],
         movementPath: .idleFront,
         dragPath: .idleFront,

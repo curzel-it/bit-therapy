@@ -4,6 +4,17 @@
 
 import SwiftUI
 
+// MARK: - Distance
+
+extension CGPoint {
+    
+    public func distance(from other: CGPoint) -> CGFloat {
+        sqrt(pow(other.x - x, 2) + pow(other.y - y, 2))
+    }
+}
+
+// MARK: - Offset
+
 extension CGPoint {
     
     public func offset(by delta: CGPoint) -> CGPoint {
@@ -18,6 +29,20 @@ extension CGPoint {
         return CGPoint(x: self.x + x, y: self.y + y)
     }
 }
+
+// MARK: - Init from Vector
+
+extension CGPoint {
+    
+    public init(vector: CGVector, radius: CGFloat = 1, offset: CGPoint = .zero) {
+        self.init(
+            x: radius * vector.dx + offset.x,
+            y: radius * vector.dy + offset.y
+        )
+    }
+}
+
+// MARK: - String Convertible
 
 extension CGPoint: CustomStringConvertible {
     

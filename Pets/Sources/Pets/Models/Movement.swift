@@ -43,7 +43,7 @@ public enum MovementType {
 
 extension Movement {
     
-    public func capabilities() -> [Capability.Type] {
+    public func capabilities() -> Capabilities {
         switch type {
         case .fly: return [
             LinearMovement.self,

@@ -31,6 +31,7 @@ extension PetEntity {
         return baseSpeed * species.speed * sizeRatio * multiplier
     }
 }
+
 // MARK: - Initial Frame
 
 extension PetEntity {
@@ -44,4 +45,18 @@ extension PetEntity {
         
         return CGRect(origin: position, size: size)
     }
+}
+
+// MARK: - Default Capabilities
+
+extension Capabilities {
+    
+    static let defaultsNoGravity: Capabilities = [
+        LinearMovement.self,
+        BounceOffLateralBounds.self,
+        PetGravity.self,
+        FlipHorizontallyWhenGoingLeft.self
+    ]
+    
+    static let defaultsWithGravity: Capabilities = defaultsNoGravity + [PetGravity.self]
 }

@@ -23,3 +23,5 @@ open class Capability {
         self.body = nil
     }
 }
+
+public typealias Capabilities = [Capability.Type]

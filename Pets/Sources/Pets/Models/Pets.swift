@@ -10,7 +10,7 @@ public struct Pet {
     
     public let id: String
     public let behaviors: [PetBehavior]
-    public let capabilities: [Capability.Type]
+    public let capabilities: Capabilities
     public let frameTime: TimeInterval
     public let isPaid: Bool
     public let speed: CGFloat
@@ -20,7 +20,7 @@ public struct Pet {
     init(
         id: String,
         behaviors: [PetBehavior] = [],
-        capabilities: [Capability.Type] = [],
+        capabilities: Capabilities = .defaultsWithGravity,
         frameTime: TimeInterval = 0.1,
         isPaid: Bool = false,
         movementPath: String = "walk",

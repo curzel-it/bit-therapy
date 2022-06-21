@@ -14,7 +14,11 @@ class OnScreenViewModel: HabitatViewModel {
     
     override init() {
         super.init()
-        addSelectedPet()
+        let selected = Pet.by(id: AppState.global.selectedPet)
+        let pet = addPet(for: selected ?? .sloth)
+        
+        let ufo = addPet(for: .ufo)
+        ufo.capability(for: Seeker.self)?.follow(pet, to: .above)
     }
     
     func spawnWindows() {
@@ -25,20 +29,16 @@ class OnScreenViewModel: HabitatViewModel {
             .forEach { windowsManager?.registerAndShow($0) }
     }
     
-    func addSelectedPet() {
-        let selected = Pet.by(id: AppState.global.selectedPet)
-        addPet(for: selected ?? .sloth)
-    }
-    
-    private func addPet(for species: Pet) {
+    @discardableResult
+    private func addPet(for species: Pet) -> PetEntity {
         let pet = PetEntity(of: species, in: state.bounds)
         pet.install(MouseDraggablePet.self)
         pet.install(ShowsMenuOnRightClick.self)
         pet.install(ReactToHotspots.self)
         pet.install(ResumeMovementAfterAnimations.self)
-        
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
+        return pet
     }
     
     private func window(representing entity: Entity) -> EntityWindow {
