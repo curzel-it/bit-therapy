@@ -3,11 +3,18 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
     static let ufo = Pet(
         id: "ufo",
-        movement: Movement(type: .fly, speed: 2.4, path: "idle_front")
+        capabilities: [
+            BounceOffLateralBounds.self,
+            LinearMovement.self
+        ],
+        movementPath: .idleFront,
+        dragPath: .idleFront,
+        speed: 2.4
     )
 }

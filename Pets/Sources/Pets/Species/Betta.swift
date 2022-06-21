@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
@@ -18,6 +19,11 @@ extension Pet {
                 ]
             )
         ],
-        movement: Movement(type: .fly, speed: 1.3)
+        capabilities: [
+            LinearMovement.self,
+            BounceOffLateralBounds.self
+        ],
+        movementPath: .fly,
+        speed: 1.3
     )
 }

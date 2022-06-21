@@ -8,18 +8,18 @@ import Biosphere
 
 // MARK: - Movement
 
-public struct Movement: Equatable {
+public struct Movement {
     
     public let type: MovementType
     public let speed: CGFloat
     public let path: String
     public let dragPath: String
     
-    init(type: MovementType, speed: CGFloat = 1, path: String? = nil) {
+    init(type: MovementType, speed: CGFloat = 1, dragPath: String? = nil) {
         self.type = type
         self.speed = speed
-        self.path = path ?? (type == .fly ? "fly" : "walk")
-        self.dragPath = path ?? "drag"
+        self.path = type.path
+        self.dragPath = dragPath ?? "drag"
     }
 }
 
@@ -28,7 +28,15 @@ public struct Movement: Equatable {
 public enum MovementType {
     case walk
     case fly
-    case wallCrawler
+    case custom(path: String)
+    
+    fileprivate var path: String {
+        switch self {
+        case .walk: return "walk"
+        case .fly: return "fly"
+        case .custom(let path): return path
+        }
+    }
 }
 
 // MARK: - Capabilities
@@ -46,10 +54,7 @@ extension Movement {
             BounceOffLateralBounds.self,
             PetGravity.self
         ]
-        case .wallCrawler: return [
-            LinearMovement.self,
-            WallCrawler.self
-        ]
+        case .custom: return []
         }
     }
 }

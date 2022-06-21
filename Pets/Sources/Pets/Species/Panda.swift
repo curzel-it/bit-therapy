@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
@@ -22,7 +23,13 @@ extension Pet {
                 ]
             )
         ],
-        movement: Movement(type: .walk, speed: 0.8)
+        capabilities: [
+            LinearMovement.self,
+            BounceOffLateralBounds.self,
+            PetGravity.self
+        ],
+        movementPath: .walk,
+        speed: 0.8
     )
     
     static let pandaVest = Pet.panda.shiny(

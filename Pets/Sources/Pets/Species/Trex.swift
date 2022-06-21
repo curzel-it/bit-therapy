@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
@@ -22,7 +23,13 @@ extension Pet {
                 ]
             )
         ],
-        movement: Movement(type: .walk, speed: 1)
+        capabilities: [
+            LinearMovement.self,
+            BounceOffLateralBounds.self,
+            PetGravity.self
+        ],
+        movementPath: .walk,
+        speed: 1
     )
     
     static let trexBlue = Pet.trex.shiny(id: "trex_blue")

@@ -22,18 +22,27 @@ open class PetEntity: Entity {
     
     // MARK: - Init
     
-    public init(_ pet: Pet, size: CGSize? = nil, in habitatBounds: CGRect) {
+    public init(
+        of pet: Pet,
+        size: CGSize? = nil,
+        in habitatBounds: CGRect,
+        installCapabilities: Bool = true
+    ) {
         species = pet
         super.init(
             id: PetEntity.id(for: species),
             frame: PetEntity.initialFrame(in: habitatBounds, prefers: size),
             in: habitatBounds
         )
-        speed = PetEntity.speed(for: species, size: frame.width)
+        updateSpeed()
         loadMainSprite()
+        
+        if installCapabilities {
+            installAll(species.capabilities)
+        }
     }
     
-    // MARK: - Facing Direction
+    // MARK: - Direction
     
     public override func facingDirection() -> CGVector {
         if case .animation(let animation) = petState {
@@ -43,12 +52,14 @@ open class PetEntity: Entity {
         }
         return storedDirection ?? direction
     }
-    
-    // MARK: - Direction Change
-    
+        
     public override func set(direction newDirection: CGVector) {
         super.set(direction: newDirection)
         mainSprite?.directionChanged(to: newDirection)
+    }
+    
+    func updateSpeed() {
+        speed = PetEntity.speed(for: species, size: frame.width)
     }
     
     // MARK: - Kill

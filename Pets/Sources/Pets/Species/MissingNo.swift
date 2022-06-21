@@ -3,11 +3,17 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
     static let missingNo = Pet(
         id: "missingno",
-        movement: Movement(type: .walk)
+        capabilities: [
+            LinearMovement.self,
+            BounceOffLateralBounds.self,
+            PetGravity.self
+        ],
+        movementPath: .walk
     )
 }

@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
@@ -19,7 +20,12 @@ extension Pet {
                 ]
             )
         ],
-        movement: Movement(type: .fly, speed: 1.4)
+        capabilities: [
+            LinearMovement.self,
+            BounceOffLateralBounds.self
+        ],
+        movementPath: .fly,
+        speed: 1.4
     )
     
     static let crowWhite = Pet.crow.shiny(id: "crow_white", isPaid: true)

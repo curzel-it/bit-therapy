@@ -27,8 +27,8 @@ class PetSelectionViewModel: HabitatViewModel {
     
     override init() {
         super.init()
-        let pets = Pet.availableSpecies.map {
-            SelectablePet($0, size: petSize, in: state.bounds)
+        let pets = Pet.availableSpecies.map { species in 
+            SelectablePet(of: species, size: petSize, in: state.bounds)
         }
         state.children.append(contentsOf: pets)
     }
@@ -44,8 +44,13 @@ class PetSelectionViewModel: HabitatViewModel {
 
 class SelectablePet: PetEntity {
         
-    init(_ pet: Pet, size: CGFloat, in habitatBounds: CGRect) {
-        super.init(pet, size: CGSize(square: size), in: habitatBounds)
+    init(of pet: Pet, size: CGFloat, in habitatBounds: CGRect) {
+        super.init(
+            of: pet,
+            size: CGSize(square: size),
+            in: habitatBounds,
+            installCapabilities: false
+        )
         set(direction: .zero)
         set(state: .animation(animation: .idleFront))
     }

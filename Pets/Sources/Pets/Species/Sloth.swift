@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
@@ -33,7 +34,13 @@ extension Pet {
                 ]
             )
         ],
-        movement: Movement(type: .walk, speed: 0.6)
+        capabilities: [
+            LinearMovement.self,
+            BounceOffLateralBounds.self,
+            PetGravity.self
+        ],
+        movementPath: .walk,
+        speed: 0.6
     )
     
     static let slothSwag = Pet.sloth.shiny(

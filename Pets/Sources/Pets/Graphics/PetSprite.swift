@@ -81,9 +81,9 @@ extension PetState {
     
     func actionPath(for pet: Pet) -> String {
         switch self {
-        case .freeFall: return pet.movement.dragPath
-        case .drag: return pet.movement.dragPath
-        case .move: return pet.movement.path
+        case .freeFall: return pet.dragPath
+        case .drag: return pet.dragPath
+        case .move: return pet.movementPath
         case .jump: return "jump"
         case .smokeBomb: return "smoke_bomb"
         case .animation(let animation): return animation.id

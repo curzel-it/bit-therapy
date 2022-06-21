@@ -3,11 +3,19 @@
 //
 
 import Foundation
+import Biosphere
 
 extension Pet {
     
     static let nyan = Pet(
         id: "nyan",
-        movement: Movement(type: .fly, speed: 0.9, path: "idle_front")
+        capabilities: [
+            BounceOffLateralBounds.self,
+            LinearMovement.self,
+            PetGravity.self
+        ],
+        movementPath: .idleFront,
+        dragPath: .idleFront,
+        speed: 0.9
     )
 }

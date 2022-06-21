@@ -13,7 +13,9 @@ public struct Pet {
     public let capabilities: [Capability.Type]
     public let frameTime: TimeInterval
     public let isPaid: Bool
-    public let movement: Movement
+    public let speed: CGFloat
+    public let movementPath: String
+    public let dragPath: String
     
     init(
         id: String,
@@ -21,14 +23,18 @@ public struct Pet {
         capabilities: [Capability.Type] = [],
         frameTime: TimeInterval = 0.1,
         isPaid: Bool = false,
-        movement: Movement
+        movementPath: String = "walk",
+        dragPath: String = "drag",
+        speed: CGFloat = 1
     ) {
         self.id = id
         self.behaviors = behaviors
-        self.capabilities = capabilities + movement.capabilities()
-        self.movement = movement
+        self.capabilities = capabilities
         self.frameTime = frameTime
         self.isPaid = isPaid
+        self.movementPath = movementPath
+        self.dragPath = dragPath
+        self.speed = speed
     }
 }
 
@@ -52,7 +58,18 @@ extension Pet {
             capabilities: capabilities,
             frameTime: frameTime,
             isPaid: shinyPaid,
-            movement: movement
+            movementPath: movementPath,
+            dragPath: dragPath,
+            speed: speed
         )
     }
+}
+
+// MARK: - Constants
+
+extension String {
+    
+    public static let fly = "fly"
+    public static let walk = "walk"
+    public static let idleFront = "idle_front"
 }
