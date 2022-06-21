@@ -29,36 +29,9 @@ public struct EntityView: View {
             }
             .frame(sizeOf: child.frame)
             .background(child.backgroundColor)
-            .lookingTowardsDirection(of: child)
+            .rotation3DEffect(.radians(child.xAngle), axis: (x: 1, y: 0, z: 0))
+            .rotation3DEffect(.radians(child.yAngle), axis: (x: 0, y: 1, z: 0))
+            .rotation3DEffect(.radians(child.zAngle), axis: (x: 0, y: 0, z: 1))
         }
-    }
-}
-
-private extension View {
-    
-    func lookingTowardsDirection(of entity: Entity) -> some View {
-        let direction = entity.facingDirection()
-        let xAngle = xAngle(for: direction, isUpsideDown: entity.isUpsideDown)
-        let yAngle = yAngle(for: direction, isUpsideDown: entity.isUpsideDown)
-        let zAngle = zAngle(for: direction, isUpsideDown: entity.isUpsideDown)
-        
-        return self
-            .rotation3DEffect(xAngle, axis: (x: 1, y: 0, z: 0))
-            .rotation3DEffect(yAngle, axis: (x: 0, y: 1, z: 0))
-            .rotation3DEffect(zAngle, axis: (x: 0, y: 0, z: 1))
-    }
-    
-    func xAngle(for direction: CGVector, isUpsideDown: Bool) -> Angle {
-        .radians(isUpsideDown ? .pi : .zero)
-    }
-    
-    func yAngle(for direction: CGVector, isUpsideDown: Bool) -> Angle {
-        .radians(direction.dx < 0 ? .pi : .zero)
-    }
-    
-    func zAngle(for direction: CGVector, isUpsideDown: Bool) -> Angle {
-        if direction.dy < -0.0001 { return .radians(.pi * 1.5) }
-        if direction.dy > 0.0001 { return .radians(.pi * 0.5) }
-        return .radians(.zero)
     }
 }

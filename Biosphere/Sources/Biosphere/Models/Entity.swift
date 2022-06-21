@@ -11,6 +11,9 @@ open class Entity: Identifiable, ObservableObject {
     @Published public var speed: CGFloat = 0
     @Published public var isAlive = true
     @Published public var isUpsideDown = false
+    @Published public var xAngle: CGFloat = 0
+    @Published public var yAngle: CGFloat = 0
+    @Published public var zAngle: CGFloat = 0
     
     public let id: String
     
