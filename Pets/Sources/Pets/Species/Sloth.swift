@@ -24,13 +24,13 @@ extension Pet {
             .init(
                 trigger: .on(spot: .leftBound),
                 possibleAnimations: [
-                    .climb(to: .topLeftCorner)
+                    .climb(to: .habitatTopLeft)
                 ]
             ),
             .init(
                 trigger: .on(spot: .rightBound),
                 possibleAnimations: [
-                    .climb(to: .topRightCorner)
+                    .climb(to: .habitatTopRight)
                 ]
             )
         ],
@@ -46,7 +46,7 @@ extension Pet {
 extension PetAnimation {
     
     static func climb(to position: Position) -> PetAnimation {
-        let left = position == .topLeftCorner
+        let left = position == .habitatTopLeft
         let direction: CGVector = .init(dx: left ? -1 : 1, dy: 0)
         
         return .init(

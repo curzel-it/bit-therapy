@@ -13,7 +13,7 @@ public class ResumeMovementAfterAnimations: Capability {
     var pet: PetEntity? { body as? PetEntity }
     var tag: String { "KeepMoving-\(pet?.id ?? "?")" }
     
-    let minTimePerAnimation: TimeInterval = 4
+    let minTimePerAnimation: TimeInterval = 1
     
     private var stateCanc: AnyCancellable!
 

@@ -8,62 +8,117 @@ open class Seeker: Capability {
     
     private weak var targetEntity: Entity?
     private var targetPosition: Position = .center
-    private var tolerance: CGFloat = 5
+    private var targetOffset: CGSize = .zero
+    private var minDistance: CGFloat = 5
+    private var maxDistance: CGFloat = 20
     
     private let baseSpeed: CGFloat
+    private var targetReached: Bool = false
+
+    private var report: (State) -> Void = { _ in }
     
     public required init(with body: Entity) {
         baseSpeed = body.speed
         super.init(with: body)
     }
     
-    public func follow(_ target: Entity, to position: Position, tolerance: CGFloat = 5) {
+    // MARK: - Follow
+    
+    public func follow(
+        _ target: Entity,
+        to position: Position,
+        offset: CGSize = .zero,
+        minDistance: CGFloat = 5,
+        maxDistance: CGFloat = 20,
+        report: @escaping (State) -> Void
+    ) {
         self.targetEntity = target
         self.targetPosition = position
-        self.tolerance = tolerance
+        self.targetOffset = offset
+        self.minDistance = minDistance
+        self.maxDistance = maxDistance
+        self.report = report
     }
+    
+    // MARK: - Update
     
     override open func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         guard let body = body else { return }
         guard let target = targetPoint() else { return }
-        
+
         let distance = body.frame.origin.distance(from: target)
-        adjustSpeed(given: distance)
-        
-        if distance < tolerance {
-            body.set(direction: .zero)
-        } else {
-            body.set(direction: .unit(from: body.frame.origin, to: target))
+        checkTargetReached(with: distance)
+        adjustSpeed(with: distance)
+        adjustDirection(towards: target, with: distance)
+    }
+    
+    // MARK: - Destination Reached
+    
+    private func checkTargetReached(with distance: CGFloat) {
+        if !targetReached {
+            if distance <= minDistance {
+                targetReached = true
+                report(.captured)
+            } else {
+                report(.following(distance: distance))
+            }
+        } else if distance >= maxDistance && targetReached {
+            targetReached = false
+            report(.escaped)
         }
     }
     
-    private func adjustSpeed(given distance: CGFloat) {
-        switch true {
-        case distance < tolerance * 4: body?.speed = baseSpeed * 0.3
-        case distance < tolerance * 2: body?.speed = baseSpeed * 0.1
-        default: body?.speed = baseSpeed
+    // MARK: - Direction
+    
+    private func adjustDirection(towards target: CGPoint, with distance: CGFloat) {
+        if distance < minDistance {
+            body?.set(direction: .zero)
+        } else {
+            let origin = body?.frame.origin ?? .zero
+            body?.set(direction: .unit(from: origin, to: target))
         }
     }
+    
+    // MARK: - Speed
+    
+    private func adjustSpeed(with distance: CGFloat) {
+        if distance < minDistance {
+            body?.speed = baseSpeed * 0.25
+        } else if distance < maxDistance {
+            body?.speed = baseSpeed * 0.5
+        }
+    }
+    
+    // MARK: - Target Location
     
     private func targetPoint() -> CGPoint? {
         guard let frame = body?.frame else { return nil }
         guard let targetFrame = targetEntity?.frame else { return nil }
         
         let centerX = targetFrame.minX + targetFrame.width/2 - frame.width/2
+        let centerY = targetFrame.minY + targetFrame.height/2 - frame.height/2
         
         switch targetPosition {
         case .center:
             return CGPoint(
-                x: centerX,
-                y: targetFrame.minY + targetFrame.height/2 - frame.height/2
+                x: centerX + targetOffset.width,
+                y: centerY + targetOffset.height
             )
         case .above:
             return CGPoint(
-                x: centerX,
-                y: targetFrame.minY - frame.height
+                x: centerX + targetOffset.width,
+                y: targetFrame.minY - frame.height + targetOffset.height
             )
         }
+    }
+    
+    // MARK: - Uninstall
+    
+    override open func uninstall() {
+        super.uninstall()
+        targetEntity = nil
+        report = { _ in }
     }
 }
 
@@ -72,5 +127,23 @@ extension Seeker {
     public enum Position {
         case center
         case above
+    }
+}
+
+extension Seeker {
+    
+    public enum State: CustomStringConvertible {
+        case captured
+        case escaped
+        case following(distance: CGFloat)
+        
+        public var description: String {
+            switch self {
+            case .captured: return "Captured"
+            case .escaped: return "Escaped"
+            case .following(let distance):
+                return "Following... \(String(format: "%0.2f", distance))"
+            }
+        }
     }
 }

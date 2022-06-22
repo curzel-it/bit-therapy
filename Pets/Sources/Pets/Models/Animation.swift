@@ -18,7 +18,7 @@ public struct PetAnimation: Equatable {
     init(
         id: String,
         size: CGSize? = nil,
-        position: Position = .inPlace,
+        position: Position = .entityCenter,
         facingDirection: CGVector? = nil,
         frameTime: TimeInterval? = nil,
         chance: Double = 1
@@ -56,21 +56,24 @@ public struct PetAnimation: Equatable {
     ) -> CGPoint {
         switch position {
             
-        case .inPlace:
+        case .entityCenter:
             return petFrame.origin
                 .offset(x: (petFrame.size.width - newSize.width) / 2)
                 .offset(y: (petFrame.size.height - newSize.height) / 2)
             
-        case .topLeftCorner:
+        case .entityTopLeft:
+            return petFrame.origin
+            
+        case .habitatTopLeft:
             return habitatBounds.topLeft
             
-        case .topRightCorner:
+        case .habitatTopRight:
             return habitatBounds.topRight.offset(x: -petFrame.width)
             
-        case .bottomRightCorner:
+        case .habitatBottomRight:
             return habitatBounds.bottomRight.offset(by: petFrame.size.oppositeSign())
             
-        case .bottomLeftCorner:
+        case .habitatBottomLeft:
             return habitatBounds.bottomLeft.offset(y: -petFrame.height)
         }
     }
@@ -84,10 +87,11 @@ extension PetAnimation: CustomStringConvertible {
 extension PetAnimation {
     
     enum Position {
-        case inPlace
-        case topLeftCorner
-        case bottomLeftCorner
-        case topRightCorner
-        case bottomRightCorner
+        case entityCenter
+        case entityTopLeft
+        case habitatTopLeft
+        case habitatBottomLeft
+        case habitatTopRight
+        case habitatBottomRight
     }
 }

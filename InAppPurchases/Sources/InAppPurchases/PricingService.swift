@@ -8,12 +8,12 @@ import RevenueCat
 import SwiftUI
 
 public class PricingService: ObservableObject {
-        
+    
     public static let global = PricingService()
     
     private var isAvailable = false
     
-    @Published var prices: [String: PetPrice] = [:]
+    @Published var prices: Prices = [:]
     
     @Published private(set) var purchased: [String] = [] {
         didSet {
@@ -47,21 +47,24 @@ public class PricingService: ObservableObject {
     // MARK: - Load Prices
     
     private func loadPrices() async {
-        guard isAvailable else { return }
-        guard prices.count == 0 else { return }
+        guard isAvailable, prices.count == 0 else { return }
         guard let offerings = try? await Purchases.shared.offerings() else { return }
-        guard let currentOffer = offerings.current else { return }
+        guard let offering = offerings.current else { return }
         
         Task { @MainActor in
-            var newPrices: [String: PetPrice] = [:]
-            currentOffer.availablePackages.forEach { package in
-                let price = PetPrice(offering: currentOffer, package: package)
-                newPrices[price.speciesId] = price
-            }
             withAnimation {
-                prices = newPrices
+                prices = prices(from: offering)
             }
         }
+    }
+    
+    private func prices(from offering: Offering) -> Prices {
+        var newPrices: Prices = [:]
+        offering.availablePackages.forEach { package in
+            let price = PetPrice(offering: offering, package: package)
+            newPrices[price.speciesId] = price
+        }
+        return newPrices
     }
     
     // MARK: - Restore
@@ -69,11 +72,13 @@ public class PricingService: ObservableObject {
     func restorePurchases() async -> Bool {
         guard isAvailable else { return false }
         guard let info = try? await Purchases.shared.restorePurchases() else { return false }
+        
+        let purchasedSpecies = info.entitlements.active.map {
+            $0.key.replacingOccurrences(of: "b_", with: "")
+        }
         Task { @MainActor in
             withAnimation {
-                purchased = info.entitlements.active.map {
-                    $0.key.replacingOccurrences(of: "b_", with: "")
-                }
+                purchased = purchasedSpecies
             }
         }
         return true
@@ -111,6 +116,8 @@ public class PricingService: ObservableObject {
 }
 
 // MARK: - Prices
+
+public typealias Prices = [String: PetPrice]
 
 public struct PetPrice {
     

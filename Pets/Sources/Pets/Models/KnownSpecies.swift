@@ -19,7 +19,7 @@ extension Pet {
         .nyan
     ]
     
-    public static let availableSpecies: [Pet] = {
+    public static var availableSpecies: [Pet] = {
         allSpecies
             .filter { species in
                 let frame = "\(species.id)_idle_front-1"

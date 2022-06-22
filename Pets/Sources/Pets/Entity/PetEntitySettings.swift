@@ -26,9 +26,12 @@ extension PetEntity {
     static let baseSpeed: CGFloat = 30
     
     static func speed(for species: Pet, size: CGFloat) -> CGFloat {
+        species.speed * speedMultiplier(for: size)
+    }
+    
+    static func speedMultiplier(for size: CGFloat) -> CGFloat {
         let sizeRatio = size / PetSize.defaultSize
-        let multiplier = AppState.global.speedMultiplier
-        return baseSpeed * species.speed * sizeRatio * multiplier
+        return baseSpeed * sizeRatio * AppState.global.speedMultiplier
     }
 }
 
@@ -54,8 +57,9 @@ extension Capabilities {
     static let defaultsNoGravity: Capabilities = [
         LinearMovement.self,
         BounceOffLateralBounds.self,
-        PetGravity.self,
-        FlipHorizontallyWhenGoingLeft.self
+        FlipHorizontallyWhenGoingLeft.self,
+        ReactToHotspots.self,
+        ResumeMovementAfterAnimations.self
     ]
     
     static let defaultsWithGravity: Capabilities = defaultsNoGravity + [PetGravity.self]

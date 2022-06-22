@@ -7,6 +7,7 @@ import AppState
 import Biosphere
 import EntityWindow
 import Pets
+import Squanch
 
 class OnScreenViewModel: HabitatViewModel {
     
@@ -17,8 +18,11 @@ class OnScreenViewModel: HabitatViewModel {
         let selected = Pet.by(id: AppState.global.selectedPet)
         let pet = addPet(for: selected ?? .sloth)
         
-        let ufo = addPet(for: .ufo)
-        ufo.capability(for: Seeker.self)?.follow(pet, to: .above)
+        let ufo = self.addPet(for: .ufo)
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            let abduction = ufo.install(Pet.UfoAbduction.self)
+            abduction.abduct(pet)
+        }
     }
     
     func spawnWindows() {
@@ -34,8 +38,6 @@ class OnScreenViewModel: HabitatViewModel {
         let pet = PetEntity(of: species, in: state.bounds)
         pet.install(MouseDraggablePet.self)
         pet.install(ShowsMenuOnRightClick.self)
-        pet.install(ReactToHotspots.self)
-        pet.install(ResumeMovementAfterAnimations.self)
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
         return pet
