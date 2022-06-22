@@ -11,6 +11,8 @@ public class Environment: ObservableObject {
     
     public let bounds: CGRect
     
+    public var events: [Event] = []
+        
     public init(bounds rect: CGRect) {
         bounds = rect
         children.append(contentsOf: hotspots())
@@ -23,5 +25,15 @@ public class Environment: ObservableObject {
                 let collisions = child.collisions(with: children)
                 child.update(with: collisions, after: time)
             }
+    }
+    
+    @discardableResult
+    public func schedule(
+        every time: EventSchedule,
+        do action: @escaping (Environment) -> Void
+    ) -> Event {
+        let event = Event(in: self, every: time, do: action)
+        self.events.append(event)
+        return event
     }
 }
