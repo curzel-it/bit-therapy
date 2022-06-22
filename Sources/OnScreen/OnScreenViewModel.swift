@@ -18,10 +18,14 @@ class OnScreenViewModel: HabitatViewModel {
         let selected = Pet.by(id: AppState.global.selectedPet)
         let pet = addPet(for: selected ?? .sloth)
         
-        let ufo = self.addPet(for: .ufo)
-        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-            let abduction = ufo.install(Pet.UfoAbduction.self)
-            abduction.abduct(pet)
+        let ufo = UfoEntity(in: state.bounds)
+        ufo.install(MouseDraggablePet.self)
+        ufo.install(ShowsMenuOnRightClick.self)
+        ufo.set(direction: .init(dx: 1, dy: 0))
+        state.children.append(ufo)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+            ufo.abduct(pet)
         }
     }
     
