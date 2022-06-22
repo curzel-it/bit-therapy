@@ -16,17 +16,7 @@ class OnScreenViewModel: HabitatViewModel {
     override init() {
         super.init()
         let selected = Pet.by(id: AppState.global.selectedPet)
-        let pet = addPet(for: selected ?? .sloth)
-        
-        let ufo = UfoEntity(in: state.bounds)
-        ufo.install(MouseDraggablePet.self)
-        ufo.install(ShowsMenuOnRightClick.self)
-        ufo.set(direction: .init(dx: 1, dy: 0))
-        state.children.append(ufo)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-            ufo.abduct(pet)
-        }
+        addPet(for: selected ?? .sloth)
     }
     
     func spawnWindows() {
