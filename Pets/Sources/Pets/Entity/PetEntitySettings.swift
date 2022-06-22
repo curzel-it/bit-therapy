@@ -25,11 +25,11 @@ extension PetEntity {
     
     static let baseSpeed: CGFloat = 30
     
-    static func speed(for species: Pet, size: CGFloat) -> CGFloat {
+    public static func speed(for species: Pet, size: CGFloat) -> CGFloat {
         species.speed * speedMultiplier(for: size)
     }
     
-    static func speedMultiplier(for size: CGFloat) -> CGFloat {
+    public static func speedMultiplier(for size: CGFloat) -> CGFloat {
         let sizeRatio = size / PetSize.defaultSize
         return baseSpeed * sizeRatio * AppState.global.speedMultiplier
     }

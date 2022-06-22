@@ -77,6 +77,8 @@
 		A6455FCF28638D9100054C59 /* snail_idle_front-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6455FB828638D9100054C59 /* snail_idle_front-7.png */; };
 		A6455FD028638D9100054C59 /* snail_idle_front-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6455FB928638D9100054C59 /* snail_idle_front-13.png */; };
 		A6455FD128638D9100054C59 /* snail_idle_front-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6455FB928638D9100054C59 /* snail_idle_front-13.png */; };
+		A6455FD42863CED800054C59 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A6455FD32863CED800054C59 /* UfoAbduction */; };
+		A6455FD62863D1CF00054C59 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A6455FD52863D1CF00054C59 /* UfoAbduction */; };
 		A65C128A285389F7001F2B70 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A65C1289285389F7001F2B70 /* Squanch */; };
 		A65CD4232854940000F0584E /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4222854940000F0584E /* PetDetailsViewModel.swift */; };
 		A65CD4272854B6D700F0584E /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4262854B6D700F0584E /* PetGridItem.swift */; };
@@ -3471,6 +3473,7 @@
 		A6455FB728638D9100054C59 /* snail_idle_front-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-12.png"; sourceTree = "<group>"; };
 		A6455FB828638D9100054C59 /* snail_idle_front-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-7.png"; sourceTree = "<group>"; };
 		A6455FB928638D9100054C59 /* snail_idle_front-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-13.png"; sourceTree = "<group>"; };
+		A6455FD22863CD6300054C59 /* UfoAbduction */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UfoAbduction; sourceTree = "<group>"; };
 		A65CD4222854940000F0584E /* PetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsViewModel.swift; sourceTree = "<group>"; };
 		A65CD4262854B6D700F0584E /* PetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
 		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6268,6 +6271,7 @@
 				A634991B2859BC5100488588 /* Pets in Frameworks */,
 				A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */,
 				A63499252859CDF900488588 /* EntityWindow in Frameworks */,
+				A6455FD62863D1CF00054C59 /* UfoAbduction in Frameworks */,
 				A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */,
 				A67373CA2853881E002DC8FA /* Schwifty in Frameworks */,
 				A63499172859B90600488588 /* Tracking in Frameworks */,
@@ -6294,6 +6298,7 @@
 				A6E5AADA2860525A008AA653 /* Pets in Frameworks */,
 				A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */,
 				A6E5AADB2860525A008AA653 /* EntityWindow in Frameworks */,
+				A6455FD42863CED800054C59 /* UfoAbduction in Frameworks */,
 				A6E5AADD2860525A008AA653 /* LaunchAtLogin in Frameworks */,
 				A6E5AADE2860525A008AA653 /* Schwifty in Frameworks */,
 				A6E5AADF2860525A008AA653 /* Tracking in Frameworks */,
@@ -6379,6 +6384,7 @@
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
+				A6455FD22863CD6300054C59 /* UfoAbduction */,
 				A6982613283D893700C70E49 /* Frameworks */,
 				A63E000B28578F9D00704841 /* LICENSE.md */,
 				A67373C4285387EB002DC8FA /* Packages */,
@@ -10665,6 +10671,7 @@
 				A63499242859CDF900488588 /* EntityWindow */,
 				A672094F2859FE4F00023189 /* AppState */,
 				A6E5CDCF286092A6008AA653 /* Biosphere */,
+				A6455FD52863D1CF00054C59 /* UfoAbduction */,
 			);
 			productName = MacPets;
 			productReference = A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */;
@@ -10715,6 +10722,7 @@
 				A6E5AABF2860525A008AA653 /* EntityWindow */,
 				A6E5AAC12860525A008AA653 /* AppState */,
 				A6E5CDCD2860929E008AA653 /* Biosphere */,
+				A6455FD32863CED800054C59 /* UfoAbduction */,
 			);
 			productName = MacPets;
 			productReference = A6E5B59F2860525A008AA653 /* MacPets AppStore.app */;
@@ -14634,6 +14642,14 @@
 		A63499242859CDF900488588 /* EntityWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EntityWindow;
+		};
+		A6455FD32863CED800054C59 /* UfoAbduction */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UfoAbduction;
+		};
+		A6455FD52863D1CF00054C59 /* UfoAbduction */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UfoAbduction;
 		};
 		A65C1289285389F7001F2B70 /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;

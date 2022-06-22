@@ -8,6 +8,7 @@ import Biosphere
 import EntityWindow
 import Pets
 import Squanch
+import UfoAbduction
 
 class OnScreenViewModel: HabitatViewModel {
     
@@ -15,8 +16,23 @@ class OnScreenViewModel: HabitatViewModel {
     
     override init() {
         super.init()
-        let selected = Pet.by(id: AppState.global.selectedPet)
-        addPet(for: selected ?? .sloth)
+        addSelectedPet()
+        
+        state.schedule(every: .timeOfDay(hour: 0, minute: 45)) { [weak self] _ in
+            guard let self = self else { return }
+            guard let pet = self.anyPet else { return }
+            
+            animateUfoAbduction(of: pet, in: self.state) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    OnScreen.show()
+                }
+            }
+            self.spawnWindows()
+        }
+    }
+    
+    private var anyPet: PetEntity? {
+        state.children.compactMap { $0 as? PetEntity }.first
     }
     
     func spawnWindows() {
@@ -27,14 +43,17 @@ class OnScreenViewModel: HabitatViewModel {
             .forEach { windowsManager?.registerAndShow($0) }
     }
     
-    @discardableResult
-    private func addPet(for species: Pet) -> PetEntity {
+    private func addSelectedPet() {
+        let species = Pet.by(id: AppState.global.selectedPet) ?? .sloth
+        addPet(for: species)
+    }
+    
+    private func addPet(for species: Pet) {
         let pet = PetEntity(of: species, in: state.bounds)
         pet.install(MouseDraggablePet.self)
         pet.install(ShowsMenuOnRightClick.self)
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
-        return pet
     }
     
     private func window(representing entity: Entity) -> EntityWindow {
