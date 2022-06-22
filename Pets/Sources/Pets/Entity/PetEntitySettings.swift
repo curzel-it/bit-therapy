@@ -55,6 +55,7 @@ extension PetEntity {
 extension Capabilities {
     
     static let defaultsNoGravity: Capabilities = [
+        AnimatedSprite.self,
         LinearMovement.self,
         BounceOffLateralBounds.self,
         FlipHorizontallyWhenGoingLeft.self,
@@ -62,5 +63,5 @@ extension Capabilities {
         ResumeMovementAfterAnimations.self
     ]
     
-    static let defaultsWithGravity: Capabilities = defaultsNoGravity + [PetGravity.self]
+    static let defaultsWithGravity: Capabilities = defaultsNoGravity + [Gravity.self]
 }

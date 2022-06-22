@@ -69,7 +69,8 @@
 "pet.name.panda_vest" = "Golden Panda";
 "pet.name.sloth" = "Sloth";
 "pet.name.sloth_swag" = "Swag Sloth";
-"pet.name.snail" = "Cat Snail";
+"pet.name.snail" = "Cat-Snail";
+"pet.name.snail_nicky" = "Pink Cat-Snail";
 "pet.name.trex" = "T-Rex";
 "pet.name.trex_blue" = "Ceratosaurus";
 "pet.name.trex_violet" = "Violet T-Rex";
@@ -87,6 +88,7 @@
 "pet.about.panda" = "The universe has brought us the Dragon Warrior!";
 "pet.about.panda_vest" = "There is no charge for awesomeness... or attractiveness.";
 "pet.about.snail" = "Meow! Is that you Gary?";
+"pet.about.snail_nicky" = "Meow! What's up with your hair, Gary!?";
 "pet.about.sloth" = "Did you know they are so lazy alge grows on their fur with time?";
 "pet.about.sloth_swag" = "Slow, but with style...";
 "pet.about.trex" = "Dollar-store Charmander";

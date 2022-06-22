@@ -10,7 +10,7 @@ import Squanch
 public struct PetBehavior {
     
     let trigger: PetBehavior.Trigger
-    let possibleAnimations: [PetAnimation]
+    let possibleAnimations: [EntityAnimation]
     
     public enum Trigger {
         case onAnyCorner
@@ -38,7 +38,7 @@ extension Pet {
         behaviors.filter { $0.applies(whenTouching: spot) }
     }
     
-    public func action(whenTouching spot: Hotspot) -> PetAnimation? {
+    public func action(whenTouching spot: Hotspot) -> EntityAnimation? {
         let possibleAnimations = behaviors(whenTouching: spot)
             .flatMap { $0.possibleAnimations }
         let probabilities = possibleAnimations.map { $0.chance }

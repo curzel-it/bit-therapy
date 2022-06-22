@@ -12,12 +12,14 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(path: "../Biosphere"),
         .package(path: "../DesignSystem")
     ],
     targets: [
         .target(
             name: "AppState",
             dependencies: [
+                .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "DesignSystem", package: "DesignSystem")
             ]
         )

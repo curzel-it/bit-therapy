@@ -2,32 +2,28 @@
 // Pet Therapy.
 //
 
-import Biosphere
 import Foundation
 
-public struct PetAnimation: Equatable {
+public struct EntityAnimation: Equatable {
     
     public let id: String
     public let chance: Double
     public let facingDirection: CGVector?
-    public let frameTime: TimeInterval?
     
     let size: CGSize?
     let position: Position
     
-    init(
+    public init(
         id: String,
         size: CGSize? = nil,
         position: Position = .entityCenter,
         facingDirection: CGVector? = nil,
-        frameTime: TimeInterval? = nil,
         chance: Double = 1
     ) {
         self.id = id
         self.size = size
         self.position = position
         self.facingDirection = facingDirection
-        self.frameTime = frameTime
         self.chance = chance
     }
     
@@ -79,14 +75,14 @@ public struct PetAnimation: Equatable {
     }
 }
 
-extension PetAnimation: CustomStringConvertible {
+extension EntityAnimation: CustomStringConvertible {
     
     public var description: String { id }
 }
 
-extension PetAnimation {
+extension EntityAnimation {
     
-    enum Position {
+    public enum Position {
         case entityCenter
         case entityTopLeft
         case habitatTopLeft

@@ -25,7 +25,7 @@ extension Pet {
     static let goldenEgg = Pet.egg.shiny(id: "egg_gold")
 }
 
-extension PetAnimation {
+extension EntityAnimation {
     
-    static let crack = PetAnimation(id: "crack")
+    static let crack = EntityAnimation(id: "crack")
 }

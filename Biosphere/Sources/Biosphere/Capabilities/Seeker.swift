@@ -17,9 +17,9 @@ open class Seeker: Capability {
 
     private var report: (State) -> Void = { _ in }
     
-    public required init(with body: Entity) {
-        baseSpeed = body.speed
-        super.init(with: body)
+    public required init(with subject: Entity) {
+        baseSpeed = subject.speed
+        super.init(with: subject)
     }
     
     // MARK: - Follow
@@ -44,7 +44,7 @@ open class Seeker: Capability {
     
     override open func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
-        guard let body = body else { return }
+        guard let body = subject else { return }
         guard let target = targetPoint() else { return }
 
         let distance = body.frame.origin.distance(from: target)
@@ -73,10 +73,10 @@ open class Seeker: Capability {
     
     private func adjustDirection(towards target: CGPoint, with distance: CGFloat) {
         if distance < minDistance {
-            body?.set(direction: .zero)
+            subject?.set(direction: .zero)
         } else {
-            let origin = body?.frame.origin ?? .zero
-            body?.set(direction: .unit(from: origin, to: target))
+            let origin = subject?.frame.origin ?? .zero
+            subject?.set(direction: .unit(from: origin, to: target))
         }
     }
     
@@ -84,16 +84,16 @@ open class Seeker: Capability {
     
     private func adjustSpeed(with distance: CGFloat) {
         if distance < minDistance {
-            body?.speed = baseSpeed * 0.25
+            subject?.speed = baseSpeed * 0.25
         } else if distance < maxDistance {
-            body?.speed = baseSpeed * 0.5
+            subject?.speed = baseSpeed * 0.5
         }
     }
     
     // MARK: - Target Location
     
     private func targetPoint() -> CGPoint? {
-        guard let frame = body?.frame else { return nil }
+        guard let frame = subject?.frame else { return nil }
         guard let targetFrame = targetEntity?.frame else { return nil }
         
         let centerX = targetFrame.minX + targetFrame.width/2 - frame.width/2

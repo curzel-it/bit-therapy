@@ -52,7 +52,7 @@ extension Movement {
         case .walk: return [
             LinearMovement.self,
             BounceOffLateralBounds.self,
-            PetGravity.self
+            Gravity.self
         ]
         case .custom: return []
         }

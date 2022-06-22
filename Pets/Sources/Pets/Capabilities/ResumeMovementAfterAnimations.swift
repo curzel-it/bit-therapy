@@ -9,47 +9,28 @@ import Squanch
 import SwiftUI
 
 public class ResumeMovementAfterAnimations: Capability {
-    
-    var pet: PetEntity? { body as? PetEntity }
-    var tag: String { "KeepMoving-\(pet?.id ?? "?")" }
-    
-    let minTimePerAnimation: TimeInterval = 1
-    
-    private var stateCanc: AnyCancellable!
+            
+    private var animationCanc: AnyCancellable!
 
-    public required init(with body: Entity) {
-        super.init(with: body)
+    public required init(with subject: Entity) {
+        super.init(with: subject)
         Task { @MainActor in
-            setResumeMovementAfterAnimations()
+            animationCanc = subject.animation?.$animation.sink { anim in
+                self.onAnimationChanged(to: anim)
+            }
         }
     }
     
-    private func setResumeMovementAfterAnimations() {
-        stateCanc = pet?.$petState.sink { state in
-            guard self.isEnabled else { return }
-            guard case .animation = state else { return }
-            self.keepMovingAfterCurentAnimationCompleted()
-        }
-    }
-    
-    private func keepMovingAfterCurentAnimationCompleted() {
-        let loopDuracy = pet?.mainSprite.loopDuracy ?? 0
-        let loops = ceil(minTimePerAnimation / loopDuracy)
-        let delay = loopDuracy * loops
-        printDebug(tag, "Killing animation in \(delay)")
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-            guard let self = self else { return }
-            guard self.pet?.petState != .move else { return }
-            guard self.pet?.petState != .drag else { return }
-            printDebug(self.tag, "Resuming movement")
-            self.pet?.set(state: .move)
+    private func onAnimationChanged(to animation: ImageAnimator) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + animation.loopDuracy) {
+            guard case .animation = self.subject?.state else { return }
+            self.subject?.set(state: .move)
         }
     }
             
     public override func uninstall() {
         super.uninstall()
-        stateCanc?.cancel()
-        stateCanc = nil
+        animationCanc?.cancel()
+        animationCanc = nil
     }
 }

@@ -11,7 +11,6 @@ public struct Pet {
     public let id: String
     public let behaviors: [PetBehavior]
     public let capabilities: Capabilities
-    public let frameTime: TimeInterval
     public let isPaid: Bool
     public let speed: CGFloat
     public let movementPath: String
@@ -21,7 +20,6 @@ public struct Pet {
         id: String,
         behaviors: [PetBehavior] = [],
         capabilities: Capabilities = .defaultsWithGravity,
-        frameTime: TimeInterval = 0.1,
         isPaid: Bool = false,
         movementPath: String = "walk",
         dragPath: String = "drag",
@@ -30,7 +28,6 @@ public struct Pet {
         self.id = id
         self.behaviors = behaviors
         self.capabilities = capabilities
-        self.frameTime = frameTime
         self.isPaid = isPaid
         self.movementPath = movementPath
         self.dragPath = dragPath
@@ -56,7 +53,6 @@ extension Pet {
             id: shinyId,
             behaviors: behaviors,
             capabilities: capabilities,
-            frameTime: frameTime,
             isPaid: shinyPaid,
             movementPath: movementPath,
             dragPath: dragPath,

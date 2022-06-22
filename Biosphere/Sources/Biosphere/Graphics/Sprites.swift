@@ -3,25 +3,63 @@
 //
 
 import AppKit
+import Combine
+import Schwifty
+import Squanch
 
-open class Sprite: Identifiable {
+open class AnimatedSprite: Capability, ObservableObject {
     
-    public let id: String = UUID().uuidString
+    public let id: String
     
-    public var currentFrame: NSImage?
+    @Published public private(set) var animation: ImageAnimator = .none
     
-    public var isDrawable: Bool = true
+    private var lastState: EntityState = .drag
+    private var lastDirection: CGVector = .zero
+    private var stateCanc: AnyCancellable!
+    private var directionCanc: AnyCancellable!
     
-    public init() {
-        self.currentFrame = nil
+    public required init(with subject: Entity) {
+        self.id = "\(subject.id)-Sprite"
+        super.init(with: subject)
+        
+        stateCanc = subject.$state.sink { newState in
+            self.lastState = newState
+            self.updateAnimation()
+        }
+        directionCanc = subject.$direction.sink { newDirection in
+            self.lastDirection = newDirection
+            self.updateAnimation()
+        }
     }
     
-    open func update(with collisions: Collisions, after time: TimeInterval) {
-        // ...
+    private func updateAnimation() {
+        let path = subject?.animationPath(for: lastState)
+        guard let path = path, path != animation.baseName else { return }
+        printDebug(id, "Loaded", path)
+        animation = ImageAnimator(path)
     }
     
-    open func kill() {
-        currentFrame = nil
-        isDrawable = false
+    open override func update(with collisions: Collisions, after time: TimeInterval) {
+        guard isEnabled else { return }
+        if let next = animation.nextFrame(after: time) {
+            subject?.sprite = next
+        }
     }
+    
+    open override func uninstall() {
+        subject?.sprite = nil
+        super.uninstall()
+        animation = .none
+        stateCanc?.cancel()
+        stateCanc = nil
+        directionCanc?.cancel()
+        directionCanc = nil
+    }
+}
+
+extension Entity {
+    
+    public var animation: AnimatedSprite? { capability(for: AnimatedSprite.self) }
+    
+    public var isDrawable: Bool { animation != nil }
 }

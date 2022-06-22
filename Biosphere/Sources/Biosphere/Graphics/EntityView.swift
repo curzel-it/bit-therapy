@@ -17,21 +17,16 @@ public struct EntityView: View {
     }
     
     public var body: some View {
-        if child.isDrawable {
-            ZStack {
-                ForEach(child.sprites) { sprite in
-                    if sprite.isDrawable, let image = sprite.currentFrame {
-                        Image(nsImage: image)
-                            .pixelArt()
-                            .frame(sizeOf: child.frame)
-                    }
-                }
+        ZStack {
+            if let sprite = child.sprite {
+                Image(nsImage: sprite)
+                    .pixelArt()
+                    .frame(sizeOf: child.frame)
             }
-            .frame(sizeOf: child.frame)
-            .background(child.backgroundColor)
-            .rotation3DEffect(.radians(child.xAngle), axis: (x: 1, y: 0, z: 0))
-            .rotation3DEffect(.radians(child.yAngle), axis: (x: 0, y: 1, z: 0))
-            .rotation3DEffect(.radians(child.zAngle), axis: (x: 0, y: 0, z: 1))
         }
+        .frame(sizeOf: child.frame)
+        .rotation3DEffect(.radians(child.xAngle), axis: (x: 1, y: 0, z: 0))
+        .rotation3DEffect(.radians(child.yAngle), axis: (x: 0, y: 1, z: 0))
+        .rotation3DEffect(.radians(child.zAngle), axis: (x: 0, y: 0, z: 1))
     }
 }

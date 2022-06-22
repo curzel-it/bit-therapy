@@ -17,8 +17,6 @@ func verticalCenter(in habitatBounds: CGRect) -> Entity {
     )
     entity.isEphemeral = true
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -35,8 +33,6 @@ func horizontalCenter(in habitatBounds: CGRect) -> Entity {
     )
     entity.isEphemeral = true
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -53,7 +49,5 @@ func center(in habitatBounds: CGRect) -> Entity {
     )
     entity.isEphemeral = true
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }

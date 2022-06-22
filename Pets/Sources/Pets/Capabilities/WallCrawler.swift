@@ -8,7 +8,7 @@ import SwiftUI
 open class WallCrawler: Capability {
     
     override open func update(with collisions: Collisions, after time: TimeInterval) {
-        guard let body = body, isEnabled else { return }
+        guard let body = subject, isEnabled else { return }
         
         let isGoingUp = body.direction.dy < -0.0001
         let isGoingRight = body.direction.dx > 0.0001

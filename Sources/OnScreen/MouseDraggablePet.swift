@@ -7,16 +7,14 @@ import EntityWindow
 import Pets
 
 class MouseDraggablePet: MouseDraggable {
-    
-    var pet: PetEntity? { body as? PetEntity }
-    
+        
     override func mouseDragStarted() {
-        pet?.set(state: .drag)
+        subject?.set(state: .drag)
         super.mouseDragStarted()
     }
         
     override func mouseDragEnded(for window: NSWindow?) {
-        pet?.set(state: .move)
+        subject?.set(state: .move)
         super.mouseDragEnded(for: window)
     }
 }

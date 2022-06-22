@@ -9,12 +9,12 @@ public class FlipHorizontallyWhenGoingLeft: Capability {
     
     private var directionCanc: AnyCancellable!
     
-    public required init(with body: Entity) {
-        super.init(with: body)
+    public required init(with subject: Entity) {
+        super.init(with: subject)
         
-        directionCanc = body.$direction.sink { [weak self] direction in
+        directionCanc = subject.$direction.sink { [weak self] direction in
             let isGoingLeft = direction.dx < -0.0001
-            self?.body?.yAngle = isGoingLeft ? .pi : .zero
+            self?.subject?.yAngle = isGoingLeft ? .pi : .zero
         }
     }
     

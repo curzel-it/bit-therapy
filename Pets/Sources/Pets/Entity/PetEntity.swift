@@ -10,15 +10,8 @@ import Squanch
 import SwiftUI
 
 open class PetEntity: Entity {
-    
-    @Published fileprivate(set) var petState: PetState = .move
-    
-    fileprivate(set) var mainSprite: PetSprite!
-    
+        
     public let species: Pet
-    
-    var storedDirection: CGVector?
-    var storedFrame: CGRect?
     
     // MARK: - Init
     
@@ -34,32 +27,11 @@ open class PetEntity: Entity {
             frame: PetEntity.initialFrame(in: habitatBounds, prefers: size),
             in: habitatBounds
         )
-        updateSpeed()
-        loadMainSprite()
+        speed = PetEntity.speed(for: species, size: frame.width)
         
         if installCapabilities {
             installAll(species.capabilities)
         }
-    }
-    
-    // MARK: - Direction
-    
-    public override func facingDirection() -> CGVector {
-        if case .animation(let animation) = petState {
-            if let direction = animation.facingDirection {
-                return direction
-            }
-        }
-        return storedDirection ?? direction
-    }
-        
-    public override func set(direction newDirection: CGVector) {
-        super.set(direction: newDirection)
-        mainSprite?.directionChanged(to: newDirection)
-    }
-    
-    func updateSpeed() {
-        speed = PetEntity.speed(for: species, size: frame.width)
     }
     
     // MARK: - Kill
@@ -68,58 +40,25 @@ open class PetEntity: Entity {
         if !animated {
             super.kill()
         } else {
-            set(state: .smokeBomb)
+            set(state: .disappearing)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self] in
                 self?.kill(animated: false) {}
                 onCompletion()
             }
         }
     }
-}
-
-// MARK: - Pet State
-
-extension PetEntity {
     
-    public func set(state: PetState) {
-        printDebug("PetEntity-\(self.id)", "State changed to \(state)")
-        updatePhysicBody(accordingTo: state)
-        petState = state
-        mainSprite?.stateChanged(to: state)
-    }
+    // MARK: - Animations
     
-    private func updatePhysicBody(accordingTo state: PetState) {
-        if case .animation(let animation) = state {
-            storeDirectionAndFrame()
-            set(frame: animation.frame(from: frame, in: habitatBounds))
-            set(direction: .zero)
-        } else {
-            restoreDirectionAndFrame()
+    open override func animationPath(for state: EntityState) -> String? {
+        let path: String
+        switch state {
+        case .freeFall: path = species.dragPath
+        case .drag: path = species.dragPath
+        case .move: path = species.movementPath
+        case .disappearing: return "smoke_bomb"
+        case .animation(let animation): path = animation.id
         }
-    }
-    
-    private func storeDirectionAndFrame() {
-        storedDirection = direction
-        storedFrame = frame
-    }
-    
-    private func restoreDirectionAndFrame() {
-        set(direction: storedDirection ?? direction)
-        set(frame: storedFrame ?? frame)
-        storedDirection = nil
-        storedFrame = nil
+        return "\(species.id)_\(path)"
     }
 }
-
-// MARK: - Sprites
-
-extension PetEntity {
-    
-    public func loadMainSprite() {
-        mainSprite = PetSprite(pet: species, id: id)
-        mainSprite.directionChanged(to: direction)
-        mainSprite.stateChanged(to: petState)
-        sprites.append(mainSprite)
-    }
-}
-

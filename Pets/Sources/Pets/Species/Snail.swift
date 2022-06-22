@@ -10,10 +10,10 @@ extension Pet {
     static let snail = Pet(
         id: "snail",
         capabilities: [
+            AnimatedSprite.self,
             LinearMovement.self,
             WallCrawler.self
         ],
-        frameTime: 0.4,
         movementPath: .idleFront,
         dragPath: .idleFront,
         speed: 0.2

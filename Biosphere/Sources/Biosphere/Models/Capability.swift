@@ -6,12 +6,12 @@ import SwiftUI
 
 open class Capability {
     
-    public weak var body: Entity?
+    public weak var subject: Entity?
     
     public var isEnabled: Bool = true
     
-    public required init(with body: Entity) {
-        self.body = body
+    public required init(with subject: Entity) {
+        self.subject = subject
     }
     
     open func update(with collisions: Collisions, after time: TimeInterval) {
@@ -20,7 +20,7 @@ open class Capability {
     
     open func uninstall() {
         self.isEnabled = false
-        self.body = nil
+        self.subject = nil
     }
 }
 

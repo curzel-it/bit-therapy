@@ -27,13 +27,10 @@ class PetSelectionViewModel: HabitatViewModel {
     
     override init() {
         super.init()
-        
-        Task { @MainActor in
-            let pets = Pet.availableSpecies.map { species in
-                SelectablePet(of: species, size: petSize, in: state.bounds)
-            }
-            state.children.append(contentsOf: pets)
+        let pets = Pet.availableSpecies.map { species in
+            SelectablePet(of: species, size: petSize, in: state.bounds)
         }
+        state.children.append(contentsOf: pets)
     }
     
     func showDetails(of pet: SelectablePet?) {
@@ -54,6 +51,7 @@ class SelectablePet: PetEntity {
             in: habitatBounds,
             installCapabilities: false
         )
+        install(AnimatedSprite.self)
         set(direction: .zero)
         set(state: .animation(animation: .idleFront))
     }

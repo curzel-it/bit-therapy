@@ -5,11 +5,15 @@
 import SwiftUI
 
 open class Gravity: Capability {
+    
+    public static var isEnabled = true
         
     private var isFalling: Bool = false
     
     open override func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
+        guard isEnabled && Gravity.isEnabled else { return }
+        guard subject?.state == .move || subject?.state == .freeFall else { return }
+        
         if let groundCollision = groundCollision(from: collisions) {
             onGroundReached(groundCollision)
         } else {
@@ -23,14 +27,14 @@ open class Gravity: Capability {
     
     @discardableResult
     open func onGroundReached(_ groundCollision: Collision) -> Bool {
-        guard let body = body else { return false }
-        guard isFalling else { return false }
+        guard isFalling, let body = subject else { return false }
         isFalling = false
         
         let ground = CGPoint(
             x: body.frame.origin.x,
             y: groundCollision.intersection.minY - body.frame.height
         )
+        body.set(state: .move)
         body.set(direction: .init(dx: 1, dy: 0))
         body.set(origin: ground)
         return true
@@ -38,10 +42,10 @@ open class Gravity: Capability {
     
     @discardableResult
     open func startFallingIfNeeded() -> Bool {
-        guard let body = body else { return false }
+        guard let body = subject else { return false }
         guard !isFalling else { return false }
         isFalling = true
-        
+        body.set(state: .freeFall)
         body.set(direction: CGVector(dx: 0, dy: 8))
         return true
     }

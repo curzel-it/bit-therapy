@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import Biosphere
 import Combine
 import DesignSystem
 import SwiftUI
@@ -26,7 +27,11 @@ public class AppState: ObservableObject {
     
     @AppStorage("petId") public var selectedPet: String = "sloth"
     
-    @AppStorage("gravityEnabled") public var gravityEnabled = false
+    @AppStorage("gravityEnabled") public var gravityEnabled = false {
+        didSet {
+            Gravity.isEnabled = gravityEnabled
+        }
+    }
     
     @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
     
@@ -38,6 +43,7 @@ public class AppState: ObservableObject {
     private init() {
         petSize = petSizeValue
         speedMultiplier = speedMultiplierValue
+        Gravity.isEnabled = gravityEnabled
     }
 }
 

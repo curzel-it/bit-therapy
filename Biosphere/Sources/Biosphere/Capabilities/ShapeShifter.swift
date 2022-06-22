@@ -10,13 +10,13 @@ public class ShapeShifter: Capability {
     var targetSize: CGSize = .zero
     var delta: CGSize = .zero
     
-    required init(with body: Entity) {
-        super.init(with: body)
+    required init(with subject: Entity) {
+        super.init(with: subject)
         isEnabled = false
     }
     
     public func scaleLinearly(to size: CGSize, duracy: TimeInterval) {
-        guard let body = body else { return }
+        guard let body = subject else { return }
         
         isEnabled = true
         targetSize = size
@@ -30,7 +30,7 @@ public class ShapeShifter: Capability {
     
     public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
-        guard let body = body else { return }
+        guard let body = subject else { return }
         
         let delta = CGSize(
             width: time * (targetSize.width - body.frame.width) / animationDuracy,

@@ -17,8 +17,6 @@ func topLeftCorner(in habitatBounds: CGRect) -> Entity {
     )
     entity.isEphemeral = true
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -35,8 +33,6 @@ func bottomLeftCorner(in habitatBounds: CGRect) -> Entity {
     )
     entity.isEphemeral = true
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -53,8 +49,6 @@ func topRightCorner(in habitatBounds: CGRect) -> Entity {
     )
     entity.isEphemeral = true
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -71,7 +65,5 @@ func bottomRightCorner(in habitatBounds: CGRect) -> Entity {
     )
     entity.isEphemeral = true
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }

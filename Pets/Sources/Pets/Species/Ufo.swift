@@ -41,9 +41,9 @@ public class UfoEntity: PetEntity {
 
 // MARK: - Animations
 
-private extension PetAnimation {
+private extension EntityAnimation {
     
-    static let abduction = PetAnimation(
+    static let abduction = EntityAnimation(
         id: "abduction",
         size: CGSize(width: 1, height: 3),
         position: .entityTopLeft
@@ -55,9 +55,7 @@ private extension PetAnimation {
 private class UfoAbduction: Capability {
     
     weak var target: Entity?
-    
-    var pet: PetEntity? { body as? PetEntity }
-    
+        
     private var onCompletion: () -> Void = {}
     
     func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
@@ -67,8 +65,8 @@ private class UfoAbduction: Capability {
     }
     
     private func followTargetUntilCaptured() {
-        guard let pet = pet, let target = target else { return }
-        let seeker = pet.install(Seeker.self)
+        guard let body = subject, let target = target else { return }
+        let seeker = body.install(Seeker.self)
         seeker.follow(
             target,
             to: .above,
@@ -82,10 +80,10 @@ private class UfoAbduction: Capability {
     
     private func captureRayAnimation() {
         guard let target = target else { return }
-        pet?.set(direction: .zero)
-        pet?.set(state: .animation(animation: .abduction))
+        subject?.set(direction: .zero)
+        subject?.set(state: .animation(animation: .abduction))
         
-        target.uninstall(PetGravity.self)
+        target.uninstall(Gravity.self)
         target.set(direction: CGVector(dx: 0, dy: -1))
         target.speed = PetEntity.speedMultiplier(for: target.frame.size.width)
         
@@ -96,13 +94,13 @@ private class UfoAbduction: Capability {
     
     private func scheduleAnimationCompletion(in delay: TimeInterval) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            self.target?.isDrawable = false
+            self.target?.uninstall(AnimatedSprite.self)
             self.resumeMovement()
         }
     }
     
     private func resumeMovement() {
-        guard let pet = pet else { return }
+        guard let pet = subject as? PetEntity else { return }
         pet.set(state: .move)
         pet.set(direction: CGVector(dx: 1, dy: 0))
         pet.speed = PetEntity.speed(for: pet.species, size: pet.frame.width)

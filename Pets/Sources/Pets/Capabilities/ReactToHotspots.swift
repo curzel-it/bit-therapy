@@ -9,20 +9,20 @@ import SwiftUI
 
 public class ReactToHotspots: Capability {
     
-    var pet: PetEntity? { body as? PetEntity }
-    var tag: String { "Hotspot-\(pet?.id ?? "?")" }
+    private let tag: String
         
     var lastTouched: [Hotspot] = []
     
-    public required init(with body: Entity) {
-        super.init(with: body)
+    public required init(with subject: Entity) {
+        tag = "Hotspot-\(subject.id)"
+        super.init(with: subject)
         setResetLastTouchedOnDrag()
     }
     
     // MARK: - Handle Hotspots
     
     private func handle(touched spot: Hotspot) {
-        guard let pet = pet else { return }
+        guard let pet = subject as? PetEntity else { return }
         if let animation = pet.species.action(whenTouching: spot) {
             printDebug(tag, "Picked", animation.description)
             pet.set(state: .animation(animation: animation))
@@ -40,7 +40,7 @@ public class ReactToHotspots: Capability {
     
     public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
-        guard case .move = pet?.petState else { return }
+        guard case .move = subject?.state else { return }
         let touched = Hotspot.allCases.filter { collisions.with($0) }
         let newTouched = touched.filter { !lastTouched.contains($0) }
         handle(touched: newTouched)
@@ -50,7 +50,7 @@ public class ReactToHotspots: Capability {
     // MARK: - Drag
     
     private func setResetLastTouchedOnDrag() {
-        dragCanc = pet?.$petState.sink { state in
+        dragCanc = subject?.$state.sink { state in
             if case .drag = state {
                 self.isDragging = true
             } else {

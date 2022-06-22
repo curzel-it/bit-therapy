@@ -18,7 +18,7 @@ open class MouseDraggable: Capability {
     
     open func mouseDragStarted() {
         isBeingDragged = true
-        body?.movement?.isEnabled = false
+        subject?.movement?.isEnabled = false
     }
     
     public func mouseUp(with event: NSEvent) {
@@ -29,8 +29,8 @@ open class MouseDraggable: Capability {
     
     open func mouseDragEnded(for window: NSWindow?) {
         isBeingDragged = false
-        body?.setPosition(fromWindow: window)
-        body?.movement?.isEnabled = true
+        subject?.setPosition(fromWindow: window)
+        subject?.movement?.isEnabled = true
     }
 }
 

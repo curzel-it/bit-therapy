@@ -19,8 +19,6 @@ func bottomBound(in habitatBounds: CGRect) -> Entity {
         in: habitatBounds
     )
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -36,8 +34,6 @@ func topBound(in habitatBounds: CGRect) -> Entity {
         in: habitatBounds
     )
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -53,8 +49,6 @@ func leftBound(in habitatBounds: CGRect) -> Entity {
         in: habitatBounds
     )
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }
 
@@ -70,7 +64,5 @@ func rightBound(in habitatBounds: CGRect) -> Entity {
         in: habitatBounds
     )
     entity.isStatic = true
-    entity.isDrawable = false
-    entity.backgroundColor = .red
     return entity
 }

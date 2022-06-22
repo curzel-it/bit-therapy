@@ -3,57 +3,19 @@
 //
 
 import SwiftUI
+import Squanch
 
-open class Entity: Identifiable, ObservableObject {
+open class Entity: Body {
     
-    @Published public private(set) var frame: CGRect
-    @Published public private(set) var direction: CGVector = .zero
-    @Published public var speed: CGFloat = 0
-    @Published public var isAlive = true
     @Published public var isUpsideDown = false
+    @Published public var sprite: NSImage?
     @Published public var xAngle: CGFloat = 0
     @Published public var yAngle: CGFloat = 0
     @Published public var zAngle: CGFloat = 0
     
-    public let id: String
-    
-    public var sprites: [Sprite] = []
     public var capabilities: [Capability] = []
-    public var isStatic: Bool = false
-    public var isDrawable: Bool = true
-    public var isEphemeral: Bool = false
-    public var backgroundColor: Color = .clear
     
-    public let habitatBounds: CGRect
-    
-    public init(id: String, frame: CGRect, in habitatBounds: CGRect) {
-        self.id = id
-        self.frame = frame
-        self.habitatBounds = habitatBounds
-    }
-    
-    // MARK: - Direction
-    
-    open func set(direction newDirection: CGVector) {
-        direction = newDirection
-    }
-    
-    open func facingDirection() -> CGVector { direction }
-    
-    // MARK: - Update
-    
-    open func update(with collisions: Collisions, after time: TimeInterval) {
-        if isAlive {
-            capabilities.forEach {
-                $0.update(with: collisions, after: time)
-            }
-        }
-        sprites.forEach {
-            $0.update(with: collisions, after: time)
-        }
-    }
-    
-    // MARK: - Behaviors
+    // MARK: - Capabilities
     
     @discardableResult
     public func install<T: Capability>(_ type: T.Type) -> T {
@@ -81,17 +43,27 @@ open class Entity: Identifiable, ObservableObject {
         }
     }
     
+    // MARK: - Update
+    
+    open func update(with collisions: Collisions, after time: TimeInterval) {
+        if isAlive {
+            capabilities.forEach {
+                $0.update(with: collisions, after: time)
+            }
+        }
+    }
+    
     // MARK: - Memory Management
 
     open func kill(animated: Bool, onCompletion: @escaping () -> Void) {
         kill()
         onCompletion()
     }
-
-    open func kill() {
+    
+    open override func kill() {
         uninstallAllCapabilities()
-        sprites.forEach { $0.kill() }
-        isAlive = false
+        sprite = nil
+        super.kill()
     }
     
     public func uninstallAllCapabilities() {
@@ -99,29 +71,9 @@ open class Entity: Identifiable, ObservableObject {
         capabilities = []
     }
     
-    // MARK: - Frame
+    // MARK: - Animations
     
-    public func set(frame newFrame: CGRect) {
-        guard newFrame != frame else { return }
-        frame = newFrame
-    }
-    
-    public func set(origin: CGPoint) {
-        guard origin != frame.origin else { return }
-        frame.origin = origin
-    }
-    
-    public func set(size: CGSize) {
-        guard size != frame.size else { return }
-        frame.size = size
-    }
-}
-
-// MARK: - Equatable
-
-extension Entity: Equatable {
-    
-    public static func == (lhs: Entity, rhs: Entity) -> Bool {
-        lhs.id == rhs.id
+    open func animationPath(for state: EntityState) -> String? {
+        nil
     }
 }
