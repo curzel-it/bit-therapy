@@ -17,7 +17,7 @@ extension Pet {
         speed: 2.4
     )
 }
-
+    
 // MARK: - Ufo Entity
 
 public class UfoEntity: PetEntity {

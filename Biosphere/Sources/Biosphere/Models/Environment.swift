@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import Squanch
 import SwiftUI
 
 public struct Environment {
@@ -11,7 +12,6 @@ public struct Environment {
     
     public init(bounds rect: CGRect) {
         bounds = rect
-        children = []
         children.append(contentsOf: hotspots())
     }
     
