@@ -45,7 +45,7 @@ open class Body: Identifiable, ObservableObject {
     }
     
     // MARK: - Memory Management
-
+    
     open func kill() {
         isAlive = false
     }
@@ -66,22 +66,10 @@ open class Body: Identifiable, ObservableObject {
         guard size != frame.size else { return }
         frame.size = size
     }
-}
-
-// MARK: - Equatable
-
-extension Body: Equatable {
     
-    public static func == (lhs: Body, rhs: Body) -> Bool {
-        lhs.id == rhs.id
-    }
-}
-
-// MARK: - State
-
-extension Body {
+    // MARK: - State
     
-    public func set(state: EntityState) {
+    open func set(state: EntityState) {
         printDebug(id, "State changed to", state.description)
         if case .animation(let animation) = state {
             storeDirectionAndFrame()
@@ -103,5 +91,14 @@ extension Body {
         set(frame: storedFrame ?? frame)
         storedDirection = nil
         storedFrame = nil
+    }
+}
+
+// MARK: - Equatable
+
+extension Body: Equatable {
+    
+    public static func == (lhs: Body, rhs: Body) -> Bool {
+        lhs.id == rhs.id
     }
 }

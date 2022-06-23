@@ -16,7 +16,7 @@ public struct EntityAnimation: Equatable {
     public init(
         id: String,
         size: CGSize? = nil,
-        position: Position = .entityCenter,
+        position: Position = .fromEntityBottomLeft,
         facingDirection: CGVector? = nil,
         chance: Double = 1
     ) {
@@ -52,10 +52,14 @@ public struct EntityAnimation: Equatable {
     ) -> CGPoint {
         switch position {
             
-        case .entityCenter:
+        case .centeredInEntity:
             return petFrame.origin
                 .offset(x: (petFrame.size.width - newSize.width) / 2)
                 .offset(y: (petFrame.size.height - newSize.height) / 2)
+            
+        case .fromEntityBottomLeft:
+            return petFrame.origin
+                .offset(y: petFrame.size.height - newSize.height)
             
         case .entityTopLeft:
             return petFrame.origin
@@ -83,7 +87,8 @@ extension EntityAnimation: CustomStringConvertible {
 extension EntityAnimation {
     
     public enum Position {
-        case entityCenter
+        case centeredInEntity
+        case fromEntityBottomLeft
         case entityTopLeft
         case habitatTopLeft
         case habitatBottomLeft

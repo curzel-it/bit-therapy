@@ -75,7 +75,6 @@ private extension EntityWindow {
             x: entityFrame.minX,
             y: habitat.height - entityFrame.maxY
         )
-        
         if frame.size == entityFrame.size {
             if newOrigin != frame.origin {
                 setFrameOrigin(newOrigin)

@@ -33,8 +33,9 @@ open class AnimatedSprite: Capability, ObservableObject {
     }
     
     private func updateAnimation() {
-        let path = subject?.animationPath(for: lastState)
-        guard let path = path, path != animation.baseName else { return }
+        guard let subject = subject else { return }
+        guard let path = subject.animationPath(for: lastState) else { return }
+        guard path != animation.baseName else { return }
         printDebug(id, "Loaded", path)
         animation = ImageAnimator(path)
     }

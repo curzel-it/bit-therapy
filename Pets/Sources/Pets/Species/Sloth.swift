@@ -43,7 +43,7 @@ extension Pet {
     )
 }
 
-extension EntityAnimation {
+private extension EntityAnimation {
     
     static func climb(to position: Position) -> EntityAnimation {
         let left = position == .habitatTopLeft

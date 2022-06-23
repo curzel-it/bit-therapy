@@ -73,6 +73,13 @@ open class Entity: Body {
     
     // MARK: - Animations
     
+    open override func set(state: EntityState) {
+        if state != self.state {
+            sprite = nil
+        }
+        super.set(state: state)
+    }
+    
     open func animationPath(for state: EntityState) -> String? {
         nil
     }

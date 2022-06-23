@@ -92,6 +92,7 @@ private class UfoAbduction: Capability {
         subject?.set(state: .animation(animation: .abduction))
         subject?.uninstall(Seeker.self)
         
+        target.uninstall(ResumeMovementAfterAnimations.self)
         target.uninstall(Gravity.self)
         target.set(direction: CGVector(dx: 0, dy: -1))
         target.speed = PetEntity.speedMultiplier(for: target.frame.size.width)
