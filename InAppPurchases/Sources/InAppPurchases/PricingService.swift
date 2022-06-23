@@ -29,7 +29,7 @@ public class PricingService: ObservableObject {
         if let apiKey = revenueCatApiKey() {
             Purchases.configure(withAPIKey: apiKey)
             Purchases.logLevel = .warn
-            isAvailable = true
+            isAvailable = false
         }
         purchased = cachedPurchases.components(separatedBy: ",")
         Task { await loadPrices() }

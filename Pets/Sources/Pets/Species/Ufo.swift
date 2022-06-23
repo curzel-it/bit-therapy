@@ -12,7 +12,10 @@ extension Pet {
         behaviors: [
             .init(
                 trigger: .on(spot: .horizontalCenter),
-                possibleAnimations: [.bombing]
+                possibleAnimations: [
+                    .bombing,
+                    .landing
+                ]
             )
         ],
         capabilities: .defaultsNoGravity,
@@ -31,4 +34,6 @@ private extension EntityAnimation {
         position: .fromEntityBottomLeft,
         chance: 0.1
     )
+    
+    static let landing = EntityAnimation(id: "landing", chance: 0.2)
 }
