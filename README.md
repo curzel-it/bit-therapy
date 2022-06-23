@@ -1,6 +1,6 @@
 # Desktop Pets
 
-This is the source code for my macOS app [Desktop Pets](https://apps.apple.com/app/desktop-pets/id1575542220)!.
+This is the source code of my macOS app [Desktop Pets](https://apps.apple.com/app/desktop-pets/id1575542220)!.
 
 As you can guess, it brings Desktop Pets to macOS 🚀
 
@@ -10,13 +10,14 @@ As you can guess, it brings Desktop Pets to macOS 🚀
 
 It's just a cute little animal that lives in your computer.
 
-The most popular one was probably the [eSheep](https://github.com/Adrianotiger/desktopPet) in Windows 95.
+The most popular one was probably the [eSheep](https://github.com/Adrianotiger/desktopPet) for Windows 95.
 
 Hope you like them too!
 
-## Screenshots
+## Gallery
 
-![Screenshot of my mac running the app](Gallery/2.png)
+![Screenshot of my mac running the app](Gallery/1.png)
+![Ufo attacking Desktop City](Gallery/bombing.gif)
 
 ## Running the Project
 

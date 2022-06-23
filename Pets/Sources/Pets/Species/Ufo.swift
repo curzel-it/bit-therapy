@@ -29,6 +29,6 @@ private extension EntityAnimation {
         id: "bombing",
         size: CGSize(width: 4, height: 2),
         position: .fromEntityBottomLeft,
-        chance: 100
+        chance: 0.1
     )
 }
