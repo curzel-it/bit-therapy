@@ -15,7 +15,7 @@ extension OnScreenViewModel {
     // MARK: - Ufo Abduction
     
     private func scheduleUfoAbduction() {
-        state.schedule(every: .timeOfDay(hour: 23, minute: 00)) { [weak self] _ in
+        state.schedule(every: .timeOfDay(hour: 23, minute: 0)) { [weak self] _ in
             guard let env = self, let pet = env.anyPet else { return }
             animateUfoAbduction(of: pet, in: env.state) {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 15) {

@@ -64,6 +64,7 @@ public class PricingService: ObservableObject {
             let price = PetPrice(offering: offering, package: package)
             newPrices[price.speciesId] = price
         }
+        newPrices["ufo"] = PetPrice(offering: offering, package: offering.availablePackages.first!)
         return newPrices
     }
     
