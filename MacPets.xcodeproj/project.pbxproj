@@ -79,6 +79,8 @@
 		A6455FD128638D9100054C59 /* snail_idle_front-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6455FB928638D9100054C59 /* snail_idle_front-13.png */; };
 		A6455FD42863CED800054C59 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A6455FD32863CED800054C59 /* UfoAbduction */; };
 		A6455FD62863D1CF00054C59 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A6455FD52863D1CF00054C59 /* UfoAbduction */; };
+		A6455FD82864453200054C59 /* OnScreenEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6455FD72864453200054C59 /* OnScreenEvents.swift */; };
+		A6455FD92864453200054C59 /* OnScreenEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6455FD72864453200054C59 /* OnScreenEvents.swift */; };
 		A65C128A285389F7001F2B70 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A65C1289285389F7001F2B70 /* Squanch */; };
 		A65CD4232854940000F0584E /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4222854940000F0584E /* PetDetailsViewModel.swift */; };
 		A65CD4272854B6D700F0584E /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4262854B6D700F0584E /* PetGridItem.swift */; };
@@ -3474,6 +3476,7 @@
 		A6455FB828638D9100054C59 /* snail_idle_front-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-7.png"; sourceTree = "<group>"; };
 		A6455FB928638D9100054C59 /* snail_idle_front-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-13.png"; sourceTree = "<group>"; };
 		A6455FD22863CD6300054C59 /* UfoAbduction */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UfoAbduction; sourceTree = "<group>"; };
+		A6455FD72864453200054C59 /* OnScreenEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnScreenEvents.swift; sourceTree = "<group>"; };
 		A65CD4222854940000F0584E /* PetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsViewModel.swift; sourceTree = "<group>"; };
 		A65CD4262854B6D700F0584E /* PetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
 		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6460,6 +6463,7 @@
 				A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */,
 				A673736D2853858A002DC8FA /* PetWindow.swift */,
 				A6C3CFD8285686F600028289 /* RightClickMenu.swift */,
+				A6455FD72864453200054C59 /* OnScreenEvents.swift */,
 			);
 			path = OnScreen;
 			sourceTree = "<group>";
@@ -14233,6 +14237,7 @@
 				A67373AD2853858B002DC8FA /* SettingsView.swift in Sources */,
 				A67373A82853858B002DC8FA /* OnScreenViewModel.swift in Sources */,
 				A67373A62853858B002DC8FA /* PetWindow.swift in Sources */,
+				A6455FD82864453200054C59 /* OnScreenEvents.swift in Sources */,
 				A6720952285A16E300023189 /* MouseDraggablePet.swift in Sources */,
 				A67373B12853858B002DC8FA /* MainWindow.swift in Sources */,
 			);
@@ -14265,6 +14270,7 @@
 				A6E5AAD12860525A008AA653 /* SettingsView.swift in Sources */,
 				A6E5AAD22860525A008AA653 /* OnScreenViewModel.swift in Sources */,
 				A6E5AAD32860525A008AA653 /* PetWindow.swift in Sources */,
+				A6455FD92864453200054C59 /* OnScreenEvents.swift in Sources */,
 				A6E5AAD52860525A008AA653 /* MouseDraggablePet.swift in Sources */,
 				A6E5AAD62860525A008AA653 /* MainWindow.swift in Sources */,
 			);

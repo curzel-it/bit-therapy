@@ -8,7 +8,6 @@ import Biosphere
 import EntityWindow
 import Pets
 import Squanch
-import UfoAbduction
 
 class OnScreenViewModel: HabitatViewModel {
     
@@ -17,22 +16,7 @@ class OnScreenViewModel: HabitatViewModel {
     override init() {
         super.init()
         addSelectedPet()
-        
-        state.schedule(every: .timeOfDay(hour: 0, minute: 45)) { [weak self] _ in
-            guard let self = self else { return }
-            guard let pet = self.anyPet else { return }
-            
-            animateUfoAbduction(of: pet, in: self.state) {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                    OnScreen.show()
-                }
-            }
-            self.spawnWindows()
-        }
-    }
-    
-    private var anyPet: PetEntity? {
-        state.children.compactMap { $0 as? PetEntity }.first
+        scheduleEvents()
     }
     
     func spawnWindows() {

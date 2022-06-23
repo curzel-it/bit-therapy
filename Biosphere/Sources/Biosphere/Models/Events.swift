@@ -35,14 +35,11 @@ public class Event {
     private func schedule(every time: EventSchedule) {
         switch time {
         case .timeOfDay(let hour, let minute):
-            guard let nextDate = Calendar.current.date(
-                bySettingHour: hour,
-                minute: minute,
-                second: 0,
-                of: Date()
-            ) else { return }
-            
-            timer = Timer(fire: nextDate, interval: .oneDay, repeats: true) { [weak self] _ in
+            timer = Timer(
+                fire: nextDate(hour: hour, minute: minute),
+                interval: .oneDay,
+                repeats: true
+            ) { [weak self] _ in
                 guard let env = self?.environment else { return }
                 self?.action(env)
                 self?.cancel()
@@ -52,6 +49,18 @@ public class Event {
         if let timer = timer {
             RunLoop.current.add(timer, forMode: .common)
         }
+    }
+    
+    private func nextDate(hour: Int, minute: Int) -> Date {
+        guard let nextDate = Calendar.current.date(
+            bySettingHour: hour, minute: minute, second: 0, of: Date()
+        ) else {
+            return Date().addingTimeInterval(.oneHour)
+        }
+        if nextDate < Date() {
+            return nextDate.addingTimeInterval(.oneDay)
+        }
+        return nextDate
     }
     
     // MARK: - Cancellation
