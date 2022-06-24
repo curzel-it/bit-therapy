@@ -14,7 +14,8 @@ extension Pet {
                 trigger: .on(spot: .horizontalCenter),
                 possibleAnimations: [
                     .bombing,
-                    .landing
+                    .landing,
+                    .exitViaPortal
                 ]
             )
         ],
@@ -31,9 +32,14 @@ private extension EntityAnimation {
     static let bombing = EntityAnimation(
         id: "bombing",
         size: CGSize(width: 4, height: 2),
-        position: .fromEntityBottomLeft,
         chance: 0.1
     )
     
     static let landing = EntityAnimation(id: "landing", chance: 0.2)
+    
+    static let exitViaPortal = EntityAnimation(
+        id: "exit_portal",
+        size: CGSize(width: 2, height: 1),
+        chance: 0.2
+    )
 }
