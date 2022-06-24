@@ -7139,7 +7139,6 @@
 			children = (
 				A673737D2853858B002DC8FA /* About */,
 				A67373702853858A002DC8FA /* App */,
-				A673737F2853858B002DC8FA /* MainWindow */,
 				A67373772853858B002DC8FA /* Settings */,
 				A6C3CFDF2857286A00028289 /* StatusBar */,
 			);
@@ -7181,6 +7180,8 @@
 			isa = PBXGroup;
 			children = (
 				A67373712853858A002DC8FA /* MyApp.swift */,
+				A67373802853858B002DC8FA /* MainWindow.swift */,
+				A67373812853858B002DC8FA /* MainView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -7199,15 +7200,6 @@
 				A673737E2853858B002DC8FA /* AboutView.swift */,
 			);
 			path = About;
-			sourceTree = "<group>";
-		};
-		A673737F2853858B002DC8FA /* MainWindow */ = {
-			isa = PBXGroup;
-			children = (
-				A67373802853858B002DC8FA /* MainWindow.swift */,
-				A67373812853858B002DC8FA /* MainView.swift */,
-			);
-			path = MainWindow;
 			sourceTree = "<group>";
 		};
 		A67373C4285387EB002DC8FA /* Packages */ = {
