@@ -44,6 +44,20 @@
         "identifier" : "OnScreenTests",
         "name" : "OnScreenTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:PetSelection",
+        "identifier" : "PetSelectionTests",
+        "name" : "PetSelectionTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MacPets.xcodeproj",
+        "identifier" : "A65FE36D283D80CB00D1F5C8",
+        "name" : "MacPetsTests"
+      }
     }
   ],
   "version" : 1

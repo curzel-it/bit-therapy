@@ -10,11 +10,17 @@ import OnScreen
 import Schwifty
 import SwiftUI
 
-struct PetSelection: View {
+public struct PetSelection: View {
         
     @StateObject var viewModel = PetSelectionViewModel()
     
-    var body: some View {
+    private let onSetup: (NSWindow, HabitatViewModel) -> Void
+    
+    public init(_ onSetup: @escaping (NSWindow, HabitatViewModel) -> Void) {
+        self.onSetup = onSetup
+    }
+    
+    public var body: some View {
         ZStack {
             ScrollView {
                 PetSelectionGrid()
@@ -31,8 +37,7 @@ struct PetSelection: View {
         .environmentObject(viewModel as HabitatViewModel)
         .environmentObject(PricingService.global)
         .onWindow { window in
-            MainWindowDelegate.setup(for: window, with: viewModel)
-            window.styleMask.remove(.miniaturizable)
+            onSetup(window, viewModel)
         }
     }
 }

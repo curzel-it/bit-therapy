@@ -3,6 +3,7 @@
 //
 
 import AppState
+import Biosphere
 import DesignSystem
 import LaunchAtLogin
 import SwiftUI
@@ -71,10 +72,10 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
     
     fileprivate static var instance: MainWindowDelegate?
     
-    fileprivate weak var viewModel: PetSelectionViewModel?
+    fileprivate weak var viewModel: HabitatViewModel?
     fileprivate weak var window: NSWindow?
     
-    static func setup(for window: NSWindow, with vm: PetSelectionViewModel) {
+    static func setup(for window: NSWindow, with vm: HabitatViewModel) {
         let delegate = MainWindowDelegate()
         delegate.viewModel = vm
         delegate.window = window
@@ -89,13 +90,18 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
         }
     }
     
-    func windowDidBecomeMain(_ notification: Notification) {
+    func windowDidBecomeMain(_ notification: Notification) { startRendering() }
+    func windowDidResignMain(_ notification: Notification) { pauseRendering() }
+    func windowDidBecomeKey(_ notification: Notification) { startRendering()  }
+    func windowDidResignKey(_ notification: Notification) { pauseRendering() }
+    
+    func startRendering() {
         Task { @MainActor in
             viewModel?.startRendering()
         }
     }
     
-    func windowDidResignMain(_ notification: Notification) {
+    func pauseRendering() {
         Task { @MainActor in
             viewModel?.pauseRendering()
         }

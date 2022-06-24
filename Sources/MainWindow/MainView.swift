@@ -5,6 +5,7 @@
 import AppState
 import DesignSystem
 import Lang
+import PetSelection
 import SwiftUI
 import Schwifty
 
@@ -52,7 +53,7 @@ private struct PageContents: View {
     
     var body: some View {
         switch appState.selectedPage {
-        case .home: PetSelection()
+        case .home: PetSelectionView()
         case .settings: SettingsView()
         case .about: AboutView()
         }
@@ -68,5 +69,17 @@ private struct PageTitle: View {
             .textAlign(.center)
             .font(.bold, .title)
             .padding()
+    }
+}
+
+private struct PetSelectionView: View {
+    
+    var body: some View {
+        PetSelection() { window, viewModel in
+            MainWindowDelegate.setup(
+                for: window,
+                with: viewModel
+            )
+        }
     }
 }
