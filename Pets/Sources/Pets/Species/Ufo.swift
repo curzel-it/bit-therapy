@@ -15,7 +15,8 @@ extension Pet {
                 possibleAnimations: [
                     .bombing,
                     .landing,
-                    .exitViaPortal
+                    .exitViaPortal,
+                    .crash
                 ]
             )
         ],
@@ -31,15 +32,18 @@ private extension EntityAnimation {
     
     static let bombing = EntityAnimation(
         id: "bombing",
-        size: CGSize(width: 4, height: 2),
-        chance: 0.1
+        size: CGSize(width: 4, height: 2)
     )
     
-    static let landing = EntityAnimation(id: "landing", chance: 0.2)
+    static let landing = EntityAnimation(id: "landing")
     
     static let exitViaPortal = EntityAnimation(
         id: "exit_portal",
-        size: CGSize(width: 2, height: 1),
-        chance: 0.2
+        size: CGSize(width: 2, height: 1)
+    )
+    
+    static let crash = EntityAnimation(
+        id: "crash",
+        size: CGSize(width: 2, height: 1)
     )
 }
