@@ -39,7 +39,9 @@ let package = Package(
         ),
         .testTarget(
             name: "PetSelectionTests",
-            dependencies: []
+            dependencies: [
+                .product(name: "Tracking", package: "Tracking")
+            ]
         )
     ]
 )
