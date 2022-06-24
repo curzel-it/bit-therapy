@@ -266,6 +266,8 @@
 		A60AC97A2865E7840048944D /* ufo_crash-24.png in Resources */ = {isa = PBXBuildFile; fileRef = A60AC91A2865E7730048944D /* ufo_crash-24.png */; };
 		A60AC97B2865E7840048944D /* ufo_crash-25.png in Resources */ = {isa = PBXBuildFile; fileRef = A60AC9172865E7730048944D /* ufo_crash-25.png */; };
 		A60AC97C2865E7840048944D /* ufo_crash-35.png in Resources */ = {isa = PBXBuildFile; fileRef = A60AC9142865E7730048944D /* ufo_crash-35.png */; };
+		A60AC97F2865F2F40048944D /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A60AC97E2865F2F40048944D /* OnScreen */; };
+		A60AC9812865F4330048944D /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A60AC9802865F4330048944D /* OnScreen */; };
 		A60B9C0C283D82BF0030F8F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60B8CA0283D82BB0030F8F0 /* Assets.xcassets */; };
 		A60BAAB7283D82C30030F8F0 /* Dogica_Pixel_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60B9C08283D82BE0030F8F0 /* Dogica_Pixel_Bold.ttf */; };
 		A60BAAB8283D82C30030F8F0 /* Dogica_Pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60B9C09283D82BE0030F8F0 /* Dogica_Pixel.ttf */; };
@@ -335,10 +337,6 @@
 		A6455FCF28638D9100054C59 /* snail_idle_front-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6455FB828638D9100054C59 /* snail_idle_front-7.png */; };
 		A6455FD028638D9100054C59 /* snail_idle_front-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6455FB928638D9100054C59 /* snail_idle_front-13.png */; };
 		A6455FD128638D9100054C59 /* snail_idle_front-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6455FB928638D9100054C59 /* snail_idle_front-13.png */; };
-		A6455FD42863CED800054C59 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A6455FD32863CED800054C59 /* UfoAbduction */; };
-		A6455FD62863D1CF00054C59 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A6455FD52863D1CF00054C59 /* UfoAbduction */; };
-		A6455FD82864453200054C59 /* OnScreenEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6455FD72864453200054C59 /* OnScreenEvents.swift */; };
-		A6455FD92864453200054C59 /* OnScreenEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6455FD72864453200054C59 /* OnScreenEvents.swift */; };
 		A6455FDA28644FFA00054C59 /* ufo_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E5CDA9286066CA008AA653 /* ufo_idle_front-3.png */; };
 		A6455FDB28644FFA00054C59 /* ufo_idle_front-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E5CDA8286066CA008AA653 /* ufo_idle_front-4.png */; };
 		A6455FDC28644FFA00054C59 /* ufo_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E5CDAB286066CA008AA653 /* ufo_idle_front-1.png */; };
@@ -353,10 +351,6 @@
 		A66BFAD22860BE9400136F92 /* snail_nicky_idle_front-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */; };
 		A66BFAD32860BE9400136F92 /* snail_nicky_idle_front-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */; };
 		A67209502859FE4F00023189 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A672094F2859FE4F00023189 /* AppState */; };
-		A6720952285A16E300023189 /* MouseDraggablePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720951285A16E300023189 /* MouseDraggablePet.swift */; };
-		A67373A52853858B002DC8FA /* OnScreenWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */; };
-		A67373A62853858B002DC8FA /* PetWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736D2853858A002DC8FA /* PetWindow.swift */; };
-		A67373A82853858B002DC8FA /* OnScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736F2853858A002DC8FA /* OnScreenViewModel.swift */; };
 		A67373A92853858B002DC8FA /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373712853858A002DC8FA /* MyApp.swift */; };
 		A67373AA2853858B002DC8FA /* PetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373742853858B002DC8FA /* PetSelection.swift */; };
 		A67373AB2853858B002DC8FA /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373752853858B002DC8FA /* PetSelectionGrid.swift */; };
@@ -523,7 +517,6 @@
 		A68A86D12864A88900ADDF24 /* ufo_bombing-69.png in Resources */ = {isa = PBXBuildFile; fileRef = A68A863D2864A88900ADDF24 /* ufo_bombing-69.png */; };
 		A6C031F5285CB586001C49D1 /* MacPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C031F4285CB566001C49D1 /* MacPetsTests.swift */; };
 		A6C3CFD52855F7C800028289 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD42855F7C800028289 /* StatusItemManager.swift */; };
-		A6C3CFD9285686F600028289 /* RightClickMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD8285686F600028289 /* RightClickMenu.swift */; };
 		A6C57A9528539D8D00BBDCF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */; };
 		A6E5AAC42860525A008AA653 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD42855F7C800028289 /* StatusItemManager.swift */; };
 		A6E5AAC52860525A008AA653 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673737E2853858B002DC8FA /* AboutView.swift */; };
@@ -531,16 +524,11 @@
 		A6E5AAC72860525A008AA653 /* PetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373742853858B002DC8FA /* PetSelection.swift */; };
 		A6E5AAC82860525A008AA653 /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4262854B6D700F0584E /* PetGridItem.swift */; };
 		A6E5AAC92860525A008AA653 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373812853858B002DC8FA /* MainView.swift */; };
-		A6E5AACA2860525A008AA653 /* OnScreenWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */; };
 		A6E5AACB2860525A008AA653 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CD4222854940000F0584E /* PetDetailsViewModel.swift */; };
-		A6E5AACC2860525A008AA653 /* RightClickMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD8285686F600028289 /* RightClickMenu.swift */; };
 		A6E5AACE2860525A008AA653 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373762853858B002DC8FA /* PetSelectionViewModel.swift */; };
 		A6E5AACF2860525A008AA653 /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373752853858B002DC8FA /* PetSelectionGrid.swift */; };
 		A6E5AAD02860525A008AA653 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373712853858A002DC8FA /* MyApp.swift */; };
 		A6E5AAD12860525A008AA653 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373782853858B002DC8FA /* SettingsView.swift */; };
-		A6E5AAD22860525A008AA653 /* OnScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736F2853858A002DC8FA /* OnScreenViewModel.swift */; };
-		A6E5AAD32860525A008AA653 /* PetWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673736D2853858A002DC8FA /* PetWindow.swift */; };
-		A6E5AAD52860525A008AA653 /* MouseDraggablePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6720951285A16E300023189 /* MouseDraggablePet.swift */; };
 		A6E5AAD62860525A008AA653 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67373802853858B002DC8FA /* MainWindow.swift */; };
 		A6E5AAD82860525A008AA653 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAC12860525A008AA653 /* AppState */; };
 		A6E5AAD92860525A008AA653 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */; };
@@ -3966,6 +3954,7 @@
 		A60AC92E2865E7730048944D /* ufo_crash-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_crash-13.png"; sourceTree = "<group>"; };
 		A60AC9312865E7730048944D /* ufo_crash-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_crash-12.png"; sourceTree = "<group>"; };
 		A60AC9322865E7730048944D /* ufo_crash-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_crash-7.png"; sourceTree = "<group>"; };
+		A60AC97D2865F25C0048944D /* OnScreen */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = OnScreen; sourceTree = "<group>"; };
 		A60B8CA0283D82BB0030F8F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A60B8CA1283D82BB0030F8F0 /* MacPets.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MacPets.entitlements; sourceTree = "<group>"; };
 		A60B8CA2283D82BB0030F8F0 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
@@ -4015,7 +4004,6 @@
 		A6455FB828638D9100054C59 /* snail_idle_front-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-7.png"; sourceTree = "<group>"; };
 		A6455FB928638D9100054C59 /* snail_idle_front-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-13.png"; sourceTree = "<group>"; };
 		A6455FD22863CD6300054C59 /* UfoAbduction */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UfoAbduction; sourceTree = "<group>"; };
-		A6455FD72864453200054C59 /* OnScreenEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnScreenEvents.swift; sourceTree = "<group>"; };
 		A65CD4222854940000F0584E /* PetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsViewModel.swift; sourceTree = "<group>"; };
 		A65CD4262854B6D700F0584E /* PetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
 		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4024,10 +4012,6 @@
 		A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-3.png"; sourceTree = "<group>"; };
 		A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-2.png"; sourceTree = "<group>"; };
 		A672094E2859FD8700023189 /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
-		A6720951285A16E300023189 /* MouseDraggablePet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseDraggablePet.swift; sourceTree = "<group>"; };
-		A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreenWindowManager.swift; sourceTree = "<group>"; };
-		A673736D2853858A002DC8FA /* PetWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetWindow.swift; sourceTree = "<group>"; };
-		A673736F2853858A002DC8FA /* OnScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreenViewModel.swift; sourceTree = "<group>"; };
 		A67373712853858A002DC8FA /* MyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		A67373742853858B002DC8FA /* PetSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelection.swift; sourceTree = "<group>"; };
 		A67373752853858B002DC8FA /* PetSelectionGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectionGrid.swift; sourceTree = "<group>"; };
@@ -4119,7 +4103,6 @@
 		A6982612283D885300C70E49 /* Info-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dev.plist"; sourceTree = "<group>"; };
 		A6C031F4285CB566001C49D1 /* MacPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPetsTests.swift; sourceTree = "<group>"; };
 		A6C3CFD42855F7C800028289 /* StatusItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
-		A6C3CFD8285686F600028289 /* RightClickMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightClickMenu.swift; sourceTree = "<group>"; };
 		A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A6E5B59F2860525A008AA653 /* MacPets AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacPets AppStore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E5B5AD286053A9008AA653 /* crow_idle-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crow_idle-9.png"; sourceTree = "<group>"; };
@@ -6885,11 +6868,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A67209502859FE4F00023189 /* AppState in Frameworks */,
+				A60AC9812865F4330048944D /* OnScreen in Frameworks */,
 				A6C57A9528539D8D00BBDCF6 /* StoreKit.framework in Frameworks */,
 				A634991B2859BC5100488588 /* Pets in Frameworks */,
 				A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */,
 				A63499252859CDF900488588 /* EntityWindow in Frameworks */,
-				A6455FD62863D1CF00054C59 /* UfoAbduction in Frameworks */,
 				A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */,
 				A67373CA2853881E002DC8FA /* Schwifty in Frameworks */,
 				A63499172859B90600488588 /* Tracking in Frameworks */,
@@ -6916,8 +6899,8 @@
 				A6E5AADA2860525A008AA653 /* Pets in Frameworks */,
 				A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */,
 				A6E5AADB2860525A008AA653 /* EntityWindow in Frameworks */,
-				A6455FD42863CED800054C59 /* UfoAbduction in Frameworks */,
 				A6E5AADD2860525A008AA653 /* LaunchAtLogin in Frameworks */,
+				A60AC97F2865F2F40048944D /* OnScreen in Frameworks */,
 				A6E5AADE2860525A008AA653 /* Schwifty in Frameworks */,
 				A6E5AADF2860525A008AA653 /* Tracking in Frameworks */,
 				A6E5AAE02860525A008AA653 /* Squanch in Frameworks */,
@@ -7179,7 +7162,6 @@
 				A673737D2853858B002DC8FA /* About */,
 				A67373702853858A002DC8FA /* App */,
 				A673737F2853858B002DC8FA /* MainWindow */,
-				A673736A2853858A002DC8FA /* OnScreen */,
 				A65CD421285493F300F0584E /* PetDetails */,
 				A67373732853858B002DC8FA /* PetSelection */,
 				A67373772853858B002DC8FA /* Settings */,
@@ -7217,19 +7199,6 @@
 				A6455F8D28638D8300054C59 /* snail_nicky_idle_front-15.png */,
 			);
 			path = idle_front;
-			sourceTree = "<group>";
-		};
-		A673736A2853858A002DC8FA /* OnScreen */ = {
-			isa = PBXGroup;
-			children = (
-				A6720951285A16E300023189 /* MouseDraggablePet.swift */,
-				A673736F2853858A002DC8FA /* OnScreenViewModel.swift */,
-				A673736C2853858A002DC8FA /* OnScreenWindowManager.swift */,
-				A673736D2853858A002DC8FA /* PetWindow.swift */,
-				A6C3CFD8285686F600028289 /* RightClickMenu.swift */,
-				A6455FD72864453200054C59 /* OnScreenEvents.swift */,
-			);
-			path = OnScreen;
 			sourceTree = "<group>";
 		};
 		A67373702853858A002DC8FA /* App */ = {
@@ -7279,6 +7248,7 @@
 		A67373C4285387EB002DC8FA /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				A60AC97D2865F25C0048944D /* OnScreen */,
 				A672094E2859FD8700023189 /* AppState */,
 				A6E5CDCC28609210008AA653 /* Biosphere */,
 				A67373C6285387F7002DC8FA /* DesignSystem */,
@@ -11527,7 +11497,7 @@
 				A63499242859CDF900488588 /* EntityWindow */,
 				A672094F2859FE4F00023189 /* AppState */,
 				A6E5CDCF286092A6008AA653 /* Biosphere */,
-				A6455FD52863D1CF00054C59 /* UfoAbduction */,
+				A60AC9802865F4330048944D /* OnScreen */,
 			);
 			productName = MacPets;
 			productReference = A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */;
@@ -11578,7 +11548,7 @@
 				A6E5AABF2860525A008AA653 /* EntityWindow */,
 				A6E5AAC12860525A008AA653 /* AppState */,
 				A6E5CDCD2860929E008AA653 /* Biosphere */,
-				A6455FD32863CED800054C59 /* UfoAbduction */,
+				A60AC97E2865F2F40048944D /* OnScreen */,
 			);
 			productName = MacPets;
 			productReference = A6E5B59F2860525A008AA653 /* MacPets AppStore.app */;
@@ -15490,17 +15460,11 @@
 				A67373AA2853858B002DC8FA /* PetSelection.swift in Sources */,
 				A65CD4272854B6D700F0584E /* PetGridItem.swift in Sources */,
 				A67373B22853858B002DC8FA /* MainView.swift in Sources */,
-				A67373A52853858B002DC8FA /* OnScreenWindowManager.swift in Sources */,
 				A65CD4232854940000F0584E /* PetDetailsViewModel.swift in Sources */,
-				A6C3CFD9285686F600028289 /* RightClickMenu.swift in Sources */,
 				A67373AC2853858B002DC8FA /* PetSelectionViewModel.swift in Sources */,
 				A67373AB2853858B002DC8FA /* PetSelectionGrid.swift in Sources */,
 				A67373A92853858B002DC8FA /* MyApp.swift in Sources */,
 				A67373AD2853858B002DC8FA /* SettingsView.swift in Sources */,
-				A67373A82853858B002DC8FA /* OnScreenViewModel.swift in Sources */,
-				A67373A62853858B002DC8FA /* PetWindow.swift in Sources */,
-				A6455FD82864453200054C59 /* OnScreenEvents.swift in Sources */,
-				A6720952285A16E300023189 /* MouseDraggablePet.swift in Sources */,
 				A67373B12853858B002DC8FA /* MainWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -15523,17 +15487,11 @@
 				A6E5AAC72860525A008AA653 /* PetSelection.swift in Sources */,
 				A6E5AAC82860525A008AA653 /* PetGridItem.swift in Sources */,
 				A6E5AAC92860525A008AA653 /* MainView.swift in Sources */,
-				A6E5AACA2860525A008AA653 /* OnScreenWindowManager.swift in Sources */,
 				A6E5AACB2860525A008AA653 /* PetDetailsViewModel.swift in Sources */,
-				A6E5AACC2860525A008AA653 /* RightClickMenu.swift in Sources */,
 				A6E5AACE2860525A008AA653 /* PetSelectionViewModel.swift in Sources */,
 				A6E5AACF2860525A008AA653 /* PetSelectionGrid.swift in Sources */,
 				A6E5AAD02860525A008AA653 /* MyApp.swift in Sources */,
 				A6E5AAD12860525A008AA653 /* SettingsView.swift in Sources */,
-				A6E5AAD22860525A008AA653 /* OnScreenViewModel.swift in Sources */,
-				A6E5AAD32860525A008AA653 /* PetWindow.swift in Sources */,
-				A6455FD92864453200054C59 /* OnScreenEvents.swift in Sources */,
-				A6E5AAD52860525A008AA653 /* MouseDraggablePet.swift in Sources */,
 				A6E5AAD62860525A008AA653 /* MainWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -15774,7 +15732,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1027;
+				CURRENT_PROJECT_VERSION = 1028;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -15790,7 +15748,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -15806,7 +15764,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1027;
+				CURRENT_PROJECT_VERSION = 1028;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -15822,7 +15780,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -15891,6 +15849,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A60AC97E2865F2F40048944D /* OnScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OnScreen;
+		};
+		A60AC9802865F4330048944D /* OnScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OnScreen;
+		};
 		A63499162859B90600488588 /* Tracking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Tracking;
@@ -15910,14 +15876,6 @@
 		A63499242859CDF900488588 /* EntityWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EntityWindow;
-		};
-		A6455FD32863CED800054C59 /* UfoAbduction */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UfoAbduction;
-		};
-		A6455FD52863D1CF00054C59 /* UfoAbduction */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UfoAbduction;
 		};
 		A65C1289285389F7001F2B70 /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;

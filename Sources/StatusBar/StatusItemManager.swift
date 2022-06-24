@@ -4,6 +4,7 @@
 
 import AppKit
 import AppState
+import OnScreen
 import SwiftUI
 
 class StatusBarItems {

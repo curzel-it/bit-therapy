@@ -6,7 +6,7 @@ import Foundation
 import Pets
 import UfoAbduction
 
-extension OnScreenViewModel {
+extension ViewModel {
     
     func scheduleEvents() {
         scheduleUfoAbduction()
@@ -22,7 +22,7 @@ extension OnScreenViewModel {
                     OnScreen.show()
                 }
             }
-            env.spawnWindows()
+            OnScreen.spawnWindows()
         }
     }
     

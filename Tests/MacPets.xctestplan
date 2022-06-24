@@ -37,6 +37,13 @@
         "identifier" : "BiosphereTests",
         "name" : "BiosphereTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "OnScreenTests",
+        "name" : "OnScreenTests"
+      }
     }
   ],
   "version" : 1

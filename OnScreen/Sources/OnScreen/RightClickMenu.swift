@@ -12,21 +12,13 @@ struct RightClickMenu: View {
     @State var opacity: CGFloat = 0
     
     var body: some View {
-        HStack {
-            Image(systemName: "gearshape.fill")
-                .font(.regular, .xl)
-                .onTapGesture {
-                    MainWindow.show()
-                    fadeOut()
-                }
-            
-            Image(systemName: "xmark")
-                .font(.bold, .xl)
-                .onTapGesture {
-                    OnScreen.hide()
-                    fadeOut()
-                }
-        }
+        Image(systemName: "xmark")
+            .font(.bold, .xl)
+            .foregroundColor(.accent)
+            .onTapGesture {
+                OnScreen.hide()
+                fadeOut()
+            }
         .onAppear { fadeIn() }
         .opacity(opacity)
     }

@@ -30,11 +30,4 @@ class PetWindow: EntityWindow {
         sizeCanc = nil
         super.close()
     }
-    /*
-    func changePetAccordingToSettings() {
-        petCanc = appState.$selectedPet.sink { pet in
-            guard self.viewModel?.pet.species != pet else { return }
-            PetWindow.show(for: pet)
-        }
-    }*/
 }
