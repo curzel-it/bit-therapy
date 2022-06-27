@@ -7,7 +7,7 @@ import Squanch
 
 extension Pet {
     
-    private static let allSpecies: [Pet] = [
+    static let allSpecies: [Pet] = [
         .sloth, .slothSwag,
         .trex, .trexBlue, .trexViolet, .trexYellow,
         .crow, .crowWhite,

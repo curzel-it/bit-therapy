@@ -6,16 +6,22 @@ import Squanch
 import SwiftUI
 
 open class HabitatViewModel: ObservableObject {
-        
+    
     @Published public var state: Environment
+        
+    public let id: String
     
     public var timer: Timer!
     
     private var lastUpdate: TimeInterval
+    
+    private let tag: String
         
     let fps: Double = 15
     
-    public init() {
+    public init(id: String) {
+        self.id = id
+        self.tag = "Habitat-\(id)"
         lastUpdate = Date.timeIntervalSinceReferenceDate
         let screen = NSScreen.main ?? NSScreen.screens.first
         let screenBounds = CGRect(origin: .zero, size: screen?.frame.size ?? .zero)
@@ -24,7 +30,7 @@ open class HabitatViewModel: ObservableObject {
     }
     
     public func startRendering() {
-        printDebug("Habitat", "Starting to render...")
+        printDebug(self.tag, "Starting to render...")
         timer = Timer(timeInterval: 1/fps, repeats: true) { [weak self] _ in
             self?.render()
         }
@@ -38,14 +44,14 @@ open class HabitatViewModel: ObservableObject {
     }
     
     public func pauseRendering() {
-        printDebug("Habitat", "Paused rendering")
+        printDebug(self.tag, "Paused rendering")
         timer?.invalidate()
         timer = nil
     }
     
     open func kill(animated: Bool) {
         if animated {
-            printDebug("Habitat", "Terminating...")
+            printDebug(self.tag, "Terminating...")
             state.children
                 .forEach { item in
                     item.kill(animated: true) { [weak self] in
@@ -58,7 +64,14 @@ open class HabitatViewModel: ObservableObject {
             pauseRendering()
             state.children.forEach { $0.kill() }
             state.children.removeAll()
-            printDebug("Habitat", "Terminated.")
+            printDebug(self.tag, "Terminated.")
         }
+    }
+}
+
+extension HabitatViewModel: Equatable {
+    
+    public static func == (lhs: HabitatViewModel, rhs: HabitatViewModel) -> Bool {
+        lhs.id == rhs.id
     }
 }

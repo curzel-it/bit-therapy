@@ -4,9 +4,7 @@
 
 import XCTest
 
-@testable import DesktopPets
-
-class MacPetsTests: XCTestCase {
+class DesktopPetsTests: XCTestCase {
     
     func testExample() {
         // ...

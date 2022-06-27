@@ -13,8 +13,8 @@ class ViewModel: HabitatViewModel {
     
     var windowsManager: WindowsManager?
     
-    override init() {
-        super.init()
+    init() {
+        super.init(id: "OnScreen")
         addSelectedPet()
         scheduleEvents()
     }

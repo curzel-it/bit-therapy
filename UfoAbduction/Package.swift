@@ -30,6 +30,10 @@ let package = Package(
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch")
             ]
+        ),
+        .testTarget(
+            name: "UfoAbductionTests",
+            dependencies: ["UfoAbduction"]
         )
     ]
 )

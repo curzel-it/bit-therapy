@@ -6,15 +6,46 @@ import Foundation
 
 // MARK: - Schedule
 
-public enum EventSchedule {
+public enum EventSchedule: Equatable {
     case timeOfDay(hour: Int, minute: Int)
+}
+
+extension EventSchedule: CustomStringConvertible {
+    
+    public var description: String {
+        switch self {
+        case .timeOfDay(let hour, let minute):
+            let hours = String(format: "%02d", hour)
+            let minutes = String(format: "%02d", minute)
+            return "Every day at \(hours):\(minutes)"
+        }
+    }
+}
+
+extension EventSchedule {
+    
+    public func nextDate() -> Date {
+        switch self {
+        case .timeOfDay(let hour, let minute):
+            guard let nextDate = Calendar.current.date(
+                bySettingHour: hour, minute: minute, second: 0, of: Date()
+            ) else {
+                return Date().addingTimeInterval(.oneHour)
+            }
+            if nextDate < Date() {
+                return nextDate.addingTimeInterval(.oneDay)
+            }
+            return nextDate
+        }
+    }
 }
 
 // MARK: - Event
 
-public class Event {
+public class Event: Identifiable {
     
-    private let id: String = UUID().uuidString
+    public let id: String = UUID().uuidString
+    public let schedulingRule: EventSchedule
     
     private weak var environment: Environment?
     private var action: (Environment) -> Void
@@ -25,6 +56,7 @@ public class Event {
         every time: EventSchedule,
         do action: @escaping (Environment) -> Void
     ) {
+        self.schedulingRule = time
         self.action = action
         self.environment = environment
         schedule(every: time)
@@ -33,34 +65,19 @@ public class Event {
     // MARK: - Scheduling
     
     private func schedule(every time: EventSchedule) {
-        switch time {
-        case .timeOfDay(let hour, let minute):
-            timer = Timer(
-                fire: nextDate(hour: hour, minute: minute),
-                interval: .oneDay,
-                repeats: true
-            ) { [weak self] _ in
-                guard let env = self?.environment else { return }
-                self?.action(env)
-                self?.cancel()
-            }
+        timer = Timer(
+            fire: time.nextDate(),
+            interval: .oneDay,
+            repeats: true
+        ) { [weak self] _ in
+            guard let env = self?.environment else { return }
+            self?.action(env)
+            self?.cancel()
         }
         
         if let timer = timer {
             RunLoop.current.add(timer, forMode: .common)
         }
-    }
-    
-    private func nextDate(hour: Int, minute: Int) -> Date {
-        guard let nextDate = Calendar.current.date(
-            bySettingHour: hour, minute: minute, second: 0, of: Date()
-        ) else {
-            return Date().addingTimeInterval(.oneHour)
-        }
-        if nextDate < Date() {
-            return nextDate.addingTimeInterval(.oneDay)
-        }
-        return nextDate
     }
     
     // MARK: - Cancellation

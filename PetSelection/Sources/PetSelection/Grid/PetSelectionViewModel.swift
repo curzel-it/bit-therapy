@@ -25,8 +25,8 @@ class PetSelectionViewModel: HabitatViewModel {
     
     let petSize: CGFloat = 90
     
-    override init() {
-        super.init()
+    init() {
+        super.init(id: "PetSelection")
         let pets = Pet.availableSpecies.map { species in
             SelectablePet(of: species, size: petSize, in: state.bounds)
         }

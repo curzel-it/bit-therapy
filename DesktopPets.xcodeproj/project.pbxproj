@@ -359,6 +359,7 @@
 		A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A67373C2285386D1002DC8FA /* LaunchAtLogin */; };
 		A67373CA2853881E002DC8FA /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A67373C92853881E002DC8FA /* Schwifty */; };
 		A67373CC28538974002DC8FA /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A67373CB28538974002DC8FA /* DesignSystem */; };
+		A67876032869E4C900BDA3B3 /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C031F4285CB566001C49D1 /* DesktopPetsTests.swift */; };
 		A68A85EB28646FAE00ADDF24 /* ufo_idle_front-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A68A85E728646FA900ADDF24 /* ufo_idle_front-5.png */; };
 		A68A85EC28646FAE00ADDF24 /* ufo_idle_front-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A68A85E728646FA900ADDF24 /* ufo_idle_front-5.png */; };
 		A68A85ED28646FAE00ADDF24 /* ufo_idle_front-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A68A85E828646FAA00ADDF24 /* ufo_idle_front-8.png */; };
@@ -511,7 +512,6 @@
 		A68A86CF2864A88900ADDF24 /* ufo_bombing-41.png in Resources */ = {isa = PBXBuildFile; fileRef = A68A863C2864A88900ADDF24 /* ufo_bombing-41.png */; };
 		A68A86D02864A88900ADDF24 /* ufo_bombing-69.png in Resources */ = {isa = PBXBuildFile; fileRef = A68A863D2864A88900ADDF24 /* ufo_bombing-69.png */; };
 		A68A86D12864A88900ADDF24 /* ufo_bombing-69.png in Resources */ = {isa = PBXBuildFile; fileRef = A68A863D2864A88900ADDF24 /* ufo_bombing-69.png */; };
-		A6C031F5285CB586001C49D1 /* MacPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C031F4285CB566001C49D1 /* MacPetsTests.swift */; };
 		A6C3CFD52855F7C800028289 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD42855F7C800028289 /* StatusItemManager.swift */; };
 		A6C57A9528539D8D00BBDCF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */; };
 		A6E5AAC42860525A008AA653 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C3CFD42855F7C800028289 /* StatusItemManager.swift */; };
@@ -3811,6 +3811,13 @@
 			remoteGlobalIDString = A65FE35C283D80C900D1F5C8;
 			remoteInfo = MacPets;
 		};
+		A67876012869E3EE00BDA3B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65FE355283D80C900D1F5C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6E5AAB42860525A008AA653;
+			remoteInfo = "Desktop Pets";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -3968,7 +3975,7 @@
 		A634991D2859C13D00488588 /* InAppPurchases */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InAppPurchases; sourceTree = "<group>"; };
 		A63499202859C2C600488588 /* Lang */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Lang; sourceTree = "<group>"; };
 		A63499232859CCD700488588 /* EntityWindow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EntityWindow; sourceTree = "<group>"; };
-		A63E000928574ECF00704841 /* MacPets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MacPets.xctestplan; sourceTree = "<group>"; };
+		A63E000928574ECF00704841 /* DesktopPets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DesktopPets.xctestplan; sourceTree = "<group>"; };
 		A63E000B28578F9D00704841 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		A6455F8A28638D8300054C59 /* snail_nicky_idle_front-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-13.png"; sourceTree = "<group>"; };
 		A6455F8B28638D8300054C59 /* snail_nicky_idle_front-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-6.png"; sourceTree = "<group>"; };
@@ -4086,7 +4093,7 @@
 		A68A863C2864A88900ADDF24 /* ufo_bombing-41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_bombing-41.png"; sourceTree = "<group>"; };
 		A68A863D2864A88900ADDF24 /* ufo_bombing-69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_bombing-69.png"; sourceTree = "<group>"; };
 		A6982612283D885300C70E49 /* Info-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dev.plist"; sourceTree = "<group>"; };
-		A6C031F4285CB566001C49D1 /* MacPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPetsTests.swift; sourceTree = "<group>"; };
+		A6C031F4285CB566001C49D1 /* DesktopPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopPetsTests.swift; sourceTree = "<group>"; };
 		A6C3CFD42855F7C800028289 /* StatusItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
 		A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A6E5B59F2860525A008AA653 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -7053,8 +7060,8 @@
 		A60B8C9C283D81E40030F8F0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A63E000928574ECF00704841 /* MacPets.xctestplan */,
-				A6C031F4285CB566001C49D1 /* MacPetsTests.swift */,
+				A63E000928574ECF00704841 /* DesktopPets.xctestplan */,
+				A6C031F4285CB566001C49D1 /* DesktopPetsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -11474,6 +11481,7 @@
 			);
 			dependencies = (
 				A65FE370283D80CB00D1F5C8 /* PBXTargetDependency */,
+				A67876022869E3EE00BDA3B3 /* PBXTargetDependency */,
 			);
 			name = "Desktop Pets Tests";
 			productName = MacPetsTests;
@@ -11529,7 +11537,6 @@
 					};
 					A65FE36D283D80CB00D1F5C8 = {
 						CreatedOnToolsVersion = 13.4;
-						TestTargetID = A65FE35C283D80C900D1F5C8;
 					};
 				};
 			};
@@ -15427,7 +15434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C031F5285CB586001C49D1 /* MacPetsTests.swift in Sources */,
+				A67876032869E4C900BDA3B3 /* DesktopPetsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -15451,6 +15458,11 @@
 			isa = PBXTargetDependency;
 			target = A65FE35C283D80C900D1F5C8 /* Desktop Pets Dev */;
 			targetProxy = A65FE36F283D80CB00D1F5C8 /* PBXContainerItemProxy */;
+		};
+		A67876022869E3EE00BDA3B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6E5AAB42860525A008AA653 /* Desktop Pets */;
+			targetProxy = A67876012869E3EE00BDA3B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -15638,7 +15650,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -15649,7 +15660,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesktopPets.app/Contents/MacOS/DesktopPets";
 			};
 			name = Debug;
 		};
@@ -15657,7 +15667,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -15668,7 +15677,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesktopPets.app/Contents/MacOS/DesktopPets";
 			};
 			name = Release;
 		};

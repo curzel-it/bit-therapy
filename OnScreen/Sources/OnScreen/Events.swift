@@ -2,6 +2,7 @@
 // Pet Therapy.
 // 
 
+import Biosphere
 import Foundation
 import Pets
 import UfoAbduction
@@ -14,7 +15,8 @@ extension ViewModel {
     
     // MARK: - Ufo Abduction
     
-    private func scheduleUfoAbduction() {
+    @discardableResult
+    func scheduleUfoAbduction() -> Event {
         state.schedule(every: .timeOfDay(hour: 22, minute: 30)) { [weak self] _ in
             guard let env = self, let pet = env.anyPet else { return }
             animateUfoAbduction(of: pet, in: env.state) {

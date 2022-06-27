@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests/MacPets.xctestplan"
+            reference = "container:Tests/DesktopPets.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

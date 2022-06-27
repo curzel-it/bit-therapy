@@ -5,7 +5,6 @@
 import AppState
 import Biosphere
 import Combine
-import EntityWindow
 import Pets
 import Schwifty
 import SwiftUI

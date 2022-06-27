@@ -1,11 +1,18 @@
+//
+// Pet Therapy.
+//
+
 import XCTest
+
 @testable import Lang
 
-final class LangTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(Lang().text, "Hello, World!")
+class LangTests: XCTestCase {
+    
+    func testLocalizedVersionOfNonTranslatedStringIsTheStringItself() {
+        XCTAssertEqual("@non-translated".localized(), "@non-translated")
+    }
+    
+    func testLocalizedVersionOfTranslatedStringIsTheCorrectLocalizedString() {
+        XCTAssertEqual("pet.name.crow_white".localized(), "White Crow")
     }
 }

@@ -36,12 +36,6 @@ let package = Package(
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Tracking", package: "Tracking")
             ]
-        ),
-        .testTarget(
-            name: "PetSelectionTests",
-            dependencies: [
-                .product(name: "Tracking", package: "Tracking")
-            ]
         )
     ]
 )

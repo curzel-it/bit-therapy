@@ -26,6 +26,10 @@ let package = Package(
             resources: [
                 .process("Resources")
             ]
+        ),
+        .testTarget(
+            name: "LangTests",
+            dependencies: ["Lang"]
         )
     ]
 )
