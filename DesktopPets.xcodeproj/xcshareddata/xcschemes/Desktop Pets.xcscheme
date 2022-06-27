@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1340"
-   version = "1.7">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A65FE35C283D80C900D1F5C8"
+               BlueprintIdentifier = "A6E5AAB42860525A008AA653"
                BuildableName = "Desktop Pets.app"
-               BlueprintName = "MacPets"
-               ReferencedContainer = "container:MacPets.xcodeproj">
+               BlueprintName = "Desktop Pets"
+               ReferencedContainer = "container:DesktopPets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,23 +27,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <TestPlans>
-         <TestPlanReference
-            reference = "container:Tests/MacPets.xctestplan"
-            default = "YES">
-         </TestPlanReference>
-      </TestPlans>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A65FE36D283D80CB00D1F5C8"
-               BuildableName = "MacPetsTests.xctest"
-               BlueprintName = "MacPetsTests"
-               ReferencedContainer = "container:MacPets.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -60,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A65FE35C283D80C900D1F5C8"
+            BlueprintIdentifier = "A6E5AAB42860525A008AA653"
             BuildableName = "Desktop Pets.app"
-            BlueprintName = "MacPets"
-            ReferencedContainer = "container:MacPets.xcodeproj">
+            BlueprintName = "Desktop Pets"
+            ReferencedContainer = "container:DesktopPets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -77,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A65FE35C283D80C900D1F5C8"
+            BlueprintIdentifier = "A6E5AAB42860525A008AA653"
             BuildableName = "Desktop Pets.app"
-            BlueprintName = "MacPets"
-            ReferencedContainer = "container:MacPets.xcodeproj">
+            BlueprintName = "Desktop Pets"
+            ReferencedContainer = "container:DesktopPets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

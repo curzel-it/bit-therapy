@@ -4,7 +4,7 @@
 
 import XCTest
 
-@testable import Desktop_Pets
+@testable import DesktopPets
 
 class MacPetsTests: XCTestCase {
     

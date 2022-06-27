@@ -3995,8 +3995,8 @@
 		A6455FB828638D9100054C59 /* snail_idle_front-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-7.png"; sourceTree = "<group>"; };
 		A6455FB928638D9100054C59 /* snail_idle_front-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_idle_front-13.png"; sourceTree = "<group>"; };
 		A6455FD22863CD6300054C59 /* UfoAbduction */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UfoAbduction; sourceTree = "<group>"; };
-		A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65FE35D283D80C900D1F5C8 /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65FE36E283D80CB00D1F5C8 /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66BFAC72860BE6800136F92 /* snail_nicky_idle_front-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-1.png"; sourceTree = "<group>"; };
 		A66BFAC82860BE6800136F92 /* snail_nicky_idle_front-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-3.png"; sourceTree = "<group>"; };
 		A66BFAC92860BE6800136F92 /* snail_nicky_idle_front-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snail_nicky_idle_front-2.png"; sourceTree = "<group>"; };
@@ -4089,7 +4089,7 @@
 		A6C031F4285CB566001C49D1 /* MacPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPetsTests.swift; sourceTree = "<group>"; };
 		A6C3CFD42855F7C800028289 /* StatusItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
 		A6C57A9428539D8C00BBDCF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		A6E5B59F2860525A008AA653 /* MacPets AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacPets AppStore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6E5B59F2860525A008AA653 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E5B5AD286053A9008AA653 /* crow_idle-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crow_idle-9.png"; sourceTree = "<group>"; };
 		A6E5B5AE286053A9008AA653 /* crow_idle-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crow_idle-8.png"; sourceTree = "<group>"; };
 		A6E5B5AF286053A9008AA653 /* crow_idle-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crow_idle-12.png"; sourceTree = "<group>"; };
@@ -7127,9 +7127,9 @@
 		A65FE35E283D80C900D1F5C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */,
-				A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */,
-				A6E5B59F2860525A008AA653 /* MacPets AppStore.app */,
+				A65FE35D283D80C900D1F5C8 /* DesktopPets.app */,
+				A65FE36E283D80CB00D1F5C8 /* Desktop Pets Tests.xctest */,
+				A6E5B59F2860525A008AA653 /* Desktop Pets.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -11428,9 +11428,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A65FE35C283D80C900D1F5C8 /* MacPets */ = {
+		A65FE35C283D80C900D1F5C8 /* Desktop Pets Dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A65FE382283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "MacPets" */;
+			buildConfigurationList = A65FE382283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "Desktop Pets Dev" */;
 			buildPhases = (
 				A6C3CFDE2857277100028289 /* SwiftLint */,
 				A65FE359283D80C900D1F5C8 /* Sources */,
@@ -11442,7 +11442,7 @@
 			);
 			dependencies = (
 			);
-			name = MacPets;
+			name = "Desktop Pets Dev";
 			packageProductDependencies = (
 				A67373C2285386D1002DC8FA /* LaunchAtLogin */,
 				A67373C92853881E002DC8FA /* Schwifty */,
@@ -11459,12 +11459,12 @@
 				A60AC9832865FA360048944D /* PetSelection */,
 			);
 			productName = MacPets;
-			productReference = A65FE35D283D80C900D1F5C8 /* Desktop Pets.app */;
+			productReference = A65FE35D283D80C900D1F5C8 /* DesktopPets.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A65FE36D283D80CB00D1F5C8 /* MacPetsTests */ = {
+		A65FE36D283D80CB00D1F5C8 /* Desktop Pets Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A65FE385283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "MacPetsTests" */;
+			buildConfigurationList = A65FE385283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "Desktop Pets Tests" */;
 			buildPhases = (
 				A65FE36A283D80CB00D1F5C8 /* Sources */,
 				A65FE36B283D80CB00D1F5C8 /* Frameworks */,
@@ -11475,14 +11475,14 @@
 			dependencies = (
 				A65FE370283D80CB00D1F5C8 /* PBXTargetDependency */,
 			);
-			name = MacPetsTests;
+			name = "Desktop Pets Tests";
 			productName = MacPetsTests;
-			productReference = A65FE36E283D80CB00D1F5C8 /* MacPetsTests.xctest */;
+			productReference = A65FE36E283D80CB00D1F5C8 /* Desktop Pets Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A6E5AAB42860525A008AA653 /* MacPets AppStore */ = {
+		A6E5AAB42860525A008AA653 /* Desktop Pets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A6E5B59C2860525A008AA653 /* Build configuration list for PBXNativeTarget "MacPets AppStore" */;
+			buildConfigurationList = A6E5B59C2860525A008AA653 /* Build configuration list for PBXNativeTarget "Desktop Pets" */;
 			buildPhases = (
 				A6E5AAC22860525A008AA653 /* SwiftLint */,
 				A6E5AAC32860525A008AA653 /* Sources */,
@@ -11494,7 +11494,7 @@
 			);
 			dependencies = (
 			);
-			name = "MacPets AppStore";
+			name = "Desktop Pets";
 			packageProductDependencies = (
 				A6E5AAB52860525A008AA653 /* LaunchAtLogin */,
 				A6E5AAB72860525A008AA653 /* Schwifty */,
@@ -11511,7 +11511,7 @@
 				A60AC9852865FA400048944D /* PetSelection */,
 			);
 			productName = MacPets;
-			productReference = A6E5B59F2860525A008AA653 /* MacPets AppStore.app */;
+			productReference = A6E5B59F2860525A008AA653 /* Desktop Pets.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -11533,7 +11533,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "MacPets" */;
+			buildConfigurationList = A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "DesktopPets" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -11550,9 +11550,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A65FE35C283D80C900D1F5C8 /* MacPets */,
-				A65FE36D283D80CB00D1F5C8 /* MacPetsTests */,
-				A6E5AAB42860525A008AA653 /* MacPets AppStore */,
+				A65FE35C283D80C900D1F5C8 /* Desktop Pets Dev */,
+				A65FE36D283D80CB00D1F5C8 /* Desktop Pets Tests */,
+				A6E5AAB42860525A008AA653 /* Desktop Pets */,
 			);
 		};
 /* End PBXProject section */
@@ -15449,7 +15449,7 @@
 /* Begin PBXTargetDependency section */
 		A65FE370283D80CB00D1F5C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A65FE35C283D80C900D1F5C8 /* MacPets */;
+			target = A65FE35C283D80C900D1F5C8 /* Desktop Pets Dev */;
 			targetProxy = A65FE36F283D80CB00D1F5C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -15585,7 +15585,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Resources/Info-Dev.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
+				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets Dev";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Curzel Federico";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -15596,7 +15596,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.dev;
-				PRODUCT_NAME = "Desktop Pets";
+				PRODUCT_NAME = DesktopPets;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -15617,7 +15617,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Resources/Info-Dev.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
+				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets Dev";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Curzel Federico";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -15628,7 +15628,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.dev;
-				PRODUCT_NAME = "Desktop Pets";
+				PRODUCT_NAME = DesktopPets;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -15649,7 +15649,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desktop Pets.app/Contents/MacOS/Desktop Pets";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesktopPets.app/Contents/MacOS/DesktopPets";
 			};
 			name = Debug;
 		};
@@ -15668,7 +15668,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desktop Pets.app/Contents/MacOS/Desktop Pets";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesktopPets.app/Contents/MacOS/DesktopPets";
 			};
 			name = Release;
 		};
@@ -15680,7 +15680,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1029;
+				CURRENT_PROJECT_VERSION = 1031;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -15696,7 +15696,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -15712,7 +15712,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1029;
+				CURRENT_PROJECT_VERSION = 1031;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -15728,7 +15728,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -15739,7 +15739,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "MacPets" */ = {
+		A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "DesktopPets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65FE380283D80CB00D1F5C8 /* Debug */,
@@ -15748,7 +15748,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A65FE382283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "MacPets" */ = {
+		A65FE382283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "Desktop Pets Dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65FE383283D80CB00D1F5C8 /* Debug */,
@@ -15757,7 +15757,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A65FE385283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "MacPetsTests" */ = {
+		A65FE385283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "Desktop Pets Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65FE386283D80CB00D1F5C8 /* Debug */,
@@ -15766,7 +15766,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A6E5B59C2860525A008AA653 /* Build configuration list for PBXNativeTarget "MacPets AppStore" */ = {
+		A6E5B59C2860525A008AA653 /* Build configuration list for PBXNativeTarget "Desktop Pets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A6E5B59D2860525A008AA653 /* Debug */,
