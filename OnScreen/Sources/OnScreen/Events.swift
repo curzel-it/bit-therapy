@@ -24,7 +24,6 @@ extension ViewModel {
                     OnScreen.show()
                 }
             }
-            OnScreen.spawnWindows()
         }
     }
     

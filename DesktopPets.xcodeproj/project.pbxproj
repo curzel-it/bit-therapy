@@ -4016,6 +4016,7 @@
 		A67373C5285387EC002DC8FA /* Schwifty */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Schwifty; sourceTree = "<group>"; };
 		A67373C6285387F7002DC8FA /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DesignSystem; sourceTree = "<group>"; };
 		A67373C82853880D002DC8FA /* Squanch */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Squanch; sourceTree = "<group>"; };
+		A67876042869E69000BDA3B3 /* HabitatWindows */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HabitatWindows; sourceTree = "<group>"; };
 		A68A85E728646FA900ADDF24 /* ufo_idle_front-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-5.png"; sourceTree = "<group>"; };
 		A68A85E828646FAA00ADDF24 /* ufo_idle_front-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-8.png"; sourceTree = "<group>"; };
 		A68A85E928646FAD00ADDF24 /* ufo_idle_front-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ufo_idle_front-7.png"; sourceTree = "<group>"; };
@@ -7216,6 +7217,7 @@
 				A6E5CDCC28609210008AA653 /* Biosphere */,
 				A67373C6285387F7002DC8FA /* DesignSystem */,
 				A63499232859CCD700488588 /* EntityWindow */,
+				A67876042869E69000BDA3B3 /* HabitatWindows */,
 				A634991D2859C13D00488588 /* InAppPurchases */,
 				A63499202859C2C600488588 /* Lang */,
 				A60AC97D2865F25C0048944D /* OnScreen */,

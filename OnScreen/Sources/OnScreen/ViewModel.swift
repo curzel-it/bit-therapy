@@ -11,8 +11,6 @@ import Squanch
 
 class ViewModel: HabitatViewModel {
     
-    var windowsManager: WindowsManager?
-    
     init() {
         super.init(id: "OnScreen")
         addSelectedPet()
@@ -34,11 +32,6 @@ class ViewModel: HabitatViewModel {
     
     override func kill(animated: Bool) {
         super.kill(animated: animated)
-        if !animated {
-            windowsManager?.viewModel = nil
-            windowsManager?.kill()
-            windowsManager = nil
-        }
+        printDebug(tag, "Killed!")
     }
 }
-

@@ -5,6 +5,8 @@
 import AppState
 import Biosphere
 import Combine
+import EntityWindow
+import HabitatWindows
 import Pets
 import Schwifty
 import SwiftUI
@@ -12,29 +14,37 @@ import SwiftUI
 public struct OnScreen {
     
     private static var viewModel: ViewModel?
+    private static var habitatWindows: OnScreenWindows?
     
     public static func show() {
         hide()
-        viewModel = ViewModel()
-        spawnWindows()
+        let viewModel = ViewModel()
+        self.viewModel = viewModel
+        self.habitatWindows = OnScreenWindows(
+            for: viewModel,
+            whenAllWindowsHaveBeenClosed: {
+                OnScreen.hide(animated: false)
+            }
+        )
     }
     
     public static func hide(animated: Bool = true) {
         viewModel?.kill(animated: animated)
         viewModel = nil
+        habitatWindows = nil
     }
-    
-    static func spawnWindows() {
-        guard let viewModel = viewModel else { return }
-        let windowsManager = WindowsManager(for: viewModel)
-        viewModel.windowsManager = windowsManager
-        viewModel.state.children
-            .filter { $0.isDrawable }
-            .forEach {
-                windowsManager.showWindow(
-                    representing: $0,
-                    in: viewModel
-                )
-            }
+}
+
+class OnScreenWindows: HabitatWindows<HabitatViewModel> {
+        
+    override func newWindow(
+        representing entity: Entity,
+        in habitat: HabitatViewModel
+    ) -> EntityWindow {
+        if let pet = entity as? PetEntity {
+            return PetWindow(representing: pet, in: habitat)
+        } else {
+            return super.newWindow(representing: entity, in: habitat)
+        }
     }
 }
