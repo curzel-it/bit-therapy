@@ -13,6 +13,7 @@ extension CGVector {
     }
     
     public func with(magnitude: CGFloat) -> CGVector {
+        guard magnitude != 0 else { return .zero }
         let unit = self.unit()
         return CGVector(
             dx: unit.dx * magnitude,
@@ -22,6 +23,7 @@ extension CGVector {
     
     public func unit() -> CGVector {
         let magnitude = self.magnitude()
+        guard magnitude != 0 else { return .zero }
         return CGVector(
             dx: dx / magnitude,
             dy: dy / magnitude
