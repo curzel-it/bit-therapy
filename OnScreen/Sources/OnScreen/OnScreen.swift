@@ -44,7 +44,7 @@ public struct OnScreen {
     }
 }
 
-class OnScreenWindows: HabitatWindows<HabitatViewModel> {
+private class OnScreenWindows: HabitatWindows<HabitatViewModel> {
     
     override func newWindow(
         representing entity: Entity,

@@ -8,7 +8,7 @@ public class ImageAnimator {
     
     public let baseName: String
     public let frames: [NSImage]
-    public let frameTime: TimeInterval = 0.1        
+    public let frameTime: TimeInterval = 0.1
     public let loopDuracy: TimeInterval
         
     var currentFrameIndex: Int = 0
