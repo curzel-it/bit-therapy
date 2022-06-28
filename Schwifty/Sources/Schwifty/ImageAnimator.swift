@@ -7,22 +7,23 @@ import AppKit
 public class ImageAnimator {
     
     public let baseName: String
-    
     public let frames: [NSImage]
-    
-    public let frameTime: TimeInterval = 0.1
-        
-    public lazy var loopDuracy: TimeInterval = {
-        TimeInterval(frames.count) * frameTime
-    }()
+    public let frameTime: TimeInterval = 0.1        
+    public let loopDuracy: TimeInterval
         
     var currentFrameIndex: Int = 0
     
     private var leftoverTime: TimeInterval = 0
     
-    public init(_ name: String, frames: [NSImage]? = nil) {
+    public init(
+        _ name: String,
+        frames someFrames: [NSImage]? = nil,
+        bundle: Bundle = .main
+    ) {
+        let frames = someFrames ?? ImageAnimator.frames(for: name, in: bundle)
         self.baseName = name
-        self.frames = frames ?? ImageAnimator.frames(for: name)
+        self.frames = frames
+        self.loopDuracy = TimeInterval(frames.count) * frameTime
     }
     
     public func nextFrame(after time: TimeInterval) -> NSImage? {
@@ -50,11 +51,11 @@ public class ImageAnimator {
 
 private extension ImageAnimator {
     
-    static func frames(for name: String) -> [NSImage] {
+    static func frames(for name: String, in bundle: Bundle) -> [NSImage] {
         var frames: [NSImage] = []
         var frameIndex = 0
         while true {
-            if let path = Bundle.main.path(forResource: "\(name)-\(frameIndex)", ofType: "png"),
+            if let path = bundle.path(forResource: "\(name)-\(frameIndex)", ofType: "png"),
                let image = NSImage(contentsOfFile: path) {
                 frames.append(image)
             } else {
