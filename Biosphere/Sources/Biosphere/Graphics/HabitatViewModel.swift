@@ -10,12 +10,10 @@ open class HabitatViewModel: ObservableObject {
     @Published public var state: Environment
         
     public let id: String
+    public let tag: String
     
-    public var timer: Timer!
-    
+    private var timer: Timer!    
     private var lastUpdate: TimeInterval
-    
-    private let tag: String
         
     let fps: Double = 15
     
@@ -31,7 +29,9 @@ open class HabitatViewModel: ObservableObject {
     
     public func startRendering() {
         printDebug(self.tag, "Starting to render...")
-        timer = Timer(timeInterval: 1/fps, repeats: true) { [weak self] _ in
+        timer?.invalidate()
+        timer = Timer(timeInterval: 1/fps, repeats: true) { [weak self] timer in
+            guard timer == self?.timer else { return }
             self?.render()
         }
         RunLoop.main.add(timer, forMode: .common)

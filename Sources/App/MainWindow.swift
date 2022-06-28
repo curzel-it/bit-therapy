@@ -90,18 +90,13 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
         }
     }
     
-    func windowDidBecomeMain(_ notification: Notification) { startRendering() }
-    func windowDidResignMain(_ notification: Notification) { pauseRendering() }
-    func windowDidBecomeKey(_ notification: Notification) { startRendering()  }
-    func windowDidResignKey(_ notification: Notification) { pauseRendering() }
-    
-    func startRendering() {
+    func windowDidBecomeKey(_ notification: Notification) {
         Task { @MainActor in
             viewModel?.startRendering()
         }
     }
     
-    func pauseRendering() {
+    func windowDidResignKey(_ notification: Notification) {
         Task { @MainActor in
             viewModel?.pauseRendering()
         }
