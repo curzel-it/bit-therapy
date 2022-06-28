@@ -20,7 +20,6 @@ struct PetSelectionGrid: View {
         [GridItem](
             repeating: .init(
                 .adaptive(minimum: viewModel.petSize, maximum: viewModel.petSize*2),
-                // .fixed(viewModel.petSize),
                 spacing: Spacing.lg.rawValue
             ),
             count: 5

@@ -22,10 +22,14 @@ open class HabitatWindows<Habitat: HabitatViewModel>: NSObject, NSWindowDelegate
     
     private var childrenCanc: AnyCancellable!
     
+    public let tag: String
+    
     public init(
+        id: String,
         for habitat: Habitat,
         whenAllWindowsHaveBeenClosed: @escaping () -> Void
     ) {
+        self.tag = "HabitatWindows-\(id)"
         self.habitat = habitat
         self.whenAllWindowsHaveBeenClosed = whenAllWindowsHaveBeenClosed
         super.init()
@@ -35,20 +39,25 @@ open class HabitatWindows<Habitat: HabitatViewModel>: NSObject, NSWindowDelegate
     private func startSpawningWindows() {
         childrenCanc = habitat?.state.$children.sink { children in
             guard let habitat = self.habitat else { return }
-            children.forEach { child in
-                self.showWindow(representing: child, in: habitat)
-            }
+            children
+                .filter { $0.isDrawable }
+                .forEach { child in
+                    self.showWindow(representing: child, in: habitat)
+                }
         }
     }
     
     // MARK: - Show Window
     
-    public func showWindow(
+    @discardableResult
+    open func showWindow(
         representing entity: Entity,
         in habitat: Habitat
-    ) {
+    ) -> EntityWindow {
         let window = window(representing: entity, in: habitat)
         window.show()
+        window.makeKey()
+        return window
     }
     
     private func window(
@@ -59,7 +68,7 @@ open class HabitatWindows<Habitat: HabitatViewModel>: NSObject, NSWindowDelegate
             return window
         }
         let window = newWindow(representing: entity, in: habitat)
-        printDebug("HabitatWindows", "Created window for", entity.id)
+        printDebug(tag, "Created window for", entity.id)
         register(window)
         return window
     }
@@ -92,10 +101,10 @@ open class HabitatWindows<Habitat: HabitatViewModel>: NSObject, NSWindowDelegate
         guard let windowBeingClosed = notification.object as? EntityWindow else { return }
         windows.removeAll { $0 == windowBeingClosed }
         
-        printDebug("HabitatWindows", "Window for", windowBeingClosed.entity.id, "has been closed")
+        printDebug(tag, "Window for", windowBeingClosed.entity.id, "has been closed")
         
         if windows.count == 0 {
-            printDebug("HabitatWindows", "All windows have been closed")
+            printDebug(tag, "All windows have been closed")
             whenAllWindowsHaveBeenClosed()
             kill()
         }
@@ -104,7 +113,7 @@ open class HabitatWindows<Habitat: HabitatViewModel>: NSObject, NSWindowDelegate
     // MARK: - Kill Switch
     
     public func kill() {
-        printDebug("HabitatWindows", "Terminating...")
+        whenAllWindowsHaveBeenClosed = {}
         childrenCanc?.cancel()
         childrenCanc = nil
         habitat = nil
@@ -115,5 +124,6 @@ open class HabitatWindows<Habitat: HabitatViewModel>: NSObject, NSWindowDelegate
             }
         }
         windows = []
+        printDebug(tag, "Terminated")
     }
 }

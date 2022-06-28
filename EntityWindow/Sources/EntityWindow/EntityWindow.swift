@@ -17,6 +17,8 @@ open class EntityWindow: NSWindow {
     private var boundsCanc: AnyCancellable!
     private var aliveCanc: AnyCancellable!
     
+    private(set) var expectedFrame: CGRect = .zero
+    
     public init(representing entity: Entity, in habitat: HabitatViewModel) {
         self.entity = entity
         self.habitat = habitat
@@ -71,20 +73,15 @@ private extension EntityWindow {
     }
     
     func updateFrame(toShow entityFrame: CGRect, in habitat: CGRect) {
-        let newOrigin = CGPoint(
-            x: entityFrame.minX,
-            y: habitat.height - entityFrame.maxY
+        let sizeChanged = expectedFrame.size != entityFrame.size
+        expectedFrame = CGRect(
+            origin: CGPoint(
+                x: entityFrame.minX,
+                y: habitat.height - entityFrame.maxY
+            ),
+            size: entityFrame.size
         )
-        if frame.size == entityFrame.size {
-            if newOrigin != frame.origin {
-                setFrameOrigin(newOrigin)
-            }
-        } else {
-            setFrame(
-                CGRect(origin: newOrigin, size: entityFrame.size),
-                display: true
-            )
-        }
+        setFrame(expectedFrame, display: true, animate: sizeChanged)
     }
 }
 
@@ -98,5 +95,14 @@ extension EntityWindow {
                 self.close()
             }
         }
+    }
+}
+
+// MARK: - Equatable
+
+extension EntityWindow {
+    
+    static func == (lhs: EntityWindow, rhs: EntityWindow) -> Bool {
+        lhs.entity == rhs.entity
     }
 }

@@ -54,7 +54,6 @@ extension MainWindow {
         window.contentView?.addSubview(view)
         view.constrainToFillParent()
         window.show()
-        window.makeKeyAndOrderFront(nil)
     }
     
     private static func trackAppLaunched() {
@@ -81,6 +80,10 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
         delegate.window = window
         window.delegate = delegate
         MainWindowDelegate.instance = delegate
+        
+        if !window.isKeyWindow {
+            vm.pauseRendering()
+        }
     }
     
     func windowWillClose(_ notification: Notification) {

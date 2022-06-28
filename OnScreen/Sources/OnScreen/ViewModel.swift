@@ -29,9 +29,4 @@ class ViewModel: HabitatViewModel {
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
     }
-    
-    override func kill(animated: Bool) {
-        super.kill(animated: animated)
-        printDebug(tag, "Killed!")
-    }
 }

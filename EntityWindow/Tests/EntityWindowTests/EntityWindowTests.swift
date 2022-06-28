@@ -26,6 +26,7 @@ class EntityWindowTests: XCTestCase {
         )
         habitat.state.children.append(entity)
         window = EntityWindow(representing: entity, in: habitat)
+        window.show()
     }
     
     func testWindowKeepsReferenceToEntity() {
@@ -37,34 +38,44 @@ class EntityWindowTests: XCTestCase {
     }
     
     func testKillingEntityClosesWindow() {
-        window.show()
+        let expectation = expectation(description: "")
+        
         XCTAssertTrue(window.isVisible)
         entity.kill()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            XCTAssertFalse(self.window?.isVisible ?? true)
-        }
-    }
-    
-    func testResizingEntityResizesWindow() {
-        window.show()
-        XCTAssertEqual(self.window?.frame.size, entity.frame.size)
-        entity.set(size: .init(square: 200))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            XCTAssertEqual(self.window?.frame.size, self.entity?.frame.size)
-        }
-    }
-    
-    func testAfterBeingClosedWindowStopsResizing() {
-        window.show()
-        let lastSize = entity.frame.size
-        XCTAssertEqual(self.window?.frame.size, lastSize)
-        window.close()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.entity?.set(size: .init(square: 200))
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                XCTAssertEqual(self.window?.frame.size, lastSize)
-            }
+            expectation.fulfill()
         }
+        
+        waitForExpectations(timeout: 1)
+        XCTAssertFalse(self.window?.isVisible ?? true)
+    }
+    
+    func testUpdatingEntityFrameUpdatesWindowFrame() {
+        let expectation = expectation(description: "")
+        
+        XCTAssertEqual(window.expectedFrame.size, entity.frame.size)
+        entity.set(size: .init(square: 200))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 1)
+        XCTAssertEqual(window.expectedFrame.size, entity.frame.size)
+    }
+    
+    func testAfterBeingClosedWindowFrameStopsUpdating() {
+        let expectation = expectation(description: "")
+        
+        let lastSize = entity.frame.size
+        XCTAssertEqual(window.expectedFrame.size, lastSize)
+        window.close()
+        entity.set(size: .init(square: 200))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 1)
+        XCTAssertEqual(window.expectedFrame.size, lastSize)
     }
 }
