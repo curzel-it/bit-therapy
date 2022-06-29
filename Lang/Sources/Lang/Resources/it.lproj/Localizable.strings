@@ -67,6 +67,8 @@
 "pet.name.nyan" = "Nyan D. Cat";
 "pet.name.panda" = "Panda";
 "pet.name.panda_vest" = "Panda Dorato";
+"pet.name.sheep" = "Pecora";
+"pet.name.sheep_black" = "Pecora Nera";
 "pet.name.sloth" = "Bradipo";
 "pet.name.sloth_swag" = "Bradipo Stiloso";
 "pet.name.snail" = "Lumacamicio";
@@ -87,10 +89,12 @@
 "pet.about.nyan" = "Homage to one of the internet most famous cats.";
 "pet.about.panda" = "L'universo ci ha portato il Guerriero Dragone!";
 "pet.about.panda_vest" = "Non c'è prezzo per la miticità... Neppure per l'attraenza.";
+"pet.about.sheep" = "La 'eSheep' per Windows 95 è stato uno dei primi Desktop Pet, sapevatelo!";
+"pet.about.sheep_black" = "Ho solo invertito i colori, lo sapete che sono pigro...";
 "pet.about.sloth" = "Lo sapevate che sono così lenti e pigri che gli crescono alghe sul pelo?";
 "pet.about.sloth_swag" = "Lento, ma con stile...";
 "pet.about.snail" = "Miao! Sei tu Gary?";
-"pet.about.snail_nicky" = "Miao! Che hai fatto hai capelly Gary!?";
+"pet.about.snail_nicky" = "Me l'ha fatta disegnare la mia compagna, ringraziate lei haha";
 "pet.about.trex" = "Charmander Tarocco";
 "pet.about.trex_blue" = "Praticamente T-Rex con un corno!";
 "pet.about.trex_violet" = "Questo sembra il dinosauro dei Flintstones :D";

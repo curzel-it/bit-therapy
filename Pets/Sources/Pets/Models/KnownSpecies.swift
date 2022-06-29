@@ -8,15 +8,16 @@ import Squanch
 extension Pet {
     
     static let allSpecies: [Pet] = [
+        .betta,
+        .crow, .crowWhite,
+        .koala, .koalaPirate,
+        .nyan,
+        .sheep,
+        .snail, .snailNicky,
         .sloth, .slothSwag,
         .trex, .trexBlue, .trexViolet, .trexYellow,
-        .crow, .crowWhite,
         .panda, .pandaVest,
-        .koala, .koalaPirate,
-        .betta,
-        .snail, .nickySnail,
-        .ufo,
-        .nyan
+        .ufo
     ]
     
     public static var availableSpecies: [Pet] = {

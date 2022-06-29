@@ -67,6 +67,8 @@
 "pet.name.nyan" = "Nyan D. Cat";
 "pet.name.panda" = "Panda";
 "pet.name.panda_vest" = "Golden Panda";
+"pet.name.sheep" = "Sheep";
+"pet.name.sheep_black" = "Black Sheep";
 "pet.name.sloth" = "Sloth";
 "pet.name.sloth_swag" = "Swag Sloth";
 "pet.name.snail" = "Cat-Snail";
@@ -87,10 +89,12 @@
 "pet.about.nyan" = "An homage to one of the internet most famous cats";
 "pet.about.panda" = "The universe has brought us the Dragon Warrior!";
 "pet.about.panda_vest" = "There is no charge for awesomeness... or attractiveness.";
-"pet.about.snail" = "Meow! Is that you Gary?";
-"pet.about.snail_nicky" = "Meow! What's up with your hair, Gary!?";
+"pet.about.sheep" = "The 'eSheep' for Windows 95 was one of the first Desktop Pets, did you know it?";
+"pet.about.sheep_black" = "If you know how lazy I can be, you also know I've just inverted the colors...";
 "pet.about.sloth" = "Did you know they are so lazy alge grows on their fur with time?";
 "pet.about.sloth_swag" = "Slow, but with style...";
+"pet.about.snail" = "Meow! Is that you Gary?";
+"pet.about.snail_nicky" = "My gf specifically asked for this one, so there you go!";
 "pet.about.trex" = "Dollar-store Charmander";
 "pet.about.trex_blue" = "Just a T-Rex with a horne!";
 "pet.about.trex_violet" = "This one gives off some Flintstones vibes :D";

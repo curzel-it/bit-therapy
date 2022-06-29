@@ -93,13 +93,13 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
         }
     }
     
-    func windowDidBecomeKey(_ notification: Notification) {
+    func windowDidBecomeMain(_ notification: Notification) {
         Task { @MainActor in
             viewModel?.startRendering()
         }
     }
     
-    func windowDidResignKey(_ notification: Notification) {
+    func windowDidResignMain(_ notification: Notification) {
         Task { @MainActor in
             viewModel?.pauseRendering()
         }

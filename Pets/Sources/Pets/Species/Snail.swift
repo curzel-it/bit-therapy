@@ -19,5 +19,5 @@ extension Pet {
         speed: 0.2
     )
     
-    static let nickySnail = Pet.snail.shiny(id: "snail_nicky")
+    static let snailNicky = Pet.snail.shiny(id: "snail_nicky")
 }
