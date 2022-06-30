@@ -12,7 +12,7 @@ extension Pet {
         .crow, .crowWhite,
         .koala, .koalaPirate,
         .nyan,
-        .sheep,
+        .sheep, .sheepBlack,
         .snail, .snailNicky,
         .sloth, .slothSwag,
         .trex, .trexBlue, .trexViolet, .trexYellow,

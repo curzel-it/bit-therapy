@@ -17,10 +17,14 @@ extension Pet {
                     .idle,
                     .eat,
                     .puke
-                ]   
+                ]
             )
         ],
         movementPath: .walk,
         speed: 0.8
+    )
+    
+    static let sheepBlack = Pet.sheep.shiny(
+        id: "sheep_black", isPaid: true
     )
 }
