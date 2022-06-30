@@ -17,6 +17,7 @@ extension EntityAnimation {
     static let love = EntityAnimation(id: "love")
     static let meditate = EntityAnimation(id: "meditate")
     static let playGuitar = EntityAnimation(id: "guitar")
+    static let puke = EntityAnimation(id: "puke")
     static let roar = EntityAnimation(id: "roar")
     static let selfie = EntityAnimation(id: "selfie")
     static let sendText = EntityAnimation(id: "send_text")

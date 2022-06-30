@@ -15,8 +15,9 @@ extension Pet {
                 possibleAnimations: [
                     .idleFront,
                     .idle,
-                    .eat
-                ]
+                    .eat,
+                    .puke
+                ]   
             )
         ],
         movementPath: .walk,
