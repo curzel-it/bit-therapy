@@ -14,7 +14,8 @@ extension Pet {
                 trigger: .onAnyCorner,
                 possibleAnimations: [
                     .idleFront,
-                    .idle
+                    .idle,
+                    .eat
                 ]
             )
         ],
