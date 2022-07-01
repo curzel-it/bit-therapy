@@ -13,6 +13,6 @@ class LangTests: XCTestCase {
     }
     
     func testLocalizedVersionOfTranslatedStringIsTheCorrectLocalizedString() {
-        XCTAssertEqual("pet.name.crow_white".localized(), "White Crow")
+        XCTAssertEqual("@translated".localized(in: .module), "Translated")
     }
 }

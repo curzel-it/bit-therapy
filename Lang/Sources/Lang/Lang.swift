@@ -83,8 +83,8 @@ extension AppPage {
 
 extension String {
 
-    public func localized() -> String {
-        NSLocalizedString(self, bundle: .module, comment: self)
+    public func localized(in bundle: Bundle = .main) -> String {
+        NSLocalizedString(self, bundle: bundle, comment: self)
     }
 }
 
