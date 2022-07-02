@@ -4,7 +4,7 @@
 
 import Foundation
 
-private let boundDistanceAfterScreenEnd: CGFloat = 100
+private let boundDistanceAfterScreenEnd: CGFloat = 5
 private let boundsThickness: CGFloat = 1000
 
 func bottomBound(in habitatBounds: CGRect) -> Entity {

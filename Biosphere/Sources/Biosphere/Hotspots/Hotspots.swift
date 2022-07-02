@@ -24,7 +24,7 @@ public enum Hotspot: String, CaseIterable {
 
 extension Environment {
     
-    func hotspots() -> [Entity] {
+    func hotspotEntities() -> [Entity] {
         [
             topBound(in: bounds),
             bottomBound(in: bounds),

@@ -27,11 +27,11 @@ struct MainView: View {
         .foregroundColor(.label)
         .font(.regular, .md)
         .environmentObject(AppState.global)
+        .onWindow { MainWindowDelegate.setup(for: $0) }
     }
 }
 
 extension AppPage: Tabbable {
-    
     // ...
 }
 
@@ -69,17 +69,5 @@ private struct PageTitle: View {
             .textAlign(.center)
             .font(.bold, .title)
             .padding()
-    }
-}
-
-private struct PetSelectionView: View {
-    
-    var body: some View {
-        PetSelection() { window, viewModel in
-            MainWindowDelegate.setup(
-                for: window,
-                with: viewModel
-            )
-        }
     }
 }

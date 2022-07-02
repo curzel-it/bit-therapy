@@ -9,13 +9,19 @@ public class Environment: ObservableObject {
     
     @Published public var children: [Entity] = []
     
-    public let bounds: CGRect
+    public private(set) var bounds: CGRect = .zero
     
     public var events: [Event] = []
         
     public init(bounds rect: CGRect) {
-        bounds = rect
-        children.append(contentsOf: hotspots())
+        set(bounds: rect)
+    }
+    
+    public func set(bounds: CGRect) {
+        self.bounds = bounds
+        let hotspots = Hotspot.allCases.map { $0.rawValue }
+        children.removeAll { hotspots.contains($0.id) }
+        children.append(contentsOf: hotspotEntities())
     }
     
     public func update(after time: TimeInterval) {

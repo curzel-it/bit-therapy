@@ -20,7 +20,10 @@ class HabitatWindowsTests: XCTestCase {
         habitat?.kill(animated: false)
         windows?.kill()
         
-        habitat = HabitatViewModel(id: "HabitatWindowsTests")
+        habitat = HabitatViewModel(
+            id: "HabitatWindowsTests",
+            bounds: CGRect(size: .init(square: 1000))
+        )
         entity1 = Entity(
             id: "test1",
             frame: .init(origin: .zero, size: .init(square: 100)),

@@ -22,6 +22,10 @@ let package = Package(
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "DesignSystem", package: "DesignSystem")
             ]
+        ),
+        .testTarget(
+            name: "AppStateTests",
+            dependencies: ["AppState"]
         )
     ]
 )

@@ -9,13 +9,27 @@ import SwiftUI
 
 public class AppState: ObservableObject {
     
-    public static var global = AppState()
+    public static let global = AppState()
     
     @Published public var selectedPage: AppPage = .home
-        
-    @Published public var petSize: CGFloat = PetSize.defaultSize {
+    
+    @Published public var mainWindowSize: CGSize = .zero
+    
+    @Published public var mainWindowFocused: Bool = true
+    
+    @AppStorage("petId") public var selectedPet: String = "sloth"
+    
+    @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
+    
+    @AppStorage("trackingEnabled") public var trackingEnabled = false
+    
+    @AppStorage("speedMultiplier") private var speedMultiplierValue: Double = 1
+    
+    @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize
+    
+    @AppStorage("gravityEnabled") public var gravityEnabled = false {
         didSet {
-            petSizeValue = petSize
+            Gravity.isEnabled = gravityEnabled
         }
     }
     
@@ -25,22 +39,13 @@ public class AppState: ObservableObject {
         }
     }
     
-    @AppStorage("petId") public var selectedPet: String = "sloth"
-    
-    @AppStorage("gravityEnabled") public var gravityEnabled = false {
+    @Published public var petSize: CGFloat = PetSize.defaultSize {
         didSet {
-            Gravity.isEnabled = gravityEnabled
+            petSizeValue = petSize
         }
     }
-    
-    @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
-    
-    @AppStorage("trackingEnabled") public var trackingEnabled = false
-    
-    @AppStorage("speedMultiplier") private var speedMultiplierValue: Double = 1
-    @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize
         
-    private init() {
+    init() {
         petSize = petSizeValue
         speedMultiplier = speedMultiplierValue
         Gravity.isEnabled = gravityEnabled

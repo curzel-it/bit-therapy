@@ -9,6 +9,8 @@ import Squanch
 
 open class AnimatedSprite: Capability, ObservableObject {
     
+    public static var defaultBundle: Bundle = .main
+    
     public let id: String
     
     @Published public private(set) var animation: ImageAnimator = .none
@@ -37,7 +39,7 @@ open class AnimatedSprite: Capability, ObservableObject {
         guard let path = subject.animationPath(for: lastState) else { return }
         guard path != animation.baseName else { return }
         printDebug(id, "Loaded", path)
-        animation = ImageAnimator(path)
+        animation = ImageAnimator(path, bundle: AnimatedSprite.defaultBundle)
     }
     
     open override func update(with collisions: Collisions, after time: TimeInterval) {

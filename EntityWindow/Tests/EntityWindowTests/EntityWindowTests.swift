@@ -18,7 +18,10 @@ class EntityWindowTests: XCTestCase {
         habitat?.kill(animated: false)
         window?.close()
         
-        habitat = HabitatViewModel(id: "test")
+        habitat = HabitatViewModel(
+            id: "test",
+            bounds: CGRect(size: .init(square: 1000))
+        )
         entity = Entity(
             id: "test",
             frame: CGRect(origin: .zero, size: .init(square: 100)),

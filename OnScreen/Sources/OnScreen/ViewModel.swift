@@ -12,7 +12,10 @@ import Squanch
 class ViewModel: HabitatViewModel {
     
     init() {
-        super.init(id: "OnScreen")
+        super.init(
+            id: "OnScreen",
+            bounds: NSScreen.main?.frame.bounds ?? .zero
+        )
         addSelectedPet()
         scheduleEvents()
     }
@@ -24,7 +27,7 @@ class ViewModel: HabitatViewModel {
     
     private func addPet(for species: Pet) {
         let pet = PetEntity(of: species, in: state.bounds)
-        pet.install(MouseDraggablePet.self)
+        pet.install(MouseDraggable.self)
         pet.install(ShowsMenuOnRightClick.self)
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)

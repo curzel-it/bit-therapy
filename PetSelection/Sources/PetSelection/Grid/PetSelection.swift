@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import AppState
 import Biosphere
 import DesignSystem
 import InAppPurchases
@@ -10,14 +11,14 @@ import OnScreen
 import Schwifty
 import SwiftUI
 
-public struct PetSelection: View {
+public struct PetSelectionView: View {
         
+    @EnvironmentObject var appState: AppState
+    
     @StateObject var viewModel = PetSelectionViewModel()
     
-    private let onSetup: (NSWindow, HabitatViewModel) -> Void
-    
-    public init(_ onSetup: @escaping (NSWindow, HabitatViewModel) -> Void) {
-        self.onSetup = onSetup
+    public init() {
+        // ...
     }
     
     public var body: some View {
@@ -36,8 +37,12 @@ public struct PetSelection: View {
         .environmentObject(viewModel)
         .environmentObject(viewModel as HabitatViewModel)
         .environmentObject(PricingService.global)
-        .onWindow { window in
-            onSetup(window, viewModel)
+        .onReceive(appState.$mainWindowFocused) { isFocused in
+            if isFocused {
+                viewModel.startRendering()
+            } else {
+                viewModel.pauseRendering()
+            }
         }
     }
 }

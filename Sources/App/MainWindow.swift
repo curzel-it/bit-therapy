@@ -54,6 +54,7 @@ extension MainWindow {
         window.contentView?.addSubview(view)
         view.constrainToFillParent()
         window.show()
+        AppState.global.mainWindowSize = window.frame.size
     }
     
     private static func trackAppLaunched() {
@@ -71,37 +72,37 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
     
     fileprivate static var instance: MainWindowDelegate?
     
-    fileprivate weak var viewModel: HabitatViewModel?
     fileprivate weak var window: NSWindow?
     
-    static func setup(for window: NSWindow, with vm: HabitatViewModel) {
+    static func setup(for window: NSWindow) {
         let delegate = MainWindowDelegate()
-        delegate.viewModel = vm
         delegate.window = window
         window.delegate = delegate
         MainWindowDelegate.instance = delegate
-        
-        if !window.isKeyWindow {
-            vm.pauseRendering()
-        }
+        AppState.global.mainWindowSize = window.frame.size
+    }
+    
+    func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
+        AppState.global.mainWindowSize = frameSize
+        return frameSize
     }
     
     func windowWillClose(_ notification: Notification) {
         Task { @MainActor in
-            viewModel?.kill(animated: false)
+            AppState.global.mainWindowFocused = false
             MainWindowDelegate.instance = nil
         }
     }
     
     func windowDidBecomeMain(_ notification: Notification) {
         Task { @MainActor in
-            viewModel?.startRendering()
+            AppState.global.mainWindowFocused = true
         }
     }
     
     func windowDidResignMain(_ notification: Notification) {
         Task { @MainActor in
-            viewModel?.pauseRendering()
+            AppState.global.mainWindowFocused = false
         }
     }
 }

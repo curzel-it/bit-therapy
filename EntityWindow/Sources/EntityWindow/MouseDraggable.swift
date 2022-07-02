@@ -8,7 +8,9 @@ import Squanch
 
 open class MouseDraggable: Capability {
     
-    public var isBeingDragged: Bool = false
+    public var isBeingDragged: Bool {
+        subject?.state == .drag
+    }
     
     public func mouseDragged(with event: NSEvent) {
         guard isEnabled else { return }
@@ -17,7 +19,7 @@ open class MouseDraggable: Capability {
     }
     
     open func mouseDragStarted() {
-        isBeingDragged = true
+        subject?.set(state: .drag)
         subject?.movement?.isEnabled = false
     }
     
@@ -28,7 +30,7 @@ open class MouseDraggable: Capability {
     }
     
     open func mouseDragEnded(for window: NSWindow?) {
-        isBeingDragged = false
+        subject?.set(state: .move)
         subject?.setPosition(fromWindow: window)
         subject?.movement?.isEnabled = true
     }
@@ -36,7 +38,9 @@ open class MouseDraggable: Capability {
 
 extension Entity {
     
-    var mouseDrag: MouseDraggable? { capability(for: MouseDraggable.self) }
+    var mouseDrag: MouseDraggable? {
+        capability(for: MouseDraggable.self)
+    }
 }
 
 extension Entity {

@@ -3,8 +3,10 @@
 //
 
 import AppState
+import Biosphere
 import InAppPurchases
 import OnScreen
+import Pets
 import SwiftUI
 import Schwifty
 import Tracking
@@ -16,6 +18,7 @@ struct MyApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
+        AnimatedSprite.defaultBundle = Bundle(for: PetEntity.self)
         Tracking.setup(isEnabled: AppState.global.trackingEnabled)
         PricingService.global.setup()
         Task { @MainActor in

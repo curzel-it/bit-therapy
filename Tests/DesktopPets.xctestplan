@@ -40,13 +40,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:InAppPurchases",
-        "identifier" : "InAppPurchasesTests",
-        "name" : "InAppPurchasesTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Lang",
         "identifier" : "LangTests",
         "name" : "LangTests"
@@ -68,13 +61,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:PetSelection",
-        "identifier" : "PetSelectionTests",
-        "name" : "PetSelectionTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Schwifty",
         "identifier" : "SchwiftyTests",
         "name" : "SchwiftyTests"
@@ -92,6 +78,13 @@
         "containerPath" : "container:UfoAbduction",
         "identifier" : "UfoAbductionTests",
         "name" : "UfoAbductionTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:AppState",
+        "identifier" : "AppStateTests",
+        "name" : "AppStateTests"
       }
     }
   ],

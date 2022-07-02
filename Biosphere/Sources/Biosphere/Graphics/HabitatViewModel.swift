@@ -17,13 +17,11 @@ open class HabitatViewModel: ObservableObject {
         
     let fps: Double = 15
     
-    public init(id: String) {
+    public init(id: String, bounds: CGRect) {
         self.id = id
         self.tag = "Habitat-\(id)"
         lastUpdate = Date.timeIntervalSinceReferenceDate
-        let screen = NSScreen.main ?? NSScreen.screens.first
-        let screenBounds = CGRect(origin: .zero, size: screen?.frame.size ?? .zero)
-        state = Environment(bounds: screenBounds)
+        state = Environment(bounds: bounds)
         startRendering()
     }
     
@@ -47,6 +45,10 @@ open class HabitatViewModel: ObservableObject {
         printDebug(self.tag, "Paused rendering")
         timer?.invalidate()
         timer = nil
+    }
+    
+    open func set(bounds: CGRect) {
+        state.set(bounds: bounds)
     }
     
     open func kill(animated: Bool) {
