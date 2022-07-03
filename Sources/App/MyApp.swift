@@ -18,7 +18,6 @@ struct MyApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
-        AnimatedSprite.defaultBundle = Bundle(for: PetEntity.self)
         Tracking.setup(isEnabled: AppState.global.trackingEnabled)
         PricingService.global.setup()
         Task { @MainActor in

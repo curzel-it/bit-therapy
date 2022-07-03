@@ -59,8 +59,7 @@ extension Capabilities {
         LinearMovement.self,
         BounceOffLateralBounds.self,
         FlipHorizontallyWhenGoingLeft.self,
-        ReactToHotspots.self,
-        ResumeMovementAfterAnimations.self
+        ReactToHotspots.self
     ]
     
     static let defaultsWithGravity: Capabilities = defaultsNoGravity + [Gravity.self]
