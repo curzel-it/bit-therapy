@@ -25,7 +25,8 @@ public class ReactToHotspots: Capability {
         guard let pet = subject as? PetEntity else { return }
         if let animation = pet.species.action(whenTouching: spot) {
             printDebug(tag, "Picked", animation.description)
-            pet.set(state: .animation(animation: animation))
+            let newState: EntityState = .animation(animation: animation, loops: 1)
+            pet.set(state: newState)
         }
     }
     

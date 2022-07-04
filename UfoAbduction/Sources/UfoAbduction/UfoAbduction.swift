@@ -87,7 +87,7 @@ private class UfoAbduction: Capability {
     private func captureRayAnimation() {
         guard let target = target else { return }
         subject?.set(direction: .zero)
-        subject?.set(state: .animation(animation: .abduction))
+        subject?.set(state: .animation(animation: .abduction, loops: 1))
         subject?.uninstall(Seeker.self)
         
         target.uninstall(Gravity.self)

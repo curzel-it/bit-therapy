@@ -13,41 +13,58 @@ open class AnimatedSprite: Capability, ObservableObject {
     
     @Published public private(set) var animation: ImageAnimator = .none
     
+    private var lastFrameBeforeAnimations: CGRect
     private var lastState: EntityState = .drag
-    private var lastDirection: CGVector = .zero
     private var stateCanc: AnyCancellable!
-    private var directionCanc: AnyCancellable!
     
     public required init(with subject: Entity) {
         self.id = "\(subject.id)-Sprite"
+        self.lastFrameBeforeAnimations = subject.frame
         super.init(with: subject)
         
         stateCanc = subject.$state.sink { newState in
-            self.lastState = newState
-            self.updateAnimation()
-        }
-        directionCanc = subject.$direction.sink { newDirection in
-            self.lastDirection = newDirection
-            self.updateAnimation()
+            Task { @MainActor in
+                self.lastState = newState
+                self.updateSprite()
+            }
         }
     }
     
-    private func updateAnimation() {
+    @MainActor
+    private func updateSprite() {
         guard let subject = subject else { return }
         guard let path = subject.animationPath(for: lastState) else { return }
         guard path != animation.baseName else { return }
         printDebug(id, "Loaded", path)
-        animation = ImageAnimator(path)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + animation.loopDuracy) {
-            subject.set(state: .move)
+        animation.invalidate()
+        
+        if case .animation(let anim, let requiredLoops) = lastState {
+            subject.set(frame: anim.frame(for: subject))
+            subject.movement?.isEnabled = false
+            
+            animation = ImageAnimator(path) { completedLoops in
+                guard requiredLoops == completedLoops else { return }
+                subject.movement?.isEnabled = true
+                subject.set(state: .move)
+                subject.set(frame: self.lastFrameBeforeAnimations)
+            }
+        } else {
+            animation = ImageAnimator(path) { _ in }
         }
     }
     
     open override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
+        guard let subject = subject else { return }
+        
         if let next = animation.nextFrame(after: time) {
-            subject?.sprite = next
+            subject.sprite = next
+        }
+        if case .animation = subject.state {
+            // ...
+        } else {
+            lastFrameBeforeAnimations = subject.frame
         }
     }
     
@@ -57,8 +74,6 @@ open class AnimatedSprite: Capability, ObservableObject {
         animation = .none
         stateCanc?.cancel()
         stateCanc = nil
-        directionCanc?.cancel()
-        directionCanc = nil
     }
 }
 

@@ -57,7 +57,7 @@ open class PetEntity: Entity {
         case .drag: path = species.dragPath
         case .move: path = species.movementPath
         case .disappearing: return "smoke_bomb"
-        case .animation(let animation): path = animation.id
+        case .animation(let animation, _): path = animation.id
         }
         return "\(species.id)_\(path)"
     }

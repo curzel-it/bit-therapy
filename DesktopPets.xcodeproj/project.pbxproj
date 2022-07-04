@@ -7659,14 +7659,14 @@
 		A60B8C9F283D82BB0030F8F0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A6B954F12870F97B006E3C84 /* PixelArt */,
 				A60B8CA0283D82BB0030F8F0 /* Assets.xcassets */,
 				A60B9C07283D82BE0030F8F0 /* Fonts */,
 				A6982612283D885300C70E49 /* Info-Dev.plist */,
 				A6E5CD7128605459008AA653 /* Info-Prod.plist */,
-				A60B8CA1283D82BB0030F8F0 /* MacPets.entitlements */,
-				A60B8CA2283D82BB0030F8F0 /* Secrets.plist */,
 				A6D6FFF9286EE89600E691EF /* Localizable.strings */,
+				A60B8CA1283D82BB0030F8F0 /* MacPets.entitlements */,
+				A6B954F12870F97B006E3C84 /* PixelArt */,
+				A60B8CA2283D82BB0030F8F0 /* Secrets.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

@@ -47,7 +47,7 @@ private extension EntityAnimation {
     
     static func climb(to position: Position) -> EntityAnimation {
         let left = position == .habitatTopLeft
-        let direction: CGVector = .init(dx: left ? -1 : 1, dy: 0)
+        let direction: CGVector = .init(dx: left ? 1 : -1, dy: 0)
         
         return .init(
             id: "climb",

@@ -7,19 +7,23 @@ import AppKit
 public class ImageAnimator {
     
     public let baseName: String
-    public let frames: [NSImage]
+    public var frames: [NSImage]
     public let frameTime: TimeInterval = 0.1
     public let loopDuracy: TimeInterval
-        
+    
+    var onLoopEnded: (Int) -> Void
     var currentFrameIndex: Int = 0
+    var completedLoops: Int = 0
     
     private var leftoverTime: TimeInterval = 0
     
     public init(
         _ name: String,
         frames someFrames: [NSImage]? = nil,
-        bundle: Bundle = .main
+        bundle: Bundle = .main,
+        onLoopEnded: @escaping (Int) -> Void = { _ in }
     ) {
+        self.onLoopEnded = onLoopEnded
         let frames = someFrames ?? ImageAnimator.frames(for: name, in: bundle)
         self.baseName = name
         self.frames = frames
@@ -40,10 +44,18 @@ public class ImageAnimator {
         
         let nextIndex = (currentFrameIndex + framesSkipped) % frames.count
         if currentFrameIndex != nextIndex {
+            if nextIndex < currentFrameIndex {
+                completedLoops += 1
+                onLoopEnded(completedLoops)
+            }
             currentFrameIndex = nextIndex
             return frames[nextIndex]
         }
         return nil
+    }
+    
+    public func invalidate() {
+        self.onLoopEnded = { _ in }
     }
 }
 

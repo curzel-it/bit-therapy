@@ -27,12 +27,12 @@ public struct EntityAnimation: Equatable {
         self.chance = chance
     }
     
-    public func frame(from petFrame: CGRect, in habitatBounds: CGRect) -> CGRect {
-        let newSize = size(for: petFrame.size)
+    public func frame(for entity: Entity) -> CGRect {
+        let newSize = size(for: entity.spawnFrame.size)
         let newPosition = position(
-            originalFrame: petFrame,
+            originalFrame: entity.frame,
             newSize: newSize,
-            in: habitatBounds
+            in: entity.habitatBounds
         )
         return CGRect(origin: newPosition, size: newSize)
     }
@@ -46,35 +46,35 @@ public struct EntityAnimation: Equatable {
     }
     
     private func position(
-        originalFrame petFrame: CGRect,
+        originalFrame entityFrame: CGRect,
         newSize: CGSize,
         in habitatBounds: CGRect
     ) -> CGPoint {
         switch position {
             
         case .centeredInEntity:
-            return petFrame.origin
-                .offset(x: (petFrame.size.width - newSize.width) / 2)
-                .offset(y: (petFrame.size.height - newSize.height) / 2)
+            return entityFrame.origin
+                .offset(x: (entityFrame.size.width - newSize.width) / 2)
+                .offset(y: (entityFrame.size.height - newSize.height) / 2)
             
         case .fromEntityBottomLeft:
-            return petFrame.origin
-                .offset(y: petFrame.size.height - newSize.height)
+            return entityFrame.origin
+                .offset(y: entityFrame.size.height - newSize.height)
             
         case .entityTopLeft:
-            return petFrame.origin
+            return entityFrame.origin
             
         case .habitatTopLeft:
             return habitatBounds.topLeft
             
         case .habitatTopRight:
-            return habitatBounds.topRight.offset(x: -petFrame.width)
+            return habitatBounds.topRight.offset(x: -entityFrame.width)
             
         case .habitatBottomRight:
-            return habitatBounds.bottomRight.offset(by: petFrame.size.oppositeSign())
+            return habitatBounds.bottomRight.offset(by: entityFrame.size.oppositeSign())
             
         case .habitatBottomLeft:
-            return habitatBounds.bottomLeft.offset(y: -petFrame.height)
+            return habitatBounds.bottomLeft.offset(y: -entityFrame.height)
         }
     }
 }

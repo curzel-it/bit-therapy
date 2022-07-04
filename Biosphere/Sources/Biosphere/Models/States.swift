@@ -10,7 +10,7 @@ public enum EntityState: Equatable {
     case disappearing
     case drag
     case move
-    case animation(animation: EntityAnimation)
+    case animation(animation: EntityAnimation, loops: Int?)
     
     public var description: String {
         switch self {
@@ -18,7 +18,7 @@ public enum EntityState: Equatable {
         case .freeFall: return "freeFall"
         case .drag: return "drag"
         case .move: return "move"
-        case .animation(let animation): return animation.id
+        case .animation(let animation, _): return animation.id
         }
     }
 }
