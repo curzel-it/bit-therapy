@@ -3,7 +3,6 @@
 //
 
 import AppKit
-import AppState
 import Biosphere
 import DesignSystem
 
@@ -31,7 +30,7 @@ extension PetEntity {
     
     public static func speedMultiplier(for size: CGFloat) -> CGFloat {
         let sizeRatio = size / PetSize.defaultSize
-        return baseSpeed * sizeRatio * AppState.global.speedMultiplier
+        return baseSpeed * sizeRatio
     }
 }
 
@@ -39,14 +38,13 @@ extension PetEntity {
 
 extension PetEntity {
     
-    static func initialFrame(in habitatBounds: CGRect, prefers: CGSize?) -> CGRect {
-        let size = prefers ?? CGSize(square: AppState.global.petSize)
+    static func initialFrame(in habitatBounds: CGRect, size: CGFloat) -> CGRect {
         let position = habitatBounds
             .bottomLeft
             .offset(x: habitatBounds.width/4)
-            .offset(y: -size.height)
+            .offset(y: -size)
         
-        return CGRect(origin: position, size: size)
+        return CGRect(origin: position, size: CGSize(square: size))
     }
 }
 

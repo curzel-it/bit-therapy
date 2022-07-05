@@ -3,33 +3,33 @@
 import PackageDescription
 
 let package = Package(
-    name: "Pets",
+    name: "EntityWindow",
     platforms: [.macOS(.v12)],
     products: [
         .library(
-            name: "Pets",
-            targets: ["Pets"]
+            name: "EntityWindow",
+            targets: ["EntityWindow"]
         )
     ],
     dependencies: [
-        .package(path: "../Biosphere"),
-        .package(path: "../DesignSystem"),
-        .package(path: "../Schwifty"),
-        .package(path: "../Squanch")
+        .package(path: "../AppState"),
+        .package(path: "../../Biosphere"),
+        .package(path: "../../Schwifty"),
+        .package(path: "../../Squanch")
     ],
     targets: [
         .target(
-            name: "Pets",
+            name: "EntityWindow",
             dependencies: [
+                .product(name: "AppState", package: "AppState"),
                 .product(name: "Biosphere", package: "Biosphere"),
-                .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch")
             ]
         ),
         .testTarget(
-            name: "PetsTests",
-            dependencies: ["Pets"]
+            name: "EntityWindowTests",
+            dependencies: ["EntityWindow"]
         )
     ]
 )

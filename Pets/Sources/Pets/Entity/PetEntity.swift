@@ -2,7 +2,6 @@
 // Pet Therapy.
 //
 
-import AppState
 import Biosphere
 import Combine
 import DesignSystem
@@ -17,14 +16,14 @@ open class PetEntity: Entity {
     
     public init(
         of pet: Pet,
-        size: CGSize? = nil,
+        size: CGFloat,
         in habitatBounds: CGRect,
         installCapabilities: Bool = true
     ) {
         species = pet
         super.init(
             id: PetEntity.id(for: species),
-            frame: PetEntity.initialFrame(in: habitatBounds, prefers: size),
+            frame: PetEntity.initialFrame(in: habitatBounds, size: size),
             in: habitatBounds
         )
         speed = PetEntity.speed(for: species, size: frame.width)
