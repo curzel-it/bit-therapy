@@ -10,32 +10,21 @@ import SwiftUI
 
 public struct GameView: View {
     
-    @StateObject var viewModel = ViewModel(bounds: .zero)
-    
-    @State var size: CGSize = .zero
+    @StateObject var viewModel = ViewModel(
+        bounds: CGRect(size: CGSize(width: 700, height: 500))
+    )
     
     public init() {
         // ...
     }
     
     public var body: some View {
-        GeometryReader { geo in
             ZStack {
                 Inhabitants()
             }
-            .frame(size: size)
+            .frame(sizeOf: viewModel.state.bounds)
             .environmentObject(viewModel)
             .environmentObject(viewModel as HabitatViewModel)
-            .background(.green)
-            .border(.red, width: 1)
-            .onAppear { update(with: geo.size) }
-            .onChange(of: geo.size) { update(with: $0) }
-        }
-    }
-    
-    func update(with newSize: CGSize) {
-        size = newSize
-        viewModel.set(bounds: CGRect(size: newSize))
     }
 }
 

@@ -28,9 +28,7 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
         let delegate = MainWindowDelegate()
         delegate.window = window
         window.delegate = delegate
-        window.titlebarAppearsTransparent = true
-        window.titleVisibility = .hidden
-        window.isMovableByWindowBackground = true
+        window.styleMask.remove(.resizable)
         MainWindowDelegate.instance = delegate
         GameState.global.mainWindowSize = window.frame.size
     }

@@ -15,8 +15,6 @@ struct MainView: View {
     
     var body: some View {
         GameView()
-            .frame(minWidth: 600)
-            .frame(minHeight: 600)
             .foregroundColor(.label)
             .font(.regular, .md)
             .environmentObject(GameState.global)
