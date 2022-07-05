@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DesktopPets/DesktopPets.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Game/Game.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE.md">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Biosphere">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/DesignSystem">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Lang">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Pets">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Schwifty">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Squanch">
+   </FileRef>
+</Workspace>

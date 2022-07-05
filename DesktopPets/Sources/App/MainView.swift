@@ -31,8 +31,11 @@ struct MainView: View {
     }
 }
 
-extension AppPage: Tabbable {
-    // ...
+extension AppPage: CustomStringConvertible, Tabbable {
+    
+    public var description: String {
+        "page.title.\(self.rawValue)".localized()
+    }
 }
 
 private struct Header: View {

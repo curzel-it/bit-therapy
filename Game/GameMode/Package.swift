@@ -3,34 +3,37 @@
 import PackageDescription
 
 let package = Package(
-    name: "EntityWindow",
+    name: "GameMode",
     platforms: [.macOS(.v12)],
     products: [
         .library(
-            name: "EntityWindow",
-            targets: ["EntityWindow"]
+            name: "GameMode",
+            targets: ["GameMode"]
         )
     ],
     dependencies: [
-        .package(path: "../AppState"),
+        .package(path: "../GameState"),
         .package(path: "../../Biosphere"),
         .package(path: "../../DesignSystem"),
+        .package(path: "../../Pets"),
         .package(path: "../../Schwifty"),
         .package(path: "../../Squanch")
     ],
     targets: [
         .target(
-            name: "EntityWindow",
+            name: "GameMode",
             dependencies: [
-                .product(name: "AppState", package: "AppState"),
                 .product(name: "Biosphere", package: "Biosphere"),
+                .product(name: "DesignSystem", package: "DesignSystem"),
+                .product(name: "GameState", package: "GameState"),
+                .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch")
             ]
         ),
         .testTarget(
-            name: "EntityWindowTests",
-            dependencies: ["EntityWindow"]
+            name: "GameModeTests",
+            dependencies: ["GameMode"]
         )
     ]
 )

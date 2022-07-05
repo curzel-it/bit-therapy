@@ -35,6 +35,7 @@ class HabitatWindowsTests: XCTestCase {
             in: habitat.state.bounds
         )
         windows = HabitatWindows<HabitatViewModel>(
+            id: "test",
             for: habitat,
             whenAllWindowsHaveBeenClosed: {}
         )
@@ -42,30 +43,30 @@ class HabitatWindowsTests: XCTestCase {
     
     func testWindowsAreSpawnedAutomatically() {
         let expectation = expectation(description: "")
-        XCTAssertEqual(windows.windows.count, habitat.state.children.count)
+        XCTAssertEqual(windows.windows.count, habitat.drawableChildren)
                 
         habitat.state.children.append(entity1)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            XCTAssertEqual(self.windows.windows.count, self.habitat.state.children.count)
+            XCTAssertEqual(self.windows.windows.count, self.habitat.drawableChildren)
             
             self.habitat.state.children.append(self.entity2)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                XCTAssertEqual(self.windows.windows.count, self.habitat.state.children.count)
+                XCTAssertEqual(self.windows.windows.count, self.habitat.drawableChildren)
                 expectation.fulfill()
             }
         }
         
         waitForExpectations(timeout: 1)
-        XCTAssertEqual(self.windows.windows.count, self.habitat.state.children.count)
+        XCTAssertEqual(self.windows.windows.count, habitat.drawableChildren)
     }
     
     func testClosedWindowsAreRemovedAutomatically() {
         let expectation = expectation(description: "")
-        XCTAssertEqual(windows.windows.count, habitat.state.children.count)
+        XCTAssertEqual(windows.windows.count, habitat.drawableChildren)
         
         habitat.state.children.append(entity1)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            XCTAssertEqual(self.windows.windows.count, self.habitat.state.children.count)
+            XCTAssertEqual(self.windows.windows.count, self.habitat.drawableChildren)
             
             self.entity1.kill()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -74,6 +75,13 @@ class HabitatWindowsTests: XCTestCase {
         }
         
         waitForExpectations(timeout: 1)
-        XCTAssertEqual(self.windows.windows.count, self.habitat.state.children.count-1)
+        XCTAssertEqual(self.windows.windows.count, habitat.drawableChildren)
+    }
+}
+
+private extension HabitatViewModel {
+    
+    var drawableChildren: Int {
+        state.children.filter { $0.isDrawable }.count
     }
 }

@@ -7,30 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A60AC97F2865F2F40048944D /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A60AC97E2865F2F40048944D /* OnScreen */; };
-		A60AC9812865F4330048944D /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A60AC9802865F4330048944D /* OnScreen */; };
-		A60AC9842865FA360048944D /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A60AC9832865FA360048944D /* PetSelection */; };
-		A60AC9862865FA400048944D /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A60AC9852865FA400048944D /* PetSelection */; };
-		A63499172859B90600488588 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63499162859B90600488588 /* Tracking */; };
-		A634991B2859BC5100488588 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A634991A2859BC5100488588 /* Pets */; };
-		A634991F2859C15900488588 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A634991E2859C15900488588 /* InAppPurchases */; };
-		A63499222859C43300488588 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A63499212859C43300488588 /* Lang */; };
-		A63499252859CDF900488588 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A63499242859CDF900488588 /* EntityWindow */; };
-		A65C128A285389F7001F2B70 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A65C1289285389F7001F2B70 /* Squanch */; };
-		A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A67373C2285386D1002DC8FA /* LaunchAtLogin */; };
-		A67373CA2853881E002DC8FA /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A67373C92853881E002DC8FA /* Schwifty */; };
-		A67373CC28538974002DC8FA /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A67373CB28538974002DC8FA /* DesignSystem */; };
-		A6E5AADA2860525A008AA653 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABC2860525A008AA653 /* Pets */; };
-		A6E5AADB2860525A008AA653 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABF2860525A008AA653 /* EntityWindow */; };
-		A6E5AADD2860525A008AA653 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAB52860525A008AA653 /* LaunchAtLogin */; };
-		A6E5AADE2860525A008AA653 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAB72860525A008AA653 /* Schwifty */; };
-		A6E5AADF2860525A008AA653 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABB2860525A008AA653 /* Tracking */; };
-		A6E5AAE02860525A008AA653 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABA2860525A008AA653 /* Squanch */; };
-		A6E5AAE12860525A008AA653 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AAB82860525A008AA653 /* DesignSystem */; };
-		A6E5AAE22860525A008AA653 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABD2860525A008AA653 /* InAppPurchases */; };
-		A6E5AAE32860525A008AA653 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5AABE2860525A008AA653 /* Lang */; };
-		A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5CDCD2860929E008AA653 /* Biosphere */; };
-		A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6E5CDCF286092A6008AA653 /* Biosphere */; };
+		A63AC7AB2874766200A9F738 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AA2874766200A9F738 /* AppState */; };
+		A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AC2874766200A9F738 /* Biosphere */; };
+		A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B02874766200A9F738 /* EntityWindow */; };
+		A63AC7B32874766200A9F738 /* HabitatWindows in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B22874766200A9F738 /* HabitatWindows */; };
+		A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B42874766200A9F738 /* InAppPurchases */; };
+		A63AC7B72874766200A9F738 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B62874766200A9F738 /* Lang */; };
+		A63AC7B92874766200A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B82874766200A9F738 /* OnScreen */; };
+		A63AC7BB2874766200A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BA2874766200A9F738 /* Pets */; };
+		A63AC7BD2874766200A9F738 /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BC2874766200A9F738 /* PetSelection */; };
+		A63AC7BF2874766200A9F738 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BE2874766200A9F738 /* Schwifty */; };
+		A63AC7C12874766200A9F738 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C02874766200A9F738 /* Squanch */; };
+		A63AC7C32874766200A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C22874766200A9F738 /* Tracking */; };
+		A63AC7C52874766200A9F738 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C42874766200A9F738 /* UfoAbduction */; };
+		A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C62874766C00A9F738 /* LaunchAtLogin */; };
+		A63AC7C92874768400A9F738 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C82874768400A9F738 /* AppState */; };
+		A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7CA2874768400A9F738 /* Biosphere */; };
+		A63AC7CF2874768400A9F738 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7CE2874768400A9F738 /* EntityWindow */; };
+		A63AC7D12874768400A9F738 /* HabitatWindows in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D02874768400A9F738 /* HabitatWindows */; };
+		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
+		A63AC7D52874768400A9F738 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D42874768400A9F738 /* Lang */; };
+		A63AC7D72874768400A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D62874768400A9F738 /* OnScreen */; };
+		A63AC7D92874768400A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D82874768400A9F738 /* Pets */; };
+		A63AC7DB2874768400A9F738 /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7DA2874768400A9F738 /* PetSelection */; };
+		A63AC7DD2874768400A9F738 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7DC2874768400A9F738 /* Schwifty */; };
+		A63AC7DF2874768400A9F738 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7DE2874768400A9F738 /* Squanch */; };
+		A63AC7E12874768400A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E02874768400A9F738 /* Tracking */; };
+		A63AC7E32874768400A9F738 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E22874768400A9F738 /* UfoAbduction */; };
+		A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E42874768400A9F738 /* LaunchAtLogin */; };
+		A63AC7E7287479A800A9F738 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E6287479A800A9F738 /* DesignSystem */; };
+		A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E8287479AD00A9F738 /* DesignSystem */; };
 		A6FB7D6828740F8E00AB872E /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4428740F8E00AB872E /* Secrets.plist */; };
 		A6FB7D6928740F8E00AB872E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		A6FB7D6A28740F8E00AB872E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
@@ -4355,9 +4361,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A6E91D9F28741522001BCC15 /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6E91DA028741522001BCC15 /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6E91DA128741522001BCC15 /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FB7D4428740F8E00AB872E /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		A6FB7D4628740F8E00AB872E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6FB7D4728740F8E00AB872E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -4377,13 +4383,8 @@
 		A6FB7D5C28740F8E00AB872E /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		A6FB7D8928740F9A00AB872E /* DesktopPets.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DesktopPets.xctestplan; sourceTree = "<group>"; };
 		A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopPetsTests.swift; sourceTree = "<group>"; };
-		A6FB7D8E28740FC600AB872E /* Squanch */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Squanch; path = ../Squanch; sourceTree = "<group>"; };
-		A6FB7D8F28740FD100AB872E /* Biosphere */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Biosphere; path = ../Biosphere; sourceTree = "<group>"; };
-		A6FB7D952874100600AB872E /* Pets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Pets; path = ../Pets; sourceTree = "<group>"; };
-		A6FB7D972874101B00AB872E /* Schwifty */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Schwifty; path = ../Schwifty; sourceTree = "<group>"; };
 		A6FB7D982874105500AB872E /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
 		A6FB7D992874105C00AB872E /* InAppPurchases */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InAppPurchases; sourceTree = "<group>"; };
-		A6FB7D9A2874106400AB872E /* Lang */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Lang; sourceTree = "<group>"; };
 		A6FB7D9B2874106B00AB872E /* PetSelection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PetSelection; sourceTree = "<group>"; };
 		A6FB7D9C2874107E00AB872E /* Tracking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Tracking; sourceTree = "<group>"; };
 		A6FB7D9D2874108600AB872E /* UfoAbduction */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UfoAbduction; sourceTree = "<group>"; };
@@ -7578,7 +7579,6 @@
 		A6FBAC892874112000AB872E /* trex_yellow_roar-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trex_yellow_roar-7.png"; sourceTree = "<group>"; };
 		A6FBAC8A2874112000AB872E /* trex_yellow_roar-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trex_yellow_roar-5.png"; sourceTree = "<group>"; };
 		A6FBAC8B2874112000AB872E /* trex_yellow_roar-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trex_yellow_roar-4.png"; sourceTree = "<group>"; };
-		A6FBB4C62874117D00AB872E /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = ../DesignSystem; sourceTree = "<group>"; };
 		A6FBB4C7287411AF00AB872E /* EntityWindow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EntityWindow; sourceTree = "<group>"; };
 		A6FBB4C8287411AF00AB872E /* HabitatWindows */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HabitatWindows; sourceTree = "<group>"; };
 		A6FBB4C9287411AF00AB872E /* OnScreen */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = OnScreen; sourceTree = "<group>"; };
@@ -7589,18 +7589,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60AC9812865F4330048944D /* OnScreen in Frameworks */,
-				A634991B2859BC5100488588 /* Pets in Frameworks */,
-				A6E5CDD0286092A6008AA653 /* Biosphere in Frameworks */,
-				A60AC9842865FA360048944D /* PetSelection in Frameworks */,
-				A63499252859CDF900488588 /* EntityWindow in Frameworks */,
-				A67373C3285386D1002DC8FA /* LaunchAtLogin in Frameworks */,
-				A67373CA2853881E002DC8FA /* Schwifty in Frameworks */,
-				A63499172859B90600488588 /* Tracking in Frameworks */,
-				A65C128A285389F7001F2B70 /* Squanch in Frameworks */,
-				A67373CC28538974002DC8FA /* DesignSystem in Frameworks */,
-				A634991F2859C15900488588 /* InAppPurchases in Frameworks */,
-				A63499222859C43300488588 /* Lang in Frameworks */,
+				A63AC7E7287479A800A9F738 /* DesignSystem in Frameworks */,
+				A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */,
+				A63AC7BF2874766200A9F738 /* Schwifty in Frameworks */,
+				A63AC7BD2874766200A9F738 /* PetSelection in Frameworks */,
+				A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */,
+				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
+				A63AC7B72874766200A9F738 /* Lang in Frameworks */,
+				A63AC7C12874766200A9F738 /* Squanch in Frameworks */,
+				A63AC7C52874766200A9F738 /* UfoAbduction in Frameworks */,
+				A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */,
+				A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */,
+				A63AC7B92874766200A9F738 /* OnScreen in Frameworks */,
+				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
+				A63AC7B32874766200A9F738 /* HabitatWindows in Frameworks */,
+				A63AC7AB2874766200A9F738 /* AppState in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7615,35 +7618,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6E5AADA2860525A008AA653 /* Pets in Frameworks */,
-				A6E5CDCE2860929E008AA653 /* Biosphere in Frameworks */,
-				A6E5AADB2860525A008AA653 /* EntityWindow in Frameworks */,
-				A60AC9862865FA400048944D /* PetSelection in Frameworks */,
-				A6E5AADD2860525A008AA653 /* LaunchAtLogin in Frameworks */,
-				A60AC97F2865F2F40048944D /* OnScreen in Frameworks */,
-				A6E5AADE2860525A008AA653 /* Schwifty in Frameworks */,
-				A6E5AADF2860525A008AA653 /* Tracking in Frameworks */,
-				A6E5AAE02860525A008AA653 /* Squanch in Frameworks */,
-				A6E5AAE12860525A008AA653 /* DesignSystem in Frameworks */,
-				A6E5AAE22860525A008AA653 /* InAppPurchases in Frameworks */,
-				A6E5AAE32860525A008AA653 /* Lang in Frameworks */,
+				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
+				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
+				A63AC7DD2874768400A9F738 /* Schwifty in Frameworks */,
+				A63AC7DB2874768400A9F738 /* PetSelection in Frameworks */,
+				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
+				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
+				A63AC7D52874768400A9F738 /* Lang in Frameworks */,
+				A63AC7DF2874768400A9F738 /* Squanch in Frameworks */,
+				A63AC7E32874768400A9F738 /* UfoAbduction in Frameworks */,
+				A63AC7CF2874768400A9F738 /* EntityWindow in Frameworks */,
+				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
+				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
+				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
+				A63AC7D12874768400A9F738 /* HabitatWindows in Frameworks */,
+				A63AC7C92874768400A9F738 /* AppState in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A63AC7942874739100A9F738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
+				A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */,
+				A66B2C1B28746D2E00D695EA /* Desktop Pets.app */,
+				A66B2C1928746D2E00D695EA /* DesktopPets.app */,
+				A63AC7942874739100A9F738 /* Frameworks */,
 				A6FB7D8D28740FC600AB872E /* Packages */,
 				A6FB7DBD287410B000AB872E /* PixelArt */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
 				A6FB7D8828740F9A00AB872E /* Tests */,
-				A6E91D9F28741522001BCC15 /* DesktopPets.app */,
-				A6E91DA028741522001BCC15 /* Desktop Pets Tests.xctest */,
-				A6E91DA128741522001BCC15 /* Desktop Pets.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -7810,17 +7824,11 @@
 			isa = PBXGroup;
 			children = (
 				A6FB7D982874105500AB872E /* AppState */,
-				A6FB7D8F28740FD100AB872E /* Biosphere */,
-				A6FBB4C62874117D00AB872E /* DesignSystem */,
 				A6FBB4C7287411AF00AB872E /* EntityWindow */,
 				A6FBB4C8287411AF00AB872E /* HabitatWindows */,
 				A6FB7D992874105C00AB872E /* InAppPurchases */,
-				A6FB7D9A2874106400AB872E /* Lang */,
 				A6FBB4C9287411AF00AB872E /* OnScreen */,
-				A6FB7D952874100600AB872E /* Pets */,
 				A6FB7D9B2874106B00AB872E /* PetSelection */,
-				A6FB7D972874101B00AB872E /* Schwifty */,
-				A6FB7D8E28740FC600AB872E /* Squanch */,
 				A6FB7D9C2874107E00AB872E /* Tracking */,
 				A6FB7D9D2874108600AB872E /* UfoAbduction */,
 			);
@@ -12541,21 +12549,24 @@
 			);
 			name = "Desktop Pets Dev";
 			packageProductDependencies = (
-				A67373C2285386D1002DC8FA /* LaunchAtLogin */,
-				A67373C92853881E002DC8FA /* Schwifty */,
-				A67373CB28538974002DC8FA /* DesignSystem */,
-				A65C1289285389F7001F2B70 /* Squanch */,
-				A63499162859B90600488588 /* Tracking */,
-				A634991A2859BC5100488588 /* Pets */,
-				A634991E2859C15900488588 /* InAppPurchases */,
-				A63499212859C43300488588 /* Lang */,
-				A63499242859CDF900488588 /* EntityWindow */,
-				A6E5CDCF286092A6008AA653 /* Biosphere */,
-				A60AC9802865F4330048944D /* OnScreen */,
-				A60AC9832865FA360048944D /* PetSelection */,
+				A63AC7AA2874766200A9F738 /* AppState */,
+				A63AC7AC2874766200A9F738 /* Biosphere */,
+				A63AC7B02874766200A9F738 /* EntityWindow */,
+				A63AC7B22874766200A9F738 /* HabitatWindows */,
+				A63AC7B42874766200A9F738 /* InAppPurchases */,
+				A63AC7B62874766200A9F738 /* Lang */,
+				A63AC7B82874766200A9F738 /* OnScreen */,
+				A63AC7BA2874766200A9F738 /* Pets */,
+				A63AC7BC2874766200A9F738 /* PetSelection */,
+				A63AC7BE2874766200A9F738 /* Schwifty */,
+				A63AC7C02874766200A9F738 /* Squanch */,
+				A63AC7C22874766200A9F738 /* Tracking */,
+				A63AC7C42874766200A9F738 /* UfoAbduction */,
+				A63AC7C62874766C00A9F738 /* LaunchAtLogin */,
+				A63AC7E6287479A800A9F738 /* DesignSystem */,
 			);
 			productName = MacPets;
-			productReference = A6E91D9F28741522001BCC15 /* DesktopPets.app */;
+			productReference = A66B2C1928746D2E00D695EA /* DesktopPets.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A65FE36D283D80CB00D1F5C8 /* Desktop Pets Tests */ = {
@@ -12574,7 +12585,7 @@
 			);
 			name = "Desktop Pets Tests";
 			productName = MacPetsTests;
-			productReference = A6E91DA028741522001BCC15 /* Desktop Pets Tests.xctest */;
+			productReference = A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A6E5AAB42860525A008AA653 /* Desktop Pets */ = {
@@ -12593,21 +12604,24 @@
 			);
 			name = "Desktop Pets";
 			packageProductDependencies = (
-				A6E5AAB52860525A008AA653 /* LaunchAtLogin */,
-				A6E5AAB72860525A008AA653 /* Schwifty */,
-				A6E5AAB82860525A008AA653 /* DesignSystem */,
-				A6E5AABA2860525A008AA653 /* Squanch */,
-				A6E5AABB2860525A008AA653 /* Tracking */,
-				A6E5AABC2860525A008AA653 /* Pets */,
-				A6E5AABD2860525A008AA653 /* InAppPurchases */,
-				A6E5AABE2860525A008AA653 /* Lang */,
-				A6E5AABF2860525A008AA653 /* EntityWindow */,
-				A6E5CDCD2860929E008AA653 /* Biosphere */,
-				A60AC97E2865F2F40048944D /* OnScreen */,
-				A60AC9852865FA400048944D /* PetSelection */,
+				A63AC7C82874768400A9F738 /* AppState */,
+				A63AC7CA2874768400A9F738 /* Biosphere */,
+				A63AC7CE2874768400A9F738 /* EntityWindow */,
+				A63AC7D02874768400A9F738 /* HabitatWindows */,
+				A63AC7D22874768400A9F738 /* InAppPurchases */,
+				A63AC7D42874768400A9F738 /* Lang */,
+				A63AC7D62874768400A9F738 /* OnScreen */,
+				A63AC7D82874768400A9F738 /* Pets */,
+				A63AC7DA2874768400A9F738 /* PetSelection */,
+				A63AC7DC2874768400A9F738 /* Schwifty */,
+				A63AC7DE2874768400A9F738 /* Squanch */,
+				A63AC7E02874768400A9F738 /* Tracking */,
+				A63AC7E22874768400A9F738 /* UfoAbduction */,
+				A63AC7E42874768400A9F738 /* LaunchAtLogin */,
+				A63AC7E8287479AD00A9F738 /* DesignSystem */,
 			);
 			productName = MacPets;
-			productReference = A6E91DA128741522001BCC15 /* Desktop Pets.app */;
+			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -17432,114 +17446,130 @@
 				kind = branch;
 			};
 		};
-		A6E5AAB62860525A008AA653 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A60AC97E2865F2F40048944D /* OnScreen */ = {
+		A63AC7AA2874766200A9F738 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = OnScreen;
+			productName = AppState;
 		};
-		A60AC9802865F4330048944D /* OnScreen */ = {
+		A63AC7AC2874766200A9F738 /* Biosphere */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = OnScreen;
+			productName = Biosphere;
 		};
-		A60AC9832865FA360048944D /* PetSelection */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PetSelection;
-		};
-		A60AC9852865FA400048944D /* PetSelection */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PetSelection;
-		};
-		A63499162859B90600488588 /* Tracking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Tracking;
-		};
-		A634991A2859BC5100488588 /* Pets */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Pets;
-		};
-		A634991E2859C15900488588 /* InAppPurchases */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = InAppPurchases;
-		};
-		A63499212859C43300488588 /* Lang */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Lang;
-		};
-		A63499242859CDF900488588 /* EntityWindow */ = {
+		A63AC7B02874766200A9F738 /* EntityWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EntityWindow;
 		};
-		A65C1289285389F7001F2B70 /* Squanch */ = {
+		A63AC7B22874766200A9F738 /* HabitatWindows */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HabitatWindows;
+		};
+		A63AC7B42874766200A9F738 /* InAppPurchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InAppPurchases;
+		};
+		A63AC7B62874766200A9F738 /* Lang */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Lang;
+		};
+		A63AC7B82874766200A9F738 /* OnScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OnScreen;
+		};
+		A63AC7BA2874766200A9F738 /* Pets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Pets;
+		};
+		A63AC7BC2874766200A9F738 /* PetSelection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PetSelection;
+		};
+		A63AC7BE2874766200A9F738 /* Schwifty */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Schwifty;
+		};
+		A63AC7C02874766200A9F738 /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Squanch;
 		};
-		A67373C2285386D1002DC8FA /* LaunchAtLogin */ = {
+		A63AC7C22874766200A9F738 /* Tracking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Tracking;
+		};
+		A63AC7C42874766200A9F738 /* UfoAbduction */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UfoAbduction;
+		};
+		A63AC7C62874766C00A9F738 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
 		};
-		A67373C92853881E002DC8FA /* Schwifty */ = {
+		A63AC7C82874768400A9F738 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Schwifty;
+			productName = AppState;
 		};
-		A67373CB28538974002DC8FA /* DesignSystem */ = {
+		A63AC7CA2874768400A9F738 /* Biosphere */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
+			productName = Biosphere;
 		};
-		A6E5AAB52860525A008AA653 /* LaunchAtLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A6E5AAB62860525A008AA653 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
-			productName = LaunchAtLogin;
-		};
-		A6E5AAB72860525A008AA653 /* Schwifty */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Schwifty;
-		};
-		A6E5AAB82860525A008AA653 /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
-		A6E5AABA2860525A008AA653 /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Squanch;
-		};
-		A6E5AABB2860525A008AA653 /* Tracking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Tracking;
-		};
-		A6E5AABC2860525A008AA653 /* Pets */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Pets;
-		};
-		A6E5AABD2860525A008AA653 /* InAppPurchases */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = InAppPurchases;
-		};
-		A6E5AABE2860525A008AA653 /* Lang */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Lang;
-		};
-		A6E5AABF2860525A008AA653 /* EntityWindow */ = {
+		A63AC7CE2874768400A9F738 /* EntityWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EntityWindow;
 		};
-		A6E5CDCD2860929E008AA653 /* Biosphere */ = {
+		A63AC7D02874768400A9F738 /* HabitatWindows */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Biosphere;
+			productName = HabitatWindows;
 		};
-		A6E5CDCF286092A6008AA653 /* Biosphere */ = {
+		A63AC7D22874768400A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Biosphere;
+			productName = InAppPurchases;
+		};
+		A63AC7D42874768400A9F738 /* Lang */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Lang;
+		};
+		A63AC7D62874768400A9F738 /* OnScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OnScreen;
+		};
+		A63AC7D82874768400A9F738 /* Pets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Pets;
+		};
+		A63AC7DA2874768400A9F738 /* PetSelection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PetSelection;
+		};
+		A63AC7DC2874768400A9F738 /* Schwifty */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Schwifty;
+		};
+		A63AC7DE2874768400A9F738 /* Squanch */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Squanch;
+		};
+		A63AC7E02874768400A9F738 /* Tracking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Tracking;
+		};
+		A63AC7E22874768400A9F738 /* UfoAbduction */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UfoAbduction;
+		};
+		A63AC7E42874768400A9F738 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+		A63AC7E6287479A800A9F738 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		A63AC7E8287479AD00A9F738 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

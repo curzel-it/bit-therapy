@@ -22,6 +22,16 @@ Hope you like them too!
 ## Running the Project
 
 1. Download and setup Xcode
-1. Open `MacPets` project from this repo
-1. There's only one dependency which will be installed via SPM (and many thanks to [LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin) maintainers!)
-1. That's it!
+1. Open the `PetTherapy` workspace
+1. Give Xcode some time to figure out Swift Packages dependencies ([LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin) and [Firebase](https://github.com/firebase/firebase-ios-sdk))
+1. Select target 'Desktop Pets Dev'
+
+(For daily use I recommend getting the App from the App Store)
+
+## Troubleshooting
+
+### Swift Packages not loading
+* Xcode does not like local swift packages 🤷‍♂️
+* Try Reset Packages Cache (Package Dependencies > Right Click)
+* Close Xcode and relaunch  
+
