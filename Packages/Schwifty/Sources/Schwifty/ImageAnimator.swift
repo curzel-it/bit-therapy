@@ -4,7 +4,7 @@
 
 import AppKit
 
-public class ImageAnimator {
+open class ImageAnimator {
     
     public let baseName: String
     public var frames: [NSImage]
@@ -36,9 +36,8 @@ public class ImageAnimator {
     public func nextFrame(after time: TimeInterval) -> NSImage? {
         guard frames.count > 0 else { return nil }
         
-        if completedLoops == 0 && currentFrameIndex == 0 && leftoverTime == 0 {
-            onFirstFrameLoaded?(0)
-        }
+        handleFirstFrameOfFirstLoopIfNeeded()
+        
         let timeSinceLastFrameChange = time + leftoverTime
         guard timeSinceLastFrameChange >= frameTime else {
             leftoverTime = timeSinceLastFrameChange
@@ -51,15 +50,25 @@ public class ImageAnimator {
         
         let nextIndex = (currentFrameIndex + framesSkipped) % frames.count
         if currentFrameIndex != nextIndex {
-            if nextIndex < currentFrameIndex {
-                completedLoops += 1
-                onLoopCompleted?(completedLoops)
-                onFirstFrameLoaded?(completedLoops)
-            }
-            currentFrameIndex = nextIndex
+            checkLoopCompletion(nextIndex: nextIndex)
             return frames[nextIndex]
         }
         return nil
+    }
+    
+    private func handleFirstFrameOfFirstLoopIfNeeded() {
+        if completedLoops == 0 && currentFrameIndex == 0 && leftoverTime == 0 {
+            onFirstFrameLoaded?(0)
+        }
+    }
+    
+    private func checkLoopCompletion(nextIndex: Int) {
+        if nextIndex < currentFrameIndex {
+            completedLoops += 1
+            onLoopCompleted?(completedLoops)
+            onFirstFrameLoaded?(completedLoops)
+        }
+        currentFrameIndex = nextIndex
     }
     
     public func invalidate() {

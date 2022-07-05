@@ -86,6 +86,8 @@ open class AnimatedSprite: Capability, ObservableObject {
     }
 }
 
+// MARK: - Entity Utils
+
 extension Entity {
     
     public var animation: AnimatedSprite? { capability(for: AnimatedSprite.self) }
