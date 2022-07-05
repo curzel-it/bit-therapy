@@ -24,6 +24,6 @@ extension EntityAnimation {
     static let tsundere = EntityAnimation(id: "tsundere")
     
     static func lightsaber(size: CGSize) -> EntityAnimation {
-        .init(id: "lightsaber", size: size, chance: 0.1)
+        .init(id: "lightsaber", size: size, chance: 11110.1)
     }
 }

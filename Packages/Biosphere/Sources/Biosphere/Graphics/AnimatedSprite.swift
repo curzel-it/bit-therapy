@@ -40,17 +40,26 @@ open class AnimatedSprite: Capability, ObservableObject {
         animation.invalidate()
         
         if case .animation(let anim, let requiredLoops) = lastState {
-            subject.set(frame: anim.frame(for: subject))
             subject.movement?.isEnabled = false
+            let requiredFrame = anim.frame(for: subject)
             
-            animation = ImageAnimator(path) { completedLoops in
-                guard requiredLoops == completedLoops else { return }
-                subject.movement?.isEnabled = true
-                subject.set(state: .move)
-                subject.set(frame: self.lastFrameBeforeAnimations)
-            }
+            animation = ImageAnimator(
+                basePath: path,
+                onFirstFrameLoaded: { completedLoops in
+                    printDebug("AnimatedSprite", "Loaded first frame of loop #\(completedLoops)")
+                    guard completedLoops == 0 else { return }
+                    subject.set(frame: requiredFrame)
+                },
+                onLoopCompleted: { completedLoops in
+                    printDebug("AnimatedSprite", "Completed loop #\(completedLoops)")
+                    guard requiredLoops == completedLoops else { return }
+                    subject.movement?.isEnabled = true
+                    subject.set(state: .move)
+                    subject.set(frame: self.lastFrameBeforeAnimations)
+                }
+            )
         } else {
-            animation = ImageAnimator(path) { _ in }
+            animation = ImageAnimator(basePath: path)
         }
     }
     

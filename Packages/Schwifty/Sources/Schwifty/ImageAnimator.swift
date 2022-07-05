@@ -11,19 +11,22 @@ public class ImageAnimator {
     public let frameTime: TimeInterval = 0.1
     public let loopDuracy: TimeInterval
     
-    var onLoopEnded: (Int) -> Void
+    var onFirstFrameLoaded: ((Int) -> Void)?
+    var onLoopCompleted: ((Int) -> Void)?
     var currentFrameIndex: Int = 0
     var completedLoops: Int = 0
     
     private var leftoverTime: TimeInterval = 0
     
     public init(
-        _ name: String,
+        basePath name: String,
         frames someFrames: [NSImage]? = nil,
         bundle: Bundle = .main,
-        onLoopEnded: @escaping (Int) -> Void = { _ in }
+        onFirstFrameLoaded: ((Int) -> Void)? = nil,
+        onLoopCompleted: ((Int) -> Void)? = nil
     ) {
-        self.onLoopEnded = onLoopEnded
+        self.onFirstFrameLoaded = onFirstFrameLoaded
+        self.onLoopCompleted = onLoopCompleted
         let frames = someFrames ?? ImageAnimator.frames(for: name, in: bundle)
         self.baseName = name
         self.frames = frames
@@ -32,6 +35,10 @@ public class ImageAnimator {
     
     public func nextFrame(after time: TimeInterval) -> NSImage? {
         guard frames.count > 0 else { return nil }
+        
+        if completedLoops == 0 && currentFrameIndex == 0 && leftoverTime == 0 {
+            onFirstFrameLoaded?(0)
+        }
         let timeSinceLastFrameChange = time + leftoverTime
         guard timeSinceLastFrameChange >= frameTime else {
             leftoverTime = timeSinceLastFrameChange
@@ -46,7 +53,8 @@ public class ImageAnimator {
         if currentFrameIndex != nextIndex {
             if nextIndex < currentFrameIndex {
                 completedLoops += 1
-                onLoopEnded(completedLoops)
+                onLoopCompleted?(completedLoops)
+                onFirstFrameLoaded?(completedLoops)
             }
             currentFrameIndex = nextIndex
             return frames[nextIndex]
@@ -55,7 +63,8 @@ public class ImageAnimator {
     }
     
     public func invalidate() {
-        self.onLoopEnded = { _ in }
+        self.onFirstFrameLoaded = nil
+        self.onLoopCompleted = nil
     }
 }
 
@@ -83,5 +92,5 @@ private extension ImageAnimator {
 
 extension ImageAnimator {
  
-    public static let none = ImageAnimator("")
+    public static let none = ImageAnimator(basePath: "")
 }
