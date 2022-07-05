@@ -73,7 +73,6 @@ private extension EntityWindow {
     }
     
     func updateFrame(toShow entityFrame: CGRect, in habitat: CGRect) {
-        let sizeChanged = expectedFrame.size != entityFrame.size
         expectedFrame = CGRect(
             origin: CGPoint(
                 x: entityFrame.minX,
@@ -81,7 +80,7 @@ private extension EntityWindow {
             ),
             size: entityFrame.size
         )
-        setFrame(expectedFrame, display: true, animate: sizeChanged)
+        setFrame(expectedFrame, display: true, animate: false)
     }
 }
 
