@@ -17,7 +17,6 @@ let package = Package(
         .package(path: "../HabitatWindows"),
         .package(path: "../UfoAbduction"),
         .package(path: "../../Biosphere"),
-        .package(path: "../../DesignSystem"),
         .package(path: "../../Pets"),
         .package(path: "../../Schwifty"),
         .package(path: "../../Squanch")
@@ -28,7 +27,6 @@ let package = Package(
             dependencies: [
                 .product(name: "AppState", package: "AppState"),
                 .product(name: "Biosphere", package: "Biosphere"),
-                .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "EntityWindow", package: "EntityWindow"),
                 .product(name: "HabitatWindows", package: "HabitatWindows"),
                 .product(name: "Pets", package: "Pets"),

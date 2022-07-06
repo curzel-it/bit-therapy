@@ -4,6 +4,7 @@
 
 import AppKit
 import Combine
+import PetsAssets
 import Schwifty
 import Squanch
 
@@ -43,8 +44,8 @@ open class AnimatedSprite: Capability, ObservableObject {
             subject.movement?.isEnabled = false
             let requiredFrame = anim.frame(for: subject)
             
-            animation = ImageAnimator(
-                basePath: path,
+            animation = PetsAssets.animator(
+                baseName: path,
                 onFirstFrameLoaded: { completedLoops in
                     printDebug("AnimatedSprite", "Loaded first frame of loop #\(completedLoops)")
                     guard completedLoops == 0 else { return }
@@ -59,7 +60,7 @@ open class AnimatedSprite: Capability, ObservableObject {
                 }
             )
         } else {
-            animation = ImageAnimator(basePath: path)
+            animation = PetsAssets.animator(baseName: path)
         }
     }
     

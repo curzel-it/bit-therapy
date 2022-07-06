@@ -2,7 +2,7 @@
 // Pet Therapy.
 // 
 
-import DesignSystem
+// import DesignSystem
 import EntityWindow
 import Schwifty
 import SwiftUI

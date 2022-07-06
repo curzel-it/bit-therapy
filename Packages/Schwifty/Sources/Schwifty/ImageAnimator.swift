@@ -4,10 +4,10 @@
 
 import AppKit
 
-open class ImageAnimator {
+public class ImageAnimator {
     
     public let baseName: String
-    public var frames: [NSImage]
+    public let frames: [NSImage]
     public let frameTime: TimeInterval = 0.1
     public let loopDuracy: TimeInterval
     
@@ -19,16 +19,14 @@ open class ImageAnimator {
     private var leftoverTime: TimeInterval = 0
     
     public init(
-        basePath name: String,
-        frames someFrames: [NSImage]? = nil,
-        bundle: Bundle = .main,
+        baseName: String,
+        frames: [NSImage],
         onFirstFrameLoaded: ((Int) -> Void)? = nil,
         onLoopCompleted: ((Int) -> Void)? = nil
     ) {
+        self.baseName = baseName
         self.onFirstFrameLoaded = onFirstFrameLoaded
         self.onLoopCompleted = onLoopCompleted
-        let frames = someFrames ?? ImageAnimator.frames(for: name, in: bundle)
-        self.baseName = name
         self.frames = frames
         self.loopDuracy = TimeInterval(frames.count) * frameTime
     }
@@ -77,29 +75,9 @@ open class ImageAnimator {
     }
 }
 
-// MARK: - Load Frames
-
-private extension ImageAnimator {
-    
-    static func frames(for name: String, in bundle: Bundle) -> [NSImage] {
-        var frames: [NSImage] = []
-        var frameIndex = 0
-        while true {
-            if let path = bundle.path(forResource: "\(name)-\(frameIndex)", ofType: "png"),
-               let image = NSImage(contentsOfFile: path) {
-                frames.append(image)
-            } else {
-                if frameIndex != 0 { break }
-            }
-            frameIndex += 1
-        }
-        return frames
-    }
-}
-
 // MARK: - No Animations
 
 extension ImageAnimator {
  
-    public static let none = ImageAnimator(basePath: "")
+    public static let none = ImageAnimator(baseName: "", frames: [])
 }

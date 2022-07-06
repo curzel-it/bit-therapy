@@ -26,6 +26,9 @@
       location = "group:Packages/Pets">
    </FileRef>
    <FileRef
+      location = "group:Packages/PetsAssets">
+   </FileRef>
+   <FileRef
       location = "group:Packages/Schwifty">
    </FileRef>
    <FileRef
