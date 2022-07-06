@@ -37,6 +37,142 @@
 		A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E42874768400A9F738 /* LaunchAtLogin */; };
 		A63AC7E7287479A800A9F738 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E6287479A800A9F738 /* DesignSystem */; };
 		A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E8287479AD00A9F738 /* DesignSystem */; };
+		A656134B28757CB200F48507 /* sloth_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133928757CAE00F48507 /* sloth_lightsaber-14.png */; };
+		A656134C28757CB200F48507 /* sloth_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133928757CAE00F48507 /* sloth_lightsaber-14.png */; };
+		A656134D28757CB200F48507 /* sloth_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133A28757CAF00F48507 /* sloth_lightsaber-6.png */; };
+		A656134E28757CB200F48507 /* sloth_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133A28757CAF00F48507 /* sloth_lightsaber-6.png */; };
+		A656134F28757CB200F48507 /* sloth_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133B28757CAF00F48507 /* sloth_lightsaber-11.png */; };
+		A656135028757CB200F48507 /* sloth_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133B28757CAF00F48507 /* sloth_lightsaber-11.png */; };
+		A656135128757CB200F48507 /* sloth_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133C28757CAF00F48507 /* sloth_lightsaber-7.png */; };
+		A656135228757CB200F48507 /* sloth_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133C28757CAF00F48507 /* sloth_lightsaber-7.png */; };
+		A656135328757CB200F48507 /* sloth_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133D28757CAF00F48507 /* sloth_lightsaber-13.png */; };
+		A656135428757CB200F48507 /* sloth_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133D28757CAF00F48507 /* sloth_lightsaber-13.png */; };
+		A656135528757CB200F48507 /* sloth_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133E28757CAF00F48507 /* sloth_lightsaber-15.png */; };
+		A656135628757CB200F48507 /* sloth_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133E28757CAF00F48507 /* sloth_lightsaber-15.png */; };
+		A656135728757CB200F48507 /* sloth_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133F28757CB000F48507 /* sloth_lightsaber-8.png */; };
+		A656135828757CB200F48507 /* sloth_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A656133F28757CB000F48507 /* sloth_lightsaber-8.png */; };
+		A656135928757CB200F48507 /* sloth_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134028757CB000F48507 /* sloth_lightsaber-1.png */; };
+		A656135A28757CB200F48507 /* sloth_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134028757CB000F48507 /* sloth_lightsaber-1.png */; };
+		A656135B28757CB200F48507 /* sloth_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134128757CB000F48507 /* sloth_lightsaber-4.png */; };
+		A656135C28757CB200F48507 /* sloth_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134128757CB000F48507 /* sloth_lightsaber-4.png */; };
+		A656135D28757CB200F48507 /* sloth_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134228757CB000F48507 /* sloth_lightsaber-9.png */; };
+		A656135E28757CB200F48507 /* sloth_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134228757CB000F48507 /* sloth_lightsaber-9.png */; };
+		A656135F28757CB200F48507 /* sloth_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134328757CB000F48507 /* sloth_lightsaber-2.png */; };
+		A656136028757CB200F48507 /* sloth_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134328757CB000F48507 /* sloth_lightsaber-2.png */; };
+		A656136128757CB200F48507 /* sloth_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134428757CB100F48507 /* sloth_lightsaber-12.png */; };
+		A656136228757CB200F48507 /* sloth_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134428757CB100F48507 /* sloth_lightsaber-12.png */; };
+		A656136328757CB200F48507 /* sloth_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134528757CB100F48507 /* sloth_lightsaber-3.png */; };
+		A656136428757CB200F48507 /* sloth_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134528757CB100F48507 /* sloth_lightsaber-3.png */; };
+		A656136528757CB200F48507 /* sloth_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134628757CB100F48507 /* sloth_lightsaber-5.png */; };
+		A656136628757CB200F48507 /* sloth_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134628757CB100F48507 /* sloth_lightsaber-5.png */; };
+		A656136728757CB200F48507 /* sloth_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134728757CB100F48507 /* sloth_lightsaber-10.png */; };
+		A656136828757CB200F48507 /* sloth_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134728757CB100F48507 /* sloth_lightsaber-10.png */; };
+		A656136928757CB200F48507 /* sloth_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134828757CB100F48507 /* sloth_lightsaber-16.png */; };
+		A656136A28757CB200F48507 /* sloth_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134828757CB100F48507 /* sloth_lightsaber-16.png */; };
+		A656136B28757CB200F48507 /* sloth_lightsaber-17.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134928757CB200F48507 /* sloth_lightsaber-17.png */; };
+		A656136C28757CB200F48507 /* sloth_lightsaber-17.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134928757CB200F48507 /* sloth_lightsaber-17.png */; };
+		A656136D28757CB200F48507 /* sloth_lightsaber-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134A28757CB200F48507 /* sloth_lightsaber-18.png */; };
+		A656136E28757CB200F48507 /* sloth_lightsaber-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A656134A28757CB200F48507 /* sloth_lightsaber-18.png */; };
+		A656139028757CD900F48507 /* sloth_lightsaber-20.png in Resources */ = {isa = PBXBuildFile; fileRef = A656137228757CD400F48507 /* sloth_lightsaber-20.png */; };
+		A656139128757CD900F48507 /* sloth_lightsaber-20.png in Resources */ = {isa = PBXBuildFile; fileRef = A656137228757CD400F48507 /* sloth_lightsaber-20.png */; };
+		A65613AA28757CD900F48507 /* sloth_lightsaber-19.png in Resources */ = {isa = PBXBuildFile; fileRef = A656137F28757CD700F48507 /* sloth_lightsaber-19.png */; };
+		A65613AB28757CD900F48507 /* sloth_lightsaber-19.png in Resources */ = {isa = PBXBuildFile; fileRef = A656137F28757CD700F48507 /* sloth_lightsaber-19.png */; };
+		A65613CE28757DE600F48507 /* sloth_lightsaber-25.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C028757DE200F48507 /* sloth_lightsaber-25.png */; };
+		A65613CF28757DE700F48507 /* sloth_lightsaber-25.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C028757DE200F48507 /* sloth_lightsaber-25.png */; };
+		A65613D028757DE700F48507 /* sloth_lightsaber-28.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C128757DE200F48507 /* sloth_lightsaber-28.png */; };
+		A65613D128757DE700F48507 /* sloth_lightsaber-28.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C128757DE200F48507 /* sloth_lightsaber-28.png */; };
+		A65613D228757DE700F48507 /* sloth_lightsaber-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C228757DE200F48507 /* sloth_lightsaber-22.png */; };
+		A65613D328757DE700F48507 /* sloth_lightsaber-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C228757DE200F48507 /* sloth_lightsaber-22.png */; };
+		A65613D428757DE700F48507 /* sloth_lightsaber-21.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C328757DE200F48507 /* sloth_lightsaber-21.png */; };
+		A65613D528757DE700F48507 /* sloth_lightsaber-21.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C328757DE200F48507 /* sloth_lightsaber-21.png */; };
+		A65613D628757DE700F48507 /* sloth_lightsaber-26.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C428757DE300F48507 /* sloth_lightsaber-26.png */; };
+		A65613D728757DE700F48507 /* sloth_lightsaber-26.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C428757DE300F48507 /* sloth_lightsaber-26.png */; };
+		A65613D828757DE700F48507 /* sloth_lightsaber-33.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C528757DE300F48507 /* sloth_lightsaber-33.png */; };
+		A65613D928757DE700F48507 /* sloth_lightsaber-33.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C528757DE300F48507 /* sloth_lightsaber-33.png */; };
+		A65613DA28757DE700F48507 /* sloth_lightsaber-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C628757DE300F48507 /* sloth_lightsaber-32.png */; };
+		A65613DB28757DE700F48507 /* sloth_lightsaber-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C628757DE300F48507 /* sloth_lightsaber-32.png */; };
+		A65613DC28757DE700F48507 /* sloth_lightsaber-30.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C728757DE300F48507 /* sloth_lightsaber-30.png */; };
+		A65613DD28757DE700F48507 /* sloth_lightsaber-30.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C728757DE300F48507 /* sloth_lightsaber-30.png */; };
+		A65613DE28757DE700F48507 /* sloth_lightsaber-34.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C828757DE300F48507 /* sloth_lightsaber-34.png */; };
+		A65613DF28757DE700F48507 /* sloth_lightsaber-34.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C828757DE300F48507 /* sloth_lightsaber-34.png */; };
+		A65613E028757DE700F48507 /* sloth_lightsaber-23.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C928757DE400F48507 /* sloth_lightsaber-23.png */; };
+		A65613E128757DE700F48507 /* sloth_lightsaber-23.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613C928757DE400F48507 /* sloth_lightsaber-23.png */; };
+		A65613E228757DE700F48507 /* sloth_lightsaber-27.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CA28757DE600F48507 /* sloth_lightsaber-27.png */; };
+		A65613E328757DE700F48507 /* sloth_lightsaber-27.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CA28757DE600F48507 /* sloth_lightsaber-27.png */; };
+		A65613E428757DE700F48507 /* sloth_lightsaber-31.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CB28757DE600F48507 /* sloth_lightsaber-31.png */; };
+		A65613E528757DE700F48507 /* sloth_lightsaber-31.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CB28757DE600F48507 /* sloth_lightsaber-31.png */; };
+		A65613E628757DE700F48507 /* sloth_lightsaber-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CC28757DE600F48507 /* sloth_lightsaber-29.png */; };
+		A65613E728757DE700F48507 /* sloth_lightsaber-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CC28757DE600F48507 /* sloth_lightsaber-29.png */; };
+		A65613E828757DE700F48507 /* sloth_lightsaber-24.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CD28757DE600F48507 /* sloth_lightsaber-24.png */; };
+		A65613E928757DE700F48507 /* sloth_lightsaber-24.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613CD28757DE600F48507 /* sloth_lightsaber-24.png */; };
+		A65613FC28757FF400F48507 /* sloth_swag_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EA28757FF000F48507 /* sloth_swag_lightsaber-15.png */; };
+		A65613FD28757FF400F48507 /* sloth_swag_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EA28757FF000F48507 /* sloth_swag_lightsaber-15.png */; };
+		A65613FE28757FF400F48507 /* sloth_swag_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EB28757FF100F48507 /* sloth_swag_lightsaber-7.png */; };
+		A65613FF28757FF400F48507 /* sloth_swag_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EB28757FF100F48507 /* sloth_swag_lightsaber-7.png */; };
+		A656140028757FF400F48507 /* sloth_swag_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EC28757FF100F48507 /* sloth_swag_lightsaber-9.png */; };
+		A656140128757FF400F48507 /* sloth_swag_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EC28757FF100F48507 /* sloth_swag_lightsaber-9.png */; };
+		A656140228757FF400F48507 /* sloth_swag_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613ED28757FF100F48507 /* sloth_swag_lightsaber-13.png */; };
+		A656140328757FF400F48507 /* sloth_swag_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613ED28757FF100F48507 /* sloth_swag_lightsaber-13.png */; };
+		A656140428757FF400F48507 /* sloth_swag_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EE28757FF100F48507 /* sloth_swag_lightsaber-6.png */; };
+		A656140528757FF400F48507 /* sloth_swag_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EE28757FF100F48507 /* sloth_swag_lightsaber-6.png */; };
+		A656140628757FF400F48507 /* sloth_swag_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EF28757FF100F48507 /* sloth_swag_lightsaber-5.png */; };
+		A656140728757FF400F48507 /* sloth_swag_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613EF28757FF100F48507 /* sloth_swag_lightsaber-5.png */; };
+		A656140828757FF400F48507 /* sloth_swag_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F028757FF100F48507 /* sloth_swag_lightsaber-16.png */; };
+		A656140928757FF400F48507 /* sloth_swag_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F028757FF100F48507 /* sloth_swag_lightsaber-16.png */; };
+		A656140A28757FF400F48507 /* sloth_swag_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F128757FF200F48507 /* sloth_swag_lightsaber-11.png */; };
+		A656140B28757FF400F48507 /* sloth_swag_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F128757FF200F48507 /* sloth_swag_lightsaber-11.png */; };
+		A656140C28757FF400F48507 /* sloth_swag_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F228757FF200F48507 /* sloth_swag_lightsaber-8.png */; };
+		A656140D28757FF400F48507 /* sloth_swag_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F228757FF200F48507 /* sloth_swag_lightsaber-8.png */; };
+		A656140E28757FF400F48507 /* sloth_swag_lightsaber-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F328757FF200F48507 /* sloth_swag_lightsaber-18.png */; };
+		A656140F28757FF400F48507 /* sloth_swag_lightsaber-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F328757FF200F48507 /* sloth_swag_lightsaber-18.png */; };
+		A656141028757FF400F48507 /* sloth_swag_lightsaber-17.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F428757FF200F48507 /* sloth_swag_lightsaber-17.png */; };
+		A656141128757FF400F48507 /* sloth_swag_lightsaber-17.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F428757FF200F48507 /* sloth_swag_lightsaber-17.png */; };
+		A656141228757FF400F48507 /* sloth_swag_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F528757FF200F48507 /* sloth_swag_lightsaber-4.png */; };
+		A656141328757FF400F48507 /* sloth_swag_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F528757FF200F48507 /* sloth_swag_lightsaber-4.png */; };
+		A656141428757FF400F48507 /* sloth_swag_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F628757FF300F48507 /* sloth_swag_lightsaber-10.png */; };
+		A656141528757FF400F48507 /* sloth_swag_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F628757FF300F48507 /* sloth_swag_lightsaber-10.png */; };
+		A656141628757FF400F48507 /* sloth_swag_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F728757FF300F48507 /* sloth_swag_lightsaber-14.png */; };
+		A656141728757FF400F48507 /* sloth_swag_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F728757FF300F48507 /* sloth_swag_lightsaber-14.png */; };
+		A656141828757FF400F48507 /* sloth_swag_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F828757FF300F48507 /* sloth_swag_lightsaber-1.png */; };
+		A656141928757FF400F48507 /* sloth_swag_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F828757FF300F48507 /* sloth_swag_lightsaber-1.png */; };
+		A656141A28757FF400F48507 /* sloth_swag_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F928757FF300F48507 /* sloth_swag_lightsaber-12.png */; };
+		A656141B28757FF400F48507 /* sloth_swag_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613F928757FF300F48507 /* sloth_swag_lightsaber-12.png */; };
+		A656141C28757FF400F48507 /* sloth_swag_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613FA28757FF300F48507 /* sloth_swag_lightsaber-3.png */; };
+		A656141D28757FF400F48507 /* sloth_swag_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613FA28757FF300F48507 /* sloth_swag_lightsaber-3.png */; };
+		A656141E28757FF400F48507 /* sloth_swag_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613FB28757FF400F48507 /* sloth_swag_lightsaber-2.png */; };
+		A656141F28757FF400F48507 /* sloth_swag_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A65613FB28757FF400F48507 /* sloth_swag_lightsaber-2.png */; };
+		A65614302875800800F48507 /* sloth_swag_lightsaber-25.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614202875800400F48507 /* sloth_swag_lightsaber-25.png */; };
+		A65614312875800800F48507 /* sloth_swag_lightsaber-25.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614202875800400F48507 /* sloth_swag_lightsaber-25.png */; };
+		A65614322875800800F48507 /* sloth_swag_lightsaber-28.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614212875800400F48507 /* sloth_swag_lightsaber-28.png */; };
+		A65614332875800800F48507 /* sloth_swag_lightsaber-28.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614212875800400F48507 /* sloth_swag_lightsaber-28.png */; };
+		A65614342875800800F48507 /* sloth_swag_lightsaber-24.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614222875800500F48507 /* sloth_swag_lightsaber-24.png */; };
+		A65614352875800800F48507 /* sloth_swag_lightsaber-24.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614222875800500F48507 /* sloth_swag_lightsaber-24.png */; };
+		A65614362875800800F48507 /* sloth_swag_lightsaber-33.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614232875800500F48507 /* sloth_swag_lightsaber-33.png */; };
+		A65614372875800800F48507 /* sloth_swag_lightsaber-33.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614232875800500F48507 /* sloth_swag_lightsaber-33.png */; };
+		A65614382875800800F48507 /* sloth_swag_lightsaber-34.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614242875800500F48507 /* sloth_swag_lightsaber-34.png */; };
+		A65614392875800800F48507 /* sloth_swag_lightsaber-34.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614242875800500F48507 /* sloth_swag_lightsaber-34.png */; };
+		A656143A2875800800F48507 /* sloth_swag_lightsaber-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614252875800500F48507 /* sloth_swag_lightsaber-22.png */; };
+		A656143B2875800800F48507 /* sloth_swag_lightsaber-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614252875800500F48507 /* sloth_swag_lightsaber-22.png */; };
+		A656143C2875800800F48507 /* sloth_swag_lightsaber-23.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614262875800500F48507 /* sloth_swag_lightsaber-23.png */; };
+		A656143D2875800800F48507 /* sloth_swag_lightsaber-23.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614262875800500F48507 /* sloth_swag_lightsaber-23.png */; };
+		A656143E2875800800F48507 /* sloth_swag_lightsaber-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614272875800600F48507 /* sloth_swag_lightsaber-32.png */; };
+		A656143F2875800800F48507 /* sloth_swag_lightsaber-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614272875800600F48507 /* sloth_swag_lightsaber-32.png */; };
+		A65614402875800800F48507 /* sloth_swag_lightsaber-21.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614282875800600F48507 /* sloth_swag_lightsaber-21.png */; };
+		A65614412875800800F48507 /* sloth_swag_lightsaber-21.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614282875800600F48507 /* sloth_swag_lightsaber-21.png */; };
+		A65614422875800800F48507 /* sloth_swag_lightsaber-31.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614292875800600F48507 /* sloth_swag_lightsaber-31.png */; };
+		A65614432875800800F48507 /* sloth_swag_lightsaber-31.png in Resources */ = {isa = PBXBuildFile; fileRef = A65614292875800600F48507 /* sloth_swag_lightsaber-31.png */; };
+		A65614442875800800F48507 /* sloth_swag_lightsaber-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142A2875800600F48507 /* sloth_swag_lightsaber-29.png */; };
+		A65614452875800800F48507 /* sloth_swag_lightsaber-29.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142A2875800600F48507 /* sloth_swag_lightsaber-29.png */; };
+		A65614462875800800F48507 /* sloth_swag_lightsaber-19.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142B2875800600F48507 /* sloth_swag_lightsaber-19.png */; };
+		A65614472875800800F48507 /* sloth_swag_lightsaber-19.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142B2875800600F48507 /* sloth_swag_lightsaber-19.png */; };
+		A65614482875800800F48507 /* sloth_swag_lightsaber-27.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142C2875800700F48507 /* sloth_swag_lightsaber-27.png */; };
+		A65614492875800800F48507 /* sloth_swag_lightsaber-27.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142C2875800700F48507 /* sloth_swag_lightsaber-27.png */; };
+		A656144A2875800800F48507 /* sloth_swag_lightsaber-20.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142D2875800700F48507 /* sloth_swag_lightsaber-20.png */; };
+		A656144B2875800800F48507 /* sloth_swag_lightsaber-20.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142D2875800700F48507 /* sloth_swag_lightsaber-20.png */; };
+		A656144C2875800800F48507 /* sloth_swag_lightsaber-26.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142E2875800700F48507 /* sloth_swag_lightsaber-26.png */; };
+		A656144D2875800800F48507 /* sloth_swag_lightsaber-26.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142E2875800700F48507 /* sloth_swag_lightsaber-26.png */; };
+		A656144E2875800800F48507 /* sloth_swag_lightsaber-30.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142F2875800700F48507 /* sloth_swag_lightsaber-30.png */; };
+		A656144F2875800800F48507 /* sloth_swag_lightsaber-30.png in Resources */ = {isa = PBXBuildFile; fileRef = A656142F2875800700F48507 /* sloth_swag_lightsaber-30.png */; };
 		A6FB7D6828740F8E00AB872E /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4428740F8E00AB872E /* Secrets.plist */; };
 		A6FB7D6928740F8E00AB872E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		A6FB7D6A28740F8E00AB872E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
@@ -1550,40 +1686,6 @@
 		A6FBA12D287410BB00AB872E /* sloth_love-36.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8985287410B300AB872E /* sloth_love-36.png */; };
 		A6FBA12E287410BB00AB872E /* sloth_love-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8986287410B300AB872E /* sloth_love-22.png */; };
 		A6FBA12F287410BB00AB872E /* sloth_love-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8986287410B300AB872E /* sloth_love-22.png */; };
-		A6FBA130287410BB00AB872E /* sloth_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8988287410B300AB872E /* sloth_lightsaber-9.png */; };
-		A6FBA131287410BB00AB872E /* sloth_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8988287410B300AB872E /* sloth_lightsaber-9.png */; };
-		A6FBA132287410BB00AB872E /* sloth_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8989287410B300AB872E /* sloth_lightsaber-8.png */; };
-		A6FBA133287410BB00AB872E /* sloth_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8989287410B300AB872E /* sloth_lightsaber-8.png */; };
-		A6FBA134287410BB00AB872E /* sloth_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898A287410B300AB872E /* sloth_lightsaber-16.png */; };
-		A6FBA135287410BB00AB872E /* sloth_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898A287410B300AB872E /* sloth_lightsaber-16.png */; };
-		A6FBA136287410BB00AB872E /* sloth_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898B287410B300AB872E /* sloth_lightsaber-15.png */; };
-		A6FBA137287410BB00AB872E /* sloth_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898B287410B300AB872E /* sloth_lightsaber-15.png */; };
-		A6FBA138287410BB00AB872E /* sloth_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898C287410B300AB872E /* sloth_lightsaber-14.png */; };
-		A6FBA139287410BB00AB872E /* sloth_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898C287410B300AB872E /* sloth_lightsaber-14.png */; };
-		A6FBA13A287410BB00AB872E /* sloth_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898D287410B300AB872E /* sloth_lightsaber-10.png */; };
-		A6FBA13B287410BB00AB872E /* sloth_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898D287410B300AB872E /* sloth_lightsaber-10.png */; };
-		A6FBA13C287410BB00AB872E /* sloth_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898E287410B300AB872E /* sloth_lightsaber-11.png */; };
-		A6FBA13D287410BB00AB872E /* sloth_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898E287410B300AB872E /* sloth_lightsaber-11.png */; };
-		A6FBA13E287410BB00AB872E /* sloth_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898F287410B300AB872E /* sloth_lightsaber-13.png */; };
-		A6FBA13F287410BB00AB872E /* sloth_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB898F287410B300AB872E /* sloth_lightsaber-13.png */; };
-		A6FBA140287410BB00AB872E /* sloth_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8990287410B300AB872E /* sloth_lightsaber-12.png */; };
-		A6FBA141287410BB00AB872E /* sloth_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8990287410B300AB872E /* sloth_lightsaber-12.png */; };
-		A6FBA142287410BB00AB872E /* sloth_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8991287410B300AB872E /* sloth_lightsaber-3.png */; };
-		A6FBA143287410BB00AB872E /* sloth_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8991287410B300AB872E /* sloth_lightsaber-3.png */; };
-		A6FBA144287410BB00AB872E /* sloth_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8992287410B300AB872E /* sloth_lightsaber-2.png */; };
-		A6FBA145287410BB00AB872E /* sloth_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8992287410B300AB872E /* sloth_lightsaber-2.png */; };
-		A6FBA146287410BB00AB872E /* sloth_lightsaber-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8993287410B300AB872E /* sloth_lightsaber-0.png */; };
-		A6FBA147287410BB00AB872E /* sloth_lightsaber-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8993287410B300AB872E /* sloth_lightsaber-0.png */; };
-		A6FBA148287410BB00AB872E /* sloth_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8994287410B300AB872E /* sloth_lightsaber-1.png */; };
-		A6FBA149287410BB00AB872E /* sloth_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8994287410B300AB872E /* sloth_lightsaber-1.png */; };
-		A6FBA14A287410BB00AB872E /* sloth_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8995287410B300AB872E /* sloth_lightsaber-5.png */; };
-		A6FBA14B287410BB00AB872E /* sloth_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8995287410B300AB872E /* sloth_lightsaber-5.png */; };
-		A6FBA14C287410BB00AB872E /* sloth_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8996287410B300AB872E /* sloth_lightsaber-4.png */; };
-		A6FBA14D287410BB00AB872E /* sloth_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8996287410B300AB872E /* sloth_lightsaber-4.png */; };
-		A6FBA14E287410BB00AB872E /* sloth_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8997287410B300AB872E /* sloth_lightsaber-6.png */; };
-		A6FBA14F287410BB00AB872E /* sloth_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8997287410B300AB872E /* sloth_lightsaber-6.png */; };
-		A6FBA150287410BB00AB872E /* sloth_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8998287410B300AB872E /* sloth_lightsaber-7.png */; };
-		A6FBA151287410BB00AB872E /* sloth_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8998287410B300AB872E /* sloth_lightsaber-7.png */; };
 		A6FBA152287410BB00AB872E /* sloth_idle_front-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB899A287410B300AB872E /* sloth_idle_front-12.png */; };
 		A6FBA153287410BB00AB872E /* sloth_idle_front-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB899A287410B300AB872E /* sloth_idle_front-12.png */; };
 		A6FBA154287410BB00AB872E /* sloth_idle_front-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB899B287410B300AB872E /* sloth_idle_front-13.png */; };
@@ -2020,40 +2122,6 @@
 		A6FBA303287410BC00AB872E /* sloth_swag_love-30.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7A287410B300AB872E /* sloth_swag_love-30.png */; };
 		A6FBA304287410BC00AB872E /* sloth_swag_love-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7B287410B300AB872E /* sloth_swag_love-18.png */; };
 		A6FBA305287410BC00AB872E /* sloth_swag_love-18.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7B287410B300AB872E /* sloth_swag_love-18.png */; };
-		A6FBA306287410BC00AB872E /* sloth_swag_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7D287410B300AB872E /* sloth_swag_lightsaber-4.png */; };
-		A6FBA307287410BC00AB872E /* sloth_swag_lightsaber-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7D287410B300AB872E /* sloth_swag_lightsaber-4.png */; };
-		A6FBA308287410BC00AB872E /* sloth_swag_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7E287410B300AB872E /* sloth_swag_lightsaber-13.png */; };
-		A6FBA309287410BC00AB872E /* sloth_swag_lightsaber-13.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7E287410B300AB872E /* sloth_swag_lightsaber-13.png */; };
-		A6FBA30A287410BC00AB872E /* sloth_swag_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7F287410B300AB872E /* sloth_swag_lightsaber-12.png */; };
-		A6FBA30B287410BC00AB872E /* sloth_swag_lightsaber-12.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A7F287410B300AB872E /* sloth_swag_lightsaber-12.png */; };
-		A6FBA30C287410BC00AB872E /* sloth_swag_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A80287410B300AB872E /* sloth_swag_lightsaber-5.png */; };
-		A6FBA30D287410BC00AB872E /* sloth_swag_lightsaber-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A80287410B300AB872E /* sloth_swag_lightsaber-5.png */; };
-		A6FBA30E287410BC00AB872E /* sloth_swag_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A81287410B300AB872E /* sloth_swag_lightsaber-7.png */; };
-		A6FBA30F287410BC00AB872E /* sloth_swag_lightsaber-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A81287410B300AB872E /* sloth_swag_lightsaber-7.png */; };
-		A6FBA310287410BC00AB872E /* sloth_swag_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A82287410B300AB872E /* sloth_swag_lightsaber-10.png */; };
-		A6FBA311287410BC00AB872E /* sloth_swag_lightsaber-10.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A82287410B300AB872E /* sloth_swag_lightsaber-10.png */; };
-		A6FBA312287410BC00AB872E /* sloth_swag_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A83287410B300AB872E /* sloth_swag_lightsaber-11.png */; };
-		A6FBA313287410BC00AB872E /* sloth_swag_lightsaber-11.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A83287410B300AB872E /* sloth_swag_lightsaber-11.png */; };
-		A6FBA314287410BC00AB872E /* sloth_swag_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A84287410B300AB872E /* sloth_swag_lightsaber-6.png */; };
-		A6FBA315287410BC00AB872E /* sloth_swag_lightsaber-6.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A84287410B300AB872E /* sloth_swag_lightsaber-6.png */; };
-		A6FBA316287410BC00AB872E /* sloth_swag_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A85287410B300AB872E /* sloth_swag_lightsaber-2.png */; };
-		A6FBA317287410BC00AB872E /* sloth_swag_lightsaber-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A85287410B300AB872E /* sloth_swag_lightsaber-2.png */; };
-		A6FBA318287410BC00AB872E /* sloth_swag_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A86287410B300AB872E /* sloth_swag_lightsaber-15.png */; };
-		A6FBA319287410BC00AB872E /* sloth_swag_lightsaber-15.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A86287410B300AB872E /* sloth_swag_lightsaber-15.png */; };
-		A6FBA31A287410BC00AB872E /* sloth_swag_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A87287410B300AB872E /* sloth_swag_lightsaber-14.png */; };
-		A6FBA31B287410BC00AB872E /* sloth_swag_lightsaber-14.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A87287410B300AB872E /* sloth_swag_lightsaber-14.png */; };
-		A6FBA31C287410BC00AB872E /* sloth_swag_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A88287410B300AB872E /* sloth_swag_lightsaber-3.png */; };
-		A6FBA31D287410BC00AB872E /* sloth_swag_lightsaber-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A88287410B300AB872E /* sloth_swag_lightsaber-3.png */; };
-		A6FBA31E287410BC00AB872E /* sloth_swag_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A89287410B300AB872E /* sloth_swag_lightsaber-1.png */; };
-		A6FBA31F287410BC00AB872E /* sloth_swag_lightsaber-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A89287410B300AB872E /* sloth_swag_lightsaber-1.png */; };
-		A6FBA320287410BC00AB872E /* sloth_swag_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8A287410B300AB872E /* sloth_swag_lightsaber-16.png */; };
-		A6FBA321287410BC00AB872E /* sloth_swag_lightsaber-16.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8A287410B300AB872E /* sloth_swag_lightsaber-16.png */; };
-		A6FBA322287410BC00AB872E /* sloth_swag_lightsaber-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8B287410B300AB872E /* sloth_swag_lightsaber-0.png */; };
-		A6FBA323287410BC00AB872E /* sloth_swag_lightsaber-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8B287410B300AB872E /* sloth_swag_lightsaber-0.png */; };
-		A6FBA324287410BC00AB872E /* sloth_swag_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8C287410B300AB872E /* sloth_swag_lightsaber-8.png */; };
-		A6FBA325287410BC00AB872E /* sloth_swag_lightsaber-8.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8C287410B300AB872E /* sloth_swag_lightsaber-8.png */; };
-		A6FBA326287410BC00AB872E /* sloth_swag_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8D287410B300AB872E /* sloth_swag_lightsaber-9.png */; };
-		A6FBA327287410BC00AB872E /* sloth_swag_lightsaber-9.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8D287410B300AB872E /* sloth_swag_lightsaber-9.png */; };
 		A6FBA328287410BC00AB872E /* sloth_swag_idle_front-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8F287410B300AB872E /* sloth_swag_idle_front-22.png */; };
 		A6FBA329287410BC00AB872E /* sloth_swag_idle_front-22.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A8F287410B300AB872E /* sloth_swag_idle_front-22.png */; };
 		A6FBA32A287410BC00AB872E /* sloth_swag_idle_front-36.png in Resources */ = {isa = PBXBuildFile; fileRef = A6FB8A90287410B300AB872E /* sloth_swag_idle_front-36.png */; };
@@ -4361,6 +4429,74 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A656133928757CAE00F48507 /* sloth_lightsaber-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-14.png"; sourceTree = "<group>"; };
+		A656133A28757CAF00F48507 /* sloth_lightsaber-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-6.png"; sourceTree = "<group>"; };
+		A656133B28757CAF00F48507 /* sloth_lightsaber-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-11.png"; sourceTree = "<group>"; };
+		A656133C28757CAF00F48507 /* sloth_lightsaber-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-7.png"; sourceTree = "<group>"; };
+		A656133D28757CAF00F48507 /* sloth_lightsaber-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-13.png"; sourceTree = "<group>"; };
+		A656133E28757CAF00F48507 /* sloth_lightsaber-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-15.png"; sourceTree = "<group>"; };
+		A656133F28757CB000F48507 /* sloth_lightsaber-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-8.png"; sourceTree = "<group>"; };
+		A656134028757CB000F48507 /* sloth_lightsaber-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-1.png"; sourceTree = "<group>"; };
+		A656134128757CB000F48507 /* sloth_lightsaber-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-4.png"; sourceTree = "<group>"; };
+		A656134228757CB000F48507 /* sloth_lightsaber-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-9.png"; sourceTree = "<group>"; };
+		A656134328757CB000F48507 /* sloth_lightsaber-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-2.png"; sourceTree = "<group>"; };
+		A656134428757CB100F48507 /* sloth_lightsaber-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-12.png"; sourceTree = "<group>"; };
+		A656134528757CB100F48507 /* sloth_lightsaber-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-3.png"; sourceTree = "<group>"; };
+		A656134628757CB100F48507 /* sloth_lightsaber-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-5.png"; sourceTree = "<group>"; };
+		A656134728757CB100F48507 /* sloth_lightsaber-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-10.png"; sourceTree = "<group>"; };
+		A656134828757CB100F48507 /* sloth_lightsaber-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-16.png"; sourceTree = "<group>"; };
+		A656134928757CB200F48507 /* sloth_lightsaber-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-17.png"; sourceTree = "<group>"; };
+		A656134A28757CB200F48507 /* sloth_lightsaber-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-18.png"; sourceTree = "<group>"; };
+		A656137228757CD400F48507 /* sloth_lightsaber-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-20.png"; sourceTree = "<group>"; };
+		A656137F28757CD700F48507 /* sloth_lightsaber-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-19.png"; sourceTree = "<group>"; };
+		A65613C028757DE200F48507 /* sloth_lightsaber-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-25.png"; sourceTree = "<group>"; };
+		A65613C128757DE200F48507 /* sloth_lightsaber-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-28.png"; sourceTree = "<group>"; };
+		A65613C228757DE200F48507 /* sloth_lightsaber-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-22.png"; sourceTree = "<group>"; };
+		A65613C328757DE200F48507 /* sloth_lightsaber-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-21.png"; sourceTree = "<group>"; };
+		A65613C428757DE300F48507 /* sloth_lightsaber-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-26.png"; sourceTree = "<group>"; };
+		A65613C528757DE300F48507 /* sloth_lightsaber-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-33.png"; sourceTree = "<group>"; };
+		A65613C628757DE300F48507 /* sloth_lightsaber-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-32.png"; sourceTree = "<group>"; };
+		A65613C728757DE300F48507 /* sloth_lightsaber-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-30.png"; sourceTree = "<group>"; };
+		A65613C828757DE300F48507 /* sloth_lightsaber-34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-34.png"; sourceTree = "<group>"; };
+		A65613C928757DE400F48507 /* sloth_lightsaber-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-23.png"; sourceTree = "<group>"; };
+		A65613CA28757DE600F48507 /* sloth_lightsaber-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-27.png"; sourceTree = "<group>"; };
+		A65613CB28757DE600F48507 /* sloth_lightsaber-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-31.png"; sourceTree = "<group>"; };
+		A65613CC28757DE600F48507 /* sloth_lightsaber-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-29.png"; sourceTree = "<group>"; };
+		A65613CD28757DE600F48507 /* sloth_lightsaber-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-24.png"; sourceTree = "<group>"; };
+		A65613EA28757FF000F48507 /* sloth_swag_lightsaber-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-15.png"; sourceTree = "<group>"; };
+		A65613EB28757FF100F48507 /* sloth_swag_lightsaber-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-7.png"; sourceTree = "<group>"; };
+		A65613EC28757FF100F48507 /* sloth_swag_lightsaber-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-9.png"; sourceTree = "<group>"; };
+		A65613ED28757FF100F48507 /* sloth_swag_lightsaber-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-13.png"; sourceTree = "<group>"; };
+		A65613EE28757FF100F48507 /* sloth_swag_lightsaber-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-6.png"; sourceTree = "<group>"; };
+		A65613EF28757FF100F48507 /* sloth_swag_lightsaber-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-5.png"; sourceTree = "<group>"; };
+		A65613F028757FF100F48507 /* sloth_swag_lightsaber-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-16.png"; sourceTree = "<group>"; };
+		A65613F128757FF200F48507 /* sloth_swag_lightsaber-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-11.png"; sourceTree = "<group>"; };
+		A65613F228757FF200F48507 /* sloth_swag_lightsaber-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-8.png"; sourceTree = "<group>"; };
+		A65613F328757FF200F48507 /* sloth_swag_lightsaber-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-18.png"; sourceTree = "<group>"; };
+		A65613F428757FF200F48507 /* sloth_swag_lightsaber-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-17.png"; sourceTree = "<group>"; };
+		A65613F528757FF200F48507 /* sloth_swag_lightsaber-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-4.png"; sourceTree = "<group>"; };
+		A65613F628757FF300F48507 /* sloth_swag_lightsaber-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-10.png"; sourceTree = "<group>"; };
+		A65613F728757FF300F48507 /* sloth_swag_lightsaber-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-14.png"; sourceTree = "<group>"; };
+		A65613F828757FF300F48507 /* sloth_swag_lightsaber-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-1.png"; sourceTree = "<group>"; };
+		A65613F928757FF300F48507 /* sloth_swag_lightsaber-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-12.png"; sourceTree = "<group>"; };
+		A65613FA28757FF300F48507 /* sloth_swag_lightsaber-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-3.png"; sourceTree = "<group>"; };
+		A65613FB28757FF400F48507 /* sloth_swag_lightsaber-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-2.png"; sourceTree = "<group>"; };
+		A65614202875800400F48507 /* sloth_swag_lightsaber-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-25.png"; sourceTree = "<group>"; };
+		A65614212875800400F48507 /* sloth_swag_lightsaber-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-28.png"; sourceTree = "<group>"; };
+		A65614222875800500F48507 /* sloth_swag_lightsaber-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-24.png"; sourceTree = "<group>"; };
+		A65614232875800500F48507 /* sloth_swag_lightsaber-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-33.png"; sourceTree = "<group>"; };
+		A65614242875800500F48507 /* sloth_swag_lightsaber-34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-34.png"; sourceTree = "<group>"; };
+		A65614252875800500F48507 /* sloth_swag_lightsaber-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-22.png"; sourceTree = "<group>"; };
+		A65614262875800500F48507 /* sloth_swag_lightsaber-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-23.png"; sourceTree = "<group>"; };
+		A65614272875800600F48507 /* sloth_swag_lightsaber-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-32.png"; sourceTree = "<group>"; };
+		A65614282875800600F48507 /* sloth_swag_lightsaber-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-21.png"; sourceTree = "<group>"; };
+		A65614292875800600F48507 /* sloth_swag_lightsaber-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-31.png"; sourceTree = "<group>"; };
+		A656142A2875800600F48507 /* sloth_swag_lightsaber-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-29.png"; sourceTree = "<group>"; };
+		A656142B2875800600F48507 /* sloth_swag_lightsaber-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-19.png"; sourceTree = "<group>"; };
+		A656142C2875800700F48507 /* sloth_swag_lightsaber-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-27.png"; sourceTree = "<group>"; };
+		A656142D2875800700F48507 /* sloth_swag_lightsaber-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-20.png"; sourceTree = "<group>"; };
+		A656142E2875800700F48507 /* sloth_swag_lightsaber-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-26.png"; sourceTree = "<group>"; };
+		A656142F2875800700F48507 /* sloth_swag_lightsaber-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-30.png"; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -5131,23 +5267,6 @@
 		A6FB8984287410B300AB872E /* sloth_love-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_love-1.png"; sourceTree = "<group>"; };
 		A6FB8985287410B300AB872E /* sloth_love-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_love-36.png"; sourceTree = "<group>"; };
 		A6FB8986287410B300AB872E /* sloth_love-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_love-22.png"; sourceTree = "<group>"; };
-		A6FB8988287410B300AB872E /* sloth_lightsaber-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-9.png"; sourceTree = "<group>"; };
-		A6FB8989287410B300AB872E /* sloth_lightsaber-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-8.png"; sourceTree = "<group>"; };
-		A6FB898A287410B300AB872E /* sloth_lightsaber-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-16.png"; sourceTree = "<group>"; };
-		A6FB898B287410B300AB872E /* sloth_lightsaber-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-15.png"; sourceTree = "<group>"; };
-		A6FB898C287410B300AB872E /* sloth_lightsaber-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-14.png"; sourceTree = "<group>"; };
-		A6FB898D287410B300AB872E /* sloth_lightsaber-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-10.png"; sourceTree = "<group>"; };
-		A6FB898E287410B300AB872E /* sloth_lightsaber-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-11.png"; sourceTree = "<group>"; };
-		A6FB898F287410B300AB872E /* sloth_lightsaber-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-13.png"; sourceTree = "<group>"; };
-		A6FB8990287410B300AB872E /* sloth_lightsaber-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-12.png"; sourceTree = "<group>"; };
-		A6FB8991287410B300AB872E /* sloth_lightsaber-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-3.png"; sourceTree = "<group>"; };
-		A6FB8992287410B300AB872E /* sloth_lightsaber-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-2.png"; sourceTree = "<group>"; };
-		A6FB8993287410B300AB872E /* sloth_lightsaber-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-0.png"; sourceTree = "<group>"; };
-		A6FB8994287410B300AB872E /* sloth_lightsaber-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-1.png"; sourceTree = "<group>"; };
-		A6FB8995287410B300AB872E /* sloth_lightsaber-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-5.png"; sourceTree = "<group>"; };
-		A6FB8996287410B300AB872E /* sloth_lightsaber-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-4.png"; sourceTree = "<group>"; };
-		A6FB8997287410B300AB872E /* sloth_lightsaber-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-6.png"; sourceTree = "<group>"; };
-		A6FB8998287410B300AB872E /* sloth_lightsaber-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_lightsaber-7.png"; sourceTree = "<group>"; };
 		A6FB899A287410B300AB872E /* sloth_idle_front-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_idle_front-12.png"; sourceTree = "<group>"; };
 		A6FB899B287410B300AB872E /* sloth_idle_front-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_idle_front-13.png"; sourceTree = "<group>"; };
 		A6FB899C287410B300AB872E /* sloth_idle_front-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_idle_front-11.png"; sourceTree = "<group>"; };
@@ -5366,23 +5485,6 @@
 		A6FB8A79287410B300AB872E /* sloth_swag_love-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_love-24.png"; sourceTree = "<group>"; };
 		A6FB8A7A287410B300AB872E /* sloth_swag_love-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_love-30.png"; sourceTree = "<group>"; };
 		A6FB8A7B287410B300AB872E /* sloth_swag_love-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_love-18.png"; sourceTree = "<group>"; };
-		A6FB8A7D287410B300AB872E /* sloth_swag_lightsaber-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-4.png"; sourceTree = "<group>"; };
-		A6FB8A7E287410B300AB872E /* sloth_swag_lightsaber-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-13.png"; sourceTree = "<group>"; };
-		A6FB8A7F287410B300AB872E /* sloth_swag_lightsaber-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-12.png"; sourceTree = "<group>"; };
-		A6FB8A80287410B300AB872E /* sloth_swag_lightsaber-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-5.png"; sourceTree = "<group>"; };
-		A6FB8A81287410B300AB872E /* sloth_swag_lightsaber-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-7.png"; sourceTree = "<group>"; };
-		A6FB8A82287410B300AB872E /* sloth_swag_lightsaber-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-10.png"; sourceTree = "<group>"; };
-		A6FB8A83287410B300AB872E /* sloth_swag_lightsaber-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-11.png"; sourceTree = "<group>"; };
-		A6FB8A84287410B300AB872E /* sloth_swag_lightsaber-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-6.png"; sourceTree = "<group>"; };
-		A6FB8A85287410B300AB872E /* sloth_swag_lightsaber-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-2.png"; sourceTree = "<group>"; };
-		A6FB8A86287410B300AB872E /* sloth_swag_lightsaber-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-15.png"; sourceTree = "<group>"; };
-		A6FB8A87287410B300AB872E /* sloth_swag_lightsaber-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-14.png"; sourceTree = "<group>"; };
-		A6FB8A88287410B300AB872E /* sloth_swag_lightsaber-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-3.png"; sourceTree = "<group>"; };
-		A6FB8A89287410B300AB872E /* sloth_swag_lightsaber-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-1.png"; sourceTree = "<group>"; };
-		A6FB8A8A287410B300AB872E /* sloth_swag_lightsaber-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-16.png"; sourceTree = "<group>"; };
-		A6FB8A8B287410B300AB872E /* sloth_swag_lightsaber-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-0.png"; sourceTree = "<group>"; };
-		A6FB8A8C287410B300AB872E /* sloth_swag_lightsaber-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-8.png"; sourceTree = "<group>"; };
-		A6FB8A8D287410B300AB872E /* sloth_swag_lightsaber-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_lightsaber-9.png"; sourceTree = "<group>"; };
 		A6FB8A8F287410B300AB872E /* sloth_swag_idle_front-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_idle_front-22.png"; sourceTree = "<group>"; };
 		A6FB8A90287410B300AB872E /* sloth_swag_idle_front-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_idle_front-36.png"; sourceTree = "<group>"; };
 		A6FB8A91287410B300AB872E /* sloth_swag_idle_front-37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sloth_swag_idle_front-37.png"; sourceTree = "<group>"; };
@@ -9017,23 +9119,40 @@
 		A6FB8987287410B300AB872E /* lightsaber */ = {
 			isa = PBXGroup;
 			children = (
-				A6FB8988287410B300AB872E /* sloth_lightsaber-9.png */,
-				A6FB8989287410B300AB872E /* sloth_lightsaber-8.png */,
-				A6FB898A287410B300AB872E /* sloth_lightsaber-16.png */,
-				A6FB898B287410B300AB872E /* sloth_lightsaber-15.png */,
-				A6FB898C287410B300AB872E /* sloth_lightsaber-14.png */,
-				A6FB898D287410B300AB872E /* sloth_lightsaber-10.png */,
-				A6FB898E287410B300AB872E /* sloth_lightsaber-11.png */,
-				A6FB898F287410B300AB872E /* sloth_lightsaber-13.png */,
-				A6FB8990287410B300AB872E /* sloth_lightsaber-12.png */,
-				A6FB8991287410B300AB872E /* sloth_lightsaber-3.png */,
-				A6FB8992287410B300AB872E /* sloth_lightsaber-2.png */,
-				A6FB8993287410B300AB872E /* sloth_lightsaber-0.png */,
-				A6FB8994287410B300AB872E /* sloth_lightsaber-1.png */,
-				A6FB8995287410B300AB872E /* sloth_lightsaber-5.png */,
-				A6FB8996287410B300AB872E /* sloth_lightsaber-4.png */,
-				A6FB8997287410B300AB872E /* sloth_lightsaber-6.png */,
-				A6FB8998287410B300AB872E /* sloth_lightsaber-7.png */,
+				A656134028757CB000F48507 /* sloth_lightsaber-1.png */,
+				A656134328757CB000F48507 /* sloth_lightsaber-2.png */,
+				A656134528757CB100F48507 /* sloth_lightsaber-3.png */,
+				A656134128757CB000F48507 /* sloth_lightsaber-4.png */,
+				A656134628757CB100F48507 /* sloth_lightsaber-5.png */,
+				A656133A28757CAF00F48507 /* sloth_lightsaber-6.png */,
+				A656133C28757CAF00F48507 /* sloth_lightsaber-7.png */,
+				A656133F28757CB000F48507 /* sloth_lightsaber-8.png */,
+				A656134228757CB000F48507 /* sloth_lightsaber-9.png */,
+				A656134728757CB100F48507 /* sloth_lightsaber-10.png */,
+				A656133B28757CAF00F48507 /* sloth_lightsaber-11.png */,
+				A656134428757CB100F48507 /* sloth_lightsaber-12.png */,
+				A656133D28757CAF00F48507 /* sloth_lightsaber-13.png */,
+				A656133928757CAE00F48507 /* sloth_lightsaber-14.png */,
+				A656133E28757CAF00F48507 /* sloth_lightsaber-15.png */,
+				A656134828757CB100F48507 /* sloth_lightsaber-16.png */,
+				A656134928757CB200F48507 /* sloth_lightsaber-17.png */,
+				A656134A28757CB200F48507 /* sloth_lightsaber-18.png */,
+				A656137F28757CD700F48507 /* sloth_lightsaber-19.png */,
+				A656137228757CD400F48507 /* sloth_lightsaber-20.png */,
+				A65613C328757DE200F48507 /* sloth_lightsaber-21.png */,
+				A65613C228757DE200F48507 /* sloth_lightsaber-22.png */,
+				A65613C928757DE400F48507 /* sloth_lightsaber-23.png */,
+				A65613CD28757DE600F48507 /* sloth_lightsaber-24.png */,
+				A65613C028757DE200F48507 /* sloth_lightsaber-25.png */,
+				A65613C428757DE300F48507 /* sloth_lightsaber-26.png */,
+				A65613CA28757DE600F48507 /* sloth_lightsaber-27.png */,
+				A65613C128757DE200F48507 /* sloth_lightsaber-28.png */,
+				A65613CC28757DE600F48507 /* sloth_lightsaber-29.png */,
+				A65613C728757DE300F48507 /* sloth_lightsaber-30.png */,
+				A65613CB28757DE600F48507 /* sloth_lightsaber-31.png */,
+				A65613C628757DE300F48507 /* sloth_lightsaber-32.png */,
+				A65613C528757DE300F48507 /* sloth_lightsaber-33.png */,
+				A65613C828757DE300F48507 /* sloth_lightsaber-34.png */,
 			);
 			path = lightsaber;
 			sourceTree = "<group>";
@@ -9331,23 +9450,40 @@
 		A6FB8A7C287410B300AB872E /* lightsaber */ = {
 			isa = PBXGroup;
 			children = (
-				A6FB8A7D287410B300AB872E /* sloth_swag_lightsaber-4.png */,
-				A6FB8A7E287410B300AB872E /* sloth_swag_lightsaber-13.png */,
-				A6FB8A7F287410B300AB872E /* sloth_swag_lightsaber-12.png */,
-				A6FB8A80287410B300AB872E /* sloth_swag_lightsaber-5.png */,
-				A6FB8A81287410B300AB872E /* sloth_swag_lightsaber-7.png */,
-				A6FB8A82287410B300AB872E /* sloth_swag_lightsaber-10.png */,
-				A6FB8A83287410B300AB872E /* sloth_swag_lightsaber-11.png */,
-				A6FB8A84287410B300AB872E /* sloth_swag_lightsaber-6.png */,
-				A6FB8A85287410B300AB872E /* sloth_swag_lightsaber-2.png */,
-				A6FB8A86287410B300AB872E /* sloth_swag_lightsaber-15.png */,
-				A6FB8A87287410B300AB872E /* sloth_swag_lightsaber-14.png */,
-				A6FB8A88287410B300AB872E /* sloth_swag_lightsaber-3.png */,
-				A6FB8A89287410B300AB872E /* sloth_swag_lightsaber-1.png */,
-				A6FB8A8A287410B300AB872E /* sloth_swag_lightsaber-16.png */,
-				A6FB8A8B287410B300AB872E /* sloth_swag_lightsaber-0.png */,
-				A6FB8A8C287410B300AB872E /* sloth_swag_lightsaber-8.png */,
-				A6FB8A8D287410B300AB872E /* sloth_swag_lightsaber-9.png */,
+				A65613F828757FF300F48507 /* sloth_swag_lightsaber-1.png */,
+				A65613FB28757FF400F48507 /* sloth_swag_lightsaber-2.png */,
+				A65613FA28757FF300F48507 /* sloth_swag_lightsaber-3.png */,
+				A65613F528757FF200F48507 /* sloth_swag_lightsaber-4.png */,
+				A65613EF28757FF100F48507 /* sloth_swag_lightsaber-5.png */,
+				A65613EE28757FF100F48507 /* sloth_swag_lightsaber-6.png */,
+				A65613EB28757FF100F48507 /* sloth_swag_lightsaber-7.png */,
+				A65613F228757FF200F48507 /* sloth_swag_lightsaber-8.png */,
+				A65613EC28757FF100F48507 /* sloth_swag_lightsaber-9.png */,
+				A65613F628757FF300F48507 /* sloth_swag_lightsaber-10.png */,
+				A65613F128757FF200F48507 /* sloth_swag_lightsaber-11.png */,
+				A65613F928757FF300F48507 /* sloth_swag_lightsaber-12.png */,
+				A65613ED28757FF100F48507 /* sloth_swag_lightsaber-13.png */,
+				A65613F728757FF300F48507 /* sloth_swag_lightsaber-14.png */,
+				A65613EA28757FF000F48507 /* sloth_swag_lightsaber-15.png */,
+				A65613F028757FF100F48507 /* sloth_swag_lightsaber-16.png */,
+				A65613F428757FF200F48507 /* sloth_swag_lightsaber-17.png */,
+				A65613F328757FF200F48507 /* sloth_swag_lightsaber-18.png */,
+				A656142B2875800600F48507 /* sloth_swag_lightsaber-19.png */,
+				A656142D2875800700F48507 /* sloth_swag_lightsaber-20.png */,
+				A65614282875800600F48507 /* sloth_swag_lightsaber-21.png */,
+				A65614252875800500F48507 /* sloth_swag_lightsaber-22.png */,
+				A65614262875800500F48507 /* sloth_swag_lightsaber-23.png */,
+				A65614222875800500F48507 /* sloth_swag_lightsaber-24.png */,
+				A65614202875800400F48507 /* sloth_swag_lightsaber-25.png */,
+				A656142E2875800700F48507 /* sloth_swag_lightsaber-26.png */,
+				A656142C2875800700F48507 /* sloth_swag_lightsaber-27.png */,
+				A65614212875800400F48507 /* sloth_swag_lightsaber-28.png */,
+				A656142A2875800600F48507 /* sloth_swag_lightsaber-29.png */,
+				A656142F2875800700F48507 /* sloth_swag_lightsaber-30.png */,
+				A65614292875800600F48507 /* sloth_swag_lightsaber-31.png */,
+				A65614272875800600F48507 /* sloth_swag_lightsaber-32.png */,
+				A65614232875800500F48507 /* sloth_swag_lightsaber-33.png */,
+				A65614242875800500F48507 /* sloth_swag_lightsaber-34.png */,
 			);
 			path = lightsaber;
 			sourceTree = "<group>";
@@ -12673,6 +12809,7 @@
 			files = (
 				A6FB92D0287410B600AB872E /* snail_idle_front-8.png in Resources */,
 				A6FB9CD6287410BA00AB872E /* missingno_idle_front-2.png in Resources */,
+				A65614402875800800F48507 /* sloth_swag_lightsaber-21.png in Resources */,
 				A6FB9256287410B600AB872E /* egg_gold_crack-6.png in Resources */,
 				A6FBA262287410BC00AB872E /* sloth_swag_climb-16.png in Resources */,
 				A6FB99C8287410B900AB872E /* ufo_bombing-36.png in Resources */,
@@ -12687,7 +12824,6 @@
 				A6FB91DE287410B600AB872E /* egg_opening-12.png in Resources */,
 				A6FB98FA287410B800AB872E /* ufo_crash-12.png in Resources */,
 				A6FB9986287410B800AB872E /* ufo_bombing-38.png in Resources */,
-				A6FBA146287410BB00AB872E /* sloth_lightsaber-0.png in Resources */,
 				A6FB98C4287410B800AB872E /* ufo_crash-35.png in Resources */,
 				A6FB9216287410B600AB872E /* egg_opening-22.png in Resources */,
 				A6FB985C287410B800AB872E /* ufo_landing-51.png in Resources */,
@@ -12696,7 +12832,6 @@
 				A6FB933E287410B600AB872E /* sheep_puke-2.png in Resources */,
 				A6FBA0DC287410BB00AB872E /* sloth_walk-4.png in Resources */,
 				A6FBA33A287410BC00AB872E /* sloth_swag_idle_front-30.png in Resources */,
-				A6FBA308287410BC00AB872E /* sloth_swag_lightsaber-13.png in Resources */,
 				A6FB9824287410B800AB872E /* ufo_landing-25.png in Resources */,
 				A6FB9880287410B800AB872E /* ufo_landing-61.png in Resources */,
 				A6FBA372287410BC00AB872E /* sloth_swag_idle_front-13.png in Resources */,
@@ -12705,16 +12840,16 @@
 				A6FB9366287410B600AB872E /* sheep_puke-19.png in Resources */,
 				A6FB99AE287410B900AB872E /* ufo_bombing-19.png in Resources */,
 				A6FB989A287410B800AB872E /* ufo_landing-16.png in Resources */,
+				A656135328757CB200F48507 /* sloth_lightsaber-13.png in Resources */,
+				A65614442875800800F48507 /* sloth_swag_lightsaber-29.png in Resources */,
 				A6FB9332287410B600AB872E /* sheep_walk-8.png in Resources */,
 				A6FB9470287410B700AB872E /* sheep_black_eat-20.png in Resources */,
 				A6FB9860287410B800AB872E /* ufo_landing-44.png in Resources */,
 				A6FBA280287410BC00AB872E /* sloth_swag_climb-33.png in Resources */,
 				A6FBA1BC287410BB00AB872E /* sloth_eat-5.png in Resources */,
 				A6FBA21A287410BC00AB872E /* sloth_swag_selfie-0.png in Resources */,
-				A6FBA31E287410BC00AB872E /* sloth_swag_lightsaber-1.png in Resources */,
 				A6FB9350287410B600AB872E /* sheep_puke-15.png in Resources */,
 				A6FBA09C287410BB00AB872E /* sloth_climb-29.png in Resources */,
-				A6FBA30C287410BC00AB872E /* sloth_swag_lightsaber-5.png in Resources */,
 				A6FB91DC287410B600AB872E /* egg_opening-13.png in Resources */,
 				A6FB9964287410B800AB872E /* ufo_bombing-70.png in Resources */,
 				A6FBA2C8287410BC00AB872E /* sloth_swag_love-13.png in Resources */,
@@ -12727,7 +12862,6 @@
 				A6FB9354287410B600AB872E /* sheep_puke-16.png in Resources */,
 				A6FB9998287410B900AB872E /* ufo_bombing-16.png in Resources */,
 				A6FB9994287410B900AB872E /* ufo_bombing-28.png in Resources */,
-				A6FBA13A287410BB00AB872E /* sloth_lightsaber-10.png in Resources */,
 				A6FBA1DA287410BB00AB872E /* sloth_swag_idle-2.png in Resources */,
 				A6FB92FC287410B600AB872E /* snail_nicky_idle_front-6.png in Resources */,
 				A6FB9404287410B700AB872E /* sheep_black_puke-30.png in Resources */,
@@ -12765,10 +12899,11 @@
 				A6FB93A0287410B600AB872E /* sheep_eat-30.png in Resources */,
 				A6FBA264287410BC00AB872E /* sloth_swag_climb-17.png in Resources */,
 				A6FBA058287410BB00AB872E /* sloth_selfie-19.png in Resources */,
-				A6FBA30E287410BC00AB872E /* sloth_swag_lightsaber-7.png in Resources */,
 				A6FB9390287410B600AB872E /* sheep_eat-36.png in Resources */,
 				A6FBA1EA287410BB00AB872E /* sloth_swag_idle-16.png in Resources */,
 				A6FB9272287410B600AB872E /* egg_gold_opening-25.png in Resources */,
+				A65614322875800800F48507 /* sloth_swag_lightsaber-28.png in Resources */,
+				A656140A28757FF400F48507 /* sloth_swag_lightsaber-11.png in Resources */,
 				A6FB98D2287410B800AB872E /* ufo_crash-30.png in Resources */,
 				A6FB9822287410B800AB872E /* ufo_landing-31.png in Resources */,
 				A6FB934A287410B600AB872E /* sheep_puke-14.png in Resources */,
@@ -12814,12 +12949,14 @@
 				A6FB93C0287410B600AB872E /* sheep_eat-13.png in Resources */,
 				A6FB9830287410B800AB872E /* ufo_landing-1.png in Resources */,
 				A6FBA072287410BB00AB872E /* sloth_selfie-22.png in Resources */,
+				A65614482875800800F48507 /* sloth_swag_lightsaber-27.png in Resources */,
 				A6FBA300287410BC00AB872E /* sloth_swag_love-24.png in Resources */,
 				A6FBA164287410BB00AB872E /* sloth_idle_front-15.png in Resources */,
 				A6FB941C287410B700AB872E /* sheep_black_puke-5.png in Resources */,
 				A6FBA38E287410BC00AB872E /* sloth_swag_eat-3.png in Resources */,
 				A6FB9408287410B700AB872E /* sheep_black_puke-25.png in Resources */,
 				A6FB9384287410B600AB872E /* sheep_idle_front-8.png in Resources */,
+				A65613CE28757DE600F48507 /* sloth_lightsaber-25.png in Resources */,
 				A6FB92DC287410B600AB872E /* snail_idle_front-7.png in Resources */,
 				A6FB9398287410B600AB872E /* sheep_eat-21.png in Resources */,
 				A6FBA22E287410BC00AB872E /* sloth_swag_selfie-19.png in Resources */,
@@ -12832,6 +12969,7 @@
 				A6FBA2B8287410BC00AB872E /* sloth_swag_walk-9.png in Resources */,
 				A6FB92E8287410B600AB872E /* snail_idle_front-2.png in Resources */,
 				A6FBA02A287410BB00AB872E /* sloth_idle-6.png in Resources */,
+				A656135D28757CB200F48507 /* sloth_lightsaber-9.png in Resources */,
 				A6FB9232287410B600AB872E /* egg_jump-3.png in Resources */,
 				A6FB99DC287410B900AB872E /* ufo_bombing-53.png in Resources */,
 				A6FB9220287410B600AB872E /* egg_idle_front-2.png in Resources */,
@@ -12858,6 +12996,7 @@
 				A6FB93BC287410B600AB872E /* sheep_eat-10.png in Resources */,
 				A6FB91C6287410B600AB872E /* egg_crack-10.png in Resources */,
 				A6FB9848287410B800AB872E /* ufo_landing-34.png in Resources */,
+				A65613E628757DE700F48507 /* sloth_lightsaber-29.png in Resources */,
 				A6FB994E287410B800AB872E /* ufo_exit_portal-23.png in Resources */,
 				A6FBA210287410BC00AB872E /* sloth_swag_selfie-10.png in Resources */,
 				A6FB9900287410B800AB872E /* ufo_abduction-9.png in Resources */,
@@ -12867,6 +13006,7 @@
 				A6FBA330287410BC00AB872E /* sloth_swag_idle_front-35.png in Resources */,
 				A6FBA0DA287410BB00AB872E /* sloth_walk-6.png in Resources */,
 				A6FB9238287410B600AB872E /* egg_drag-2.png in Resources */,
+				A656136728757CB200F48507 /* sloth_lightsaber-10.png in Resources */,
 				A6FB9430287410B700AB872E /* sheep_black_puke-28.png in Resources */,
 				A6FB9886287410B800AB872E /* ufo_landing-62.png in Resources */,
 				A6FBA152287410BB00AB872E /* sloth_idle_front-12.png in Resources */,
@@ -12907,12 +13047,14 @@
 				A6FB992A287410B800AB872E /* ufo_abduction-3.png in Resources */,
 				A6FB93F8287410B700AB872E /* sheep_black_walk-8.png in Resources */,
 				A6FB98DC287410B800AB872E /* ufo_crash-3.png in Resources */,
+				A656136B28757CB200F48507 /* sloth_lightsaber-17.png in Resources */,
 				A6FB98AC287410B800AB872E /* ufo_idle_front-6.png in Resources */,
 				A6FB946C287410B700AB872E /* sheep_black_eat-9.png in Resources */,
 				A6FBA10C287410BB00AB872E /* sloth_love-25.png in Resources */,
 				A6FB9396287410B600AB872E /* sheep_eat-35.png in Resources */,
 				A6FB9878287410B800AB872E /* ufo_landing-58.png in Resources */,
 				A6FB9402287410B700AB872E /* sheep_black_puke-24.png in Resources */,
+				A65614302875800800F48507 /* sloth_swag_lightsaber-25.png in Resources */,
 				A6FB91F6287410B600AB872E /* egg_opening-3.png in Resources */,
 				A6FB9454287410B700AB872E /* sheep_black_eat-25.png in Resources */,
 				A6FB9478287410B700AB872E /* sheep_black_eat-4.png in Resources */,
@@ -12932,7 +13074,6 @@
 				A6FB9978287410B800AB872E /* ufo_bombing-49.png in Resources */,
 				A6FB93A4287410B600AB872E /* sheep_eat-18.png in Resources */,
 				A6FB99C6287410B900AB872E /* ufo_bombing-37.png in Resources */,
-				A6FBA312287410BC00AB872E /* sloth_swag_lightsaber-11.png in Resources */,
 				A6FB9962287410B800AB872E /* ufo_bombing-64.png in Resources */,
 				A6FBA274287410BC00AB872E /* sloth_swag_climb-18.png in Resources */,
 				A6FB99BA287410B900AB872E /* ufo_bombing-34.png in Resources */,
@@ -12945,23 +13086,32 @@
 				A6FBA158287410BB00AB872E /* sloth_idle_front-9.png in Resources */,
 				A6FB9482287410B700AB872E /* sheep_black_eat-7.png in Resources */,
 				A6FB994C287410B800AB872E /* ufo_exit_portal-22.png in Resources */,
+				A656135528757CB200F48507 /* sloth_lightsaber-15.png in Resources */,
+				A65613E228757DE700F48507 /* sloth_lightsaber-27.png in Resources */,
 				A6FB9494287410B700AB872E /* sheep_black_eat-15.png in Resources */,
 				A6FBA2A4287410BC00AB872E /* sloth_swag_climb-42.png in Resources */,
+				A656135928757CB200F48507 /* sloth_lightsaber-1.png in Resources */,
 				A6FBA32A287410BC00AB872E /* sloth_swag_idle_front-36.png in Resources */,
 				A6FB92F2287410B600AB872E /* snail_nicky_idle_front-11.png in Resources */,
 				A6FB98AE287410B800AB872E /* ufo_idle_front-7.png in Resources */,
+				A65613DE28757DE700F48507 /* sloth_lightsaber-34.png in Resources */,
 				A6FBA0A2287410BB00AB872E /* sloth_climb-16.png in Resources */,
 				A6FB9296287410B600AB872E /* egg_gold_opening-11.png in Resources */,
 				A6FBA240287410BC00AB872E /* sloth_swag_selfie-22.png in Resources */,
 				A6FBA1F4287410BC00AB872E /* sloth_swag_idle-21.png in Resources */,
 				A6FB9204287410B600AB872E /* egg_opening-31.png in Resources */,
+				A656144A2875800800F48507 /* sloth_swag_lightsaber-20.png in Resources */,
 				A6FBA1A8287410BB00AB872E /* sloth_drag-6.png in Resources */,
 				A6FB93D0287410B600AB872E /* sheep_eat-3.png in Resources */,
 				A6FB947C287410B700AB872E /* sheep_black_eat-10.png in Resources */,
-				A6FBA322287410BC00AB872E /* sloth_swag_lightsaber-0.png in Resources */,
+				A656136D28757CB200F48507 /* sloth_lightsaber-18.png in Resources */,
 				A6FB942E287410B700AB872E /* sheep_black_puke-14.png in Resources */,
+				A656135128757CB200F48507 /* sloth_lightsaber-7.png in Resources */,
+				A65613D828757DE700F48507 /* sloth_lightsaber-33.png in Resources */,
 				A6FB92C8287410B600AB872E /* egg_gold_drag-0.png in Resources */,
+				A656141C28757FF400F48507 /* sloth_swag_lightsaber-3.png in Resources */,
 				A6FBA382287410BC00AB872E /* sloth_swag_drag-2.png in Resources */,
+				A65613E028757DE700F48507 /* sloth_lightsaber-23.png in Resources */,
 				A6FB929C287410B600AB872E /* egg_gold_opening-28.png in Resources */,
 				A6FB9828287410B800AB872E /* ufo_landing-18.png in Resources */,
 				A6FBA11E287410BB00AB872E /* sloth_love-3.png in Resources */,
@@ -12969,7 +13119,6 @@
 				A6FBA3C6287410BC00AB872E /* nyan_idle_front-7.png in Resources */,
 				A6FB940E287410B700AB872E /* sheep_black_puke-20.png in Resources */,
 				A6FBA388287410BC00AB872E /* sloth_swag_eat-4.png in Resources */,
-				A6FBA150287410BB00AB872E /* sloth_lightsaber-7.png in Resources */,
 				A6FB98D6287410B800AB872E /* ufo_crash-32.png in Resources */,
 				A6FBA2AA287410BC00AB872E /* sloth_swag_walk-5.png in Resources */,
 				A6FB91E8287410B600AB872E /* egg_opening-28.png in Resources */,
@@ -12979,12 +13128,12 @@
 				A6FB9372287410B600AB872E /* sheep_puke-8.png in Resources */,
 				A6FB92F0287410B600AB872E /* snail_nicky_idle_front-10.png in Resources */,
 				A6FB98E8287410B800AB872E /* ufo_crash-1.png in Resources */,
-				A6FBA30A287410BC00AB872E /* sloth_swag_lightsaber-12.png in Resources */,
 				A6FBA24A287410BC00AB872E /* sloth_swag_climb-49.png in Resources */,
 				A6FBA304287410BC00AB872E /* sloth_swag_love-18.png in Resources */,
 				A6FB9412287410B700AB872E /* sheep_black_puke-23.png in Resources */,
 				A6FB9984287410B800AB872E /* ufo_bombing-10.png in Resources */,
 				A6FB9244287410B600AB872E /* egg_gold_idle-2.png in Resources */,
+				A65614382875800800F48507 /* sloth_swag_lightsaber-34.png in Resources */,
 				A6FB99E2287410B900AB872E /* ufo_bombing-42.png in Resources */,
 				A6FB98F8287410B800AB872E /* ufo_crash-13.png in Resources */,
 				A6FBA032287410BB00AB872E /* sloth_idle-5.png in Resources */,
@@ -12994,6 +13143,7 @@
 				A6FBA0FE287410BB00AB872E /* sloth_love-26.png in Resources */,
 				A6FBA2F0287410BC00AB872E /* sloth_swag_love-22.png in Resources */,
 				A6FBA2FE287410BC00AB872E /* sloth_swag_love-25.png in Resources */,
+				A656140628757FF400F48507 /* sloth_swag_lightsaber-5.png in Resources */,
 				A6FBA0C2287410BB00AB872E /* sloth_climb-8.png in Resources */,
 				A6FBA26A287410BC00AB872E /* sloth_swag_climb-14.png in Resources */,
 				A6FBA29E287410BC00AB872E /* sloth_swag_climb-40.png in Resources */,
@@ -13012,6 +13162,7 @@
 				A6FB934E287410B600AB872E /* sheep_puke-29.png in Resources */,
 				A6FB9466287410B700AB872E /* sheep_black_eat-23.png in Resources */,
 				A6FB921E287410B600AB872E /* egg_idle_front-0.png in Resources */,
+				A656141028757FF400F48507 /* sloth_swag_lightsaber-17.png in Resources */,
 				A6FB9872287410B800AB872E /* ufo_landing-67.png in Resources */,
 				A6FB9270287410B600AB872E /* egg_gold_opening-31.png in Resources */,
 				A6FBA1BE287410BB00AB872E /* sloth_eat-4.png in Resources */,
@@ -13021,21 +13172,22 @@
 				A6FB99E0287410B900AB872E /* ufo_bombing-43.png in Resources */,
 				A6FB99B6287410B900AB872E /* ufo_bombing-5.png in Resources */,
 				A6FB9CD4287410BA00AB872E /* missingno_idle_front-3.png in Resources */,
+				A656139028757CD900F48507 /* sloth_lightsaber-20.png in Resources */,
 				A6FB92CC287410B600AB872E /* snail_idle_front-14.png in Resources */,
 				A6FBA294287410BC00AB872E /* sloth_swag_climb-9.png in Resources */,
 				A6FBA0A6287410BB00AB872E /* sloth_climb-0.png in Resources */,
 				A6FBA3B2287410BC00AB872E /* nyan_idle_front-10.png in Resources */,
+				A656140228757FF400F48507 /* sloth_swag_lightsaber-13.png in Resources */,
 				A6FB9912287410B800AB872E /* ufo_abduction-16.png in Resources */,
 				A6FBA220287410BC00AB872E /* sloth_swag_selfie-14.png in Resources */,
 				A6FBA07C287410BB00AB872E /* sloth_selfie-10.png in Resources */,
-				A6FBA134287410BB00AB872E /* sloth_lightsaber-16.png in Resources */,
 				A6FBA21C287410BC00AB872E /* sloth_swag_selfie-1.png in Resources */,
+				A656135728757CB200F48507 /* sloth_lightsaber-8.png in Resources */,
 				A6FB9842287410B800AB872E /* ufo_landing-22.png in Resources */,
 				A6FBA0F6287410BB00AB872E /* sloth_love-16.png in Resources */,
 				A6FBA126287410BB00AB872E /* sloth_love-23.png in Resources */,
 				A6FBA242287410BC00AB872E /* sloth_swag_climb-0.png in Resources */,
 				A6FB9324287410B600AB872E /* sheep_walk-1.png in Resources */,
-				A6FBA138287410BB00AB872E /* sloth_lightsaber-14.png in Resources */,
 				A6FB942A287410B700AB872E /* sheep_black_puke-11.png in Resources */,
 				A6FBA1E8287410BB00AB872E /* sloth_swag_idle-17.png in Resources */,
 				A6FB9974287410B800AB872E /* ufo_bombing-62.png in Resources */,
@@ -13051,7 +13203,6 @@
 				A6FBA3C2287410BC00AB872E /* nyan_idle_front-4.png in Resources */,
 				A6FB9280287410B600AB872E /* egg_gold_opening-3.png in Resources */,
 				A6FB9326287410B600AB872E /* sheep_walk-3.png in Resources */,
-				A6FBA140287410BB00AB872E /* sloth_lightsaber-12.png in Resources */,
 				A6FB990A287410B800AB872E /* ufo_abduction-24.png in Resources */,
 				A6FBA094287410BB00AB872E /* sloth_climb-14.png in Resources */,
 				A6FBA128287410BB00AB872E /* sloth_love-0.png in Resources */,
@@ -13076,9 +13227,10 @@
 				A6FB91FE287410B600AB872E /* egg_opening-9.png in Resources */,
 				A6FBA3D8287410BC00AB872E /* smoke_bomb-7.png in Resources */,
 				A6FB98E6287410B800AB872E /* ufo_crash-15.png in Resources */,
-				A6FBA148287410BB00AB872E /* sloth_lightsaber-1.png in Resources */,
 				A6FB92C0287410B600AB872E /* egg_gold_jump-8.png in Resources */,
 				A6FB9346287410B600AB872E /* sheep_puke-11.png in Resources */,
+				A656141A28757FF400F48507 /* sloth_swag_lightsaber-12.png in Resources */,
+				A656143A2875800800F48507 /* sloth_swag_lightsaber-22.png in Resources */,
 				A6FB99C0287410B900AB872E /* ufo_bombing-35.png in Resources */,
 				A6FB9432287410B700AB872E /* sheep_black_puke-29.png in Resources */,
 				A6FB9236287410B600AB872E /* egg_jump-0.png in Resources */,
@@ -13104,6 +13256,8 @@
 				A6FB982C287410B800AB872E /* ufo_landing-30.png in Resources */,
 				A6FB9274287410B600AB872E /* egg_gold_opening-19.png in Resources */,
 				A6FBA3CC287410BC00AB872E /* smoke_bomb-2.png in Resources */,
+				A65613D628757DE700F48507 /* sloth_lightsaber-26.png in Resources */,
+				A656141628757FF400F48507 /* sloth_swag_lightsaber-14.png in Resources */,
 				A6FBA3DC287410BC00AB872E /* smoke_bomb-8.png in Resources */,
 				A6FBA118287410BB00AB872E /* sloth_love-30.png in Resources */,
 				A6FB92D4287410B600AB872E /* snail_idle_front-13.png in Resources */,
@@ -13117,6 +13271,7 @@
 				A6FB948E287410B700AB872E /* sheep_black_eat-28.png in Resources */,
 				A6FBA2A0287410BC00AB872E /* sloth_swag_climb-41.png in Resources */,
 				A6FBA1CE287410BB00AB872E /* sloth_eat-10.png in Resources */,
+				A656140028757FF400F48507 /* sloth_swag_lightsaber-9.png in Resources */,
 				A6FB92FE287410B600AB872E /* snail_nicky_idle_front-7.png in Resources */,
 				A6FB924C287410B600AB872E /* egg_gold_crack-1.png in Resources */,
 				A6FB9992287410B900AB872E /* ufo_bombing-14.png in Resources */,
@@ -13132,6 +13287,7 @@
 				A6FB9214287410B600AB872E /* egg_opening-23.png in Resources */,
 				A6FB9930287410B800AB872E /* ufo_exit_portal-17.png in Resources */,
 				A6FBA028287410BB00AB872E /* sloth_idle-13.png in Resources */,
+				A65613E428757DE700F48507 /* sloth_lightsaber-31.png in Resources */,
 				A6FBA2B4287410BC00AB872E /* sloth_swag_walk-2.png in Resources */,
 				A6FBA1C2287410BB00AB872E /* sloth_eat-17.png in Resources */,
 				A6FBA2DA287410BC00AB872E /* sloth_swag_love-0.png in Resources */,
@@ -13176,20 +13332,21 @@
 				A6FB925C287410B600AB872E /* egg_gold_crack-10.png in Resources */,
 				A6FBA044287410BB00AB872E /* sloth_idle-24.png in Resources */,
 				A6FB991C287410B800AB872E /* ufo_abduction-12.png in Resources */,
+				A65614362875800800F48507 /* sloth_swag_lightsaber-33.png in Resources */,
 				A6FB9308287410B600AB872E /* snail_nicky_idle_front-3.png in Resources */,
 				A6FBA0B8287410BB00AB872E /* sloth_climb-20.png in Resources */,
-				A6FBA314287410BC00AB872E /* sloth_swag_lightsaber-6.png in Resources */,
 				A6FB9952287410B800AB872E /* ufo_exit_portal-21.png in Resources */,
 				A6FB9266287410B600AB872E /* egg_gold_opening-26.png in Resources */,
-				A6FBA132287410BB00AB872E /* sloth_lightsaber-8.png in Resources */,
 				A6FB92B0287410B600AB872E /* egg_gold_jump-4.png in Resources */,
 				A6FBA18C287410BB00AB872E /* sloth_idle_front-4.png in Resources */,
 				A6FB91CE287410B600AB872E /* egg_crack-2.png in Resources */,
 				A6FBA1C4287410BB00AB872E /* sloth_eat-16.png in Resources */,
+				A65614342875800800F48507 /* sloth_swag_lightsaber-24.png in Resources */,
 				A6FB98C6287410B800AB872E /* ufo_crash-8.png in Resources */,
 				A6FB936C287410B600AB872E /* sheep_puke-22.png in Resources */,
 				A6FBA206287410BC00AB872E /* sloth_swag_idle-8.png in Resources */,
 				A6FB931E287410B600AB872E /* sheep_idle_side-4.png in Resources */,
+				A656136128757CB200F48507 /* sloth_lightsaber-12.png in Resources */,
 				A6FB99D6287410B900AB872E /* ufo_bombing-52.png in Resources */,
 				A6FBA3D6287410BC00AB872E /* smoke_bomb-6.png in Resources */,
 				A6FB92B6287410B600AB872E /* egg_gold_jump-6.png in Resources */,
@@ -13212,6 +13369,7 @@
 				A6FB944C287410B700AB872E /* sheep_black_eat-30.png in Resources */,
 				A6FB93B0287410B600AB872E /* sheep_eat-17.png in Resources */,
 				A6FB99A0287410B900AB872E /* ufo_bombing-32.png in Resources */,
+				A656141E28757FF400F48507 /* sloth_swag_lightsaber-2.png in Resources */,
 				A6FB99BE287410B900AB872E /* ufo_bombing-21.png in Resources */,
 				A6FBA1CC287410BB00AB872E /* sloth_eat-11.png in Resources */,
 				A6FBA2AC287410BC00AB872E /* sloth_swag_walk-4.png in Resources */,
@@ -13221,6 +13379,7 @@
 				A6FBA3C4287410BC00AB872E /* nyan_idle_front-5.png in Resources */,
 				A6FB935A287410B600AB872E /* sheep_puke-26.png in Resources */,
 				A6FB93DA287410B700AB872E /* sheep_black_idle_side-6.png in Resources */,
+				A656144C2875800800F48507 /* sloth_swag_lightsaber-26.png in Resources */,
 				A6FBA2E8287410BC00AB872E /* sloth_swag_love-21.png in Resources */,
 				A6FBA360287410BC00AB872E /* sloth_swag_idle_front-17.png in Resources */,
 				A6FB98F2287410B800AB872E /* ufo_crash-4.png in Resources */,
@@ -13229,6 +13388,7 @@
 				A6FB9442287410B700AB872E /* sheep_black_idle_front-2.png in Resources */,
 				A6FB9910287410B800AB872E /* ufo_abduction-17.png in Resources */,
 				A6FBA0D2287410BB00AB872E /* sloth_walk-0.png in Resources */,
+				A65613D028757DE700F48507 /* sloth_lightsaber-28.png in Resources */,
 				A6FBA28A287410BC00AB872E /* sloth_swag_climb-20.png in Resources */,
 				A6FBA190287410BB00AB872E /* sloth_idle_front-34.png in Resources */,
 				A6FB98DE287410B800AB872E /* ufo_crash-16.png in Resources */,
@@ -13238,6 +13398,7 @@
 				A6FB9260287410B600AB872E /* egg_gold_crack-9.png in Resources */,
 				A6FB99C2287410B900AB872E /* ufo_bombing-2.png in Resources */,
 				A6FB9224287410B600AB872E /* egg_idle_front-4.png in Resources */,
+				A656134D28757CB200F48507 /* sloth_lightsaber-6.png in Resources */,
 				A6FBA06E287410BB00AB872E /* sloth_selfie-4.png in Resources */,
 				A6FBA0DE287410BB00AB872E /* sloth_walk-5.png in Resources */,
 				A6FB9282287410B600AB872E /* egg_gold_opening-1.png in Resources */,
@@ -13247,10 +13408,12 @@
 				A6FBA21E287410BC00AB872E /* sloth_swag_selfie-28.png in Resources */,
 				A6FBA25E287410BC00AB872E /* sloth_swag_climb-13.png in Resources */,
 				A6FBA17C287410BB00AB872E /* sloth_idle_front-0.png in Resources */,
+				A65613FC28757FF400F48507 /* sloth_swag_lightsaber-15.png in Resources */,
 				A6FBA3BC287410BC00AB872E /* nyan_idle_front-3.png in Resources */,
 				A6FB9CC8287410BA00AB872E /* missingno_walk-3.png in Resources */,
 				A6FBA3B0287410BC00AB872E /* nyan_idle_front-12.png in Resources */,
 				A6FB9894287410B800AB872E /* ufo_landing-13.png in Resources */,
+				A656140828757FF400F48507 /* sloth_swag_lightsaber-16.png in Resources */,
 				A6FBA2D0287410BC00AB872E /* sloth_swag_love-8.png in Resources */,
 				A6FB98DA287410B800AB872E /* ufo_crash-27.png in Resources */,
 				A6FB9942287410B800AB872E /* ufo_exit_portal-5.png in Resources */,
@@ -13269,8 +13432,8 @@
 				A6FB98D4287410B800AB872E /* ufo_crash-26.png in Resources */,
 				A6FB9400287410B700AB872E /* sheep_black_puke-18.png in Resources */,
 				A6FBA25C287410BC00AB872E /* sloth_swag_climb-11.png in Resources */,
-				A6FBA14C287410BB00AB872E /* sloth_lightsaber-4.png in Resources */,
 				A6FBA19E287410BB00AB872E /* sloth_drag-1.png in Resources */,
+				A656136328757CB200F48507 /* sloth_lightsaber-3.png in Resources */,
 				A6FB9462287410B700AB872E /* sheep_black_eat-36.png in Resources */,
 				A6FBA2FC287410BC00AB872E /* sloth_swag_love-31.png in Resources */,
 				A6FB93E2287410B700AB872E /* sheep_black_idle_side-10.png in Resources */,
@@ -13298,7 +13461,9 @@
 				A6FB933C287410B600AB872E /* sheep_puke-3.png in Resources */,
 				A6FBA344287410BC00AB872E /* sloth_swag_idle_front-27.png in Resources */,
 				A6FBA1AE287410BB00AB872E /* sloth_eat-0.png in Resources */,
+				A656140C28757FF400F48507 /* sloth_swag_lightsaber-8.png in Resources */,
 				A6FB9420287410B700AB872E /* sheep_black_puke-6.png in Resources */,
+				A656140E28757FF400F48507 /* sloth_swag_lightsaber-18.png in Resources */,
 				A6FBA26E287410BC00AB872E /* sloth_swag_climb-25.png in Resources */,
 				A6FB92D8287410B600AB872E /* snail_idle_front-11.png in Resources */,
 				A6FB99EA287410B900AB872E /* ufo_bombing-54.png in Resources */,
@@ -13314,7 +13479,6 @@
 				A6FB93CC287410B600AB872E /* sheep_eat-1.png in Resources */,
 				A6FBA122287410BB00AB872E /* sloth_love-21.png in Resources */,
 				A6FB923E287410B600AB872E /* egg_drag-0.png in Resources */,
-				A6FBA14A287410BB00AB872E /* sloth_lightsaber-5.png in Resources */,
 				A6FB933A287410B600AB872E /* sheep_puke-7.png in Resources */,
 				A6FB92A4287410B600AB872E /* egg_gold_opening-16.png in Resources */,
 				A6FBA2C4287410BC00AB872E /* sloth_swag_love-16.png in Resources */,
@@ -13335,9 +13499,10 @@
 				A6FBA12C287410BB00AB872E /* sloth_love-36.png in Resources */,
 				A6FB91FA287410B600AB872E /* egg_opening-0.png in Resources */,
 				A6FB991E287410B800AB872E /* ufo_abduction-13.png in Resources */,
+				A656141828757FF400F48507 /* sloth_swag_lightsaber-1.png in Resources */,
 				A6FBA08E287410BB00AB872E /* sloth_selfie-28.png in Resources */,
-				A6FBA13E287410BB00AB872E /* sloth_lightsaber-13.png in Resources */,
 				A6FB9322287410B600AB872E /* sheep_idle_side-7.png in Resources */,
+				A65613D228757DE700F48507 /* sloth_lightsaber-22.png in Resources */,
 				A6FBA1B8287410BB00AB872E /* sloth_eat-18.png in Resources */,
 				A6FB9376287410B600AB872E /* sheep_idle_front-2.png in Resources */,
 				A6FB9422287410B700AB872E /* sheep_black_puke-8.png in Resources */,
@@ -13369,7 +13534,6 @@
 				A6FBA282287410BC00AB872E /* sloth_swag_climb-37.png in Resources */,
 				A6FBA260287410BC00AB872E /* sloth_swag_climb-12.png in Resources */,
 				A6FBA0C0287410BB00AB872E /* sloth_climb-9.png in Resources */,
-				A6FBA306287410BC00AB872E /* sloth_swag_lightsaber-4.png in Resources */,
 				A6FB98A2287410B800AB872E /* ufo_landing-14.png in Resources */,
 				A6FB9264287410B600AB872E /* egg_gold_opening-27.png in Resources */,
 				A6FBA36C287410BC00AB872E /* sloth_swag_idle_front-11.png in Resources */,
@@ -13388,6 +13552,7 @@
 				A6FB92F6287410B600AB872E /* snail_nicky_idle_front-15.png in Resources */,
 				A6FB9CCA287410BA00AB872E /* missingno_walk-2.png in Resources */,
 				A6FB996C287410B800AB872E /* ufo_bombing-65.png in Resources */,
+				A65613D428757DE700F48507 /* sloth_lightsaber-21.png in Resources */,
 				A6FB941E287410B700AB872E /* sheep_black_puke-7.png in Resources */,
 				A6FBA066287410BB00AB872E /* sloth_selfie-1.png in Resources */,
 				A6FB9968287410B800AB872E /* ufo_bombing-59.png in Resources */,
@@ -13413,9 +13578,11 @@
 				A6FB9374287410B600AB872E /* sheep_idle_front-3.png in Resources */,
 				A6FBA2D4287410BC00AB872E /* sloth_swag_love-2.png in Resources */,
 				A6FB98CC287410B800AB872E /* ufo_crash-19.png in Resources */,
+				A65614422875800800F48507 /* sloth_swag_lightsaber-31.png in Resources */,
 				A6FB9314287410B600AB872E /* sheep_idle_side-2.png in Resources */,
 				A6FBA052287410BB00AB872E /* sloth_idle-9.png in Resources */,
 				A6FB92D6287410B600AB872E /* snail_idle_front-9.png in Resources */,
+				A656136528757CB200F48507 /* sloth_lightsaber-5.png in Resources */,
 				A6FBA036287410BB00AB872E /* sloth_idle-14.png in Resources */,
 				A6FBA366287410BC00AB872E /* sloth_swag_idle_front-28.png in Resources */,
 				A6FBA056287410BB00AB872E /* sloth_idle-23.png in Resources */,
@@ -13447,16 +13614,16 @@
 				A6FB91D4287410B600AB872E /* egg_crack-5.png in Resources */,
 				A6FBA3CE287410BC00AB872E /* smoke_bomb-0.png in Resources */,
 				A6FB9416287410B700AB872E /* sheep_black_puke-3.png in Resources */,
-				A6FBA324287410BC00AB872E /* sloth_swag_lightsaber-8.png in Resources */,
 				A6FBA2DE287410BC00AB872E /* sloth_swag_love-5.png in Resources */,
 				A6FB91E4287410B600AB872E /* egg_opening-15.png in Resources */,
 				A6FB9440287410B700AB872E /* sheep_black_idle_front-3.png in Resources */,
+				A656141428757FF400F48507 /* sloth_swag_lightsaber-10.png in Resources */,
 				A6FB99D4287410B900AB872E /* ufo_bombing-44.png in Resources */,
-				A6FBA31C287410BC00AB872E /* sloth_swag_lightsaber-3.png in Resources */,
-				A6FBA318287410BC00AB872E /* sloth_swag_lightsaber-15.png in Resources */,
 				A6FB9358287410B600AB872E /* sheep_puke-32.png in Resources */,
 				A6FB938C287410B600AB872E /* sheep_eat-23.png in Resources */,
+				A656143C2875800800F48507 /* sloth_swag_lightsaber-23.png in Resources */,
 				A6FB9902287410B800AB872E /* ufo_abduction-22.png in Resources */,
+				A656135F28757CB200F48507 /* sloth_lightsaber-2.png in Resources */,
 				A6FBA340287410BC00AB872E /* sloth_swag_idle_front-31.png in Resources */,
 				A6FB947E287410B700AB872E /* sheep_black_eat-12.png in Resources */,
 				A6FB91EC287410B600AB872E /* egg_opening-4.png in Resources */,
@@ -13464,7 +13631,6 @@
 				A6FBA026287410BB00AB872E /* sloth_idle-12.png in Resources */,
 				A6FBA196287410BB00AB872E /* sloth_idle_front-6.png in Resources */,
 				A6FBA362287410BC00AB872E /* sloth_swag_idle_front-16.png in Resources */,
-				A6FBA13C287410BB00AB872E /* sloth_lightsaber-11.png in Resources */,
 				A6FB998A287410B800AB872E /* ufo_bombing-11.png in Resources */,
 				A6FB922C287410B600AB872E /* egg_jump-7.png in Resources */,
 				A6FB9874287410B800AB872E /* ufo_landing-66.png in Resources */,
@@ -13475,14 +13641,14 @@
 				A6FB99BC287410B900AB872E /* ufo_bombing-20.png in Resources */,
 				A6FB935C287410B600AB872E /* sheep_puke-18.png in Resources */,
 				A6FB93EA287410B700AB872E /* sheep_black_walk-7.png in Resources */,
+				A656134F28757CB200F48507 /* sloth_lightsaber-11.png in Resources */,
 				A6FB9254287410B600AB872E /* egg_gold_crack-7.png in Resources */,
-				A6FBA310287410BC00AB872E /* sloth_swag_lightsaber-10.png in Resources */,
 				A6FBA270287410BC00AB872E /* sloth_swag_climb-31.png in Resources */,
 				A6FBA22C287410BC00AB872E /* sloth_swag_selfie-27.png in Resources */,
+				A656144E2875800800F48507 /* sloth_swag_lightsaber-30.png in Resources */,
 				A6FBA2FA287410BC00AB872E /* sloth_swag_love-19.png in Resources */,
 				A6FB983A287410B800AB872E /* ufo_landing-4.png in Resources */,
 				A6FB9954287410B800AB872E /* ufo_exit_portal-20.png in Resources */,
-				A6FBA14E287410BB00AB872E /* sloth_lightsaber-6.png in Resources */,
 				A6FB93D2287410B600AB872E /* sheep_black_idle_side-1.png in Resources */,
 				A6FBA286287410BC00AB872E /* sloth_swag_climb-22.png in Resources */,
 				A6FBA3BA287410BC00AB872E /* nyan_idle_front-2.png in Resources */,
@@ -13511,6 +13677,7 @@
 				A6FBA1E4287410BB00AB872E /* sloth_swag_idle-14.png in Resources */,
 				A6FB91BA287410B600AB872E /* egg_idle-2.png in Resources */,
 				A6FBA1A0287410BB00AB872E /* sloth_drag-0.png in Resources */,
+				A65613DC28757DE700F48507 /* sloth_lightsaber-30.png in Resources */,
 				A6FB999C287410B900AB872E /* ufo_bombing-7.png in Resources */,
 				A6FBA2EC287410BC00AB872E /* sloth_swag_love-23.png in Resources */,
 				A6FBA398287410BC00AB872E /* sloth_swag_eat-8.png in Resources */,
@@ -13558,10 +13725,10 @@
 				A6FBA05E287410BB00AB872E /* sloth_selfie-3.png in Resources */,
 				A6FB99E4287410B900AB872E /* ufo_bombing-56.png in Resources */,
 				A6FB9202287410B600AB872E /* egg_opening-25.png in Resources */,
-				A6FBA130287410BB00AB872E /* sloth_lightsaber-9.png in Resources */,
 				A6FB930E287410B600AB872E /* sheep_idle_side-8.png in Resources */,
 				A6FB99A8287410B900AB872E /* ufo_bombing-4.png in Resources */,
 				A6FB990E287410B800AB872E /* ufo_abduction-19.png in Resources */,
+				A656140428757FF400F48507 /* sloth_swag_lightsaber-6.png in Resources */,
 				A6FB9846287410B800AB872E /* ufo_landing-7.png in Resources */,
 				A6FBA182287410BB00AB872E /* sloth_idle_front-31.png in Resources */,
 				A6FBA23E287410BC00AB872E /* sloth_swag_selfie-23.png in Resources */,
@@ -13582,7 +13749,6 @@
 				A6FBA22A287410BC00AB872E /* sloth_swag_selfie-26.png in Resources */,
 				A6FBA2E2287410BC00AB872E /* sloth_swag_love-6.png in Resources */,
 				A6FB99A6287410B900AB872E /* ufo_bombing-6.png in Resources */,
-				A6FBA31A287410BC00AB872E /* sloth_swag_lightsaber-14.png in Resources */,
 				A6FB9946287410B800AB872E /* ufo_exit_portal-12.png in Resources */,
 				A6FBA292287410BC00AB872E /* sloth_swag_climb-46.png in Resources */,
 				A6FBA116287410BB00AB872E /* sloth_love-24.png in Resources */,
@@ -13608,6 +13774,7 @@
 				A6FBA1D0287410BB00AB872E /* sloth_eat-12.png in Resources */,
 				A6FB91D0287410B600AB872E /* egg_crack-6.png in Resources */,
 				A6FBA04C287410BB00AB872E /* sloth_idle-8.png in Resources */,
+				A65614462875800800F48507 /* sloth_swag_lightsaber-19.png in Resources */,
 				A6FB93AC287410B600AB872E /* sheep_eat-33.png in Resources */,
 				A6FB9960287410B800AB872E /* ufo_exit_portal-26.png in Resources */,
 				A6FBA104287410BB00AB872E /* sloth_love-4.png in Resources */,
@@ -13621,6 +13788,7 @@
 				A6FB99D8287410B900AB872E /* ufo_bombing-46.png in Resources */,
 				A6FB9292287410B600AB872E /* egg_gold_opening-12.png in Resources */,
 				A6FB91BC287410B600AB872E /* egg_idle-3.png in Resources */,
+				A65613FE28757FF400F48507 /* sloth_swag_lightsaber-7.png in Resources */,
 				A6FBA12E287410BB00AB872E /* sloth_love-22.png in Resources */,
 				A6FB99AA287410B900AB872E /* ufo_bombing-31.png in Resources */,
 				A6FB7D6928740F8E00AB872E /* Localizable.strings in Resources */,
@@ -13632,12 +13800,12 @@
 				A6FB9836287410B800AB872E /* ufo_landing-33.png in Resources */,
 				A6FBA380287410BC00AB872E /* sloth_swag_drag-3.png in Resources */,
 				A6FBA216287410BC00AB872E /* sloth_swag_selfie-11.png in Resources */,
+				A656136928757CB200F48507 /* sloth_lightsaber-16.png in Resources */,
 				A6FBA096287410BB00AB872E /* sloth_climb-6.png in Resources */,
 				A6FB99B8287410B900AB872E /* ufo_bombing-1.png in Resources */,
 				A6FB9896287410B800AB872E /* ufo_landing-12.png in Resources */,
 				A6FB9988287410B800AB872E /* ufo_bombing-39.png in Resources */,
 				A6FBA364287410BC00AB872E /* sloth_swag_idle_front-14.png in Resources */,
-				A6FBA136287410BB00AB872E /* sloth_lightsaber-15.png in Resources */,
 				A6FBA088287410BB00AB872E /* sloth_selfie-16.png in Resources */,
 				A6FBA33C287410BC00AB872E /* sloth_swag_idle_front-24.png in Resources */,
 				A6FB9990287410B900AB872E /* ufo_bombing-15.png in Resources */,
@@ -13650,10 +13818,10 @@
 				A6FB9304287410B600AB872E /* snail_nicky_idle_front-0.png in Resources */,
 				A6FB9918287410B800AB872E /* ufo_abduction-11.png in Resources */,
 				A6FB932E287410B600AB872E /* sheep_walk-5.png in Resources */,
+				A656141228757FF400F48507 /* sloth_swag_lightsaber-4.png in Resources */,
 				A6FB92CA287410B600AB872E /* egg_gold_drag-4.png in Resources */,
 				A6FBA2CA287410BC00AB872E /* sloth_swag_love-12.png in Resources */,
 				A6FB9866287410B800AB872E /* ufo_landing-55.png in Resources */,
-				A6FBA144287410BB00AB872E /* sloth_lightsaber-2.png in Resources */,
 				A6FB928C287410B600AB872E /* egg_gold_opening-6.png in Resources */,
 				A6FBA11A287410BB00AB872E /* sloth_love-34.png in Resources */,
 				A6FB9832287410B800AB872E /* ufo_landing-26.png in Resources */,
@@ -13664,7 +13832,6 @@
 				A6FB983E287410B800AB872E /* ufo_landing-37.png in Resources */,
 				A6FBA1E6287410BB00AB872E /* sloth_swag_idle-15.png in Resources */,
 				A6FBA194287410BB00AB872E /* sloth_idle_front-36.png in Resources */,
-				A6FBA142287410BB00AB872E /* sloth_lightsaber-3.png in Resources */,
 				A6FB9826287410B800AB872E /* ufo_landing-19.png in Resources */,
 				A6FB921A287410B600AB872E /* egg_opening-21.png in Resources */,
 				A6FB92E6287410B600AB872E /* snail_idle_front-0.png in Resources */,
@@ -13674,6 +13841,7 @@
 				A6FB9250287410B600AB872E /* egg_gold_crack-2.png in Resources */,
 				A6FB939E287410B600AB872E /* sheep_eat-31.png in Resources */,
 				A6FB937C287410B600AB872E /* sheep_idle_front-4.png in Resources */,
+				A65613AA28757CD900F48507 /* sloth_lightsaber-19.png in Resources */,
 				A6FB982A287410B800AB872E /* ufo_landing-24.png in Resources */,
 				A6FB9392287410B600AB872E /* sheep_eat-20.png in Resources */,
 				A6FB9908287410B800AB872E /* ufo_abduction-20.png in Resources */,
@@ -13689,6 +13857,7 @@
 				A6FB9200287410B600AB872E /* egg_opening-19.png in Resources */,
 				A6FB998E287410B900AB872E /* ufo_bombing-29.png in Resources */,
 				A6FBA1F6287410BC00AB872E /* sloth_swag_idle-20.png in Resources */,
+				A656143E2875800800F48507 /* sloth_swag_lightsaber-32.png in Resources */,
 				A6FBA06A287410BB00AB872E /* sloth_selfie-27.png in Resources */,
 				A6FB92AC287410B600AB872E /* egg_gold_idle_front-2.png in Resources */,
 				A6FB92C4287410B600AB872E /* egg_gold_drag-3.png in Resources */,
@@ -13698,6 +13867,7 @@
 				A6FB7D7728740F8E00AB872E /* Dogica.ttf in Resources */,
 				A6FBA1A6287410BB00AB872E /* sloth_drag-7.png in Resources */,
 				A6FBA346287410BC00AB872E /* sloth_swag_idle_front-33.png in Resources */,
+				A656134B28757CB200F48507 /* sloth_lightsaber-14.png in Resources */,
 				A6FB9436287410B700AB872E /* sheep_black_puke-17.png in Resources */,
 				A6FB9286287410B600AB872E /* egg_gold_opening-4.png in Resources */,
 				A6FBA06C287410BB00AB872E /* sloth_selfie-23.png in Resources */,
@@ -13708,6 +13878,7 @@
 				A6FBA1FC287410BC00AB872E /* sloth_swag_idle-18.png in Resources */,
 				A6FB92C2287410B600AB872E /* egg_gold_drag-2.png in Resources */,
 				A6FBA0E2287410BB00AB872E /* sloth_walk-10.png in Resources */,
+				A65613E828757DE700F48507 /* sloth_lightsaber-24.png in Resources */,
 				A6FBA082287410BB00AB872E /* sloth_selfie-8.png in Resources */,
 				A6FBA28C287410BC00AB872E /* sloth_swag_climb-34.png in Resources */,
 				A6FB98E4287410B800AB872E /* ufo_crash-29.png in Resources */,
@@ -13717,10 +13888,8 @@
 				A6FB988E287410B800AB872E /* ufo_landing-39.png in Resources */,
 				A6FB91D2287410B600AB872E /* egg_crack-7.png in Resources */,
 				A6FB91E0287410B600AB872E /* egg_opening-16.png in Resources */,
-				A6FBA326287410BC00AB872E /* sloth_swag_lightsaber-9.png in Resources */,
 				A6FBA15C287410BB00AB872E /* sloth_idle_front-10.png in Resources */,
 				A6FBA110287410BB00AB872E /* sloth_love-6.png in Resources */,
-				A6FBA316287410BC00AB872E /* sloth_swag_lightsaber-2.png in Resources */,
 				A6FB932C287410B600AB872E /* sheep_walk-7.png in Resources */,
 				A6FBA0A4287410BB00AB872E /* sloth_climb-4.png in Resources */,
 				A6FB929A287410B600AB872E /* egg_gold_opening-14.png in Resources */,
@@ -13748,8 +13917,9 @@
 				A6FB984A287410B800AB872E /* ufo_landing-20.png in Resources */,
 				A6FB993E287410B800AB872E /* ufo_exit_portal-11.png in Resources */,
 				A6FB997E287410B800AB872E /* ufo_bombing-48.png in Resources */,
+				A656135B28757CB200F48507 /* sloth_lightsaber-4.png in Resources */,
+				A65613DA28757DE700F48507 /* sloth_lightsaber-32.png in Resources */,
 				A6FB9284287410B600AB872E /* egg_gold_opening-0.png in Resources */,
-				A6FBA320287410BC00AB872E /* sloth_swag_lightsaber-16.png in Resources */,
 				A6FB9242287410B600AB872E /* egg_gold_idle-4.png in Resources */,
 				A6FB922A287410B600AB872E /* egg_jump-5.png in Resources */,
 				A6FBA168287410BB00AB872E /* sloth_idle_front-16.png in Resources */,
@@ -13824,7 +13994,6 @@
 				A6FB9987287410B800AB872E /* ufo_bombing-38.png in Resources */,
 				A6FBAEAC2874112100AB872E /* betta_drag-17.png in Resources */,
 				A6FBAD8B2874112100AB872E /* panda_vest_idle-30.png in Resources */,
-				A6FBA147287410BB00AB872E /* sloth_lightsaber-0.png in Resources */,
 				A6FBAF612874112200AB872E /* crow_idle_front-14.png in Resources */,
 				A6FB98C5287410B800AB872E /* ufo_crash-35.png in Resources */,
 				A6FB9217287410B600AB872E /* egg_opening-22.png in Resources */,
@@ -13839,11 +14008,11 @@
 				A6FBA33B287410BC00AB872E /* sloth_swag_idle_front-30.png in Resources */,
 				A6FBAD492874112100AB872E /* panda_eat-15.png in Resources */,
 				A6FBB47D2874112400AB872E /* trex_yellow_guitar-23.png in Resources */,
+				A656141F28757FF400F48507 /* sloth_swag_lightsaber-2.png in Resources */,
 				A6FBB3FC2874112400AB872E /* trex_violet_fireball-0.png in Resources */,
 				A6FBACE72874112100AB872E /* panda_lightsaber-30.png in Resources */,
 				A6FBAD652874112100AB872E /* panda_meditate-0.png in Resources */,
 				A6FBAD682874112100AB872E /* panda_backflip-5.png in Resources */,
-				A6FBA309287410BC00AB872E /* sloth_swag_lightsaber-13.png in Resources */,
 				A6FB9825287410B800AB872E /* ufo_landing-25.png in Resources */,
 				A6FBB27E2874112300AB872E /* trex_blue_jump-3.png in Resources */,
 				A6FB9881287410B800AB872E /* ufo_landing-61.png in Resources */,
@@ -13858,7 +14027,9 @@
 				A6FBB0282874112200AB872E /* crow_white_drag-6.png in Resources */,
 				A6FBA213287410BC00AB872E /* sloth_swag_selfie-5.png in Resources */,
 				A6FBAFF82874112200AB872E /* crow_white_idle_front-21.png in Resources */,
+				A65613E928757DE700F48507 /* sloth_lightsaber-24.png in Resources */,
 				A6FBADCA2874112100AB872E /* panda_vest_lightsaber-34.png in Resources */,
+				A65614472875800800F48507 /* sloth_swag_lightsaber-19.png in Resources */,
 				A6FB9367287410B600AB872E /* sheep_puke-19.png in Resources */,
 				A6FBB1B22874112300AB872E /* koala_idle_front-52.png in Resources */,
 				A6FBB4612874112400AB872E /* trex_yellow_idle_front-8.png in Resources */,
@@ -13881,7 +14052,6 @@
 				A6FBAFB02874112200AB872E /* crow_white_idle-7.png in Resources */,
 				A6FBAE372874112100AB872E /* panda_vest_eat-16.png in Resources */,
 				A6FBACA62874112100AB872E /* panda_idle-0.png in Resources */,
-				A6FBA31F287410BC00AB872E /* sloth_swag_lightsaber-1.png in Resources */,
 				A6FBB0662874112200AB872E /* koala_pirate_idle-2.png in Resources */,
 				A6FBB01F2874112200AB872E /* crow_white_drag-50.png in Resources */,
 				A6FBB30D2874112300AB872E /* trex_guitar-8.png in Resources */,
@@ -13902,8 +14072,8 @@
 				A6FBA09D287410BB00AB872E /* sloth_climb-29.png in Resources */,
 				A6FBACDD2874112100AB872E /* panda_love-8.png in Resources */,
 				A6FBAE252874112100AB872E /* panda_vest_eat-9.png in Resources */,
-				A6FBA30D287410BC00AB872E /* sloth_swag_lightsaber-5.png in Resources */,
 				A6FBB2CF2874112300AB872E /* trex_walk-0.png in Resources */,
+				A656136228757CB200F48507 /* sloth_lightsaber-12.png in Resources */,
 				A6FBB06F2874112200AB872E /* koala_pirate_idle-21.png in Resources */,
 				A6FB91DD287410B600AB872E /* egg_opening-13.png in Resources */,
 				A6FBB2FA2874112300AB872E /* trex_send_text-9.png in Resources */,
@@ -13935,7 +14105,6 @@
 				A6FB9999287410B900AB872E /* ufo_bombing-16.png in Resources */,
 				A6FB9995287410B900AB872E /* ufo_bombing-28.png in Resources */,
 				A6FBB1B82874112300AB872E /* koala_idle_front-1.png in Resources */,
-				A6FBA13B287410BB00AB872E /* sloth_lightsaber-10.png in Resources */,
 				A6FBB2912874112300AB872E /* trex_blue_eat-7.png in Resources */,
 				A6FBACDF2874112100AB872E /* panda_love-17.png in Resources */,
 				A6FBB2DF2874112300AB872E /* trex_unbox_present-0.png in Resources */,
@@ -14019,11 +14188,13 @@
 				A6FBAC942874112100AB872E /* panda_idle-30.png in Resources */,
 				A6FBA303287410BC00AB872E /* sloth_swag_love-30.png in Resources */,
 				A6FBB1022874112200AB872E /* koala_pirate_drag-4.png in Resources */,
+				A65613CF28757DE700F48507 /* sloth_lightsaber-25.png in Resources */,
 				A6FBAD3F2874112100AB872E /* panda_drag-2.png in Resources */,
 				A6FB992D287410B800AB872E /* ufo_abduction-1.png in Resources */,
 				A6FBAC932874112100AB872E /* panda_idle-24.png in Resources */,
 				A6FBB3D62874112300AB872E /* trex_violet_guitar-25.png in Resources */,
 				A6FBB4482874112400AB872E /* trex_yellow_unbox_present-17.png in Resources */,
+				A65613E728757DE700F48507 /* sloth_lightsaber-29.png in Resources */,
 				A6FB9383287410B600AB872E /* sheep_idle_front-9.png in Resources */,
 				A6FB9949287410B800AB872E /* ufo_exit_portal-13.png in Resources */,
 				A6FBB3482874112300AB872E /* trex_fireball-6.png in Resources */,
@@ -14047,13 +14218,13 @@
 				A6FBB4592874112400AB872E /* trex_yellow_send_text-13.png in Resources */,
 				A6FBAE992874112100AB872E /* betta_drag-1.png in Resources */,
 				A6FBB2332874112300AB872E /* trex_blue_unbox_present-18.png in Resources */,
+				A656141728757FF400F48507 /* sloth_swag_lightsaber-14.png in Resources */,
 				A6FBAE642874112100AB872E /* betta_tsundere-9.png in Resources */,
 				A6FBA059287410BB00AB872E /* sloth_selfie-19.png in Resources */,
 				A6FBAD3D2874112100AB872E /* panda_drag-7.png in Resources */,
 				A6FBACAC2874112100AB872E /* panda_selfie-6.png in Resources */,
 				A6FBAE2D2874112100AB872E /* panda_vest_eat-26.png in Resources */,
 				A6FBB29B2874112300AB872E /* trex_blue_fireball-4.png in Resources */,
-				A6FBA30F287410BC00AB872E /* sloth_swag_lightsaber-7.png in Resources */,
 				A6FBB0272874112200AB872E /* crow_white_drag-52.png in Resources */,
 				A6FBAF652874112200AB872E /* crow_drag-29.png in Resources */,
 				A6FBAEDB2874112200AB872E /* betta_backflip-18.png in Resources */,
@@ -14088,12 +14259,14 @@
 				A6FBB29C2874112300AB872E /* trex_blue_fireball-6.png in Resources */,
 				A6FBA163287410BB00AB872E /* sloth_idle_front-29.png in Resources */,
 				A6FBB1FB2874112300AB872E /* koala_backflip-1.png in Resources */,
+				A65613E328757DE700F48507 /* sloth_lightsaber-27.png in Resources */,
 				A6FB9363287410B600AB872E /* sheep_puke-25.png in Resources */,
 				A6FBB3B42874112300AB872E /* trex_violet_idle_front-3.png in Resources */,
 				A6FBACC52874112100AB872E /* panda_walk-8.png in Resources */,
 				A6FBB1132874112200AB872E /* koala_pirate_eat-16.png in Resources */,
 				A6FB92B9287410B600AB872E /* egg_gold_jump-2.png in Resources */,
 				A6FB9339287410B600AB872E /* sheep_puke-6.png in Resources */,
+				A656144F2875800800F48507 /* sloth_swag_lightsaber-30.png in Resources */,
 				A6FBAE552874112100AB872E /* betta_tsundere-24.png in Resources */,
 				A6FBAE5E2874112100AB872E /* betta_tsundere-22.png in Resources */,
 				A6FB98C1287410B800AB872E /* ufo_crash-20.png in Resources */,
@@ -14113,6 +14286,7 @@
 				A6FBAE482874112100AB872E /* panda_vest_meditate-2.png in Resources */,
 				A6FBAF742874112200AB872E /* crow_drag-9.png in Resources */,
 				A6FB99CB287410B900AB872E /* ufo_bombing-22.png in Resources */,
+				A656136828757CB200F48507 /* sloth_lightsaber-10.png in Resources */,
 				A6FBA2EB287410BC00AB872E /* sloth_swag_love-35.png in Resources */,
 				A6FBAD762874112100AB872E /* panda_vest_idle-10.png in Resources */,
 				A6FBB15E2874112200AB872E /* koala_love-55.png in Resources */,
@@ -14159,6 +14333,7 @@
 				A6FB91F5287410B600AB872E /* egg_opening-2.png in Resources */,
 				A6FB9921287410B800AB872E /* ufo_abduction-4.png in Resources */,
 				A6FBB1662874112300AB872E /* koala_love-52.png in Resources */,
+				A656141B28757FF400F48507 /* sloth_swag_lightsaber-12.png in Resources */,
 				A6FBB3AF2874112300AB872E /* trex_violet_idle_front-14.png in Resources */,
 				A6FB986B287410B800AB872E /* ufo_landing-57.png in Resources */,
 				A6FBAD282874112100AB872E /* panda_idle_front-5.png in Resources */,
@@ -14219,6 +14394,7 @@
 				A6FB92DD287410B600AB872E /* snail_idle_front-7.png in Resources */,
 				A6FB9399287410B600AB872E /* sheep_eat-21.png in Resources */,
 				A6FBA22F287410BC00AB872E /* sloth_swag_selfie-19.png in Resources */,
+				A656135028757CB200F48507 /* sloth_lightsaber-11.png in Resources */,
 				A6FBAD622874112100AB872E /* panda_eat-23.png in Resources */,
 				A6FBB4352874112400AB872E /* trex_yellow_walk-4.png in Resources */,
 				A6FB91DB287410B600AB872E /* egg_opening-11.png in Resources */,
@@ -14267,6 +14443,7 @@
 				A6FBB2C02874112300AB872E /* trex_idle-8.png in Resources */,
 				A6FBB0EE2874112200AB872E /* koala_pirate_idle_front-1.png in Resources */,
 				A6FBB14F2874112200AB872E /* koala_idle-10.png in Resources */,
+				A656136428757CB200F48507 /* sloth_lightsaber-3.png in Resources */,
 				A6FBAE3F2874112100AB872E /* panda_vest_eat-5.png in Resources */,
 				A6FBA1B1287410BB00AB872E /* sloth_eat-1.png in Resources */,
 				A6FBB2D02874112300AB872E /* trex_walk-1.png in Resources */,
@@ -14298,6 +14475,7 @@
 				A6FBAD202874112100AB872E /* panda_idle_front-37.png in Resources */,
 				A6FBAEF52874112200AB872E /* crow_idle-17.png in Resources */,
 				A6FBA1F9287410BC00AB872E /* sloth_swag_idle-22.png in Resources */,
+				A656135428757CB200F48507 /* sloth_lightsaber-13.png in Resources */,
 				A6FBAD332874112100AB872E /* panda_idle_front-43.png in Resources */,
 				A6FB9CCD287410BA00AB872E /* missingno_walk-0.png in Resources */,
 				A6FBB1052874112200AB872E /* koala_pirate_drag-3.png in Resources */,
@@ -14415,6 +14593,7 @@
 				A6FB92CF287410B600AB872E /* snail_idle_front-15.png in Resources */,
 				A6FBAF2E2874112200AB872E /* crow_fly-6.png in Resources */,
 				A6FB937F287410B600AB872E /* sheep_idle_front-6.png in Resources */,
+				A656144D2875800800F48507 /* sloth_swag_lightsaber-26.png in Resources */,
 				A6FB98F7287410B800AB872E /* ufo_crash-6.png in Resources */,
 				A6FBB3472874112300AB872E /* trex_fireball-2.png in Resources */,
 				A6FBADC92874112100AB872E /* panda_vest_lightsaber-22.png in Resources */,
@@ -14438,6 +14617,7 @@
 				A6FBB32F2874112300AB872E /* trex_jump-1.png in Resources */,
 				A6FBADF22874112100AB872E /* panda_vest_idle_front-39.png in Resources */,
 				A6FBB4272874112400AB872E /* trex_yellow_selfie-6.png in Resources */,
+				A656135E28757CB200F48507 /* sloth_lightsaber-9.png in Resources */,
 				A6FBB3BB2874112300AB872E /* trex_violet_idle_front-7.png in Resources */,
 				A6FBB0602874112200AB872E /* koala_pirate_idle-13.png in Resources */,
 				A6FBAF132874112200AB872E /* crow_love-1.png in Resources */,
@@ -14517,9 +14697,9 @@
 				A6FBAC9E2874112100AB872E /* panda_idle-15.png in Resources */,
 				A6FB93A5287410B600AB872E /* sheep_eat-18.png in Resources */,
 				A6FB99C7287410B900AB872E /* ufo_bombing-37.png in Resources */,
-				A6FBA313287410BC00AB872E /* sloth_swag_lightsaber-11.png in Resources */,
 				A6FBB2B92874112300AB872E /* trex_idle-2.png in Resources */,
 				A6FBB34F2874112300AB872E /* trex_fireball-9.png in Resources */,
+				A656140B28757FF400F48507 /* sloth_swag_lightsaber-11.png in Resources */,
 				A6FBAC8E2874112100AB872E /* panda_idle-22.png in Resources */,
 				A6FB9963287410B800AB872E /* ufo_bombing-64.png in Resources */,
 				A6FBB1242874112200AB872E /* koala_pirate_backflip-4.png in Resources */,
@@ -14528,9 +14708,11 @@
 				A6FBB0C42874112200AB872E /* koala_pirate_idle_front-9.png in Resources */,
 				A6FBA275287410BC00AB872E /* sloth_swag_climb-18.png in Resources */,
 				A6FB99BB287410B900AB872E /* ufo_bombing-34.png in Resources */,
+				A656135C28757CB200F48507 /* sloth_lightsaber-4.png in Resources */,
 				A6FBB0042874112200AB872E /* crow_white_idle_front-3.png in Resources */,
 				A6FBAF8B2874112200AB872E /* crow_eat-16.png in Resources */,
 				A6FB9475287410B700AB872E /* sheep_black_eat-11.png in Resources */,
+				A656141928757FF400F48507 /* sloth_swag_lightsaber-1.png in Resources */,
 				A6FBA34D287410BC00AB872E /* sloth_swag_idle_front-4.png in Resources */,
 				A6FBB3BF2874112300AB872E /* trex_violet_guitar-28.png in Resources */,
 				A6FBADCF2874112100AB872E /* panda_vest_lightsaber-31.png in Resources */,
@@ -14613,7 +14795,6 @@
 				A6FB93D1287410B600AB872E /* sheep_eat-3.png in Resources */,
 				A6FB947D287410B700AB872E /* sheep_black_eat-10.png in Resources */,
 				A6FBB1232874112200AB872E /* koala_pirate_backflip-6.png in Resources */,
-				A6FBA323287410BC00AB872E /* sloth_swag_lightsaber-0.png in Resources */,
 				A6FBADFB2874112100AB872E /* panda_vest_idle_front-15.png in Resources */,
 				A6FB942F287410B700AB872E /* sheep_black_puke-14.png in Resources */,
 				A6FB92C9287410B600AB872E /* egg_gold_drag-0.png in Resources */,
@@ -14655,7 +14836,6 @@
 				A6FBAF0F2874112200AB872E /* crow_love-28.png in Resources */,
 				A6FBB2FB2874112300AB872E /* trex_send_text-8.png in Resources */,
 				A6FBAE292874112100AB872E /* panda_vest_eat-19.png in Resources */,
-				A6FBA151287410BB00AB872E /* sloth_lightsaber-7.png in Resources */,
 				A6FBAFEC2874112200AB872E /* crow_white_idle_front-25.png in Resources */,
 				A6FBACF12874112100AB872E /* panda_lightsaber-23.png in Resources */,
 				A6FB98D7287410B800AB872E /* ufo_crash-32.png in Resources */,
@@ -14671,6 +14851,7 @@
 				A6FBB3992874112300AB872E /* trex_violet_send_text-18.png in Resources */,
 				A6FBB1F42874112300AB872E /* koala_backflip-9.png in Resources */,
 				A6FBB3602874112300AB872E /* trex_violet_idle-15.png in Resources */,
+				A65614312875800800F48507 /* sloth_swag_lightsaber-25.png in Resources */,
 				A6FBB2B42874112300AB872E /* trex_idle-5.png in Resources */,
 				A6FBB2392874112300AB872E /* trex_blue_send_text-16.png in Resources */,
 				A6FBAF202874112200AB872E /* crow_love-33.png in Resources */,
@@ -14703,7 +14884,6 @@
 				A6FBB1BC2874112300AB872E /* koala_idle_front-37.png in Resources */,
 				A6FBADFF2874112100AB872E /* panda_vest_idle_front-0.png in Resources */,
 				A6FBAD262874112100AB872E /* panda_idle_front-32.png in Resources */,
-				A6FBA30B287410BC00AB872E /* sloth_swag_lightsaber-12.png in Resources */,
 				A6FBB33C2874112300AB872E /* trex_eat-5.png in Resources */,
 				A6FBA24B287410BC00AB872E /* sloth_swag_climb-49.png in Resources */,
 				A6FBAFA82874112200AB872E /* crow_white_idle-11.png in Resources */,
@@ -14730,6 +14910,7 @@
 				A6FBA1C1287410BB00AB872E /* sloth_eat-9.png in Resources */,
 				A6FBB0C02874112200AB872E /* koala_pirate_love-50.png in Resources */,
 				A6FBAEB22874112100AB872E /* betta_drag-11.png in Resources */,
+				A65614432875800800F48507 /* sloth_swag_lightsaber-31.png in Resources */,
 				A6FB9945287410B800AB872E /* ufo_exit_portal-7.png in Resources */,
 				A6FBA0FF287410BB00AB872E /* sloth_love-26.png in Resources */,
 				A6FBB1182874112200AB872E /* koala_pirate_eat-18.png in Resources */,
@@ -14739,6 +14920,7 @@
 				A6FBAFB62874112200AB872E /* crow_white_love-26.png in Resources */,
 				A6FBA0C3287410BB00AB872E /* sloth_climb-8.png in Resources */,
 				A6FBB0742874112200AB872E /* koala_pirate_idle-24.png in Resources */,
+				A656135628757CB200F48507 /* sloth_lightsaber-15.png in Resources */,
 				A6FBA26B287410BC00AB872E /* sloth_swag_climb-14.png in Resources */,
 				A6FBAFC82874112200AB872E /* crow_white_love-9.png in Resources */,
 				A6FBA29F287410BC00AB872E /* sloth_swag_climb-40.png in Resources */,
@@ -14783,6 +14965,7 @@
 				A6FBACDA2874112100AB872E /* panda_love-5.png in Resources */,
 				A6FBB2A42874112300AB872E /* trex_blue_roar-13.png in Resources */,
 				A6FBB13D2874112200AB872E /* koala_idle-4.png in Resources */,
+				A656140128757FF400F48507 /* sloth_swag_lightsaber-9.png in Resources */,
 				A6FB9873287410B800AB872E /* ufo_landing-67.png in Resources */,
 				A6FBADC52874112100AB872E /* panda_vest_love-5.png in Resources */,
 				A6FBB0A72874112200AB872E /* koala_pirate_love-31.png in Resources */,
@@ -14790,6 +14973,7 @@
 				A6FBA1BF287410BB00AB872E /* sloth_eat-4.png in Resources */,
 				A6FBB2E32874112300AB872E /* trex_unbox_present-12.png in Resources */,
 				A6FBAECB2874112100AB872E /* betta_eat-18.png in Resources */,
+				A656136C28757CB200F48507 /* sloth_lightsaber-17.png in Resources */,
 				A6FBA34F287410BC00AB872E /* sloth_swag_idle_front-5.png in Resources */,
 				A6FBB4752874112400AB872E /* trex_yellow_guitar-1.png in Resources */,
 				A6FBAD5C2874112100AB872E /* panda_eat-19.png in Resources */,
@@ -14822,7 +15006,6 @@
 				A6FBAD2A2874112100AB872E /* panda_idle_front-27.png in Resources */,
 				A6FBB1472874112200AB872E /* koala_idle-28.png in Resources */,
 				A6FBAEEE2874112200AB872E /* crow_idle-12.png in Resources */,
-				A6FBA135287410BB00AB872E /* sloth_lightsaber-16.png in Resources */,
 				A6FBB1322874112200AB872E /* koala_idle-33.png in Resources */,
 				A6FBB2212874112300AB872E /* trex_blue_walk-3.png in Resources */,
 				A6FBAF662874112200AB872E /* crow_drag-17.png in Resources */,
@@ -14842,7 +15025,6 @@
 				A6FBAE272874112100AB872E /* panda_vest_eat-25.png in Resources */,
 				A6FBB1412874112200AB872E /* koala_idle-2.png in Resources */,
 				A6FBB4AC2874112400AB872E /* trex_yellow_fireball-4.png in Resources */,
-				A6FBA139287410BB00AB872E /* sloth_lightsaber-14.png in Resources */,
 				A6FBAF7C2874112200AB872E /* crow_drag-27.png in Resources */,
 				A6FBB2692874112300AB872E /* trex_blue_guitar-23.png in Resources */,
 				A6FB942B287410B700AB872E /* sheep_black_puke-11.png in Resources */,
@@ -14851,6 +15033,7 @@
 				A6FBB4312874112400AB872E /* trex_yellow_walk-2.png in Resources */,
 				A6FBA1E9287410BB00AB872E /* sloth_swag_idle-17.png in Resources */,
 				A6FB9975287410B800AB872E /* ufo_bombing-62.png in Resources */,
+				A656140328757FF400F48507 /* sloth_swag_lightsaber-13.png in Resources */,
 				A6FBB3A02874112300AB872E /* trex_violet_send_text-10.png in Resources */,
 				A6FBB4B42874112400AB872E /* trex_yellow_fireball-3.png in Resources */,
 				A6FBB4372874112400AB872E /* trex_yellow_unbox_present-18.png in Resources */,
@@ -14866,6 +15049,8 @@
 				A6FB994B287410B800AB872E /* ufo_exit_portal-6.png in Resources */,
 				A6FBAD662874112100AB872E /* panda_meditate-1.png in Resources */,
 				A6FBA05D287410BB00AB872E /* sloth_selfie-2.png in Resources */,
+				A65614352875800800F48507 /* sloth_swag_lightsaber-24.png in Resources */,
+				A656140528757FF400F48507 /* sloth_swag_lightsaber-6.png in Resources */,
 				A6FBB4652874112400AB872E /* trex_yellow_idle_front-14.png in Resources */,
 				A6FBB4972874112400AB872E /* trex_yellow_jump-9.png in Resources */,
 				A6FBAF1D2874112200AB872E /* crow_love-32.png in Resources */,
@@ -14887,12 +15072,12 @@
 				A6FBAF712874112200AB872E /* crow_drag-2.png in Resources */,
 				A6FBA3C3287410BC00AB872E /* nyan_idle_front-4.png in Resources */,
 				A6FBAE342874112100AB872E /* panda_vest_eat-11.png in Resources */,
+				A65613AB28757CD900F48507 /* sloth_lightsaber-19.png in Resources */,
 				A6FB9281287410B600AB872E /* egg_gold_opening-3.png in Resources */,
 				A6FBAF062874112200AB872E /* crow_idle-4.png in Resources */,
 				A6FB9327287410B600AB872E /* sheep_walk-3.png in Resources */,
 				A6FBB1012874112200AB872E /* koala_pirate_drag-5.png in Resources */,
 				A6FBB4A12874112400AB872E /* trex_yellow_eat-9.png in Resources */,
-				A6FBA141287410BB00AB872E /* sloth_lightsaber-12.png in Resources */,
 				A6FBAED82874112200AB872E /* betta_backflip-7.png in Resources */,
 				A6FBB10F2874112200AB872E /* koala_pirate_eat-10.png in Resources */,
 				A6FB990B287410B800AB872E /* ufo_abduction-24.png in Resources */,
@@ -14953,12 +15138,12 @@
 				A6FB98E7287410B800AB872E /* ufo_crash-15.png in Resources */,
 				A6FBB11B2874112200AB872E /* koala_pirate_eat-20.png in Resources */,
 				A6FBB2842874112300AB872E /* trex_blue_drag-6.png in Resources */,
-				A6FBA149287410BB00AB872E /* sloth_lightsaber-1.png in Resources */,
 				A6FBAFE12874112200AB872E /* crow_white_fly-16.png in Resources */,
 				A6FBB3322874112300AB872E /* trex_drag-0.png in Resources */,
 				A6FBB1872874112300AB872E /* koala_love-39.png in Resources */,
 				A6FBB0032874112200AB872E /* crow_white_idle_front-2.png in Resources */,
 				A6FB92C1287410B600AB872E /* egg_gold_jump-8.png in Resources */,
+				A65613D728757DE700F48507 /* sloth_lightsaber-26.png in Resources */,
 				A6FBB0532874112200AB872E /* crow_white_eat-5.png in Resources */,
 				A6FBB0082874112200AB872E /* crow_white_idle_front-5.png in Resources */,
 				A6FB9347287410B600AB872E /* sheep_puke-11.png in Resources */,
@@ -15058,6 +15243,7 @@
 				A6FBA285287410BC00AB872E /* sloth_swag_climb-23.png in Resources */,
 				A6FB948F287410B700AB872E /* sheep_black_eat-28.png in Resources */,
 				A6FBB1862874112300AB872E /* koala_love-11.png in Resources */,
+				A65614392875800800F48507 /* sloth_swag_lightsaber-34.png in Resources */,
 				A6FBB02F2874112200AB872E /* crow_white_drag-1.png in Resources */,
 				A6FBAEF82874112200AB872E /* crow_idle-26.png in Resources */,
 				A6FBAF112874112200AB872E /* crow_love-16.png in Resources */,
@@ -15074,6 +15260,7 @@
 				A6FBB1F92874112300AB872E /* koala_backflip-2.png in Resources */,
 				A6FB924D287410B600AB872E /* egg_gold_crack-1.png in Resources */,
 				A6FBAF832874112200AB872E /* crow_drag-31.png in Resources */,
+				A65613D928757DE700F48507 /* sloth_lightsaber-33.png in Resources */,
 				A6FB9993287410B900AB872E /* ufo_bombing-14.png in Resources */,
 				A6FBB0CA2874112200AB872E /* koala_pirate_idle_front-23.png in Resources */,
 				A6FBB21F2874112300AB872E /* trex_blue_walk-0.png in Resources */,
@@ -15159,10 +15346,12 @@
 				A6FBB1C42874112300AB872E /* koala_idle_front-7.png in Resources */,
 				A6FBA237287410BC00AB872E /* sloth_swag_selfie-20.png in Resources */,
 				A6FBAD0D2874112100AB872E /* panda_idle_front-28.png in Resources */,
+				A65613E528757DE700F48507 /* sloth_lightsaber-31.png in Resources */,
 				A6FBB13F2874112200AB872E /* koala_idle-7.png in Resources */,
 				A6FB99B5287410B900AB872E /* ufo_bombing-30.png in Resources */,
 				A6FB934D287410B600AB872E /* sheep_puke-28.png in Resources */,
 				A6FBAEE92874112200AB872E /* betta_backflip-16.png in Resources */,
+				A656134E28757CB200F48507 /* sloth_lightsaber-6.png in Resources */,
 				A6FBA3C9287410BC00AB872E /* nyan_idle_front-6.png in Resources */,
 				A6FBA28F287410BC00AB872E /* sloth_swag_climb-35.png in Resources */,
 				A6FBB0BF2874112200AB872E /* koala_pirate_love-51.png in Resources */,
@@ -15176,6 +15365,7 @@
 				A6FBA2F7287410BC00AB872E /* sloth_swag_love-33.png in Resources */,
 				A6FBA353287410BC00AB872E /* sloth_swag_idle_front-6.png in Resources */,
 				A6FBB3E62874112300AB872E /* trex_violet_drag-7.png in Resources */,
+				A65613DD28757DE700F48507 /* sloth_lightsaber-30.png in Resources */,
 				A6FBB2B62874112300AB872E /* trex_idle-0.png in Resources */,
 				A6FBB1222874112200AB872E /* koala_pirate_backflip-7.png in Resources */,
 				A6FBA37F287410BC00AB872E /* sloth_swag_drag-1.png in Resources */,
@@ -15208,19 +15398,21 @@
 				A6FBB2662874112300AB872E /* trex_blue_guitar-21.png in Resources */,
 				A6FBB3962874112300AB872E /* trex_violet_unbox_present-19.png in Resources */,
 				A6FB93F7287410B700AB872E /* sheep_black_walk-3.png in Resources */,
+				A656136A28757CB200F48507 /* sloth_lightsaber-16.png in Resources */,
 				A6FBB2182874112300AB872E /* trex_blue_selfie-7.png in Resources */,
 				A6FBAFDC2874112200AB872E /* crow_white_fly-3.png in Resources */,
 				A6FB925D287410B600AB872E /* egg_gold_crack-10.png in Resources */,
 				A6FBB2832874112300AB872E /* trex_blue_drag-7.png in Resources */,
 				A6FBAD0E2874112100AB872E /* panda_idle_front-14.png in Resources */,
 				A6FBA045287410BB00AB872E /* sloth_idle-24.png in Resources */,
+				A65613D528757DE700F48507 /* sloth_lightsaber-21.png in Resources */,
 				A6FB991D287410B800AB872E /* ufo_abduction-12.png in Resources */,
+				A65614452875800800F48507 /* sloth_swag_lightsaber-29.png in Resources */,
 				A6FB9309287410B600AB872E /* snail_nicky_idle_front-3.png in Resources */,
 				A6FBAE4B2874112100AB872E /* panda_vest_backflip-5.png in Resources */,
 				A6FBAF102874112200AB872E /* crow_love-14.png in Resources */,
 				A6FBB2722874112300AB872E /* trex_blue_guitar-29.png in Resources */,
 				A6FBA0B9287410BB00AB872E /* sloth_climb-20.png in Resources */,
-				A6FBA315287410BC00AB872E /* sloth_swag_lightsaber-6.png in Resources */,
 				A6FBB42D2874112400AB872E /* trex_yellow_selfie-3.png in Resources */,
 				A6FBAF332874112200AB872E /* crow_fly-1.png in Resources */,
 				A6FB9953287410B800AB872E /* ufo_exit_portal-21.png in Resources */,
@@ -15233,9 +15425,9 @@
 				A6FBB07F2874112200AB872E /* koala_pirate_walk-5.png in Resources */,
 				A6FB9267287410B600AB872E /* egg_gold_opening-26.png in Resources */,
 				A6FBAE0E2874112100AB872E /* panda_vest_idle_front-20.png in Resources */,
+				A65614412875800800F48507 /* sloth_swag_lightsaber-21.png in Resources */,
 				A6FBAD7B2874112100AB872E /* panda_vest_idle-2.png in Resources */,
 				A6FBB2192874112300AB872E /* trex_blue_selfie-9.png in Resources */,
-				A6FBA133287410BB00AB872E /* sloth_lightsaber-8.png in Resources */,
 				A6FBAE3A2874112100AB872E /* panda_vest_eat-15.png in Resources */,
 				A6FB92B1287410B600AB872E /* egg_gold_jump-4.png in Resources */,
 				A6FBA18D287410BB00AB872E /* sloth_idle_front-4.png in Resources */,
@@ -15285,6 +15477,7 @@
 				A6FBAF732874112200AB872E /* crow_drag-1.png in Resources */,
 				A6FBB2172874112300AB872E /* trex_blue_selfie-6.png in Resources */,
 				A6FB99E9287410B900AB872E /* ufo_bombing-40.png in Resources */,
+				A656140728757FF400F48507 /* sloth_swag_lightsaber-5.png in Resources */,
 				A6FBB1042874112200AB872E /* koala_pirate_drag-1.png in Resources */,
 				A6FBA393287410BC00AB872E /* sloth_swag_eat-0.png in Resources */,
 				A6FBB3A62874112300AB872E /* trex_violet_send_text-4.png in Resources */,
@@ -15380,7 +15573,9 @@
 				A6FBB0732874112200AB872E /* koala_pirate_idle-18.png in Resources */,
 				A6FBACEB2874112100AB872E /* panda_lightsaber-25.png in Resources */,
 				A6FBA28B287410BC00AB872E /* sloth_swag_climb-20.png in Resources */,
+				A656141128757FF400F48507 /* sloth_swag_lightsaber-17.png in Resources */,
 				A6FBA191287410BB00AB872E /* sloth_idle_front-34.png in Resources */,
+				A656140D28757FF400F48507 /* sloth_swag_lightsaber-8.png in Resources */,
 				A6FB98DF287410B800AB872E /* ufo_crash-16.png in Resources */,
 				A6FBB09D2874112200AB872E /* koala_pirate_love-12.png in Resources */,
 				A6FBA395287410BC00AB872E /* sloth_swag_eat-1.png in Resources */,
@@ -15443,6 +15638,7 @@
 				A6FBAD452874112100AB872E /* panda_eat-11.png in Resources */,
 				A6FBA3BD287410BC00AB872E /* nyan_idle_front-3.png in Resources */,
 				A6FBB4162874112400AB872E /* trex_yellow_idle-2.png in Resources */,
+				A656136E28757CB200F48507 /* sloth_lightsaber-18.png in Resources */,
 				A6FB9CC9287410BA00AB872E /* missingno_walk-3.png in Resources */,
 				A6FBAEB62874112100AB872E /* betta_drag-8.png in Resources */,
 				A6FBA3B1287410BC00AB872E /* nyan_idle_front-12.png in Resources */,
@@ -15475,6 +15671,7 @@
 				A6FB9943287410B800AB872E /* ufo_exit_portal-5.png in Resources */,
 				A6FBA0D7287410BB00AB872E /* sloth_walk-3.png in Resources */,
 				A6FBA377287410BC00AB872E /* sloth_swag_drag-7.png in Resources */,
+				A656139128757CD900F48507 /* sloth_lightsaber-20.png in Resources */,
 				A6FBA201287410BC00AB872E /* sloth_swag_idle-25.png in Resources */,
 				A6FB9491287410B700AB872E /* sheep_black_eat-14.png in Resources */,
 				A6FB99D1287410B900AB872E /* ufo_bombing-51.png in Resources */,
@@ -15507,7 +15704,6 @@
 				A6FBA25D287410BC00AB872E /* sloth_swag_climb-11.png in Resources */,
 				A6FBB2442874112300AB872E /* trex_blue_send_text-1.png in Resources */,
 				A6FBB18B2874112300AB872E /* koala_love-49.png in Resources */,
-				A6FBA14D287410BB00AB872E /* sloth_lightsaber-4.png in Resources */,
 				A6FBB36D2874112300AB872E /* trex_violet_idle-6.png in Resources */,
 				A6FBADEF2874112100AB872E /* panda_vest_idle_front-5.png in Resources */,
 				A6FBB02C2874112200AB872E /* crow_white_drag-43.png in Resources */,
@@ -15515,6 +15711,7 @@
 				A6FBB3D92874112300AB872E /* trex_violet_guitar-26.png in Resources */,
 				A6FBA19F287410BB00AB872E /* sloth_drag-1.png in Resources */,
 				A6FB9463287410B700AB872E /* sheep_black_eat-36.png in Resources */,
+				A656135228757CB200F48507 /* sloth_lightsaber-7.png in Resources */,
 				A6FBA2FD287410BC00AB872E /* sloth_swag_love-31.png in Resources */,
 				A6FBAF1B2874112200AB872E /* crow_love-8.png in Resources */,
 				A6FBB1852874112300AB872E /* koala_love-10.png in Resources */,
@@ -15612,6 +15809,7 @@
 				A6FBAE702874112100AB872E /* betta_idle-9.png in Resources */,
 				A6FBB0E92874112200AB872E /* koala_pirate_idle_front-59.png in Resources */,
 				A6FB93CD287410B600AB872E /* sheep_eat-1.png in Resources */,
+				A65613FF28757FF400F48507 /* sloth_swag_lightsaber-7.png in Resources */,
 				A6FBACC02874112100AB872E /* panda_selfie-8.png in Resources */,
 				A6FBB2DC2874112300AB872E /* trex_unbox_present-2.png in Resources */,
 				A6FBA123287410BB00AB872E /* sloth_love-21.png in Resources */,
@@ -15620,7 +15818,6 @@
 				A6FBAF882874112200AB872E /* crow_eat-11.png in Resources */,
 				A6FB923F287410B600AB872E /* egg_drag-0.png in Resources */,
 				A6FBAFBA2874112200AB872E /* crow_white_love-19.png in Resources */,
-				A6FBA14B287410BB00AB872E /* sloth_lightsaber-5.png in Resources */,
 				A6FBB0E02874112200AB872E /* koala_pirate_idle_front-45.png in Resources */,
 				A6FBAF2A2874112200AB872E /* crow_love-22.png in Resources */,
 				A6FBB2802874112300AB872E /* trex_blue_jump-6.png in Resources */,
@@ -15654,6 +15851,7 @@
 				A6FBB2D92874112300AB872E /* trex_unbox_present-5.png in Resources */,
 				A6FBAFD92874112200AB872E /* crow_white_fly-4.png in Resources */,
 				A6FBB4212874112400AB872E /* trex_yellow_idle-11.png in Resources */,
+				A656141328757FF400F48507 /* sloth_swag_lightsaber-4.png in Resources */,
 				A6FBB1E62874112300AB872E /* koala_eat-19.png in Resources */,
 				A6FBB0DF2874112200AB872E /* koala_pirate_idle_front-44.png in Resources */,
 				A6FBACD22874112100AB872E /* panda_love-19.png in Resources */,
@@ -15687,9 +15885,9 @@
 				A6FB91FB287410B600AB872E /* egg_opening-0.png in Resources */,
 				A6FB991F287410B800AB872E /* ufo_abduction-13.png in Resources */,
 				A6FBA08F287410BB00AB872E /* sloth_selfie-28.png in Resources */,
-				A6FBA13F287410BB00AB872E /* sloth_lightsaber-13.png in Resources */,
 				A6FB9323287410B600AB872E /* sheep_idle_side-7.png in Resources */,
 				A6FBA1B9287410BB00AB872E /* sloth_eat-18.png in Resources */,
+				A656140F28757FF400F48507 /* sloth_swag_lightsaber-18.png in Resources */,
 				A6FB9377287410B600AB872E /* sheep_idle_front-2.png in Resources */,
 				A6FB9423287410B700AB872E /* sheep_black_puke-8.png in Resources */,
 				A6FBB4732874112400AB872E /* trex_yellow_guitar-2.png in Resources */,
@@ -15700,6 +15898,7 @@
 				A6FB924B287410B600AB872E /* egg_gold_idle-0.png in Resources */,
 				A6FBAF012874112200AB872E /* crow_idle-3.png in Resources */,
 				A6FBB4AB2874112400AB872E /* trex_yellow_fireball-6.png in Resources */,
+				A65613DB28757DE700F48507 /* sloth_lightsaber-32.png in Resources */,
 				A6FBAD4D2874112100AB872E /* panda_eat-9.png in Resources */,
 				A6FBA24D287410BC00AB872E /* sloth_swag_climb-6.png in Resources */,
 				A6FBAF192874112200AB872E /* crow_love-4.png in Resources */,
@@ -15781,7 +15980,6 @@
 				A6FBB0E52874112200AB872E /* koala_pirate_idle_front-46.png in Resources */,
 				A6FBA0C1287410BB00AB872E /* sloth_climb-9.png in Resources */,
 				A6FBB1492874112200AB872E /* koala_idle-15.png in Resources */,
-				A6FBA307287410BC00AB872E /* sloth_swag_lightsaber-4.png in Resources */,
 				A6FBB1882874112300AB872E /* koala_love-7.png in Resources */,
 				A6FB98A3287410B800AB872E /* ufo_landing-14.png in Resources */,
 				A6FBAD3B2874112100AB872E /* panda_drag-4.png in Resources */,
@@ -15812,12 +16010,14 @@
 				A6FBB30C2874112300AB872E /* trex_idle_front-9.png in Resources */,
 				A6FBAD5F2874112100AB872E /* panda_eat-21.png in Resources */,
 				A6FBA115287410BB00AB872E /* sloth_love-18.png in Resources */,
+				A656143F2875800800F48507 /* sloth_swag_lightsaber-32.png in Resources */,
 				A6FBAF1A2874112200AB872E /* crow_love-5.png in Resources */,
 				A6FB9341287410B600AB872E /* sheep_puke-1.png in Resources */,
 				A6FBACC42874112100AB872E /* panda_selfie-17.png in Resources */,
 				A6FBB1992874112300AB872E /* koala_idle_front-14.png in Resources */,
 				A6FBAF912874112200AB872E /* crow_eat-5.png in Resources */,
 				A6FB938B287410B600AB872E /* sheep_eat-37.png in Resources */,
+				A656144B2875800800F48507 /* sloth_swag_lightsaber-20.png in Resources */,
 				A6FB9449287410B700AB872E /* sheep_black_idle_front-5.png in Resources */,
 				A6FBAD312874112100AB872E /* panda_idle_front-30.png in Resources */,
 				A6FBB0512874112200AB872E /* crow_white_eat-0.png in Resources */,
@@ -15840,6 +16040,7 @@
 				A6FBADA52874112100AB872E /* panda_vest_selfie-9.png in Resources */,
 				A6FBB0AB2874112200AB872E /* koala_pirate_love-18.png in Resources */,
 				A6FB941F287410B700AB872E /* sheep_black_puke-7.png in Resources */,
+				A65613DF28757DE700F48507 /* sloth_lightsaber-34.png in Resources */,
 				A6FBB3FE2874112400AB872E /* trex_violet_fireball-3.png in Resources */,
 				A6FBA067287410BB00AB872E /* sloth_selfie-1.png in Resources */,
 				A6FBB1622874112300AB872E /* koala_love-51.png in Resources */,
@@ -15881,6 +16082,7 @@
 				A6FBAD2C2874112100AB872E /* panda_idle_front-31.png in Resources */,
 				A6FB9CD3287410BA00AB872E /* missingno_idle_front-1.png in Resources */,
 				A6FBB38A2874112300AB872E /* trex_violet_unbox_present-3.png in Resources */,
+				A65613D128757DE700F48507 /* sloth_lightsaber-28.png in Resources */,
 				A6FBADE52874112100AB872E /* panda_vest_lightsaber-29.png in Resources */,
 				A6FBAD222874112100AB872E /* panda_idle_front-0.png in Resources */,
 				A6FBA1DF287410BB00AB872E /* sloth_swag_idle-7.png in Resources */,
@@ -15974,6 +16176,8 @@
 				A6FBB4582874112400AB872E /* trex_yellow_send_text-12.png in Resources */,
 				A6FBA3A7287410BC00AB872E /* sloth_swag_eat-15.png in Resources */,
 				A6FBA23B287410BC00AB872E /* sloth_swag_selfie-8.png in Resources */,
+				A656143D2875800800F48507 /* sloth_swag_lightsaber-23.png in Resources */,
+				A656140928757FF400F48507 /* sloth_swag_lightsaber-16.png in Resources */,
 				A6FBA031287410BB00AB872E /* sloth_idle-10.png in Resources */,
 				A6FBA18F287410BB00AB872E /* sloth_idle_front-20.png in Resources */,
 				A6FBADBB2874112100AB872E /* panda_vest_love-10.png in Resources */,
@@ -15999,7 +16203,6 @@
 				A6FB91D5287410B600AB872E /* egg_crack-5.png in Resources */,
 				A6FBA3CF287410BC00AB872E /* smoke_bomb-0.png in Resources */,
 				A6FB9417287410B700AB872E /* sheep_black_puke-3.png in Resources */,
-				A6FBA325287410BC00AB872E /* sloth_swag_lightsaber-8.png in Resources */,
 				A6FBB0D02874112200AB872E /* koala_pirate_idle_front-18.png in Resources */,
 				A6FBA2DF287410BC00AB872E /* sloth_swag_love-5.png in Resources */,
 				A6FB91E5287410B600AB872E /* egg_opening-15.png in Resources */,
@@ -16013,10 +16216,8 @@
 				A6FBAD532874112100AB872E /* panda_eat-3.png in Resources */,
 				A6FBACD02874112100AB872E /* panda_love-20.png in Resources */,
 				A6FBACD52874112100AB872E /* panda_love-1.png in Resources */,
-				A6FBA31D287410BC00AB872E /* sloth_swag_lightsaber-3.png in Resources */,
 				A6FBB49F2874112400AB872E /* trex_yellow_drag-6.png in Resources */,
 				A6FBB17F2874112300AB872E /* koala_love-14.png in Resources */,
-				A6FBA319287410BC00AB872E /* sloth_swag_lightsaber-15.png in Resources */,
 				A6FBB3D72874112300AB872E /* trex_violet_guitar-19.png in Resources */,
 				A6FB9359287410B600AB872E /* sheep_puke-32.png in Resources */,
 				A6FBAD182874112100AB872E /* panda_idle_front-39.png in Resources */,
@@ -16028,6 +16229,7 @@
 				A6FBB16D2874112300AB872E /* koala_love-35.png in Resources */,
 				A6FB947F287410B700AB872E /* sheep_black_eat-12.png in Resources */,
 				A6FBB4512874112400AB872E /* trex_yellow_send_text-6.png in Resources */,
+				A656135828757CB200F48507 /* sloth_lightsaber-8.png in Resources */,
 				A6FBB3EA2874112400AB872E /* trex_violet_drag-1.png in Resources */,
 				A6FB91ED287410B600AB872E /* egg_opening-4.png in Resources */,
 				A6FBAD1B2874112100AB872E /* panda_idle_front-2.png in Resources */,
@@ -16041,7 +16243,6 @@
 				A6FBB0822874112200AB872E /* koala_pirate_walk-1.png in Resources */,
 				A6FBA197287410BB00AB872E /* sloth_idle_front-6.png in Resources */,
 				A6FBA363287410BC00AB872E /* sloth_swag_idle_front-16.png in Resources */,
-				A6FBA13D287410BB00AB872E /* sloth_lightsaber-11.png in Resources */,
 				A6FBB0CF2874112200AB872E /* koala_pirate_idle_front-32.png in Resources */,
 				A6FBAF3F2874112200AB872E /* crow_idle_front-19.png in Resources */,
 				A6FBADBC2874112100AB872E /* panda_vest_love-21.png in Resources */,
@@ -16074,7 +16275,6 @@
 				A6FBB07B2874112200AB872E /* koala_pirate_idle-26.png in Resources */,
 				A6FBB1832874112300AB872E /* koala_love-12.png in Resources */,
 				A6FB9255287410B600AB872E /* egg_gold_crack-7.png in Resources */,
-				A6FBA311287410BC00AB872E /* sloth_swag_lightsaber-10.png in Resources */,
 				A6FBB0EF2874112200AB872E /* koala_pirate_idle_front-29.png in Resources */,
 				A6FBAFE92874112200AB872E /* crow_white_idle_front-9.png in Resources */,
 				A6FBAE7B2874112100AB872E /* betta_fly-9.png in Resources */,
@@ -16084,6 +16284,7 @@
 				A6FBAD7C2874112100AB872E /* panda_vest_idle-6.png in Resources */,
 				A6FBA271287410BC00AB872E /* sloth_swag_climb-31.png in Resources */,
 				A6FBADB02874112100AB872E /* panda_vest_walk-8.png in Resources */,
+				A656143B2875800800F48507 /* sloth_swag_lightsaber-22.png in Resources */,
 				A6FBB3392874112300AB872E /* trex_drag-4.png in Resources */,
 				A6FBA22D287410BC00AB872E /* sloth_swag_selfie-27.png in Resources */,
 				A6FBA2FB287410BC00AB872E /* sloth_swag_love-19.png in Resources */,
@@ -16094,7 +16295,6 @@
 				A6FBB2862874112300AB872E /* trex_blue_drag-5.png in Resources */,
 				A6FBAF4F2874112200AB872E /* crow_idle_front-21.png in Resources */,
 				A6FBB2872874112300AB872E /* trex_blue_drag-1.png in Resources */,
-				A6FBA14F287410BB00AB872E /* sloth_lightsaber-6.png in Resources */,
 				A6FBB3B72874112300AB872E /* trex_violet_idle_front-1.png in Resources */,
 				A6FBADF52874112100AB872E /* panda_vest_idle_front-38.png in Resources */,
 				A6FBB1082874112200AB872E /* koala_pirate_eat-6.png in Resources */,
@@ -16170,7 +16370,9 @@
 				A6FBA245287410BC00AB872E /* sloth_swag_climb-1.png in Resources */,
 				A6FBB0B82874112200AB872E /* koala_pirate_love-42.png in Resources */,
 				A6FBA0F5287410BB00AB872E /* sloth_love-28.png in Resources */,
+				A65613FD28757FF400F48507 /* sloth_swag_lightsaber-15.png in Resources */,
 				A6FBA1D9287410BB00AB872E /* sloth_swag_idle-3.png in Resources */,
+				A656136628757CB200F48507 /* sloth_lightsaber-5.png in Resources */,
 				A6FBA093287410BB00AB872E /* sloth_climb-28.png in Resources */,
 				A6FBA1E5287410BB00AB872E /* sloth_swag_idle-14.png in Resources */,
 				A6FBAD0C2874112100AB872E /* panda_idle_front-29.png in Resources */,
@@ -16269,6 +16471,7 @@
 				A6FBA3BF287410BC00AB872E /* nyan_idle_front-1.png in Resources */,
 				A6FBB2312874112300AB872E /* trex_blue_unbox_present-7.png in Resources */,
 				A6FBB2F42874112300AB872E /* trex_send_text-5.png in Resources */,
+				A65614492875800800F48507 /* sloth_swag_lightsaber-27.png in Resources */,
 				A6FBB4A42874112400AB872E /* trex_yellow_eat-2.png in Resources */,
 				A6FBB49A2874112400AB872E /* trex_yellow_drag-1.png in Resources */,
 				A6FBAFAD2874112200AB872E /* crow_white_idle-0.png in Resources */,
@@ -16327,7 +16530,6 @@
 				A6FB99E5287410B900AB872E /* ufo_bombing-56.png in Resources */,
 				A6FBB2512874112300AB872E /* trex_blue_idle_front-2.png in Resources */,
 				A6FB9203287410B600AB872E /* egg_opening-25.png in Resources */,
-				A6FBA131287410BB00AB872E /* sloth_lightsaber-9.png in Resources */,
 				A6FB930F287410B600AB872E /* sheep_idle_side-8.png in Resources */,
 				A6FBB05F2874112200AB872E /* koala_pirate_idle-12.png in Resources */,
 				A6FBADEA2874112100AB872E /* panda_vest_lightsaber-13.png in Resources */,
@@ -16366,11 +16568,13 @@
 				A6FBAF772874112200AB872E /* crow_drag-34.png in Resources */,
 				A6FBAE952874112100AB872E /* betta_idle_front-6.png in Resources */,
 				A6FBB11C2874112200AB872E /* koala_pirate_eat-21.png in Resources */,
+				A656136028757CB200F48507 /* sloth_lightsaber-2.png in Resources */,
 				A6FBA173287410BB00AB872E /* sloth_idle_front-32.png in Resources */,
 				A6FBACF02874112100AB872E /* panda_lightsaber-22.png in Resources */,
 				A6FB986F287410B800AB872E /* ufo_landing-42.png in Resources */,
 				A6FBA2CD287410BC00AB872E /* sloth_swag_love-10.png in Resources */,
 				A6FBAE832874112100AB872E /* betta_fly-3.png in Resources */,
+				A656141D28757FF400F48507 /* sloth_swag_lightsaber-3.png in Resources */,
 				A6FBB0972874112200AB872E /* koala_pirate_love-14.png in Resources */,
 				A6FBB3C22874112300AB872E /* trex_violet_guitar-11.png in Resources */,
 				A6FBA2C3287410BC00AB872E /* sloth_swag_love-14.png in Resources */,
@@ -16427,7 +16631,6 @@
 				A6FBB4362874112400AB872E /* trex_yellow_walk-5.png in Resources */,
 				A6FBAEA52874112100AB872E /* betta_drag-24.png in Resources */,
 				A6FBB4812874112400AB872E /* trex_yellow_guitar-10.png in Resources */,
-				A6FBA31B287410BC00AB872E /* sloth_swag_lightsaber-14.png in Resources */,
 				A6FBB18E2874112300AB872E /* koala_love-5.png in Resources */,
 				A6FBB08D2874112200AB872E /* koala_pirate_love-5.png in Resources */,
 				A6FBAED52874112200AB872E /* betta_backflip-0.png in Resources */,
@@ -16514,6 +16717,7 @@
 				A6FBB3DB2874112300AB872E /* trex_violet_jump-8.png in Resources */,
 				A6FBB1FC2874112300AB872E /* koala_backflip-0.png in Resources */,
 				A6FBB0B32874112200AB872E /* koala_pirate_love-41.png in Resources */,
+				A65614372875800800F48507 /* sloth_swag_lightsaber-33.png in Resources */,
 				A6FBB2F92874112300AB872E /* trex_send_text-2.png in Resources */,
 				A6FBAF2D2874112200AB872E /* crow_fly-7.png in Resources */,
 				A6FBB0802874112200AB872E /* koala_pirate_walk-4.png in Resources */,
@@ -16549,6 +16753,7 @@
 				A6FB9419287410B700AB872E /* sheep_black_puke-1.png in Resources */,
 				A6FBA2B1287410BC00AB872E /* sloth_swag_walk-1.png in Resources */,
 				A6FBB35E2874112300AB872E /* trex_roar-6.png in Resources */,
+				A65614332875800800F48507 /* sloth_swag_lightsaber-28.png in Resources */,
 				A6FB926D287410B600AB872E /* egg_gold_opening-24.png in Resources */,
 				A6FBB1E42874112300AB872E /* koala_eat-23.png in Resources */,
 				A6FBAD8A2874112100AB872E /* panda_vest_idle-18.png in Resources */,
@@ -16586,6 +16791,7 @@
 				A6FBAF8D2874112200AB872E /* crow_eat-3.png in Resources */,
 				A6FB9485287410B700AB872E /* sheep_black_eat-13.png in Resources */,
 				A6FB9837287410B800AB872E /* ufo_landing-33.png in Resources */,
+				A656134C28757CB200F48507 /* sloth_lightsaber-14.png in Resources */,
 				A6FBB3DE2874112300AB872E /* trex_violet_jump-3.png in Resources */,
 				A6FBB1AC2874112300AB872E /* koala_idle_front-42.png in Resources */,
 				A6FBACC32874112100AB872E /* panda_selfie-16.png in Resources */,
@@ -16617,7 +16823,6 @@
 				A6FBB14C2874112200AB872E /* koala_idle-12.png in Resources */,
 				A6FBB2A62874112300AB872E /* trex_blue_roar-5.png in Resources */,
 				A6FBAF592874112200AB872E /* crow_idle_front-6.png in Resources */,
-				A6FBA137287410BB00AB872E /* sloth_lightsaber-15.png in Resources */,
 				A6FBACA22874112100AB872E /* panda_idle-13.png in Resources */,
 				A6FBB2432874112300AB872E /* trex_blue_send_text-0.png in Resources */,
 				A6FBA089287410BB00AB872E /* sloth_selfie-16.png in Resources */,
@@ -16656,7 +16861,6 @@
 				A6FBAECA2874112100AB872E /* betta_eat-5.png in Resources */,
 				A6FBAD892874112100AB872E /* panda_vest_idle-19.png in Resources */,
 				A6FB9867287410B800AB872E /* ufo_landing-55.png in Resources */,
-				A6FBA145287410BB00AB872E /* sloth_lightsaber-2.png in Resources */,
 				A6FB928D287410B600AB872E /* egg_gold_opening-6.png in Resources */,
 				A6FBA11B287410BB00AB872E /* sloth_love-34.png in Resources */,
 				A6FBACE82874112100AB872E /* panda_lightsaber-18.png in Resources */,
@@ -16700,7 +16904,6 @@
 				A6FBB1A92874112300AB872E /* koala_idle_front-41.png in Resources */,
 				A6FBA195287410BB00AB872E /* sloth_idle_front-36.png in Resources */,
 				A6FBAE542874112100AB872E /* betta_tsundere-18.png in Resources */,
-				A6FBA143287410BB00AB872E /* sloth_lightsaber-3.png in Resources */,
 				A6FBB1E22874112300AB872E /* koala_eat-20.png in Resources */,
 				A6FB9827287410B800AB872E /* ufo_landing-19.png in Resources */,
 				A6FB921B287410B600AB872E /* egg_opening-21.png in Resources */,
@@ -16720,6 +16923,7 @@
 				A6FB9251287410B600AB872E /* egg_gold_crack-2.png in Resources */,
 				A6FBB0AC2874112200AB872E /* koala_pirate_love-26.png in Resources */,
 				A6FBB2EA2874112300AB872E /* trex_send_text-13.png in Resources */,
+				A65613E128757DE700F48507 /* sloth_lightsaber-23.png in Resources */,
 				A6FBB3882874112300AB872E /* trex_violet_unbox_present-10.png in Resources */,
 				A6FB939F287410B600AB872E /* sheep_eat-31.png in Resources */,
 				A6FBB0432874112200AB872E /* crow_white_drag-29.png in Resources */,
@@ -16742,6 +16946,7 @@
 				A6FBB47E2874112400AB872E /* trex_yellow_guitar-22.png in Resources */,
 				A6FBA0CF287410BB00AB872E /* sloth_climb-25.png in Resources */,
 				A6FBB0912874112200AB872E /* koala_pirate_love-59.png in Resources */,
+				A656141528757FF400F48507 /* sloth_swag_lightsaber-10.png in Resources */,
 				A6FBA339287410BC00AB872E /* sloth_swag_idle_front-18.png in Resources */,
 				A6FBAEBA2874112100AB872E /* betta_eat-9.png in Resources */,
 				A6FBAF222874112200AB872E /* crow_love-25.png in Resources */,
@@ -16767,6 +16972,7 @@
 				A6FBAFF12874112200AB872E /* crow_white_idle_front-32.png in Resources */,
 				A6FB998F287410B900AB872E /* ufo_bombing-29.png in Resources */,
 				A6FBAEB12874112100AB872E /* betta_drag-29.png in Resources */,
+				A656135A28757CB200F48507 /* sloth_lightsaber-1.png in Resources */,
 				A6FBA1F7287410BC00AB872E /* sloth_swag_idle-20.png in Resources */,
 				A6FBB3BA2874112300AB872E /* trex_violet_idle_front-6.png in Resources */,
 				A6FBA06B287410BB00AB872E /* sloth_selfie-27.png in Resources */,
@@ -16859,12 +17065,10 @@
 				A6FB91E1287410B600AB872E /* egg_opening-16.png in Resources */,
 				A6FBAD402874112100AB872E /* panda_drag-3.png in Resources */,
 				A6FBAD112874112100AB872E /* panda_idle_front-9.png in Resources */,
-				A6FBA327287410BC00AB872E /* sloth_swag_lightsaber-9.png in Resources */,
 				A6FBA15D287410BB00AB872E /* sloth_idle_front-10.png in Resources */,
 				A6FBA111287410BB00AB872E /* sloth_love-6.png in Resources */,
 				A6FBB3262874112300AB872E /* trex_guitar-3.png in Resources */,
 				A6FBB1822874112300AB872E /* koala_love-13.png in Resources */,
-				A6FBA317287410BC00AB872E /* sloth_swag_lightsaber-2.png in Resources */,
 				A6FBB1DB2874112300AB872E /* koala_eat-2.png in Resources */,
 				A6FB932D287410B600AB872E /* sheep_walk-7.png in Resources */,
 				A6FBB0B02874112200AB872E /* koala_pirate_love-40.png in Resources */,
@@ -16941,11 +17145,11 @@
 				A6FB9285287410B600AB872E /* egg_gold_opening-0.png in Resources */,
 				A6FBB23F2874112300AB872E /* trex_blue_send_text-9.png in Resources */,
 				A6FBB0712874112200AB872E /* koala_pirate_idle-34.png in Resources */,
-				A6FBA321287410BC00AB872E /* sloth_swag_lightsaber-16.png in Resources */,
 				A6FBAE5F2874112100AB872E /* betta_tsundere-20.png in Resources */,
 				A6FB9243287410B600AB872E /* egg_gold_idle-4.png in Resources */,
 				A6FBB2E72874112300AB872E /* trex_unbox_present-14.png in Resources */,
 				A6FBB34C2874112300AB872E /* trex_fireball-12.png in Resources */,
+				A65613D328757DE700F48507 /* sloth_lightsaber-22.png in Resources */,
 				A6FBB4B82874112400AB872E /* trex_yellow_roar-13.png in Resources */,
 				A6FBAE682874112100AB872E /* betta_tsundere-12.png in Resources */,
 				A6FB922B287410B600AB872E /* egg_jump-5.png in Resources */,
