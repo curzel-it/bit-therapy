@@ -14,8 +14,8 @@ extension Pet {
             LinearMovement.self,
             WallCrawler.self
         ],
-        movementPath: .idleFront,
-        dragPath: .idleFront,
+        movementPath: .front,
+        dragPath: .front,
         speed: 0.2
     )
     

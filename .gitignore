@@ -1,11 +1,11 @@
 Aseprite/
 *.aseprite
 Secrets.plist
-PixelArt/Pets/betta
-PixelArt/Pets/crow
-PixelArt/Pets/koala
-PixelArt/Pets/panda
-PixelArt/Pets/trex
+Packages/PetsAssets/Sources/PetsAssets/Resources/pets/betta
+Packages/PetsAssets/Sources/PetsAssets/Resources/pets/crow
+Packages/PetsAssets/Sources/PetsAssets/Resources/pets/koala
+Packages/PetsAssets/Sources/PetsAssets/Resources/pets/panda
+Packages/PetsAssets/Sources/PetsAssets/Resources/pets/trex
 
 # Xcode
 #

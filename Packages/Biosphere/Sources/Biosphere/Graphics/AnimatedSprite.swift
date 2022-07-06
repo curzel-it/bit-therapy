@@ -47,13 +47,13 @@ open class AnimatedSprite: Capability, ObservableObject {
             animation = PetsAssets.animator(
                 baseName: path,
                 onFirstFrameLoaded: { completedLoops in
-                    printDebug("AnimatedSprite", "Loaded first frame of loop #\(completedLoops)")
                     guard completedLoops == 0 else { return }
+                    printDebug(self.tag, "Animation started")
                     subject.set(frame: requiredFrame)
                 },
                 onLoopCompleted: { completedLoops in
-                    printDebug("AnimatedSprite", "Completed loop #\(completedLoops)")
                     guard requiredLoops == completedLoops else { return }
+                    printDebug(self.tag, "Animation completed")
                     subject.movement?.isEnabled = true
                     subject.set(state: .move)
                     subject.set(frame: self.lastFrameBeforeAnimations)

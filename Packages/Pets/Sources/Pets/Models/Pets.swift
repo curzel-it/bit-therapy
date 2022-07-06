@@ -67,5 +67,5 @@ extension String {
     
     public static let fly = "fly"
     public static let walk = "walk"
-    public static let idleFront = "idle_front"
+    public static let front = "front"
 }

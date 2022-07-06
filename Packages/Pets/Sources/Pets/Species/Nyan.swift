@@ -9,8 +9,8 @@ extension Pet {
     
     static let nyan = Pet(
         id: "nyan",
-        movementPath: .idleFront,
-        dragPath: .idleFront,
+        movementPath: .front,
+        dragPath: .front,
         speed: 0.9
     )
 }

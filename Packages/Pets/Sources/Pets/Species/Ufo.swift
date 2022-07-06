@@ -15,15 +15,15 @@ extension Pet {
                 possibleAnimations: [
                     .bombing,
                     .landing,
-                    .exitViaPortal,
+                    .enterPortal,
                     .crash
                 ]
             )
         ],
         capabilities: .defaultsNoGravity,
         isPaid: true,
-        movementPath: .idleFront,
-        dragPath: .idleFront,
+        movementPath: .front,
+        dragPath: .front,
         speed: 2.4
     )
 }
@@ -37,8 +37,8 @@ private extension EntityAnimation {
     
     static let landing = EntityAnimation(id: "landing")
     
-    static let exitViaPortal = EntityAnimation(
-        id: "exit_portal",
+    static let enterPortal = EntityAnimation(
+        id: "portal",
         size: CGSize(width: 2, height: 1)
     )
     

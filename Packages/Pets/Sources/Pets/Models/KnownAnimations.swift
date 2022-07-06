@@ -7,7 +7,7 @@ import Foundation
 
 extension EntityAnimation {
     
-    public static let idleFront = EntityAnimation(id: "idle_front")
+    public static let front = EntityAnimation(id: "front")
     
     static let backflip = EntityAnimation(id: "backflip")
     static let eat = EntityAnimation(id: "eat")
@@ -20,7 +20,7 @@ extension EntityAnimation {
     static let puke = EntityAnimation(id: "puke")
     static let roar = EntityAnimation(id: "roar")
     static let selfie = EntityAnimation(id: "selfie")
-    static let sendText = EntityAnimation(id: "send_text")
+    static let sendText = EntityAnimation(id: "texting")
     static let tsundere = EntityAnimation(id: "tsundere")
     
     static func lightsaber(size: CGSize) -> EntityAnimation {

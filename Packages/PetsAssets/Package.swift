@@ -24,6 +24,11 @@ let package = Package(
             ],
             resources: [
                 .copy("Resources")
+                // .copy("Resources/Pets/betta/original/front")
+                // .process("Resources/Pets/betta/original/front")
+                // .process("Resources/Pets/betta/original/front/*")
+                // .copy("Resources/Pets/betta/original/front/betta_front-0.png")
+                // .process("Resources/Pets/betta/original/front/betta_front-0.png")
             ]
         ),
         .testTarget(

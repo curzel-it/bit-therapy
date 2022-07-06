@@ -53,6 +53,6 @@ class SelectablePet: PetEntity {
         )
         install(AnimatedSprite.self)
         set(direction: .zero)
-        set(state: .animation(animation: .idleFront, loops: nil))
+        set(state: .animation(animation: .front, loops: nil))
     }
 }
