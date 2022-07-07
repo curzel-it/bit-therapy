@@ -6,6 +6,7 @@ import AppState
 import Biosphere
 import DesignSystem
 import Pets
+import PetsAssets
 import Schwifty
 import Squanch
 import SwiftUI
@@ -51,7 +52,7 @@ class SelectablePet: PetEntity {
             in: habitatBounds,
             installCapabilities: false
         )
-        install(AnimatedSprite.self)
+        install(PetSprite.self)
         set(direction: .zero)
         set(state: .animation(animation: .front, loops: nil))
     }

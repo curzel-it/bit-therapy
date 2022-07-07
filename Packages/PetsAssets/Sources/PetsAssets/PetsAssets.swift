@@ -12,22 +12,7 @@ public class PetsAssets {
         frames(for: baseName).count > 0
     }
     
-    public static func animator(
-        baseName: String,
-        onFirstFrameLoaded: ((Int) -> Void)? = nil,
-        onLoopCompleted: ((Int) -> Void)? = nil
-    ) -> ImageAnimator {
-        let frames = frames(for: baseName)
-        
-        return ImageAnimator(
-            baseName: baseName,
-            frames: frames,
-            onFirstFrameLoaded: onFirstFrameLoaded,
-            onLoopCompleted: onLoopCompleted
-        )
-    }
-    
-    private static func frames(for baseName: String) -> [NSImage] {
+    public static func frames(for baseName: String) -> [NSImage] {
         let paths = baseName.components(separatedBy: "_")
         
         if paths.count > 2 {

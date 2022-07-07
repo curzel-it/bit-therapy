@@ -4,7 +4,6 @@
 
 import AppKit
 import Combine
-import PetsAssets
 import Schwifty
 import Squanch
 
@@ -33,47 +32,61 @@ open class AnimatedSprite: Capability, ObservableObject {
     
     @MainActor
     private func updateSprite() {
-        guard let subject = subject else { return }
-        guard let path = subject.animationPath(for: lastState) else { return }
+        guard let path = subject?.animationPath(for: lastState) else { return }
         guard path != animation.baseName else { return }
-        printDebug(id, "Loaded", path)
-        
+        printDebug(id, "Loading", path)
         animation.invalidate()
+        animation = buildAnimator(baseName: path, state: lastState)
+    }
+    
+    open func buildAnimator(baseName: String, state: EntityState) -> ImageAnimator {
+        guard let subject = subject else { return .none }
+        let frames = frames(for: baseName)
         
-        if case .animation(let anim, let requiredLoops) = lastState {
-            subject.movement?.isEnabled = false
+        if case .animation(let anim, let requiredLoops) = state {
             let requiredFrame = anim.frame(for: subject)
             
-            animation = PetsAssets.animator(
-                baseName: path,
+            return ImageAnimator(
+                baseName: baseName,
+                frames: frames,
                 onFirstFrameLoaded: { completedLoops in
                     guard completedLoops == 0 else { return }
-                    printDebug(self.tag, "Animation started")
-                    subject.set(frame: requiredFrame)
+                    self.handleAnimationStarted(setFrame: requiredFrame)
                 },
                 onLoopCompleted: { completedLoops in
                     guard requiredLoops == completedLoops else { return }
-                    printDebug(self.tag, "Animation completed")
-                    subject.movement?.isEnabled = true
-                    subject.set(state: .move)
-                    subject.set(frame: self.lastFrameBeforeAnimations)
+                    self.handleAnimationCompleted()
                 }
             )
         } else {
-            animation = PetsAssets.animator(baseName: path)
+            return ImageAnimator(baseName: baseName, frames: frames)
         }
     }
     
+    open func frames(for name: String) -> [NSImage] {
+        AnimatedSprite.frames(for: name, in: .main)
+    }
+    
+    public func handleAnimationStarted(setFrame requiredFrame: CGRect) {
+        printDebug(id, "Animation started")
+        subject?.movement?.isEnabled = false
+        subject?.set(frame: requiredFrame)
+    }
+    
+    public func handleAnimationCompleted() {
+        printDebug(id, "Animation completed")
+        subject?.movement?.isEnabled = true
+        subject?.set(state: .move)
+        subject?.set(frame: self.lastFrameBeforeAnimations)
+    }
+    
     open override func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
-        guard let subject = subject else { return }
+        guard isEnabled, let subject = subject else { return }
         
         if let next = animation.nextFrame(after: time) {
             subject.sprite = next
         }
-        if case .animation = subject.state {
-            // ...
-        } else {
+        if !subject.state.isAnimation {
             lastFrameBeforeAnimations = subject.frame
         }
     }
@@ -94,4 +107,38 @@ extension Entity {
     public var animation: AnimatedSprite? { capability(for: AnimatedSprite.self) }
     
     public var isDrawable: Bool { animation != nil }
+}
+
+// MARK: - Frames from Bundle
+
+extension AnimatedSprite {
+
+    static func frames(for name: String, in bundle: Bundle) -> [NSImage] {
+        var frames: [NSImage] = []
+        var frameIndex = 0
+        
+        while true {
+            if let path = bundle.path(forResource: "\(name)-\(frameIndex)", ofType: "png"),
+               let image = NSImage(contentsOfFile: path) {
+                frames.append(image)
+            } else {
+                if frameIndex != 0 { break }
+            }
+            frameIndex += 1
+        }
+        return frames
+    }
+}
+
+// MARK: - Animation State
+
+private extension EntityState {
+    
+    var isAnimation: Bool {
+        if case .animation = self {
+            return true
+        } else {
+            return false
+        }
+    }
 }

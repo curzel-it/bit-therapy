@@ -12,6 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(path: "../Biosphere"),
         .package(path: "../Schwifty"),
         .package(path: "../Squanch")
     ],
@@ -19,16 +20,12 @@ let package = Package(
         .target(
             name: "PetsAssets",
             dependencies: [
+                .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch")
             ],
             resources: [
                 .copy("Resources")
-                // .copy("Resources/Pets/betta/original/front")
-                // .process("Resources/Pets/betta/original/front")
-                // .process("Resources/Pets/betta/original/front/*")
-                // .copy("Resources/Pets/betta/original/front/betta_front-0.png")
-                // .process("Resources/Pets/betta/original/front/betta_front-0.png")
             ]
         ),
         .testTarget(

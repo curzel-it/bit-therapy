@@ -19,6 +19,7 @@ let package = Package(
         .package(path: "../../Biosphere"),
         .package(path: "../../DesignSystem"),
         .package(path: "../../Pets"),
+        .package(path: "../../PetsAssets"),
         .package(path: "../../Schwifty"),
         .package(path: "../../Squanch")
     ],
@@ -32,6 +33,7 @@ let package = Package(
                 .product(name: "InAppPurchases", package: "InAppPurchases"),
                 .product(name: "OnScreen", package: "OnScreen"),
                 .product(name: "Pets", package: "Pets"),
+                .product(name: "PetsAssets", package: "PetsAssets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Tracking", package: "Tracking")

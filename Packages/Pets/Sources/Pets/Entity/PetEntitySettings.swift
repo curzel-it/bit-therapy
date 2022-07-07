@@ -5,6 +5,7 @@
 import AppKit
 import Biosphere
 import DesignSystem
+import PetsAssets
 
 // MARK: - Id
 
@@ -53,7 +54,7 @@ extension PetEntity {
 extension Capabilities {
     
     static let defaultsNoGravity: Capabilities = [
-        AnimatedSprite.self,
+        PetSprite.self,
         LinearMovement.self,
         BounceOffLateralBounds.self,
         FlipHorizontallyWhenGoingLeft.self,
