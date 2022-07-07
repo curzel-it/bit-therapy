@@ -22,13 +22,13 @@ extension Pet {
                 ]
             ),
             .init(
-                trigger: .on(spot: .leftBound),
+                trigger: .on(spot: .bottomLeftCorner),
                 possibleAnimations: [
                     .climb(to: .habitatTopLeft)
                 ]
             ),
             .init(
-                trigger: .on(spot: .rightBound),
+                trigger: .on(spot: .bottomRightCorner),
                 possibleAnimations: [
                     .climb(to: .habitatTopRight)
                 ]

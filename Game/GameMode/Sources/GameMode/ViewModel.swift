@@ -4,6 +4,7 @@
 
 import AppKit
 import Biosphere
+import DesignSystem
 import GameState
 import Pets
 import Squanch
@@ -22,10 +23,9 @@ class ViewModel: HabitatViewModel {
     private func addPet(for species: Pet) {
         let pet = PetEntity(
             of: species,
-            size: GameState.global.petSize,
+            size: PetSize.defaultSize,
             in: state.bounds
         )
-        pet.set(origin: state.bounds.center)
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)
     }

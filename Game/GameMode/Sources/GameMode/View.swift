@@ -11,7 +11,7 @@ import SwiftUI
 public struct GameView: View {
     
     @StateObject var viewModel = ViewModel(
-        bounds: CGRect(size: CGSize(width: 700, height: 500))
+        bounds: CGRect(size: CGSize(width: 1200, height: 700))
     )
     
     public init() {

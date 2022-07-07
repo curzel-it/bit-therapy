@@ -31,7 +31,9 @@ Hope you like them too!
 ## Troubleshooting
 
 ### Swift Packages not loading
-* Xcode does not like local swift packages 🤷‍♂️
-* Try Reset Packages Cache (Package Dependencies > Right Click)
-* Close Xcode and relaunch  
+Unfortunately, Xcode does not like local swift packages 🤷‍♂️
+1. Try Clean and build again
+1. Try Reset Packages Cache (Package Dependencies > Right Click)
+1. Try Close and re-open Xcode
+1. Try Reset Packages Cache, again   
 

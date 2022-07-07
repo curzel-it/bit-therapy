@@ -75,9 +75,9 @@ open class AnimatedSprite: Capability, ObservableObject {
     
     public func handleAnimationCompleted() {
         printDebug(id, "Animation completed")
-        subject?.movement?.isEnabled = true
+        subject?.set(frame: lastFrameBeforeAnimations)
         subject?.set(state: .move)
-        subject?.set(frame: self.lastFrameBeforeAnimations)
+        subject?.movement?.isEnabled = true
     }
     
     open override func update(with collisions: Collisions, after time: TimeInterval) {

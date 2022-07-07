@@ -53,12 +53,18 @@ extension PetEntity {
 
 extension Capabilities {
     
+    static let defaultsCrawler: Capabilities = [
+        LinearMovement.self,
+        WallCrawler.self,
+        PetSprite.self
+    ]
+    
     static let defaultsNoGravity: Capabilities = [
-        PetSprite.self,
         LinearMovement.self,
         BounceOffLateralBounds.self,
         FlipHorizontallyWhenGoingLeft.self,
-        ReactToHotspots.self
+        ReactToHotspots.self,
+        PetSprite.self
     ]
     
     static let defaultsWithGravity: Capabilities = defaultsNoGravity + [Gravity.self]
