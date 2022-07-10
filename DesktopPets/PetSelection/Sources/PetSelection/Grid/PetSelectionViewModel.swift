@@ -52,7 +52,8 @@ class SelectablePet: PetEntity {
             in: habitatBounds,
             installCapabilities: false
         )
-        install(PetSprite.self)
+        install(AnimatedSprite.self)
+        install(PetSpritesProvider.self)
         set(direction: .zero)
         set(state: .animation(animation: .front, loops: nil))
     }

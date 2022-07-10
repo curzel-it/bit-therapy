@@ -56,7 +56,8 @@ extension Capabilities {
     static let defaultsCrawler: Capabilities = [
         LinearMovement.self,
         WallCrawler.self,
-        PetSprite.self
+        AnimatedSprite.self,
+        PetSpritesProvider.self
     ]
     
     static let defaultsNoGravity: Capabilities = [
@@ -64,7 +65,8 @@ extension Capabilities {
         BounceOffLateralBounds.self,
         FlipHorizontallyWhenGoingLeft.self,
         ReactToHotspots.self,
-        PetSprite.self
+        AnimatedSprite.self,
+        PetSpritesProvider.self
     ]
     
     static let defaultsWithGravity: Capabilities = defaultsNoGravity + [Gravity.self]

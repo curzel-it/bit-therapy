@@ -22,6 +22,10 @@ open class AnimatedSprite: Capability, ObservableObject {
         self.lastFrameBeforeAnimations = subject.frame
         super.init(with: subject)
         
+        if subject.spritesProvider == nil {
+            printDebug(id, "No sprites provider detected")
+        }
+        
         stateCanc = subject.$state.sink { newState in
             Task { @MainActor in
                 self.lastState = newState
@@ -39,9 +43,9 @@ open class AnimatedSprite: Capability, ObservableObject {
         animation = buildAnimator(baseName: path, state: lastState)
     }
     
-    open func buildAnimator(baseName: String, state: EntityState) -> ImageAnimator {
+    private func buildAnimator(baseName: String, state: EntityState) -> ImageAnimator {
         guard let subject = subject else { return .none }
-        let frames = frames(for: baseName)
+        let frames = subject.spritesProvider?.frames(for: baseName) ?? []
         
         if case .animation(let anim, let requiredLoops) = state {
             let requiredFrame = anim.frame(for: subject)
@@ -61,10 +65,6 @@ open class AnimatedSprite: Capability, ObservableObject {
         } else {
             return ImageAnimator(baseName: baseName, frames: frames)
         }
-    }
-    
-    open func frames(for name: String) -> [NSImage] {
-        AnimatedSprite.frames(for: name, in: .main)
     }
     
     public func handleAnimationStarted(setFrame requiredFrame: CGRect) {
@@ -107,38 +107,4 @@ extension Entity {
     public var animation: AnimatedSprite? { capability(for: AnimatedSprite.self) }
     
     public var isDrawable: Bool { animation != nil }
-}
-
-// MARK: - Frames from Bundle
-
-extension AnimatedSprite {
-
-    static func frames(for name: String, in bundle: Bundle) -> [NSImage] {
-        var frames: [NSImage] = []
-        var frameIndex = 0
-        
-        while true {
-            if let path = bundle.path(forResource: "\(name)-\(frameIndex)", ofType: "png"),
-               let image = NSImage(contentsOfFile: path) {
-                frames.append(image)
-            } else {
-                if frameIndex != 0 { break }
-            }
-            frameIndex += 1
-        }
-        return frames
-    }
-}
-
-// MARK: - Animation State
-
-private extension EntityState {
-    
-    var isAnimation: Bool {
-        if case .animation = self {
-            return true
-        } else {
-            return false
-        }
-    }
 }

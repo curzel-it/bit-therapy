@@ -22,3 +22,16 @@ public enum EntityState: Equatable {
         }
     }
 }
+
+// MARK: - Animation State
+
+extension EntityState {
+    
+    public var isAnimation: Bool {
+        if case .animation = self {
+            return true
+        } else {
+            return false
+        }
+    }
+}
