@@ -7,8 +7,10 @@ import Biosphere
 import Combine
 import EntityWindow
 import HabitatWindows
+import LiveEnvironment
 import Pets
 import Schwifty
+import Sprites
 import Squanch
 import SwiftUI
 
@@ -44,11 +46,11 @@ public struct OnScreen {
     }
 }
 
-private class OnScreenWindows: HabitatWindows<HabitatViewModel> {
+private class OnScreenWindows: HabitatWindows<LiveEnvironment> {
     
     override func newWindow(
         representing entity: Entity,
-        in habitat: HabitatViewModel
+        in habitat: LiveEnvironment
     ) -> EntityWindow {
         if let pet = entity as? PetEntity {
             return PetWindow(representing: pet, in: habitat)

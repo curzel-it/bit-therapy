@@ -3,9 +3,10 @@
 //
 
 import AppState
-import Foundation
 import Biosphere
+import Foundation
 import Pets
+import Sprites
 
 // MARK: - Event
 

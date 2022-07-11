@@ -2,13 +2,15 @@
 // Pet Therapy.
 //
 
+import Biosphere
 import DesignSystem
-import SwiftUI
 import Schwifty
+import Sprites
+import SwiftUI
 
 public struct EntityView: View {
     
-    @EnvironmentObject var viewModel: HabitatViewModel
+    @EnvironmentObject var viewModel: LiveEnvironment
     
     @ObservedObject var child: Entity
     

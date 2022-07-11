@@ -16,8 +16,10 @@ let package = Package(
         .package(path: "../EntityWindow"),
         .package(path: "../UfoAbduction"),
         .package(path: "../../Biosphere"),
+        .package(path: "../../LiveEnvironment"),
         .package(path: "../../Pets"),
         .package(path: "../../Schwifty"),
+        .package(path: "../../Sprites"),
         .package(path: "../../Squanch")
     ],
     targets: [
@@ -27,8 +29,10 @@ let package = Package(
                 .product(name: "AppState", package: "AppState"),
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "EntityWindow", package: "EntityWindow"),
+                .product(name: "LiveEnvironment", package: "LiveEnvironment"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
+                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "UfoAbduction", package: "UfoAbduction")
             ]
@@ -37,7 +41,8 @@ let package = Package(
             name: "HabitatWindowsTests",
             dependencies: [
                 "HabitatWindows",
-                .product(name: "Biosphere", package: "Biosphere")
+                .product(name: "Biosphere", package: "Biosphere"),
+                .product(name: "LiveEnvironment", package: "LiveEnvironment")
             ]
         )
     ]

@@ -6,8 +6,9 @@ import AppKit
 import Biosphere
 import DesignSystem
 import PetsAssets
+import Sprites
 
-// MARK: - Id
+// MARK: - Incremental Id
 
 extension PetEntity {
     

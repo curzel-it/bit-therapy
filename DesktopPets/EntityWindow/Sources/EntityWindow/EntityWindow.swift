@@ -3,14 +3,16 @@
 //
 
 import AppKit
-import Combine
 import Biosphere
+import Combine
+import LiveEnvironment
+import Sprites
 import SwiftUI
 
 open class EntityWindow: NSWindow {
     
     public let entity: Entity
-    public let habitat: HabitatViewModel
+    public let habitat: LiveEnvironment
     
     public weak var entityView: NSView!
     
@@ -19,7 +21,7 @@ open class EntityWindow: NSWindow {
     
     private(set) var expectedFrame: CGRect = .zero
     
-    public init(representing entity: Entity, in habitat: HabitatViewModel) {
+    public init(representing entity: Entity, in habitat: LiveEnvironment) {
         self.entity = entity
         self.habitat = habitat
         

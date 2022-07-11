@@ -17,6 +17,7 @@ let package = Package(
         .package(path: "../HabitatWindows"),
         .package(path: "../UfoAbduction"),
         .package(path: "../../Biosphere"),
+        .package(path: "../../LiveEnvironment"),
         .package(path: "../../Pets"),
         .package(path: "../../Schwifty"),
         .package(path: "../../Squanch")
@@ -29,6 +30,7 @@ let package = Package(
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "EntityWindow", package: "EntityWindow"),
                 .product(name: "HabitatWindows", package: "HabitatWindows"),
+                .product(name: "LiveEnvironment", package: "LiveEnvironment"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch"),

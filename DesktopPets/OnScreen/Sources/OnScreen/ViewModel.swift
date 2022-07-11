@@ -6,10 +6,12 @@ import AppKit
 import AppState
 import Biosphere
 import EntityWindow
+import LiveEnvironment
 import Pets
+import Sprites
 import Squanch
 
-class ViewModel: HabitatViewModel {
+class ViewModel: LiveEnvironment {
     
     init() {
         super.init(

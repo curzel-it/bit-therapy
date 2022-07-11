@@ -4,6 +4,7 @@
 
 import AppKit
 import Biosphere
+import LiveEnvironment
 import Pets
 import Squanch
 import SwiftUI
@@ -24,13 +25,13 @@ public struct GameView: View {
             }
             .frame(sizeOf: viewModel.state.bounds)
             .environmentObject(viewModel)
-            .environmentObject(viewModel as HabitatViewModel)
+            .environmentObject(viewModel as LiveEnvironment)
     }
 }
 
 private struct Inhabitants: View {
     
-    @EnvironmentObject var viewModel: HabitatViewModel
+    @EnvironmentObject var viewModel: LiveEnvironment
     
     var body: some View {
         ForEach(viewModel.state.children) {
@@ -41,7 +42,7 @@ private struct Inhabitants: View {
 
 private struct Inhabitant: View {
     
-    @EnvironmentObject var viewModel: HabitatViewModel
+    @EnvironmentObject var viewModel: LiveEnvironment
     
     @StateObject var entity: Entity
     

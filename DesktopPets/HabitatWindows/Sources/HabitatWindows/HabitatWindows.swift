@@ -7,12 +7,14 @@ import AppState
 import Biosphere
 import Combine
 import EntityWindow
+import LiveEnvironment
 import Pets
 import Schwifty
+import Sprites
 import Squanch
 import SwiftUI
 
-open class HabitatWindows<Habitat: HabitatViewModel>: NSObject, NSWindowDelegate {
+open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
     
     weak var habitat: Habitat?
     

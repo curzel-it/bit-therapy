@@ -2,12 +2,14 @@
 // Pet Therapy.
 //
 
+import Biosphere
+import Sprites
 import Squanch
 import SwiftUI
 
-open class HabitatViewModel: ObservableObject {
+open class LiveEnvironment: ObservableObject {
     
-    @Published public var state: Environment
+    @Published public var state: Biosphere.Environment
         
     public let id: String
     public let tag: String
@@ -71,9 +73,9 @@ open class HabitatViewModel: ObservableObject {
     }
 }
 
-extension HabitatViewModel: Equatable {
+extension LiveEnvironment: Equatable {
     
-    public static func == (lhs: HabitatViewModel, rhs: HabitatViewModel) -> Bool {
+    public static func == (lhs: LiveEnvironment, rhs: LiveEnvironment) -> Bool {
         lhs.id == rhs.id
     }
 }

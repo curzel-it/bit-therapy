@@ -14,6 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Biosphere"),
         .package(path: "../Schwifty"),
+        .package(path: "../Sprites"),
         .package(path: "../Squanch")
     ],
     targets: [
@@ -22,6 +23,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "Schwifty", package: "Schwifty"),
+                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "Squanch", package: "Squanch")
             ],
             resources: [

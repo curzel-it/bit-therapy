@@ -23,6 +23,9 @@
       location = "group:Packages/Lang">
    </FileRef>
    <FileRef
+      location = "group:Packages/LiveEnvironment">
+   </FileRef>
+   <FileRef
       location = "group:Packages/Pets">
    </FileRef>
    <FileRef
@@ -30,6 +33,9 @@
    </FileRef>
    <FileRef
       location = "group:Packages/Schwifty">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Sprites">
    </FileRef>
    <FileRef
       location = "group:Packages/Squanch">

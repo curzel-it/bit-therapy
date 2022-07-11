@@ -16,6 +16,7 @@ let package = Package(
         .package(path: "../../Biosphere"),
         .package(path: "../../Pets"),
         .package(path: "../../Schwifty"),
+        .package(path: "../../Sprites"),
         .package(path: "../../Squanch")
     ],
     targets: [
@@ -26,6 +27,7 @@ let package = Package(
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
+                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "Squanch", package: "Squanch")
             ]
         ),

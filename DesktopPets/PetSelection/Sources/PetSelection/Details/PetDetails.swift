@@ -6,9 +6,11 @@ import Biosphere
 import DesignSystem
 import InAppPurchases
 import Lang
+import LiveEnvironment
 import Pets
 import Schwifty
 import Squanch
+import Sprites
 import SwiftUI
 import Tracking
 

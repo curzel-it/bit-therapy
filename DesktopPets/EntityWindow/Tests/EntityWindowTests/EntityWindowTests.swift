@@ -4,13 +4,14 @@
 
 import XCTest
 import Biosphere
+import LiveEnvironment
 
 @testable import EntityWindow
 
 class EntityWindowTests: XCTestCase {
     
     var entity: Entity!
-    var habitat: HabitatViewModel!
+    var habitat: LiveEnvironment!
     var window: EntityWindow!
     
     override func setUp() {
@@ -18,7 +19,7 @@ class EntityWindowTests: XCTestCase {
         habitat?.kill(animated: false)
         window?.close()
         
-        habitat = HabitatViewModel(
+        habitat = LiveEnvironment(
             id: "test",
             bounds: CGRect(size: .init(square: 1000))
         )

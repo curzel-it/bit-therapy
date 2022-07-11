@@ -6,10 +6,11 @@ import AppKit
 import Biosphere
 import DesignSystem
 import GameState
+import LiveEnvironment
 import Pets
 import Squanch
 
-class ViewModel: HabitatViewModel {
+class ViewModel: LiveEnvironment {
     
     init(bounds: CGRect) {
         super.init(id: "GameMode", bounds: bounds)

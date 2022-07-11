@@ -7,8 +7,10 @@ import Biosphere
 import DesignSystem
 import InAppPurchases
 import Lang
+import LiveEnvironment
 import OnScreen
 import Schwifty
+import Sprites
 import SwiftUI
 
 public struct PetSelectionView: View {
@@ -35,7 +37,7 @@ public struct PetSelectionView: View {
                 .padding(.lg)
         }
         .environmentObject(viewModel)
-        .environmentObject(viewModel as HabitatViewModel)
+        .environmentObject(viewModel as LiveEnvironment)
         .environmentObject(PricingService.global)
         .onReceive(appState.$mainWindowFocused) { isFocused in
             if isFocused {

@@ -5,19 +5,21 @@
 import AppState
 import Biosphere
 import DesignSystem
-import Squanch
+import LiveEnvironment
 import Schwifty
+import Sprites
+import Squanch
 import SwiftUI
 
 class HostedEntityView: NSView {
     
     let entity: Entity
-    let habitat: HabitatViewModel
+    let habitat: LiveEnvironment
         
     weak var onScreenView: NSView!
     weak var rightClickMenu: NSView!
     
-    public init(representing entity: Entity, in habitat: HabitatViewModel) {
+    public init(representing entity: Entity, in habitat: LiveEnvironment) {
         self.entity = entity
         self.habitat = habitat
         super.init(frame: CGRect(size: entity.frame.size))

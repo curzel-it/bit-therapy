@@ -4,15 +4,16 @@
 
 import XCTest
 import Biosphere
+import LiveEnvironment
 
 @testable import HabitatWindows
 
 class HabitatWindowsTests: XCTestCase {
     
-    var habitat: HabitatViewModel!
+    var habitat: LiveEnvironment!
     var entity1: Entity!
     var entity2: Entity!
-    var windows: HabitatWindows<HabitatViewModel>!
+    var windows: HabitatWindows<LiveEnvironment>!
     
     override func setUp() {
         entity1?.kill()
@@ -20,7 +21,7 @@ class HabitatWindowsTests: XCTestCase {
         habitat?.kill(animated: false)
         windows?.kill()
         
-        habitat = HabitatViewModel(
+        habitat = LiveEnvironment(
             id: "HabitatWindowsTests",
             bounds: CGRect(size: .init(square: 1000))
         )
@@ -34,7 +35,7 @@ class HabitatWindowsTests: XCTestCase {
             frame: .init(origin: .zero, size: .init(square: 100)),
             in: habitat.state.bounds
         )
-        windows = HabitatWindows<HabitatViewModel>(
+        windows = HabitatWindows<LiveEnvironment>(
             id: "test",
             for: habitat,
             whenAllWindowsHaveBeenClosed: {}
@@ -79,7 +80,7 @@ class HabitatWindowsTests: XCTestCase {
     }
 }
 
-private extension HabitatViewModel {
+private extension LiveEnvironment {
     
     var drawableChildren: Int {
         state.children.filter { $0.isDrawable }.count

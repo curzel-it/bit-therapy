@@ -18,9 +18,11 @@ let package = Package(
         .package(path: "../Tracking"),
         .package(path: "../../Biosphere"),
         .package(path: "../../DesignSystem"),
+        .package(path: "../../LiveEnvironment"),
         .package(path: "../../Pets"),
         .package(path: "../../PetsAssets"),
         .package(path: "../../Schwifty"),
+        .package(path: "../../Sprites"),
         .package(path: "../../Squanch")
     ],
     targets: [
@@ -31,10 +33,12 @@ let package = Package(
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "InAppPurchases", package: "InAppPurchases"),
+                .product(name: "LiveEnvironment", package: "LiveEnvironment"),
                 .product(name: "OnScreen", package: "OnScreen"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "PetsAssets", package: "PetsAssets"),
                 .product(name: "Schwifty", package: "Schwifty"),
+                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Tracking", package: "Tracking")
             ]

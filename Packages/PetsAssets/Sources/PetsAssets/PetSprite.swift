@@ -5,6 +5,7 @@
 import AppKit
 import Biosphere
 import Schwifty
+import Sprites
 import Squanch
 
 open class PetSpritesProvider: SpritesProvider {

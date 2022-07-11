@@ -15,7 +15,9 @@ let package = Package(
         .package(path: "../AppState"),
         .package(path: "../../Biosphere"),
         .package(path: "../../DesignSystem"),
+        .package(path: "../../LiveEnvironment"),
         .package(path: "../../Schwifty"),
+        .package(path: "../../Sprites"),
         .package(path: "../../Squanch")
     ],
     targets: [
@@ -24,13 +26,18 @@ let package = Package(
             dependencies: [
                 .product(name: "AppState", package: "AppState"),
                 .product(name: "Biosphere", package: "Biosphere"),
+                .product(name: "LiveEnvironment", package: "LiveEnvironment"),
                 .product(name: "Schwifty", package: "Schwifty"),
+                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "Squanch", package: "Squanch")
             ]
         ),
         .testTarget(
             name: "EntityWindowTests",
-            dependencies: ["EntityWindow"]
+            dependencies: [
+                "EntityWindow",
+                .product(name: "LiveEnvironment", package: "LiveEnvironment")
+            ]
         )
     ]
 )

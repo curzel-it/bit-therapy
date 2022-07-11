@@ -6,15 +6,17 @@ import AppState
 import Biosphere
 import Combine
 import EntityWindow
+import LiveEnvironment
 import Pets
 import Schwifty
+import Sprites
 import SwiftUI
 
 class PetWindow: EntityWindow {
     
     private var sizeCanc: AnyCancellable!
     
-    public override init(representing entity: Entity, in habitat: HabitatViewModel) {
+    public override init(representing entity: Entity, in habitat: LiveEnvironment) {
         super.init(representing: entity, in: habitat)
         bindToSizeSettings()
     }
