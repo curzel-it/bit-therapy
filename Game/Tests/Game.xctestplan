@@ -19,41 +19,6 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:Biosphere",
-        "identifier" : "BiosphereTests",
-        "name" : "BiosphereTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Lang",
-        "identifier" : "LangTests",
-        "name" : "LangTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Pets",
-        "identifier" : "PetsTests",
-        "name" : "PetsTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Schwifty",
-        "identifier" : "SchwiftyTests",
-        "name" : "SchwiftyTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Squanch",
-        "identifier" : "SquanchTests",
-        "name" : "SquanchTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:AppState",
         "identifier" : "AppStateTests",
         "name" : "AppStateTests"
@@ -61,9 +26,79 @@
     },
     {
       "target" : {
-        "containerPath" : "container:GameMode",
+        "containerPath" : "container:..\/Packages\/Biosphere",
+        "identifier" : "BiosphereTests",
+        "name" : "BiosphereTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Game\/Game.xcodeproj",
+        "identifier" : "A65FE36D283D80CB00D1F5C8",
+        "name" : "Game Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Game\/GameMode",
         "identifier" : "GameModeTests",
         "name" : "GameModeTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Game\/GameState",
+        "identifier" : "GameStateTests",
+        "name" : "GameStateTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Lang",
+        "identifier" : "LangTests",
+        "name" : "LangTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/LiveEnvironment",
+        "identifier" : "LiveEnvironmentTests",
+        "name" : "LiveEnvironmentTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Pets",
+        "identifier" : "PetsTests",
+        "name" : "PetsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/PetsAssets",
+        "identifier" : "PetsAssetsTests",
+        "name" : "PetsAssetsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Schwifty",
+        "identifier" : "SchwiftyTests",
+        "name" : "SchwiftyTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Sprites",
+        "identifier" : "SpritesTests",
+        "name" : "SpritesTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Squanch",
+        "identifier" : "SquanchTests",
+        "name" : "SquanchTests"
       }
     }
   ],

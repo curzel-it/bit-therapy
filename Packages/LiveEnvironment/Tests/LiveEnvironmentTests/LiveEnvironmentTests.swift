@@ -1,11 +1,14 @@
+//
+// Pet Therapy.
+//
+
 import XCTest
+
 @testable import LiveEnvironment
 
-final class LiveEnvironmentTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(LiveEnvironment().text, "Hello, World!")
+class LiveEnvironmentTests: XCTestCase {
+    
+    func testExample() {
+        // ...
     }
 }

@@ -33,13 +33,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Lang",
-        "identifier" : "LangTests",
-        "name" : "LangTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:OnScreen",
         "identifier" : "OnScreenTests",
         "name" : "OnScreenTests"
@@ -92,6 +85,34 @@
         "containerPath" : "container:..\/Packages\/Squanch",
         "identifier" : "SquanchTests",
         "name" : "SquanchTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Lang",
+        "identifier" : "LangTests",
+        "name" : "LangTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/LiveEnvironment",
+        "identifier" : "LiveEnvironmentTests",
+        "name" : "LiveEnvironmentTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/PetsAssets",
+        "identifier" : "PetsAssetsTests",
+        "name" : "PetsAssetsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Sprites",
+        "identifier" : "SpritesTests",
+        "name" : "SpritesTests"
       }
     }
   ],
