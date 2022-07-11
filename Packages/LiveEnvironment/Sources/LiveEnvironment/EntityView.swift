@@ -20,7 +20,7 @@ public struct EntityView: View {
     
     public var body: some View {
         if let sprite = child.sprite {
-            Image(nsImage: sprite)
+            Image(sprite, scale: 1, label: Text(""))
                 .pixelArt()
                 .frame(sizeOf: child.frame)
                 .frame(sizeOf: child.frame)

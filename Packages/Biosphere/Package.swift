@@ -4,14 +4,13 @@ import PackageDescription
 
 let package = Package(
     name: "Biosphere",
-    platforms: [.macOS(.v12)],
+    platforms: [.macOS(.v12), .iOS(.v15)],
     products: [
         .library(
             name: "Biosphere",
             targets: ["Biosphere"])
     ],
     dependencies: [
-        .package(path: "../DesignSystem"),
         .package(path: "../Squanch"),
         .package(path: "../Schwifty")
     ],
@@ -19,7 +18,6 @@ let package = Package(
         .target(
             name: "Biosphere",
             dependencies: [
-                .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Schwifty", package: "Schwifty")
             ]),

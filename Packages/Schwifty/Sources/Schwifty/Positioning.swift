@@ -2,7 +2,6 @@
 // Pet Therapy.
 //
 
-import Foundation
 import SwiftUI
 
 // MARK: - Positions

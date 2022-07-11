@@ -2,6 +2,8 @@
 // Pet Therapy.
 //
 
+#if os(macOS)
+
 import SwiftUI
 
 extension View {
@@ -30,3 +32,5 @@ private struct WindowGrabber: NSViewRepresentable {
         // ...
     }
 }
+
+#endif

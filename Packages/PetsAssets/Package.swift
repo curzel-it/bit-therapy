@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "PetsAssets",
-    platforms: [.macOS(.v12)],
+    platforms: [.macOS(.v12), .iOS(.v15)],
     products: [
         .library(
             name: "PetsAssets",
@@ -27,7 +27,7 @@ let package = Package(
                 .product(name: "Squanch", package: "Squanch")
             ],
             resources: [
-                .copy("Resources")
+                .copy("PixelArt")
             ]
         ),
         .testTarget(

@@ -15,7 +15,7 @@ let package = Package(
         .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0"),
         .package(path: "../Tracking"),
         .package(path: "../../Biosphere"),
-        .package(path: "../../Lang"),
+        .package(path: "../Lang"),
         .package(path: "../../Squanch")
     ],
     targets: [

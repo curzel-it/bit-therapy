@@ -2,7 +2,7 @@
 // Pet Therapy.
 //
 
-import Foundation
+import SwiftUI
 
 public struct EntityAnimation: Equatable {
     

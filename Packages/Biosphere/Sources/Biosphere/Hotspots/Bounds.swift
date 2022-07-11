@@ -2,7 +2,7 @@
 // Pet Therapy.
 // 
 
-import Foundation
+import SwiftUI
 
 private let boundDistanceAfterScreenEnd: CGFloat = 0
 private let boundsThickness: CGFloat = 1000

@@ -20,9 +20,6 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
-      location = "group:Packages/Lang">
-   </FileRef>
-   <FileRef
       location = "group:Packages/LiveEnvironment">
    </FileRef>
    <FileRef

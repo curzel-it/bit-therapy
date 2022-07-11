@@ -2,7 +2,7 @@
 // Pet Therapy.
 // 
 
-import Foundation
+import SwiftUI
 
 func topLeftCorner(in habitatBounds: CGRect) -> Entity {
     let entity = Entity(

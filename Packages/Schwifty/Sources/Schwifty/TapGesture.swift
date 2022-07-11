@@ -4,6 +4,10 @@
 
 import SwiftUI
 
+#if os(macOS)
+
+import AppKit
+
 extension View {
     
     public func tappableOnInvisibleAreas() -> some View {
@@ -14,3 +18,22 @@ extension View {
         }
     }
 }
+
+#endif
+
+#if os(iOS)
+
+import UIKit
+
+extension View {
+    
+    public func tappableOnInvisibleAreas() -> some View {
+        self.overlay {
+            Image(uiImage: UIImage())
+                .resizable()
+                .scaledToFill()
+        }
+    }
+}
+
+#endif

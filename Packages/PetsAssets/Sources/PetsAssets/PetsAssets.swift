@@ -2,9 +2,9 @@
 // Pet Therapy.
 //
 
-import AppKit
 import Schwifty
 import Squanch
+import SwiftUI
 
 public class PetsAssets {
     
@@ -12,28 +12,30 @@ public class PetsAssets {
         frames(for: baseName).count > 0
     }
     
-    public static func frames(for baseName: String) -> [NSImage] {
+    public static func frames(for baseName: String) -> [CGImage] {
         let paths = baseName.components(separatedBy: "_")
         
         if paths.count > 2 {
             let path = paths.joined(separator: "/")
-            return frames(fromDirectory: "Resources/pets/\(path)")
+            return frames(fromDirectory: "PixelArt/pets/\(path)")
         }
         if paths.count == 2 {
             let species = paths[0]
             let action = paths[1]
             let path = [species, "original", action].joined(separator: "/")
-            return frames(fromDirectory: "Resources/pets/\(path)")
+            return frames(fromDirectory: "PixelArt/pets/\(path)")
         }
-        return frames(fromDirectory: "Resources/\(baseName)")
+        return frames(fromDirectory: "PixelArt/\(baseName)")
     }
     
-    private static func frames(fromDirectory dir: String) -> [NSImage] {
-        Bundle.module
-            .paths(forResourcesOfType: "png", inDirectory: dir)
-            .sorted()
-            .compactMap {
-                NSImage(contentsOfFile: $0)
-            }
+    private static func frames(fromDirectory dir: String) -> [CGImage] {
+        let urls = Bundle.module.urls(
+            forResourcesWithExtension: "png",
+            subdirectory: dir
+        ) ?? []
+        
+        return urls
+            .sorted {$0.absoluteString < $1.absoluteString }
+            .compactMap { CGImage.from(contentsOfPng: $0) }
     }
 }

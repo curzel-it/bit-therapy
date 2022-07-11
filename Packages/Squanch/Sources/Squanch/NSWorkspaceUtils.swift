@@ -2,6 +2,8 @@
 // Pet Therapy.
 //
 
+#if os(macOS)
+
 import AppKit
 
 extension NSWorkspace {
@@ -13,3 +15,4 @@ extension NSWorkspace {
         return open(url)
     }
 }
+#endif

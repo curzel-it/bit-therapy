@@ -2,13 +2,13 @@
 // Pet Therapy.
 //
 
-import AppKit
 import Biosphere
 import DesignSystem
 import GameState
 import LiveEnvironment
 import Pets
 import Squanch
+import SwiftUI
 
 class ViewModel: LiveEnvironment {
     

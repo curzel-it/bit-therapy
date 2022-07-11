@@ -2,11 +2,11 @@
 // Pet Therapy.
 //
 
-import AppKit
 import Biosphere
 import Combine
 import Schwifty
 import Squanch
+import SwiftUI
 
 open class AnimatedSprite: Capability, ObservableObject {
     
@@ -22,10 +22,6 @@ open class AnimatedSprite: Capability, ObservableObject {
         self.id = "\(subject.id)-Sprite"
         self.lastFrameBeforeAnimations = subject.frame
         super.init(with: subject)
-        
-        if subject.spritesProvider == nil {
-            printDebug(id, "No sprites provider detected")
-        }
         
         stateCanc = subject.$state.sink { newState in
             Task { @MainActor in
@@ -46,7 +42,10 @@ open class AnimatedSprite: Capability, ObservableObject {
     
     private func buildAnimator(baseName: String, state: EntityState) -> ImageAnimator {
         guard let subject = subject else { return .none }
-        let frames = subject.spritesProvider?.frames(for: baseName) ?? []
+        guard let frames = subject.spritesProvider?.frames(for: baseName) else {
+            printDebug(id, "No sprites to load")
+            return .none
+        }
         
         if case .animation(let anim, let requiredLoops) = state {
             let requiredFrame = anim.frame(for: subject)

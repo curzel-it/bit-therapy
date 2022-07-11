@@ -2,7 +2,6 @@
 // Pet Therapy.
 //
 
-import AppKit
 import Biosphere
 import LiveEnvironment
 import Pets
@@ -11,21 +10,21 @@ import SwiftUI
 
 public struct GameView: View {
     
-    @StateObject var viewModel = ViewModel(
-        bounds: CGRect(size: CGSize(width: 1200, height: 700))
-    )
+    @StateObject var viewModel: ViewModel
     
-    public init() {
-        // ...
+    public init(size: CGSize) {
+        self._viewModel = StateObject(
+            wrappedValue: ViewModel(bounds: CGRect(size: size))
+        )
     }
     
     public var body: some View {
-            ZStack {
-                Inhabitants()
-            }
-            .frame(sizeOf: viewModel.state.bounds)
-            .environmentObject(viewModel)
-            .environmentObject(viewModel as LiveEnvironment)
+        ZStack {
+            Inhabitants()
+        }
+        .frame(sizeOf: viewModel.state.bounds)
+        .environmentObject(viewModel)
+        .environmentObject(viewModel as LiveEnvironment)
     }
 }
 

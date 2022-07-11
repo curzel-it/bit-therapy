@@ -8,7 +8,7 @@ import Squanch
 open class Entity: Body {
     
     @Published public var isUpsideDown = false
-    @Published public var sprite: NSImage?
+    @Published public var sprite: CGImage?
     @Published public var xAngle: CGFloat = 0
     @Published public var yAngle: CGFloat = 0
     @Published public var zAngle: CGFloat = 0

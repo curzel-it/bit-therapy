@@ -2,6 +2,8 @@
 // Pet Therapy.
 //
 
+#if os(macOS)
+
 import AppKit
 import SwiftUI
 
@@ -12,3 +14,5 @@ extension NSWindow {
         NSWindowController(window: self).showWindow(sender)
     }
 }
+
+#endif

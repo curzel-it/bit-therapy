@@ -7,20 +7,22 @@ import SwiftUI
 
 open class SpritesProvider: Capability, ObservableObject {
     
-    open func frames(for name: String) -> [NSImage] {
+    open func frames(for name: String) -> [CGImage] {
         frames(for: name, in: .main)
     }
             
-    public func frames(for name: String, in bundle: Bundle) -> [NSImage] {
-        var frames: [NSImage] = []
+    public func frames(for name: String, in bundle: Bundle) -> [CGImage] {
+        var frames: [CGImage] = []
         var frameIndex = 0
         
         while true {
-            if let path = bundle.path(forResource: "\(name)-\(frameIndex)", ofType: "png"),
-               let image = NSImage(contentsOfFile: path) {
+            let name = "\(name)-\(frameIndex)"
+            
+            if let url = bundle.url(forResource: name, withExtension: "png"),
+               let image = CGImage.from(contentsOfPng: url) {
                 frames.append(image)
             } else {
-                if frameIndex != 0 { break }
+                if frameIndex == 0 { break }
             }
             frameIndex += 1
         }

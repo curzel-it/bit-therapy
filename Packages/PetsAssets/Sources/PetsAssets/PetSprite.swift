@@ -2,15 +2,15 @@
 // Pet Therapy.
 //
 
-import AppKit
 import Biosphere
 import Schwifty
 import Sprites
 import Squanch
+import SwiftUI
 
 open class PetSpritesProvider: SpritesProvider {
     
-    open override func frames(for name: String) -> [NSImage] {
+    open override func frames(for name: String) -> [CGImage] {
         PetsAssets.frames(for: name)
     }
 }

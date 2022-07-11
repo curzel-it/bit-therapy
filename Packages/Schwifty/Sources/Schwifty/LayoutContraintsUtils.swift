@@ -2,8 +2,9 @@
 // Pet Therapy.
 //
 
+#if os(macOS)
+
 import AppKit
-import SwiftUI
 
 extension NSView {
     
@@ -52,3 +53,5 @@ extension NSLayoutConstraint {
         )
     }
 }
+
+#endif

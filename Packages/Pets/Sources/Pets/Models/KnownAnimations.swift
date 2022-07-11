@@ -3,7 +3,7 @@
 // 
 
 import Biosphere
-import Foundation
+import SwiftUI
 
 extension EntityAnimation {
     
