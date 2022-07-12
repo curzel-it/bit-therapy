@@ -12,9 +12,12 @@ public struct GameView: View {
     
     @StateObject var viewModel: ViewModel
     
-    public init(size: CGSize) {
+    public init(size: CGSize, safeAreaInsets: EdgeInsets) {
         self._viewModel = StateObject(
-            wrappedValue: ViewModel(bounds: CGRect(size: size))
+            wrappedValue: ViewModel(
+                bounds: CGRect(size: size),
+                safeAreaInsets: safeAreaInsets
+            )
         )
     }
     

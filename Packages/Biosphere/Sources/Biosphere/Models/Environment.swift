@@ -10,15 +10,18 @@ public class Environment: ObservableObject {
     @Published public var children: [Entity] = []
     
     public private(set) var bounds: CGRect = .zero
+    public private(set) var safeAreaInsets: EdgeInsets = .init()
     
     public var events: [Event] = []
         
-    public init(bounds rect: CGRect) {
-        set(bounds: rect)
+    // TODO: Use bounds minX and minY rather than safe area
+    public init(bounds rect: CGRect, safeAreaInsets: EdgeInsets) {
+        set(bounds: rect, safeAreaInsets: safeAreaInsets)
     }
     
-    public func set(bounds: CGRect) {
+    public func set(bounds: CGRect, safeAreaInsets: EdgeInsets) {
         self.bounds = bounds
+        self.safeAreaInsets = safeAreaInsets
         let hotspots = Hotspot.allCases.map { $0.rawValue }
         children.removeAll { hotspots.contains($0.id) }
         children.append(contentsOf: hotspotEntities())

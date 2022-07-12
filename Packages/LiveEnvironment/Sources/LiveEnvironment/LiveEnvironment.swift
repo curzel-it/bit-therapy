@@ -11,6 +11,8 @@ open class LiveEnvironment: ObservableObject {
     
     @Published public var state: Biosphere.Environment
         
+    public let debug = false
+    
     public let id: String
     public let tag: String
     
@@ -19,11 +21,11 @@ open class LiveEnvironment: ObservableObject {
         
     let fps: Double = 15
     
-    public init(id: String, bounds: CGRect) {
+    public init(id: String, bounds: CGRect, safeAreaInsets: EdgeInsets) {
         self.id = id
         self.tag = "Habitat-\(id)"
         lastUpdate = Date.timeIntervalSinceReferenceDate
-        state = Environment(bounds: bounds)
+        state = Environment(bounds: bounds, safeAreaInsets: safeAreaInsets)
         startRendering()
     }
     
@@ -39,23 +41,23 @@ open class LiveEnvironment: ObservableObject {
     
     public func render() {
         let now = Date.timeIntervalSinceReferenceDate
-        self.state.update(after: now - self.lastUpdate)
-        self.lastUpdate = now
+        state.update(after: now - lastUpdate)
+        lastUpdate = now
     }
     
     public func pauseRendering() {
-        printDebug(self.tag, "Paused rendering")
+        printDebug(tag, "Paused rendering")
         timer?.invalidate()
         timer = nil
     }
     
-    open func set(bounds: CGRect) {
-        state.set(bounds: bounds)
+    open func set(bounds: CGRect, safeAreaInsets: EdgeInsets) {
+        state.set(bounds: bounds, safeAreaInsets: safeAreaInsets)
     }
     
     open func kill(animated: Bool) {
         if animated {
-            printDebug(self.tag, "Terminating...")
+            printDebug(tag, "Terminating...")
             state.children
                 .forEach { item in
                     item.kill(animated: true) { [weak self] in

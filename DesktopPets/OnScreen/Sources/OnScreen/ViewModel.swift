@@ -16,7 +16,8 @@ class ViewModel: LiveEnvironment {
     init() {
         super.init(
             id: "OnScreen",
-            bounds: NSScreen.main?.frame.bounds ?? .zero
+            bounds: NSScreen.main?.frame.bounds ?? .zero,
+            safeAreaInsets: .init()
         )
         addSelectedPet()
         scheduleEvents()

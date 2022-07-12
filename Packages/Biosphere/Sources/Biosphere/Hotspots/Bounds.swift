@@ -4,65 +4,68 @@
 
 import SwiftUI
 
-private let boundDistanceAfterScreenEnd: CGFloat = 0
-private let boundsThickness: CGFloat = 1000
+let boundDistanceAfterScreenEnd: CGFloat = 0
+let boundsThickness: CGFloat = 1000
 
-func bottomBound(in habitatBounds: CGRect) -> Entity {
-    let entity = Entity(
-        id: Hotspot.bottomBound.rawValue,
-        frame: CGRect(
-            x: -boundsThickness,
-            y: habitatBounds.height,
-            width: habitatBounds.width + boundsThickness*2,
-            height: boundsThickness
-        ),
-        in: habitatBounds
-    )
-    entity.isStatic = true
-    return entity
-}
-
-func topBound(in habitatBounds: CGRect) -> Entity {
-    let entity = Entity(
-        id: Hotspot.topBound.rawValue,
-        frame: CGRect(
-            x: -boundsThickness,
-            y: -boundsThickness,
-            width: habitatBounds.width + boundsThickness*2,
-            height: boundsThickness
-        ),
-        in: habitatBounds
-    )
-    entity.isStatic = true
-    return entity
-}
-
-func leftBound(in habitatBounds: CGRect) -> Entity {
-    let entity = Entity(
-        id: Hotspot.leftBound.rawValue,
-        frame: CGRect(
-            x: 0 - boundsThickness - boundDistanceAfterScreenEnd,
-            y: 0,
-            width: boundsThickness,
-            height: habitatBounds.height
-        ),
-        in: habitatBounds
-    )
-    entity.isStatic = true
-    return entity
-}
-
-func rightBound(in habitatBounds: CGRect) -> Entity {
-    let entity = Entity(
-        id: Hotspot.rightBound.rawValue,
-        frame: CGRect(
-            x: habitatBounds.width + boundDistanceAfterScreenEnd,
-            y: 0,
-            width: boundsThickness,
-            height: habitatBounds.height
-        ),
-        in: habitatBounds
-    )
-    entity.isStatic = true
-    return entity
+extension Environment {
+    
+    func bottomBound() -> Entity {
+        let entity = Entity(
+            id: Hotspot.bottomBound.rawValue,
+            frame: CGRect(
+                x: -boundsThickness,
+                y: bounds.height - safeAreaInsets.bottom,
+                width: bounds.width + boundsThickness*2,
+                height: boundsThickness
+            ),
+            in: bounds
+        )
+        entity.isStatic = true
+        return entity
+    }
+    
+    func topBound() -> Entity {
+        let entity = Entity(
+            id: Hotspot.topBound.rawValue,
+            frame: CGRect(
+                x: -boundsThickness,
+                y: -boundsThickness + safeAreaInsets.top,
+                width: bounds.width + boundsThickness*2,
+                height: boundsThickness
+            ),
+            in: bounds
+        )
+        entity.isStatic = true
+        return entity
+    }
+    
+    func leftBound() -> Entity {
+        let entity = Entity(
+            id: Hotspot.leftBound.rawValue,
+            frame: CGRect(
+                x: 0 - boundsThickness - boundDistanceAfterScreenEnd + safeAreaInsets.leading,
+                y: 0,
+                width: boundsThickness,
+                height: bounds.height
+            ),
+            in: bounds
+        )
+        entity.isStatic = true
+        return entity
+    }
+    
+    func rightBound() -> Entity {
+        let entity = Entity(
+            id: Hotspot.rightBound.rawValue,
+            frame: CGRect(
+                x: bounds.width + boundDistanceAfterScreenEnd - safeAreaInsets.trailing,
+                y: 0,
+                width: boundsThickness,
+                height: bounds.height
+            ),
+            in: bounds
+        )
+        entity.isStatic = true
+        return entity
+    }
 }

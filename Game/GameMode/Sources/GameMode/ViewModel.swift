@@ -12,8 +12,12 @@ import SwiftUI
 
 class ViewModel: LiveEnvironment {
     
-    init(bounds: CGRect) {
-        super.init(id: "GameMode", bounds: bounds)
+    init(bounds: CGRect, safeAreaInsets: EdgeInsets) {
+        super.init(
+            id: "GameMode",
+            bounds: bounds,
+            safeAreaInsets: safeAreaInsets
+        )
         addSelectedPet()
     }
     
@@ -26,6 +30,12 @@ class ViewModel: LiveEnvironment {
             of: species,
             size: PetSize.defaultSize,
             in: state.bounds
+        )
+        pet.set(
+            origin: CGPoint(
+                x: state.bounds.minX,
+                y: state.bounds.maxY - pet.frame.height
+            )
         )
         pet.set(direction: .init(dx: 1, dy: 0))
         state.children.append(pet)

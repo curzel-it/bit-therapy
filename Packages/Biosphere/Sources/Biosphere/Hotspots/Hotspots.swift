@@ -2,7 +2,7 @@
 // Pet Therapy.
 // 
 
-import Foundation
+import SwiftUI
 
 public enum Hotspot: String, CaseIterable {
     case topBound
@@ -25,20 +25,20 @@ public enum Hotspot: String, CaseIterable {
 extension Environment {
     
     func hotspotEntities() -> [Entity] {
-        [
-            topBound(in: bounds),
-            bottomBound(in: bounds),
-            leftBound(in: bounds),
-            rightBound(in: bounds),
+        return [
+            topBound(),
+            bottomBound(),
+            leftBound(),
+            rightBound(),
             
-            center(in: bounds),
-            horizontalCenter(in: bounds),
-            verticalCenter(in: bounds),
+            center(),
+            horizontalCenter(),
+            verticalCenter(),
             
-            topLeftCorner(in: bounds),
-            bottomLeftCorner(in: bounds),
-            topRightCorner(in: bounds),
-            bottomRightCorner(in: bounds)
+            topLeftCorner(),
+            bottomLeftCorner(),
+            topRightCorner(),
+            bottomRightCorner()
         ]
     }
 }

@@ -26,6 +26,20 @@ extension CGRect {
     }
 }
 
+// MARK: - Insets
+
+extension CGRect {
+    
+    public func inset(by edgeInsets: EdgeInsets) -> CGRect {
+        CGRect(
+            x: minX + edgeInsets.leading,
+            y: minY + edgeInsets.top,
+            width: width - edgeInsets.trailing - edgeInsets.leading,
+            height: height - edgeInsets.bottom - edgeInsets.top
+        )
+    }
+}
+
 // MARK: - Offset
 
 extension CGRect {
