@@ -10,9 +10,9 @@ extension Environment {
         let entity = Entity(
             id: Hotspot.verticalCenter.rawValue,
             frame: CGRect(
-                x: 0,
-                y: bounds.height/2,
-                width: bounds.width,
+                x: -boundsThickness,
+                y: bounds.midY,
+                width: bounds.maxX + boundsThickness*2,
                 height: 1
             ),
             in: bounds
@@ -26,10 +26,10 @@ extension Environment {
         let entity = Entity(
             id: Hotspot.horizontalCenter.rawValue,
             frame: CGRect(
-                x: bounds.width/2,
-                y: 0,
+                x: bounds.midX,
+                y: -boundsThickness,
                 width: 1,
-                height: bounds.height
+                height: bounds.maxY + boundsThickness*2
             ),
             in: bounds
         )
@@ -42,8 +42,8 @@ extension Environment {
         let entity = Entity(
             id: Hotspot.center.rawValue,
             frame: CGRect(
-                x: bounds.width/2,
-                y: bounds.height/2,
+                x: bounds.midX,
+                y: bounds.midY,
                 width: 1,
                 height: 1
             ),

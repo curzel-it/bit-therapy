@@ -12,16 +12,14 @@ import SwiftUI
 
 class ViewModel: LiveEnvironment {
     
-    init(bounds: CGRect, safeAreaInsets: EdgeInsets) {
-        super.init(
-            id: "GameMode",
-            bounds: bounds,
-            safeAreaInsets: safeAreaInsets
-        )
+    init(bounds: CGRect) {
+        printDebug("GameViewModel", "ViewModel init...")
+        super.init(id: "GameMode", bounds: bounds)
         addSelectedPet()
     }
     
     private func addSelectedPet() {
+        printDebug("GameViewModel", "Adding selected pet")
         addPet(for: .sloth)
     }
     

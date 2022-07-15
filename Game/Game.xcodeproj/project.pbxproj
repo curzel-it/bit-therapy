@@ -22,7 +22,6 @@
 		A6326C38287C7E2700E714CE /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6326C29287C7E2600E714CE /* MyApp.swift */; };
 		A6326C39287C7E2700E714CE /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6326C29287C7E2600E714CE /* MyApp.swift */; };
 		A6326C3B287C7E2700E714CE /* MainWindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6326C2A287C7E2600E714CE /* MainWindowDelegate.swift */; };
-		A6326C3C287C7E2700E714CE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6326C2B287C7E2600E714CE /* MainView.swift */; };
 		A6326C3D287C7E2700E714CE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6326C2B287C7E2600E714CE /* MainView.swift */; };
 		A6326C48287C7EC300E714CE /* LiveEnvironment in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C47287C7EC300E714CE /* LiveEnvironment */; };
 		A6326C4A287C7EC300E714CE /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C49287C7EC300E714CE /* Pets */; };
@@ -44,6 +43,7 @@
 		A6B689C8287D4FBF00D3C860 /* GameState in Frameworks */ = {isa = PBXBuildFile; productRef = A6B689C7287D4FBF00D3C860 /* GameState */; };
 		A6B689CA287D4FC900D3C860 /* GameMode in Frameworks */ = {isa = PBXBuildFile; productRef = A6B689C9287D4FC900D3C860 /* GameMode */; };
 		A6B689CC287D4FC900D3C860 /* GameState in Frameworks */ = {isa = PBXBuildFile; productRef = A6B689CB287D4FC900D3C860 /* GameState */; };
+		A6D8EB4128811FB0001ABF78 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8EB4028811FB0001ABF78 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +63,7 @@
 		A6326C2B287C7E2600E714CE /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A6B689C3287CB65C00D3C860 /* GameMode */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GameMode; sourceTree = "<group>"; };
 		A6B689C4287CB66800D3C860 /* GameState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GameState; sourceTree = "<group>"; };
+		A6D8EB4028811FB0001ABF78 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 		A6326BD9287C7D8F00E714CE = {
 			isa = PBXGroup;
 			children = (
+				A6D8EB3F28811FA7001ABF78 /* iOS */,
 				A6B689C2287CB65C00D3C860 /* Packages */,
 				A6326C40287C7EC300E714CE /* Frameworks */,
 				A6326BED287C7D9200E714CE /* macOS */,
@@ -138,6 +140,7 @@
 			children = (
 				A6326BEE287C7D9200E714CE /* macOS.entitlements */,
 				A6326C2A287C7E2600E714CE /* MainWindowDelegate.swift */,
+				A6326C2B287C7E2600E714CE /* MainView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -190,7 +193,6 @@
 		A6326C28287C7E2600E714CE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A6326C2B287C7E2600E714CE /* MainView.swift */,
 				A6326C29287C7E2600E714CE /* MyApp.swift */,
 			);
 			path = Sources;
@@ -210,6 +212,14 @@
 				A6B689C4287CB66800D3C860 /* GameState */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		A6D8EB3F28811FA7001ABF78 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A6D8EB4028811FB0001ABF78 /* MainView.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6326C3C287C7E2700E714CE /* MainView.swift in Sources */,
+				A6D8EB4128811FB0001ABF78 /* MainView.swift in Sources */,
 				A6326C38287C7E2700E714CE /* MyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

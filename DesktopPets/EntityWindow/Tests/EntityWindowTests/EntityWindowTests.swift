@@ -21,8 +21,7 @@ class EntityWindowTests: XCTestCase {
         
         habitat = LiveEnvironment(
             id: "test",
-            bounds: CGRect(size: .init(square: 1000)),
-            safeAreaInsets: .init()
+            bounds: CGRect(size: .init(square: 1000))
         )
         entity = Entity(
             id: "test",

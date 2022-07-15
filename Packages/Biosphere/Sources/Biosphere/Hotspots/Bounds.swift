@@ -14,7 +14,7 @@ extension Environment {
             id: Hotspot.bottomBound.rawValue,
             frame: CGRect(
                 x: -boundsThickness,
-                y: bounds.height - safeAreaInsets.bottom,
+                y: bounds.maxY,
                 width: bounds.width + boundsThickness*2,
                 height: boundsThickness
             ),
@@ -29,7 +29,7 @@ extension Environment {
             id: Hotspot.topBound.rawValue,
             frame: CGRect(
                 x: -boundsThickness,
-                y: -boundsThickness + safeAreaInsets.top,
+                y: bounds.minY - boundsThickness,
                 width: bounds.width + boundsThickness*2,
                 height: boundsThickness
             ),
@@ -43,10 +43,10 @@ extension Environment {
         let entity = Entity(
             id: Hotspot.leftBound.rawValue,
             frame: CGRect(
-                x: 0 - boundsThickness - boundDistanceAfterScreenEnd + safeAreaInsets.leading,
-                y: 0,
+                x: bounds.minX - boundsThickness - boundDistanceAfterScreenEnd,
+                y: -boundsThickness,
                 width: boundsThickness,
-                height: bounds.height
+                height: bounds.height + boundsThickness*2
             ),
             in: bounds
         )
@@ -58,10 +58,10 @@ extension Environment {
         let entity = Entity(
             id: Hotspot.rightBound.rawValue,
             frame: CGRect(
-                x: bounds.width + boundDistanceAfterScreenEnd - safeAreaInsets.trailing,
-                y: 0,
+                x: bounds.maxX + boundDistanceAfterScreenEnd,
+                y: -boundsThickness,
                 width: boundsThickness,
-                height: bounds.height
+                height: bounds.height + boundsThickness*2
             ),
             in: bounds
         )

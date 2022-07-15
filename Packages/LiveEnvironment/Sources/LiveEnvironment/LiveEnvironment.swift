@@ -21,11 +21,11 @@ open class LiveEnvironment: ObservableObject {
         
     let fps: Double = 15
     
-    public init(id: String, bounds: CGRect, safeAreaInsets: EdgeInsets) {
+    public init(id: String, bounds: CGRect) {
         self.id = id
         self.tag = "Habitat-\(id)"
         lastUpdate = Date.timeIntervalSinceReferenceDate
-        state = Environment(bounds: bounds, safeAreaInsets: safeAreaInsets)
+        state = Environment(bounds: bounds)
         startRendering()
     }
     
@@ -51,8 +51,8 @@ open class LiveEnvironment: ObservableObject {
         timer = nil
     }
     
-    open func set(bounds: CGRect, safeAreaInsets: EdgeInsets) {
-        state.set(bounds: bounds, safeAreaInsets: safeAreaInsets)
+    open func set(bounds: CGRect) {
+        state.set(bounds: bounds)
     }
     
     open func kill(animated: Bool) {

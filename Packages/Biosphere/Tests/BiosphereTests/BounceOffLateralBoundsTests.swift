@@ -9,8 +9,7 @@ import XCTest
 class BounceOffLateralBoundsTests: XCTestCase {
     
     private let testEnv = Environment(
-        bounds: CGRect(x: 0, y: 0, width: 100, height: 100),
-        safeAreaInsets: .init()
+        bounds: CGRect(x: 0, y: 0, width: 100, height: 100)
     )
     
     private lazy var testRightBound = { testEnv.rightBound() }()

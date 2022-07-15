@@ -20,6 +20,7 @@ class MainWindowDelegate: NSObject, NSWindowDelegate {
         window.delegate = delegate
         window.toggleFullScreen(window)
         window.styleMask.remove(.resizable)
+        window.styleMask.remove(.fullScreen)
         MainWindowDelegate.instance = delegate
         GameState.global.mainWindowSize = window.frame.size
     }
