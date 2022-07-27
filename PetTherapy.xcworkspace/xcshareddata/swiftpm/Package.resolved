@@ -100,6 +100,15 @@
       }
     },
     {
+      "identity" : "onwindow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/OnWindow",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7ab5f4dde82f3a6ac53b7514af9febcd43795f62"
+      }
+    },
+    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",

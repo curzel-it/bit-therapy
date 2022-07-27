@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E3CD2752891B764007BB24B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1E3CD2742891B764007BB24B /* OnWindow */; };
+		1E9873B6289184FC00C0DBE2 /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1E9873B5289184FC00C0DBE2 /* OnWindow */; };
 		A6326C2C287C7E2700E714CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6326C1E287C7E2600E714CE /* Localizable.strings */; };
 		A6326C2D287C7E2700E714CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6326C1E287C7E2600E714CE /* Localizable.strings */; };
 		A6326C2E287C7E2700E714CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6326C21287C7E2600E714CE /* Assets.xcassets */; };
@@ -72,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6B689C6287D4FBF00D3C860 /* GameMode in Frameworks */,
+				1E3CD2752891B764007BB24B /* OnWindow in Frameworks */,
 				A6326C64287C7EDC00E714CE /* Schwifty in Frameworks */,
 				A6326C62287C7EDC00E714CE /* PetsAssets in Frameworks */,
 				A6326C60287C7EDC00E714CE /* Pets in Frameworks */,
@@ -79,6 +82,7 @@
 				A6326C54287C7EDC00E714CE /* Biosphere in Frameworks */,
 				A6326C68287C7EDC00E714CE /* Squanch in Frameworks */,
 				A6326C5E287C7EDC00E714CE /* LiveEnvironment in Frameworks */,
+				1E9873B6289184FC00C0DBE2 /* OnWindow in Frameworks */,
 				A6326C56287C7EDC00E714CE /* DesignSystem in Frameworks */,
 				A6326C66287C7EDC00E714CE /* Sprites in Frameworks */,
 			);
@@ -229,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6326C0F287C7D9200E714CE /* Build configuration list for PBXNativeTarget "Game (iOS)" */;
 			buildPhases = (
+				1EDBC2BF2891BCBA00A8D37B /* SwiftLint */,
 				A6326BE2287C7D9100E714CE /* Sources */,
 				A6326BE3287C7D9100E714CE /* Frameworks */,
 				A6326BE4287C7D9100E714CE /* Resources */,
@@ -249,6 +254,8 @@
 				A6326C67287C7EDC00E714CE /* Squanch */,
 				A6B689C5287D4FBF00D3C860 /* GameMode */,
 				A6B689C7287D4FBF00D3C860 /* GameState */,
+				1E9873B5289184FC00C0DBE2 /* OnWindow */,
+				1E3CD2742891B764007BB24B /* OnWindow */,
 			);
 			productName = "Game (iOS)";
 			productReference = A6326BE6287C7D9100E714CE /* Game.app */;
@@ -258,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6326C12287C7D9200E714CE /* Build configuration list for PBXNativeTarget "Game (macOS)" */;
 			buildPhases = (
+				1EDBC2C02891BCC700A8D37B /* SwiftLint */,
 				A6326BE8287C7D9200E714CE /* Sources */,
 				A6326BE9287C7D9200E714CE /* Frameworks */,
 				A6326BEA287C7D9200E714CE /* Resources */,
@@ -311,6 +319,9 @@
 				it,
 			);
 			mainGroup = A6326BD9287C7D8F00E714CE;
+			packageReferences = (
+				1E3CD2732891B764007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
+			);
 			productRefGroup = A6326BE7287C7D9100E714CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,6 +360,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EDBC2BF2891BCBA00A8D37B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint --path \"$SRCROOT\"/.. --config \"$SRCROOT\"/../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		1EDBC2C02891BCC700A8D37B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint --path \"$SRCROOT\"/.. --config \"$SRCROOT\"/../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A6326BE2287C7D9100E714CE /* Sources */ = {
@@ -643,7 +693,27 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		1E3CD2732891B764007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/OnWindow";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		1E3CD2742891B764007BB24B /* OnWindow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E3CD2732891B764007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */;
+			productName = OnWindow;
+		};
+		1E9873B5289184FC00C0DBE2 /* OnWindow */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OnWindow;
+		};
 		A6326C47287C7EC300E714CE /* LiveEnvironment */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LiveEnvironment;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
+		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		A63AC7AB2874766200A9F738 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AA2874766200A9F738 /* AppState */; };
 		A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AC2874766200A9F738 /* Biosphere */; };
 		A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B02874766200A9F738 /* EntityWindow */; };
@@ -135,6 +137,7 @@
 				A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */,
 				A63AC7B92874766200A9F738 /* OnScreen in Frameworks */,
 				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
+				1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */,
 				A63AC7B32874766200A9F738 /* HabitatWindows in Frameworks */,
 				A63AC7AB2874766200A9F738 /* AppState in Frameworks */,
 			);
@@ -164,6 +167,7 @@
 				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
+				1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */,
 				A63AC7D12874768400A9F738 /* HabitatWindows in Frameworks */,
 				A63AC7C92874768400A9F738 /* AppState in Frameworks */,
 			);
@@ -402,6 +406,7 @@
 				A63AC7C42874766200A9F738 /* UfoAbduction */,
 				A63AC7C62874766C00A9F738 /* LaunchAtLogin */,
 				A63AC7E6287479A800A9F738 /* DesignSystem */,
+				1EDBC2C32891BD3200A8D37B /* OnWindow */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1928746D2E00D695EA /* DesktopPets.app */;
@@ -457,6 +462,7 @@
 				A63AC7E22874768400A9F738 /* UfoAbduction */,
 				A63AC7E42874768400A9F738 /* LaunchAtLogin */,
 				A63AC7E8287479AD00A9F738 /* DesignSystem */,
+				1EDBC2C12891BD2C00A8D37B /* OnWindow */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -492,6 +498,7 @@
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
 				A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+				1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -577,7 +584,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint lint --path \"$SRCROOT\"/.. --config \"$SRCROOT\"/../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint \"$SRCROOT\"/.. --config \"$SRCROOT\"/../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		A6E5AAC22860525A008AA653 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -595,7 +602,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint lint --path \"$SRCROOT\"/.. --config \"$SRCROOT\"/../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint \"$SRCROOT\"/.. --config \"$SRCROOT\"/../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		A6E5B59B2860525A008AA653 /* Launch at Login Helper */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -999,6 +1006,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/OnWindow";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
@@ -1010,6 +1025,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1EDBC2C12891BD2C00A8D37B /* OnWindow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */;
+			productName = OnWindow;
+		};
+		1EDBC2C32891BD3200A8D37B /* OnWindow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */;
+			productName = OnWindow;
+		};
 		A63AC7AA2874766200A9F738 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppState;
