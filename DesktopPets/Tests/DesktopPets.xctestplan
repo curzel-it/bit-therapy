@@ -75,13 +75,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/Schwifty",
-        "identifier" : "SchwiftyTests",
-        "name" : "SchwiftyTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/Squanch",
         "identifier" : "SquanchTests",
         "name" : "SquanchTests"

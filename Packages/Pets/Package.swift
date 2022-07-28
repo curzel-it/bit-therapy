@@ -15,7 +15,7 @@ let package = Package(
         .package(path: "../Biosphere"),
         .package(path: "../DesignSystem"),
         .package(path: "../PetsAssets"),
-        .package(path: "../Schwifty"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.0"),
         .package(path: "../Sprites"),
         .package(path: "../Squanch")
     ],

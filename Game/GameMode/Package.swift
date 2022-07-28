@@ -18,7 +18,7 @@ let package = Package(
         .package(path: "../../LiveEnvironment"),
         .package(path: "../../Pets"),
         .package(path: "../../PetsAssets"),
-        .package(path: "../../Schwifty"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.0"),
         .package(path: "../../Squanch")
     ],
     targets: [

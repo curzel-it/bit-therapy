@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Squanch"),
-        .package(path: "../Schwifty")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.0")
     ],
     targets: [
         .target(

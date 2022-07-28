@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E3CD2752891B764007BB24B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1E3CD2742891B764007BB24B /* OnWindow */; };
 		1E9873B6289184FC00C0DBE2 /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1E9873B5289184FC00C0DBE2 /* OnWindow */; };
+		1EE264032892867D00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264022892867D00771170 /* Schwifty */; };
+		1EE264052892868300771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264042892868300771170 /* Schwifty */; };
 		A6326C2C287C7E2700E714CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6326C1E287C7E2600E714CE /* Localizable.strings */; };
 		A6326C2D287C7E2700E714CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6326C1E287C7E2600E714CE /* Localizable.strings */; };
 		A6326C2E287C7E2700E714CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6326C21287C7E2600E714CE /* Assets.xcassets */; };
@@ -28,7 +30,6 @@
 		A6326C48287C7EC300E714CE /* LiveEnvironment in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C47287C7EC300E714CE /* LiveEnvironment */; };
 		A6326C4A287C7EC300E714CE /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C49287C7EC300E714CE /* Pets */; };
 		A6326C4C287C7EC300E714CE /* PetsAssets in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C4B287C7EC300E714CE /* PetsAssets */; };
-		A6326C4E287C7EC300E714CE /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C4D287C7EC300E714CE /* Schwifty */; };
 		A6326C50287C7EC300E714CE /* Sprites in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C4F287C7EC300E714CE /* Sprites */; };
 		A6326C52287C7EC300E714CE /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C51287C7EC300E714CE /* Squanch */; };
 		A6326C54287C7EDC00E714CE /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C53287C7EDC00E714CE /* Biosphere */; };
@@ -36,7 +37,6 @@
 		A6326C5E287C7EDC00E714CE /* LiveEnvironment in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C5D287C7EDC00E714CE /* LiveEnvironment */; };
 		A6326C60287C7EDC00E714CE /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C5F287C7EDC00E714CE /* Pets */; };
 		A6326C62287C7EDC00E714CE /* PetsAssets in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C61287C7EDC00E714CE /* PetsAssets */; };
-		A6326C64287C7EDC00E714CE /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C63287C7EDC00E714CE /* Schwifty */; };
 		A6326C66287C7EDC00E714CE /* Sprites in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C65287C7EDC00E714CE /* Sprites */; };
 		A6326C68287C7EDC00E714CE /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C67287C7EDC00E714CE /* Squanch */; };
 		A6326C6A287C7EE100E714CE /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A6326C69287C7EE100E714CE /* Biosphere */; };
@@ -75,7 +75,6 @@
 			files = (
 				A6B689C6287D4FBF00D3C860 /* GameMode in Frameworks */,
 				1E3CD2752891B764007BB24B /* OnWindow in Frameworks */,
-				A6326C64287C7EDC00E714CE /* Schwifty in Frameworks */,
 				A6326C62287C7EDC00E714CE /* PetsAssets in Frameworks */,
 				A6326C60287C7EDC00E714CE /* Pets in Frameworks */,
 				A6B689C8287D4FBF00D3C860 /* GameState in Frameworks */,
@@ -83,6 +82,7 @@
 				A6326C68287C7EDC00E714CE /* Squanch in Frameworks */,
 				A6326C5E287C7EDC00E714CE /* LiveEnvironment in Frameworks */,
 				1E9873B6289184FC00C0DBE2 /* OnWindow in Frameworks */,
+				1EE264032892867D00771170 /* Schwifty in Frameworks */,
 				A6326C56287C7EDC00E714CE /* DesignSystem in Frameworks */,
 				A6326C66287C7EDC00E714CE /* Sprites in Frameworks */,
 			);
@@ -93,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6B689CA287D4FC900D3C860 /* GameMode in Frameworks */,
+				1EE264052892868300771170 /* Schwifty in Frameworks */,
 				A6326C6A287C7EE100E714CE /* Biosphere in Frameworks */,
 				A6326C52287C7EC300E714CE /* Squanch in Frameworks */,
 				A6326C48287C7EC300E714CE /* LiveEnvironment in Frameworks */,
@@ -100,7 +101,6 @@
 				A6326C50287C7EC300E714CE /* Sprites in Frameworks */,
 				A6326C4A287C7EC300E714CE /* Pets in Frameworks */,
 				A6326C4C287C7EC300E714CE /* PetsAssets in Frameworks */,
-				A6326C4E287C7EC300E714CE /* Schwifty in Frameworks */,
 				A6326C6C287C7EE100E714CE /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,13 +249,13 @@
 				A6326C5D287C7EDC00E714CE /* LiveEnvironment */,
 				A6326C5F287C7EDC00E714CE /* Pets */,
 				A6326C61287C7EDC00E714CE /* PetsAssets */,
-				A6326C63287C7EDC00E714CE /* Schwifty */,
 				A6326C65287C7EDC00E714CE /* Sprites */,
 				A6326C67287C7EDC00E714CE /* Squanch */,
 				A6B689C5287D4FBF00D3C860 /* GameMode */,
 				A6B689C7287D4FBF00D3C860 /* GameState */,
 				1E9873B5289184FC00C0DBE2 /* OnWindow */,
 				1E3CD2742891B764007BB24B /* OnWindow */,
+				1EE264022892867D00771170 /* Schwifty */,
 			);
 			productName = "Game (iOS)";
 			productReference = A6326BE6287C7D9100E714CE /* Game.app */;
@@ -279,13 +279,13 @@
 				A6326C47287C7EC300E714CE /* LiveEnvironment */,
 				A6326C49287C7EC300E714CE /* Pets */,
 				A6326C4B287C7EC300E714CE /* PetsAssets */,
-				A6326C4D287C7EC300E714CE /* Schwifty */,
 				A6326C4F287C7EC300E714CE /* Sprites */,
 				A6326C51287C7EC300E714CE /* Squanch */,
 				A6326C69287C7EE100E714CE /* Biosphere */,
 				A6326C6B287C7EE100E714CE /* DesignSystem */,
 				A6B689C9287D4FC900D3C860 /* GameMode */,
 				A6B689CB287D4FC900D3C860 /* GameState */,
+				1EE264042892868300771170 /* Schwifty */,
 			);
 			productName = "Game (macOS)";
 			productReference = A6326BEC287C7D9200E714CE /* Game.app */;
@@ -321,6 +321,7 @@
 			mainGroup = A6326BD9287C7D8F00E714CE;
 			packageReferences = (
 				1E3CD2732891B764007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
+				1EE263FD289285E700771170 /* XCRemoteSwiftPackageReference "schwifty" */,
 			);
 			productRefGroup = A6326BE7287C7D9100E714CE /* Products */;
 			projectDirPath = "";
@@ -702,6 +703,14 @@
 				kind = branch;
 			};
 		};
+		1EE263FD289285E700771170 /* XCRemoteSwiftPackageReference "schwifty" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/schwifty";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -714,6 +723,16 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = OnWindow;
 		};
+		1EE264022892867D00771170 /* Schwifty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EE263FD289285E700771170 /* XCRemoteSwiftPackageReference "schwifty" */;
+			productName = Schwifty;
+		};
+		1EE264042892868300771170 /* Schwifty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EE263FD289285E700771170 /* XCRemoteSwiftPackageReference "schwifty" */;
+			productName = Schwifty;
+		};
 		A6326C47287C7EC300E714CE /* LiveEnvironment */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LiveEnvironment;
@@ -725,10 +744,6 @@
 		A6326C4B287C7EC300E714CE /* PetsAssets */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PetsAssets;
-		};
-		A6326C4D287C7EC300E714CE /* Schwifty */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Schwifty;
 		};
 		A6326C4F287C7EC300E714CE /* Sprites */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -757,10 +772,6 @@
 		A6326C61287C7EDC00E714CE /* PetsAssets */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PetsAssets;
-		};
-		A6326C63287C7EDC00E714CE /* Schwifty */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Schwifty;
 		};
 		A6326C65287C7EDC00E714CE /* Sprites */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -127,6 +127,15 @@
       }
     },
     {
+      "identity" : "schwifty",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/schwifty",
+      "state" : {
+        "branch" : "main",
+        "revision" : "98dd73dfe33f695d1eed66d542e90e5fddeab1c8"
+      }
+    },
+    {
       "identity" : "swift-protobuf",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",
