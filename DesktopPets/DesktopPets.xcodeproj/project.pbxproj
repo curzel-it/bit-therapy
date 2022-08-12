@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E75D80628A67D1000DC0165 /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E75D80528A67D1000DC0165 /* WindowsDetector */; };
+		1E75D80828A67D2700DC0165 /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E75D80728A67D2700DC0165 /* WindowsDetector */; };
 		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
-		A63AC7AB2874766200A9F738 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AA2874766200A9F738 /* AppState */; };
+		1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7728A51BBF00BCBBD4 /* AppState */; };
+		1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7928A51BBF00BCBBD4 /* Lang */; };
+		1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7B28A51BBF00BCBBD4 /* Squanch */; };
 		A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AC2874766200A9F738 /* Biosphere */; };
 		A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B02874766200A9F738 /* EntityWindow */; };
 		A63AC7B32874766200A9F738 /* HabitatWindows in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B22874766200A9F738 /* HabitatWindows */; };
 		A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B42874766200A9F738 /* InAppPurchases */; };
-		A63AC7B72874766200A9F738 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B62874766200A9F738 /* Lang */; };
 		A63AC7B92874766200A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B82874766200A9F738 /* OnScreen */; };
 		A63AC7BB2874766200A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BA2874766200A9F738 /* Pets */; };
 		A63AC7BD2874766200A9F738 /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BC2874766200A9F738 /* PetSelection */; };
-		A63AC7C12874766200A9F738 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C02874766200A9F738 /* Squanch */; };
 		A63AC7C32874766200A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C22874766200A9F738 /* Tracking */; };
 		A63AC7C52874766200A9F738 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C42874766200A9F738 /* UfoAbduction */; };
 		A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C62874766C00A9F738 /* LaunchAtLogin */; };
@@ -128,18 +130,19 @@
 				A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */,
 				A63AC7BD2874766200A9F738 /* PetSelection in Frameworks */,
 				A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */,
+				1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */,
 				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
-				A63AC7B72874766200A9F738 /* Lang in Frameworks */,
-				A63AC7C12874766200A9F738 /* Squanch in Frameworks */,
 				A63AC7C52874766200A9F738 /* UfoAbduction in Frameworks */,
 				A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */,
 				1EE263FF2892866A00771170 /* Schwifty in Frameworks */,
 				A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */,
+				1E75D80628A67D1000DC0165 /* WindowsDetector in Frameworks */,
+				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
 				A63AC7B92874766200A9F738 /* OnScreen in Frameworks */,
 				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
 				1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */,
+				1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */,
 				A63AC7B32874766200A9F738 /* HabitatWindows in Frameworks */,
-				A63AC7AB2874766200A9F738 /* AppState in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +167,7 @@
 				A63AC7E32874768400A9F738 /* UfoAbduction in Frameworks */,
 				A63AC7CF2874768400A9F738 /* EntityWindow in Frameworks */,
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
+				1E75D80828A67D2700DC0165 /* WindowsDetector in Frameworks */,
 				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
@@ -391,22 +395,23 @@
 			);
 			name = "Desktop Pets Dev";
 			packageProductDependencies = (
-				A63AC7AA2874766200A9F738 /* AppState */,
 				A63AC7AC2874766200A9F738 /* Biosphere */,
 				A63AC7B02874766200A9F738 /* EntityWindow */,
 				A63AC7B22874766200A9F738 /* HabitatWindows */,
 				A63AC7B42874766200A9F738 /* InAppPurchases */,
-				A63AC7B62874766200A9F738 /* Lang */,
 				A63AC7B82874766200A9F738 /* OnScreen */,
 				A63AC7BA2874766200A9F738 /* Pets */,
 				A63AC7BC2874766200A9F738 /* PetSelection */,
-				A63AC7C02874766200A9F738 /* Squanch */,
 				A63AC7C22874766200A9F738 /* Tracking */,
 				A63AC7C42874766200A9F738 /* UfoAbduction */,
 				A63AC7C62874766C00A9F738 /* LaunchAtLogin */,
 				A63AC7E6287479A800A9F738 /* DesignSystem */,
 				1EDBC2C32891BD3200A8D37B /* OnWindow */,
 				1EE263FE2892866A00771170 /* Schwifty */,
+				1EF5CF7728A51BBF00BCBBD4 /* AppState */,
+				1EF5CF7928A51BBF00BCBBD4 /* Lang */,
+				1EF5CF7B28A51BBF00BCBBD4 /* Squanch */,
+				1E75D80528A67D1000DC0165 /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1928746D2E00D695EA /* DesktopPets.app */;
@@ -463,6 +468,7 @@
 				A63AC7E8287479AD00A9F738 /* DesignSystem */,
 				1EDBC2C12891BD2C00A8D37B /* OnWindow */,
 				1EE264002892866E00771170 /* Schwifty */,
+				1E75D80728A67D2700DC0165 /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -480,6 +486,7 @@
 				TargetAttributes = {
 					A65FE35C283D80C900D1F5C8 = {
 						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
 					};
 					A65FE36D283D80CB00D1F5C8 = {
 						CreatedOnToolsVersion = 13.4;
@@ -500,6 +507,7 @@
 				A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
 				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
+				1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -808,6 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -831,6 +840,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.dev;
 				PRODUCT_NAME = DesktopPets;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -840,6 +851,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -863,6 +875,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.dev;
 				PRODUCT_NAME = DesktopPets;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1015,6 +1028,14 @@
 				kind = branch;
 			};
 		};
+		1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/WindowsDetector";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/schwifty";
@@ -1034,6 +1055,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E75D80528A67D1000DC0165 /* WindowsDetector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */;
+			productName = WindowsDetector;
+		};
+		1E75D80728A67D2700DC0165 /* WindowsDetector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */;
+			productName = WindowsDetector;
+		};
 		1EDBC2C12891BD2C00A8D37B /* OnWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */;
@@ -1054,9 +1085,17 @@
 			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
 		};
-		A63AC7AA2874766200A9F738 /* AppState */ = {
+		1EF5CF7728A51BBF00BCBBD4 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppState;
+		};
+		1EF5CF7928A51BBF00BCBBD4 /* Lang */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Lang;
+		};
+		1EF5CF7B28A51BBF00BCBBD4 /* Squanch */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Squanch;
 		};
 		A63AC7AC2874766200A9F738 /* Biosphere */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1074,10 +1113,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = InAppPurchases;
 		};
-		A63AC7B62874766200A9F738 /* Lang */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Lang;
-		};
 		A63AC7B82874766200A9F738 /* OnScreen */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = OnScreen;
@@ -1089,10 +1124,6 @@
 		A63AC7BC2874766200A9F738 /* PetSelection */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PetSelection;
-		};
-		A63AC7C02874766200A9F738 /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Squanch;
 		};
 		A63AC7C22874766200A9F738 /* Tracking */ = {
 			isa = XCSwiftPackageProductDependency;

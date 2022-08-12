@@ -143,6 +143,15 @@
         "revision" : "e1499bc69b9040b29184f7f2996f7bab467c1639",
         "version" : "1.19.0"
       }
+    },
+    {
+      "identity" : "windowsdetector",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/WindowsDetector",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9c55a4847ef052249d621fda539bc8cc38dcda6b"
+      }
     }
   ],
   "version" : 2

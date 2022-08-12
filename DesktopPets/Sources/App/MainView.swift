@@ -7,8 +7,8 @@ import DesignSystem
 import Lang
 import OnWindow
 import PetSelection
-import SwiftUI
 import Schwifty
+import SwiftUI
 
 struct MainView: View {
     
