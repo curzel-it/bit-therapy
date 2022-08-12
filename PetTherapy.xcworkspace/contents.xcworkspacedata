@@ -5,13 +5,13 @@
       location = "group:DesktopPets/DesktopPets.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Game/Game.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:LICENSE.md">
    </FileRef>
    <FileRef
       location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/AppState">
    </FileRef>
    <FileRef
       location = "group:Packages/Biosphere">
@@ -20,7 +20,22 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
+      location = "group:Packages/EntityWindow">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/HabitatWindows">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/InAppPurchases">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Lang">
+   </FileRef>
+   <FileRef
       location = "group:Packages/LiveEnvironment">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/OnScreen">
    </FileRef>
    <FileRef
       location = "group:Packages/Pets">
@@ -29,9 +44,18 @@
       location = "group:Packages/PetsAssets">
    </FileRef>
    <FileRef
+      location = "group:Packages/PetSelection">
+   </FileRef>
+   <FileRef
       location = "group:Packages/Sprites">
    </FileRef>
    <FileRef
       location = "group:Packages/Squanch">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Tracking">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/UfoAbduction">
    </FileRef>
 </Workspace>

@@ -91,7 +91,6 @@
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6B689C1287CB5D300D3C860 /* Lang */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Lang; sourceTree = "<group>"; };
 		A6FB7D4428740F8E00AB872E /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		A6FB7D4628740F8E00AB872E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6FB7D4728740F8E00AB872E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -111,14 +110,6 @@
 		A6FB7D5C28740F8E00AB872E /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		A6FB7D8928740F9A00AB872E /* DesktopPets.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DesktopPets.xctestplan; sourceTree = "<group>"; };
 		A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopPetsTests.swift; sourceTree = "<group>"; };
-		A6FB7D982874105500AB872E /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
-		A6FB7D992874105C00AB872E /* InAppPurchases */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InAppPurchases; sourceTree = "<group>"; };
-		A6FB7D9B2874106B00AB872E /* PetSelection */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PetSelection; sourceTree = "<group>"; };
-		A6FB7D9C2874107E00AB872E /* Tracking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Tracking; sourceTree = "<group>"; };
-		A6FB7D9D2874108600AB872E /* UfoAbduction */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UfoAbduction; sourceTree = "<group>"; };
-		A6FBB4C7287411AF00AB872E /* EntityWindow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EntityWindow; sourceTree = "<group>"; };
-		A6FBB4C8287411AF00AB872E /* HabitatWindows */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HabitatWindows; sourceTree = "<group>"; };
-		A6FBB4C9287411AF00AB872E /* OnScreen */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = OnScreen; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +185,6 @@
 				A66B2C1B28746D2E00D695EA /* Desktop Pets.app */,
 				A66B2C1928746D2E00D695EA /* DesktopPets.app */,
 				A63AC7942874739100A9F738 /* Frameworks */,
-				A6FB7D8D28740FC600AB872E /* Packages */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
 				A6FB7D8828740F9A00AB872E /* Tests */,
@@ -358,22 +348,6 @@
 				A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		A6FB7D8D28740FC600AB872E /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				A6FB7D982874105500AB872E /* AppState */,
-				A6FBB4C7287411AF00AB872E /* EntityWindow */,
-				A6FBB4C8287411AF00AB872E /* HabitatWindows */,
-				A6FB7D992874105C00AB872E /* InAppPurchases */,
-				A6B689C1287CB5D300D3C860 /* Lang */,
-				A6FBB4C9287411AF00AB872E /* OnScreen */,
-				A6FB7D9B2874106B00AB872E /* PetSelection */,
-				A6FB7D9C2874107E00AB872E /* Tracking */,
-				A6FB7D9D2874108600AB872E /* UfoAbduction */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
