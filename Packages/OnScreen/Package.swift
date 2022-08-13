@@ -19,8 +19,9 @@ let package = Package(
         .package(path: "../Biosphere"),
         .package(path: "../LiveEnvironment"),
         .package(path: "../Pets"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.0"),
-        .package(path: "../Squanch")
+        .package(path: "../Squanch"),
+        .package(url: "https://github.com/curzel-it/Schwifty", from: "1.0.0"),
+        .package(url: "https://github.com/curzel-it/WindowsDetector", from: "1.0.0")
     ],
     targets: [
         .target(
@@ -34,7 +35,8 @@ let package = Package(
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch"),
-                .product(name: "UfoAbduction", package: "UfoAbduction")
+                .product(name: "UfoAbduction", package: "UfoAbduction"),
+                .product(name: "WindowsDetector", package: "WindowsDetector")
             ]
         ),
         .testTarget(

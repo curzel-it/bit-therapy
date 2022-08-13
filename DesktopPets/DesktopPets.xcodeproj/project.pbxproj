@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E75D80628A67D1000DC0165 /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E75D80528A67D1000DC0165 /* WindowsDetector */; };
-		1E75D80828A67D2700DC0165 /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E75D80728A67D2700DC0165 /* WindowsDetector */; };
 		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
@@ -127,7 +125,6 @@
 				A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */,
 				1EE263FF2892866A00771170 /* Schwifty in Frameworks */,
 				A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */,
-				1E75D80628A67D1000DC0165 /* WindowsDetector in Frameworks */,
 				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
 				A63AC7B92874766200A9F738 /* OnScreen in Frameworks */,
 				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
@@ -158,7 +155,6 @@
 				A63AC7E32874768400A9F738 /* UfoAbduction in Frameworks */,
 				A63AC7CF2874768400A9F738 /* EntityWindow in Frameworks */,
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
-				1E75D80828A67D2700DC0165 /* WindowsDetector in Frameworks */,
 				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
@@ -385,7 +381,6 @@
 				1EF5CF7728A51BBF00BCBBD4 /* AppState */,
 				1EF5CF7928A51BBF00BCBBD4 /* Lang */,
 				1EF5CF7B28A51BBF00BCBBD4 /* Squanch */,
-				1E75D80528A67D1000DC0165 /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1928746D2E00D695EA /* DesktopPets.app */;
@@ -442,7 +437,6 @@
 				A63AC7E8287479AD00A9F738 /* DesignSystem */,
 				1EDBC2C12891BD2C00A8D37B /* OnWindow */,
 				1EE264002892866E00771170 /* Schwifty */,
-				1E75D80728A67D2700DC0165 /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -1029,16 +1023,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1E75D80528A67D1000DC0165 /* WindowsDetector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */;
-			productName = WindowsDetector;
-		};
-		1E75D80728A67D2700DC0165 /* WindowsDetector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */;
-			productName = WindowsDetector;
-		};
 		1EDBC2C12891BD2C00A8D37B /* OnWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */;

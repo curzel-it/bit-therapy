@@ -17,6 +17,8 @@ public class AppState: ObservableObject {
     
     @Published public var mainWindowFocused: Bool = true
     
+    @AppStorage("windowsAreObstacles") public var windowsAreObstacles: Bool = false
+    
     @AppStorage("petId") public var selectedPet: String = "sloth"
     
     @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
