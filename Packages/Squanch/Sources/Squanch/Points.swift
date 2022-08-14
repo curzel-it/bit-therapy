@@ -13,6 +13,17 @@ extension CGPoint {
     }
 }
 
+// MARK: - Angles
+
+extension CGPoint {
+    
+    public func angle(to other: CGPoint) -> CGFloat {
+        let rad = atan2(other.y - y, other.x - x)
+        if rad >= 0 { return rad }
+        return rad + 2 * .pi
+    }
+}
+
 // MARK: - Offset
 
 extension CGPoint {
@@ -27,6 +38,21 @@ extension CGPoint {
     
     public func offset(x: CGFloat=0, y: CGFloat=0) -> CGPoint {
         return CGPoint(x: self.x + x, y: self.y + y)
+    }
+}
+
+// MARK: - Points on Rect
+
+extension CGPoint {
+    
+    public func isOnEdge(of rect: CGRect) -> Bool {
+        if x == rect.minX || x == rect.maxX {
+            return rect.minY <= y && y <= rect.maxY
+        }
+        if y == rect.minY || y == rect.maxY {
+            return rect.minX <= x && x <= rect.maxX
+        }
+        return false
     }
 }
 

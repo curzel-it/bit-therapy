@@ -32,7 +32,8 @@ extension CGVector {
     
     public var radians: CGFloat {
         let rad = atan2(dy, dx)
-        return rad >= 0 ? rad : CGFloat.pi - rad
+        if rad >= 0 { return rad }
+        return rad + 2 * .pi
     }
     
     public init(radians: CGFloat) {

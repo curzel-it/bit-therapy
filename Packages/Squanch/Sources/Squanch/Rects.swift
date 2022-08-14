@@ -15,6 +15,10 @@ extension CGRect {
     public var bottomRight: CGPoint { CGPoint(x: maxX, y: maxY) }
     public var centerBottom: CGPoint { CGPoint(x: midX, y: maxY) }
     public var bottomLeft: CGPoint { CGPoint(x: minX, y: maxY) }
+    
+    public var corners: [CGPoint] {
+        [topLeft, topRight, bottomLeft, bottomRight]        
+    }
 }
 
 // MARK: - Init
@@ -53,6 +57,21 @@ extension CGRect {
             origin: origin.offset(x: x, y: y),
             size: size
         )
+    }
+}
+
+// MARK: - Contains Points
+
+extension CGRect {
+    
+    public func contains(anyOf points: [CGPoint]) -> Bool {
+        guard points.count > 0 else { return false }
+        return points.first { contains($0) } != nil
+    }
+    
+    public func contains(allOf points: [CGPoint]) -> Bool {
+        guard points.count > 0 else { return true }
+        return points.first { !contains($0) } == nil
     }
 }
 

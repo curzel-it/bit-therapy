@@ -22,7 +22,7 @@ open class Gravity: Capability {
     }
     
     open func groundCollision(from collisions: Collisions) -> Collision? {
-        collisions.with(.bottomBound)
+        collisions.first { $0.hotspot == .bottomBound }
     }
     
     @discardableResult

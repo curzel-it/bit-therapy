@@ -119,4 +119,84 @@ class CollisionsTests: XCTestCase {
         let collision = entity1.collision(with: entity2)
         XCTAssertTrue(collision?.isEphemeral ?? false)
     }
+    
+    func testSidesDetectedWhenSameHeightObjectPerfectlyCollidesOnRight() {
+        let entity1 = Entity(
+            id: "entity1",
+            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            in: testBounds
+        )
+        let entity2 = Entity(
+            id: "entity2",
+            frame: CGRect(x: 0.9, y: 0, width: 1, height: 1),
+            in: testBounds
+        )
+        let collision = entity1.collision(with: entity2)
+        let sides = collision?.sides() ?? []
+        XCTAssertEqual(sides, [.top, .right, .bottom])
+    }
+    
+    func testSidesDetectedWhenSmallerCollidesOnRight() {
+        let entity1 = Entity(
+            id: "entity1",
+            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            in: testBounds
+        )
+        let entity2 = Entity(
+            id: "entity2",
+            frame: CGRect(x: 0.9, y: 0.25, width: 1, height: 0.5),
+            in: testBounds
+        )
+        let collision = entity1.collision(with: entity2)
+        let sides = collision?.sides() ?? []
+        XCTAssertEqual(sides, [.right])
+    }
+    
+    func testSidesDetectedWhenLargerCollidesOnRight() {
+        let entity1 = Entity(
+            id: "entity1",
+            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            in: testBounds
+        )
+        let entity2 = Entity(
+            id: "entity2",
+            frame: CGRect(x: 0.9, y: -1, width: 1, height: 3),
+            in: testBounds
+        )
+        let collision = entity1.collision(with: entity2)
+        let sides = collision?.sides() ?? []
+        XCTAssertEqual(sides, [.top, .right, .bottom])
+    }
+    
+    func testSidesDetectedWhenObjectCollidesOnTopRight() {
+        let entity1 = Entity(
+            id: "entity1",
+            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            in: testBounds
+        )
+        let entity2 = Entity(
+            id: "entity2",
+            frame: CGRect(x: 0.9, y: 0.9, width: 1, height: 1),
+            in: testBounds
+        )
+        let collision = entity1.collision(with: entity2)
+        let sides = collision?.sides() ?? []
+        XCTAssertEqual(sides, [.top, .right])
+    }
+    
+    func testSidesDetectedWhenObjectCollidesOnBottomRight() {
+        let entity1 = Entity(
+            id: "entity1",
+            frame: CGRect(x: 0, y: 0, width: 1, height: 1),
+            in: testBounds
+        )
+        let entity2 = Entity(
+            id: "entity2",
+            frame: CGRect(x: 0.9, y: -0.9, width: 1, height: 1),
+            in: testBounds
+        )
+        let collision = entity1.collision(with: entity2)
+        let sides = collision?.sides() ?? []
+        XCTAssertEqual(sides, [.right, .bottom])
+    }
 }

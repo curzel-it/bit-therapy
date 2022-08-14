@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-open class BounceOffLateralBounds: Capability {
+open class BounceOffLateralCollisions: Capability {
     
     override open func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
@@ -14,15 +14,12 @@ open class BounceOffLateralBounds: Capability {
     
     func bouncingAngle(collisions: Collisions) -> CGFloat? {
         guard let body = subject, !body.isEphemeral else { return nil }
-        guard collisions.contains(anyOf: [.leftBound, .rightBound]) else { return nil }
+        let lateralCollisions = collisions.filter {
+            let sides = $0.sides()
+            return sides.contains(anyOf: [.left, .right])
+        }
+        guard lateralCollisions.count > 0 else { return nil }
         let rad = body.direction.radians
-        
-        let isGoingLeft = body.direction.dx < -0.0001
-        let isGoingRight = body.direction.dx > 0.0001
-        
-        if isGoingLeft && collisions.contains(.leftBound) { return CGFloat.pi - rad }
-        if isGoingRight && collisions.contains(.rightBound) { return CGFloat.pi - rad }
-        
-        return nil
+        return CGFloat.pi - rad
     }
 }
