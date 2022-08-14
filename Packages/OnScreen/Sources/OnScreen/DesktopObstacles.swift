@@ -27,20 +27,18 @@ class DesktopObstaclesService: ObservableObject {
         }
     }
     
-    private func onWindows(_ windows: [WindowInfo]) {
+    private func onWindows(_ windows: [Window]) {
         obstacles = windows
-            .filter { !isValidProcess(window: $0) }
             .filter { isValidObstacle(window: $0) }
             .map { WindowRoof(of: $0, in: habitatBounds) }
             .sorted { $0.id < $1.id }
     }
     
-    private func isValidObstacle(window: WindowInfo) -> Bool {
-        window.frame.minY < petSize
-    }
-    
-    private func isValidProcess(window: WindowInfo) -> Bool {
-        window.processName?.contains("Desktop Pets") == false
+    func isValidObstacle(window: Window) -> Bool {
+        guard window.frame.minY > petSize else { return false }
+        let process = window.processName?.lowercased() ?? ""
+        guard !process.contains("desktop pets") else { return false }
+        return true
     }
     
     func stop() {
@@ -49,9 +47,19 @@ class DesktopObstaclesService: ObservableObject {
     }
 }
 
+protocol Window {
+    var id: Int { get }
+    var frame: CGRect { get }
+    var processName: String? { get }
+}
+
+extension WindowInfo: Window {
+    // ...
+}
+
 class WindowRoof: Entity {
     
-    init(of window: WindowInfo, in habitatBounds: CGRect) {
+    init(of window: Window, in habitatBounds: CGRect) {
         let roofBounds = CGRect(
             x: window.frame.minX,
             y: window.frame.minY,
