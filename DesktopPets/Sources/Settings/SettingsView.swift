@@ -20,6 +20,7 @@ struct SettingsView: View {
         VStack(spacing: .xl) {
             SizeSlider()
             Switch(Lang.Settings.gravity, appState.$gravityEnabled)
+            DesktopInteractions()
             LaunchAtLoginSwitch()
             StatusBarIconSwitch()
             AnonymousTracking()
@@ -29,10 +30,53 @@ struct SettingsView: View {
     }
 }
 
+// MARK: - Desktop Interactions
+
+private struct DesktopInteractions: View {
+    
+    @EnvironmentObject var appState: AppState
+    
+    @State var showingDetails = false
+    
+    var body: some View {
+        HStack(spacing: .sm) {
+            Switch(Lang.Settings.desktopInteractions, appState.$desktopInteractions)
+            Image(systemName: "info.circle.fill")
+                .font(.regular, .icon)
+                .onTapGesture {
+                    showingDetails = true
+                }
+            
+        }
+        .sheet(isPresented: $showingDetails) {
+            VStack(alignment: .center, spacing: .xl) {
+                Text(Lang.Settings.desktopInteractions)
+                    .font(.bold, .xl)
+                    .padding(.top)
+                Text(Lang.Settings.desktopInteractionsMessage)
+                    .font(.regular, .sm)
+                    .multilineTextAlignment(.center)
+                HStack {
+                    Button(Lang.enable) {
+                        appState.desktopInteractions = true
+                        showingDetails = false
+                    }
+                    .buttonStyle(.regular)
+                    Spacer()
+                    Button(Lang.cancel) { showingDetails = false }
+                        .buttonStyle(.text)
+                }
+            }
+            .padding()
+            .frame(width: 450)
+        }
+    }
+}
+
 // MARK: - Anonymous Tracking
 
 private struct AnonymousTracking: View {
-        
+    
     @State var showingDetails = false
     
     var enabled: Binding<Bool> = Binding {

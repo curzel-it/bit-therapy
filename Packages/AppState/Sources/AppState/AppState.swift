@@ -17,7 +17,11 @@ public class AppState: ObservableObject {
     
     @Published public var mainWindowFocused: Bool = true
     
-    @AppStorage("windowsAreObstacles") public var windowsAreObstacles: Bool = false
+    @AppStorage("desktopInteractions") public var desktopInteractions: Bool = false {
+        didSet {
+            gravityEnabled = gravityEnabled || desktopInteractions
+        }
+    }
     
     @AppStorage("petId") public var selectedPet: String = "sloth"
     
