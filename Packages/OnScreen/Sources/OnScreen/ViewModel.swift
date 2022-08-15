@@ -29,7 +29,7 @@ class ViewModel: LiveEnvironment {
     }
     
     private func observeWindowsIfNeeded() {
-        guard AppState.global.windowsAreObstacles else { return }
+        guard AppState.global.desktopInteractions else { return }
         
         desktopObstacles = DesktopObstaclesService(
             habitatBounds: state.bounds,

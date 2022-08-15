@@ -10,6 +10,7 @@ public struct Collision: Equatable {
     public let bodyId: String
     public let isEphemeral: Bool
     public let intersection: CGRect
+    public let isOverlapping: Bool
     
     let sourceBody: CGRect
     
@@ -18,6 +19,7 @@ public struct Collision: Equatable {
         self.isEphemeral = body.isEphemeral
         self.intersection = intersection
         self.sourceBody = source.frame
+        self.isOverlapping = intersection.width >= 1 && intersection.height >= 1
     }
 }
 

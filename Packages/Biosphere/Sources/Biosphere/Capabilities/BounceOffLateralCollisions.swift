@@ -13,13 +13,29 @@ open class BounceOffLateralCollisions: Capability {
     }
     
     func bouncingAngle(collisions: Collisions) -> CGFloat? {
-        guard let body = subject, !body.isEphemeral else { return nil }
-        let lateralCollisions = collisions.filter {
-            let sides = $0.sides()
-            return sides.contains(anyOf: [.left, .right])
-        }
-        guard lateralCollisions.count > 0 else { return nil }
-        let rad = body.direction.radians
-        return CGFloat.pi - rad
+        guard let body = subject, !body.isEphemeral,
+              let targetSide = targetSide(),
+              collisions.contains(overlapOnSide: targetSide) else { return nil }
+        return CGFloat.pi - body.direction.radians
+    }
+    
+    private func targetSide() -> Collision.Side? {
+        guard let direction = subject?.direction.dx else { return nil }
+        let isGoingLeft = direction < -0.0001
+        let isGoingRight = direction > 0.0001
+        guard isGoingLeft || isGoingRight else { return nil }
+        return isGoingLeft ? .left : .right
     }
 }
+
+private extension Collisions {
+    
+    func contains(overlapOnSide targetSide: Collision.Side) -> Bool {
+        contains {
+            guard $0.isOverlapping else { return false }
+            guard $0.sides().contains(targetSide) else { return false }
+            return true
+        }
+    }
+}
+

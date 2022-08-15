@@ -32,9 +32,7 @@ extension Entity {
     
     func collision(with other: Entity) -> Collision? {
         let intersection = frame.intersection(other.frame)
-        if !intersection.isNull && !intersection.isInfinite {
-            return Collision(of: self, with: other, on: intersection)
-        }
-        return nil
+        guard !intersection.isNull, !intersection.isInfinite else { return nil }        
+        return Collision(of: self, with: other, on: intersection)
     }
 }
