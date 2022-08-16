@@ -14,7 +14,7 @@ class EntityWindowTests: XCTestCase {
     var window: EntityWindow!
     
     override func setUp() {
-        entity?.kill()
+        entity?.kill(animated: false)
         habitat?.kill(animated: false)
         window?.close()
         
@@ -44,7 +44,7 @@ class EntityWindowTests: XCTestCase {
         let expectation = expectation(description: "")
         
         XCTAssertTrue(window.isVisible)
-        entity.kill()
+        entity.kill(animated: false)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()

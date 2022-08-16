@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import Geometry
 import SwiftUI
 
 // MARK: - Conversion

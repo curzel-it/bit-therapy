@@ -86,6 +86,13 @@
         "identifier" : "UfoAbductionTests",
         "name" : "UfoAbductionTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Geometry",
+        "identifier" : "GeometryTests",
+        "name" : "GeometryTests"
+      }
     }
   ],
   "version" : 1

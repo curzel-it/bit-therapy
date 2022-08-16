@@ -66,7 +66,7 @@ open class LiveEnvironment: ObservableObject {
                 }
         } else {
             pauseRendering()
-            state.children.forEach { $0.kill() }
+            state.children.forEach { $0.kill(animated: false) }
             state.children.removeAll()
             printDebug(self.tag, "Terminated.")
         }

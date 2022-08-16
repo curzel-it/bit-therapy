@@ -47,10 +47,7 @@ public struct OnScreen {
 
 private class OnScreenWindows: HabitatWindows<LiveEnvironment> {
     
-    override func newWindow(
-        representing entity: Entity,
-        in habitat: LiveEnvironment
-    ) -> EntityWindow {
+    override func newWindow(representing entity: Entity, in habitat: LiveEnvironment) -> EntityWindow {
         if let pet = entity as? PetEntity {
             return PetWindow(representing: pet, in: habitat)
         } else {

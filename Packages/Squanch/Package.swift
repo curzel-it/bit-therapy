@@ -10,11 +10,16 @@ let package = Package(
             name: "Squanch",
             targets: ["Squanch"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "../Geometry")
+    ],
     targets: [
         .target(
             name: "Squanch",
-            dependencies: []),
+            dependencies: [
+                .product(name: "Geometry", package: "Geometry")
+            ]
+        ),
         .testTarget(
             name: "SquanchTests",
             dependencies: ["Squanch"]

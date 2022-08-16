@@ -34,13 +34,13 @@ open class PetEntity: Entity {
     
     // MARK: - Kill
     
-    public override func kill(animated: Bool, onCompletion: @escaping () -> Void) {
+    public override func kill(animated: Bool, onCompletion: @escaping () -> Void = {}) {
         if !animated {
-            super.kill()
+            super.kill(animated: false)
         } else {
             set(state: .disappearing)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self] in
-                self?.kill(animated: false) {}
+                self?.kill(animated: false)
                 onCompletion()
             }
         }

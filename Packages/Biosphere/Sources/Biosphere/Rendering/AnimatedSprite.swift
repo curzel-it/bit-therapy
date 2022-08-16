@@ -104,6 +104,4 @@ open class AnimatedSprite: Capability, ObservableObject {
 extension Entity {
     
     public var animation: AnimatedSprite? { capability(for: AnimatedSprite.self) }
-    
-    public var isDrawable: Bool { animation != nil }
 }

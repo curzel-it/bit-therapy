@@ -5,7 +5,15 @@
 import SwiftUI
 import Squanch
 
-open class Entity: Body {
+open class Entity: Identifiable, ObservableObject {
+    
+    public let id: String
+    public let habitatBounds: CGRect
+    public let spawnFrame: CGRect
+    
+    public var isDrawable: Bool = true
+    public var isStatic: Bool = false
+    public var isEphemeral: Bool = false
     
     @Published public var isUpsideDown = false
     @Published public var sprite: CGImage?
@@ -13,7 +21,23 @@ open class Entity: Body {
     @Published public var yAngle: CGFloat = 0
     @Published public var zAngle: CGFloat = 0
     
+    @Published public private(set) var state: EntityState = .move
+    @Published public private(set) var frame: CGRect
+    @Published public private(set) var direction: CGVector = .zero
+    
+    @Published public var backgroundColor: Color = .clear
+    
+    @Published public var speed: CGFloat = 0
+    @Published public var isAlive = true
+    
     public var capabilities: [Capability] = []
+    
+    public init(id: String, frame: CGRect, in habitatBounds: CGRect) {
+        self.id = id
+        self.frame = frame
+        self.spawnFrame = frame
+        self.habitatBounds = habitatBounds
+    }
     
     // MARK: - Capabilities
     
@@ -53,17 +77,47 @@ open class Entity: Body {
         }
     }
     
+    // MARK: - Direction
+    
+    open func set(direction newDirection: CGVector) {
+        direction = newDirection
+    }
+    
+    // MARK: - Frame
+    
+    public func set(frame newFrame: CGRect) {
+        guard newFrame != frame else { return }
+        frame = newFrame
+    }
+    
+    public func set(origin: CGPoint) {
+        guard origin != frame.origin else { return }
+        frame.origin = origin
+    }
+    
+    public func set(size: CGSize) {
+        guard size != frame.size else { return }
+        frame.size = size
+    }
+    
+    // MARK: - State
+    
+    open func set(state: EntityState) {
+        printDebug(id, "State changed to", state.description)
+        self.state = state
+    }
+    
     // MARK: - Memory Management
 
-    open func kill(animated: Bool, onCompletion: @escaping () -> Void) {
+    open func kill(animated: Bool, onCompletion: @escaping () -> Void = {}) {
         kill()
         onCompletion()
     }
     
-    open override func kill() {
+    private func kill() {
         uninstallAllCapabilities()
         sprite = nil
-        super.kill()
+        isAlive = false
     }
     
     public func uninstallAllCapabilities() {
@@ -75,5 +129,14 @@ open class Entity: Body {
     
     open func animationPath(for state: EntityState) -> String? {
         nil
+    }
+}
+
+// MARK: - Equatable
+
+extension Entity: Equatable {
+    
+    public static func == (lhs: Entity, rhs: Entity) -> Bool {
+        lhs.id == rhs.id
     }
 }

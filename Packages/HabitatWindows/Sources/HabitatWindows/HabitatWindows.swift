@@ -50,21 +50,13 @@ open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate 
     
     // MARK: - Show Window
     
-    @discardableResult
-    private func showWindow(
-        representing entity: Entity,
-        in habitat: Habitat
-    ) -> EntityWindow {
-        let window = window(representing: entity, in: habitat)
+    private func showWindow(representing entity: Entity, in habitat: Habitat) {
+        let window = dequeueWindow(representing: entity, in: habitat)
         window.show()
         window.makeKey()
-        return window
     }
     
-    private func window(
-        representing entity: Entity,
-        in habitat: Habitat
-    ) -> EntityWindow {
+    private func dequeueWindow(representing entity: Entity, in habitat: Habitat) -> EntityWindow {
         if let window = existingWindow(representing: entity) {
             return window
         }
@@ -74,10 +66,7 @@ open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate 
         return window
     }
     
-    open func newWindow(
-        representing entity: Entity,
-        in habitat: Habitat
-    ) -> EntityWindow {
+    open func newWindow(representing entity: Entity, in habitat: Habitat) -> EntityWindow {
         EntityWindow(representing: entity, in: habitat)
     }
     

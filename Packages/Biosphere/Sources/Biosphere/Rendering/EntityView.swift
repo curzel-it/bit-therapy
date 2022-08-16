@@ -30,7 +30,7 @@ public struct EntityView: View {
         .rotation3DEffect(.radians(child.xAngle), axis: (x: 1, y: 0, z: 0))
         .rotation3DEffect(.radians(child.yAngle), axis: (x: 0, y: 1, z: 0))
         .rotation3DEffect(.radians(child.zAngle), axis: (x: 0, y: 0, z: 1))
-        .background(viewModel.debug ? Color.red : .clear)
+        .background(child.backgroundColor)
     }
 }
 

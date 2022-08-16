@@ -23,6 +23,9 @@
       location = "group:Packages/EntityWindow">
    </FileRef>
    <FileRef
+      location = "group:Packages/Geometry">
+   </FileRef>
+   <FileRef
       location = "group:Packages/HabitatWindows">
    </FileRef>
    <FileRef

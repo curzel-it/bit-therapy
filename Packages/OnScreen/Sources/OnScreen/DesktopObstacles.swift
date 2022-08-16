@@ -38,6 +38,7 @@ class DesktopObstaclesService: ObservableObject {
         guard window.frame.minY > petSize else { return false }
         let process = window.processName?.lowercased() ?? ""
         guard !process.contains("desktop pets") else { return false }
+        guard !process.contains("xcode") else { return false }
         return true
     }
     
@@ -71,6 +72,7 @@ class WindowRoof: Entity {
             frame: roofBounds,
             in: habitatBounds
         )
-        self.isDrawable
+        self.backgroundColor = .red
+        self.isDrawable = true
     }
 }

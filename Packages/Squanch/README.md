@@ -1,4 +1,4 @@
-# Schwifty
+# Squanch
 
 Collection of utilities and extension for everything that is not UI related.
 

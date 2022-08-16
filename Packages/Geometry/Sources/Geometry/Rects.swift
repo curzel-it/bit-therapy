@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-// MARK: - Additional Points
+// MARK: - Corners
 
 extension CGRect {
     
@@ -17,11 +17,26 @@ extension CGRect {
     public var bottomLeft: CGPoint { CGPoint(x: minX, y: maxY) }
     
     public var corners: [CGPoint] {
-        [topLeft, topRight, bottomLeft, bottomRight]        
+        [topLeft, topRight, bottomLeft, bottomRight]
     }
 }
 
-// MARK: - Init
+// MARK: - Contains Point
+
+extension CGRect {
+    
+    public func contains(anyOf points: [CGPoint]) -> Bool {
+        guard points.count > 0 else { return false }
+        return points.first { contains($0) } != nil
+    }
+    
+    public func contains(allOf points: [CGPoint]) -> Bool {
+        guard points.count > 0 else { return true }
+        return points.first { !contains($0) } == nil
+    }
+}
+
+// MARK: - Init by size
 
 extension CGRect {
     
@@ -60,21 +75,6 @@ extension CGRect {
     }
 }
 
-// MARK: - Contains Points
-
-extension CGRect {
-    
-    public func contains(anyOf points: [CGPoint]) -> Bool {
-        guard points.count > 0 else { return false }
-        return points.first { contains($0) } != nil
-    }
-    
-    public func contains(allOf points: [CGPoint]) -> Bool {
-        guard points.count > 0 else { return true }
-        return points.first { !contains($0) } == nil
-    }
-}
-
 // MARK: - Debug
 
 extension CGRect: CustomStringConvertible {
@@ -92,3 +92,4 @@ extension CGRect {
         CGRect(origin: .zero, size: size)
     }
 }
+

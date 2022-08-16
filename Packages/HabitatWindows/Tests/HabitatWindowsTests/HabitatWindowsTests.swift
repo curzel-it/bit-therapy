@@ -15,8 +15,8 @@ class HabitatWindowsTests: XCTestCase {
     var windows: HabitatWindows<LiveEnvironment>!
     
     override func setUp() {
-        entity1?.kill()
-        entity2?.kill()
+        entity1?.kill(animated: false)
+        entity2?.kill(animated: false)
         habitat?.kill(animated: false)
         windows?.kill()
         
@@ -68,7 +68,7 @@ class HabitatWindowsTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             XCTAssertEqual(self.windows.windows.count, self.habitat.drawableChildren)
             
-            self.entity1.kill()
+            self.entity1.kill(animated: false)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 expectation.fulfill()
             }
@@ -82,6 +82,6 @@ class HabitatWindowsTests: XCTestCase {
 private extension LiveEnvironment {
     
     var drawableChildren: Int {
-        state.children.filter { $0.isDrawable }.count
+        state.children.filter { $0.isDrawable && $0.isAlive }.count
     }
 }

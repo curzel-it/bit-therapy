@@ -22,7 +22,7 @@ public class Environment: ObservableObject {
         
         let hotspots = Hotspot.allCases.map { $0.rawValue }
         let oldBounds = children.filter { hotspots.contains($0.id) }
-        oldBounds.forEach { $0.kill() }
+        oldBounds.forEach { $0.kill(animated: false) }
         children.removeAll { hotspots.contains($0.id) }
         
         children.append(contentsOf: hotspotEntities())
