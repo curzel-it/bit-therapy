@@ -2,7 +2,6 @@
 // Pet Therapy.
 //
 
-import Biosphere
 import SwiftUI
 
 open class SpritesProvider: Capability, ObservableObject {

@@ -7,9 +7,8 @@ import AppState
 import Biosphere
 import Combine
 import EntityWindow
-import LiveEnvironment
+
 import Pets
-import Sprites
 import Squanch
 
 class ViewModel: LiveEnvironment {

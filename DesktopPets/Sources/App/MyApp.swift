@@ -6,7 +6,6 @@ import AppState
 import Biosphere
 import InAppPurchases
 import OnScreen
-import Pets
 import SwiftUI
 import Schwifty
 import Tracking

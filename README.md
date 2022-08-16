@@ -41,9 +41,9 @@ The window-detection service is also open source and implemented [here](https://
 ## Troubleshooting
 
 ### Swift Packages not loading
-Unfortunately, Xcode does not like local swift packages 🤷‍♂️
-1. Try Clean and build again
-1. Try Reset Packages Cache (Package Dependencies > Right Click)
-1. Try Close and re-open Xcode
-1. Try Reset Packages Cache, again   
+Unfortunately, Xcode does not like local swift packages very much. In case you get any error about missing packages, try the following:
+1. Clean build folder (Product > Clean)
+1. Reset Packages Cache (Package Dependencies > Right Click)
+1. Close and re-open Xcode
+1. Build   
 

@@ -71,5 +71,6 @@ class WindowRoof: Entity {
             frame: roofBounds,
             in: habitatBounds
         )
+        self.isDrawable
     }
 }

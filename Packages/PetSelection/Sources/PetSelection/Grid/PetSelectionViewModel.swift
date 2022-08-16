@@ -5,11 +5,8 @@
 import AppState
 import Biosphere
 import DesignSystem
-import LiveEnvironment
 import Pets
-import PetsAssets
 import Schwifty
-import Sprites
 import Squanch
 import SwiftUI
 

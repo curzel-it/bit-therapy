@@ -7,10 +7,9 @@ import Biosphere
 import Combine
 import EntityWindow
 import HabitatWindows
-import LiveEnvironment
+
 import Pets
 import Schwifty
-import Sprites
 import Squanch
 import SwiftUI
 

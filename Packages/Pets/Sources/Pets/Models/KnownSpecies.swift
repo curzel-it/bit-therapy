@@ -3,7 +3,6 @@
 // 
 
 import Foundation
-import PetsAssets
 import Squanch
 
 extension Pet {

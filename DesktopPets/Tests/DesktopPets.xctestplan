@@ -26,30 +26,23 @@
     },
     {
       "target" : {
-        "containerPath" : "container:EntityWindow",
-        "identifier" : "EntityWindowTests",
-        "name" : "EntityWindowTests"
+        "containerPath" : "container:..\/Packages\/Squanch",
+        "identifier" : "SquanchTests",
+        "name" : "SquanchTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:OnScreen",
-        "identifier" : "OnScreenTests",
-        "name" : "OnScreenTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:UfoAbduction",
-        "identifier" : "UfoAbductionTests",
-        "name" : "UfoAbductionTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:AppState",
+        "containerPath" : "container:..\/Packages\/AppState",
         "identifier" : "AppStateTests",
         "name" : "AppStateTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/Lang",
+        "identifier" : "LangTests",
+        "name" : "LangTests"
       }
     },
     {
@@ -61,9 +54,23 @@
     },
     {
       "target" : {
-        "containerPath" : "container:HabitatWindows",
+        "containerPath" : "container:..\/Packages\/EntityWindow",
+        "identifier" : "EntityWindowTests",
+        "name" : "EntityWindowTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/HabitatWindows",
         "identifier" : "HabitatWindowsTests",
         "name" : "HabitatWindowsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/OnScreen",
+        "identifier" : "OnScreenTests",
+        "name" : "OnScreenTests"
       }
     },
     {
@@ -75,37 +82,9 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/Squanch",
-        "identifier" : "SquanchTests",
-        "name" : "SquanchTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/Packages\/LiveEnvironment",
-        "identifier" : "LiveEnvironmentTests",
-        "name" : "LiveEnvironmentTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/Packages\/PetsAssets",
-        "identifier" : "PetsAssetsTests",
-        "name" : "PetsAssetsTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/Packages\/Sprites",
-        "identifier" : "SpritesTests",
-        "name" : "SpritesTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Lang",
-        "identifier" : "LangTests",
-        "name" : "LangTests"
+        "containerPath" : "container:..\/Packages\/UfoAbduction",
+        "identifier" : "UfoAbductionTests",
+        "name" : "UfoAbductionTests"
       }
     }
   ],

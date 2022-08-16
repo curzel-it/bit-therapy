@@ -4,8 +4,6 @@
 
 import Biosphere
 import DesignSystem
-import PetsAssets
-import Sprites
 import SwiftUI
 
 // MARK: - Incremental Id

@@ -4,7 +4,6 @@
 
 import Biosphere
 import Schwifty
-import Sprites
 import Squanch
 import SwiftUI
 

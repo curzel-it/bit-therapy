@@ -5,8 +5,6 @@
 import AppKit
 import Biosphere
 import Combine
-import LiveEnvironment
-import Sprites
 import SwiftUI
 
 open class EntityWindow: NSWindow {

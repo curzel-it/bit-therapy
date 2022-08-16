@@ -14,9 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Biosphere"),
         .package(path: "../DesignSystem"),
-        .package(path: "../PetsAssets"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.0"),
-        .package(path: "../Sprites"),
         .package(path: "../Squanch")
     ],
     targets: [
@@ -25,11 +23,13 @@ let package = Package(
             dependencies: [
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
-                .product(name: "PetsAssets", package: "PetsAssets"),
                 .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "Squanch", package: "Squanch")
+            ],
+            resources: [
+                .copy("Assets")
             ]
+
         ),
         .testTarget(
             name: "PetsTests",

@@ -7,10 +7,9 @@ import AppState
 import Biosphere
 import Combine
 import EntityWindow
-import LiveEnvironment
+
 import Pets
 import Schwifty
-import Sprites
 import Squanch
 import SwiftUI
 
@@ -52,7 +51,7 @@ open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate 
     // MARK: - Show Window
     
     @discardableResult
-    open func showWindow(
+    private func showWindow(
         representing entity: Entity,
         in habitat: Habitat
     ) -> EntityWindow {

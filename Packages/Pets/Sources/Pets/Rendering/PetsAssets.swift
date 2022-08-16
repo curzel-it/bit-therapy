@@ -17,15 +17,15 @@ public class PetsAssets {
         
         if paths.count > 2 {
             let path = paths.joined(separator: "/")
-            return frames(fromDirectory: "PixelArt/pets/\(path)")
+            return frames(fromDirectory: "Assets/pets/\(path)")
         }
         if paths.count == 2 {
             let species = paths[0]
             let action = paths[1]
             let path = [species, "original", action].joined(separator: "/")
-            return frames(fromDirectory: "PixelArt/pets/\(path)")
+            return frames(fromDirectory: "Assets/pets/\(path)")
         }
-        return frames(fromDirectory: "PixelArt/\(baseName)")
+        return frames(fromDirectory: "Assets/\(baseName)")
     }
     
     private static func frames(fromDirectory dir: String) -> [CGImage] {

@@ -219,7 +219,6 @@
 				A6FB7D5528740F8E00AB872E /* App */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
 				A6FB7D5B28740F8E00AB872E /* About */,
-				A6FB7D5D28740F8E00AB872E /* PixelArt */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -256,85 +255,6 @@
 				A6FB7D5C28740F8E00AB872E /* AboutView.swift */,
 			);
 			path = About;
-			sourceTree = "<group>";
-		};
-		A6FB7D5D28740F8E00AB872E /* PixelArt */ = {
-			isa = PBXGroup;
-			children = (
-				A6FB7D5E28740F8E00AB872E /* trex */,
-				A6FB7D5F28740F8E00AB872E /* egg */,
-				A6FB7D6028740F8E00AB872E /* panda */,
-				A6FB7D6128740F8E00AB872E /* crow */,
-				A6FB7D6228740F8E00AB872E /* missingno */,
-				A6FB7D6428740F8E00AB872E /* koala */,
-				A6FB7D6528740F8E00AB872E /* sloth */,
-			);
-			path = PixelArt;
-			sourceTree = "<group>";
-		};
-		A6FB7D5E28740F8E00AB872E /* trex */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = trex;
-			sourceTree = "<group>";
-		};
-		A6FB7D5F28740F8E00AB872E /* egg */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = egg;
-			sourceTree = "<group>";
-		};
-		A6FB7D6028740F8E00AB872E /* panda */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = panda;
-			sourceTree = "<group>";
-		};
-		A6FB7D6128740F8E00AB872E /* crow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = crow;
-			sourceTree = "<group>";
-		};
-		A6FB7D6228740F8E00AB872E /* missingno */ = {
-			isa = PBXGroup;
-			children = (
-				A6FB7D6328740F8E00AB872E /* original */,
-			);
-			path = missingno;
-			sourceTree = "<group>";
-		};
-		A6FB7D6328740F8E00AB872E /* original */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = original;
-			sourceTree = "<group>";
-		};
-		A6FB7D6428740F8E00AB872E /* koala */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = koala;
-			sourceTree = "<group>";
-		};
-		A6FB7D6528740F8E00AB872E /* sloth */ = {
-			isa = PBXGroup;
-			children = (
-				A6FB7D6628740F8E00AB872E /* original */,
-			);
-			path = sloth;
-			sourceTree = "<group>";
-		};
-		A6FB7D6628740F8E00AB872E /* original */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = original;
 			sourceTree = "<group>";
 		};
 		A6FB7D8828740F9A00AB872E /* Tests */ = {

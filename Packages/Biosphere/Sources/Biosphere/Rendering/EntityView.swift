@@ -2,10 +2,8 @@
 // Pet Therapy.
 //
 
-import Biosphere
 import DesignSystem
 import Schwifty
-import Sprites
 import SwiftUI
 
 public struct EntityView: View {

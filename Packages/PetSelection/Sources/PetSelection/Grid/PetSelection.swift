@@ -7,10 +7,9 @@ import Biosphere
 import DesignSystem
 import InAppPurchases
 import Lang
-import LiveEnvironment
+
 import OnScreen
 import Schwifty
-import Sprites
 import SwiftUI
 
 public struct PetSelectionView: View {
