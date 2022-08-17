@@ -7,15 +7,12 @@ import SwiftUI
 extension CGRect {
     
     public func parts(bySubtracting other: CGRect) -> [CGRect] {
-        let intersection = intersection(other)
-        guard !intersection.isEmpty, !intersection.isNull, intersection != self else { return [self] }
-
-        return [self]
+        [self]
             .flatMap { $0.split(x: other.minX) }
             .flatMap { $0.split(x: other.maxX) }
             .flatMap { $0.split(y: other.minY) }
             .flatMap { $0.split(y: other.maxY) }
-            .filter { $0 != other }
+            .filter { !other.contains($0) }
     }
     
     public func split(x: CGFloat) -> [CGRect] {

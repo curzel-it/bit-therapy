@@ -15,7 +15,7 @@ class DesktopObstaclesService: ObservableObject {
     
     private let petSize: CGFloat
     
-    private let windowsDetector = WindowsDetector().started(pollInterval: 5)
+    private let windowsDetector = WindowsDetector().started(pollInterval: 1)
     
     private var windowsCanc: AnyCancellable!
     
@@ -27,19 +27,32 @@ class DesktopObstaclesService: ObservableObject {
         }
     }
     
-    private func onWindows(_ windows: [Window]) {
-        obstacles = windows
-            .filter { isValidObstacle(window: $0) }
-            .map { WindowRoof(of: $0, in: habitatBounds) }
-            .sorted { $0.id < $1.id }
+    private func onWindows(_ windows: [WindowInfo]) {
+        obstacles = obstacles(from: windows)
     }
     
-    func isValidObstacle(window: Window) -> Bool {
-        guard window.frame.minY > petSize else { return false }
-        let process = window.processName?.lowercased() ?? ""
-        guard !process.contains("desktop pets") else { return false }
-        guard !process.contains("xcode") else { return false }
+    func obstacles(from windows: [WindowInfo]) -> [WindowRoof] {
+        windows
+            .reversed()
+            .filter { isValid(process: $0.processName) }
+            .map { $0.frame }
+            .reduce([]) { obstacles, rect in
+                let newObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
+                return newObstacles + [rect.roofRect()]
+            }
+            .filter { isValid(frame: $0) }
+            .map { WindowRoof(of: $0, in: habitatBounds) }
+    }
+    
+    func isValid(process: String?) -> Bool {
+        let name = (process ?? "").lowercased()
+        guard !name.contains("desktop pets") else { return false }
+        guard !name.contains("xcode") else { return false }
         return true
+    }
+    
+    func isValid(frame: CGRect) -> Bool {
+        frame.minY > petSize
     }
     
     func stop() {
@@ -48,31 +61,26 @@ class DesktopObstaclesService: ObservableObject {
     }
 }
 
-protocol Window {
-    var id: Int { get }
-    var frame: CGRect { get }
-    var processName: String? { get }
-}
-
-extension WindowInfo: Window {
-    // ...
+extension CGRect {
+        
+    func roofRect() -> CGRect {
+        CGRect(x: minX, y: minY, width: width, height: min(height, 50))
+    }
 }
 
 class WindowRoof: Entity {
     
-    init(of window: Window, in habitatBounds: CGRect) {
-        let roofBounds = CGRect(
-            x: window.frame.minX,
-            y: window.frame.minY,
-            width: window.frame.width,
-            height: min(window.frame.height, 100)
-        )
-        super.init(
-            id: "window-\(window.id)",
-            frame: roofBounds,
-            in: habitatBounds
-        )
-        self.backgroundColor = .red
+    init(of frame: CGRect, in habitatBounds: CGRect) {
+        super.init(id: WindowRoof.id(), frame: frame, in: habitatBounds)
+        self.backgroundColor = .red.opacity(0.2)
         self.isDrawable = true
+        self.isStatic = true
     }
+    
+    private static func id() -> String {
+        incrementalId += 1
+        return "window-\(incrementalId)"
+    }
+    
+    private static var incrementalId: Int = 0
 }

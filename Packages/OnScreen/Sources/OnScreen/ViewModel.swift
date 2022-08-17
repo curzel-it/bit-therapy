@@ -29,15 +29,33 @@ class ViewModel: LiveEnvironment {
     
     private func observeWindowsIfNeeded() {
         guard AppState.global.desktopInteractions else { return }
-        
         desktopObstacles = DesktopObstaclesService(
             habitatBounds: state.bounds,
             petSize: AppState.global.petSize
         )
         windowObstaclesCanc = desktopObstacles.$obstacles.sink { obstacles in
-            self.state.children.removeAll { $0 is WindowRoof }
-            self.state.children.append(contentsOf: obstacles)
+            self.updateObstacles(with: obstacles)
         }
+    }
+    
+    private func updateObstacles(with obstacles: [Entity]) {
+        let incomingRects = obstacles.map { $0.frame }
+        let existingRects = state.children
+            .filter { $0 is WindowRoof }
+            .map { $0.frame }
+        
+        state.children.removeAll { child in
+            guard child is WindowRoof else { return false }
+            if incomingRects.contains(child.frame) {
+                return false
+            } else {
+                child.kill(animated: false)
+                return true
+            }
+        }
+        obstacles
+            .filter { !existingRects.contains($0.frame) }
+            .forEach { state.children.append($0) }
     }
     
     private func addSelectedPet() {

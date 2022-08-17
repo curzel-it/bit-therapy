@@ -52,20 +52,22 @@ class SubtractionsTests: XCTestCase {
     
     func testSubtractingRectOfWidthZeroHeightInfiniteIsSameAsSplittingHorizontally() {
         let rect = CGRect(x: 5, y: 5, width: 5, height: 5)
-        let other = CGRect(x: 8, y: 0, width: 2, height: 10)
-        XCTAssertEqual(rect.parts(bySubtracting: other), rect.split(x: 8))
+        let other = CGRect(x: 8, y: 0, width: 0, height: 10)
+        let parts = rect.parts(bySubtracting: other)
+        XCTAssertEqual(parts, rect.split(x: 8))
     }
     
     func testSubtractingRectOfHeightZeroWidthInfiniteIsSameAsSplittingVertically() {
         let rect = CGRect(x: 5, y: 5, width: 5, height: 5)
-        let other = CGRect(x: 0, y: 8, width: 10, height: 2)
-        XCTAssertEqual(rect.parts(bySubtracting: other), rect.split(y: 8))
+        let other = CGRect(x: 0, y: 8, width: 10, height: 0)
+        let parts = rect.parts(bySubtracting: other)
+        XCTAssertEqual(parts, rect.split(y: 8))
     }
     
-    func testSubtractingRectLargerThanOriginalReturnsOriginalRect() {
+    func testSubtractingRectLargerThanOriginalReturnsNothing() {
         let rect = CGRect(x: 5, y: 5, width: 5, height: 5)
         let other = CGRect(x: 0, y: 0, width: 15, height: 15)
-        XCTAssertEqual(rect.parts(bySubtracting: other), [rect])
+        XCTAssertEqual(rect.parts(bySubtracting: other).count, 0)
     }
     
     func testSubtractingSmallSquareWithinRectReturnsExactlyEightConsistentParts() {
