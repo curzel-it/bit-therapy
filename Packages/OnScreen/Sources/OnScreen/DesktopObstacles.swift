@@ -47,7 +47,6 @@ class DesktopObstaclesService: ObservableObject {
     func isValid(process: String?) -> Bool {
         let name = (process ?? "").lowercased()
         guard !name.contains("desktop pets") else { return false }
-        guard !name.contains("xcode") else { return false }
         return true
     }
     
@@ -72,8 +71,7 @@ class WindowRoof: Entity {
     
     init(of frame: CGRect, in habitatBounds: CGRect) {
         super.init(id: WindowRoof.id(), frame: frame, in: habitatBounds)
-        self.backgroundColor = .red.opacity(0.2)
-        self.isDrawable = true
+        self.isDrawable = false
         self.isStatic = true
     }
     

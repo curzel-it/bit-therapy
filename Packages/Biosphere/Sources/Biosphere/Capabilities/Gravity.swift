@@ -22,7 +22,10 @@ open class Gravity: Capability {
     }
     
     open func groundCollision(from collisions: Collisions) -> Collision? {
-        collisions.first { $0.hotspot == .bottomBound }
+        let minLand = (subject?.frame.width ?? 0) / 2
+        return collisions
+            .filter { $0.intersection.width > minLand }
+            .first
     }
     
     @discardableResult
@@ -32,7 +35,7 @@ open class Gravity: Capability {
         
         let ground = CGPoint(
             x: body.frame.origin.x,
-            y: groundCollision.intersection.minY - body.frame.height
+            y: groundCollision.otherBody.minY - body.frame.height
         )
         body.set(state: .move)
         body.set(direction: .init(dx: 1, dy: 0))
