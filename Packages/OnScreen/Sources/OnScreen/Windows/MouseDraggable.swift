@@ -6,7 +6,7 @@ import AppKit
 import Biosphere
 import Squanch
 
-open class MouseDraggable: Capability {
+class MouseDraggable: Capability {
     
     public var isBeingDragged: Bool {
         subject?.state == .drag
@@ -18,7 +18,7 @@ open class MouseDraggable: Capability {
         mouseDragStarted()
     }
     
-    open func mouseDragStarted() {
+    func mouseDragStarted() {
         subject?.set(state: .drag)
         subject?.movement?.isEnabled = false
     }
@@ -29,7 +29,7 @@ open class MouseDraggable: Capability {
         mouseDragEnded(for: event.window)
     }
     
-    open func mouseDragEnded(for window: NSWindow?) {
+    func mouseDragEnded(for window: NSWindow?) {
         subject?.set(state: .move)
         subject?.setPosition(fromWindow: window)
         subject?.movement?.isEnabled = true

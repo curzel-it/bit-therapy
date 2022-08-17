@@ -21,10 +21,6 @@ let package = Package(
             dependencies: [
                 .product(name: "Pets", package: "Pets")
             ]
-        ),
-        .testTarget(
-            name: "LangTests",
-            dependencies: ["Lang"]
         )
     ]
 )

@@ -7,19 +7,19 @@ import Biosphere
 import Combine
 import SwiftUI
 
-open class EntityWindow: NSWindow {
+class EntityWindow: NSWindow {
     
-    public let entity: Entity
-    public let habitat: LiveEnvironment
+    let entity: Entity
+    let habitat: LiveEnvironment
     
-    public weak var entityView: NSView!
+    weak var entityView: NSView!
     
     private var boundsCanc: AnyCancellable!
     private var aliveCanc: AnyCancellable!
     
     private(set) var expectedFrame: CGRect = .zero
     
-    public init(representing entity: Entity, in habitat: LiveEnvironment) {
+    init(representing entity: Entity, in habitat: LiveEnvironment) {
         self.entity = entity
         self.habitat = habitat
         
@@ -52,7 +52,7 @@ open class EntityWindow: NSWindow {
         collectionBehavior = .canJoinAllSpaces
     }
     
-    open override func close() {
+    override func close() {
         boundsCanc?.cancel()
         boundsCanc = nil
         super.close()

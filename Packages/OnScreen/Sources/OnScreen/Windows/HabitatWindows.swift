@@ -11,7 +11,7 @@ import Schwifty
 import Squanch
 import SwiftUI
 
-open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
+class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
     
     weak var habitat: Habitat?
     
@@ -21,9 +21,9 @@ open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate 
     
     private var childrenCanc: AnyCancellable!
     
-    public let tag: String
+    let tag: String
     
-    public init(
+    init(
         id: String,
         for habitat: Habitat,
         whenAllWindowsHaveBeenClosed: @escaping () -> Void
@@ -64,7 +64,7 @@ open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate 
         return window
     }
     
-    open func newWindow(representing entity: Entity, in habitat: Habitat) -> EntityWindow {
+    func newWindow(representing entity: Entity, in habitat: Habitat) -> EntityWindow {
         EntityWindow(representing: entity, in: habitat)
     }
     
@@ -84,7 +84,7 @@ open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate 
     
     // MARK: - Window Closed
     
-    public func windowWillClose(_ notification: Notification) {
+    func windowWillClose(_ notification: Notification) {
         guard windows.count > 0 else { return }
         guard let windowBeingClosed = notification.object as? EntityWindow else { return }
         windows.removeAll { $0 == windowBeingClosed }
@@ -100,7 +100,7 @@ open class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate 
     
     // MARK: - Kill Switch
     
-    public func kill() {
+    func kill() {
         whenAllWindowsHaveBeenClosed = {}
         childrenCanc?.cancel()
         childrenCanc = nil

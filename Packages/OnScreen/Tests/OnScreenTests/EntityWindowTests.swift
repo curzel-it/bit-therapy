@@ -5,7 +5,7 @@
 import XCTest
 import Biosphere
 
-@testable import EntityWindow
+@testable import OnScreen
 
 class EntityWindowTests: XCTestCase {
     

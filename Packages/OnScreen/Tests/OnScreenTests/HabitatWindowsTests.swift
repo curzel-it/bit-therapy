@@ -5,7 +5,7 @@
 import XCTest
 import Biosphere
 
-@testable import HabitatWindows
+@testable import OnScreen
 
 class HabitatWindowsTests: XCTestCase {
     

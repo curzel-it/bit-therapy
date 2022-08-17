@@ -61,7 +61,6 @@ extension Capabilities {
     
     static let defaultsNoGravity: Capabilities = [
         LinearMovement.self,
-        // BounceOffLateralBounds.self,
         BounceOffLateralCollisions.self,
         FlipHorizontallyWhenGoingLeft.self,
         ReactToHotspots.self,

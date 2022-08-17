@@ -34,13 +34,13 @@ class UfoEntity: PetEntity {
     }
     
     func abduct(_ target: Entity, _ onCompletion: @escaping () -> Void) {
-        uninstall(BounceOffLateralBounds.self)
+        uninstall(BounceOffLateralCollisions.self)
         uninstall(ReactToHotspots.self)
         
         let abduction = install(UfoAbduction.self)
         
         abduction.abduct(target) {
-            self.install(BounceOffLateralBounds.self)
+            self.install(BounceOffLateralCollisions.self)
             self.install(ReactToHotspots.self)
             onCompletion()
         }

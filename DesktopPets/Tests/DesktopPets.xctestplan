@@ -40,13 +40,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/Lang",
-        "identifier" : "LangTests",
-        "name" : "LangTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/Biosphere",
         "identifier" : "BiosphereTests",
         "name" : "BiosphereTests"

@@ -24,8 +24,6 @@
 		A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C62874766C00A9F738 /* LaunchAtLogin */; };
 		A63AC7C92874768400A9F738 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C82874768400A9F738 /* AppState */; };
 		A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7CA2874768400A9F738 /* Biosphere */; };
-		A63AC7CF2874768400A9F738 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7CE2874768400A9F738 /* EntityWindow */; };
-		A63AC7D12874768400A9F738 /* HabitatWindows in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D02874768400A9F738 /* HabitatWindows */; };
 		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
 		A63AC7D52874768400A9F738 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D42874768400A9F738 /* Lang */; };
 		A63AC7D72874768400A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D62874768400A9F738 /* OnScreen */; };
@@ -149,13 +147,11 @@
 				A63AC7D52874768400A9F738 /* Lang in Frameworks */,
 				A63AC7DF2874768400A9F738 /* Squanch in Frameworks */,
 				A63AC7E32874768400A9F738 /* UfoAbduction in Frameworks */,
-				A63AC7CF2874768400A9F738 /* EntityWindow in Frameworks */,
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
 				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
 				1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */,
-				A63AC7D12874768400A9F738 /* HabitatWindows in Frameworks */,
 				A63AC7C92874768400A9F738 /* AppState in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,8 +333,6 @@
 			packageProductDependencies = (
 				A63AC7C82874768400A9F738 /* AppState */,
 				A63AC7CA2874768400A9F738 /* Biosphere */,
-				A63AC7CE2874768400A9F738 /* EntityWindow */,
-				A63AC7D02874768400A9F738 /* HabitatWindows */,
 				A63AC7D22874768400A9F738 /* InAppPurchases */,
 				A63AC7D42874768400A9F738 /* Lang */,
 				A63AC7D62874768400A9F738 /* OnScreen */,
@@ -1009,14 +1003,6 @@
 		A63AC7CA2874768400A9F738 /* Biosphere */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Biosphere;
-		};
-		A63AC7CE2874768400A9F738 /* EntityWindow */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = EntityWindow;
-		};
-		A63AC7D02874768400A9F738 /* HabitatWindows */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HabitatWindows;
 		};
 		A63AC7D22874768400A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;
