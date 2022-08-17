@@ -35,7 +35,11 @@ struct MainView: View {
 extension AppPage: CustomStringConvertible, Tabbable {
     
     public var description: String {
-        "page.title.\(self.rawValue)".localized()
+        switch self {
+        case .home: return Lang.Page.home
+        case .settings: return Lang.Page.settings
+        case .about: return Lang.Page.about
+        }
     }
 }
 

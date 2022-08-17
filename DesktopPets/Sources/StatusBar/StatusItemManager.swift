@@ -4,6 +4,7 @@
 
 import AppKit
 import AppState
+import Lang
 import OnScreen
 import SwiftUI
 
@@ -48,7 +49,7 @@ class MainStatusBarItem: NSObject {
     
     private func buildItem(_ key: String, _ action: Selector) -> NSMenuItem {
         let item = NSMenuItem(
-            title: "menu.item.\(key)".localized(),
+            title: Lang.Menu.item(key),
             action: action,
             keyEquivalent: key
         )

@@ -5,7 +5,7 @@
 import Foundation
 import Pets
 
-public class Lang {
+public enum Lang {
     
     // MARK: - Generic
     
@@ -17,9 +17,25 @@ public class Lang {
     public static let done = "done".localized()
     public static let somethingWentWrong = "somethingWentWrong".localized()
     
+    // MARK: - Pages
+    
+    public enum Page {
+        
+        public static let home = "page.title.home".localized()
+        public static let settings = "page.title.settings".localized()
+        public static let about = "page.title.about".localized()
+    }
+    
+    // MARK: - Menu
+    
+    public enum Menu {
+        
+        public static func item(_ key: String) -> String { "menu.item.\(key)".localized() }
+    }
+    
     // MARK: - Settings
     
-    public class Settings {
+    public enum Settings {
         
         public static let gravity = "settings.gravity".localized()
         public static let size = "settings.size".localized()
@@ -36,7 +52,7 @@ public class Lang {
     
     // MARK: - About
     
-    public class About {
+    public enum About {
         
         public static let leaveReviewMessage = "about.leaveReviewMessage".localized()
         public static let leaveReview = "about.leaveReview".localized()
@@ -49,14 +65,14 @@ public class Lang {
     
     // MARK: - Pet Selection
     
-    public class PetSelection {
+    public enum PetSelection {
         
         public static let showPet = "petSelection.showPet".localized()
     }
     
     // MARK: - Purchases
     
-    public class Purchases {
+    public enum Purchases {
         
         public static let buy = "purchases.buy".localized()
         public static let buyFor = "purchases.buyFor".localized()
@@ -75,9 +91,9 @@ extension Pet {
 
 // MARK: - Utils
 
-extension String {
+private extension String {
 
-    public func localized(in bundle: Bundle = .main) -> String {
+    func localized(in bundle: Bundle = .main) -> String {
         NSLocalizedString(self, bundle: bundle, comment: self)
     }
 }
