@@ -18,6 +18,7 @@ extension Environment {
             in: bounds
         )
         entity.isEphemeral = true
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }
@@ -34,6 +35,7 @@ extension Environment {
             in: bounds
         )
         entity.isEphemeral = true
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }
@@ -50,6 +52,7 @@ extension Environment {
             in: bounds
         )
         entity.isEphemeral = true
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }
@@ -66,6 +69,7 @@ extension Environment {
             in: bounds
         )
         entity.isEphemeral = true
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }

@@ -20,6 +20,7 @@ extension Environment {
             ),
             in: bounds
         )
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }
@@ -35,6 +36,7 @@ extension Environment {
             ),
             in: bounds
         )
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }
@@ -50,6 +52,7 @@ extension Environment {
             ),
             in: bounds
         )
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }
@@ -65,6 +68,7 @@ extension Environment {
             ),
             in: bounds
         )
+        entity.isDrawable = false
         entity.isStatic = true
         return entity
     }

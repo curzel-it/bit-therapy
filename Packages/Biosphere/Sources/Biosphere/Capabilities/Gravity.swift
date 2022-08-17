@@ -24,6 +24,7 @@ open class Gravity: Capability {
     open func groundCollision(from collisions: Collisions) -> Collision? {
         let minLand = (subject?.frame.width ?? 0) / 2
         return collisions
+            .filter { !$0.isEphemeral }
             .filter { $0.intersection.width > minLand }
             .first
     }
