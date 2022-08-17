@@ -6,8 +6,6 @@ import AppKit
 import AppState
 import Biosphere
 import Combine
-import EntityWindow
-
 import Pets
 import Squanch
 

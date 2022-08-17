@@ -17,7 +17,7 @@ public class AppState: ObservableObject {
     
     @Published public var mainWindowFocused: Bool = true
     
-    @AppStorage("desktopInteractions") public var desktopInteractions: Bool = false {
+    @AppStorage("desktopInteractions") public var desktopInteractions: Bool = true {
         didSet {
             gravityEnabled = gravityEnabled || desktopInteractions
         }
@@ -33,7 +33,7 @@ public class AppState: ObservableObject {
     
     @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize
     
-    @AppStorage("gravityEnabled") public var gravityEnabled = false {
+    @AppStorage("gravityEnabled") public var gravityEnabled = true {
         didSet {
             Gravity.isEnabled = gravityEnabled
         }

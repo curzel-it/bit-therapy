@@ -5,9 +5,6 @@
 import AppState
 import Biosphere
 import Combine
-import EntityWindow
-import HabitatWindows
-
 import Pets
 import Schwifty
 import Squanch

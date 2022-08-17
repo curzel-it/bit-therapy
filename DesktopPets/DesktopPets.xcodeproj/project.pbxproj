@@ -15,8 +15,6 @@
 		1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7928A51BBF00BCBBD4 /* Lang */; };
 		1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7B28A51BBF00BCBBD4 /* Squanch */; };
 		A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AC2874766200A9F738 /* Biosphere */; };
-		A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B02874766200A9F738 /* EntityWindow */; };
-		A63AC7B32874766200A9F738 /* HabitatWindows in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B22874766200A9F738 /* HabitatWindows */; };
 		A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B42874766200A9F738 /* InAppPurchases */; };
 		A63AC7B92874766200A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B82874766200A9F738 /* OnScreen */; };
 		A63AC7BB2874766200A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BA2874766200A9F738 /* Pets */; };
@@ -122,7 +120,6 @@
 				1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */,
 				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
 				A63AC7C52874766200A9F738 /* UfoAbduction in Frameworks */,
-				A63AC7B12874766200A9F738 /* EntityWindow in Frameworks */,
 				1EE263FF2892866A00771170 /* Schwifty in Frameworks */,
 				A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */,
 				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
@@ -130,7 +127,6 @@
 				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
 				1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */,
 				1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */,
-				A63AC7B32874766200A9F738 /* HabitatWindows in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +282,6 @@
 			name = "Desktop Pets Dev";
 			packageProductDependencies = (
 				A63AC7AC2874766200A9F738 /* Biosphere */,
-				A63AC7B02874766200A9F738 /* EntityWindow */,
-				A63AC7B22874766200A9F738 /* HabitatWindows */,
 				A63AC7B42874766200A9F738 /* InAppPurchases */,
 				A63AC7B82874766200A9F738 /* OnScreen */,
 				A63AC7BA2874766200A9F738 /* Pets */,
@@ -978,14 +972,6 @@
 		A63AC7AC2874766200A9F738 /* Biosphere */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Biosphere;
-		};
-		A63AC7B02874766200A9F738 /* EntityWindow */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = EntityWindow;
-		};
-		A63AC7B22874766200A9F738 /* HabitatWindows */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HabitatWindows;
 		};
 		A63AC7B42874766200A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;

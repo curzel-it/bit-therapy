@@ -2,8 +2,6 @@
 // Pet Therapy.
 // 
 
-// import DesignSystem
-import EntityWindow
 import Schwifty
 import SwiftUI
 

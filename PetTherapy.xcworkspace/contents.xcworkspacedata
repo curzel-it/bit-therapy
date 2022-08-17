@@ -20,13 +20,7 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
-      location = "group:Packages/EntityWindow">
-   </FileRef>
-   <FileRef
       location = "group:Packages/Geometry">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/HabitatWindows">
    </FileRef>
    <FileRef
       location = "group:Packages/InAppPurchases">

@@ -54,20 +54,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/EntityWindow",
-        "identifier" : "EntityWindowTests",
-        "name" : "EntityWindowTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/Packages\/HabitatWindows",
-        "identifier" : "HabitatWindowsTests",
-        "name" : "HabitatWindowsTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/OnScreen",
         "identifier" : "OnScreenTests",
         "name" : "OnScreenTests"
