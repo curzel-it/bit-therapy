@@ -29,7 +29,7 @@ open class EntityWindow: NSWindow {
             backing: .buffered,
             defer: false
         )
-        makeTransparent()
+        setup()
         loadEntityView()
         bindToEntityFrame()
         bindToEntityLifecycle()
@@ -43,11 +43,11 @@ open class EntityWindow: NSWindow {
         entityView = view
     }
     
-    private func makeTransparent() {
+    private func setup() {
         isOpaque = false
         hasShadow = false
         backgroundColor = .clear
-        isMovableByWindowBackground = true
+        isMovableByWindowBackground = !entity.isStatic        
         level = .statusBar
         collectionBehavior = .canJoinAllSpaces
     }

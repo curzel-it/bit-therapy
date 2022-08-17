@@ -13,7 +13,7 @@ class HostedEntityView: NSView {
     
     let entity: Entity
     let habitat: LiveEnvironment
-        
+            
     weak var onScreenView: NSView!
     weak var rightClickMenu: NSView!
     
