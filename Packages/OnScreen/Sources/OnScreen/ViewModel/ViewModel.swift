@@ -67,6 +67,7 @@ class ViewModel: LiveEnvironment {
             size: AppState.global.petSize,
             in: state.bounds
         )
+        pet.install(PacManEffect.self)
         pet.install(MouseDraggable.self)
         pet.install(ShowsMenuOnRightClick.self)
         pet.set(direction: .init(dx: 1, dy: 0))

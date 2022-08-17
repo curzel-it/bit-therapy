@@ -42,7 +42,7 @@ public class ReactToHotspots: Capability {
     public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         guard case .move = subject?.state else { return }
-        let touched = Hotspot.allCases.filter { collisions.with($0) }
+        let touched = Hotspot.allCases.filter { collisions.contains($0) }
         let newTouched = touched.filter { !lastTouched.contains($0) }
         handle(touched: newTouched)
         lastTouched = touched
@@ -72,12 +72,5 @@ public class ReactToHotspots: Capability {
         super.uninstall()
         dragCanc?.cancel()
         dragCanc = nil
-    }
-}
-
-private extension Collisions {
-    
-    func with(_ bound: Hotspot) -> Bool {
-        contains { $0.bodyId == bound.rawValue }
     }
 }
