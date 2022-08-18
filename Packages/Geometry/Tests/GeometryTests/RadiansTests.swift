@@ -4,7 +4,7 @@
 
 import XCTest
 
-@testable import Squanch
+@testable import Geometry
 
 class RadiansTests: XCTestCase {
     
