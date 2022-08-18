@@ -20,7 +20,6 @@
 		A63AC7BB2874766200A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BA2874766200A9F738 /* Pets */; };
 		A63AC7BD2874766200A9F738 /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BC2874766200A9F738 /* PetSelection */; };
 		A63AC7C32874766200A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C22874766200A9F738 /* Tracking */; };
-		A63AC7C52874766200A9F738 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C42874766200A9F738 /* UfoAbduction */; };
 		A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C62874766C00A9F738 /* LaunchAtLogin */; };
 		A63AC7C92874768400A9F738 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C82874768400A9F738 /* AppState */; };
 		A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7CA2874768400A9F738 /* Biosphere */; };
@@ -31,7 +30,6 @@
 		A63AC7DB2874768400A9F738 /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7DA2874768400A9F738 /* PetSelection */; };
 		A63AC7DF2874768400A9F738 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7DE2874768400A9F738 /* Squanch */; };
 		A63AC7E12874768400A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E02874768400A9F738 /* Tracking */; };
-		A63AC7E32874768400A9F738 /* UfoAbduction in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E22874768400A9F738 /* UfoAbduction */; };
 		A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E42874768400A9F738 /* LaunchAtLogin */; };
 		A63AC7E7287479A800A9F738 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E6287479A800A9F738 /* DesignSystem */; };
 		A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E8287479AD00A9F738 /* DesignSystem */; };
@@ -117,7 +115,6 @@
 				A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */,
 				1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */,
 				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
-				A63AC7C52874766200A9F738 /* UfoAbduction in Frameworks */,
 				1EE263FF2892866A00771170 /* Schwifty in Frameworks */,
 				A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */,
 				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
@@ -146,7 +143,6 @@
 				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
 				A63AC7D52874768400A9F738 /* Lang in Frameworks */,
 				A63AC7DF2874768400A9F738 /* Squanch in Frameworks */,
-				A63AC7E32874768400A9F738 /* UfoAbduction in Frameworks */,
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
 				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
@@ -283,7 +279,6 @@
 				A63AC7BA2874766200A9F738 /* Pets */,
 				A63AC7BC2874766200A9F738 /* PetSelection */,
 				A63AC7C22874766200A9F738 /* Tracking */,
-				A63AC7C42874766200A9F738 /* UfoAbduction */,
 				A63AC7C62874766C00A9F738 /* LaunchAtLogin */,
 				A63AC7E6287479A800A9F738 /* DesignSystem */,
 				1EDBC2C32891BD3200A8D37B /* OnWindow */,
@@ -340,7 +335,6 @@
 				A63AC7DA2874768400A9F738 /* PetSelection */,
 				A63AC7DE2874768400A9F738 /* Squanch */,
 				A63AC7E02874768400A9F738 /* Tracking */,
-				A63AC7E22874768400A9F738 /* UfoAbduction */,
 				A63AC7E42874768400A9F738 /* LaunchAtLogin */,
 				A63AC7E8287479AD00A9F738 /* DesignSystem */,
 				1EDBC2C12891BD2C00A8D37B /* OnWindow */,
@@ -987,10 +981,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Tracking;
 		};
-		A63AC7C42874766200A9F738 /* UfoAbduction */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UfoAbduction;
-		};
 		A63AC7C62874766C00A9F738 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
@@ -1031,10 +1021,6 @@
 		A63AC7E02874768400A9F738 /* Tracking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Tracking;
-		};
-		A63AC7E22874768400A9F738 /* UfoAbduction */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UfoAbduction;
 		};
 		A63AC7E42874768400A9F738 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;

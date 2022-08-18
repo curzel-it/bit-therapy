@@ -13,7 +13,6 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../AppState"),
-        .package(path: "../UfoAbduction"),
         .package(path: "../Biosphere"),
         .package(path: "../Pets"),
         .package(path: "../Squanch"),
@@ -29,7 +28,6 @@ let package = Package(
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch"),
-                .product(name: "UfoAbduction", package: "UfoAbduction"),
                 .product(name: "WindowsDetector", package: "WindowsDetector")
             ]
         ),

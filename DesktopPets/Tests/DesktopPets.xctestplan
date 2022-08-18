@@ -61,13 +61,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/UfoAbduction",
-        "identifier" : "UfoAbductionTests",
-        "name" : "UfoAbductionTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/Geometry",
         "identifier" : "GeometryTests",
         "name" : "GeometryTests"

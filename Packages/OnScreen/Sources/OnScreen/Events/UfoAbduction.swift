@@ -9,7 +9,7 @@ import Pets
 
 // MARK: - Event
 
-public func animateUfoAbduction(
+func animateUfoAbduction(
     of target: Entity,
     in env: Environment,
     onCompletion: @escaping () -> Void
@@ -22,7 +22,7 @@ public func animateUfoAbduction(
 
 // MARK: - Entity
 
-class UfoEntity: PetEntity {
+private class UfoEntity: PetEntity {
     
     init(in habitatBounds: CGRect) {
         super.init(
@@ -49,9 +49,9 @@ class UfoEntity: PetEntity {
 
 // MARK: - Animation
 
-extension EntityAnimation {
+private extension EntityAnimation {
     
-    fileprivate static let abduction = EntityAnimation(
+    static let abduction = EntityAnimation(
         id: "abduction",
         size: CGSize(width: 1, height: 3),
         position: .entityTopLeft
