@@ -35,9 +35,6 @@
       location = "group:Packages/Pets">
    </FileRef>
    <FileRef
-      location = "group:Packages/PetSelection">
-   </FileRef>
-   <FileRef
       location = "group:Packages/Squanch">
    </FileRef>
    <FileRef

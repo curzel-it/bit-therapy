@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1FA9B028AE851F0082A113 /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A928AE851F0082A113 /* PetDetails.swift */; };
+		1E1FA9B128AE851F0082A113 /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A928AE851F0082A113 /* PetDetails.swift */; };
+		1E1FA9B228AE851F0082A113 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */; };
+		1E1FA9B328AE851F0082A113 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */; };
+		1E1FA9B428AE851F0082A113 /* PetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* PetSelection.swift */; };
+		1E1FA9B528AE851F0082A113 /* PetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* PetSelection.swift */; };
+		1E1FA9B628AE851F0082A113 /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */; };
+		1E1FA9B728AE851F0082A113 /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */; };
+		1E1FA9B828AE851F0082A113 /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */; };
+		1E1FA9B928AE851F0082A113 /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */; };
+		1E1FA9BA28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */; };
+		1E1FA9BB28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */; };
 		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
@@ -18,7 +30,6 @@
 		A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B42874766200A9F738 /* InAppPurchases */; };
 		A63AC7B92874766200A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B82874766200A9F738 /* OnScreen */; };
 		A63AC7BB2874766200A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BA2874766200A9F738 /* Pets */; };
-		A63AC7BD2874766200A9F738 /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BC2874766200A9F738 /* PetSelection */; };
 		A63AC7C32874766200A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C22874766200A9F738 /* Tracking */; };
 		A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C62874766C00A9F738 /* LaunchAtLogin */; };
 		A63AC7C92874768400A9F738 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C82874768400A9F738 /* AppState */; };
@@ -27,7 +38,6 @@
 		A63AC7D52874768400A9F738 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D42874768400A9F738 /* Lang */; };
 		A63AC7D72874768400A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D62874768400A9F738 /* OnScreen */; };
 		A63AC7D92874768400A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D82874768400A9F738 /* Pets */; };
-		A63AC7DB2874768400A9F738 /* PetSelection in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7DA2874768400A9F738 /* PetSelection */; };
 		A63AC7DF2874768400A9F738 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7DE2874768400A9F738 /* Squanch */; };
 		A63AC7E12874768400A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E02874768400A9F738 /* Tracking */; };
 		A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E42874768400A9F738 /* LaunchAtLogin */; };
@@ -80,6 +90,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1FA9A928AE851F0082A113 /* PetDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetails.swift; sourceTree = "<group>"; };
+		1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailsViewModel.swift; sourceTree = "<group>"; };
+		1E1FA9AC28AE851F0082A113 /* PetSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelection.swift; sourceTree = "<group>"; };
+		1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
+		1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectionGrid.swift; sourceTree = "<group>"; };
+		1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectionViewModel.swift; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +127,6 @@
 			files = (
 				A63AC7E7287479A800A9F738 /* DesignSystem in Frameworks */,
 				A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */,
-				A63AC7BD2874766200A9F738 /* PetSelection in Frameworks */,
 				A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */,
 				1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */,
 				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
@@ -138,7 +153,6 @@
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
-				A63AC7DB2874768400A9F738 /* PetSelection in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
 				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
 				A63AC7D52874768400A9F738 /* Lang in Frameworks */,
@@ -155,6 +169,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1FA9A728AE851F0082A113 /* PetSelection */ = {
+			isa = PBXGroup;
+			children = (
+				1E1FA9A828AE851F0082A113 /* Details */,
+				1E1FA9AB28AE851F0082A113 /* Grid */,
+			);
+			path = PetSelection;
+			sourceTree = "<group>";
+		};
+		1E1FA9A828AE851F0082A113 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				1E1FA9A928AE851F0082A113 /* PetDetails.swift */,
+				1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		1E1FA9AB28AE851F0082A113 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				1E1FA9AC28AE851F0082A113 /* PetSelection.swift */,
+				1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */,
+				1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */,
+				1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
 		A63AC7942874739100A9F738 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +246,7 @@
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1E1FA9A728AE851F0082A113 /* PetSelection */,
 				A6FB7D5228740F8E00AB872E /* Settings */,
 				A6FB7D5528740F8E00AB872E /* App */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
@@ -277,7 +321,6 @@
 				A63AC7B42874766200A9F738 /* InAppPurchases */,
 				A63AC7B82874766200A9F738 /* OnScreen */,
 				A63AC7BA2874766200A9F738 /* Pets */,
-				A63AC7BC2874766200A9F738 /* PetSelection */,
 				A63AC7C22874766200A9F738 /* Tracking */,
 				A63AC7C62874766C00A9F738 /* LaunchAtLogin */,
 				A63AC7E6287479A800A9F738 /* DesignSystem */,
@@ -332,7 +375,6 @@
 				A63AC7D42874768400A9F738 /* Lang */,
 				A63AC7D62874768400A9F738 /* OnScreen */,
 				A63AC7D82874768400A9F738 /* Pets */,
-				A63AC7DA2874768400A9F738 /* PetSelection */,
 				A63AC7DE2874768400A9F738 /* Squanch */,
 				A63AC7E02874768400A9F738 /* Tracking */,
 				A63AC7E42874768400A9F738 /* LaunchAtLogin */,
@@ -510,10 +552,16 @@
 			files = (
 				A6FB7D7928740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8228740F8E00AB872E /* MainView.swift in Sources */,
+				1E1FA9B628AE851F0082A113 /* PetGridItem.swift in Sources */,
 				A6FB7D8428740F8E00AB872E /* StatusItemManager.swift in Sources */,
+				1E1FA9B828AE851F0082A113 /* PetSelectionGrid.swift in Sources */,
 				A6FB7D8028740F8E00AB872E /* MainWindow.swift in Sources */,
 				A6FB7D8628740F8E00AB872E /* AboutView.swift in Sources */,
+				1E1FA9B028AE851F0082A113 /* PetDetails.swift in Sources */,
 				A6FB7D7E28740F8E00AB872E /* MyApp.swift in Sources */,
+				1E1FA9BA28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */,
+				1E1FA9B228AE851F0082A113 /* PetDetailsViewModel.swift in Sources */,
+				1E1FA9B428AE851F0082A113 /* PetSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,10 +579,16 @@
 			files = (
 				A6FB7D7B28740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MainView.swift in Sources */,
+				1E1FA9B728AE851F0082A113 /* PetGridItem.swift in Sources */,
 				A6FB7D8528740F8E00AB872E /* StatusItemManager.swift in Sources */,
+				1E1FA9B928AE851F0082A113 /* PetSelectionGrid.swift in Sources */,
 				A6FB7D8128740F8E00AB872E /* MainWindow.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
+				1E1FA9B128AE851F0082A113 /* PetDetails.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* MyApp.swift in Sources */,
+				1E1FA9BB28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */,
+				1E1FA9B328AE851F0082A113 /* PetDetailsViewModel.swift in Sources */,
+				1E1FA9B528AE851F0082A113 /* PetSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,10 +1027,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Pets;
 		};
-		A63AC7BC2874766200A9F738 /* PetSelection */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PetSelection;
-		};
 		A63AC7C22874766200A9F738 /* Tracking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Tracking;
@@ -1009,10 +1059,6 @@
 		A63AC7D82874768400A9F738 /* Pets */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Pets;
-		};
-		A63AC7DA2874768400A9F738 /* PetSelection */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PetSelection;
 		};
 		A63AC7DE2874768400A9F738 /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;
