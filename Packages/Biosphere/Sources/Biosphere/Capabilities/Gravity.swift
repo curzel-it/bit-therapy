@@ -22,9 +22,12 @@ open class Gravity: Capability {
     }
     
     open func groundCollision(from collisions: Collisions) -> Collision? {
-        let minLand = (subject?.frame.width ?? 0) / 2
+        guard let body = subject?.frame else { return nil }
+        let minLand = body.width / 2
+        
         return collisions
             .filter { !$0.isEphemeral }
+            .filter { body.minY < $0.intersection.minY }
             .filter { $0.intersection.width > minLand }
             .first
     }
