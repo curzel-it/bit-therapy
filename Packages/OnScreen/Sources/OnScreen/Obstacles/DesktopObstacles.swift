@@ -13,13 +13,16 @@ class DesktopObstaclesService: ObservableObject {
     
     private let habitatBounds: CGRect
     
+    private let debug: Bool
+    
     private let petSize: CGFloat
     
     private let windowsDetector = WindowsDetector().started(pollInterval: 1)
     
     private var windowsCanc: AnyCancellable!
     
-    init(habitatBounds: CGRect, petSize: CGFloat) {
+    init(habitatBounds: CGRect, petSize: CGFloat, debug: Bool=false) {
+        self.debug = debug
         self.habitatBounds = habitatBounds
         self.petSize = petSize
         windowsCanc = windowsDetector.$userWindows.sink { [weak self] in
@@ -40,8 +43,8 @@ class DesktopObstaclesService: ObservableObject {
                 let newObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
                 return newObstacles + [rect.roofRect()]
             }
-            .filter { isValid(frame: $0) }
-            .map { WindowRoof(of: $0, in: habitatBounds) }
+            .filter { isValidRoof(frame: $0) }
+            .map { WindowRoof(of: $0, in: habitatBounds, debug: debug) }
     }
     
     func isValid(process: String?) -> Bool {
@@ -50,7 +53,7 @@ class DesktopObstaclesService: ObservableObject {
         return true
     }
     
-    func isValid(frame: CGRect) -> Bool {
+    func isValidRoof(frame: CGRect) -> Bool {
         frame.minY > petSize
     }
     
@@ -69,9 +72,10 @@ extension CGRect {
 
 class WindowRoof: Entity {
     
-    init(of frame: CGRect, in habitatBounds: CGRect) {
+    init(of frame: CGRect, in habitatBounds: CGRect, debug: Bool) {
         super.init(id: WindowRoof.id(), frame: frame, in: habitatBounds)
-        self.isDrawable = false
+        self.backgroundColor = debug ? .red.opacity(0.5) : .clear
+        self.isDrawable = debug
         self.isStatic = true
     }
     
