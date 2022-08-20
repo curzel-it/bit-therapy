@@ -6,7 +6,6 @@ import AppState
 import DesignSystem
 import Lang
 import OnWindow
-import PetSelection
 import Schwifty
 import SwiftUI
 
