@@ -14,13 +14,13 @@ final class DesktopObstaclesTests: XCTestCase {
     func testWindowsTooHighUpAreNotValidObstacles() {
         let detector = DesktopObstaclesService(habitatBounds: habitat, petSize: 10)
         let rect = CGRect(x: 1, y: 2, width: 99, height: 200)
-        XCTAssertFalse(detector.isValid(frame: rect))
+        XCTAssertFalse(detector.isValidRoof(frame: rect))
     }
     
     func testWindowsWithValidProcessAndFrameAreValid() {
         let detector = DesktopObstaclesService(habitatBounds: habitat, petSize: 10)
         let rect = CGRect(x: 1, y: 200, width: 99, height: 200)
-        XCTAssertTrue(detector.isValid(frame: rect))
+        XCTAssertTrue(detector.isValidRoof(frame: rect))
     }
     
     func testRoofIsProperlyGeneratedFromWindow() {

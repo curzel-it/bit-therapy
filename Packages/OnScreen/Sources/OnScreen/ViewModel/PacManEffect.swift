@@ -21,7 +21,7 @@ public class PacManEffect: Capability {
     public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         guard case .move = subject?.state else { return }
-        if collisions.contains(.bottomRightCorner) {
+        if collisions.contains(.rightBound) {
             printDebug(tag, "Arrived at bottom right")
             subject?.set(origin: CGPoint(x: 20, y: 20))
             subject?.set(state: .freeFall)

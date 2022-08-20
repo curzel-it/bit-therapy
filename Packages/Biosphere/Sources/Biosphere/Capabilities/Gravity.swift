@@ -14,32 +14,42 @@ open class Gravity: Capability {
         guard isEnabled && Gravity.isEnabled else { return }
         guard subject?.state == .move || subject?.state == .freeFall else { return }
         
-        if let groundCollision = groundCollision(from: collisions) {
-            onGroundReached(groundCollision)
+        if let groundLevel = groundLevel(from: collisions) {
+            onGroundReached(at: groundLevel)
         } else {
             startFallingIfNeeded()
         }
     }
     
-    open func groundCollision(from collisions: Collisions) -> Collision? {
+    open func groundLevel(from collisions: Collisions) -> CGFloat? {
         guard let body = subject?.frame else { return nil }
-        let minLand = body.width / 2
+        let requiredSurfaceContact = body.width / 2
         
-        return collisions
+        let groundCollisions = collisions
             .filter { !$0.isEphemeral }
             .filter { body.minY < $0.intersection.minY }
-            .filter { $0.intersection.width > minLand }
-            .first
+        
+        let groundLevel = groundCollisions
+            .map { $0.intersection.minY }
+            .sorted { $0 < $1 }
+            .first ?? -1
+        
+        let surfaceContact = groundCollisions
+            .filter { $0.intersection.minY == groundLevel }
+            .map { $0.intersection.width }
+            .reduce(0, +)
+        
+        return surfaceContact > requiredSurfaceContact ? groundLevel : nil
     }
     
     @discardableResult
-    open func onGroundReached(_ groundCollision: Collision) -> Bool {
+    open func onGroundReached(at groundLevel: CGFloat) -> Bool {
         guard isFalling, let body = subject else { return false }
         isFalling = false
         
         let ground = CGPoint(
             x: body.frame.origin.x,
-            y: groundCollision.otherBody.minY - body.frame.height
+            y: groundLevel - body.frame.height
         )
         body.set(state: .move)
         body.set(direction: .init(dx: 1, dy: 0))
