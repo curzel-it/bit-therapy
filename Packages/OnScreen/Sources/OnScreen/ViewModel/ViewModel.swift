@@ -67,7 +67,9 @@ class ViewModel: LiveEnvironment {
             size: AppState.global.petSize,
             in: state.bounds
         )
-        pet.install(PacManEffect.self)
+        if PacManEffect.isCompatible(with: pet) {
+            pet.install(PacManEffect.self)
+        }
         pet.install(MouseDraggable.self)
         pet.install(ShowsMenuOnRightClick.self)
         pet.set(direction: .init(dx: 1, dy: 0))
@@ -78,5 +80,14 @@ class ViewModel: LiveEnvironment {
         super.kill(animated: animated)
         desktopObstacles?.stop()
         windowObstaclesCanc?.cancel()
+    }
+}
+
+extension PacManEffect {
+    
+    static func isCompatible(with entity: Entity) -> Bool {
+        guard entity.capability(for: BounceOffLateralCollisions.self) != nil else { return false }
+        guard entity.capability(for: Gravity.self) != nil else { return false }
+        return true
     }
 }
