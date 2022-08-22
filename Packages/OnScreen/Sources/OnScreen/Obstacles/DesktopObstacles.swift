@@ -37,7 +37,7 @@ class DesktopObstaclesService: ObservableObject {
     func obstacles(from windows: [WindowInfo]) -> [WindowRoof] {
         windows
             .reversed()
-            .filter { isValid(process: $0.processName) }
+            .filter { isValid(process: $0) }
             .map { $0.frame }
             .reduce([]) { obstacles, rect in
                 let newObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
@@ -47,9 +47,11 @@ class DesktopObstaclesService: ObservableObject {
             .map { WindowRoof(of: $0, in: habitatBounds, debug: debug) }
     }
     
-    func isValid(process: String?) -> Bool {
-        let name = (process ?? "").lowercased()
-        guard !name.contains("desktop pets") else { return false }
+    func isValid(process window: WindowInfo) -> Bool {
+        let name = (window.processName ?? "").lowercased()
+        if name.contains("desktop pets") {
+            return window.frame.width >= 450 && window.frame.height >= 450
+        }
         return true
     }
     
