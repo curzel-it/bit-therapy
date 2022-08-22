@@ -11,7 +11,7 @@ extension Pet {
         id: "ufo",
         behaviors: [
             .init(
-                trigger: .on(spot: .horizontalCenter),
+                trigger: .onAnyCorner,
                 possibleAnimations: [
                     .bombing,
                     .landing,
