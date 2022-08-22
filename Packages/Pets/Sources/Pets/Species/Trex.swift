@@ -11,7 +11,7 @@ extension Pet {
         id: "trex",
         behaviors: [
             .init(
-                trigger: .onAnyCorner,
+                trigger: .random,
                 possibleAnimations: [
                     .front,
                     .idle,

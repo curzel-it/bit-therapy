@@ -11,7 +11,7 @@ extension Pet {
         id: "egg",
         behaviors: [
             .init(
-                trigger: .onAnyCorner,
+                trigger: .random,
                 possibleAnimations: [
                     .jump,
                     .crack

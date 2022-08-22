@@ -11,7 +11,7 @@ extension Pet {
         id: "betta",
         behaviors: [
             .init(
-                trigger: .onAnyCorner,
+                trigger: .random,
                 possibleAnimations: [
                     .front,
                     .eat,
