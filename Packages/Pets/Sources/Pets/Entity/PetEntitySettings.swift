@@ -54,6 +54,8 @@ extension Capabilities {
     
     static let defaultsCrawler: Capabilities = [
         LinearMovement.self,
+        ReactToHotspots.self,
+        RandomAnimations.self,
         WallCrawler.self,
         AnimatedSprite.self,
         PetSpritesProvider.self
@@ -64,6 +66,7 @@ extension Capabilities {
         BounceOffLateralCollisions.self,
         FlipHorizontallyWhenGoingLeft.self,
         ReactToHotspots.self,
+        RandomAnimations.self,
         AnimatedSprite.self,
         PetSpritesProvider.self
     ]

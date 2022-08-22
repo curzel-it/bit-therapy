@@ -9,39 +9,48 @@ import Squanch
 
 public struct PetBehavior {
     
-    let trigger: PetBehavior.Trigger
+    let trigger: Trigger
     let possibleAnimations: [EntityAnimation]
     
-    public enum Trigger {
-        case onAnyCorner
-        case onLateralBounds
+    enum Trigger: Equatable {
+        case random
         case on(spot: Hotspot)
-    }
-}
-
-// MARK: - Behavior Application
-
-extension PetBehavior {
-    
-    public func applies(whenTouching spot: Hotspot) -> Bool {
-        switch trigger {
-        case .on(let required): return required == spot
-        case .onLateralBounds: return spot.isLateralBound
-        case .onAnyCorner: return spot.isCorner || spot.isAnchor
-        }
     }
 }
 
 extension Pet {
     
-    public func behaviors(whenTouching spot: Hotspot) -> [PetBehavior] {
-        behaviors.filter { $0.applies(whenTouching: spot) }
+    // MARK: - Animations by Spot
+    
+    public func action(whenTouching required: Hotspot) -> EntityAnimation? {
+        behaviors
+            .filter {
+                if case .on(let spot) = $0.trigger { return spot == required }
+                return false
+            }
+            .flatMap { $0.possibleAnimations }
+            .random()
+    }
+
+    // MARK: - Random Animation
+    
+    public func randomAnimation() -> EntityAnimation? {
+        behaviors
+            .filter { $0.trigger == .random }
+            .flatMap { $0.possibleAnimations }
+            .random()
+    }
+}
+
+// MARK: - Random Animations
+
+extension Array where Element == EntityAnimation {
+    
+    func random() -> EntityAnimation? {
+        randomElement(distribution: probabilities())
     }
     
-    public func action(whenTouching spot: Hotspot) -> EntityAnimation? {
-        let possibleAnimations = behaviors(whenTouching: spot)
-            .flatMap { $0.possibleAnimations }
-        let probabilities = possibleAnimations.map { $0.chance }
-        return possibleAnimations.randomElement(distribution: probabilities)
+    private func probabilities() -> [Double] {
+        map { $0.chance }
     }
 }
