@@ -2,7 +2,7 @@
 // Pet Therapy.
 //
 
-import Geometry
+import Squanch
 import SwiftUI
 
 public struct EntityAnimation: Equatable {

@@ -4,7 +4,7 @@
 
 import XCTest
 
-@testable import Geometry
+@testable import Squanch
 
 // swiftlint:disable identifier_name
 

@@ -4,11 +4,11 @@
 
 import XCTest
 
-@testable import Geometry
+@testable import Squanch
 
 class RectContainsAnyOfTests: XCTestCase {
     
-    func testTrueIfElementsAreOnGeometrytartEdge() {
+    func testTrueIfElementsAreOnRectStartEdge() {
         XCTAssertTrue(rect.contains(anyOf: [.ten]))
     }
     

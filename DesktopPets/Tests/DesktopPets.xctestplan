@@ -58,13 +58,6 @@
         "identifier" : "PetsTests",
         "name" : "PetsTests"
       }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/Packages\/Geometry",
-        "identifier" : "GeometryTests",
-        "name" : "GeometryTests"
-      }
     }
   ],
   "version" : 1
