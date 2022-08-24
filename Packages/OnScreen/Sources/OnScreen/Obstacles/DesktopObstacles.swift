@@ -21,7 +21,7 @@ class DesktopObstaclesService: ObservableObject {
     
     private var windowsCanc: AnyCancellable!
     
-    init(habitatBounds: CGRect, petSize: CGFloat, debug: Bool=false) {
+    init(habitatBounds: CGRect, petSize: CGFloat, debug: Bool=true) {
         self.debug = debug
         self.habitatBounds = habitatBounds
         self.petSize = petSize
@@ -41,9 +41,8 @@ class DesktopObstaclesService: ObservableObject {
             .map { $0.frame }
             .reduce([]) { obstacles, rect in
                 let newObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
-                return newObstacles + [rect.roofRect()]
+                return newObstacles + rect.obstacles()
             }
-            .filter { isValidRoof(frame: $0) }
             .map { WindowRoof(of: $0, in: habitatBounds, debug: debug) }
     }
     
@@ -55,10 +54,6 @@ class DesktopObstaclesService: ObservableObject {
         return true
     }
     
-    func isValidRoof(frame: CGRect) -> Bool {
-        frame.minY > petSize
-    }
-    
     func stop() {
         windowsDetector.stop()
         windowsCanc?.cancel()
@@ -67,8 +62,10 @@ class DesktopObstaclesService: ObservableObject {
 
 extension CGRect {
         
-    func roofRect() -> CGRect {
-        CGRect(x: minX, y: minY, width: width, height: min(height, 50))
+    func obstacles(borderThickness: CGFloat = 20) -> [CGRect] {
+        [
+            CGRect(x: minX, y: minY, width: width, height: borderThickness)
+        ]
     }
 }
 
