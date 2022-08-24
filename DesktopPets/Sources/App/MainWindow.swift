@@ -16,10 +16,6 @@ struct MainWindow: Scene {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .onWindow { window in
-                    window.makeKeyAndOrderFront(nil)
-                    window.title = "Desktop Pets"
-                }
         }
     }
 }

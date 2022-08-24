@@ -82,3 +82,9 @@ class EntityWindowTests: XCTestCase {
         XCTAssertEqual(window.expectedFrame.size, lastSize)
     }
 }
+
+extension LiveEnvironment: Equatable {
+    public static func == (lhs: LiveEnvironment, rhs: LiveEnvironment) -> Bool {
+        lhs.id == rhs.id
+    }
+}

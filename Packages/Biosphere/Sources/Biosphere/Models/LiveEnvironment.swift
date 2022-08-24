@@ -2,7 +2,6 @@
 // Pet Therapy.
 //
 
-import Biosphere
 import Squanch
 import SwiftUI
 

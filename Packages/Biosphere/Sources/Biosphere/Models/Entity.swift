@@ -2,9 +2,14 @@
 // Pet Therapy.
 //
 
-import NotAGif
 import SwiftUI
 import Squanch
+
+#if os(macOS)
+public typealias ImageFrame = NSImage
+#else
+public typealias ImageFrame = UIImage
+#endif
 
 open class Entity: Identifiable, ObservableObject {
     
