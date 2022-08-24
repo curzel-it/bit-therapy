@@ -100,6 +100,15 @@
       }
     },
     {
+      "identity" : "notagif",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/NotAGif",
+      "state" : {
+        "revision" : "90e225b4694f6aef08b019542add672cf9d5eb11",
+        "version" : "1.0.2"
+      }
+    },
+    {
       "identity" : "onwindow",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/OnWindow",
@@ -131,8 +140,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/schwifty",
       "state" : {
-        "revision" : "98dd73dfe33f695d1eed66d542e90e5fddeab1c8",
-        "version" : "1.0.0"
+        "revision" : "3ea8ac1245417131b40a341842a4573979232192",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "squanch",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/squanch",
+      "state" : {
+        "branch" : "master",
+        "revision" : "53d46d3e0979df1e1af00a7ffb3b852585a2206d"
       }
     },
     {

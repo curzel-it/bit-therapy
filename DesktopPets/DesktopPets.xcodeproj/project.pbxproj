@@ -23,6 +23,8 @@
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
+		1EE37C3C28B57FC800083B85 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE37C3B28B57FC800083B85 /* Squanch */; };
+		1EE37C3F28B57FE700083B85 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE37C3E28B57FE700083B85 /* Squanch */; };
 		1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7728A51BBF00BCBBD4 /* AppState */; };
 		1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7928A51BBF00BCBBD4 /* Lang */; };
 		1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7B28A51BBF00BCBBD4 /* Squanch */; };
@@ -135,6 +137,7 @@
 				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
 				A63AC7B92874766200A9F738 /* OnScreen in Frameworks */,
 				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
+				1EE37C3C28B57FC800083B85 /* Squanch in Frameworks */,
 				1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */,
 				1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */,
 			);
@@ -161,6 +164,7 @@
 				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
 				1EF696EA28B0E1B80042B9DA /* Lang in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
+				1EE37C3F28B57FE700083B85 /* Squanch in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
 				1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */,
 			);
@@ -329,6 +333,7 @@
 				1EF5CF7728A51BBF00BCBBD4 /* AppState */,
 				1EF5CF7928A51BBF00BCBBD4 /* Lang */,
 				1EF5CF7B28A51BBF00BCBBD4 /* Squanch */,
+				1EE37C3B28B57FC800083B85 /* Squanch */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1928746D2E00D695EA /* DesktopPets.app */;
@@ -381,6 +386,7 @@
 				1EF696E728B0E1B80042B9DA /* AppState */,
 				1EF696E928B0E1B80042B9DA /* Lang */,
 				1EF696EB28B0E1B80042B9DA /* Squanch */,
+				1EE37C3E28B57FE700083B85 /* Squanch */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -420,6 +426,8 @@
 				1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
 				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
 				1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */,
+				1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */,
+				1EE37C3D28B57FE700083B85 /* XCRemoteSwiftPackageReference "squanch" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -968,6 +976,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/squanch";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1EE37C3D28B57FE700083B85 /* XCRemoteSwiftPackageReference "squanch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/squanch";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
@@ -998,6 +1022,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
+		};
+		1EE37C3B28B57FC800083B85 /* Squanch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */;
+			productName = Squanch;
+		};
+		1EE37C3E28B57FE700083B85 /* Squanch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */;
+			productName = Squanch;
 		};
 		1EF5CF7728A51BBF00BCBBD4 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;

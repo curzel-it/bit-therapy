@@ -26,13 +26,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/Squanch",
-        "identifier" : "SquanchTests",
-        "name" : "SquanchTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/AppState",
         "identifier" : "AppStateTests",
         "name" : "AppStateTests"
