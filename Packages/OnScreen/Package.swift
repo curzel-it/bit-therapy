@@ -15,8 +15,8 @@ let package = Package(
         .package(path: "../AppState"),
         .package(path: "../Biosphere"),
         .package(path: "../Pets"),
-        .package(path: "../Squanch"),
-        .package(url: "https://github.com/curzel-it/Schwifty", from: "1.0.0"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.0"),
         .package(url: "https://github.com/curzel-it/WindowsDetector", from: "1.0.0")
     ],
     targets: [

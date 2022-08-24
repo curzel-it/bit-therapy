@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import NotAGif
 import SwiftUI
 import Squanch
 
@@ -16,7 +17,7 @@ open class Entity: Identifiable, ObservableObject {
     public var isEphemeral: Bool = false
     
     @Published public var isUpsideDown = false
-    @Published public var sprite: CGImage?
+    @Published public var sprite: ImageFrame?
     @Published public var xAngle: CGFloat = 0
     @Published public var yAngle: CGFloat = 0
     @Published public var zAngle: CGFloat = 0

@@ -14,8 +14,9 @@ let package = Package(
     dependencies: [
         .package(path: "../Biosphere"),
         .package(path: "../DesignSystem"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.0"),
-        .package(path: "../Squanch")
+        .package(url: "https://github.com/curzel-it/notagif", from: "1.0.2"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.0")
     ],
     targets: [
         .target(
@@ -23,6 +24,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Biosphere", package: "Biosphere"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
+                .product(name: "NotAGif", package: "NotAGif"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch")
             ],

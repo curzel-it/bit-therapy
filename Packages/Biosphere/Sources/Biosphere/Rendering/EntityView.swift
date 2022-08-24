@@ -18,8 +18,7 @@ public struct EntityView: View {
     public var body: some View {
         ZStack {
             if let sprite = child.sprite {
-                Image(sprite, scale: 1, label: Text(""))
-                    .pixelArt()
+                Image(frame: sprite).pixelArt()
             }
             if viewModel.debug {
                 Text(child.id)

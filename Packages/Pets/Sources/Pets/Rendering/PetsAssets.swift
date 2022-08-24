@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import NotAGif
 import Schwifty
 import Squanch
 import SwiftUI
@@ -12,7 +13,7 @@ public class PetsAssets {
         frames(for: baseName).count > 0
     }
     
-    public static func frames(for baseName: String) -> [CGImage] {
+    public static func frames(for baseName: String) -> [ImageFrame] {
         let paths = baseName.components(separatedBy: "_")
         
         if paths.count > 2 {
@@ -28,7 +29,7 @@ public class PetsAssets {
         return frames(fromDirectory: "Assets/\(baseName)")
     }
     
-    private static func frames(fromDirectory dir: String) -> [CGImage] {
+    private static func frames(fromDirectory dir: String) -> [ImageFrame] {
         let urls = Bundle.module.urls(
             forResourcesWithExtension: "png",
             subdirectory: dir
@@ -36,6 +37,6 @@ public class PetsAssets {
         
         return urls
             .sorted {$0.absoluteString < $1.absoluteString }
-            .compactMap { CGImage.from(contentsOfPng: $0) }
+            .compactMap { NSImage(contentsOf: $0) }
     }
 }

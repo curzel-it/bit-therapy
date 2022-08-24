@@ -3,6 +3,7 @@
 //
 
 import Combine
+import NotAGif
 import Schwifty
 import Squanch
 import SwiftUI
@@ -35,7 +36,7 @@ open class AnimatedSprite: Capability, ObservableObject {
         guard let path = subject?.animationPath(for: lastState) else { return }
         guard path != animation.baseName else { return }
         printDebug(id, "Loading", path)
-        animation.invalidate()
+        animation.clearHooks()
         animation = buildAnimator(baseName: path, state: lastState)
     }
     
@@ -104,4 +105,26 @@ open class AnimatedSprite: Capability, ObservableObject {
 extension Entity {
     
     public var animation: AnimatedSprite? { capability(for: AnimatedSprite.self) }
+}
+
+// MARK: - Image Animator
+
+public class ImageAnimator: TimedContentProvider<ImageFrame> {
+    
+    static let none: ImageAnimator = ImageAnimator(baseName: "", frames: [])
+    
+    public let baseName: String
+    
+    public init(
+        baseName: String, frames: [ImageFrame],
+        onFirstFrameLoaded: @escaping (Int) -> Void = { _ in},
+        onLoopCompleted: @escaping (Int) -> Void = { _ in}
+    ) {
+        self.baseName = baseName
+        super.init(
+            frames: frames,
+            onFirstFrameOfLoopLoaded: onFirstFrameLoaded,
+            onLoopCompleted: onLoopCompleted
+        )
+    }
 }
