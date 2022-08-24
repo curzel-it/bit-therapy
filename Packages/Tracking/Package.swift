@@ -12,10 +12,10 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "8.15.0"),
         .package(path: "../Lang"),
         .package(path: "../Pets"),
-        .package(path: "../Squanch")
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.0"),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "8.15.0")
     ],
     targets: [
         .target(
