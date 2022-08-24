@@ -16,20 +16,20 @@ class PetDetailsViewModel: ObservableObject {
     
     @Published var buyTitle: String = ""
     
-    let child: PetEntity
+    let pet: Pet
     
-    var title: String { child.species.name }
+    var title: String { pet.name }
     
     var pricing: PricingService { PricingService.global }
-    var isFree: Bool { !child.species.isPaid }
-    var hasBeenPaid: Bool { pricing.didPay(for: child.species) }
+    var isFree: Bool { !pet.isPaid }
+    var hasBeenPaid: Bool { pricing.didPay(for: pet) }
     var canSelect: Bool { isFree || hasBeenPaid }
     var canBuy: Bool { !isFree && !hasBeenPaid }
-    var price: PetPrice? { pricing.price(for: child.species) }
+    var price: PetPrice? { pricing.price(for: pet) }
         
-    init(isShown: Binding<Bool>, child: PetEntity) {
+    init(isShown: Binding<Bool>, pet: Pet) {
         self._isShown = isShown
-        self.child = child
+        self.pet = pet
         
         if let formatted = price?.formattedPrice {
             animateBuyTitle("\(Lang.Purchases.buyFor) \(formatted)")
@@ -45,15 +45,15 @@ class PetDetailsViewModel: ObservableObject {
     }
     
     func select() {
-        AppState.global.selectedPet = child.species.id
+        AppState.global.selectedPet = pet.id
         OnScreen.show()
-        Tracking.didSelect(child.species)
+        Tracking.didSelect(pet)
         close()
     }
     
     func buy() {
-        guard let item = pricing.price(for: child.species) else {
-            Tracking.purchased(pet: child.species, price: -1, success: false)
+        guard let item = pricing.price(for: pet) else {
+            Tracking.purchased(pet: pet, price: -1, success: false)
             return
         }
         animateBuyTitle(Lang.Purchases.purchasing)        
@@ -61,7 +61,7 @@ class PetDetailsViewModel: ObservableObject {
         Task {
             let succeed = await PricingService.global.buy(item)
             Tracking.purchased(
-                pet: child.species,
+                pet: pet,
                 price: item.doublePrice,
                 success: succeed
             )

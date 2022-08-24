@@ -3,6 +3,7 @@
 //
 
 import Combine
+import Biosphere
 import NotAGif
 import Schwifty
 import Squanch
@@ -98,13 +99,6 @@ open class AnimatedSprite: Capability, ObservableObject {
         stateCanc?.cancel()
         stateCanc = nil
     }
-}
-
-// MARK: - Entity Utils
-
-extension Entity {
-    
-    public var animation: AnimatedSprite? { capability(for: AnimatedSprite.self) }
 }
 
 // MARK: - Image Animator

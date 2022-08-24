@@ -250,11 +250,11 @@
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A6FB7D5B28740F8E00AB872E /* About */,
+				A6FB7D5528740F8E00AB872E /* App */,
 				1E1FA9A728AE851F0082A113 /* PetSelection */,
 				A6FB7D5228740F8E00AB872E /* Settings */,
-				A6FB7D5528740F8E00AB872E /* App */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
-				A6FB7D5B28740F8E00AB872E /* About */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

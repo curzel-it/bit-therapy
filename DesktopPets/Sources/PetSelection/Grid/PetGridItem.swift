@@ -15,21 +15,39 @@ import SwiftUI
 struct PetGridItem: View {
     
     @EnvironmentObject var appState: AppState
-    
     @EnvironmentObject var viewModel: PetSelectionViewModel
     
-    let pet: SelectablePet
+    let pet: Pet
     
-    var isSelected: Bool { appState.selectedPet == pet.species.id }
+    var isSelected: Bool { appState.selectedPet == pet.id }
     
     var body: some View {
         ZStack {
-            EntityView(child: pet)
+            PetPreview(pet: pet)
+            SelectionIndicator(isSelected: isSelected)
+            PetPriceOverlay(species: pet)
+        }
+    }
+}
+
+private struct PetPreview: View {
+    
+    @EnvironmentObject var viewModel: PetSelectionViewModel
+    
+    let pet: Pet
+    
+    var frame: NSImage? {
+        let name = PetAnimationPathsProvider().frontAnimationPath(for: pet)
+        return PetsAssets.frames(for: name).first
+    }
+    
+    var body: some View {
+        if let frame = frame {
+            Image(frame: frame)
+                .pixelArt()
+                .frame(width: 80, height: 80)
                 .padding(.top, 20)
                 .onTapGesture { viewModel.showDetails(of: pet) }
-            
-            SelectionIndicator(isSelected: isSelected)
-            PetPriceOverlay(species: pet.species)
         }
     }
 }
@@ -38,37 +56,13 @@ private struct SelectionIndicator: View {
     
     let isSelected: Bool
     
-    @State var isAnimating: Bool = false
-    
     var body: some View {
         if isSelected {
             Image(systemName: "arrowtriangle.down.fill")
                 .font(.regular, .lg)
                 .foregroundColor(.label)
                 .shadow(radius: 4)
-                .offset(y: isAnimating ? 4 : 0)
-                .animation(.default.repeatForever(), value: isAnimating)
-                .onAppear { isAnimating = true }
                 .positioned(.top)
-        }
-    }
-}
-
-public struct PetPriceOverlay: View {
-    
-    let species: Pet
-    
-    var pricing: PricingService { PricingService.global }
-    var isFree: Bool { !species.isPaid }
-    var hasBeenPaid: Bool { pricing.didPay(for: species) }
-    var canBuy: Bool { !isFree && !hasBeenPaid }
-    
-    public var body: some View {
-        if canBuy {
-            PetPriceView(species: species)
-                .positioned(.bottom)
-                .offset(x: -20)
-                .offset(y: 8)
         }
     }
 }

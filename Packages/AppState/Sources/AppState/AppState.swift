@@ -12,16 +12,8 @@ public class AppState: ObservableObject {
     public static let global = AppState()
     
     @Published public var selectedPage: AppPage = .home
-    
-    @Published public var mainWindowSize: CGSize = .zero
-    
-    @Published public var mainWindowFocused: Bool = true
-    
-    @AppStorage("desktopInteractions") public var desktopInteractions: Bool = true {
-        didSet {
-            gravityEnabled = gravityEnabled || desktopInteractions
-        }
-    }
+            
+    @AppStorage("desktopInteractions") public var desktopInteractions: Bool = true
     
     @AppStorage("petId") public var selectedPet: String = "sloth"
     

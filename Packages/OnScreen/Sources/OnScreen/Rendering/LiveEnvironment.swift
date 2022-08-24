@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import Biosphere
 import Squanch
 import SwiftUI
 
@@ -70,12 +71,5 @@ open class LiveEnvironment: ObservableObject {
             state.children.removeAll()
             printDebug(self.tag, "Terminated.")
         }
-    }
-}
-
-extension LiveEnvironment: Equatable {
-    
-    public static func == (lhs: LiveEnvironment, rhs: LiveEnvironment) -> Bool {
-        lhs.id == rhs.id
     }
 }

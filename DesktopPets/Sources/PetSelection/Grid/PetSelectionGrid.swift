@@ -12,35 +12,27 @@ import SwiftUI
 
 struct PetSelectionGrid: View {
     
-    @EnvironmentObject var appState: AppState
-    
+    @EnvironmentObject var appState: AppState    
     @EnvironmentObject var viewModel: PetSelectionViewModel
     
     var columns: [GridItem] {
-        [GridItem](
-            repeating: .init(
-                .adaptive(minimum: viewModel.petSize, maximum: viewModel.petSize*2),
-                spacing: Spacing.lg.rawValue
-            ),
-            count: 5
+        let item = GridItem(
+            .adaptive(minimum: 100, maximum: 200),
+            spacing: Spacing.lg.rawValue
         )
+        return [GridItem](repeating: item, count: 5)
     }
     
     var body: some View {
-        LazyVGrid(
-            columns: columns,
-            spacing: Spacing.xl.rawValue
-        ) {
-            ForEach(viewModel.state.children) { child in
-                if let pet = child as? SelectablePet {
-                    PetGridItem(pet: pet)
-                }
+        LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
+            ForEach(viewModel.pets) {
+                PetGridItem(pet: $0)
             }
-            Spacer()
         }
+        .padding(.lg)
         .sheet(isPresented: viewModel.showingDetails) {
             if let pet = viewModel.selectedPet {
-                PetDetails(isShown: viewModel.showingDetails, child: pet)
+                PetDetails(isShown: viewModel.showingDetails, pet: pet)
             }
         }
     }

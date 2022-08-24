@@ -27,7 +27,7 @@ struct MainView: View {
         .foregroundColor(.label)
         .font(.regular, .md)
         .environmentObject(AppState.global)
-        .onWindow { MainWindowDelegate.setup(for: $0) }
+        // .onWindow { MainWindowDelegate.setup(for: $0) }
     }
 }
 

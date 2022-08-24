@@ -6,6 +6,7 @@ import Biosphere
 import DesignSystem
 import InAppPurchases
 import Lang
+import NotAGif
 import Pets
 import Schwifty
 import Squanch
@@ -18,26 +19,23 @@ struct PetDetails: View {
     
     @EnvironmentObject var pricing: PricingService
     
-    init(isShown: Binding<Bool>, child: PetEntity) {
-        self._viewModel = StateObject(
-            wrappedValue: PetDetailsViewModel(
-                isShown: isShown, child: child
-            )
-        )
+    init(isShown: Binding<Bool>, pet: Pet) {
+        let vm = PetDetailsViewModel(isShown: isShown, pet: pet)
+        self._viewModel = StateObject(wrappedValue: vm)
     }
     
     var body: some View {
-        VStack(spacing: 80) {
+        VStack(spacing: .xl) {
             Text(viewModel.title).font(.bold, .xl)
-            Preview()
-            About()
+            AnimatedPreview()
+            About().padding(.top, .lg)
             Footer()
         }
         .padding(.lg)
         .frame(width: 450)
         .environmentObject(viewModel)
         .onAppear {
-            let species = viewModel.child.species
+            let species = viewModel.pet
             Tracking.didEnterDetails(
                 of: species,
                 price: pricing.price(for: species)?.doublePrice ?? 0,
@@ -52,23 +50,32 @@ private struct About: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
     var body: some View {
-        Text(viewModel.child.species.about)
+        Text(viewModel.pet.about)
             .lineLimit(5)
             .multilineTextAlignment(.center)
             .font(.regular, .md)
     }
 }
 
-private struct Preview: View {
+private struct AnimatedPreview: View {
     
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
+    var frames: [ImageFrame] {
+        let name = PetAnimationPathsProvider().frontAnimationPath(for: viewModel.pet)
+        return PetsAssets.frames(for: name)
+    }
+    
     var body: some View {
         ZStack {
-            EntityView(child: viewModel.child)
-            PetPriceOverlay(species: viewModel.child.species)
+            AnimatedContent(frames: frames, fps: 10) { imageFrame in
+                Image(frame: imageFrame)
+                    .pixelArt()
+                    .frame(width: 150, height: 150)
+            }
+            PetPriceOverlay(species: viewModel.pet).scaleEffect(1.5)
         }
-        .scaleEffect(1.5)
+        .frame(width: 150, height: 150)
     }
 }
 

@@ -15,6 +15,7 @@ let package = Package(
         .package(path: "../AppState"),
         .package(path: "../Biosphere"),
         .package(path: "../Pets"),
+        .package(path: "../Sprites"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
         .package(url: "https://github.com/curzel-it/squanch", from: "1.0.0"),
         .package(url: "https://github.com/curzel-it/WindowsDetector", from: "1.0.0")
@@ -28,6 +29,7 @@ let package = Package(
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch"),
+                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "WindowsDetector", package: "WindowsDetector")
             ]
         ),

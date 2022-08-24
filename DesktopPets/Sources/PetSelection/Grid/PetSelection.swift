@@ -12,7 +12,7 @@ import Schwifty
 import SwiftUI
 
 public struct PetSelectionView: View {
-        
+    
     @EnvironmentObject var appState: AppState
     
     @StateObject var viewModel = PetSelectionViewModel()
@@ -35,14 +35,6 @@ public struct PetSelectionView: View {
                 .padding(.lg)
         }
         .environmentObject(viewModel)
-        .environmentObject(viewModel as LiveEnvironment)
         .environmentObject(PricingService.global)
-        .onReceive(appState.$mainWindowFocused) { isFocused in
-            if isFocused {
-                viewModel.startRendering()
-            } else {
-                viewModel.pauseRendering()
-            }
-        }
     }
 }

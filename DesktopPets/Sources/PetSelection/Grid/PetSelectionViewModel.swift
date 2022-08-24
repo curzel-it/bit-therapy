@@ -10,9 +10,11 @@ import Schwifty
 import Squanch
 import SwiftUI
 
-class PetSelectionViewModel: LiveEnvironment {
+class PetSelectionViewModel: ObservableObject {
     
-    @Published var selectedPet: SelectablePet?
+    @Published var selectedPet: Pet?
+    
+    let pets: [Pet]
             
     lazy var showingDetails: Binding<Bool> = {
         Binding {
@@ -23,17 +25,13 @@ class PetSelectionViewModel: LiveEnvironment {
         }
     }()
     
-    let petSize: CGFloat = 90
+    // let petSize: CGFloat = 90
     
     init() {
-        super.init(id: "PetSelection", bounds: .zero)
-        let pets = Pet.availableSpecies.map { species in
-            SelectablePet(of: species, size: petSize, in: state.bounds)
-        }
-        state.children.append(contentsOf: pets)
+        pets = Pet.availableSpecies
     }
     
-    func showDetails(of pet: SelectablePet?) {
+    func showDetails(of pet: Pet?) {
         selectedPet = pet
     }
     
@@ -42,18 +40,4 @@ class PetSelectionViewModel: LiveEnvironment {
     }
 }
 
-class SelectablePet: PetEntity {
-        
-    init(of pet: Pet, size: CGFloat, in habitatBounds: CGRect) {
-        super.init(
-            of: pet,
-            size: size,
-            in: habitatBounds,
-            installCapabilities: false
-        )
-        install(AnimatedSprite.self)
-        install(PetSpritesProvider.self)
-        set(direction: .zero)
-        set(state: .animation(animation: .front, loops: nil))
-    }
-}
+extension Pet: Identifiable {}

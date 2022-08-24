@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import Biosphere
 import Schwifty
 import SwiftUI
 
@@ -31,4 +32,3 @@ public struct EntityView: View {
         .background(child.backgroundColor)
     }
 }
-

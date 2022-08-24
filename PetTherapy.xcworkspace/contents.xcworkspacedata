@@ -32,6 +32,9 @@
       location = "group:Packages/Pets">
    </FileRef>
    <FileRef
+      location = "group:Packages/Sprites">
+   </FileRef>
+   <FileRef
       location = "group:Packages/Tracking">
    </FileRef>
 </Workspace>

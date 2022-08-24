@@ -49,14 +49,6 @@ open class PetEntity: Entity {
     // MARK: - Animations
     
     open override func animationPath(for state: EntityState) -> String? {
-        let path: String
-        switch state {
-        case .freeFall: path = species.dragPath
-        case .drag: path = species.dragPath
-        case .move: path = species.movementPath
-        case .disappearing: return "smoke_bomb"
-        case .animation(let animation, _): path = animation.id
-        }
-        return "\(species.id)_\(path)"
+        PetAnimationPathsProvider().animationPath(species: species, state: state)
     }
 }

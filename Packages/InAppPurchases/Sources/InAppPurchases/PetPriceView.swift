@@ -36,3 +36,27 @@ public struct PetPriceView: View {
         }
     }
 }
+
+public struct PetPriceOverlay: View {
+    
+    let species: Pet
+    
+    var pricing: PricingService { PricingService.global }
+    var isFree: Bool { !species.isPaid }
+    var hasBeenPaid: Bool { pricing.didPay(for: species) }
+    var canBuy: Bool { !isFree && !hasBeenPaid }
+    
+    public init(species pet: Pet) {
+        species = pet
+    }
+    
+    public var body: some View {
+        if canBuy {
+            PetPriceView(species: species)
+                .positioned(.bottom)
+                .offset(x: -20)
+                .offset(y: 8)
+        }
+    }
+}
+
