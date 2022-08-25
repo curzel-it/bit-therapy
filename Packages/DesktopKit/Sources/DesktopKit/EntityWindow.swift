@@ -7,10 +7,10 @@ import Biosphere
 import Combine
 import SwiftUI
 
-class EntityWindow: NSWindow {
+open class EntityWindow: NSWindow {
     
-    let entity: Entity
-    let habitat: LiveEnvironment
+    public let entity: Entity
+    public let habitat: LiveEnvironment
     
     weak var entityView: NSView!
     
@@ -19,40 +19,43 @@ class EntityWindow: NSWindow {
     
     private(set) var expectedFrame: CGRect = .zero
     
-    init(representing entity: Entity, in habitat: LiveEnvironment) {
+    public init(representing entity: Entity, in habitat: LiveEnvironment) {
         self.entity = entity
         self.habitat = habitat
-        
-        super.init(
-            contentRect: .zero,
-            styleMask: .borderless,
-            backing: .buffered,
-            defer: false
-        )
-        setup()
+        super.init(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
+        setupWindow()
         loadEntityView()
         bindToEntityFrame()
         bindToEntityLifecycle()
     }
     
     private func loadEntityView() {
-        let view = HostedEntityView(representing: entity, in: habitat)
-        setFrame(CGRect(size: view.frame.size), display: true)
+        let view = buildEntityView()
         contentView?.addSubview(view)
         view.constrainToFillParent()
         entityView = view
     }
     
-    private func setup() {
+    open func buildEntityView() -> NSView {
+        let view = HostedEntityView(representing: entity, in: habitat)
+        setFrame(CGRect(size: view.frame.size), display: true)
+        return view
+    }
+    
+    private func setupWindow() {
         isOpaque = false
         hasShadow = false
         backgroundColor = .clear
         isMovableByWindowBackground = !entity.isStatic        
         level = .statusBar
         collectionBehavior = .canJoinAllSpaces
+        
+        if !entity.isStatic, entity.capability(for: MouseDraggable.self) == nil {
+            entity.install(MouseDraggable.self)
+        }
     }
     
-    override func close() {
+    open override func close() {
         boundsCanc?.cancel()
         boundsCanc = nil
         super.close()

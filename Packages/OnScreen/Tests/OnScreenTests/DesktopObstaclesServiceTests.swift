@@ -2,19 +2,26 @@
 // Pet Therapy.
 //
 
+import Biosphere
 import XCTest
-import WindowsDetector
 
 @testable import OnScreen
 
-final class DesktopObstaclesTests: XCTestCase {
+final class DesktopObstaclesServiceTests: XCTestCase {
     
-    let habitat = CGRect(x: 0, y: 0, width: 1000, height: 1000)    
+    let habitat = LiveEnvironment(
+        id: "DesktopObstaclesServiceTests",
+        bounds: CGRect(size: .init(square: 1000))
+    )
+
+    lazy var service: DesktopObstaclesService = {
+        DesktopObstaclesService(habitat: habitat)
+    }()
     
     func testRoofIsProperlyGeneratedFromWindow() {
         let rect = CGRect(x: 0, y: 0, width: 300, height: 300)
         let thickness: CGFloat = 20
-        let obstacles = rect.obstacles(borderThickness: thickness)
+        let obstacles = service.obstacles(from: rect, borderThickness: thickness)
         XCTAssertEqual(obstacles.count, 1)
         
         let top = obstacles[0]

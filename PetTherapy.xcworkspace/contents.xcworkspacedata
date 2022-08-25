@@ -20,6 +20,9 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
+      location = "group:Packages/DesktopKit">
+   </FileRef>
+   <FileRef
       location = "group:Packages/InAppPurchases">
    </FileRef>
    <FileRef

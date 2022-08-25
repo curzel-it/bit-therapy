@@ -5,40 +5,27 @@
 import XCTest
 import Biosphere
 
-@testable import OnScreen
+@testable import DesktopKit
 
 class HabitatWindowsTests: XCTestCase {
     
     var habitat: LiveEnvironment!
     var entity1: Entity!
     var entity2: Entity!
-    var windows: HabitatWindows<LiveEnvironment>!
+    var windows: HabitatWindows!
     
     override func setUp() {
+        let baseSize = CGRect(origin: .zero, size: .init(square: 100))
+        
         entity1?.kill(animated: false)
         entity2?.kill(animated: false)
         habitat?.kill(animated: false)
         windows?.kill()
         
-        habitat = LiveEnvironment(
-            id: "HabitatWindowsTests",
-            bounds: CGRect(size: .init(square: 1000))
-        )
-        entity1 = Entity(
-            id: "test1",
-            frame: .init(origin: .zero, size: .init(square: 100)),
-            in: habitat.state.bounds
-        )
-        entity2 = Entity(
-            id: "test2",
-            frame: .init(origin: .zero, size: .init(square: 100)),
-            in: habitat.state.bounds
-        )
-        windows = HabitatWindows<LiveEnvironment>(
-            id: "test",
-            for: habitat,
-            whenAllWindowsHaveBeenClosed: {}
-        )
+        habitat = LiveEnvironment(id: "HabitatWindowsTests", bounds: CGRect(size: .init(square: 1000)))
+        entity1 = Entity(id: "test1", frame: baseSize, in: habitat.state.bounds)
+        entity2 = Entity(id: "test2", frame: baseSize, in: habitat.state.bounds)
+        windows = HabitatWindows(for: habitat)
     }
     
     func testWindowsAreSpawnedAutomatically() {

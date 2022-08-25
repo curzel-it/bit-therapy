@@ -5,6 +5,7 @@
 import AppState
 import Biosphere
 import Combine
+import DesktopKit
 import Pets
 import Schwifty
 import Squanch
@@ -14,23 +15,12 @@ public struct OnScreen {
     
     private static var viewModel: ViewModel?
     private static var habitatWindows: OnScreenWindows?
-    private static var counter = 0
     
     public static func show() {
         hide()
-        counter += 1
         printDebug("OnScreen", "Starting...")
-        
-        let viewModel = ViewModel()
-        self.viewModel = viewModel
-        self.habitatWindows = OnScreenWindows(
-            id: "\(OnScreen.counter)",
-            for: viewModel,
-            whenAllWindowsHaveBeenClosed: {
-                printDebug("OnScreen", "No more windows, terminating")
-                OnScreen.hide(animated: false)
-            }
-        )
+        self.viewModel = ViewModel()
+        self.habitatWindows = OnScreenWindows(for: viewModel)
     }
     
     public static func hide(animated: Bool = true) {
@@ -42,13 +32,14 @@ public struct OnScreen {
     }
 }
 
-private class OnScreenWindows: HabitatWindows<LiveEnvironment> {
+class OnScreenWindows: HabitatWindows {
     
-    override func newWindow(representing entity: Entity, in habitat: LiveEnvironment) -> EntityWindow {
-        if let pet = entity as? PetEntity {
-            return PetWindow(representing: pet, in: habitat)
-        } else {
-            return super.newWindow(representing: entity, in: habitat)
+    override func windowWillClose(_ notification: Notification) {
+        super.windowWillClose(notification)
+        if isAlive && windows.count == 0 {
+            printDebug("OnScreen", "No more windows, terminating")
+            kill()
+            OnScreen.hide(animated: false)
         }
     }
 }

@@ -8,17 +8,39 @@ import Foundation
 import Sprites
 import Pets
 
-// MARK: - Event
+// MARK: - Schedule Event
 
-func animateUfoAbduction(
-    of target: Entity,
-    in env: Environment,
-    onCompletion: @escaping () -> Void
-) {
-    let ufo = UfoEntity(in: env.bounds)
-    ufo.set(origin: env.bounds.topLeft.offset(x: -100, y: -100))
-    env.children.append(ufo)
-    ufo.abduct(target, onCompletion)
+extension ViewModel {
+    
+    @discardableResult
+    func scheduleUfoAbduction() -> Event {
+        state.schedule(every: .timeOfDay(hour: 22, minute: 30)) { [weak self] _ in
+            guard let victim = self?.victim else { return }
+            self?.animateUfoAbduction(of: victim)
+        }
+    }
+}
+
+// MARK: - Play Event
+
+private extension ViewModel {
+    
+    var victim: PetEntity? {
+        state.children.compactMap { $0 as? PetEntity }.first
+    }
+    
+    func animateUfoAbduction(of target: Entity) {
+        let ufo = UfoEntity(in: state.bounds)
+        ufo.set(origin: state.bounds.topLeft.offset(x: -100, y: -100))
+        state.children.append(ufo)
+        ufo.abduct(target, onCompletion: respawn)
+    }
+    
+    func respawn() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+            OnScreen.show()
+        }
+    }
 }
 
 // MARK: - Entity
@@ -34,7 +56,7 @@ private class UfoEntity: PetEntity {
         )
     }
     
-    func abduct(_ target: Entity, _ onCompletion: @escaping () -> Void) {
+    func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
         uninstall(BounceOffLateralCollisions.self)
         uninstall(ReactToHotspots.self)
         uninstall(RandomAnimations.self)

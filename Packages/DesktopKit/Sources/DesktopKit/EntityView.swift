@@ -6,20 +6,16 @@ import Biosphere
 import Schwifty
 import SwiftUI
 
-public struct EntityView: View {
+struct EntityView: View {
     
     @EnvironmentObject var viewModel: LiveEnvironment
     
-    @ObservedObject var child: Entity
+    @StateObject var child: Entity
     
-    public init(child: Entity) {
-        self.child = child
-    }
-    
-    public var body: some View {
+    var body: some View {
         ZStack {
             if let sprite = child.sprite {
-                Image(frame: sprite).pixelArt()
+                Image(nsImage: sprite).pixelArt()
             }
             if viewModel.debug {
                 Text(child.id)

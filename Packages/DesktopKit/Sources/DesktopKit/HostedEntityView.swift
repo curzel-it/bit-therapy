@@ -2,9 +2,7 @@
 // Pet Therapy.
 //
 
-import AppState
 import Biosphere
-import DesignSystem
 import Schwifty
 import Squanch
 import SwiftUI
@@ -17,7 +15,7 @@ class HostedEntityView: NSView {
     weak var onScreenView: NSView!
     weak var rightClickMenu: NSView!
     
-    public init(representing entity: Entity, in habitat: LiveEnvironment) {
+    init(representing entity: Entity, in habitat: LiveEnvironment) {
         self.entity = entity
         self.habitat = habitat
         super.init(frame: CGRect(size: entity.frame.size))
@@ -32,10 +30,8 @@ class HostedEntityView: NSView {
     // MARK: - On Screen View
     
     private func loadEntityView() {
-        let view = EntityView(child: entity)
-            .font(.bold, .sm)
+        let view = EntityView(child: self.entity)
             .environmentObject(habitat)
-            .environmentObject(AppState.global)
             .hosted()
         
         view.translatesAutoresizingMaskIntoConstraints = false

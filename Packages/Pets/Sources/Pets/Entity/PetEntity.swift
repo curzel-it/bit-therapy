@@ -34,7 +34,7 @@ open class PetEntity: Entity {
     
     // MARK: - Kill
     
-    public override func kill(animated: Bool, onCompletion: @escaping () -> Void = {}) {
+    open override func kill(animated: Bool, onCompletion: @escaping () -> Void = {}) {
         if !animated {
             super.kill(animated: false)
         } else {

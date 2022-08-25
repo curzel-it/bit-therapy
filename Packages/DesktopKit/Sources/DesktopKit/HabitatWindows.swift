@@ -3,34 +3,24 @@
 //
 
 import AppKit
-import AppState
 import Biosphere
 import Combine
-import Pets
 import Schwifty
 import Squanch
 import SwiftUI
 
-class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
+open class HabitatWindows: NSObject, NSWindowDelegate {
     
-    weak var habitat: Habitat?
-    
-    var windows: [EntityWindow] = []
-    
-    var whenAllWindowsHaveBeenClosed: () -> Void
-    
+    weak var habitat: LiveEnvironment?
+    public private(set) var windows: [EntityWindow] = []
+    public private(set) var isAlive = true
     private var childrenCanc: AnyCancellable!
     
     let tag: String
     
-    init(
-        id: String,
-        for habitat: Habitat,
-        whenAllWindowsHaveBeenClosed: @escaping () -> Void
-    ) {
-        self.tag = "HabitatWindows-\(id)"
+    public init(for habitat: LiveEnvironment?) {
+        self.tag = "HabitatWindows-\(HabitatWindows.nextId())"
         self.habitat = habitat
-        self.whenAllWindowsHaveBeenClosed = whenAllWindowsHaveBeenClosed
         super.init()
         startSpawningWindows()
     }
@@ -48,13 +38,13 @@ class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
     
     // MARK: - Show Window
     
-    private func showWindow(representing entity: Entity, in habitat: Habitat) {
+    private func showWindow(representing entity: Entity, in habitat: LiveEnvironment) {
         let window = dequeueWindow(representing: entity, in: habitat)
         window.show()
         window.makeKey()
     }
     
-    private func dequeueWindow(representing entity: Entity, in habitat: Habitat) -> EntityWindow {
+    private func dequeueWindow(representing entity: Entity, in habitat: LiveEnvironment) -> EntityWindow {
         if let window = existingWindow(representing: entity) {
             return window
         }
@@ -64,7 +54,7 @@ class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
         return window
     }
     
-    func newWindow(representing entity: Entity, in habitat: Habitat) -> EntityWindow {
+    open func newWindow(representing entity: Entity, in habitat: LiveEnvironment) -> EntityWindow {
         EntityWindow(representing: entity, in: habitat)
     }
     
@@ -84,24 +74,18 @@ class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
     
     // MARK: - Window Closed
     
-    func windowWillClose(_ notification: Notification) {
+    open func windowWillClose(_ notification: Notification) {
         guard windows.count > 0 else { return }
         guard let windowBeingClosed = notification.object as? EntityWindow else { return }
         windows.removeAll { $0 == windowBeingClosed }
         
         printDebug(tag, "Window for", windowBeingClosed.entity.id, "has been closed")
-        
-        if windows.count == 0 {
-            printDebug(tag, "All windows have been closed")
-            whenAllWindowsHaveBeenClosed()
-            kill()
-        }
     }
     
     // MARK: - Kill Switch
     
-    func kill() {
-        whenAllWindowsHaveBeenClosed = {}
+    open func kill() {
+        isAlive = false
         childrenCanc?.cancel()
         childrenCanc = nil
         habitat = nil
@@ -112,6 +96,18 @@ class HabitatWindows<Habitat: LiveEnvironment>: NSObject, NSWindowDelegate {
             }
         }
         windows = []
-        printDebug(tag, "Terminated")
+        printDebug(tag, "Terminated.")
+    }
+}
+
+// MARK: - Ids
+
+private extension HabitatWindows {
+    
+    static var id: Int = 0
+    
+    static func nextId() -> Int {
+        id += 1
+        return id
     }
 }
