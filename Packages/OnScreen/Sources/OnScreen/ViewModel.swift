@@ -16,6 +16,7 @@ class ViewModel: LiveEnvironment {
     
     init() {
         super.init(id: "OnScreen", bounds: NSScreen.main?.frame.bounds ?? .zero)
+        self.debug = false
         addSelectedPet()
         observeWindowsIfNeeded()
         scheduleUfoAbduction()

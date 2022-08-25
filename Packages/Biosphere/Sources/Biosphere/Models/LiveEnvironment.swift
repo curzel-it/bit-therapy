@@ -9,15 +9,12 @@ open class LiveEnvironment: ObservableObject {
     
     @Published public var state: Biosphere.Environment
         
-    public let debug = false
-    
+    public var debug = false
     public let id: String
     public let tag: String
-    
+    public let fps: Double = 15
     private var timer: Timer!    
     private var lastUpdate: TimeInterval
-        
-    let fps: Double = 15
     
     public init(id: String, bounds: CGRect) {
         self.id = id

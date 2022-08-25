@@ -4,8 +4,9 @@
 
 import Biosphere
 import Combine
-import WindowsDetector
 import CoreGraphics
+import Squanch
+import WindowsDetector
 
 open class WindowObstaclesService: ObservableObject {
         
