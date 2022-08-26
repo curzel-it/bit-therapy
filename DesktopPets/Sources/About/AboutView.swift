@@ -30,9 +30,16 @@ struct AboutView: View {
             )            
             PrivacyPolicy().padding(.top, .xl)
             Socials().padding(.top, .lg)
+            
+            Text(appVersion)
         }
         .multilineTextAlignment(.center)
         .padding(.md)
+    }
+    
+    var appVersion: String {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        return "v. \(version ?? "n/a")"
     }
 }
 

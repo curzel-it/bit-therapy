@@ -80,7 +80,7 @@ private struct AnonymousTracking: View {
     @State var showingDetails = false
     
     var enabled: Binding<Bool> = Binding {
-        AppState.global.statusBarIconEnabled
+        AppState.global.trackingEnabled
     } set: { isEnabled in
         AppState.global.trackingEnabled = isEnabled
         Tracking.isEnabled = isEnabled

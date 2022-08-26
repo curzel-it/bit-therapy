@@ -19,6 +19,7 @@ class PacmanEffect: Capability {
     override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled, let body = subject, body.state == .move else { return }
         guard collisions.contains(.rightBound) else { return }
+        guard Random.probability(oneIn: 3) else { return }
         
         printDebug(tag, "Right bound reached")
         let habitatWidth = body.habitatBounds.width

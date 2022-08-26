@@ -15,7 +15,7 @@ let package = Package(
         .package(path: "../Tracking"),
         .package(path: "../Biosphere"),
         .package(path: "../Lang"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.0"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.1"),
         .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0")
     ],
     targets: [

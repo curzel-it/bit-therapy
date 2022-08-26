@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Biosphere"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.0"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.1"),
         .package(url: "https://github.com/curzel-it/WindowsDetector", from: "1.0.4")
     ],
     targets: [
