@@ -32,13 +32,14 @@ open class WindowObstaclesService: ObservableObject {
     func obstacles(from windows: [WindowInfo]) -> [Entity] {
         windows
             .reversed()
-            .filter { isValid(owner: $0.owner, frame: $0.frame) }
+            .filter { isValidWindow(owner: $0.owner, frame: $0.frame) }
             .map { $0.frame }
             .reduce([]) { obstacles, rect in
                 let visibleObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
                 let newObstacles = self.obstacles(fromWindowFrame: rect)
                 return visibleObstacles + newObstacles
             }
+            .filter { isValidObstacle(frame: $0) }
             .map { WindowObstacle(of: $0, in: habitat) }
     }
     
@@ -46,8 +47,12 @@ open class WindowObstaclesService: ObservableObject {
         [frame]
     }
     
-    open func isValid(owner: String, frame: CGRect) -> Bool {
+    open func isValidWindow(owner: String, frame: CGRect) -> Bool {
         !frame.isNull && !frame.isEmpty && !frame.isInfinite
+    }
+    
+    open func isValidObstacle(frame: CGRect) -> Bool {
+        true
     }
     
     public func stop() {

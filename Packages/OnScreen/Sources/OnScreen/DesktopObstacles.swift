@@ -2,6 +2,7 @@
 // Pet Therapy.
 //
 
+import AppState
 import DesktopKit
 import Foundation
 
@@ -15,11 +16,16 @@ class DesktopObstaclesService: WindowObstaclesService {
         [CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: borderThickness)]
     }
     
-    override func isValid(owner: String, frame: CGRect) -> Bool {
-        guard super.isValid(owner: owner, frame: frame) else { return false }
+    override func isValidWindow(owner: String, frame: CGRect) -> Bool {
+        guard super.isValidWindow(owner: owner, frame: frame) else { return false }
         if owner.contains("desktop pets") {
             return frame.width >= 450 && frame.height >= 450
         }
         return true
+    }
+    
+    override func isValidObstacle(frame: CGRect) -> Bool {
+        guard super.isValidObstacle(frame: frame) else { return false }
+        return frame.minY > 25 + AppState.global.petSize
     }
 }
