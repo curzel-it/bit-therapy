@@ -40,6 +40,7 @@ public class RandomAnimations: Capability {
     
     private func load(_ animation: EntityAnimation, times: Int) {
         guard let pet = subject as? PetEntity else { return }
+        guard case .move = pet.state else { return }
         printDebug(tag, "Loading", animation.description)
         pet.set(state: .animation(animation: animation, loops: times))
     }

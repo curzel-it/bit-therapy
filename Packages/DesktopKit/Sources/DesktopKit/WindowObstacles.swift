@@ -7,6 +7,7 @@ import Combine
 import CoreGraphics
 import Squanch
 import WindowsDetector
+import Foundation
 
 open class WindowObstaclesService: ObservableObject {
         
@@ -19,18 +20,19 @@ open class WindowObstaclesService: ObservableObject {
     }
     
     public func start() {
-        self.windowsCanc = windowsDetector.$userWindows.sink { [weak self] in
+        windowsCanc = windowsDetector.$userWindows.sink { [weak self] in
             self?.onWindows($0)
         }
     }
     
-    func onWindows(_ windows: [WindowInfo]) {
+    func onWindows(_ windowInfos: [WindowInfo]) {
+        let windows = windowInfos.map { SomeWindow(from: $0) }
         let obstacles = obstacles(from: windows)
         habitat.update(withObstacles: obstacles)
     }
     
-    func obstacles(from windows: [WindowInfo]) -> [Entity] {
-        windows
+    func obstacles(from windows: [SomeWindow]) -> [Entity] {
+        return windows
             .reversed()
             .filter { isValidWindow(owner: $0.owner, frame: $0.frame) }
             .map { $0.frame }
@@ -48,7 +50,9 @@ open class WindowObstaclesService: ObservableObject {
     }
     
     open func isValidWindow(owner: String, frame: CGRect) -> Bool {
-        !frame.isNull && !frame.isEmpty && !frame.isInfinite
+        guard !frame.isNull && !frame.isEmpty && !frame.isInfinite else { return false }
+        guard !frame.contains(habitat.state.bounds) else { return false }
+        return true
     }
     
     open func isValidObstacle(frame: CGRect) -> Bool {
@@ -61,8 +65,14 @@ open class WindowObstaclesService: ObservableObject {
     }
 }
 
-private extension WindowInfo {
-    var owner: String { processName?.lowercased() ?? "" }
+struct SomeWindow: Codable {
+    let owner: String
+    let frame: CGRect
+    
+    init(from info: WindowInfo) {
+        owner = info.processName?.lowercased() ?? ""
+        frame = info.frame
+    }
 }
 
 class WindowObstacle: Entity {
