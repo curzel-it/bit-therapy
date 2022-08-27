@@ -36,7 +36,26 @@ public class PetsAssets {
         ) ?? []
         
         return urls
-            .sorted {$0.absoluteString < $1.absoluteString }
+            .sortedByFrameIndex()
             .compactMap { NSImage(contentsOf: $0) }
+    }
+}
+
+private extension Array where Element == URL {
+    
+    func sortedByFrameIndex() -> [Element] {
+        self.sorted { $0.frameIndex < $1.frameIndex }
+    }
+}
+
+private extension URL {
+    
+    var frameIndex: Int {
+        let indexString = absoluteString
+            .components(separatedBy: "-")
+            .last?
+            .components(separatedBy: ".")
+            .first
+        return Int(indexString ?? "") ?? 99
     }
 }

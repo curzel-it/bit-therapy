@@ -13,30 +13,26 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../AppState"),
-        .package(path: "../Biosphere"),
-        .package(path: "../DesktopKit"),
         .package(path: "../Pets"),
-        .package(path: "../Sprites"),
+        .package(url: "https://github.com/curzel-it/desktop-kit", from: "1.0.5"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.1")
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.2")
     ],
     targets: [
         .target(
             name: "OnScreen",
             dependencies: [
                 .product(name: "AppState", package: "AppState"),
-                .product(name: "Biosphere", package: "Biosphere"),
-                .product(name: "DesktopKit", package: "DesktopKit"),
+                .product(name: "DesktopKit", package: "desktop-kit"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Squanch", package: "Squanch"),
-                .product(name: "Sprites", package: "Sprites")
+                .product(name: "Squanch", package: "Squanch")
             ]
         ),
         .testTarget(
             name: "OnScreenTests",
             dependencies: [
-                .product(name: "Biosphere", package: "Biosphere"),
+                .product(name: "DesktopKit", package: "desktop-kit"),
                 "OnScreen"
             ]
         )

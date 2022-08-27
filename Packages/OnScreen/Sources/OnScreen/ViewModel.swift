@@ -4,13 +4,12 @@
 
 import AppKit
 import AppState
-import Biosphere
 import Combine
 import DesktopKit
 import Pets
 import Squanch
 
-class ViewModel: LiveEnvironment {
+class ViewModel: LiveHabitat {
     
     var desktopObstacles: DesktopObstaclesService!
     

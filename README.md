@@ -24,7 +24,7 @@ You will soon be able enable this from settings (it's not working yet).
 
 The window-detection service is also open source and implemented [here](https://github.com/curzel-it/windows-detector).
 
-## Gallery
+## Screenshots
 
 ![Screenshot of my mac running the app](Gallery/1.png)
 ![Ufo attacking Desktop City](Gallery/bombing.gif)
@@ -33,10 +33,10 @@ The window-detection service is also open source and implemented [here](https://
 
 1. Download and setup Xcode
 1. Open the `PetTherapy` workspace
-1. Give Xcode some time to figure out Swift Packages dependencies ([LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin) and [Firebase](https://github.com/firebase/firebase-ios-sdk))
+1. Give Xcode some time to figure out dependencies...
 1. Select target 'Desktop Pets Dev'
 
-(For daily use I recommend getting the App from the App Store)
+For daily use I recommend getting the App from the App Store.
 
 ## Troubleshooting
 

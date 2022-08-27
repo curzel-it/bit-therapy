@@ -33,13 +33,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/Biosphere",
-        "identifier" : "BiosphereTests",
-        "name" : "BiosphereTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/OnScreen",
         "identifier" : "OnScreenTests",
         "name" : "OnScreenTests"
@@ -50,20 +43,6 @@
         "containerPath" : "container:..\/Packages\/Pets",
         "identifier" : "PetsTests",
         "name" : "PetsTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/Packages\/DesktopKit",
-        "identifier" : "DesktopKitTests",
-        "name" : "DesktopKitTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:..\/Packages\/Sprites",
-        "identifier" : "SpritesTests",
-        "name" : "SpritesTests"
       }
     }
   ],

@@ -3,7 +3,6 @@
 //
 
 import Foundation
-import Pets
 import RevenueCat
 import SwiftUI
 
@@ -104,14 +103,14 @@ public class PricingService: ObservableObject {
     
     // MARK: - Purchases
     
-    public func didPay(for species: Pet) -> Bool {
+    public func didPay(for species: String) -> Bool {
         guard isAvailable else { return true }
-        return purchased.contains(species.id)
+        return purchased.contains(species)
     }
     
-    public func price(for species: Pet) -> PetPrice? {
+    public func price(for species: String) -> PetPrice? {
         guard isAvailable else { return nil }
-        return prices[species.id]
+        return prices[species]
     }
 }
 

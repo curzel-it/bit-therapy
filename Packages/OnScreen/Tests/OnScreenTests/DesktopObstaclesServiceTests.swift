@@ -2,14 +2,14 @@
 // Pet Therapy.
 //
 
-import Biosphere
+import DesktopKit
 import XCTest
 
 @testable import OnScreen
 
 final class DesktopObstaclesServiceTests: XCTestCase {
     
-    let habitat = LiveEnvironment(
+    let habitat = LiveHabitat(
         id: "DesktopObstaclesServiceTests",
         bounds: CGRect(size: .init(square: 1000))
     )

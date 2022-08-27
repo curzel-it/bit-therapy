@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Pets",
-    platforms: [.macOS(.v12), .iOS(.v15)],
+    platforms: [.macOS(.v12)],
     products: [
         .library(
             name: "Pets",
@@ -12,22 +12,20 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "../Biosphere"),
         .package(path: "../DesignSystem"),
-        .package(path: "../Sprites"),
+        .package(url: "https://github.com/curzel-it/desktop-kit", from: "1.0.5"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.3"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.1")
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.2")
     ],
     targets: [
         .target(
             name: "Pets",
             dependencies: [
-                .product(name: "Biosphere", package: "Biosphere"),
+                .product(name: "DesktopKit", package: "desktop-kit"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "NotAGif", package: "NotAGif"),
                 .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Sprites", package: "Sprites"),
                 .product(name: "Squanch", package: "Squanch")
             ],
             resources: [

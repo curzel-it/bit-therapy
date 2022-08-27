@@ -14,13 +14,7 @@
       location = "group:Packages/AppState">
    </FileRef>
    <FileRef
-      location = "group:Packages/Biosphere">
-   </FileRef>
-   <FileRef
       location = "group:Packages/DesignSystem">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/DesktopKit">
    </FileRef>
    <FileRef
       location = "group:Packages/InAppPurchases">
@@ -33,9 +27,6 @@
    </FileRef>
    <FileRef
       location = "group:Packages/Pets">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/Sprites">
    </FileRef>
    <FileRef
       location = "group:Packages/Tracking">

@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Lang"),
         .package(path: "../Pets"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.1"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.2"),
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "8.15.0")
     ],
     targets: [

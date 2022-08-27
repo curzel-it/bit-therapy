@@ -3,7 +3,6 @@
 //
 
 import AppState
-import Biosphere
 import Combine
 import DesignSystem
 import Schwifty

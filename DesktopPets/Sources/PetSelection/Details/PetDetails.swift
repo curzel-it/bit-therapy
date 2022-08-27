@@ -2,7 +2,6 @@
 // Pet Therapy.
 //
 
-import Biosphere
 import DesignSystem
 import InAppPurchases
 import Lang
@@ -35,10 +34,11 @@ struct PetDetails: View {
         .frame(width: 450)
         .environmentObject(viewModel)
         .onAppear {
-            let species = viewModel.pet
+            let species = viewModel.pet.id
             Tracking.didEnterDetails(
-                of: species,
-                price: pricing.price(for: species)?.doublePrice ?? 0,
+                species: species,
+                name: viewModel.pet.name,
+                price: pricing.price(for: species)?.doublePrice,
                 purchased: pricing.didPay(for: species)
             )
         }
@@ -73,7 +73,7 @@ private struct AnimatedPreview: View {
                     .pixelArt()
                     .frame(width: 150, height: 150)
             }
-            PetPriceOverlay(species: viewModel.pet).scaleEffect(1.5)
+            PetPriceOverlay(speciesId: viewModel.pet.id).scaleEffect(1.5)
         }
         .frame(width: 150, height: 150)
     }

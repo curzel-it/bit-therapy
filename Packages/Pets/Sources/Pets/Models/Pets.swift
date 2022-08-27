@@ -4,7 +4,7 @@
 
 import CoreGraphics
 import Foundation
-import Biosphere
+import DesktopKit
 
 public struct Pet {
     

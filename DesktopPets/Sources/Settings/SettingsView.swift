@@ -19,7 +19,7 @@ struct SettingsView: View {
     var body: some View {
         VStack(spacing: .xl) {
             SizeSlider()
-            Switch(Lang.Settings.gravity, appState.$gravityEnabled)
+            Switch(Lang.Settings.gravity, $appState.gravityEnabled)
             DesktopInteractions()
             LaunchAtLoginSwitch()
             StatusBarIconSwitch()

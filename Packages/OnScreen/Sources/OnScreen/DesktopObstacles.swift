@@ -9,7 +9,7 @@ import Foundation
 class DesktopObstaclesService: WindowObstaclesService {
         
     override func obstacles(fromWindowFrame frame: CGRect) -> [CGRect] {
-        obstacles(from: frame, borderThickness: 20)
+        obstacles(from: frame, borderThickness: 10)
     }
     
     func obstacles(from frame: CGRect, borderThickness: CGFloat) -> [CGRect] {

@@ -3,9 +3,8 @@
 //
 
 import AppState
-import Biosphere
+import DesktopKit
 import Foundation
-import Sprites
 import Pets
 
 // MARK: - Schedule Event

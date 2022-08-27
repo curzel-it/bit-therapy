@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "desktop-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/desktop-kit",
+      "state" : {
+        "revision" : "da4be71c7ca6a94b79827aed43217bc53589efe0",
+        "version" : "1.0.5"
+      }
+    },
+    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk.git",
@@ -149,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/squanch",
       "state" : {
-        "branch" : "master",
-        "revision" : "53d46d3e0979df1e1af00a7ffb3b852585a2206d"
+        "revision" : "3df528528b4bd4dde0424ff6742485f00c1260b8",
+        "version" : "1.0.2"
       }
     },
     {
@@ -167,8 +176,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/WindowsDetector",
       "state" : {
-        "branch" : "main",
-        "revision" : "df6fbd77e4664428eaee9ef57fcefd17d4c5a63f"
+        "revision" : "7784b059f9cb426459a5b57325e7597dd5266b69",
+        "version" : "1.0.4"
       }
     }
   ],

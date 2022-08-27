@@ -3,7 +3,6 @@
 //
 
 import AppState
-import Biosphere
 import Combine
 import DesignSystem
 import InAppPurchases
@@ -25,7 +24,7 @@ struct PetGridItem: View {
         ZStack {
             PetPreview(pet: pet)
             SelectionIndicator(isSelected: isSelected)
-            PetPriceOverlay(species: pet)
+            PetPriceOverlay(speciesId: pet.id)
         }
     }
 }

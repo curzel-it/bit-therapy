@@ -22,10 +22,10 @@ class PetDetailsViewModel: ObservableObject {
     
     var pricing: PricingService { PricingService.global }
     var isFree: Bool { !pet.isPaid }
-    var hasBeenPaid: Bool { pricing.didPay(for: pet) }
+    var hasBeenPaid: Bool { pricing.didPay(for: pet.id) }
     var canSelect: Bool { isFree || hasBeenPaid }
     var canBuy: Bool { !isFree && !hasBeenPaid }
-    var price: PetPrice? { pricing.price(for: pet) }
+    var price: PetPrice? { pricing.price(for: pet.id) }
         
     init(isShown: Binding<Bool>, pet: Pet) {
         self._isShown = isShown
@@ -52,7 +52,7 @@ class PetDetailsViewModel: ObservableObject {
     }
     
     func buy() {
-        guard let item = pricing.price(for: pet) else {
+        guard let item = pricing.price(for: pet.id) else {
             Tracking.purchased(pet: pet, price: -1, success: false)
             return
         }

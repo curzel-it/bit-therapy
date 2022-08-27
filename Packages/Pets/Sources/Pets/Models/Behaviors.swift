@@ -2,7 +2,7 @@
 // Pet Therapy.
 //
 
-import Biosphere
+import DesktopKit
 import Squanch
 
 // MARK: - Behavior

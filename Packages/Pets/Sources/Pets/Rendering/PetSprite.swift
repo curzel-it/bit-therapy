@@ -2,10 +2,9 @@
 // Pet Therapy.
 //
 
-import Biosphere
+import DesktopKit
 import NotAGif
 import Schwifty
-import Sprites
 import Squanch
 import SwiftUI
 

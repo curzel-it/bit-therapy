@@ -3,7 +3,7 @@
 //
 
 import Combine
-import Biosphere
+import DesktopKit
 import Squanch
 import SwiftUI
 

@@ -19,25 +19,24 @@
 		1E1FA9B928AE851F0082A113 /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */; };
 		1E1FA9BA28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */; };
 		1E1FA9BB28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */; };
+		1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C550D28B8CE6200613F3B /* Squanch */; };
+		1E2C551128B8CE7C00613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551028B8CE7C00613F3B /* WindowsDetector */; };
+		1E2C551428B8CE9200613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551328B8CE9200613F3B /* WindowsDetector */; };
 		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
-		1EE37C3C28B57FC800083B85 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE37C3B28B57FC800083B85 /* Squanch */; };
-		1EE37C3F28B57FE700083B85 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE37C3E28B57FE700083B85 /* Squanch */; };
 		1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7728A51BBF00BCBBD4 /* AppState */; };
 		1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7928A51BBF00BCBBD4 /* Lang */; };
 		1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7B28A51BBF00BCBBD4 /* Squanch */; };
 		1EF696E828B0E1B80042B9DA /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696E728B0E1B80042B9DA /* AppState */; };
 		1EF696EA28B0E1B80042B9DA /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696E928B0E1B80042B9DA /* Lang */; };
 		1EF696EC28B0E1B80042B9DA /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696EB28B0E1B80042B9DA /* Squanch */; };
-		A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7AC2874766200A9F738 /* Biosphere */; };
 		A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B42874766200A9F738 /* InAppPurchases */; };
 		A63AC7B92874766200A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B82874766200A9F738 /* OnScreen */; };
 		A63AC7BB2874766200A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BA2874766200A9F738 /* Pets */; };
 		A63AC7C32874766200A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C22874766200A9F738 /* Tracking */; };
 		A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7C62874766C00A9F738 /* LaunchAtLogin */; };
-		A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7CA2874768400A9F738 /* Biosphere */; };
 		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
 		A63AC7D72874768400A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D62874768400A9F738 /* OnScreen */; };
 		A63AC7D92874768400A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D82874768400A9F738 /* Pets */; };
@@ -133,11 +132,11 @@
 				1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */,
 				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
 				1EE263FF2892866A00771170 /* Schwifty in Frameworks */,
-				A63AC7AD2874766200A9F738 /* Biosphere in Frameworks */,
+				1E2C551128B8CE7C00613F3B /* WindowsDetector in Frameworks */,
 				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
 				A63AC7B92874766200A9F738 /* OnScreen in Frameworks */,
 				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
-				1EE37C3C28B57FC800083B85 /* Squanch in Frameworks */,
+				1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */,
 				1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */,
 				1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */,
 			);
@@ -155,16 +154,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
+				1E2C551428B8CE9200613F3B /* WindowsDetector in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
 				1EF696E828B0E1B80042B9DA /* AppState in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
 				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
 				1EF696EC28B0E1B80042B9DA /* Squanch in Frameworks */,
-				A63AC7CB2874768400A9F738 /* Biosphere in Frameworks */,
 				1EF696EA28B0E1B80042B9DA /* Lang in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
-				1EE37C3F28B57FE700083B85 /* Squanch in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
 				1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */,
 			);
@@ -321,7 +319,6 @@
 			);
 			name = "Desktop Pets Dev";
 			packageProductDependencies = (
-				A63AC7AC2874766200A9F738 /* Biosphere */,
 				A63AC7B42874766200A9F738 /* InAppPurchases */,
 				A63AC7B82874766200A9F738 /* OnScreen */,
 				A63AC7BA2874766200A9F738 /* Pets */,
@@ -333,7 +330,8 @@
 				1EF5CF7728A51BBF00BCBBD4 /* AppState */,
 				1EF5CF7928A51BBF00BCBBD4 /* Lang */,
 				1EF5CF7B28A51BBF00BCBBD4 /* Squanch */,
-				1EE37C3B28B57FC800083B85 /* Squanch */,
+				1E2C550D28B8CE6200613F3B /* Squanch */,
+				1E2C551028B8CE7C00613F3B /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1928746D2E00D695EA /* DesktopPets.app */;
@@ -362,6 +360,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6E5B59C2860525A008AA653 /* Build configuration list for PBXNativeTarget "Desktop Pets" */;
 			buildPhases = (
+				1ED70E9F28B8FD1700388555 /* Increment Build Number */,
 				A6E5AAC22860525A008AA653 /* SwiftLint */,
 				A6E5AAC32860525A008AA653 /* Sources */,
 				A6E5AAD72860525A008AA653 /* Frameworks */,
@@ -374,7 +373,6 @@
 			);
 			name = "Desktop Pets";
 			packageProductDependencies = (
-				A63AC7CA2874768400A9F738 /* Biosphere */,
 				A63AC7D22874768400A9F738 /* InAppPurchases */,
 				A63AC7D62874768400A9F738 /* OnScreen */,
 				A63AC7D82874768400A9F738 /* Pets */,
@@ -386,7 +384,7 @@
 				1EF696E728B0E1B80042B9DA /* AppState */,
 				1EF696E928B0E1B80042B9DA /* Lang */,
 				1EF696EB28B0E1B80042B9DA /* Squanch */,
-				1EE37C3E28B57FE700083B85 /* Squanch */,
+				1E2C551328B8CE9200613F3B /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -425,9 +423,8 @@
 				A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
 				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
-				1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */,
-				1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */,
-				1EE37C3D28B57FE700083B85 /* XCRemoteSwiftPackageReference "squanch" */,
+				1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */,
+				1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -479,6 +476,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1ED70E9F28B8FD1700388555 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
 		A624317428524B060080BABD /* Launch at Login Helper */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -854,7 +869,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2087;
+				CURRENT_PROJECT_VERSION = 2089;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -886,7 +901,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2087;
+				CURRENT_PROJECT_VERSION = 2089;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -952,17 +967,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/squanch";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/WindowsDetector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 		1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/OnWindow";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		1E75D80428A67D1000DC0165 /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/WindowsDetector";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -976,22 +999,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/squanch";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		1EE37C3D28B57FE700083B85 /* XCRemoteSwiftPackageReference "squanch" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/squanch";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
@@ -1003,6 +1010,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E2C550D28B8CE6200613F3B /* Squanch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */;
+			productName = Squanch;
+		};
+		1E2C551028B8CE7C00613F3B /* WindowsDetector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */;
+			productName = WindowsDetector;
+		};
+		1E2C551328B8CE9200613F3B /* WindowsDetector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */;
+			productName = WindowsDetector;
+		};
 		1EDBC2C12891BD2C00A8D37B /* OnWindow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */;
@@ -1022,16 +1044,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
-		};
-		1EE37C3B28B57FC800083B85 /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */;
-			productName = Squanch;
-		};
-		1EE37C3E28B57FE700083B85 /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EE37C3A28B57FC800083B85 /* XCRemoteSwiftPackageReference "squanch" */;
-			productName = Squanch;
 		};
 		1EF5CF7728A51BBF00BCBBD4 /* AppState */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1057,10 +1069,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Squanch;
 		};
-		A63AC7AC2874766200A9F738 /* Biosphere */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Biosphere;
-		};
 		A63AC7B42874766200A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InAppPurchases;
@@ -1081,10 +1089,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
-		};
-		A63AC7CA2874768400A9F738 /* Biosphere */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Biosphere;
 		};
 		A63AC7D22874768400A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;

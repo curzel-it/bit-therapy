@@ -2,9 +2,8 @@
 // Pet Therapy.
 //
 
-import Biosphere
+import DesktopKit
 import DesignSystem
-import Sprites
 import SwiftUI
 
 // MARK: - Incremental Id

@@ -46,12 +46,12 @@ extension Tracking {
         log("did_select_pet", with: ["pet": pet.id])
     }
     
-    public static func didEnterDetails(of pet: Pet, price: Double, purchased: Bool) {
+    public static func didEnterDetails(species: String, name: String, price: Double?, purchased: Bool) {
         log(AnalyticsEventViewItem, with: [
-            AnalyticsParameterItemID: pet.id,
-            AnalyticsParameterItemName: pet.name,
-            AnalyticsParameterPrice: price,
-            "alreadyPurchased": !pet.isPaid || purchased
+            AnalyticsParameterItemID: species,
+            AnalyticsParameterItemName: name,
+            AnalyticsParameterPrice: price ?? 0,
+            "alreadyPurchased": price == nil || purchased
         ])
     }
     
