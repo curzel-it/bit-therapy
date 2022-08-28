@@ -1,7 +1,3 @@
-// 
-// Pet Therapy.
-// 
-
 import DesktopKit
 import Schwifty
 import SwiftUI

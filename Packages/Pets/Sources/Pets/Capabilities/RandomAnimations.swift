@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import Combine
 import DesktopKit
 import Squanch

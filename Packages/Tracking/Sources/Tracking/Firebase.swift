@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import Firebase
 import FirebaseAnalytics
 import Squanch

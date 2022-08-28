@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import XCTest
 
 @testable import Pets

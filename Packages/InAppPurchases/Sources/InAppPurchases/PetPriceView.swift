@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import DesignSystem
 import SwiftUI
 

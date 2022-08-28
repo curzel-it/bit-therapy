@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import NotAGif
 import Schwifty
 import Squanch

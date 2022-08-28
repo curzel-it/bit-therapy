@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import AppState
 import DesktopKit
 import Foundation

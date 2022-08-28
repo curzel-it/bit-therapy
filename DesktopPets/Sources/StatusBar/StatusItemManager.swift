@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-// 
-
 import AppKit
 import AppState
 import Lang

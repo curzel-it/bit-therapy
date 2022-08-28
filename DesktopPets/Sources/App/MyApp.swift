@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import AppState
 import InAppPurchases
 import OnScreen
