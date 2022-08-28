@@ -15,6 +15,7 @@ extension Pet {
         .sheep, .sheepBlack,
         .snail, .snailNicky,
         .sloth, .slothSwag,
+        .sunflower,
         .trex, .trexBlue, .trexViolet, .trexYellow,
         .panda, .pandaVest,
         .ufo

@@ -75,6 +75,7 @@
 "pet.name.sloth_swag" = "Swag Sloth";
 "pet.name.snail" = "Cat-Snail";
 "pet.name.snail_nicky" = "Pink Cat-Snail";
+"pet.name.sunflower" = "Sunflower";
 "pet.name.trex" = "T-Rex";
 "pet.name.trex_blue" = "Ceratosaurus";
 "pet.name.trex_violet" = "Violet T-Rex";
@@ -97,6 +98,7 @@
 "pet.about.sloth_swag" = "Slow, but with style...";
 "pet.about.snail" = "Meow! Is that you Gary?";
 "pet.about.snail_nicky" = "My gf specifically asked for this one, so there you go!";
+"pet.about.sunflower" = "As requested by @spritz97.";
 "pet.about.trex" = "Dollar-store Charmander";
 "pet.about.trex_blue" = "Just a T-Rex with a horne!";
 "pet.about.trex_violet" = "This one gives off some Flintstones vibes :D";
