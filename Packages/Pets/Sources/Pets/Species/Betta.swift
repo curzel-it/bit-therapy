@@ -20,3 +20,7 @@ extension Pet {
         speed: 1.3
     )
 }
+
+private extension EntityAnimation {
+    static let tsundere = EntityAnimation(id: "tsundere")
+}

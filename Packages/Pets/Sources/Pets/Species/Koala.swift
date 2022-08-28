@@ -23,3 +23,7 @@ extension Pet {
     
     static let koalaPirate = Pet.koala.shiny(id: "koala_pirate", isPaid: false)
 }
+
+private extension EntityAnimation {
+    static let backflip = EntityAnimation(id: "backflip")
+}

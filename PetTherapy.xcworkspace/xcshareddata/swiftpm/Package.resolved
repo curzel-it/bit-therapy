@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/desktop-kit",
       "state" : {
-        "revision" : "da4be71c7ca6a94b79827aed43217bc53589efe0",
-        "version" : "1.0.5"
+        "revision" : "0acd394f68895564d07379f6476c174c2c0902a7",
+        "version" : "1.0.9"
       }
     },
     {
@@ -113,8 +113,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/NotAGif",
       "state" : {
-        "revision" : "e622a84432d70753bea0d7274b9a40f69b104538",
-        "version" : "1.0.3"
+        "revision" : "e7e6c4c16b847be2762e428ecd390922ac7bb2de",
+        "version" : "1.0.6"
       }
     },
     {

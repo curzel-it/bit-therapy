@@ -41,6 +41,8 @@ extension Pet {
 
 private extension EntityAnimation {
     
+    static let selfie = EntityAnimation(id: "selfie")
+    
     static func climb(to position: Position) -> EntityAnimation {
         let left = position == .habitatTopLeft
         let direction: CGVector = .init(dx: left ? 1 : -1, dy: 0)

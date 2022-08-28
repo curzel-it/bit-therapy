@@ -8,7 +8,7 @@ public class PetAnimationPathsProvider {
     public init() {}
     
     public func frontAnimationPath(for pet: Pet) -> String {
-        animationPath(species: pet, state: .animation(animation: .front, loops: 1))
+        return "\(pet.id)_front"
     }
     
     public func animationPath(species: Pet, state: EntityState) -> String {

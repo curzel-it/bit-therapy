@@ -27,3 +27,8 @@ extension Pet {
         id: "panda_vest", isPaid: false
     )
 }
+
+private extension EntityAnimation {
+    static let backflip = EntityAnimation(id: "backflip")
+    static let meditate = EntityAnimation(id: "meditate")
+}

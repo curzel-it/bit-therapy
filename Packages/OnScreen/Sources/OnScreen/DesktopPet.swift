@@ -12,6 +12,7 @@ class DesktopPet: PetEntity {
     
     init(of species: Pet, in habitatBounds: CGRect) {
         super.init(of: species, size: AppState.global.petSize, in: habitatBounds)
+        fps = species.fps
         setupPacmanEffect()
         setupMenu()
         setInitialDirection()

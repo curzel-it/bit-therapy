@@ -57,14 +57,9 @@ private struct AnimatedPreview: View {
     
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
-    var frames: [ImageFrame] {
-        let name = PetAnimationPathsProvider().frontAnimationPath(for: viewModel.pet)
-        return PetsAssets.frames(for: name)
-    }
-    
     var body: some View {
         ZStack {
-            AnimatedContent(frames: frames, fps: 10) { imageFrame in
+            AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { imageFrame in
                 Image(frame: imageFrame)
                     .pixelArt()
                     .frame(width: 150, height: 150)

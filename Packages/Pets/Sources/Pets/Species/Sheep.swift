@@ -24,3 +24,7 @@ extension Pet {
         id: "sheep_black", isPaid: true
     )
 }
+
+private extension EntityAnimation {
+    static let puke = EntityAnimation(id: "puke")
+}

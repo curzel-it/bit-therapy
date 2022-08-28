@@ -20,8 +20,6 @@ class PetSelectionViewModel: ObservableObject {
         }
     }()
     
-    // let petSize: CGFloat = 90
-    
     init() {
         pets = Pet.availableSpecies
     }
