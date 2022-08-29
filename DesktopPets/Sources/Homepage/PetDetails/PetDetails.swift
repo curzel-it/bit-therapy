@@ -63,7 +63,6 @@ private struct AnimatedPreview: View {
                     .pixelArt()
                     .frame(width: 150, height: 150)
             }
-            PetPriceOverlay(speciesId: viewModel.pet.id).scaleEffect(1.5)
         }
         .frame(width: 150, height: 150)
     }
@@ -79,7 +78,7 @@ private struct Footer: View {
                 .buttonStyle(.text)
             
             if viewModel.canSelect {
-                Button(Lang.select, action: viewModel.select)
+                Button(Lang.PetSelection.addPet, action: viewModel.select)
                     .buttonStyle(.regular)
             }
             if viewModel.canRemove {

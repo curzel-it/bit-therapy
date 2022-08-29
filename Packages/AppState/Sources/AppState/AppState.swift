@@ -20,7 +20,7 @@ public class AppState: ObservableObject {
     
     @AppStorage("gravityEnabled") private var gravityEnabledValue = true
     
-    @AppStorage("petId") private var selectedPet: String = "sloth"
+    @AppStorage("petId") private var selectedPetsValue: String = "sloth"
     
     @Published public var speedMultiplier: CGFloat = 1 {
         didSet {
@@ -30,7 +30,7 @@ public class AppState: ObservableObject {
     
     @Published public var selectedPets: [String] = [] {
         didSet {
-            selectedPet = selectedPets.joined(separator: ",")
+            selectedPetsValue = selectedPets.joined(separator: ",")
         }
     }
     
@@ -50,7 +50,7 @@ public class AppState: ObservableObject {
         petSize = petSizeValue
         speedMultiplier = speedMultiplierValue
         gravityEnabled = gravityEnabledValue
-        selectedPets = selectedPet.components(separatedBy: ",")
+        selectedPets = selectedPetsValue.components(separatedBy: ",")
     }
 }
 

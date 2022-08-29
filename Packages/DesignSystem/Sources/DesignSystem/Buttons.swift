@@ -2,7 +2,6 @@ import SwiftUI
 
 public enum CustomButtonStyle {
     case regular
-    case outlined
     case text
 }
 
@@ -21,7 +20,6 @@ private struct ButtonStyleMod: ViewModifier {
         switch style {
         case .regular: content.buttonStyle(RegularButton())
         case .text: content.buttonStyle(TextButton())
-        case .outlined: content.buttonStyle(OutlinedButton())
         }
     }
 }
@@ -33,28 +31,9 @@ private struct RegularButton: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .modifier(BaseButton())
-            .background(Color.label)
-            .foregroundColor(.background)
+            .background(Color.accent)
+            .foregroundColor(.white)
             .cornerRadius(DesignSystem.defaultCornerRadius)
-            .opacity(configuration.isPressed ? 0.5 : 1)
-    }
-}
-
-// MARK: - Outlined
-
-private struct OutlinedButton: ButtonStyle {
-    
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .modifier(BaseButton())
-            .foregroundColor(.label)
-            .background(Color.clear)
-            .cornerRadius(DesignSystem.defaultCornerRadius)
-            .overlay(
-                RoundedRectangle(cornerRadius: DesignSystem.defaultCornerRadius)
-                    .stroke(Color.label, lineWidth: DesignSystem.lineWidth)
-            )
-            .padding(DesignSystem.lineWidth/2)
             .opacity(configuration.isPressed ? 0.5 : 1)
     }
 }

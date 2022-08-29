@@ -11,14 +11,16 @@
 		1E1FA9B128AE851F0082A113 /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9A928AE851F0082A113 /* PetDetails.swift */; };
 		1E1FA9B228AE851F0082A113 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */; };
 		1E1FA9B328AE851F0082A113 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */; };
-		1E1FA9B428AE851F0082A113 /* PetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* PetSelection.swift */; };
-		1E1FA9B528AE851F0082A113 /* PetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* PetSelection.swift */; };
-		1E1FA9B628AE851F0082A113 /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */; };
-		1E1FA9B728AE851F0082A113 /* PetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */; };
-		1E1FA9B828AE851F0082A113 /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */; };
-		1E1FA9B928AE851F0082A113 /* PetSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */; };
-		1E1FA9BA28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */; };
-		1E1FA9BB28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */; };
+		1E1FA9B428AE851F0082A113 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* Homepage.swift */; };
+		1E1FA9B528AE851F0082A113 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* Homepage.swift */; };
+		1E1FA9B628AE851F0082A113 /* PetsGridItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetsGridItems.swift */; };
+		1E1FA9B728AE851F0082A113 /* PetsGridItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetsGridItems.swift */; };
+		1E1FA9B828AE851F0082A113 /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AE28AE851F0082A113 /* PetsGrid.swift */; };
+		1E1FA9B928AE851F0082A113 /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AE28AE851F0082A113 /* PetsGrid.swift */; };
+		1E1FA9BA28AE851F0082A113 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */; };
+		1E1FA9BB28AE851F0082A113 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */; };
+		1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
+		1E28C01B28BD575E00E82E2C /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
 		1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C550D28B8CE6200613F3B /* Squanch */; };
 		1E2C551128B8CE7C00613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551028B8CE7C00613F3B /* WindowsDetector */; };
 		1E2C551428B8CE9200613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551328B8CE9200613F3B /* WindowsDetector */; };
@@ -87,10 +89,10 @@
 /* Begin PBXFileReference section */
 		1E1FA9A928AE851F0082A113 /* PetDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetails.swift; sourceTree = "<group>"; };
 		1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailsViewModel.swift; sourceTree = "<group>"; };
-		1E1FA9AC28AE851F0082A113 /* PetSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelection.swift; sourceTree = "<group>"; };
-		1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
-		1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectionGrid.swift; sourceTree = "<group>"; };
-		1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectionViewModel.swift; sourceTree = "<group>"; };
+		1E1FA9AC28AE851F0082A113 /* Homepage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
+		1E1FA9AD28AE851F0082A113 /* PetsGridItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGridItems.swift; sourceTree = "<group>"; };
+		1E1FA9AE28AE851F0082A113 /* PetsGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGrid.swift; sourceTree = "<group>"; };
+		1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
 		1E7FB47528BD185D002F377D /* SettingsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApi.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,33 +165,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E1FA9A728AE851F0082A113 /* PetSelection */ = {
+		1E1FA9A728AE851F0082A113 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
-				1E1FA9A828AE851F0082A113 /* Details */,
-				1E1FA9AB28AE851F0082A113 /* Grid */,
+				1E1FA9AB28AE851F0082A113 /* Home */,
+				1E1FA9A828AE851F0082A113 /* PetDetails */,
+				1EA51CD628BE211E00C62890 /* PetsGrid */,
 			);
-			path = PetSelection;
+			path = Homepage;
 			sourceTree = "<group>";
 		};
-		1E1FA9A828AE851F0082A113 /* Details */ = {
+		1E1FA9A828AE851F0082A113 /* PetDetails */ = {
 			isa = PBXGroup;
 			children = (
 				1E1FA9A928AE851F0082A113 /* PetDetails.swift */,
 				1E1FA9AA28AE851F0082A113 /* PetDetailsViewModel.swift */,
 			);
-			path = Details;
+			path = PetDetails;
 			sourceTree = "<group>";
 		};
-		1E1FA9AB28AE851F0082A113 /* Grid */ = {
+		1E1FA9AB28AE851F0082A113 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1E1FA9AC28AE851F0082A113 /* PetSelection.swift */,
-				1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */,
-				1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */,
-				1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */,
+				1E1FA9AC28AE851F0082A113 /* Homepage.swift */,
+				1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */,
 			);
-			path = Grid;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		1E7FB47428BD184C002F377D /* Survey */ = {
@@ -206,6 +207,15 @@
 				1E7FB47528BD185D002F377D /* SettingsApi.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		1EA51CD628BE211E00C62890 /* PetsGrid */ = {
+			isa = PBXGroup;
+			children = (
+				1E1FA9AD28AE851F0082A113 /* PetsGridItems.swift */,
+				1E1FA9AE28AE851F0082A113 /* PetsGrid.swift */,
+			);
+			path = PetsGrid;
 			sourceTree = "<group>";
 		};
 		A63AC7942874739100A9F738 /* Frameworks */ = {
@@ -247,7 +257,7 @@
 				A6FB7D5B28740F8E00AB872E /* About */,
 				A6FB7D5528740F8E00AB872E /* App */,
 				1E7FB47928BD1C5A002F377D /* Config */,
-				1E1FA9A728AE851F0082A113 /* PetSelection */,
+				1E1FA9A728AE851F0082A113 /* Homepage */,
 				A6FB7D5228740F8E00AB872E /* Settings */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
 				1E7FB47428BD184C002F377D /* Survey */,
@@ -546,18 +556,18 @@
 			files = (
 				A6FB7D7928740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8228740F8E00AB872E /* MainView.swift in Sources */,
-				1E1FA9B628AE851F0082A113 /* PetGridItem.swift in Sources */,
+				1E1FA9B628AE851F0082A113 /* PetsGridItems.swift in Sources */,
 				A6FB7D8428740F8E00AB872E /* StatusItemManager.swift in Sources */,
-				1E1FA9B828AE851F0082A113 /* PetSelectionGrid.swift in Sources */,
+				1E1FA9B828AE851F0082A113 /* PetsGrid.swift in Sources */,
 				A6FB7D8028740F8E00AB872E /* MainWindow.swift in Sources */,
 				A6FB7D8628740F8E00AB872E /* AboutView.swift in Sources */,
 				1E1FA9B028AE851F0082A113 /* PetDetails.swift in Sources */,
 				A6FB7D7E28740F8E00AB872E /* MyApp.swift in Sources */,
 				1E7FB47828BD1A7F002F377D /* SurveyView.swift in Sources */,
 				1E7FB47628BD185D002F377D /* SettingsApi.swift in Sources */,
-				1E1FA9BA28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */,
+				1E1FA9BA28AE851F0082A113 /* HomepageViewModel.swift in Sources */,
 				1E1FA9B228AE851F0082A113 /* PetDetailsViewModel.swift in Sources */,
-				1E1FA9B428AE851F0082A113 /* PetSelection.swift in Sources */,
+				1E1FA9B428AE851F0082A113 /* Homepage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,16 +585,18 @@
 			files = (
 				A6FB7D7B28740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MainView.swift in Sources */,
-				1E1FA9B728AE851F0082A113 /* PetGridItem.swift in Sources */,
+				1E1FA9B728AE851F0082A113 /* PetsGridItems.swift in Sources */,
 				A6FB7D8528740F8E00AB872E /* StatusItemManager.swift in Sources */,
-				1E1FA9B928AE851F0082A113 /* PetSelectionGrid.swift in Sources */,
+				1E1FA9B928AE851F0082A113 /* PetsGrid.swift in Sources */,
 				A6FB7D8128740F8E00AB872E /* MainWindow.swift in Sources */,
+				1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
 				1E1FA9B128AE851F0082A113 /* PetDetails.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* MyApp.swift in Sources */,
-				1E1FA9BB28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */,
+				1E1FA9BB28AE851F0082A113 /* HomepageViewModel.swift in Sources */,
+				1E28C01B28BD575E00E82E2C /* SettingsApi.swift in Sources */,
 				1E1FA9B328AE851F0082A113 /* PetDetailsViewModel.swift in Sources */,
-				1E1FA9B528AE851F0082A113 /* PetSelection.swift in Sources */,
+				1E1FA9B528AE851F0082A113 /* Homepage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,7 +854,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2091;
+				CURRENT_PROJECT_VERSION = 2092;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -858,7 +870,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.8;
+				MARKETING_VERSION = 2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -874,7 +886,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2091;
+				CURRENT_PROJECT_VERSION = 2092;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -890,7 +902,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.8;
+				MARKETING_VERSION = 2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

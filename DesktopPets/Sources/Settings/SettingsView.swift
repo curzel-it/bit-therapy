@@ -3,6 +3,7 @@ import DesignSystem
 import InAppPurchases
 import Lang
 import LaunchAtLogin
+import OnScreen
 import SwiftUI
 import Tracking
 
@@ -20,9 +21,20 @@ struct SettingsView: View {
             LaunchAtLoginSwitch().positioned(.leading)
             StatusBarIconSwitch().positioned(.leading)
             AnonymousTracking().positioned(.leading)
+            FixOnScreenPets().positioned(.leading)
             RestorePurchasesButton().positioned(.leading)
         }
         .padding(.md)
+    }
+}
+
+// MARK: - Reset
+
+private struct FixOnScreenPets: View {
+    
+    var body: some View {
+        Button(Lang.PetSelection.fixOnScreenPets) { OnScreen.show() }
+            .buttonStyle(.regular)
     }
 }
 
@@ -161,22 +173,7 @@ private struct LaunchAtLoginSwitch: View {
     }
 }
 
-// MARK: - Utils
-
-private struct Switch: View {
-    
-    let label: String
-    let value: Binding<Bool>
-    
-    init(_ label: String, _ value: Binding<Bool>) {
-        self.label = label
-        self.value = value
-    }
-    
-    var body: some View {
-        Toggle(label, isOn: value).toggleStyle(.switch)
-    }
-}
+// MARK: - Pet Size
 
 private struct SizeSlider: View {
     
@@ -192,5 +189,22 @@ private struct SizeSlider: View {
                 in: PetSize.minSize...PetSize.maxSize
             ) { EmptyView() }
         }
+    }
+}
+
+// MARK: - Utils
+
+private struct Switch: View {
+    
+    let label: String
+    let value: Binding<Bool>
+    
+    init(_ label: String, _ value: Binding<Bool>) {
+        self.label = label
+        self.value = value
+    }
+    
+    var body: some View {
+        Toggle(label, isOn: value).toggleStyle(.switch)
     }
 }

@@ -34,7 +34,8 @@ public enum Lang {
     
     public enum Survey {
         
-        public static let surveyExplained = "survey.surveyExplained".localized()
+        public static let feedbackViaSurvey = "survey.feedbackViaSurvey".localized()
+        public static let requestPetViaSurvey = "survey.requestPetViaSurvey".localized()
         public static let takeSurvey = "survey.takeSurvey".localized()
     }
     
@@ -72,7 +73,10 @@ public enum Lang {
     
     public enum PetSelection {
         
-        public static let showPet = "petSelection.showPet".localized()
+        public static let fixOnScreenPets = "petSelection.fixOnScreenPets".localized()
+        public static let addPet = "petSelection.addPet".localized()
+        public static let yourPets = "petSelection.yourPets".localized()
+        public static let morePets = "petSelection.morePets".localized()
     }
     
     // MARK: - Purchases

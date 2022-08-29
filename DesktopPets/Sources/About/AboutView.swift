@@ -6,6 +6,7 @@ import SwiftUI
 private let github = "https://github.com/curzel-it/pet-therapy"
 private let appStore = "https://apps.apple.com/app/desktop-pets/id1575542220"
 private let twitter = "https://twitter.com/DesktopPets"
+private let discord = "https://discord.gg/MCdEgXKSH5"
 private let subReddit = "https://www.reddit.com/r/DesktopPets/"
 private let mailto = "mailto:pets@curzel.it?subject=Desktop%20Pets&body=Hi%20Federico%2C%20"
 private let privacy = "https://curzel.it/privacy.html"
@@ -19,7 +20,7 @@ struct AboutView: View {
                 linkTitle: Lang.About.leaveReview,
                 link: appStore
             )
-            SurveyLink()
+            GiveFeedbackViaSurvey()
             PrivacyPolicy().padding(.top, .xl)
             
             VStack(spacing: .xl) {
@@ -52,9 +53,10 @@ private struct Socials: View {
     
     var body: some View {
         HStack(spacing: .xl) {
-            SocialIcon(name: "github", link: github).foregroundColor(.label)
+            SocialIcon(name: "github", link: github)
             SocialIcon(name: "twitter", link: twitter)
             SocialIcon(name: "reddit", link: subReddit)
+            SocialIcon(name: "discord", link: discord)
         }
     }
 }

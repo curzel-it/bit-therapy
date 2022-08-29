@@ -1,7 +1,6 @@
 import AppState
 import DesignSystem
 import Lang
-import OnScreen
 import OnWindow
 import Schwifty
 import SwiftUI
@@ -39,16 +38,10 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        HStack {
-            TabSelector(
-                selection: $appState.selectedPage,
-                options: AppPage.allCases
-            )
-            Button(Lang.PetSelection.showPet) { OnScreen.show() }
-                .buttonStyle(.regular)
-        }
-        .padding(.top, .md)
-        .padding(.horizontal, .md)
+        TabSelector(
+            selection: $appState.selectedPage,
+            options: AppPage.allCases
+        )
     }
 }
 
@@ -58,7 +51,7 @@ private struct PageContents: View {
     
     var body: some View {
         switch appState.selectedPage {
-        case .home: PetSelectionView()
+        case .home: Homepage()
         case .settings: SettingsView()
         case .about: AboutView()
         }

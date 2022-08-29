@@ -12,7 +12,8 @@
 // MARK: - Survey
 
 "survey.takeSurvey" = "Take User Survey";
-"survey.surveyExplained" = "Do you have any feedback, ideas, opition, or issue of any kind? Tell us about it!";
+"survey.feedbackViaSurvey" = "Do you have any feedback, ideas, opition, or issue of any kind? Tell us about it!";
+"survey.requestPetViaSurvey" = "Didn't find something you like? We're open to suggestions!";
 
 // MARK: - Purchases
 
@@ -32,7 +33,10 @@
 
 // MARK: - Pet Selection
 
-"petSelection.showPet" = "Reset Pets";
+"petSelection.addPet" = "Add to screen";
+"petSelection.fixOnScreenPets" = "Fix on-screen pets";
+"petSelection.yourPets" = "Pets on screen:";
+"petSelection.morePets" = "More Pets:";
 
 // MARK: - Settings
 

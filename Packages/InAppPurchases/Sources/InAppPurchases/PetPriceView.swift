@@ -22,12 +22,11 @@ public struct PetPriceView: View {
         if isShown {
             Text(formattedPrice)
                 .font(.body)
-                .padding(.xs)
+                .padding(.sm)
                 .frame(height: height)
                 .background(Color.paidBanner)
                 .foregroundColor(.white)
                 .cornerRadius(height/2)
-                .rotationEffect(.radians(.pi * 0.05))
         }
     }
 }

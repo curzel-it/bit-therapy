@@ -7,10 +7,9 @@ import Schwifty
 import Squanch
 import SwiftUI
 
-struct PetGridItem: View {
+struct PetsGridItem: View {
     
     @EnvironmentObject var appState: AppState
-    @EnvironmentObject var viewModel: PetSelectionViewModel
     
     let pet: Pet
     
@@ -19,7 +18,6 @@ struct PetGridItem: View {
     var body: some View {
         ZStack {
             PetPreview(pet: pet)
-            SelectionIndicator(isSelected: isSelected)
             PetPriceOverlay(speciesId: pet.id)
         }
     }
@@ -27,7 +25,7 @@ struct PetGridItem: View {
 
 private struct PetPreview: View {
     
-    @EnvironmentObject var viewModel: PetSelectionViewModel
+    @EnvironmentObject var viewModel: HomepageViewModel
     
     let pet: Pet
     
@@ -60,5 +58,14 @@ private struct SelectionIndicator: View {
                 .positioned(.top)
                 .padding(.top, 4)
         }
+    }
+}
+
+struct PetsGridTitle: View {
+    
+    let title: String
+    
+    var body: some View {
+        Text(title).font(.title2).textAlign(.leading)
     }
 }

@@ -3,15 +3,38 @@ import Lang
 import Squanch
 import SwiftUI
 
-struct SurveyLink: View {
+struct RequestPetsViaSurvey: View {
+    
+    var body: some View {
+        SurveyLink(
+            title: Lang.Survey.takeSurvey,
+            message: Lang.Survey.requestPetViaSurvey
+        )
+    }
+}
+
+struct GiveFeedbackViaSurvey: View {
+    
+    var body: some View {
+        SurveyLink(
+            title: Lang.Survey.takeSurvey,
+            message: Lang.Survey.feedbackViaSurvey
+        )
+    }
+}
+
+private struct SurveyLink: View {
     
     @StateObject private var viewModel = ViewModel()
+    
+    let title: String
+    let message: String
     
     var body: some View {
         if let url = viewModel.url {
             VStack(spacing: .md) {
-                Text(Lang.Survey.surveyExplained)
-                Button(Lang.Survey.takeSurvey) { NSWorkspace.shared.open(url) }
+                Text(message)
+                Button(title) { NSWorkspace.shared.open(url) }
                     .buttonStyle(.regular)
             }
         }
