@@ -18,9 +18,11 @@ class PetDetailsViewModel: ObservableObject {
     var title: String { pet.name }
     
     var pricing: PricingService { PricingService.global }
+    var isSelected: Bool { AppState.global.selectedPets.contains(pet.id) }
     var isFree: Bool { !pet.isPaid }
     var hasBeenPaid: Bool { pricing.didPay(for: pet.id) }
-    var canSelect: Bool { isFree || hasBeenPaid }
+    var canSelect: Bool { !isSelected && (isFree || hasBeenPaid) }
+    var canRemove: Bool { isSelected }
     var canBuy: Bool { !isFree && !hasBeenPaid }
     var price: PetPrice? { pricing.price(for: pet.id) }
     
@@ -51,9 +53,16 @@ class PetDetailsViewModel: ObservableObject {
     }
     
     func select() {
-        AppState.global.selectedPet = pet.id
+        AppState.global.selectedPets.append(pet.id)
         OnScreen.show()
         Tracking.didSelect(pet)
+        close()
+    }
+    
+    func remove() {
+        AppState.global.selectedPets.removeAll { $0 == pet.id }
+        OnScreen.show()
+        Tracking.didRemove(pet)
         close()
     }
     

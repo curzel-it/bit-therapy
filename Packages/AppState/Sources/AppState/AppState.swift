@@ -10,8 +10,6 @@ public class AppState: ObservableObject {
             
     @AppStorage("desktopInteractions") public var desktopInteractions: Bool = true
     
-    @AppStorage("petId") public var selectedPet: String = "sloth"
-    
     @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
     
     @AppStorage("trackingEnabled") public var trackingEnabled = false
@@ -22,9 +20,17 @@ public class AppState: ObservableObject {
     
     @AppStorage("gravityEnabled") private var gravityEnabledValue = true
     
+    @AppStorage("petId") private var selectedPet: String = "sloth"
+    
     @Published public var speedMultiplier: CGFloat = 1 {
         didSet {
             speedMultiplierValue = speedMultiplier
+        }
+    }
+    
+    @Published public var selectedPets: [String] = [] {
+        didSet {
+            selectedPet = selectedPets.joined(separator: ",")
         }
     }
     
@@ -44,6 +50,7 @@ public class AppState: ObservableObject {
         petSize = petSizeValue
         speedMultiplier = speedMultiplierValue
         gravityEnabled = gravityEnabledValue
+        selectedPets = selectedPet.components(separatedBy: ",")
     }
 }
 

@@ -14,7 +14,7 @@ struct PetGridItem: View {
     
     let pet: Pet
     
-    var isSelected: Bool { appState.selectedPet == pet.id }
+    var isSelected: Bool { appState.selectedPets.contains(pet.id) }
     
     var body: some View {
         ZStack {

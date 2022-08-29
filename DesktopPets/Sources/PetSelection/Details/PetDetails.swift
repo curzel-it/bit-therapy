@@ -83,7 +83,10 @@ private struct Footer: View {
                 Button(Lang.select, action: viewModel.select)
                     .buttonStyle(.regular)
             }
-            
+            if viewModel.canRemove {
+                Button(Lang.remove, action: viewModel.remove)
+                    .buttonStyle(.regular)
+            }
             if viewModel.canBuy {
                 Button(viewModel.buyTitle, action: viewModel.buy)
                     .buttonStyle(.regular)

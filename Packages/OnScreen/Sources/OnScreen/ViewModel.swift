@@ -11,7 +11,7 @@ class ViewModel: LiveHabitat {
     
     init() {
         super.init(id: "OnScreen", bounds: NSScreen.main?.frame.bounds ?? .zero)
-        addSelectedPet()
+        addSelectedPets()
         observeWindowsIfNeeded()
         scheduleUfoAbduction()
     }
@@ -22,10 +22,12 @@ class ViewModel: LiveHabitat {
         desktopObstacles.start()
     }
     
-    private func addSelectedPet() {
-        let species = Pet.by(id: AppState.global.selectedPet) ?? .sloth
-        let pet = DesktopPet(of: species, in: state.bounds)
-        state.children.append(pet)
+    private func addSelectedPets() {
+        let pets: [DesktopPet] = AppState.global.selectedPets.map {
+            let species = Pet.by(id: $0) ?? .sloth
+            return DesktopPet(of: species, in: state.bounds)
+        }
+        state.children.append(contentsOf: pets)
     }
     
     override func kill(animated: Bool) {

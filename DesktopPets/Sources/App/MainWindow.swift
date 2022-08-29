@@ -42,7 +42,7 @@ extension MainWindow {
             gravityEnabled: appState.gravityEnabled,
             petSize: appState.petSize,
             launchAtLogin: LaunchAtLogin.isEnabled,
-            selectedPet: appState.selectedPet
+            selectedPets: appState.selectedPets
         )
     }
 }

@@ -24,13 +24,13 @@ extension Tracking {
         gravityEnabled: Bool,
         petSize: CGFloat,
         launchAtLogin: Bool,
-        selectedPet: String
+        selectedPets: [String]
     ) {
         log(AnalyticsEventAppOpen, with: [
             "gravity_enabled": gravityEnabled,
             "pet_size": petSize,
             "launch_at_login": launchAtLogin,
-            "selected_pet": selectedPet
+            "selected_pets": selectedPets.joined(separator: ", ")
         ])
     }
     
@@ -40,6 +40,10 @@ extension Tracking {
     
     public static func didSelect(_ pet: Pet) {
         log("did_select_pet", with: ["pet": pet.id])
+    }
+    
+    public static func didRemove(_ pet: Pet) {
+        log("did_remove_pet", with: ["pet": pet.id])
     }
     
     public static func didEnterDetails(species: String, name: String, price: Double?, purchased: Bool) {
