@@ -38,7 +38,7 @@ private struct DesktopInteractions: View {
         HStack(spacing: .sm) {
             Switch(Lang.Settings.desktopInteractions, appState.$desktopInteractions)
             Image(systemName: "info.circle.fill")
-                .font(.regular, .icon)
+                .font(.title)
                 .onTapGesture {
                     showingDetails = true
                 }
@@ -47,10 +47,10 @@ private struct DesktopInteractions: View {
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
                 Text(Lang.Settings.desktopInteractions)
-                    .font(.bold, .xl)
+                    .font(.largeTitle)
                     .padding(.top)
                 Text(Lang.Settings.desktopInteractionsMessage)
-                    .font(.regular, .sm)
+                    .font(.body)
                     .multilineTextAlignment(.center)
                 HStack {
                     Button(Lang.enable) {
@@ -86,7 +86,7 @@ private struct AnonymousTracking: View {
         HStack(spacing: .sm) {
             Switch(Lang.Settings.anonymousTracking, enabled)
             Image(systemName: "info.circle.fill")
-                .font(.regular, .icon)
+                .font(.title)
                 .onTapGesture {
                     showingDetails = true
                 }
@@ -95,10 +95,10 @@ private struct AnonymousTracking: View {
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
                 Text(Lang.Settings.anonymousTrackingExplainedTitle)
-                    .font(.bold, .xl)
+                    .font(.largeTitle)
                     .padding(.top)
                 Text(Lang.Settings.anonymousTrackingExplained)
-                    .font(.regular, .sm)
+                    .font(.body)
                     .multilineTextAlignment(.center)
                 HStack {
                     Button(Lang.cancel) { showingDetails = false }

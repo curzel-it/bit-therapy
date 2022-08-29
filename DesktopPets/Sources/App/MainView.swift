@@ -1,6 +1,7 @@
 import AppState
 import DesignSystem
 import Lang
+import OnScreen
 import OnWindow
 import Schwifty
 import SwiftUI
@@ -12,18 +13,13 @@ struct MainView: View {
     var body: some View {
         VStack(spacing: .zero) {
             Header()
-                .padding(.top, .md)
-                .padding(.horizontal, .md)
-                .padding(.bottom, .sm)
             PageContents()
-                .positioned(.middle)
+            Spacer(minLength: 0)
         }
         .frame(minWidth: 600)
         .frame(minHeight: 600)
         .foregroundColor(.label)
-        .font(.regular, .md)
         .environmentObject(AppState.global)
-        // .onWindow { MainWindowDelegate.setup(for: $0) }
     }
 }
 
@@ -43,10 +39,16 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        TabSelector(
-            selection: $appState.selectedPage,
-            options: AppPage.allCases
-        )
+        HStack {
+            TabSelector(
+                selection: $appState.selectedPage,
+                options: AppPage.allCases
+            )
+            Button(Lang.PetSelection.showPet) { OnScreen.show() }
+                .buttonStyle(.regular)
+        }
+        .padding(.top, .md)
+        .padding(.horizontal, .md)
     }
 }
 
@@ -70,7 +72,7 @@ private struct PageTitle: View {
     var body: some View {
         Text(appState.selectedPage.description)
             .textAlign(.center)
-            .font(.bold, .title)
+            .font(.largeTitle)
             .padding()
     }
 }

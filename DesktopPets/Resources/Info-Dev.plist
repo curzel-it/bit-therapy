@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ATSApplicationFontsPath</key>
-	<string>.</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -19,12 +17,5 @@
 	<false/>
 	<key>LSUIElement</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Dogica_Bold.ttf</string>
-		<string>Dogica_Pixel_Bold.ttf</string>
-		<string>Dogica.ttf</string>
-		<string>Dogica_Pixel.ttf</string>
-	</array>
 </dict>
 </plist>

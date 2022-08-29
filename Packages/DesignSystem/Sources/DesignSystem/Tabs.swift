@@ -23,6 +23,7 @@ public struct TabSelector<T: Tabbable>: View {
             ForEach(options, id: \.self) { option in
                 TabItem(selection: $selection, value: option)
             }
+            Spacer()
         }
     }
 }
@@ -35,12 +36,11 @@ struct TabItem<T: Tabbable>: View {
     
     var isSelected: Bool { value == selection }
     var fgColor: Color { isSelected ? .accent : .secondaryLabel }
-    var fontSize: Typography.Size { isSelected ? .xl : .md }
-    var fontWeight: Typography.Weight { isSelected ? .bold : .regular }
+    var font: Font { isSelected ? .largeTitle : .title }
     
     var body: some View {
         Text(value.description)
-            .font(fontWeight, fontSize)
+            .font(font)
             .foregroundColor(fgColor)
             .padding(.vertical, .md)
             .padding(.horizontal, .md)

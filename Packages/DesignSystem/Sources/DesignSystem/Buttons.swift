@@ -78,7 +78,7 @@ private struct BaseButton: ViewModifier {
     func body(content: Content) -> some View {
         content
             .textCase(.uppercase)
-            .font(.bold, .md)
+            .font(.headline)
             .frame(height: DesignSystem.buttonsHeight)
             .padding(.horizontal, .md)
     }

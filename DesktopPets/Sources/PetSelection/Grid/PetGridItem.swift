@@ -54,10 +54,11 @@ private struct SelectionIndicator: View {
     var body: some View {
         if isSelected {
             Image(systemName: "arrowtriangle.down.fill")
-                .font(.regular, .lg)
+                .font(.title2)
                 .foregroundColor(.label)
                 .shadow(radius: 4)
                 .positioned(.top)
+                .padding(.top, 4)
         }
     }
 }

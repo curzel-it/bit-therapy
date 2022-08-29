@@ -1,22 +1,15 @@
 import AppState
 import DesignSystem
 import InAppPurchases
-import Lang
-import OnScreen
-import Schwifty
 import SwiftUI
 
-public struct PetSelectionView: View {
+struct PetSelectionView: View {
     
     @EnvironmentObject var appState: AppState
     
     @StateObject var viewModel = PetSelectionViewModel()
     
-    public init() {
-        // ...
-    }
-    
-    public var body: some View {
+    var body: some View {
         ZStack {
             ScrollView {
                 PetSelectionGrid()
@@ -24,10 +17,6 @@ public struct PetSelectionView: View {
                     .padding(.top, .md)
                     .padding(.bottom, 200)
             }
-            Button(Lang.PetSelection.showPet) { OnScreen.show() }
-                .buttonStyle(.regular)
-                .positioned(.trailingBottom)
-                .padding(.lg)
         }
         .environmentObject(viewModel)
         .environmentObject(PricingService.global)

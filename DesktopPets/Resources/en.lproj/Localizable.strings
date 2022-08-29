@@ -32,7 +32,7 @@
 
 // MARK: - Pet Selection
 
-"petSelection.showPet" = "Show Pet";
+"petSelection.showPet" = "Reset Pets";
 
 // MARK: - Settings
 

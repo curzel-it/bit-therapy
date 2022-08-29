@@ -8,7 +8,7 @@ struct RightClickMenu: View {
     
     var body: some View {
         Image(systemName: "xmark")
-            .font(.bold, .xl)
+            .font(.largeTitle)
             .foregroundColor(.accent)
             .onTapGesture {
                 OnScreen.hide()
