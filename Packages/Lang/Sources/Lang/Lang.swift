@@ -30,6 +30,14 @@ public enum Lang {
         public static func item(_ key: String) -> String { "menu.item.\(key)".localized() }
     }
     
+    // MARK: - Survey
+    
+    public enum Survey {
+        
+        public static let surveyExplained = "survey.surveyExplained".localized()
+        public static let takeSurvey = "survey.takeSurvey".localized()
+    }
+    
     // MARK: - Settings
     
     public enum Settings {

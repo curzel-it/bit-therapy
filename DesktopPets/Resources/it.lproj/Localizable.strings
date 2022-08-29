@@ -9,6 +9,11 @@
 "somethingWentWrong" = "Qualcosa è andato storto, riprova";
 "done" = "Fatto";
 
+// MARK: - Survey
+
+"survey.takeSurvey" = "Questionario";
+"survey.surveyExplained" = "Hai feedback, idee, opinioni o problemi con l'app? Faccelo sapere!";
+
 // MARK: - Purchases
 
 "purchases.buy" = "Acquista";

@@ -19,11 +19,7 @@ struct AboutView: View {
                 linkTitle: Lang.About.leaveReview,
                 link: appStore
             )
-            Section(
-                message: Lang.About.mailMessage,
-                linkTitle: Lang.About.mail,
-                link: mailto
-            )            
+            SurveyLink()
             PrivacyPolicy().padding(.top, .xl)
             Socials().padding(.top, .lg)
             

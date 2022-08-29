@@ -9,6 +9,11 @@
 "somethingWentWrong" = "Something went wrong, please try again";
 "done" = "Done";
 
+// MARK: - Survey
+
+"survey.takeSurvey" = "Take User Survey";
+"survey.surveyExplained" = "Do you have any feedback, ideas, opition, or issue of any kind? Tell us about it!";
+
 // MARK: - Purchases
 
 "purchases.buy" = "Buy";

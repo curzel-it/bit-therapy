@@ -22,6 +22,8 @@
 		1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C550D28B8CE6200613F3B /* Squanch */; };
 		1E2C551128B8CE7C00613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551028B8CE7C00613F3B /* WindowsDetector */; };
 		1E2C551428B8CE9200613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551328B8CE9200613F3B /* WindowsDetector */; };
+		1E7FB47628BD185D002F377D /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
+		1E7FB47828BD1A7F002F377D /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
@@ -97,6 +99,8 @@
 		1E1FA9AD28AE851F0082A113 /* PetGridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetGridItem.swift; sourceTree = "<group>"; };
 		1E1FA9AE28AE851F0082A113 /* PetSelectionGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectionGrid.swift; sourceTree = "<group>"; };
 		1E1FA9AF28AE851F0082A113 /* PetSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSelectionViewModel.swift; sourceTree = "<group>"; };
+		1E7FB47528BD185D002F377D /* SettingsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApi.swift; sourceTree = "<group>"; };
+		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +204,22 @@
 			path = Grid;
 			sourceTree = "<group>";
 		};
+		1E7FB47428BD184C002F377D /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				1E7FB47728BD1A7F002F377D /* SurveyView.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		1E7FB47928BD1C5A002F377D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1E7FB47528BD185D002F377D /* SettingsApi.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		A63AC7942874739100A9F738 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,9 +270,11 @@
 			children = (
 				A6FB7D5B28740F8E00AB872E /* About */,
 				A6FB7D5528740F8E00AB872E /* App */,
+				1E7FB47928BD1C5A002F377D /* Config */,
 				1E1FA9A728AE851F0082A113 /* PetSelection */,
 				A6FB7D5228740F8E00AB872E /* Settings */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
+				1E7FB47428BD184C002F377D /* Survey */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -563,6 +585,8 @@
 				A6FB7D8628740F8E00AB872E /* AboutView.swift in Sources */,
 				1E1FA9B028AE851F0082A113 /* PetDetails.swift in Sources */,
 				A6FB7D7E28740F8E00AB872E /* MyApp.swift in Sources */,
+				1E7FB47828BD1A7F002F377D /* SurveyView.swift in Sources */,
+				1E7FB47628BD185D002F377D /* SettingsApi.swift in Sources */,
 				1E1FA9BA28AE851F0082A113 /* PetSelectionViewModel.swift in Sources */,
 				1E1FA9B228AE851F0082A113 /* PetDetailsViewModel.swift in Sources */,
 				1E1FA9B428AE851F0082A113 /* PetSelection.swift in Sources */,
