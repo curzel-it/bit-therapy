@@ -15,14 +15,25 @@ struct SettingsView: View {
     var body: some View {
         VStack(spacing: .xl) {
             SizeSlider()
-            Switch(Lang.Settings.gravity, $appState.gravityEnabled)
-            DesktopInteractions()
-            LaunchAtLoginSwitch()
-            StatusBarIconSwitch()
-            AnonymousTracking()
-            RestorePurchasesButton()
+            GravitySwitch().positioned(.leading)
+            DesktopInteractions().positioned(.leading)
+            LaunchAtLoginSwitch().positioned(.leading)
+            StatusBarIconSwitch().positioned(.leading)
+            AnonymousTracking().positioned(.leading)
+            RestorePurchasesButton().positioned(.leading)
         }
         .padding(.md)
+    }
+}
+
+// MARK: - Gravity
+
+private struct GravitySwitch: View {
+    
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        Switch(Lang.Settings.gravity, $appState.gravityEnabled)
     }
 }
 
@@ -42,7 +53,6 @@ private struct DesktopInteractions: View {
                 .onTapGesture {
                     showingDetails = true
                 }
-            
         }
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
@@ -90,7 +100,6 @@ private struct AnonymousTracking: View {
                 .onTapGesture {
                     showingDetails = true
                 }
-            
         }
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
@@ -174,9 +183,10 @@ private struct SizeSlider: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        VStack(spacing: .md) {
+        HStack(spacing: .md) {
             Text("\(Lang.Settings.size) (\(Int(appState.petSize)))")
-                .multilineTextAlignment(.center)
+                .textAlign(.leading)
+                .frame(width: 100)
             Slider(
                 value: $appState.petSize,
                 in: PetSize.minSize...PetSize.maxSize

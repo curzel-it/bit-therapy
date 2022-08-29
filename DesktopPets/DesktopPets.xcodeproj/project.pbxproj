@@ -51,14 +51,6 @@
 		A6FB7D6A28740F8E00AB872E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		A6FB7D6D28740F8E00AB872E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		A6FB7D6E28740F8E00AB872E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
-		A6FB7D7128740F8E00AB872E /* Dogica_Pixel_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4D28740F8E00AB872E /* Dogica_Pixel_Bold.ttf */; };
-		A6FB7D7228740F8E00AB872E /* Dogica_Pixel_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4D28740F8E00AB872E /* Dogica_Pixel_Bold.ttf */; };
-		A6FB7D7328740F8E00AB872E /* Dogica_Pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4E28740F8E00AB872E /* Dogica_Pixel.ttf */; };
-		A6FB7D7428740F8E00AB872E /* Dogica_Pixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4E28740F8E00AB872E /* Dogica_Pixel.ttf */; };
-		A6FB7D7528740F8E00AB872E /* Dogica_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4F28740F8E00AB872E /* Dogica_Bold.ttf */; };
-		A6FB7D7628740F8E00AB872E /* Dogica_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4F28740F8E00AB872E /* Dogica_Bold.ttf */; };
-		A6FB7D7728740F8E00AB872E /* Dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D5028740F8E00AB872E /* Dogica.ttf */; };
-		A6FB7D7828740F8E00AB872E /* Dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D5028740F8E00AB872E /* Dogica.ttf */; };
 		A6FB7D7928740F8E00AB872E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5328740F8E00AB872E /* SettingsView.swift */; };
 		A6FB7D7B28740F8E00AB872E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5328740F8E00AB872E /* SettingsView.swift */; };
 		A6FB7D7E28740F8E00AB872E /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* MyApp.swift */; };
@@ -111,10 +103,6 @@
 		A6FB7D4928740F8E00AB872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6FB7D4A28740F8E00AB872E /* MacPets.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MacPets.entitlements; sourceTree = "<group>"; };
 		A6FB7D4B28740F8E00AB872E /* Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Dev.plist"; sourceTree = "<group>"; };
-		A6FB7D4D28740F8E00AB872E /* Dogica_Pixel_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dogica_Pixel_Bold.ttf; sourceTree = "<group>"; };
-		A6FB7D4E28740F8E00AB872E /* Dogica_Pixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dogica_Pixel.ttf; sourceTree = "<group>"; };
-		A6FB7D4F28740F8E00AB872E /* Dogica_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dogica_Bold.ttf; sourceTree = "<group>"; };
-		A6FB7D5028740F8E00AB872E /* Dogica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dogica.ttf; sourceTree = "<group>"; };
 		A6FB7D5328740F8E00AB872E /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A6FB7D5628740F8E00AB872E /* MyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		A6FB7D5728740F8E00AB872E /* MainWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
@@ -244,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
-				A6FB7D4C28740F8E00AB872E /* Fonts */,
 				A6FB7D4B28740F8E00AB872E /* Info-Dev.plist */,
 				A6FB7D4828740F8E00AB872E /* Info-Prod.plist */,
 				A6FB7D4528740F8E00AB872E /* Localizable.strings */,
@@ -252,17 +239,6 @@
 				A6FB7D4428740F8E00AB872E /* Secrets.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A6FB7D4C28740F8E00AB872E /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				A6FB7D4D28740F8E00AB872E /* Dogica_Pixel_Bold.ttf */,
-				A6FB7D4E28740F8E00AB872E /* Dogica_Pixel.ttf */,
-				A6FB7D4F28740F8E00AB872E /* Dogica_Bold.ttf */,
-				A6FB7D5028740F8E00AB872E /* Dogica.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
@@ -463,12 +439,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6FB7D7528740F8E00AB872E /* Dogica_Bold.ttf in Resources */,
-				A6FB7D7328740F8E00AB872E /* Dogica_Pixel.ttf in Resources */,
 				A6FB7D6D28740F8E00AB872E /* Assets.xcassets in Resources */,
 				A6FB7D6928740F8E00AB872E /* Localizable.strings in Resources */,
-				A6FB7D7728740F8E00AB872E /* Dogica.ttf in Resources */,
-				A6FB7D7128740F8E00AB872E /* Dogica_Pixel_Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,12 +457,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6FB7D6828740F8E00AB872E /* Secrets.plist in Resources */,
-				A6FB7D7628740F8E00AB872E /* Dogica_Bold.ttf in Resources */,
-				A6FB7D7428740F8E00AB872E /* Dogica_Pixel.ttf in Resources */,
 				A6FB7D6E28740F8E00AB872E /* Assets.xcassets in Resources */,
 				A6FB7D6A28740F8E00AB872E /* Localizable.strings in Resources */,
-				A6FB7D7828740F8E00AB872E /* Dogica.ttf in Resources */,
-				A6FB7D7228740F8E00AB872E /* Dogica_Pixel_Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

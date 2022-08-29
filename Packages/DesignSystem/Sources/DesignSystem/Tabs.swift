@@ -36,7 +36,7 @@ struct TabItem<T: Tabbable>: View {
     
     var isSelected: Bool { value == selection }
     var fgColor: Color { isSelected ? .accent : .secondaryLabel }
-    var font: Font { isSelected ? .largeTitle : .title }
+    var font: Font { isSelected ? .title.bold() : .title }
     
     var body: some View {
         Text(value.description)

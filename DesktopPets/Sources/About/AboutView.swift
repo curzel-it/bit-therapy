@@ -21,12 +21,16 @@ struct AboutView: View {
             )
             SurveyLink()
             PrivacyPolicy().padding(.top, .xl)
-            Socials().padding(.top, .lg)
             
-            Text(appVersion)
+            VStack(spacing: .xl) {
+                Socials().padding(.top, .lg)
+                Text(appVersion)
+            }
+            .positioned(.bottom)
         }
         .multilineTextAlignment(.center)
         .padding(.md)
+        .padding(.top, .lg)
     }
     
     var appVersion: String {
