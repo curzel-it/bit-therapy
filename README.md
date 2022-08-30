@@ -26,8 +26,9 @@ The window-detection service is also open source and implemented [here](https://
 
 ## Screenshots
 
-![Screenshot of my mac running the app](Gallery/1.png)
-![Ufo attacking Desktop City](Gallery/bombing.gif)
+![App running on my mac](Gallery/demo.gif)
+![Homepage, light mode](Gallery/1.png)
+![Settings, light mode](Gallery/3.png)
 
 ## Running the Project
 
