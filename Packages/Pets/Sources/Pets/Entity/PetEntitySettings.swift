@@ -49,6 +49,7 @@ extension PetEntity {
 extension Capabilities {
     
     static let defaultsStatic: Capabilities = [
+        PetAnimationsProvider.self,
         RandomAnimations.self,
         AnimatedSprite.self,
         PetSpritesProvider.self

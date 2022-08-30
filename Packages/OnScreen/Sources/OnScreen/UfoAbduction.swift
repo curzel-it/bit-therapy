@@ -137,8 +137,8 @@ private class UfoAbduction: Capability {
         pet.uninstall(UfoAbduction.self)
     }
     
-    override func uninstall() {
-        super.uninstall()
+    override func kill() {
+        super.kill()
         self.onCompletion = {}
         self.target = nil
     }
