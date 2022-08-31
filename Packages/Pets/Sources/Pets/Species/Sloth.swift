@@ -20,13 +20,13 @@ extension Pet {
             .init(
                 trigger: .on(spot: .bottomLeftCorner),
                 possibleAnimations: [
-                    .climb(to: .habitatTopLeft)
+                    .climb(to: .habitatTopLeft), .eat
                 ]
             ),
             .init(
                 trigger: .on(spot: .bottomRightCorner),
                 possibleAnimations: [
-                    .climb(to: .habitatTopRight)
+                    .climb(to: .habitatTopRight), .selfie
                 ]
             )
         ],
@@ -44,14 +44,10 @@ private extension EntityAnimation {
     static let selfie = EntityAnimation(id: "selfie")
     
     static func climb(to position: Position) -> EntityAnimation {
-        let left = position == .habitatTopLeft
-        let direction: CGVector = .init(dx: left ? 1 : -1, dy: 0)
-        
-        return .init(
+        .init(
             id: "climb",
             position: position,
-            facingDirection: direction,
-            chance: 0.5
+            facingDirection: CGVector(dx: 1, dy: 0)
         )
     }
 }

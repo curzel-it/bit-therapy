@@ -24,6 +24,8 @@
 		1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C550D28B8CE6200613F3B /* Squanch */; };
 		1E7FB47628BD185D002F377D /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
 		1E7FB47828BD1A7F002F377D /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
+		1EA51CE028BF846D00C62890 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51CDF28BF846D00C62890 /* Ratings.swift */; };
+		1EA51CE128BF846D00C62890 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA51CDF28BF846D00C62890 /* Ratings.swift */; };
 		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
@@ -93,6 +95,7 @@
 		1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
 		1E7FB47528BD185D002F377D /* SettingsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApi.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		1EA51CDF28BF846D00C62890 /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,12 +192,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1E7FB47428BD184C002F377D /* Survey */ = {
+		1E7FB47428BD184C002F377D /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
 				1E7FB47728BD1A7F002F377D /* SurveyView.swift */,
+				1EA51CDF28BF846D00C62890 /* Ratings.swift */,
 			);
-			path = Survey;
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		1E7FB47928BD1C5A002F377D /* Config */ = {
@@ -256,7 +260,7 @@
 				1E1FA9A728AE851F0082A113 /* Homepage */,
 				A6FB7D5228740F8E00AB872E /* Settings */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
-				1E7FB47428BD184C002F377D /* Survey */,
+				1E7FB47428BD184C002F377D /* Feedback */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -547,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA51CE028BF846D00C62890 /* Ratings.swift in Sources */,
 				A6FB7D7928740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8228740F8E00AB872E /* MainView.swift in Sources */,
 				1E1FA9B628AE851F0082A113 /* PetsGridItems.swift in Sources */,
@@ -576,6 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA51CE128BF846D00C62890 /* Ratings.swift in Sources */,
 				A6FB7D7B28740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MainView.swift in Sources */,
 				1E1FA9B728AE851F0082A113 /* PetsGridItems.swift in Sources */,
@@ -847,7 +853,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2094;
+				CURRENT_PROJECT_VERSION = 2095;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -863,7 +869,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.9;
+				MARKETING_VERSION = 2.10;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -879,7 +885,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2094;
+				CURRENT_PROJECT_VERSION = 2095;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -895,7 +901,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.9;
+				MARKETING_VERSION = 2.10;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

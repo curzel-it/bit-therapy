@@ -18,6 +18,7 @@ struct MyApp: App {
             OnScreen.show()
             StatusBarItems.main.setup()
         }
+        RatingsService().askForRatingIfNeeded()
     }
     
     var body: some Scene {

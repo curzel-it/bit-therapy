@@ -158,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/squanch",
       "state" : {
-        "revision" : "3df528528b4bd4dde0424ff6742485f00c1260b8",
-        "version" : "1.0.2"
+        "revision" : "18d8a33b9711745f2c9b7ed77a8e21ddddc19176",
+        "version" : "1.0.5"
       }
     },
     {

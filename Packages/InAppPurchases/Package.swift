@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Lang"),
         .package(path: "../Tracking"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.2"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.5"),
         .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0")
     ],
     targets: [
