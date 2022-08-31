@@ -15,9 +15,22 @@ class DesktopPet: PetEntity {
         fps = species.fps
         setupPacmanEffect()
         setupMenu()
+        setInitialPosition()
         setInitialDirection()
         bindSizeToSettings()
         bindGravityToSettings()
+    }
+    
+    private func setInitialPosition() {
+        let randomX = CGFloat.random(in: 0.1..<0.75) * habitatBounds.width
+        let randomY: CGFloat
+        
+        if capability(for: WallCrawler.self) != nil {
+            randomY = habitatBounds.height - frame.height
+        } else {
+            randomY = CGFloat.random(in: 0.1..<0.5) * habitatBounds.height
+        }
+        set(origin: CGPoint(x: randomX, y: randomY))
     }
     
     private func setupPacmanEffect() {

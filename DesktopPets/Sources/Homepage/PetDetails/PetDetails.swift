@@ -21,7 +21,7 @@ struct PetDetails: View {
     
     var body: some View {
         VStack(spacing: .xl) {
-            Text(viewModel.title).font(.largeTitle)
+            Text(viewModel.title).font(.largeTitle.bold())
             AnimatedPreview()
             About().padding(.top, .lg)
             Footer()

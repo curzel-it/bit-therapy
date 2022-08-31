@@ -35,12 +35,7 @@ extension PetEntity {
 extension PetEntity {
     
     static func initialFrame(in habitatBounds: CGRect, size: CGFloat) -> CGRect {
-        let position = habitatBounds
-            .bottomLeft
-            .offset(x: habitatBounds.width/4)
-            .offset(y: -size)
-        
-        return CGRect(origin: position, size: CGSize(square: size))
+        return CGRect(origin: .zero, size: CGSize(square: size))
     }
 }
 

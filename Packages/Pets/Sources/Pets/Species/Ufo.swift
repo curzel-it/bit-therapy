@@ -20,7 +20,7 @@ extension Pet {
         isPaid: true,
         movementPath: .front,
         dragPath: .front,
-        speed: 2.4
+        speed: 2
     )
 }
     

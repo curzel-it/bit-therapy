@@ -8,8 +8,8 @@ import Pets
 extension ViewModel {
     
     @discardableResult
-    func scheduleUfoAbduction() -> Event {
-        state.schedule(every: .timeOfDay(hour: 22, minute: 30)) { [weak self] _ in
+    func scheduleUfoAbduction() -> Event {        
+        return state.schedule(every: .timeOfDay(hour: 22, minute: 30)) { [weak self] _ in
             guard let victim = self?.victim else { return }
             self?.animateUfoAbduction(of: victim)
         }
@@ -20,8 +20,10 @@ extension ViewModel {
 
 private extension ViewModel {
     
-    var victim: PetEntity? {
-        state.children.compactMap { $0 as? PetEntity }.first
+    var victim: Entity? {
+        state.children
+            .filter { $0 is DesktopPet }
+            .randomElement()
     }
     
     func animateUfoAbduction(of target: Entity) {
@@ -49,21 +51,14 @@ private class UfoEntity: PetEntity {
             in: habitatBounds,
             installCapabilities: true
         )
+        uninstall(BounceOffLateralCollisions.self)
+        uninstall(RandomAnimations.self)
+        uninstall(ReactToHotspots.self)
     }
     
     func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
-        uninstall(BounceOffLateralCollisions.self)
-        uninstall(ReactToHotspots.self)
-        uninstall(RandomAnimations.self)
-        
         let abduction = install(UfoAbduction.self)
-        
-        abduction.abduct(target) {
-            self.install(BounceOffLateralCollisions.self)
-            self.install(ReactToHotspots.self)
-            self.install(RandomAnimations.self)
-            onCompletion()
-        }
+        abduction.abduct(target, onCompletion)
     }
 }
 
@@ -83,41 +78,41 @@ private extension EntityAnimation {
 private class UfoAbduction: Capability {
     
     weak var target: Entity?
+    
+    private var subjectOriginalSize: CGSize!
         
     private var onCompletion: () -> Void = {}
     
     func abduct(_ target: Entity, _ onCompletion: @escaping () -> Void) {
+        guard let body = subject else { return }
+        self.subjectOriginalSize = body.frame.size
         self.target = target
         self.onCompletion = onCompletion
-        followTargetUntilCaptured()
-    }
-    
-    private func followTargetUntilCaptured() {
-        guard let body = subject, let target = target else { return }
+        
         let seeker = body.install(Seeker.self)
-        seeker.follow(
-            target,
-            to: .above,
-            offset: .init(width: 0, height: -50)
-        ) { captureState in
+        let distance = CGSize(width: 0, height: -50)
+        
+        seeker.follow(target, to: .above, offset: distance) { captureState in
             guard case .captured = captureState else { return }
             seeker.isEnabled = false
+            self.paralizeTarget()
             self.captureRayAnimation()
         }
     }
     
+    private func paralizeTarget() {
+        target?.uninstall(Gravity.self)
+        target?.set(direction: CGVector(dx: 0, dy: -1))
+        target?.speed = PetEntity.speedMultiplier(for: target?.frame.size.width ?? 0)
+    }
+    
     private func captureRayAnimation() {
-        guard let target = target else { return }
         subject?.set(direction: .zero)
         subject?.set(state: .animation(animation: .abduction, loops: 1))
         subject?.uninstall(Seeker.self)
         
-        target.uninstall(Gravity.self)
-        target.set(direction: CGVector(dx: 0, dy: -1))
-        target.speed = PetEntity.speedMultiplier(for: target.frame.size.width)
-        
-        let shape = target.install(ShapeShifter.self)
-        shape.scaleLinearly(to: CGSize(width: 5, height: 5), duracy: 1.1)
+        let shape = target?.install(ShapeShifter.self)
+        shape?.scaleLinearly(to: CGSize(width: 5, height: 5), duracy: 1.1)
         scheduleAnimationCompletion(in: 1.25)
     }
     
@@ -131,10 +126,11 @@ private class UfoAbduction: Capability {
     private func resumeMovement() {
         guard let pet = subject as? PetEntity else { return }
         pet.set(state: .move)
+        pet.set(size: subjectOriginalSize)
         pet.set(direction: CGVector(dx: 1, dy: 0))
         pet.speed = PetEntity.speed(for: pet.species, size: pet.frame.width)
-        onCompletion()
         pet.uninstall(UfoAbduction.self)
+        onCompletion()
     }
     
     override func kill() {
