@@ -22,8 +22,6 @@
 		1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1E28C01B28BD575E00E82E2C /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
 		1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C550D28B8CE6200613F3B /* Squanch */; };
-		1E2C551128B8CE7C00613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551028B8CE7C00613F3B /* WindowsDetector */; };
-		1E2C551428B8CE9200613F3B /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C551328B8CE9200613F3B /* WindowsDetector */; };
 		1E7FB47628BD185D002F377D /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
 		1E7FB47828BD1A7F002F377D /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
@@ -126,7 +124,6 @@
 				1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */,
 				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
 				1EE263FF2892866A00771170 /* Schwifty in Frameworks */,
-				1E2C551128B8CE7C00613F3B /* WindowsDetector in Frameworks */,
 				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
 				A63AC7B92874766200A9F738 /* OnScreen in Frameworks */,
 				A63AC7C32874766200A9F738 /* Tracking in Frameworks */,
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
-				1E2C551428B8CE9200613F3B /* WindowsDetector in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
 				1EF696E828B0E1B80042B9DA /* AppState in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
@@ -339,7 +335,6 @@
 				1EF5CF7928A51BBF00BCBBD4 /* Lang */,
 				1EF5CF7B28A51BBF00BCBBD4 /* Squanch */,
 				1E2C550D28B8CE6200613F3B /* Squanch */,
-				1E2C551028B8CE7C00613F3B /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1928746D2E00D695EA /* DesktopPets.app */;
@@ -391,7 +386,6 @@
 				1EF696E728B0E1B80042B9DA /* AppState */,
 				1EF696E928B0E1B80042B9DA /* Lang */,
 				1EF696EB28B0E1B80042B9DA /* Squanch */,
-				1E2C551328B8CE9200613F3B /* WindowsDetector */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -431,7 +425,6 @@
 				1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
 				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
 				1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */,
-				1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -854,7 +847,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2093;
+				CURRENT_PROJECT_VERSION = 2094;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -886,7 +879,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2093;
+				CURRENT_PROJECT_VERSION = 2094;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -960,14 +953,6 @@
 				minimumVersion = 1.0.2;
 			};
 		};
-		1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/WindowsDetector";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.3;
-			};
-		};
 		1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/OnWindow";
@@ -999,16 +984,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */;
 			productName = Squanch;
-		};
-		1E2C551028B8CE7C00613F3B /* WindowsDetector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */;
-			productName = WindowsDetector;
-		};
-		1E2C551328B8CE9200613F3B /* WindowsDetector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E2C550F28B8CE7C00613F3B /* XCRemoteSwiftPackageReference "WindowsDetector" */;
-			productName = WindowsDetector;
 		};
 		1EDBC2C12891BD2C00A8D37B /* OnWindow */ = {
 			isa = XCSwiftPackageProductDependency;

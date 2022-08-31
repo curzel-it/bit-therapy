@@ -1,8 +1,8 @@
 import AppState
 import InAppPurchases
 import OnScreen
-import SwiftUI
 import Schwifty
+import SwiftUI
 import Tracking
 
 @main
