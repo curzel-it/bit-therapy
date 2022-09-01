@@ -149,8 +149,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/RateKit",
       "state" : {
-        "revision" : "468db331b328924047640ffbfdb5b00c8973675b",
-        "version" : "1.0.1"
+        "revision" : "1f2ffd311514919fae8411440348e7d9c5ea0f72",
+        "version" : "1.0.3"
       }
     },
     {

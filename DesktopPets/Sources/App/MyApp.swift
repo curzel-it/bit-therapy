@@ -20,7 +20,10 @@ struct MyApp: App {
             StatusBarItems.main.setup()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            RateKit.ratingsService(debug: true).askForRatingIfNeeded()
+            RateKit.ratingsService(
+                debug: true,
+                launchesBeforeAskingForReview: 2
+            ).askForRatingIfNeeded()
         }
     }
     

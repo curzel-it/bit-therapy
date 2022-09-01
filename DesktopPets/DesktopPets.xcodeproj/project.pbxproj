@@ -973,7 +973,7 @@
 			repositoryURL = "https://github.com/curzel-it/RateKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.0.3;
 			};
 		};
 		1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */ = {
