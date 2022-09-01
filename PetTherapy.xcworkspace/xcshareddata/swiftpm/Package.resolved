@@ -145,6 +145,15 @@
       }
     },
     {
+      "identity" : "ratekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/RateKit",
+      "state" : {
+        "revision" : "468db331b328924047640ffbfdb5b00c8973675b",
+        "version" : "1.0.1"
+      }
+    },
+    {
       "identity" : "schwifty",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/schwifty",

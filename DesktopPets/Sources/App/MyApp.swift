@@ -1,6 +1,7 @@
 import AppState
 import InAppPurchases
 import OnScreen
+import RateKit
 import Schwifty
 import SwiftUI
 import Tracking
@@ -18,7 +19,9 @@ struct MyApp: App {
             OnScreen.show()
             StatusBarItems.main.setup()
         }
-        RatingsService().askForRatingIfNeeded()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            RateKit.ratingsService(debug: true).askForRatingIfNeeded()
+        }
     }
     
     var body: some Scene {
