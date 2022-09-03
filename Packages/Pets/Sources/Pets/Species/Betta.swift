@@ -10,8 +10,9 @@ extension Pet {
                 trigger: .random,
                 possibleAnimations: [
                     .front,
-                    .eat,
-                    .tsundere
+                    .eat.with(loops: 2),
+                    .tsundere.with(loops: 3),
+                    .backflip
                 ]
             )
         ],
@@ -23,4 +24,5 @@ extension Pet {
 
 private extension EntityAnimation {
     static let tsundere = EntityAnimation(id: "tsundere")
+    static let backflip = EntityAnimation(id: "backflip")
 }

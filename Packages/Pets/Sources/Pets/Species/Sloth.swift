@@ -11,22 +11,24 @@ extension Pet {
                 possibleAnimations: [
                     .front,
                     .idle,
-                    .eat,
+                    .eat.with(loops: 2),
                     .love,
-                    .selfie,
+                    .selfie.with(loops: 2),
                     .lightsaber(size: CGSize(width: 3.36, height: 1.86))
                 ]
             ),
             .init(
                 trigger: .on(spot: .bottomLeftCorner),
                 possibleAnimations: [
-                    .climb(to: .habitatTopLeft), .eat
+                    .climb(to: .habitatTopLeft).with(loops: 2),
+                    .eat.with(loops: 2)
                 ]
             ),
             .init(
                 trigger: .on(spot: .bottomRightCorner),
                 possibleAnimations: [
-                    .climb(to: .habitatTopRight), .selfie
+                    .climb(to: .habitatTopRight).with(loops: 2),
+                    .selfie.with(loops: 2)
                 ]
             )
         ],
@@ -44,10 +46,6 @@ private extension EntityAnimation {
     static let selfie = EntityAnimation(id: "selfie")
     
     static func climb(to position: Position) -> EntityAnimation {
-        .init(
-            id: "climb",
-            position: position,
-            facingDirection: CGVector(dx: 1, dy: 0)
-        )
+        .init(id: "climb", position: position, facingDirection: CGVector(dx: 1, dy: 0))
     }
 }

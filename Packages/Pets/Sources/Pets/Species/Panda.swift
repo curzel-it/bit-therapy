@@ -11,10 +11,11 @@ extension Pet {
                 possibleAnimations: [
                     .front,
                     .idle,
-                    .eat,
+                    .eat.with(loops: 2),
                     .love,
                     .backflip,
-                    .meditate,
+                    .meditate.with(loops: 20),
+                    .selfie.with(loops: 3),
                     .lightsaber(size: CGSize(width: 1.42, height: 1.2))
                 ]
             )
@@ -31,4 +32,5 @@ extension Pet {
 private extension EntityAnimation {
     static let backflip = EntityAnimation(id: "backflip")
     static let meditate = EntityAnimation(id: "meditate")
+    static let selfie = EntityAnimation(id: "selfie")
 }

@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/desktop-kit",
       "state" : {
-        "revision" : "61688853844042c77341f4de009e11b22a99dcd4",
-        "version" : "1.0.15"
+        "revision" : "6a481230758770c7ced0efa8b51bdf18c46a3034",
+        "version" : "1.0.17"
       }
     },
     {
