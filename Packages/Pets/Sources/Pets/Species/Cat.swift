@@ -11,8 +11,8 @@ extension Pet {
                 possibleAnimations: [
                     .front,
                     .idle,
-                    .eat,
-                    .sleep
+                    .eat.with(loops: 5),
+                    .sleep.with(loops: 50)
                 ]
             )
         ],

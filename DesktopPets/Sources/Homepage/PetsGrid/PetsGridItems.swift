@@ -38,7 +38,7 @@ private struct PetPreview: View {
         if let frame = frame {
             Image(frame: frame)
                 .pixelArt()
-                .frame(width: 100, height: 100)
+                .frame(width: 80, height: 80)
                 .padding(.top, 20)
                 .onTapGesture { viewModel.showDetails(of: pet) }
         }

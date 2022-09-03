@@ -14,9 +14,9 @@ public struct PetBehavior {
     }
 }
 
+// MARK: - Get Animations
+
 extension Pet {
-    
-    // MARK: - Animations by Spot
     
     public func action(whenTouching required: Hotspot) -> EntityAnimation? {
         behaviors
@@ -27,8 +27,6 @@ extension Pet {
             .flatMap { $0.possibleAnimations }
             .random()
     }
-
-    // MARK: - Random Animation
     
     public func randomAnimation() -> EntityAnimation? {
         behaviors

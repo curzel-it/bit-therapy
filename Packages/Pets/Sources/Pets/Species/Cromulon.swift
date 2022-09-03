@@ -10,10 +10,10 @@ extension Pet {
                 trigger: .random,
                 possibleAnimations: [
                     .front,
-                    .bored,
-                    .talk,
-                    .stare,
-                    .shout
+                    .bored.with(loops: 5),
+                    .talk.with(loops: 2),
+                    .stare.with(loops: 3),
+                    .shout.with(loops: 2)
                 ]
             )
         ],
