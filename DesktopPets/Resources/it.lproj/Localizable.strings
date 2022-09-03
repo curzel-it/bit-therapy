@@ -72,6 +72,14 @@
 // MARK: - Pet Names
 
 "pet.name.betta" = "Betta";
+"pet.name.cat" = "Gatto Rosso";
+"pet.name.cat_black" = "Gatto Nero";
+"pet.name.cat_blue" = "Gatto Blu";
+"pet.name.cat_gray" = "Gatto";
+"pet.name.cat_grumpy" = "Gatto Scontroso";
+"pet.name.cromulon" = "Testone";
+"pet.name.cromulon_pink" = "Testone Rosa";
+"pet.name.cromulon_rainbow" = "Testone Figo";
 "pet.name.crow" = "Corvo";
 "pet.name.crow_white" = "Corvo Bianco";
 "pet.name.koala" = "Koala";
@@ -85,7 +93,7 @@
 "pet.name.sloth_swag" = "Bradipo Stiloso";
 "pet.name.snail" = "Lumacamicio";
 "pet.name.snail_nicky" = "Lumacamicio Rosa";
-"pet.name.trex" = "T-Rex";
+"pet.name.trex" = "Draghetto";
 "pet.name.trex_blue" = "Ceratosaurus";
 "pet.name.trex_violet" = "T-Rex Viola";
 "pet.name.trex_yellow" = "T-Rex Dorato";
@@ -94,6 +102,14 @@
 // MARK: - Pet Descriptions
 
 "pet.about.betta" = "Anche noto come 'Pesce Combattente', molto elegante e popolarissimo.";
+"pet.about.cat" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_black" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_blue" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_gray" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_grumpy" = "Guardalo, come ti giudica...";
+"pet.about.cromulon" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
+"pet.about.cromulon_pink" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
+"pet.about.cromulon_rainbow" = "Alieni a forma di teste umane, ma grandiBig come un pianeta...\n\"Mostrami cosa sai fare!\"";
 "pet.about.crow" = "Il preferito del designer!";
 "pet.about.crow_white" = "L'inverno è arrivato...";
 "pet.about.koala" = "Funzionalmente estinto!? Ma funzionalmente estinto sarai te!";
@@ -107,7 +123,7 @@
 "pet.about.sloth_swag" = "Lento, ma con stile...";
 "pet.about.snail" = "Miao! Sei tu Gary?";
 "pet.about.snail_nicky" = "Me l'ha fatta disegnare la mia compagna, ringraziate lei haha";
-"pet.about.trex" = "Charmander Tarocco";
+"pet.about.trex" = "T-Rex? Drago? Entrambi?";
 "pet.about.trex_blue" = "Praticamente T-Rex con un corno!";
 "pet.about.trex_violet" = "Questo sembra il dinosauro dei Flintstones :D";
 "pet.about.trex_yellow" = "Una versione dorata doveva pur esserci, no?";

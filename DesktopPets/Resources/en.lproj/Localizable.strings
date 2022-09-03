@@ -72,6 +72,14 @@
 // MARK: - Pet Names
 
 "pet.name.betta" = "Betta";
+"pet.name.cat" = "Red Cat";
+"pet.name.cat_black" = "Black Cat";
+"pet.name.cat_blue" = "Blue Cat";
+"pet.name.cat_gray" = "Cat";
+"pet.name.cat_grumpy" = "Grumpy Cat";
+"pet.name.cromulon" = "Big Head";
+"pet.name.cromulon_pink" = "Big Head Pink";
+"pet.name.cromulon_rainbow" = "Big Head Rainbow";
 "pet.name.crow" = "Crow";
 "pet.name.crow_white" = "White Crow";
 "pet.name.koala" = "Koala";
@@ -95,6 +103,14 @@
 // MARK: - Pet Descriptions
 
 "pet.about.betta" = "Aka 'The Fighting Fish', elegant and very popular";
+"pet.about.cat" = "Well, it's just a cat!";
+"pet.about.cat_black" = "Well, it's just a cat!";
+"pet.about.cat_blue" = "Well, it's just a cat!";
+"pet.about.cat_gray" = "Well, it's just a cat!";
+"pet.about.cat_grumpy" = "Such a judgy look on its face!";
+"pet.about.cromulon" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
+"pet.about.cromulon_pink" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
+"pet.about.cromulon_rainbow" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
 "pet.about.crow" = "They fly now!?";
 "pet.about.crow_white" = "Winter is here...";
 "pet.about.koala" = "Functionally extinct!? You are functionally extinct!";
@@ -109,7 +125,7 @@
 "pet.about.snail" = "Meow! Is that you Gary?";
 "pet.about.snail_nicky" = "My gf specifically asked for this one, so there you go!";
 "pet.about.sunflower" = "As requested by @spritz97.";
-"pet.about.trex" = "Dollar-store Charmander";
+"pet.about.trex" = "T-Rex? Dragon? Both?";
 "pet.about.trex_blue" = "Just a T-Rex with a horne!";
 "pet.about.trex_violet" = "This one gives off some Flintstones vibes :D";
 "pet.about.trex_yellow" = "Gotta have a golden one";
