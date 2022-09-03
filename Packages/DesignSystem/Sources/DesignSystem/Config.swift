@@ -15,6 +15,6 @@ public struct DesignSystem {
 public struct PetSize {
     
     public static let defaultSize: CGFloat = 70
-    public static let minSize: CGFloat = 40
+    public static let minSize: CGFloat = 50
     public static let maxSize: CGFloat = 100
 }

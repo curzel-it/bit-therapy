@@ -20,7 +20,7 @@ public class AppState: ObservableObject {
     
     @AppStorage("gravityEnabled") private var gravityEnabledValue = true
     
-    @AppStorage("petId") private var selectedPetsValue: String = "sloth"
+    @AppStorage("petId") private var selectedPetsValue: String = kInitialPetId
     
     @Published public var speedMultiplier: CGFloat = 1 {
         didSet {
@@ -50,7 +50,15 @@ public class AppState: ObservableObject {
         petSize = petSizeValue
         speedMultiplier = speedMultiplierValue
         gravityEnabled = gravityEnabledValue
-        selectedPets = selectedPetsValue.components(separatedBy: ",")
+        loadSelectedPets()
+    }
+    
+    private func loadSelectedPets() {
+        let pets = selectedPetsValue
+            .components(separatedBy: ",")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
+            .filter { !$0.isEmpty }
+        selectedPets = pets.count == 0 ? [kInitialPetId] : pets
     }
 }
 
@@ -59,3 +67,5 @@ public enum AppPage: String, CaseIterable {
     case settings
     case about
 }
+
+private let kInitialPetId = "sloth"

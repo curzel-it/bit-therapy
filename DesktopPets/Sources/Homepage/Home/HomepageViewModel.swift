@@ -1,4 +1,5 @@
 import AppState
+import Combine
 import DesignSystem
 import Pets
 import Schwifty
@@ -8,18 +9,8 @@ import SwiftUI
 class HomepageViewModel: ObservableObject {
     
     @Published var selectedPet: Pet?
-    
-    let pets: [Pet]
-    
-    var selectedPets: [Pet] {
-        let selectedIds = AppState.global.selectedPets
-        return pets.filter { selectedIds.contains($0.id) }
-    }
-    
-    var unselectedPets: [Pet] {
-        let selectedIds = AppState.global.selectedPets
-        return pets.filter { !selectedIds.contains($0.id) }
-    }
+    @Published var selectedPets: [Pet] = []
+    @Published var unselectedPets: [Pet] = []
             
     lazy var showingDetails: Binding<Bool> = {
         Binding {
@@ -38,8 +29,16 @@ class HomepageViewModel: ObservableObject {
         return [GridItem](repeating: item, count: 5)
     }
     
+    private var stateCanc: AnyCancellable!
+    
     init() {
-        pets = Pet.availableSpecies
+        loadPets(selectedPets: AppState.global.selectedPets)
+        stateCanc = AppState.global.$selectedPets.sink { self.loadPets(selectedPets: $0) }
+    }
+    
+    private func loadPets(selectedPets ids: [String]) {
+        selectedPets = Pet.availableSpecies.filter { ids.contains($0.id) }
+        unselectedPets = Pet.availableSpecies.filter { !ids.contains($0.id) }
     }
     
     func showDetails(of pet: Pet?) {
