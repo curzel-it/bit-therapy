@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/desktop-kit",
       "state" : {
-        "revision" : "6a481230758770c7ced0efa8b51bdf18c46a3034",
-        "version" : "1.0.17"
+        "revision" : "292ab67bf6161a20a298fcd4ea3396c14ab37c1e",
+        "version" : "1.0.4"
       }
     },
     {
@@ -87,7 +87,7 @@
       "location" : "https://github.com/sindresorhus/LaunchAtLogin",
       "state" : {
         "branch" : "main",
-        "revision" : "e8171b3e38a2816f579f58f3dac1522aa39efe41"
+        "revision" : "05168c04c91fdf6c432852c2fe0737af6437195c"
       }
     },
     {
@@ -111,7 +111,7 @@
     {
       "identity" : "notagif",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/curzel-it/NotAGif",
+      "location" : "https://github.com/curzel-it/notagif",
       "state" : {
         "revision" : "e7e6c4c16b847be2762e428ecd390922ac7bb2de",
         "version" : "1.0.6"
@@ -123,7 +123,7 @@
       "location" : "https://github.com/curzel-it/OnWindow",
       "state" : {
         "branch" : "main",
-        "revision" : "7ab5f4dde82f3a6ac53b7514af9febcd43795f62"
+        "revision" : "d272b57aacf6068b83ff83067332878d4cb6a423"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RevenueCat/purchases-ios",
       "state" : {
-        "revision" : "7ff1261d7bbbf51e76010b4c48aba2827350a2f5",
-        "version" : "4.10.0"
+        "revision" : "1c41c4a034edd002ed3f93ea4c12be814e434319",
+        "version" : "4.11.0"
       }
     },
     {
@@ -167,8 +167,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/squanch",
       "state" : {
-        "revision" : "18d8a33b9711745f2c9b7ed77a8e21ddddc19176",
-        "version" : "1.0.5"
+        "revision" : "f473b18e20a15f5ada7bd4c4848ae178d563ba53",
+        "version" : "1.0.6"
       }
     },
     {
@@ -176,14 +176,14 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",
       "state" : {
-        "revision" : "fa0fcd43f272a260e7f734f23e6dc55e16fcae0a",
-        "version" : "1.19.1"
+        "revision" : "b8230909dedc640294d7324d37f4c91ad3dcf177",
+        "version" : "1.20.1"
       }
     },
     {
       "identity" : "windowsdetector",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/curzel-it/WindowsDetector",
+      "location" : "https://github.com/curzel-it/windowsdetector",
       "state" : {
         "revision" : "7784b059f9cb426459a5b57325e7597dd5266b69",
         "version" : "1.0.4"

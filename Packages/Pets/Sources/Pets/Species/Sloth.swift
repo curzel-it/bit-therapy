@@ -9,7 +9,7 @@ extension Pet {
             .init(
                 trigger: .random,
                 possibleAnimations: [
-                    .front,
+                    .front.with(loops: 2),
                     .idle,
                     .eat.with(loops: 2),
                     .love,

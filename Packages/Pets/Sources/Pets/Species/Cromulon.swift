@@ -10,15 +10,15 @@ extension Pet {
                 trigger: .random,
                 possibleAnimations: [
                     .front,
-                    .bored.with(loops: 5),
+                    .bored.with(loops: 15),
                     .talk.with(loops: 2),
-                    .stare.with(loops: 3),
+                    .stare.with(loops: 15),
                     .shout.with(loops: 2)
                 ]
             )
         ],
         movementPath: .front,
-        speed: 0.8
+        speed: 0.6
     )
     
     static let cromulonPink = Pet.cromulon.shiny(id: "cromulon_pink", isPaid: false)

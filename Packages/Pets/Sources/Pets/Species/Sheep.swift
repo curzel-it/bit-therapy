@@ -9,9 +9,9 @@ extension Pet {
             .init(
                 trigger: .random,
                 possibleAnimations: [
-                    .front,
+                    .front.with(loops: 2),
                     .idle,
-                    .eat,
+                    .eat.with(loops: 3),
                     .puke
                 ]
             )

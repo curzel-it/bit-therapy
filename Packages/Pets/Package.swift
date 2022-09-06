@@ -13,10 +13,10 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
-        .package(url: "https://github.com/curzel-it/desktop-kit", from: "1.0.1"),
+        .package(url: "https://github.com/curzel-it/desktop-kit", from: "1.0.4"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.3"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.5")
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6")
     ],
     targets: [
         .target(

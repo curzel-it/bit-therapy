@@ -13,7 +13,7 @@ class DesktopPet: PetEntity {
     init(of species: Pet, in habitatBounds: CGRect) {
         super.init(of: species, size: AppState.global.petSize, in: habitatBounds)
         fps = species.fps
-        setupPacmanEffect()
+        setupAutoRespawn()
         setupMenu()
         setInitialPosition()
         setInitialDirection()
@@ -33,9 +33,9 @@ class DesktopPet: PetEntity {
         set(origin: CGPoint(x: randomX, y: randomY))
     }
     
-    private func setupPacmanEffect() {
-        guard PacmanEffect.isCompatible(with: self) else { return }
-        install(PacmanEffect.self)
+    private func setupAutoRespawn() {
+        guard AutoRespawn.isCompatible(with: self) else { return }
+        install(AutoRespawn.self)
     }
     
     private func setupMenu() {
