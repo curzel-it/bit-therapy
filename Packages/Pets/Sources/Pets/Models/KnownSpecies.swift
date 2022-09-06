@@ -9,6 +9,7 @@ extension Pet {
         .cromulon, .cromulonPink, .cromulonRainbow,
         .crow, .crowWhite,
         .koala, .koalaPirate,
+        // .moth,
         .nyan,
         .sheep, .sheepBlack,
         .snail, .snailNicky,

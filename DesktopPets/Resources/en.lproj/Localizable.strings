@@ -84,6 +84,7 @@
 "pet.name.crow_white" = "White Crow";
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Pirate Koala";
+"pet.name.moth" = "Moth";
 "pet.name.nyan" = "Nyan D. Cat";
 "pet.name.panda" = "Panda";
 "pet.name.panda_vest" = "Golden Panda";
@@ -115,6 +116,7 @@
 "pet.about.crow_white" = "Winter is here...";
 "pet.about.koala" = "Functionally extinct!? You are functionally extinct!";
 "pet.about.koala_pirate" = "It's fun to be a pirate they said";
+"pet.about.moth" = "Those wings were a pain to animate, let me tell you that much..!";
 "pet.about.nyan" = "An homage to one of the internet most famous cats";
 "pet.about.panda" = "The universe has brought us the Dragon Warrior!";
 "pet.about.panda_vest" = "There is no charge for awesomeness... or attractiveness.";
