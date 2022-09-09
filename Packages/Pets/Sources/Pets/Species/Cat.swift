@@ -20,9 +20,10 @@ extension Pet {
         speed: 0.8
     )
     
+    static let catBlack = Pet.cat.shiny(id: "cat_black", isPaid: false)
+    static let catBlue = Pet.cat.shiny(id: "cat_blue", isPaid: false)
     static let catGray = Pet.cat.shiny(id: "cat_gray", isPaid: false)
     static let catGrumpy = Pet.cat.shiny(id: "cat_grumpy", isPaid: false)
-    static let catBlue = Pet.cat.shiny(id: "cat_blue", isPaid: false)
 }
 
 private extension EntityAnimation {

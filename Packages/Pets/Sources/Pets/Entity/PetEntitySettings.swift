@@ -56,7 +56,7 @@ extension Capabilities {
         WallCrawler.self
     ]
     
-    static let defaultsNoGravity: Capabilities = defaultsStatic + [
+    private static let defaultsNoGravity: Capabilities = defaultsStatic + [
         LinearMovement.self,
         BounceOffLateralCollisions.self,
         FlipHorizontallyWhenGoingLeft.self,
