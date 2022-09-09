@@ -85,6 +85,8 @@
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Koala Pirata";
 "pet.name.mushroom" = "Brisetta";
+"pet.name.mushroom_amanita" = "Amanita";
+"pet.name.mushroomwizard" = "Maghetto Chill";
 "pet.name.moth" = "Falena";
 "pet.name.nyan" = "Nyan D. Cat";
 "pet.name.panda" = "Panda";
@@ -118,6 +120,8 @@
 "pet.about.koala_pirate" = "Facciamo i pirati, dicevano. Sarà divertente, dicevano...";
 "pet.about.moth" = "Lasciatemelo dire, animare quelle ali è stato un inferno..!";
 "pet.about.mushroom" = "Una piccola brisa, il top per il risotto!";
+"pet.about.mushroom_amanita" = "Lo so che è carina, ma se le vedi nel bosco non mangiarle 😅";
+"pet.about.mushroomwizard" = "Adora rilassarsi tanto quanto adora i funghetti...";
 "pet.about.nyan" = "Homage to one of the internet most famous cats.";
 "pet.about.panda" = "L'universo ci ha portato il Guerriero Dragone!";
 "pet.about.panda_vest" = "Non c'è prezzo per la miticità... Neppure per l'attraenza.";

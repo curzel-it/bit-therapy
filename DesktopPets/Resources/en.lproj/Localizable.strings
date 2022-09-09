@@ -86,6 +86,8 @@
 "pet.name.koala_pirate" = "Pirate Koala";
 "pet.name.moth" = "Moth";
 "pet.name.mushroom" = "Porcini Mushroom";
+"pet.name.mushroom_amanita" = "Amanita Mushroom";
+"pet.name.mushroomwizard" = "Chill Wizard";
 "pet.name.nyan" = "Nyan D. Cat";
 "pet.name.panda" = "Panda";
 "pet.name.panda_vest" = "Golden Panda";
@@ -119,6 +121,8 @@
 "pet.about.koala_pirate" = "It's fun to be a pirate they said";
 "pet.about.moth" = "Those wings were a pain to animate, let me tell you that much..!";
 "pet.about.mushroom" = "Porcini mushroom, the absolute best for risotto!";
+"pet.about.mushroom_amanita" = "I know it's cute, but please don't ever eat or touch it irl! 😅";
+"pet.about.mushroomwizard" = "Loves to chill as mush as he loves mushrooms...";
 "pet.about.nyan" = "An homage to one of the internet most famous cats";
 "pet.about.panda" = "The universe has brought us the Dragon Warrior!";
 "pet.about.panda_vest" = "There is no charge for awesomeness... or attractiveness.";

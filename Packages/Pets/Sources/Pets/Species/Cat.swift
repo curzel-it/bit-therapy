@@ -25,7 +25,3 @@ extension Pet {
     static let catGray = Pet.cat.shiny(id: "cat_gray", isPaid: false)
     static let catGrumpy = Pet.cat.shiny(id: "cat_grumpy", isPaid: false)
 }
-
-private extension EntityAnimation {
-    static let sleep = EntityAnimation(id: "sleep")
-}
