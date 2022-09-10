@@ -30,8 +30,8 @@ class ViewModel: LiveHabitat {
         state.children.append(contentsOf: pets)
     }
     
-    override func kill(animated: Bool) {
-        super.kill(animated: animated)
+    override func kill() {
         desktopObstacles?.stop()
+        super.kill()
     }
 }

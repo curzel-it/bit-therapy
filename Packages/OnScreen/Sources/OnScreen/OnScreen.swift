@@ -18,9 +18,9 @@ public struct OnScreen {
         self.habitatWindows = OnScreenWindows(for: viewModel)
     }
     
-    public static func hide(animated: Bool = true) {
+    public static func hide() {
         printDebug("OnScreen", "Hiding everything...")
-        viewModel?.kill(animated: animated)
+        viewModel?.kill()
         viewModel = nil
         habitatWindows?.kill()
         habitatWindows = nil
@@ -34,7 +34,7 @@ class OnScreenWindows: HabitatWindows {
         if isAlive && windows.count == 0 {
             printDebug("OnScreen", "No more windows, terminating")
             kill()
-            OnScreen.hide(animated: false)
+            OnScreen.hide()
         }
     }
 }

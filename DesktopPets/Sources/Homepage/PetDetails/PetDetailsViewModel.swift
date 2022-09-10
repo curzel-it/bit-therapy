@@ -26,7 +26,7 @@ class PetDetailsViewModel: ObservableObject {
     var canBuy: Bool { !isFree && !hasBeenPaid }
     var price: PetPrice? { pricing.price(for: pet.id) }
     
-    var animationFrames: [ImageFrame] {
+    var animationFrames: [NSImage] {
         let name = PetAnimationPathsProvider().frontAnimationPath(for: pet)
         return PetsAssets.frames(for: name)
     }

@@ -9,7 +9,7 @@ public class PetsAssets {
         frames(for: baseName).count > 0
     }
     
-    public static func frames(for baseName: String) -> [ImageFrame] {
+    public static func frames(for baseName: String) -> [NSImage] {
         let paths = baseName.components(separatedBy: "_")
         
         if paths.count > 2 {
@@ -25,7 +25,7 @@ public class PetsAssets {
         return frames(fromDirectory: "Assets/\(baseName)")
     }
     
-    private static func frames(fromDirectory dir: String) -> [ImageFrame] {
+    private static func frames(fromDirectory dir: String) -> [NSImage] {
         let urls = Bundle.module.urls(
             forResourcesWithExtension: "png",
             subdirectory: dir

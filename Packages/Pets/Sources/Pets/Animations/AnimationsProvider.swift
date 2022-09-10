@@ -1,4 +1,3 @@
-import Combine
 import DesktopKit
 
 class PetAnimationsProvider: AnimationsProvider {

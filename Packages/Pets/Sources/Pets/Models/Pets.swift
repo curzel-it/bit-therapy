@@ -2,11 +2,10 @@ import CoreGraphics
 import Foundation
 import DesktopKit
 
-public struct Pet {
-    
+public struct Pet {    
     public let id: String
     public let behaviors: [PetBehavior]
-    public let capabilities: Capabilities
+    public let capabilities: DKCapabilities
     public let isPaid: Bool
     public let fps: TimeInterval
     public let speed: CGFloat
@@ -16,7 +15,7 @@ public struct Pet {
     init(
         id: String,
         behaviors: [PetBehavior] = [],
-        capabilities: Capabilities = .defaultsWithGravity,
+        capabilities: DKCapabilities = .defaults(),
         isPaid: Bool = false,
         fps: TimeInterval = 10,
         movementPath: String = "walk",

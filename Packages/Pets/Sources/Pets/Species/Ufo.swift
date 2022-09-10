@@ -16,7 +16,6 @@ extension Pet {
                 ]
             )
         ],
-        capabilities: .defaultsWithGravity,
         isPaid: true,
         movementPath: .front,
         dragPath: .front,

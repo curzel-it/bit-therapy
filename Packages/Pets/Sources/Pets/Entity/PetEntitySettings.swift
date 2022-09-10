@@ -41,27 +41,14 @@ extension PetEntity {
 
 // MARK: - Default Capabilities
 
-extension Capabilities {
-    
-    static let defaultsStatic: Capabilities = [
-        PetAnimationsProvider.self,
-        RandomAnimations.self,
-        AnimatedSprite.self,
-        PetSpritesProvider.self
-    ]
-    
-    static let defaultsCrawler: Capabilities = defaultsStatic + [
-        LinearMovement.self,
-        ReactToHotspots.self,
-        WallCrawler.self
-    ]
-    
-    private static let defaultsNoGravity: Capabilities = defaultsStatic + [
-        LinearMovement.self,
-        BounceOffLateralCollisions.self,
-        FlipHorizontallyWhenGoingLeft.self,
-        ReactToHotspots.self
-    ]
-    
-    static let defaultsWithGravity: Capabilities = defaultsNoGravity + [Gravity.self]
+extension DKCapabilities {
+    private static func petsStuff() -> DKCapabilities {
+        [PetAnimationsProvider(), PetSpritesProvider()]
+    }
+    public static func defaultsCrawler() -> DKCapabilities {
+        xxdefaultsCrawler() + petsStuff()
+    }
+    public static func defaults() -> DKCapabilities {
+        xxdefaults() + petsStuff()
+    }
 }

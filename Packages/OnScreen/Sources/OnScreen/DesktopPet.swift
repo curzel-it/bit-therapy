@@ -34,12 +34,11 @@ class DesktopPet: PetEntity {
     }
     
     private func setupAutoRespawn() {
-        guard AutoRespawn.isCompatible(with: self) else { return }
-        install(AutoRespawn.self)
+        install(AutoRespawn())
     }
     
     private func setupMenu() {
-        install(ShowsMenuOnRightClick.self)
+        install(ShowsMenuOnRightClick())
     }
     
     private func setInitialDirection() {
@@ -52,40 +51,22 @@ class DesktopPet: PetEntity {
         }
     }
     
-    override func kill(animated: Bool, onCompletion: @escaping () -> Void = {}) {
+    override func kill() {
         sizeCanc?.cancel()
         gravityCanc?.cancel()
-        super.kill(animated: animated, onCompletion: onCompletion)
+        super.kill()
     }
 }
 
 private extension DesktopPet {
-    
     var supportsGravity: Bool {
         capability(for: WallCrawler.self) == nil
     }
     
     func bindGravityToSettings() {
         guard supportsGravity else { return }
-        gravityCanc = AppState.global.$gravityEnabled.sink { gravityEnabled in
-            if !gravityEnabled {
-                self.disableGravity()
-            } else {
-                self.enableGravity()
-            }
+        gravityCanc = AppState.global.$gravityEnabled.sink { [weak self] in
+            self?.setGravity(enabled: $0)            
         }
-    }
-    
-    func disableGravity() {
-        uninstall(Gravity.self)
-        if direction.dy > 0 {
-            set(direction: .init(dx: 1, dy: 0))
-        }
-        set(state: .move)
-    }
-    
-    func enableGravity() {
-        guard capability(for: Gravity.self) == nil else { return }
-        install(Gravity.self)
     }
 }

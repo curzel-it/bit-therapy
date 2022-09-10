@@ -16,7 +16,6 @@ extension Pet {
                 ]
             )
         ],
-        capabilities: .defaultsWithGravity,
         movementPath: .fly,
         speed: 1.3
     )

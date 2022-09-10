@@ -7,9 +7,8 @@ import Pets
 
 extension ViewModel {
     
-    @discardableResult
-    func scheduleUfoAbduction() -> Event {        
-        return state.schedule(every: .timeOfDay(hour: 22, minute: 30)) { [weak self] _ in
+    func scheduleUfoAbduction() {
+        scheduleAtTimeOfDay(hour: 22, minute: 30) { [weak self] in
             guard let victim = self?.victim else { return }
             self?.animateUfoAbduction(of: victim)
         }
@@ -20,13 +19,13 @@ extension ViewModel {
 
 private extension ViewModel {
     
-    var victim: Entity? {
-        state.children
+    var victim: RenderableEntity? {
+        renderableChildren
             .filter { $0 is DesktopPet }
             .randomElement()
     }
     
-    func animateUfoAbduction(of target: Entity) {
+    func animateUfoAbduction(of target: RenderableEntity) {
         let ufo = UfoEntity(in: state.bounds)
         ufo.set(origin: state.bounds.topLeft.offset(x: -100, y: -100))
         state.children.append(ufo)
@@ -48,16 +47,16 @@ private class UfoEntity: PetEntity {
         super.init(
             of: .ufo,
             size: AppState.global.petSize,
-            in: habitatBounds,
-            installCapabilities: true
+            in: habitatBounds
         )
-        uninstall(BounceOffLateralCollisions.self)
+        setBounceOnLateralCollisions(enabled: false)
         uninstall(RandomAnimations.self)
         uninstall(ReactToHotspots.self)
     }
     
-    func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
-        let abduction = install(UfoAbduction.self)
+    func abduct(_ target: RenderableEntity, onCompletion: @escaping () -> Void) {
+        let abduction = UfoAbduction()
+        install(abduction)
         abduction.abduct(target, onCompletion)
     }
 }
@@ -75,21 +74,22 @@ private extension EntityAnimation {
 
 // MARK: - Abduction
 
-private class UfoAbduction: Capability {
+private class UfoAbduction: DKCapability {
     
-    weak var target: Entity?
+    weak var target: RenderableEntity?
     
     private var subjectOriginalSize: CGSize!
         
     private var onCompletion: () -> Void = {}
     
-    func abduct(_ target: Entity, _ onCompletion: @escaping () -> Void) {
+    func abduct(_ target: RenderableEntity, _ onCompletion: @escaping () -> Void) {
         guard let body = subject else { return }
         self.subjectOriginalSize = body.frame.size
         self.target = target
         self.onCompletion = onCompletion
         
-        let seeker = body.install(Seeker.self)
+        let seeker = Seeker()
+        body.install(seeker)
         let distance = CGSize(width: 0, height: -50)
         
         seeker.follow(target, to: .above, offset: distance) { captureState in
@@ -101,18 +101,19 @@ private class UfoAbduction: Capability {
     }
     
     private func paralizeTarget() {
-        target?.uninstall(Gravity.self)
+        target?.setGravity(enabled: false)
         target?.set(direction: CGVector(dx: 0, dy: -1))
         target?.speed = PetEntity.speedMultiplier(for: target?.frame.size.width ?? 0)
     }
     
     private func captureRayAnimation() {
         subject?.set(direction: .zero)
-        subject?.set(state: .animation(animation: .abduction, loops: 1))
+        subject?.set(state: .action(action: EntityAnimation.abduction, loops: 1))
         subject?.uninstall(Seeker.self)
-        
-        let shape = target?.install(ShapeShifter.self)
-        shape?.scaleLinearly(to: CGSize(width: 5, height: 5), duracy: 1.1)
+                
+        let shape = ShapeShifter()
+        target?.install(shape)
+        shape.scaleLinearly(to: CGSize(width: 5, height: 5), duracy: 1.1)
         scheduleAnimationCompletion(in: 1.25)
     }
     

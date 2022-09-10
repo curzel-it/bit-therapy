@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidChangeScreenParameters(_ notification: Notification) {
-        OnScreen.hide(animated: false)
+        OnScreen.hide()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             OnScreen.show()
         }

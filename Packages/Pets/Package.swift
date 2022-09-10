@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
-        .package(url: "https://github.com/curzel-it/desktop-kit", from: "1.0.4"),
+        .package(path: "../DesktopKit"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.3"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
         .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6")
@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "Pets",
             dependencies: [
-                .product(name: "DesktopKit", package: "desktop-kit"),
+                .product(name: "DesktopKit", package: "DesktopKit"),
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "NotAGif", package: "NotAGif"),
                 .product(name: "Schwifty", package: "Schwifty"),

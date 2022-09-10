@@ -11,6 +11,9 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
+      location = "group:Packages/DesktopKit">
+   </FileRef>
+   <FileRef
       location = "group:Packages/AppState">
    </FileRef>
    <FileRef
@@ -30,5 +33,8 @@
    </FileRef>
    <FileRef
       location = "group:Packages/Tracking">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/Yage">
    </FileRef>
 </Workspace>

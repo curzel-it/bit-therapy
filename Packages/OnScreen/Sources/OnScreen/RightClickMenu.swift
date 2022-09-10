@@ -31,8 +31,7 @@ struct RightClickMenu: View {
     }
 }
 
-class ShowsMenuOnRightClick: RightClickable {
-    
+class ShowsMenuOnRightClick: RightClickable {    
     weak var menu: NSView?
     
     override func onRightClick(with event: NSEvent) {
