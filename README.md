@@ -44,6 +44,7 @@ For daily use I recommend getting the App from the App Store.
 Unfortunately, Xcode does not like local swift packages very much. In case you get any error about missing packages, try the following:
 1. Clean build folder (Product > Clean)
 1. Reset Packages Cache (Package Dependencies > Right Click)
+1. Wait for process completion
 1. Close and re-open Xcode
-1. Build   
+1. Build
 
