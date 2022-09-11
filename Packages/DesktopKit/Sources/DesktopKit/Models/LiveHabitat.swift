@@ -1,9 +1,9 @@
 import SwiftUI
 import Yage
 
-open class LiveHabitat: ObservableObject {
+open class LiveWorld: ObservableObject {
     
-    @Published public var state: HabitatState
+    @Published public var state: World
     
     public var renderableChildren: [RenderableEntity] {
         state.children.compactMap { $0 as? RenderableEntity }
@@ -18,9 +18,9 @@ open class LiveHabitat: ObservableObject {
     
     public init(id: String, bounds: CGRect) {
         self.id = id
-        self.tag = "Habitat-\(id)"
+        self.tag = "World-\(id)"
         lastUpdate = Date.timeIntervalSinceReferenceDate
-        state = HabitatWithHotspots(bounds: bounds)
+        state = WorldWithHotspots(bounds: bounds)
         startRendering()
     }
     

@@ -4,7 +4,7 @@ import Yage
 let boundDistanceAfterScreenEnd: CGFloat = 0
 let boundsThickness: CGFloat = 1000
 
-extension HabitatState {
+extension World {
     
     func bottomBound() -> Entity {
         let entity = Entity(

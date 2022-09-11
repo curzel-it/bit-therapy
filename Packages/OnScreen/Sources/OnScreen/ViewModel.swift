@@ -5,7 +5,7 @@ import DesktopKit
 import Pets
 import Squanch
 
-class ViewModel: LiveHabitat {
+class ViewModel: LiveWorld {
     
     var desktopObstacles: DesktopObstaclesService!
     
@@ -18,7 +18,7 @@ class ViewModel: LiveHabitat {
     
     private func observeWindowsIfNeeded() {
         guard AppState.global.desktopInteractions else { return }
-        desktopObstacles = DesktopObstaclesService(habitat: self)
+        desktopObstacles = DesktopObstaclesService(world: self)
         desktopObstacles.start()
     }
     

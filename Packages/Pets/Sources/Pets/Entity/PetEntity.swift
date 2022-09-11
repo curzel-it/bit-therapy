@@ -9,13 +9,13 @@ open class PetEntity: RenderableEntity {
     public init(
         of pet: Pet,
         size: CGFloat,
-        in habitatBounds: CGRect
+        in worldBounds: CGRect
     ) {
         species = pet
         super.init(
             id: PetEntity.id(for: species),
-            frame: PetEntity.initialFrame(in: habitatBounds, size: size),
-            in: habitatBounds
+            frame: PetEntity.initialFrame(in: worldBounds, size: size),
+            in: worldBounds
         )
         speed = PetEntity.speed(for: species, size: frame.width)
         species.capabilities().forEach { install($0) }

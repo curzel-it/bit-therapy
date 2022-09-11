@@ -1,6 +1,6 @@
 import SwiftUI
 
-open class HabitatState: ObservableObject {
+open class World: ObservableObject {
     
     @Published public var children: [Entity] = []
     
@@ -28,7 +28,7 @@ open class HabitatState: ObservableObject {
     @discardableResult
     public func schedule(
         every time: EventSchedule,
-        do action: @escaping (HabitatState) -> Void
+        do action: @escaping (World) -> Void
     ) -> Event {
         let event = Event(in: self, every: time, do: action)
         self.events.append(event)

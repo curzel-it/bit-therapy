@@ -5,13 +5,13 @@ import XCTest
 
 final class DesktopObstaclesServiceTests: XCTestCase {
     
-    let habitat = LiveHabitat(
+    let world = LiveWorld(
         id: "DesktopObstaclesServiceTests",
         bounds: CGRect(size: .init(square: 1000))
     )
 
     lazy var service: DesktopObstaclesService = {
-        DesktopObstaclesService(habitat: habitat)
+        DesktopObstaclesService(world: world)
     }()
     
     func testRoofIsProperlyGeneratedFromWindow() {

@@ -5,7 +5,7 @@ import SwiftUI
 
 class EnvironmentBoundsNoSafeAreaTests: XCTestCase {
     
-    let env = HabitatWithHotspots(
+    let env = WorldWithHotspots(
         bounds: CGRect(x: 0, y: 50, width: 400, height: 900)
     )
     

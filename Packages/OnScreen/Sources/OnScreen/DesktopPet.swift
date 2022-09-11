@@ -10,8 +10,8 @@ class DesktopPet: PetEntity {
     private var sizeCanc: AnyCancellable!
     private var gravityCanc: AnyCancellable!
     
-    init(of species: Pet, in habitatBounds: CGRect) {
-        super.init(of: species, size: AppState.global.petSize, in: habitatBounds)
+    init(of species: Pet, in worldBounds: CGRect) {
+        super.init(of: species, size: AppState.global.petSize, in: worldBounds)
         fps = species.fps
         setupAutoRespawn()
         setupMenu()
@@ -22,13 +22,13 @@ class DesktopPet: PetEntity {
     }
     
     private func setInitialPosition() {
-        let randomX = CGFloat.random(in: 0.1..<0.75) * habitatBounds.width
+        let randomX = CGFloat.random(in: 0.1..<0.75) * worldBounds.width
         let randomY: CGFloat
         
         if capability(for: WallCrawler.self) != nil {
-            randomY = habitatBounds.height - frame.height
+            randomY = worldBounds.height - frame.height
         } else {
-            randomY = CGFloat.random(in: 0.1..<0.5) * habitatBounds.height
+            randomY = CGFloat.random(in: 0.1..<0.5) * worldBounds.height
         }
         set(origin: CGPoint(x: randomX, y: randomY))
     }

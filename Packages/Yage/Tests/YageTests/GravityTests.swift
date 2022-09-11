@@ -5,12 +5,12 @@ import SwiftUI
 
 class GravityTests: XCTestCase {
     
-    var env: HabitatState!
+    var env: World!
     var player: Entity!
     
     override func setUp() async throws {
         env?.children.forEach { $0.kill() }
-        env = HabitatState(bounds: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        env = World(bounds: CGRect(x: 0, y: 0, width: 1000, height: 1000))
         
         player = Entity(
             id: "player",

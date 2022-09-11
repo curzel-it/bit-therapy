@@ -1,7 +1,7 @@
 import SwiftUI
 import Yage
 
-extension HabitatState {
+extension World {
     
     func verticalCenter() -> Entity {
         let entity = Entity(

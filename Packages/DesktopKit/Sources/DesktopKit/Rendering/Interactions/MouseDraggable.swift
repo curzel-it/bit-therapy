@@ -44,8 +44,8 @@ extension Entity {
     func setPosition(fromWindow window: NSWindow?) {
         guard let position = window?.frame.origin else { return }
         
-        let maxX = habitatBounds.maxX - frame.width
-        let maxY = habitatBounds.maxY - frame.height
+        let maxX = worldBounds.maxX - frame.width
+        let maxY = worldBounds.maxY - frame.height
         
         let fixedPosition = CGPoint(
             x: min(max(0, position.x), maxX),

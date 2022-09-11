@@ -43,7 +43,7 @@ public class WallCrawler: DKCapability {
     private func crawlUpRightBound(_ body: Entity) {
         body.set(direction: .init(dx: 0, dy: -1))
         body.set(origin: CGPoint(
-            x: body.habitatBounds.maxX - body.frame.width,
+            x: body.worldBounds.maxX - body.frame.width,
             y: body.frame.origin.y
         ))
         body.xAngle = 0
@@ -55,7 +55,7 @@ public class WallCrawler: DKCapability {
         body.set(direction: .init(dx: 1, dy: 0))
         body.set(origin: CGPoint(
             x: body.frame.origin.x,
-            y: body.habitatBounds.maxY - body.frame.height
+            y: body.worldBounds.maxY - body.frame.height
         ))
         body.xAngle = 0
         body.zAngle = 0
@@ -74,22 +74,22 @@ public class WallCrawler: DKCapability {
     }
     
     private func touchesScreenTop(_ body: Entity) -> Bool {
-        let bound = body.habitatBounds.minY
+        let bound = body.worldBounds.minY
         return body.frame.minY <= bound
     }
     
     private func touchesScreenRight(_ body: Entity) -> Bool {
-        let bound = body.habitatBounds.maxX
+        let bound = body.worldBounds.maxX
         return body.frame.maxX >= bound
     }
     
     private func touchesScreenBottom(_ body: Entity) -> Bool {
-        let bound = body.habitatBounds.maxY
+        let bound = body.worldBounds.maxY
         return body.frame.maxY >= bound
     }
     
     private func touchesScreenLeft(_ body: Entity) -> Bool {
-        let bound = body.habitatBounds.minX
+        let bound = body.worldBounds.minX
         return body.frame.minX <= bound
     }
 }

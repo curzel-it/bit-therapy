@@ -9,25 +9,25 @@ import SwiftUI
 public struct OnScreen {
     
     private static var viewModel: ViewModel?
-    private static var habitatWindows: OnScreenWindows?
+    private static var worldWindows: OnScreenWindows?
     
     public static func show() {
         hide()
         printDebug("OnScreen", "Starting...")
         self.viewModel = ViewModel()
-        self.habitatWindows = OnScreenWindows(for: viewModel)
+        self.worldWindows = OnScreenWindows(for: viewModel)
     }
     
     public static func hide() {
         printDebug("OnScreen", "Hiding everything...")
         viewModel?.kill()
         viewModel = nil
-        habitatWindows?.kill()
-        habitatWindows = nil
+        worldWindows?.kill()
+        worldWindows = nil
     }
 }
 
-class OnScreenWindows: HabitatWindows {
+class OnScreenWindows: WorldWindows {
     
     override func windowWillClose(_ notification: Notification) {
         super.windowWillClose(notification)

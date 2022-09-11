@@ -4,7 +4,7 @@ import XCTest
 
 class BounceOnLateralCollisionsTests: XCTestCase {
     
-    private let testEnv = HabitatState(bounds: CGRect(x: 0, y: 0, width: 100, height: 100))
+    private let testEnv = World(bounds: CGRect(x: 0, y: 0, width: 100, height: 100))
     
     private lazy var testEntity: Entity = {
         let entity = Entity(

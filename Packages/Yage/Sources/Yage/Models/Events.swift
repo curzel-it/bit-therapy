@@ -42,14 +42,14 @@ public class Event: Identifiable {
     public let id: String = UUID().uuidString
     public let schedulingRule: EventSchedule
     
-    private weak var environment: HabitatState?
-    private var action: (HabitatState) -> Void
+    private weak var environment: World?
+    private var action: (World) -> Void
     private var timer: Timer?
     
     init(
-        in environment: HabitatState,
+        in environment: World,
         every time: EventSchedule,
-        do action: @escaping (HabitatState) -> Void
+        do action: @escaping (World) -> Void
     ) {
         self.schedulingRule = time
         self.action = action

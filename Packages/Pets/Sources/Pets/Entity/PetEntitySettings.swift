@@ -34,7 +34,7 @@ extension PetEntity {
 
 extension PetEntity {
     
-    static func initialFrame(in habitatBounds: CGRect, size: CGFloat) -> CGRect {
+    static func initialFrame(in worldBounds: CGRect, size: CGFloat) -> CGRect {
         return CGRect(origin: .zero, size: CGSize(square: size))
     }
 }

@@ -6,7 +6,7 @@ import Yage
 
 open class EntityWindow: NSWindow {
     public let entity: RenderableEntity
-    public let habitat: LiveHabitat
+    public let world: LiveWorld
     
     weak var entityView: NSView!
     
@@ -15,9 +15,9 @@ open class EntityWindow: NSWindow {
     
     private(set) var expectedFrame: CGRect = .zero
     
-    public init(representing entity: RenderableEntity, in habitat: LiveHabitat) {
+    public init(representing entity: RenderableEntity, in world: LiveWorld) {
         self.entity = entity
-        self.habitat = habitat
+        self.world = world
         super.init(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
         setupWindow()
         loadEntityView()
@@ -33,7 +33,7 @@ open class EntityWindow: NSWindow {
     }
     
     open func buildEntityView() -> NSView {
-        let view = EntityView(representing: entity, in: habitat)
+        let view = EntityView(representing: entity, in: world)
         setFrame(CGRect(size: view.frame.size), display: true)
         return view
     }
@@ -69,9 +69,9 @@ private extension EntityWindow {
     }
     
     func updateFrame(toShow entityFrame: CGRect) {
-        let habitat = habitat.state.bounds
+        let world = world.state.bounds
         expectedFrame = CGRect(
-            origin: CGPoint(x: entityFrame.minX, y: habitat.height - entityFrame.maxY),
+            origin: CGPoint(x: entityFrame.minX, y: world.height - entityFrame.maxY),
             size: entityFrame.size
         )
         setFrame(expectedFrame, display: true, animate: false)

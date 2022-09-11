@@ -2,7 +2,7 @@ import SwiftUI
 
 open class Entity: Identifiable, ObservableObject {
     public let id: String
-    public let habitatBounds: CGRect
+    public let worldBounds: CGRect
     public var fps: TimeInterval = 10
     public var isStatic: Bool = false
     public var isEphemeral: Bool = false
@@ -21,10 +21,10 @@ open class Entity: Identifiable, ObservableObject {
     
     public private(set) var capabilities: [Capability] = []
     
-    public init(id: String, frame: CGRect, in habitatBounds: CGRect) {
+    public init(id: String, frame: CGRect, in worldBounds: CGRect) {
         self.id = id
         self.frame = frame
-        self.habitatBounds = habitatBounds
+        self.worldBounds = worldBounds
     }
     
     // MARK: - Capabilities

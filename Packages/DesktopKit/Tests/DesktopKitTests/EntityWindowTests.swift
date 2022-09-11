@@ -5,25 +5,25 @@ import XCTest
 class EntityWindowTests: XCTestCase {
     
     var entity: RenderableEntity!
-    var habitat: LiveHabitat!
+    var world: LiveWorld!
     var window: EntityWindow!
     
     override func setUp() {
         entity?.kill()
-        habitat?.kill()
+        world?.kill()
         window?.close()
         
-        habitat = LiveHabitat(
+        world = LiveWorld(
             id: "test",
             bounds: CGRect(size: .init(square: 1000))
         )
         entity = RenderableEntity(
             id: "test",
             frame: CGRect(origin: .zero, size: .init(square: 100)),
-            in: habitat.state.bounds
+            in: world.state.bounds
         )
-        habitat.state.children.append(entity)
-        window = EntityWindow(representing: entity, in: habitat)
+        world.state.children.append(entity)
+        window = EntityWindow(representing: entity, in: world)
         window.show()
     }
     
@@ -31,8 +31,8 @@ class EntityWindowTests: XCTestCase {
         XCTAssertEqual(window.entity, entity)
     }
     
-    func testWindowKeepsReferenceToHabitat() {
-        XCTAssertEqual(window.habitat, habitat)
+    func testWindowKeepsReferenceToWorld() {
+        XCTAssertEqual(window.world, world)
     }
     
     func testKillingEntityClosesWindow() {
@@ -78,8 +78,8 @@ class EntityWindowTests: XCTestCase {
     }
 }
 
-extension LiveHabitat: Equatable {
-    public static func == (lhs: LiveHabitat, rhs: LiveHabitat) -> Bool {
+extension LiveWorld: Equatable {
+    public static func == (lhs: LiveWorld, rhs: LiveWorld) -> Bool {
         lhs.id == rhs.id
     }
 }

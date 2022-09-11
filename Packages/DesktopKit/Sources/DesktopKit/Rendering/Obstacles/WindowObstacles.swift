@@ -6,12 +6,12 @@ import Yage
 
 open class WindowObstaclesService: ObservableObject {
         
-    private let habitat: LiveHabitat
+    private let world: LiveWorld
     private let windowsDetector = WindowsDetector().started(pollInterval: 1)
     private var windowsCanc: AnyCancellable!
     
-    public init(habitat: LiveHabitat) {
-        self.habitat = habitat
+    public init(world: LiveWorld) {
+        self.world = world
     }
     
     public func start() {
@@ -23,7 +23,7 @@ open class WindowObstaclesService: ObservableObject {
     func onWindows(_ windowInfos: [WindowInfo]) {
         let windows = windowInfos.map { SomeWindow(from: $0) }
         let obstacles = obstacles(from: windows)
-        habitat.update(withObstacles: obstacles)
+        world.update(withObstacles: obstacles)
     }
     
     func obstacles(from windows: [SomeWindow]) -> [Entity] {
@@ -37,7 +37,7 @@ open class WindowObstaclesService: ObservableObject {
                 return visibleObstacles + newObstacles
             }
             .filter { isValidObstacle(frame: $0) }
-            .map { WindowObstacle(of: $0, in: habitat) }
+            .map { WindowObstacle(of: $0, in: world) }
     }
     
     open func obstacles(fromWindowFrame frame: CGRect) -> [CGRect] {
@@ -46,7 +46,7 @@ open class WindowObstaclesService: ObservableObject {
     
     open func isValidWindow(owner: String, frame: CGRect) -> Bool {
         guard !frame.isNull && !frame.isEmpty && !frame.isInfinite else { return false }
-        guard !frame.contains(habitat.state.bounds) else { return false }
+        guard !frame.contains(world.state.bounds) else { return false }
         return true
     }
     
@@ -72,8 +72,8 @@ struct SomeWindow: Codable {
 
 class WindowObstacle: Entity {
     
-    init(of frame: CGRect, in habitat: LiveHabitat) {
-        super.init(id: WindowObstacle.nextId(), frame: frame, in: habitat.state.bounds)
+    init(of frame: CGRect, in world: LiveWorld) {
+        super.init(id: WindowObstacle.nextId(), frame: frame, in: world.state.bounds)
         self.isStatic = true
     }
     
@@ -89,7 +89,7 @@ extension Entity {
     var isWindowObstacle: Bool { self is WindowObstacle }
 }
 
-extension LiveHabitat {
+extension LiveWorld {
     
     func update(withObstacles obstacles: [Entity]) {
         let incomingRects = obstacles.map { $0.frame }

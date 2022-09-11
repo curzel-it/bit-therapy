@@ -1,7 +1,7 @@
 import SwiftUI
 import Yage
 
-class HabitatWithHotspots: HabitatState {
+class WorldWithHotspots: World {
     
     override func set(bounds: CGRect) {
         super.set(bounds: bounds)
@@ -33,7 +33,7 @@ public enum Hotspot: String, CaseIterable {
 
 // MARK: - Default Hotspots
 
-extension HabitatWithHotspots {
+extension WorldWithHotspots {
     
     func hotspotEntities() -> [Entity] {
         return [

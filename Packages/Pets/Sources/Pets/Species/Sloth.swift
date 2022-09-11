@@ -20,14 +20,14 @@ extension Pet {
             .init(
                 trigger: .on(spot: .bottomLeftCorner),
                 possibleAnimations: [
-                    .climb(to: .habitatTopLeft).with(loops: 2),
+                    .climb(to: .worldTopLeft).with(loops: 2),
                     .eat.with(loops: 2)
                 ]
             ),
             .init(
                 trigger: .on(spot: .bottomRightCorner),
                 possibleAnimations: [
-                    .climb(to: .habitatTopRight).with(loops: 2),
+                    .climb(to: .worldTopRight).with(loops: 2),
                     .selfie.with(loops: 2)
                 ]
             )

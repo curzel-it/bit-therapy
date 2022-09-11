@@ -5,14 +5,14 @@ import Yage
 
 class EntityView: NSView {
     let entity: RenderableEntity
-    let habitat: LiveHabitat
+    let world: LiveWorld
             
     weak var onScreenView: NSView!
     weak var rightClickMenu: NSView!
     
-    init(representing entity: RenderableEntity, in habitat: LiveHabitat) {
+    init(representing entity: RenderableEntity, in world: LiveWorld) {
         self.entity = entity
-        self.habitat = habitat
+        self.world = world
         super.init(frame: CGRect(size: entity.frame.size))
         self.translatesAutoresizingMaskIntoConstraints = false
         loadEntityView()
@@ -26,7 +26,7 @@ class EntityView: NSView {
     
     private func loadEntityView() {
         let view = ContentView(entity: self.entity)
-            .environmentObject(habitat)
+            .environmentObject(world)
             .hosted()
         
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,7 @@ class EntityView: NSView {
 
 private struct ContentView: View {
     
-    @EnvironmentObject var viewModel: LiveHabitat
+    @EnvironmentObject var viewModel: LiveWorld
     
     @StateObject var entity: RenderableEntity
     

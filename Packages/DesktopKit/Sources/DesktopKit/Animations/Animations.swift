@@ -32,7 +32,7 @@ public struct EntityAnimation: EntityAction {
         let newPosition = position(
             originalFrame: entity.frame,
             newSize: newSize,
-            in: entity.habitatBounds
+            in: entity.worldBounds
         )
         return CGRect(origin: newPosition, size: newSize)
     }
@@ -48,7 +48,7 @@ public struct EntityAnimation: EntityAction {
     private func position(
         originalFrame entityFrame: CGRect,
         newSize: CGSize,
-        in habitatBounds: CGRect
+        in worldBounds: CGRect
     ) -> CGPoint {
         switch position {
             
@@ -59,17 +59,17 @@ public struct EntityAnimation: EntityAction {
         case .entityTopLeft:
             return entityFrame.origin
             
-        case .habitatTopLeft:
-            return habitatBounds.topLeft
+        case .worldTopLeft:
+            return worldBounds.topLeft
             
-        case .habitatTopRight:
-            return habitatBounds.topRight.offset(x: -entityFrame.width)
+        case .worldTopRight:
+            return worldBounds.topRight.offset(x: -entityFrame.width)
             
-        case .habitatBottomRight:
-            return habitatBounds.bottomRight.offset(by: entityFrame.size.oppositeSign())
+        case .worldBottomRight:
+            return worldBounds.bottomRight.offset(by: entityFrame.size.oppositeSign())
             
-        case .habitatBottomLeft:
-            return habitatBounds.bottomLeft.offset(y: -entityFrame.height)
+        case .worldBottomLeft:
+            return worldBounds.bottomLeft.offset(y: -entityFrame.height)
         }
     }
 }
@@ -83,10 +83,10 @@ extension EntityAnimation {
     public enum Position {
         case fromEntityBottomLeft
         case entityTopLeft
-        case habitatTopLeft
-        case habitatBottomLeft
-        case habitatTopRight
-        case habitatBottomRight
+        case worldTopLeft
+        case worldBottomLeft
+        case worldTopRight
+        case worldBottomRight
     }
 }
 

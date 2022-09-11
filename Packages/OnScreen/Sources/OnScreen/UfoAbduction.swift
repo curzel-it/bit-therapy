@@ -43,11 +43,11 @@ private extension ViewModel {
 
 private class UfoEntity: PetEntity {
     
-    init(in habitatBounds: CGRect) {
+    init(in worldBounds: CGRect) {
         super.init(
             of: .ufo,
             size: AppState.global.petSize,
-            in: habitatBounds
+            in: worldBounds
         )
         setBounceOnLateralCollisions(enabled: false)
         uninstall(RandomAnimations.self)
