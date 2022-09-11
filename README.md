@@ -25,7 +25,7 @@ Hope you like them too!
 ## How does it work?
 
 * [A SwiftUI view renders animations frames](https://github.com/curzel-it/notagif)
-* [A window with transparent background moves around according to pet state](https://github.com/curzel-it/desktop-kit)
+* A window with transparent background moves around according to pet state
 * [Windows are detected as obstacles](https://github.com/curzel-it/windows-detector)
 * A lot of hard work with [Aseprite](https://github.com/aseprite/aseprite)
 
