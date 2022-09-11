@@ -23,6 +23,7 @@ struct SettingsView: View {
             AnonymousTracking().positioned(.leading)
             FixOnScreenPets().positioned(.leading)
             RestorePurchasesButton().positioned(.leading)
+            CheatsView().positioned(.leading)
         }
         .padding(.md)
     }

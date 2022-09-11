@@ -22,6 +22,14 @@
 "purchases.purchasing" = "Acquisto in corso...";
 "purchases.purchased" = "Grazie! 😍";
 
+// MARK: - Cheats
+
+"cheats.title" = "Codici";
+"cheats.placeholder" = "Cheat code";
+"cheats.enable" = "Abilita";
+"cheats.invalidCode" = "Codice non valid";
+"cheats.validCode" = "Attivato!";
+
 // MARK: - Menu Items
 
 "menu.item.quit" = "Esci";

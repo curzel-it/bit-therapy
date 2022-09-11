@@ -22,6 +22,10 @@
 		1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1E28C01B28BD575E00E82E2C /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
 		1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C550D28B8CE6200613F3B /* Squanch */; };
+		1E33599928CDF6A8007BB53E /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
+		1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
+		1E33599C28CDFA25007BB53E /* CheatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599B28CDFA25007BB53E /* CheatsView.swift */; };
+		1E33599D28CDFA25007BB53E /* CheatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599B28CDFA25007BB53E /* CheatsView.swift */; };
 		1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5D3EA428C08E5F00AC50C6 /* RateKit */; };
 		1E5D3EA728C08E6B00AC50C6 /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5D3EA628C08E6B00AC50C6 /* RateKit */; };
 		1E7FB47628BD185D002F377D /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
@@ -93,6 +97,8 @@
 		1E1FA9AD28AE851F0082A113 /* PetsGridItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGridItems.swift; sourceTree = "<group>"; };
 		1E1FA9AE28AE851F0082A113 /* PetsGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGrid.swift; sourceTree = "<group>"; };
 		1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
+		1E33599828CDF6A8007BB53E /* Cheats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheats.swift; sourceTree = "<group>"; };
+		1E33599B28CDFA25007BB53E /* CheatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsView.swift; sourceTree = "<group>"; };
 		1E7FB47528BD185D002F377D /* SettingsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApi.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				1E7FB47528BD185D002F377D /* SettingsApi.swift */,
+				1E33599828CDF6A8007BB53E /* Cheats.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -268,6 +275,7 @@
 		A6FB7D5228740F8E00AB872E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				1E33599B28CDFA25007BB53E /* CheatsView.swift */,
 				A6FB7D5328740F8E00AB872E /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -554,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E33599928CDF6A8007BB53E /* Cheats.swift in Sources */,
 				A6FB7D7928740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8228740F8E00AB872E /* MainView.swift in Sources */,
 				1E1FA9B628AE851F0082A113 /* PetsGridItems.swift in Sources */,
@@ -567,6 +576,7 @@
 				1E7FB47628BD185D002F377D /* SettingsApi.swift in Sources */,
 				1E1FA9BA28AE851F0082A113 /* HomepageViewModel.swift in Sources */,
 				1E1FA9B228AE851F0082A113 /* PetDetailsViewModel.swift in Sources */,
+				1E33599C28CDFA25007BB53E /* CheatsView.swift in Sources */,
 				1E1FA9B428AE851F0082A113 /* Homepage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */,
 				A6FB7D7B28740F8E00AB872E /* SettingsView.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MainView.swift in Sources */,
 				1E1FA9B728AE851F0082A113 /* PetsGridItems.swift in Sources */,
@@ -596,6 +607,7 @@
 				1E1FA9BB28AE851F0082A113 /* HomepageViewModel.swift in Sources */,
 				1E28C01B28BD575E00E82E2C /* SettingsApi.swift in Sources */,
 				1E1FA9B328AE851F0082A113 /* PetDetailsViewModel.swift in Sources */,
+				1E33599D28CDFA25007BB53E /* CheatsView.swift in Sources */,
 				1E1FA9B528AE851F0082A113 /* Homepage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,7 +866,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201202;
+				CURRENT_PROJECT_VERSION = 201203;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -886,7 +898,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201202;
+				CURRENT_PROJECT_VERSION = 201203;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;

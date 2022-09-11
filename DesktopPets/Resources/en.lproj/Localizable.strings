@@ -22,6 +22,14 @@
 "purchases.purchasing" = "Purchasing...";
 "purchases.purchased" = "Thank you! 😍";
 
+// MARK: - Cheats
+
+"cheats.title" = "Cheats";
+"cheats.placeholder" = "Cheat code";
+"cheats.enable" = "Enable";
+"cheats.invalidCode" = "Invalid Code";
+"cheats.validCode" = "Activated!";
+
 // MARK: - Menu Items
 
 "menu.item.quit" = "Quit";

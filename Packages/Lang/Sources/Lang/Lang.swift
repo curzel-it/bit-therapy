@@ -30,6 +30,17 @@ public enum Lang {
         public static func item(_ key: String) -> String { "menu.item.\(key)".localized() }
     }
     
+    // MARK: - Cheats
+    
+    public enum Cheats {
+        
+        public static let title = "cheats.title".localized()
+        public static let placeholder = "cheats.placeholder".localized()
+        public static let enable = "cheats.enable".localized()
+        public static let invalidCode = "cheats.invalidCode".localized()
+        public static let validCode = "cheats.validCode".localized()
+    }
+    
     // MARK: - Survey
     
     public enum Survey {

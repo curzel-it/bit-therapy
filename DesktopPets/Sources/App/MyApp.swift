@@ -15,6 +15,7 @@ struct MyApp: App {
     init() {
         Tracking.setup(isEnabled: AppState.global.trackingEnabled)
         PricingService.global.setup()
+        Cheats.enableCheats()
         Task { @MainActor in
             OnScreen.show()
             StatusBarItems.main.setup()

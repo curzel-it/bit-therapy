@@ -6,7 +6,7 @@ public class PricingService: ObservableObject {
     
     public static let global = PricingService()
     
-    private var isAvailable = false
+    public var isAvailable = false
     
     @Published var prices: Prices = [:]
     
