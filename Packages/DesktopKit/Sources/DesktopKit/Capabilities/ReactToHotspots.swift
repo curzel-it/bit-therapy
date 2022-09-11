@@ -4,7 +4,9 @@ import SwiftUI
 import Yage
 
 public class ReactToHotspots: DKCapability {
-    var lastTouched: [Hotspot] = []
+    private var lastTouched: [Hotspot] = []    
+    private var dragCanc: AnyCancellable!
+    private var isDragging = false
     
     public override func install(on subject: Entity) {
         super.install(on: subject)
@@ -52,9 +54,6 @@ public class ReactToHotspots: DKCapability {
             }
         }
     }
-    
-    private var dragCanc: AnyCancellable!
-    private var isDragging = false
     
     // MARK: - Uninstall
     

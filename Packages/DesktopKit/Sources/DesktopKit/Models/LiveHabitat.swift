@@ -4,7 +4,7 @@ import Yage
 open class LiveHabitat: ObservableObject {
     
     @Published public var state: HabitatState
-        
+    
     public var renderableChildren: [RenderableEntity] {
         state.children.compactMap { $0 as? RenderableEntity }
     }
@@ -13,8 +13,7 @@ open class LiveHabitat: ObservableObject {
     public let id: String
     public let tag: String
     public let fps: Double = 15
-    public let logger: Logger? = PrintLogger()
-    private var timer: Timer!    
+    private var timer: Timer!
     private var lastUpdate: TimeInterval
     
     public init(id: String, bounds: CGRect) {
@@ -26,7 +25,7 @@ open class LiveHabitat: ObservableObject {
     }
     
     public func startRendering() {
-        logger?.log(self.tag, "Starting to render...")
+        printDebug(self.tag, "Starting to render...")
         timer?.invalidate()
         timer = Timer(timeInterval: 1/fps, repeats: true) { [weak self] timer in
             guard timer == self?.timer else { return }
@@ -37,12 +36,13 @@ open class LiveHabitat: ObservableObject {
     
     public func render() {
         let now = Date.timeIntervalSinceReferenceDate
-        state.update(after: now - lastUpdate)
+        let frameTime = now - lastUpdate
+        state.update(after: frameTime)
         lastUpdate = now
     }
     
     public func pauseRendering() {
-        logger?.log(tag, "Paused rendering")
+        printDebug(tag, "Paused rendering")
         timer?.invalidate()
         timer = nil
     }
@@ -59,20 +59,26 @@ open class LiveHabitat: ObservableObject {
         pauseRendering()
         state.children.forEach { $0.kill() }
         state.children.removeAll()
-        logger?.log(self.tag, "Terminated.")
+        printDebug(self.tag, "Terminated.")
     }
 }
 
-class PrintLogger: Logger {
-    func log(_ component: String, _ items: String?...) {
-        let timestamp = Date().string("HH:mm:ss.SSS")
-        let body = logString(for: items)
-        print("\(timestamp) [\(component)] \(body)")
-    }
+func printDebug(_ component: String, _ items: String?...) {
+    let timestamp = Date().string("HH:mm:ss.SSS")
+    let body = logString(for: items)
+    print("\(timestamp) [\(component)] \(body)")
+}
 
-    func logString(for items: [String?]) -> String {
-        items
-            .map { $0 ?? "nil" }
-            .joined(separator: " ")
+func logString(for items: [String?]) -> String {
+    items
+        .map { $0 ?? "nil" }
+        .joined(separator: " ")
+}
+
+extension Date {
+    func string(_ format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
     }
 }

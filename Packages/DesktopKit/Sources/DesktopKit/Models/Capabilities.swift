@@ -32,13 +32,11 @@ public typealias DKCapabilities = [Capability]
 
 extension DKCapabilities {
     
-    // TODO: Refactor away
-    
     private static func defaultsStatic() -> DKCapabilities {
         [RandomAnimations(), AnimatedSprite()]
     }
     
-    public static func xxdefaultsCrawler() -> DKCapabilities {
+    public static func crawler() -> DKCapabilities {
         defaultsStatic() + [
             LinearMovement(),
             ReactToHotspots(),
@@ -46,7 +44,7 @@ extension DKCapabilities {
         ]
     }
     
-    public static func xxdefaults() -> DKCapabilities {
+    public static func walker() -> DKCapabilities {
         defaultsStatic() + [
             LinearMovement(),
             BounceOnLateralCollisions(),

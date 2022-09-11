@@ -5,7 +5,7 @@ import DesktopKit
 public struct Pet {    
     public let id: String
     public let behaviors: [PetBehavior]
-    public let capabilities: DKCapabilities
+    public let capabilities: () -> DKCapabilities
     public let isPaid: Bool
     public let fps: TimeInterval
     public let speed: CGFloat
@@ -15,7 +15,7 @@ public struct Pet {
     init(
         id: String,
         behaviors: [PetBehavior] = [],
-        capabilities: DKCapabilities = .defaults(),
+        capabilities: @escaping () -> DKCapabilities = { .defaults() },
         isPaid: Bool = false,
         fps: TimeInterval = 10,
         movementPath: String = "walk",

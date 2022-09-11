@@ -12,11 +12,9 @@ public class LinearMovement: Capability {
     
     public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled, let body = subject else { return }
-        body.set(
-            origin: body.frame.origin.offset(
-                by: movement(after: time)
-            )
-        )
+        let distance = movement(after: time)
+        let newPosition = body.frame.origin.offset(by: distance)
+        body.set(origin: newPosition)
     }
     
     func movement(after time: TimeInterval) -> CGPoint {

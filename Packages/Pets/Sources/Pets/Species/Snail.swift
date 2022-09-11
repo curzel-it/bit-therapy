@@ -5,7 +5,7 @@ extension Pet {
     
     static let snail = Pet(
         id: "snail",
-        capabilities: .defaultsCrawler(),
+        capabilities: { .defaultsCrawler() },
         fps: 1,
         movementPath: .front,
         dragPath: .front,

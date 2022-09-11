@@ -19,7 +19,7 @@ open class Entity: Identifiable, ObservableObject {
     @Published public var speed: CGFloat = 0
     @Published public var isAlive = true
     
-    public var capabilities: [Capability] = []
+    public private(set) var capabilities: [Capability] = []
     
     public init(id: String, frame: CGRect, in habitatBounds: CGRect) {
         self.id = id
@@ -30,6 +30,7 @@ open class Entity: Identifiable, ObservableObject {
     // MARK: - Capabilities
 
     public func install(_ capability: Capability) {
+        printDebug(id, "Installing", String(describing: type(of: capability)))
         capability.install(on: self)
         capabilities.append(capability)
     }
@@ -84,6 +85,7 @@ open class Entity: Identifiable, ObservableObject {
     
     open func set(state: EntityState) {
         self.state = state
+        printDebug(id, "State changed to", state.description)
     }
     
     // MARK: - Memory Management

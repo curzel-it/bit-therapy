@@ -42,13 +42,13 @@ extension PetEntity {
 // MARK: - Default Capabilities
 
 extension DKCapabilities {
-    private static func petsStuff() -> DKCapabilities {
+    private static func petAnimations() -> DKCapabilities {
         [PetAnimationsProvider(), PetSpritesProvider()]
     }
     public static func defaultsCrawler() -> DKCapabilities {
-        xxdefaultsCrawler() + petsStuff()
+        crawler() + petAnimations()
     }
     public static func defaults() -> DKCapabilities {
-        xxdefaults() + petsStuff()
+        walker() + petAnimations()
     }
 }

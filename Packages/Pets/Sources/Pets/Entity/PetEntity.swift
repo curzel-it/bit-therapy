@@ -18,7 +18,7 @@ open class PetEntity: RenderableEntity {
             in: habitatBounds
         )
         speed = PetEntity.speed(for: species, size: frame.width)
-        species.capabilities.forEach { install($0) }
+        species.capabilities().forEach { install($0) }
     }
     
     open override func animationPath(for state: EntityState) -> String? {
