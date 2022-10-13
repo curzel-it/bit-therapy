@@ -11,7 +11,8 @@ class HomepageViewModel: ObservableObject {
     @Published var selectedPet: Pet?
     @Published var selectedPets: [Pet] = []
     @Published var unselectedPets: [Pet] = []
-            
+    @Published var canShowDiscordBanner: Bool = true
+    
     lazy var showingDetails: Binding<Bool> = {
         Binding {
             self.selectedPet != nil
@@ -47,6 +48,10 @@ class HomepageViewModel: ObservableObject {
     
     func closeDetails() {
         selectedPet = nil
+    }
+    
+    func visitDiscord() {
+        
     }
 }
 

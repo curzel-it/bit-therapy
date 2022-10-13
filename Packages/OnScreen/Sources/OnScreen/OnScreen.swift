@@ -25,6 +25,11 @@ public struct OnScreen {
         worldWindows?.kill()
         worldWindows = nil
     }
+    
+    public static func triggerUfoAbduction() {
+        printDebug("OnScreen", "Triggering UFO Abduction...")
+        viewModel?.startUfoAbductionOfRandomVictim()
+    }
 }
 
 class OnScreenWindows: WorldWindows {

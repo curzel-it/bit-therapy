@@ -9,9 +9,13 @@ extension ViewModel {
     
     func scheduleUfoAbduction() {
         scheduleAtTimeOfDay(hour: 22, minute: 30) { [weak self] in
-            guard let victim = self?.victim else { return }
-            self?.animateUfoAbduction(of: victim)
+            self?.startUfoAbductionOfRandomVictim()
         }
+    }
+    
+    func startUfoAbductionOfRandomVictim() {
+        guard let victim = victim else { return }
+        animateUfoAbduction(of: victim)
     }
 }
 
@@ -29,12 +33,10 @@ private extension ViewModel {
         let ufo = UfoEntity(in: state.bounds)
         ufo.set(origin: state.bounds.topLeft.offset(x: -100, y: -100))
         state.children.append(ufo)
-        ufo.abduct(target, onCompletion: respawn)
-    }
-    
-    func respawn() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
-            OnScreen.show()
+        ufo.abduct(target) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                OnScreen.show()
+            }
         }
     }
 }
@@ -121,6 +123,7 @@ private class UfoAbduction: DKCapability {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             self.target?.uninstall(AnimatedSprite.self)
             self.resumeMovement()
+            self.onCompletion()
         }
     }
     
@@ -131,12 +134,10 @@ private class UfoAbduction: DKCapability {
         pet.set(direction: CGVector(dx: 1, dy: 0))
         pet.speed = PetEntity.speed(for: pet.species, size: pet.frame.width)
         pet.uninstall(UfoAbduction.self)
-        onCompletion()
     }
     
     override func kill() {
         super.kill()
-        self.onCompletion = {}
         self.target = nil
     }
 }

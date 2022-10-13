@@ -17,7 +17,6 @@ public enum Lang {
     // MARK: - Pages
     
     public enum Page {
-        
         public static let home = "page.title.home".localized()
         public static let settings = "page.title.settings".localized()
         public static let about = "page.title.about".localized()
@@ -26,14 +25,12 @@ public enum Lang {
     // MARK: - Menu
     
     public enum Menu {
-        
         public static func item(_ key: String) -> String { "menu.item.\(key)".localized() }
     }
     
     // MARK: - Cheats
     
     public enum Cheats {
-        
         public static let title = "cheats.title".localized()
         public static let placeholder = "cheats.placeholder".localized()
         public static let enable = "cheats.enable".localized()
@@ -44,7 +41,6 @@ public enum Lang {
     // MARK: - Survey
     
     public enum Survey {
-        
         public static let feedbackViaSurvey = "survey.feedbackViaSurvey".localized()
         public static let requestPetViaSurvey = "survey.requestPetViaSurvey".localized()
         public static let takeSurvey = "survey.takeSurvey".localized()
@@ -53,7 +49,6 @@ public enum Lang {
     // MARK: - Settings
     
     public enum Settings {
-        
         public static let gravity = "settings.gravity".localized()
         public static let size = "settings.size".localized()
         public static let launchAtLogin = "settings.launchAtLogin".localized()
@@ -70,7 +65,6 @@ public enum Lang {
     // MARK: - About
     
     public enum About {
-        
         public static let leaveReviewMessage = "about.leaveReviewMessage".localized()
         public static let leaveReview = "about.leaveReview".localized()
         public static let joinRedditMessage = "about.joinRedditMessage".localized()
@@ -83,7 +77,7 @@ public enum Lang {
     // MARK: - Pet Selection
     
     public enum PetSelection {
-        
+        public static let joinDiscord = "petSelection.joinDiscord".localized()
         public static let fixOnScreenPets = "petSelection.fixOnScreenPets".localized()
         public static let addPet = "petSelection.addPet".localized()
         public static let yourPets = "petSelection.yourPets".localized()
@@ -93,7 +87,6 @@ public enum Lang {
     // MARK: - Purchases
     
     public enum Purchases {
-        
         public static let buy = "purchases.buy".localized()
         public static let buyFor = "purchases.buyFor".localized()
         public static let purchasing = "purchases.purchasing".localized()
@@ -104,7 +97,6 @@ public enum Lang {
 // MARK: - Pets
 
 extension Pet {
-    
     public var name: String { "pet.name.\(id)".localized() }
     public var about: String { "pet.about.\(id)".localized() }
 }
@@ -112,7 +104,6 @@ extension Pet {
 // MARK: - Utils
 
 private extension String {
-
     func localized(in bundle: Bundle = .main) -> String {
         NSLocalizedString(self, bundle: bundle, comment: self)
     }

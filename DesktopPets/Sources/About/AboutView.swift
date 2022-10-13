@@ -11,8 +11,7 @@ private let subReddit = "https://www.reddit.com/r/DesktopPets/"
 private let mailto = "mailto:pets@curzel.it?subject=Desktop%20Pets&body=Hi%20Federico%2C%20"
 private let privacy = "https://curzel.it/privacy.html"
 
-struct AboutView: View {
-        
+struct AboutView: View {        
     var body: some View {
         VStack(alignment: .center, spacing: .xl) {
             Section(
@@ -41,7 +40,6 @@ struct AboutView: View {
 }
 
 struct PrivacyPolicy: View {
-    
     var body: some View {
         Button(Lang.About.privacyPolicy) {
             NSWorkspace.shared.open(urlString: privacy)
@@ -50,7 +48,6 @@ struct PrivacyPolicy: View {
 }
 
 private struct Socials: View {
-    
     var body: some View {
         HStack(spacing: .xl) {
             SocialIcon(name: "github", link: github)
@@ -62,7 +59,6 @@ private struct Socials: View {
 }
 
 private struct SocialIcon: View {
-    
     let name: String
     let link: String
     
@@ -78,7 +74,6 @@ private struct SocialIcon: View {
 }
 
 private struct Section: View {
-    
     let message: String
     let linkTitle: String
     let link: String

@@ -18,6 +18,7 @@ extension Pet {
         .sunflower,
         .trex, .trexBlue, .trexViolet, .trexYellow,
         .panda, .pandaVest,
+        .puppyMilo,
         .ufo
     ]
     

@@ -41,6 +41,7 @@
 
 // MARK: - Pet Selection
 
+"petSelection.joinDiscord" = "it's still quiet and desolate, but we also have a Discord server!";
 "petSelection.addPet" = "Add to screen";
 "petSelection.fixOnScreenPets" = "Fix on-screen pets";
 "petSelection.yourPets" = "Pets on screen:";
@@ -99,6 +100,7 @@
 "pet.name.nyan" = "Nyan D. Cat";
 "pet.name.panda" = "Panda";
 "pet.name.panda_vest" = "Golden Panda";
+"pet.name.puppy_milo" = "Milo";
 "pet.name.sheep" = "Sheep";
 "pet.name.sheep_black" = "Black Sheep";
 "pet.name.sloth" = "Sloth";
@@ -134,6 +136,7 @@
 "pet.about.nyan" = "An homage to one of the internet most famous cats";
 "pet.about.panda" = "The universe has brought us the Dragon Warrior!";
 "pet.about.panda_vest" = "There is no charge for awesomeness... or attractiveness.";
+"pet.about.puppy_milo" = "Maybe it's not exactly as you expected, but I'm not exactly a designer to be honest! Haha";
 "pet.about.sheep" = "The 'eSheep' for Windows 95 was one of the first Desktop Pets, did you know it?";
 "pet.about.sheep_black" = "If you know how lazy I can be, you also know I've just inverted the colors...";
 "pet.about.sloth" = "Did you know they are so lazy alge grows on their fur with time?";

@@ -1,7 +1,8 @@
 import AppState
 import Foundation
-import Squanch
 import InAppPurchases
+import OnScreen
+import Squanch
 
 // I wanted to distribute pets for free to supporters, and this is the easiest way.
 // Cheat codes are easy to guess, feel free to use them without shame...
@@ -51,9 +52,14 @@ private let kEnabledCheats = "kEnabledCheats"
 
 enum Cheat: String {
     case unlockAllPets
+    case ufoAbduction
     
     func enable() {
         switch self {
+        case .ufoAbduction:
+            printDebug("Cheats", "Triggering UFO Abduction")
+            OnScreen.triggerUfoAbduction()
+            
         case .unlockAllPets:
             printDebug("Cheats", "Unlocked all pets")
             PricingService.global.isAvailable = false
