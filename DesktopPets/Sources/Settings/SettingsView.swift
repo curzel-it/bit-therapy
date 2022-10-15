@@ -10,29 +10,30 @@ import Tracking
 // MARK: - Settings
 
 struct SettingsView: View {
-    
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        VStack(spacing: .xl) {
-            SizeSlider()
-            GravitySwitch().positioned(.leading)
-            DesktopInteractions().positioned(.leading)
-            LaunchAtLoginSwitch().positioned(.leading)
-            StatusBarIconSwitch().positioned(.leading)
-            AnonymousTracking().positioned(.leading)
-            FixOnScreenPets().positioned(.leading)
-            RestorePurchasesButton().positioned(.leading)
-            CheatsView().positioned(.leading)
+        ScrollView {
+            VStack(spacing: .xl) {
+                SizeSlider()
+                SpeedSlider()
+                GravitySwitch().positioned(.leading)
+                DesktopInteractions().positioned(.leading)
+                LaunchAtLoginSwitch().positioned(.leading)
+                StatusBarIconSwitch().positioned(.leading)
+                AnonymousTracking().positioned(.leading)
+                FixOnScreenPets().positioned(.leading)
+                RestorePurchasesButton().positioned(.leading)
+                CheatsView().positioned(.leading)
+            }
+            .padding(.md)
         }
-        .padding(.md)
     }
 }
 
 // MARK: - Reset
 
 private struct FixOnScreenPets: View {
-    
     var body: some View {
         Button(Lang.PetSelection.fixOnScreenPets) { OnScreen.show() }
             .buttonStyle(.regular)
@@ -42,7 +43,6 @@ private struct FixOnScreenPets: View {
 // MARK: - Gravity
 
 private struct GravitySwitch: View {
-    
     @EnvironmentObject var appState: AppState
     
     var body: some View {
@@ -53,7 +53,6 @@ private struct GravitySwitch: View {
 // MARK: - Desktop Interactions
 
 private struct DesktopInteractions: View {
-    
     @EnvironmentObject var appState: AppState
     
     @State var showingDetails = false
@@ -95,7 +94,6 @@ private struct DesktopInteractions: View {
 // MARK: - Anonymous Tracking
 
 private struct AnonymousTracking: View {
-    
     @State var showingDetails = false
     
     var enabled: Binding<Bool> = Binding {
@@ -138,7 +136,6 @@ private struct AnonymousTracking: View {
 // MARK: - Show in Menu Bar
 
 private struct StatusBarIconSwitch: View {
-    
     var enabled: Binding<Bool> = Binding {
         AppState.global.statusBarIconEnabled
     } set: { isEnabled in
@@ -160,7 +157,6 @@ private struct StatusBarIconSwitch: View {
 // MARK: - Launch At Login
 
 private struct LaunchAtLoginSwitch: View {
-    
     @EnvironmentObject var appState: AppState
     
     var launchAtLogin: Binding<Bool> = Binding {
@@ -177,7 +173,6 @@ private struct LaunchAtLoginSwitch: View {
 // MARK: - Pet Size
 
 private struct SizeSlider: View {
-    
     @EnvironmentObject var appState: AppState
     
     var body: some View {
@@ -189,6 +184,30 @@ private struct SizeSlider: View {
                 value: $appState.petSize,
                 in: PetSize.minSize...PetSize.maxSize
             ) { EmptyView() }
+            
+            Button(Lang.reset) { appState.petSize = PetSize.defaultSize }
+                .buttonStyle(.text)
+        }
+    }
+}
+
+// MARK: - Pet Speed Multiplier
+
+private struct SpeedSlider: View {
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        HStack(spacing: .md) {
+            Text("\(Lang.Settings.speed) (\(Int(appState.speedMultiplier * 100))%)")
+                .textAlign(.leading)
+                .frame(width: 100)
+            Slider(
+                value: $appState.speedMultiplier,
+                in: 0.25...2
+            ) { EmptyView() }
+            
+            Button(Lang.reset) { appState.speedMultiplier = 1.0 }
+                .buttonStyle(.text)
         }
     }
 }
@@ -196,7 +215,6 @@ private struct SizeSlider: View {
 // MARK: - Utils
 
 private struct Switch: View {
-    
     let label: String
     let value: Binding<Bool>
     

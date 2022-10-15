@@ -8,6 +8,7 @@ public enum Lang {
     public static let cancel = "cancel".localized()
     public static let select = "select".localized()
     public static let remove = "remove".localized()
+    public static let reset = "reset".localized()
     public static let enable = "enable".localized()
     public static let disable = "disable".localized()
     public static let loading = "loading".localized()

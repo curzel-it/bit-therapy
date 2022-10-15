@@ -2,6 +2,7 @@ import AppState
 import DesktopKit
 import Foundation
 import Pets
+import Yage
 
 // MARK: - Schedule Event
 
@@ -23,13 +24,13 @@ extension ViewModel {
 
 private extension ViewModel {
     
-    var victim: RenderableEntity? {
-        renderableChildren
+    var victim: Entity? {
+        state.children
             .filter { $0 is DesktopPet }
             .randomElement()
     }
     
-    func animateUfoAbduction(of target: RenderableEntity) {
+    func animateUfoAbduction(of target: Entity) {
         let ufo = UfoEntity(in: state.bounds)
         ufo.set(origin: state.bounds.topLeft.offset(x: -100, y: -100))
         state.children.append(ufo)
@@ -49,14 +50,15 @@ private class UfoEntity: PetEntity {
         super.init(
             of: .ufo,
             size: AppState.global.petSize,
-            in: worldBounds
+            in: worldBounds,
+            settings: AppState.global
         )
         setBounceOnLateralCollisions(enabled: false)
         uninstall(RandomAnimations.self)
         uninstall(ReactToHotspots.self)
     }
     
-    func abduct(_ target: RenderableEntity, onCompletion: @escaping () -> Void) {
+    func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
         let abduction = UfoAbduction()
         install(abduction)
         abduction.abduct(target, onCompletion)
@@ -76,15 +78,15 @@ private extension EntityAnimation {
 
 // MARK: - Abduction
 
-private class UfoAbduction: DKCapability {
+private class UfoAbduction: Capability {
     
-    weak var target: RenderableEntity?
+    weak var target: Entity?
     
     private var subjectOriginalSize: CGSize!
         
     private var onCompletion: () -> Void = {}
     
-    func abduct(_ target: RenderableEntity, _ onCompletion: @escaping () -> Void) {
+    func abduct(_ target: Entity, _ onCompletion: @escaping () -> Void) {
         guard let body = subject else { return }
         self.subjectOriginalSize = body.frame.size
         self.target = target
@@ -132,7 +134,7 @@ private class UfoAbduction: DKCapability {
         pet.set(state: .move)
         pet.set(size: subjectOriginalSize)
         pet.set(direction: CGVector(dx: 1, dy: 0))
-        pet.speed = PetEntity.speed(for: pet.species, size: pet.frame.width)
+        // TODO: Not needed? pet.resetSpeed()
         pet.uninstall(UfoAbduction.self)
     }
     

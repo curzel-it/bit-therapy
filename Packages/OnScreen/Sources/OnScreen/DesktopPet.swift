@@ -4,20 +4,24 @@ import Combine
 import Pets
 import Schwifty
 import SwiftUI
+import Yage
+
+extension AppState: Pets.Settings {}
 
 class DesktopPet: PetEntity {
-    
     private var sizeCanc: AnyCancellable!
+    private var speedCanc: AnyCancellable!
     private var gravityCanc: AnyCancellable!
     
     init(of species: Pet, in worldBounds: CGRect) {
-        super.init(of: species, size: AppState.global.petSize, in: worldBounds)
+        super.init(of: species, size: AppState.global.petSize, in: worldBounds, settings: AppState.global)
         fps = species.fps
         setupAutoRespawn()
         setupMenu()
         setInitialPosition()
         setInitialDirection()
         bindSizeToSettings()
+        bindSpeedToSettings()
         bindGravityToSettings()
     }
     
@@ -51,7 +55,18 @@ class DesktopPet: PetEntity {
         }
     }
     
+    private func bindSpeedToSettings() {
+        speedCanc = AppState.global.$speedMultiplier.sink { speedMultiplier in
+            self.speed = PetEntity.speed(
+                for: self.species,
+                size: AppState.global.petSize,
+                settings: speedMultiplier
+            )
+        }
+    }
+    
     override func kill() {
+        speedCanc?.cancel()
         sizeCanc?.cancel()
         gravityCanc?.cancel()
         super.kill()
