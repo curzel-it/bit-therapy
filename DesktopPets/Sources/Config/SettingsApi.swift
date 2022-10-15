@@ -1,7 +1,6 @@
 import Foundation
 
-enum SettingsApi {
-    
+enum SettingsApi {    
     private static var current: Settings?
         
     static func get() async -> Settings? {

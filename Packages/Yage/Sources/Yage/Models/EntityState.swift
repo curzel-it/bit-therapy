@@ -4,7 +4,7 @@ public enum EntityState {
     case freeFall
     case drag
     case move
-    case action(action: EntityAction, loops: Int?)
+    case action(action: EntityAnimation, loops: Int?)
     
     public var description: String {
         switch self {
@@ -26,16 +26,6 @@ extension EntityState {
             return false
         }
     }
-}
-
-// MARK: - Action
-
-public protocol EntityAction {
-    var id: String { get }
-    var chance: Double { get }
-    var facingDirection: CGVector? { get }
-    var requiredLoops: Int? { get }
-    func frame(for entity: Entity) -> CGRect
 }
 
 // MARK: - State Equatable

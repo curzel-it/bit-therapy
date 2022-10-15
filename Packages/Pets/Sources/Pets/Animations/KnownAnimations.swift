@@ -1,8 +1,7 @@
-import DesktopKit
-import SwiftUI
+import Foundation
+import Yage
 
-extension EntityAnimation {
-    
+extension EntityAnimation {    
     public static let front = EntityAnimation(id: "front")
     
     static let eat = EntityAnimation(id: "eat")

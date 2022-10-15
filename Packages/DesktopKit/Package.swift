@@ -12,7 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "../yage"),
+        .package(path: "../Yage"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.6"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
         .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6"),
@@ -22,16 +22,19 @@ let package = Package(
         .target(
             name: "DesktopKit",
             dependencies: [
-                .product(name: "Yage", package: "Yage"),
                 .product(name: "NotAGif", package: "NotAGif"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch"),
-                .product(name: "WindowsDetector", package: "WindowsDetector")
+                .product(name: "WindowsDetector", package: "WindowsDetector"),
+                .product(name: "Yage", package: "Yage")
             ]
         ),
         .testTarget(
             name: "DesktopKitTests",
-            dependencies: ["DesktopKit"]
+            dependencies: [
+                "DesktopKit",
+                .product(name: "Yage", package: "Yage")
+            ]
         )
     ]
 )

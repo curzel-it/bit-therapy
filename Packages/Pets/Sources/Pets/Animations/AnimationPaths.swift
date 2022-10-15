@@ -1,7 +1,7 @@
-import DesktopKit
 import Combine
 import Squanch
 import SwiftUI
+import Yage
 
 public class PetAnimationPathsProvider {    
     public init() {}

@@ -14,6 +14,11 @@ open class World: ObservableObject {
     
     open func set(bounds: CGRect) {
         self.bounds = bounds
+        let hotspots = Hotspot.allCases.map { $0.rawValue }
+        let oldBounds = children.filter { hotspots.contains($0.id) }
+        oldBounds.forEach { $0.kill() }
+        children.removeAll { hotspots.contains($0.id) }
+        children.append(contentsOf: hotspotEntities())
     }
     
     public func update(after time: TimeInterval) {

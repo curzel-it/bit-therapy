@@ -1,8 +1,7 @@
-import DesktopKit
-import SwiftUI
+import Foundation
+import Yage
 
-extension Pet {
-    
+extension Pet {    
     public static let ufo = Pet(
         id: "ufo",
         behaviors: [

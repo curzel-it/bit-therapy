@@ -4,6 +4,7 @@ import Combine
 import DesktopKit
 import Pets
 import Squanch
+import Yage
 
 class ViewModel: LiveWorld {
     

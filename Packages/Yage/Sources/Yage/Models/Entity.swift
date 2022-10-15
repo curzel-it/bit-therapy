@@ -1,3 +1,4 @@
+import Squanch
 import SwiftUI
 
 open class Entity: Identifiable, ObservableObject {
@@ -18,6 +19,9 @@ open class Entity: Identifiable, ObservableObject {
     
     @Published public var speed: CGFloat = 0
     @Published public var isAlive = true
+    
+    @Published public var sprite: ImageFrame?
+    @Published public var backgroundColor: Color = .clear
     
     public private(set) var capabilities: [Capability] = []
     
@@ -93,6 +97,7 @@ open class Entity: Identifiable, ObservableObject {
     open func kill() {
         uninstallAllCapabilities()
         isAlive = false
+        sprite = nil
     }
     
     public func uninstallAllCapabilities() {
@@ -105,6 +110,8 @@ open class Entity: Identifiable, ObservableObject {
     open func actionPath(for state: EntityState) -> String? {
         nil
     }
+    
+    open func animationPath(for state: EntityState) -> String? { nil }
 }
 
 // MARK: - Equatable

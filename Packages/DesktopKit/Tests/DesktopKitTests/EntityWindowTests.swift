@@ -1,10 +1,11 @@
 import XCTest
+import Yage
 
 @testable import DesktopKit
 
 class EntityWindowTests: XCTestCase {
     
-    var entity: RenderableEntity!
+    var entity: Entity!
     var world: LiveWorld!
     var window: EntityWindow!
     
@@ -17,7 +18,7 @@ class EntityWindowTests: XCTestCase {
             id: "test",
             bounds: CGRect(size: .init(square: 1000))
         )
-        entity = RenderableEntity(
+        entity = Entity(
             id: "test",
             frame: CGRect(origin: .zero, size: .init(square: 100)),
             in: world.state.bounds

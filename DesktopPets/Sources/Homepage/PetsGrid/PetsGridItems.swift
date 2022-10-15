@@ -6,6 +6,7 @@ import Pets
 import Schwifty
 import Squanch
 import SwiftUI
+import Yage
 
 struct PetsGridItem: View {
     
@@ -29,7 +30,7 @@ private struct PetPreview: View {
     
     let pet: Pet
     
-    var frame: NSImage? {
+    var frame: ImageFrame? {
         let name = PetAnimationPathsProvider().frontAnimationPath(for: pet)
         return PetsAssets.frames(for: name).first
     }

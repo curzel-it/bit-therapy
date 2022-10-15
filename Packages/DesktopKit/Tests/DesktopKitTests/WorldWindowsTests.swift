@@ -1,12 +1,13 @@
 import XCTest
+import Yage
 
 @testable import DesktopKit
 
 class WorldWindowsTests: XCTestCase {
     
     var world: LiveWorld!
-    var entity1: RenderableEntity!
-    var entity2: RenderableEntity!
+    var entity1: Entity!
+    var entity2: Entity!
     var windows: WorldWindows!
     
     override func setUp() {
@@ -18,8 +19,8 @@ class WorldWindowsTests: XCTestCase {
         windows?.kill()
         
         world = LiveWorld(id: "WorldWindowsTests", bounds: CGRect(size: .init(square: 1000)))
-        entity1 = RenderableEntity(id: "test1", frame: baseSize, in: world.state.bounds)
-        entity2 = RenderableEntity(id: "test2", frame: baseSize, in: world.state.bounds)
+        entity1 = Entity(id: "test1", frame: baseSize, in: world.state.bounds)
+        entity2 = Entity(id: "test2", frame: baseSize, in: world.state.bounds)
         windows = WorldWindows(for: world)
     }
     
@@ -65,8 +66,7 @@ private extension LiveWorld {
     
     var renderableChildren: Int {
         state.children
-            .compactMap { $0 as? RenderableEntity }
-            .filter { $0.isAlive }
+            .filter { $0.sprite != nil && $0.isAlive }
             .count
     }
 }

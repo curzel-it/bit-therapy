@@ -13,8 +13,9 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../AppState"),
-        .package(path: "../Pets"),
         .package(path: "../DesktopKit"),
+        .package(path: "../Pets"),
+        .package(path: "../Yage"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
         .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6")
     ],
@@ -26,14 +27,16 @@ let package = Package(
                 .product(name: "DesktopKit", package: "DesktopKit"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Squanch", package: "Squanch")
+                .product(name: "Squanch", package: "Squanch"),
+                .product(name: "Yage", package: "Yage")
             ]
         ),
         .testTarget(
             name: "OnScreenTests",
             dependencies: [
+                "OnScreen",
                 .product(name: "DesktopKit", package: "DesktopKit"),
-                "OnScreen"
+                .product(name: "Yage", package: "Yage")
             ]
         )
     ]

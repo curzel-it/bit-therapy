@@ -2,6 +2,7 @@ import NotAGif
 import Schwifty
 import Squanch
 import SwiftUI
+import Yage
 
 public class PetsAssets {
     
@@ -9,7 +10,7 @@ public class PetsAssets {
         frames(for: baseName).count > 0
     }
     
-    public static func frames(for baseName: String) -> [NSImage] {
+    public static func frames(for baseName: String) -> [ImageFrame] {
         let paths = baseName.components(separatedBy: "_")
         
         if paths.count > 2 {
@@ -25,29 +26,36 @@ public class PetsAssets {
         return frames(fromDirectory: "Assets/\(baseName)")
     }
     
-    private static func frames(fromDirectory dir: String) -> [NSImage] {
-        let urls = Bundle.module.urls(
-            forResourcesWithExtension: "png",
-            subdirectory: dir
-        ) ?? []
-        
+    private static func frames(fromDirectory dir: String) -> [ImageFrame] {
+#if os(macOS)
+        let urls = Bundle.module.urls(forResourcesWithExtension: "png", subdirectory: dir) ?? []
         return urls
             .sortedByFrameIndex()
             .compactMap { NSImage(contentsOf: $0) }
+#else
+        return Bundle.module
+            .paths(forResourcesOfType: "png", inDirectory: dir)
+            .sortedByFrameIndex()
+            .compactMap { UIImage(contentsOfFile: $0) }
+#endif
     }
 }
 
 private extension Array where Element == URL {
-    
     func sortedByFrameIndex() -> [Element] {
-        self.sorted { $0.frameIndex < $1.frameIndex }
+        sorted { $0.absoluteString.frameIndex < $1.absoluteString.frameIndex }
     }
 }
 
-private extension URL {
-    
+private extension Array where Element == String {
+    func sortedByFrameIndex() -> [Element] {
+        sorted { $0.frameIndex < $1.frameIndex }
+    }
+}
+
+private extension String {
     var frameIndex: Int {
-        let indexString = absoluteString
+        let indexString = self
             .components(separatedBy: "-")
             .last?
             .components(separatedBy: ".")

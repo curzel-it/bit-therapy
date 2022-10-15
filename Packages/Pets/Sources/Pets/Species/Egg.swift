@@ -1,8 +1,7 @@
 import Foundation
-import DesktopKit
+import Yage
 
 extension Pet {
-    
     static let egg = Pet(
         id: "egg",
         behaviors: [

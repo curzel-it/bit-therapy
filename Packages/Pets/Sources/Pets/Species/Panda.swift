@@ -1,8 +1,7 @@
-import DesktopKit
-import SwiftUI
+import Foundation
+import Yage
 
-extension Pet {
-    
+extension Pet {    
     static let panda = Pet(
         id: "panda",
         behaviors: [

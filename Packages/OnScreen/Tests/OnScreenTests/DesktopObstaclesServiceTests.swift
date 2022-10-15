@@ -1,5 +1,6 @@
 import DesktopKit
 import XCTest
+import Yage
 
 @testable import OnScreen
 

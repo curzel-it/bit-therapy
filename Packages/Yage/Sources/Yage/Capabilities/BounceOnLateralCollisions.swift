@@ -1,16 +1,11 @@
 import SwiftUI
 
 public class BounceOnLateralCollisions: Capability {
-    public weak var subject: Entity?
-    public var isEnabled: Bool = true
-    
-    public init() {}
-    
-    public func install(on subject: Entity) {
+    public override func install(on subject: Entity) {
         self.subject = subject
     }
     
-    public func update(with collisions: Collisions, after time: TimeInterval) {
+    public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         guard let body = subject, !body.isEphemeral, body.state == .move else { return }
         guard let angle = bouncingAngle(from: body.direction.radians, with: collisions) else { return }
@@ -30,11 +25,6 @@ public class BounceOnLateralCollisions: Capability {
         let isGoingRight = direction > 0.0001
         guard isGoingLeft || isGoingRight else { return nil }
         return isGoingLeft ? .left : .right
-    }
-    
-    public func kill() {
-        subject = nil
-        isEnabled = false
     }
 }
 

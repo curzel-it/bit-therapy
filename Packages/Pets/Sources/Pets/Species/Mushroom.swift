@@ -1,5 +1,4 @@
 import Foundation
-import DesktopKit
 
 extension Pet {
     

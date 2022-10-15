@@ -41,7 +41,7 @@ class GravityTests: XCTestCase {
         
         for _ in 0..<10 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .freeFall)
-        XCTAssertEqual(player.direction, Gravity.fallDirectioon)
+        XCTAssertEqual(player.direction, Gravity.fallDirection)
         
         for _ in 10..<70 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .move)
@@ -92,7 +92,7 @@ class GravityTests: XCTestCase {
         
         for _ in 0..<10 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .freeFall)
-        XCTAssertEqual(player.direction, Gravity.fallDirectioon)
+        XCTAssertEqual(player.direction, Gravity.fallDirection)
         
         for _ in 10..<1300 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .move)
@@ -101,7 +101,7 @@ class GravityTests: XCTestCase {
         
         for _ in 1300..<1350 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .freeFall)
-        XCTAssertEqual(player.direction, Gravity.fallDirectioon)
+        XCTAssertEqual(player.direction, Gravity.fallDirection)
         
         for _ in 1350..<1450 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .move)

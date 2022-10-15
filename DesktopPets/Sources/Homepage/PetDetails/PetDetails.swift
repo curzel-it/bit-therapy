@@ -58,8 +58,8 @@ private struct AnimatedPreview: View {
     
     var body: some View {
         ZStack {
-            AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { NSImage in
-                Image(frame: NSImage)
+            AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { frame in
+                Image(frame: frame)
                     .pixelArt()
                     .frame(width: 150, height: 150)
             }

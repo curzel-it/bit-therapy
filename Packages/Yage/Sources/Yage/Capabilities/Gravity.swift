@@ -1,18 +1,11 @@
 import SwiftUI
 
 public class Gravity: Capability {
-    static let fallDirectioon = CGVector(dx: 0, dy: 8)
+    static let fallDirection = CGVector(dx: 0, dy: 8)
     
     private var isFalling: Bool = false
     
-    public weak var subject: Entity?
-    public var isEnabled: Bool = true
-    
-    public func install(on subject: Entity) {
-        self.subject = subject
-    }
-    
-    public func update(with collisions: Collisions, after time: TimeInterval) {
+    public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         guard subject?.state == .move || subject?.state == .freeFall else { return }
         
@@ -69,13 +62,9 @@ public class Gravity: Capability {
         guard !isFalling else { return false }
         isFalling = true
         body.set(state: .freeFall)
-        body.set(direction: Gravity.fallDirectioon)
+        body.set(direction: Gravity.fallDirection)
+        body.speed = 14
         return true
-    }
-    
-    public func kill() {
-        subject = nil
-        isEnabled = false
     }
 }
 

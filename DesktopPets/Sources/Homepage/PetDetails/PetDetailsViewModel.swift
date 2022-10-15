@@ -6,6 +6,7 @@ import NotAGif
 import Pets
 import SwiftUI
 import Tracking
+import Yage
 
 class PetDetailsViewModel: ObservableObject {
     
@@ -26,7 +27,7 @@ class PetDetailsViewModel: ObservableObject {
     var canBuy: Bool { !isFree && !hasBeenPaid }
     var price: PetPrice? { pricing.price(for: pet.id) }
     
-    var animationFrames: [NSImage] {
+    var animationFrames: [ImageFrame] {
         let name = PetAnimationPathsProvider().frontAnimationPath(for: pet)
         return PetsAssets.frames(for: name)
     }

@@ -1,8 +1,7 @@
 import Foundation
-import DesktopKit
+import Yage
 
 extension Pet {
-    
     static let cromulon = Pet(
         id: "cromulon",
         behaviors: [

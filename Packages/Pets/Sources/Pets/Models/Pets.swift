@@ -1,11 +1,11 @@
 import CoreGraphics
 import Foundation
-import DesktopKit
+import Yage
 
 public struct Pet {    
     public let id: String
     public let behaviors: [PetBehavior]
-    public let capabilities: () -> DKCapabilities
+    public let capabilities: () -> Capabilities
     public let isPaid: Bool
     public let fps: TimeInterval
     public let speed: CGFloat
@@ -15,7 +15,7 @@ public struct Pet {
     init(
         id: String,
         behaviors: [PetBehavior] = [],
-        capabilities: @escaping () -> DKCapabilities = { .defaults() },
+        capabilities: @escaping () -> Capabilities = { .defaults() },
         isPaid: Bool = false,
         fps: TimeInterval = 10,
         movementPath: String = "walk",
