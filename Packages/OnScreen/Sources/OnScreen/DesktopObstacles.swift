@@ -22,6 +22,6 @@ class DesktopObstaclesService: WindowObstaclesService {
     
     override func isValidObstacle(frame: CGRect) -> Bool {
         guard super.isValidObstacle(frame: frame) else { return false }
-        return frame.minY > 25 + AppState.global.petSize
+        return frame.minY > 25 + CGFloat(AppState.global.petSize)
     }
 }

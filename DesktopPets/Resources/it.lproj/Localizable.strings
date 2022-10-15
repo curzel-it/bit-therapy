@@ -14,7 +14,7 @@
 
 "survey.takeSurvey" = "Questionario utenti";
 "survey.feedbackViaSurvey" = "Hai feedback, idee, opinioni o problemi con l'app? Faccelo sapere!";
-"survey.requestPetViaSurvey" = "Non hai trovato quello che cercavi? Faccelo sapere!";
+"survey.requestPetViaSurvey" = "Non hai trovato quello che cercavi? Faccelo sapere su Discord o con il questionario!";
 
 // MARK: - Purchases
 
@@ -28,7 +28,7 @@
 "cheats.title" = "Codici";
 "cheats.placeholder" = "Cheat code";
 "cheats.enable" = "Abilita";
-"cheats.invalidCode" = "Delfino curioso!";
+"cheats.invalidCode" = "Curioso? Vieni su Discord!";
 "cheats.validCode" = "Attivato!";
 
 // MARK: - Menu Items

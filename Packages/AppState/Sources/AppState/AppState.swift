@@ -7,16 +7,18 @@ public class AppState: ObservableObject {
     public static let global = AppState()
     
     @Published public var selectedPage: AppPage = .home
-            
+    
     @AppStorage("desktopInteractions") public var desktopInteractions: Bool = true
     
     @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
+    
+    @AppStorage("ufoAbductionSchedule") public var ufoAbductionSchedule: String = "daily-22:30"
     
     @AppStorage("trackingEnabled") public var trackingEnabled = false
     
     @AppStorage("speedMultiplier") private var speedMultiplierValue: Double = 1
     
-    @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize
+    @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize 
     
     @AppStorage("gravityEnabled") private var gravityEnabledValue = true
     
@@ -45,8 +47,12 @@ public class AppState: ObservableObject {
             gravityEnabledValue = gravityEnabled
         }
     }
-        
+    
     init() {
+        reload()
+    }
+    
+    public func reload() {
         petSize = petSizeValue
         speedMultiplier = speedMultiplierValue
         gravityEnabled = gravityEnabledValue

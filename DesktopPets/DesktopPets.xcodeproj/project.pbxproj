@@ -55,8 +55,10 @@
 		64B1F1B228F93FF900CFFE3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1B128F93FF900CFFE3B /* Squanch */; };
 		64B1F1B428F93FF900CFFE3B /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1B328F93FF900CFFE3B /* RateKit */; };
 		64F4B6E328F9E31F0021DDA1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E228F9E31F0021DDA1 /* HomeView.swift */; };
-		64F4B6E428FA97E50021DDA1 /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
 		64F4B6E528FA97E50021DDA1 /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
+		64F4B6E728FAF7910021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
+		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
+		64F4B6E928FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B42874766200A9F738 /* InAppPurchases */; };
 		A63AC7B92874766200A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B82874766200A9F738 /* OnScreen */; };
 		A63AC7BB2874766200A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7BA2874766200A9F738 /* Pets */; };
@@ -121,6 +123,7 @@
 		64B1F19028F8623800CFFE3B /* Desktop Pets iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B1F19228F8623800CFFE3B /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
 		64F4B6E228F9E31F0021DDA1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsImplementation.swift; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,13 +246,13 @@
 			path = Feedback;
 			sourceTree = "<group>";
 		};
-		1E7FB47928BD1C5A002F377D /* Config */ = {
+		1E7FB47928BD1C5A002F377D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				1E7FB47528BD185D002F377D /* SettingsApi.swift */,
-				1E33599828CDF6A8007BB53E /* Cheats.swift */,
+				A6FB7D5328740F8E00AB872E /* SettingsView.swift */,
 			);
-			path = Config;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		1EA51CD628BE211E00C62890 /* PetsGrid */ = {
@@ -307,24 +310,25 @@
 			isa = PBXGroup;
 			children = (
 				A6FB7D5B28740F8E00AB872E /* About */,
-				1E7FB47928BD1C5A002F377D /* Config */,
+				A6FB7D5228740F8E00AB872E /* Cheats */,
 				1E7FB47428BD184C002F377D /* Feedback */,
 				1E1FA9A728AE851F0082A113 /* Homepage */,
 				64B1F19128F8623800CFFE3B /* iOS */,
 				A6FB7D5528740F8E00AB872E /* macOS */,
-				A6FB7D5228740F8E00AB872E /* Settings */,
+				1E7FB47928BD1C5A002F377D /* Settings */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		A6FB7D5228740F8E00AB872E /* Settings */ = {
+		A6FB7D5228740F8E00AB872E /* Cheats */ = {
 			isa = PBXGroup;
 			children = (
+				1E33599828CDF6A8007BB53E /* Cheats.swift */,
 				1E33599B28CDFA25007BB53E /* CheatsView.swift */,
-				A6FB7D5328740F8E00AB872E /* SettingsView.swift */,
+				64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */,
 			);
-			path = Settings;
+			path = Cheats;
 			sourceTree = "<group>";
 		};
 		A6FB7D5528740F8E00AB872E /* macOS */ = {
@@ -651,10 +655,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F4B6E428FA97E50021DDA1 /* Cheats.swift in Sources */,
 				64F4B6E328F9E31F0021DDA1 /* HomeView.swift in Sources */,
 				64B1F19328F8623800CFFE3B /* PhoneApp.swift in Sources */,
 				64F4B6E528FA97E50021DDA1 /* SettingsApi.swift in Sources */,
+				64F4B6E728FAF7910021DDA1 /* CheatsImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +673,7 @@
 				A6FB7D8428740F8E00AB872E /* StatusItemManager.swift in Sources */,
 				1E1FA9B828AE851F0082A113 /* PetsGrid.swift in Sources */,
 				A6FB7D8028740F8E00AB872E /* MainWindow.swift in Sources */,
+				64F4B6E928FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */,
 				A6FB7D8628740F8E00AB872E /* AboutView.swift in Sources */,
 				1E1FA9B028AE851F0082A113 /* PetDetails.swift in Sources */,
 				A6FB7D7E28740F8E00AB872E /* MacApp.swift in Sources */,
@@ -700,6 +705,7 @@
 				A6FB7D8528740F8E00AB872E /* StatusItemManager.swift in Sources */,
 				1E1FA9B928AE851F0082A113 /* PetsGrid.swift in Sources */,
 				A6FB7D8128740F8E00AB872E /* MainWindow.swift in Sources */,
+				64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */,
 				1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
 				1E1FA9B128AE851F0082A113 /* PetDetails.swift in Sources */,

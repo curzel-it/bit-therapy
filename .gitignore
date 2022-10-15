@@ -2,6 +2,7 @@ Aseprite/
 *.aseprite
 Secrets.plist
 CheatsImplementation.swift
+*/CheatsImplementation.swift
 
 # Xcode
 #

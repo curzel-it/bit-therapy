@@ -17,6 +17,7 @@ struct CheatsView: View {
                     .frame(width: 250)
                     .frame(height: 40)
                     .textFieldStyle(.roundedBorder)
+                    .onSubmit { viewModel.enableCurrent() }
                 
                 if !viewModel.text.isEmpty {
                     Button("Enable", action: viewModel.enableCurrent)
@@ -35,24 +36,34 @@ struct CheatsView: View {
 }
 
 private class ViewModel: ObservableObject {
-    
     @Published var text: String = ""
     @Published var info: String?
     @Published var error: String?
     
+    var cleanedCode: String {
+        text.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
     func enableCurrent() {
-        if let cheat = Cheats.enableCheat(code: text) {
-            cheat.enable()
-            withAnimation {
-                info = Lang.Cheats.validCode
-                text = ""
-                error = nil
-            }
+        if Cheats.enableCheat(code: cleanedCode) {
+            showValidCode()
         } else {
-            withAnimation {
-                info = nil
-                error = Lang.Cheats.invalidCode
-            }
+            showInvalidCode()
+        }
+    }
+    
+    private func showValidCode() {
+        withAnimation {
+            info = Lang.Cheats.validCode
+            text = ""
+            error = nil
+        }
+    }
+    
+    private func showInvalidCode() {
+        withAnimation {
+            info = nil
+            error = Lang.Cheats.invalidCode
         }
     }
     
