@@ -3,6 +3,7 @@
 "cancel" = "Cancel";
 "select" = "Select";
 "remove" = "Remove";
+"reset" = "Reset";
 "enable" = "Enable";
 "disable" = "Disable";
 "loading" = "Loading...";
@@ -27,7 +28,7 @@
 "cheats.title" = "Cheats";
 "cheats.placeholder" = "Cheat code";
 "cheats.enable" = "Enable";
-"cheats.invalidCode" = "Invalid Code";
+"cheats.invalidCode" = "Curious?? Haha!";
 "cheats.validCode" = "Activated!";
 
 // MARK: - Menu Items
@@ -53,7 +54,7 @@
 "settings.statusBarIconEnabled" = "Show in status bar";
 "settings.size" = "Pet Size";
 "settings.launchAtLogin" = "Show pet on Login";
-"settings.speed" = "Speed Multiplier";
+"settings.speed" = "Speed";
 "settings.restorePurchases" = "Restore In-App Purchases";
 "settings.anonymousTracking" = "Enable anonymous usage stats";
 "settings.anonymousTracking.title" = "Anonymous Usage Stats";

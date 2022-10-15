@@ -3,6 +3,7 @@
 "cancel" = "Annulla";
 "select" = "Seleziona";
 "remove" = "Rimuovi";
+"reset" = "Reset";
 "enable" = "Abilita";
 "disable" = "Disabilita";
 "loading" = "Caricando...";
@@ -27,7 +28,7 @@
 "cheats.title" = "Codici";
 "cheats.placeholder" = "Cheat code";
 "cheats.enable" = "Abilita";
-"cheats.invalidCode" = "Codice non valid";
+"cheats.invalidCode" = "Delfino curioso!";
 "cheats.validCode" = "Attivato!";
 
 // MARK: - Menu Items
@@ -53,7 +54,7 @@
 "settings.statusBarIconEnabled" = "Mostra nella barra di stato";
 "settings.size" = "Dimensioni Pet";
 "settings.launchAtLogin" = "Avvia automaticamente al login";
-"settings.speed" = "Multiplicatore Velocità";
+"settings.speed" = "Velocità";
 "settings.restorePurchases" = "Ripristina Acquisti In-App";
 "settings.anonymousTracking" = "Abilita Statistiche Anonime";
 "settings.anonymousTracking.title" = "Statistiche Anonime";
