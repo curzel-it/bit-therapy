@@ -2,11 +2,10 @@ import AppState
 import Foundation
 import Squanch
 
-// I wanted to distribute pets for free to supporters, and this is the easiest way.
-// Cheat codes are easy to guess, feel free to use them without shame...
-// Just remember you can support me on Patreon if you want! haha
-// https://www.patreon.com/urinamara
-// https://discord.gg/MCdEgXKSH5
+// As you have probably guessed, a piece of code is missing here.
+// Removing the code was the easiest way to hide both cheat codes and their effect...
+// I am a lazy guy, please understand :D
+// You can just `return false` in `enableCheat` to make the app compile for personal use.
 struct Cheats {
     static func enableCheats() {
         enabledCodes().forEach { enableCheat(code: $0, save: false) }

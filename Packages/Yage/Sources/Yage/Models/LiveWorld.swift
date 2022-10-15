@@ -1,8 +1,7 @@
 import Squanch
 import SwiftUI
 
-open class LiveWorld: ObservableObject {
-    
+open class LiveWorld: ObservableObject {    
     @Published public var state: World
     
     public var debug = false

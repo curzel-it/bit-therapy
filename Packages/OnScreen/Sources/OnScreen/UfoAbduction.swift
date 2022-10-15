@@ -9,7 +9,9 @@ import Yage
 extension ViewModel {
     
     func scheduleUfoAbduction() {
-        scheduleAtTimeOfDay(hour: 22, minute: 30) { [weak self] in
+        let settingsInterval = EventSchedule.from(string: AppState.global.ufoAbductionSchedule)
+        let actualInterval = settingsInterval ?? .timeOfDay(hour: 22, minute: 30)
+        state.schedule(every: actualInterval) { [weak self] _ in
             self?.startUfoAbductionOfRandomVictim()
         }
     }
@@ -134,7 +136,6 @@ private class UfoAbduction: Capability {
         pet.set(state: .move)
         pet.set(size: subjectOriginalSize)
         pet.set(direction: CGVector(dx: 1, dy: 0))
-        // TODO: Not needed? pet.resetSpeed()
         pet.uninstall(UfoAbduction.self)
     }
     

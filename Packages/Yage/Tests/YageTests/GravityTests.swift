@@ -39,11 +39,11 @@ class GravityTests: XCTestCase {
         player.set(direction: goRight)
         player.set(state: .move)
         
-        for _ in 0..<10 { env.update(after: 0.1) }
+        env.update(after: 0.1)
         XCTAssertEqual(player.state, .freeFall)
         XCTAssertEqual(player.direction, Gravity.fallDirection)
         
-        for _ in 10..<70 { env.update(after: 0.1) }
+        for _ in 0..<70 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .move)
         XCTAssertEqual(player.frame.minY, ground1.frame.minY - player.frame.height)
         XCTAssertEqual(player.direction, goRight)
@@ -69,47 +69,7 @@ class GravityTests: XCTestCase {
         XCTAssertEqual(player.frame.minY, ground1.frame.minY - player.frame.height)
     }
     
-    func testEntitiesCanFallToGroundMultipleTimesInARow() {
-        let ground1 = Entity(
-            id: "ground1",
-            frame: CGRect(x: 0, y: 100, width: 200, height: 50),
-            in: env.bounds
-        )
-        env.children.append(ground1)
-        
-        let ground2 = Entity(
-            id: "ground2",
-            frame: CGRect(x: 100, y: 200, width: 300, height: 50),
-            in: env.bounds
-        )
-        env.children.append(ground2)
-        
-        let goRight = CGVector(dx: 1, dy: 0)
-        player.speed = 1
-        player.set(origin: CGPoint(x: 50, y: 0))
-        player.set(direction: goRight)
-        player.set(state: .move)
-        
-        for _ in 0..<10 { env.update(after: 0.1) }
-        XCTAssertEqual(player.state, .freeFall)
-        XCTAssertEqual(player.direction, Gravity.fallDirection)
-        
-        for _ in 10..<1300 { env.update(after: 0.1) }
-        XCTAssertEqual(player.state, .move)
-        XCTAssertEqual(player.frame.minY, ground1.frame.minY - player.frame.height)
-        XCTAssertEqual(player.direction, goRight)
-        
-        for _ in 1300..<1350 { env.update(after: 0.1) }
-        XCTAssertEqual(player.state, .freeFall)
-        XCTAssertEqual(player.direction, Gravity.fallDirection)
-        
-        for _ in 1350..<1450 { env.update(after: 0.1) }
-        XCTAssertEqual(player.state, .move)
-        XCTAssertEqual(player.frame.minY, ground2.frame.minY - player.frame.height)
-        XCTAssertEqual(player.direction, goRight)
-    }
-    
-    func testXXX() {
+    func testLadder() {
         let ground1 = Entity(
             id: "ground1",
             frame: CGRect(x: 369, y: 354, width: 250, height: 48),

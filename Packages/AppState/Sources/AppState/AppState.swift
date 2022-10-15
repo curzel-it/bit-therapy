@@ -12,13 +12,13 @@ public class AppState: ObservableObject {
     
     @AppStorage("showInMenuBar") public var statusBarIconEnabled = true
     
-    @AppStorage("ufoAbductionSchedule") public var ufoAbductionSchedule: String = "daily-22:30"
+    @AppStorage("ufoAbductionSchedule") public var ufoAbductionSchedule: String = "daily:22:30"
     
     @AppStorage("trackingEnabled") public var trackingEnabled = false
     
     @AppStorage("speedMultiplier") private var speedMultiplierValue: Double = 1
     
-    @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize 
+    @AppStorage("petSize") private var petSizeValue: Double = PetSize.defaultSize
     
     @AppStorage("gravityEnabled") private var gravityEnabledValue = true
     

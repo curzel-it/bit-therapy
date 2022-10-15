@@ -14,7 +14,7 @@ struct CheatsView: View {
             Text(Lang.Cheats.title).font(.headline).textAlign(.leading)
             HStack(spacing: .md) {
                 TextField(Lang.Cheats.placeholder, text: $viewModel.text)
-                    .frame(width: 250)
+                    .frame(width: 350)
                     .frame(height: 40)
                     .textFieldStyle(.roundedBorder)
                     .onSubmit { viewModel.enableCurrent() }
