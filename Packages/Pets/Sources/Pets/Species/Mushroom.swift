@@ -16,5 +16,5 @@ extension Pet {
         speed: 0.3
     )
     
-    static let mushroomAmanita = Pet.mushroom.shiny(id: "mushroom_amanita")
+    static let mushroomAmanita = Pet.mushroom.shiny(id: "mushroom_amanita", isPaid: true)
 }

@@ -115,7 +115,6 @@ public class PricingService: ObservableObject {
 public typealias Prices = [String: PetPrice]
 
 public struct PetPrice {
-    
     let offering: Offering
     let package: Package
     
