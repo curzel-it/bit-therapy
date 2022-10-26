@@ -1,5 +1,4 @@
 import AppState
-import DesktopKit
 import Foundation
 import Pets
 import Yage
@@ -7,7 +6,6 @@ import Yage
 // MARK: - Schedule Event
 
 extension ViewModel {
-    
     func scheduleUfoAbduction() {
         let settingsInterval = EventSchedule.from(string: AppState.global.ufoAbductionSchedule)
         let actualInterval = settingsInterval ?? .timeOfDay(hour: 22, minute: 30)
@@ -25,7 +23,6 @@ extension ViewModel {
 // MARK: - Play Event
 
 private extension ViewModel {
-    
     var victim: Entity? {
         state.children
             .filter { $0 is DesktopPet }
@@ -47,7 +44,6 @@ private extension ViewModel {
 // MARK: - Entity
 
 private class UfoEntity: PetEntity {
-    
     init(in worldBounds: CGRect) {
         super.init(
             of: .ufo,
@@ -79,8 +75,7 @@ private extension EntityAnimation {
 
 // MARK: - Abduction
 
-private class UfoAbduction: Capability {
-    
+private class UfoAbduction: Capability {    
     weak var target: Entity?
     
     private var subjectOriginalSize: CGSize!

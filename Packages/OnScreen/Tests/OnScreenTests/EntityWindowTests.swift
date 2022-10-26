@@ -1,7 +1,7 @@
 import XCTest
 import Yage
 
-@testable import DesktopKit
+@testable import OnScreen
 
 class EntityWindowTests: XCTestCase {
     

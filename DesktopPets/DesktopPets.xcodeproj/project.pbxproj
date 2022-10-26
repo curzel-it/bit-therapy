@@ -40,23 +40,6 @@
 		1EF696E828B0E1B80042B9DA /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696E728B0E1B80042B9DA /* AppState */; };
 		1EF696EA28B0E1B80042B9DA /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696E928B0E1B80042B9DA /* Lang */; };
 		1EF696EC28B0E1B80042B9DA /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696EB28B0E1B80042B9DA /* Squanch */; };
-		64B1F19328F8623800CFFE3B /* PhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1F19228F8623800CFFE3B /* PhoneApp.swift */; };
-		64B1F19E28F8636600CFFE3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
-		64B1F19F28F8636B00CFFE3B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4428740F8E00AB872E /* Secrets.plist */; };
-		64B1F1A028F8636E00CFFE3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
-		64B1F1A228F8644100CFFE3B /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1A128F8644100CFFE3B /* AppState */; };
-		64B1F1A428F8644500CFFE3B /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1A328F8644500CFFE3B /* DesignSystem */; };
-		64B1F1A628F93FF900CFFE3B /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1A528F93FF900CFFE3B /* InAppPurchases */; };
-		64B1F1A828F93FF900CFFE3B /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1A728F93FF900CFFE3B /* Lang */; };
-		64B1F1AA28F93FF900CFFE3B /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1A928F93FF900CFFE3B /* Pets */; };
-		64B1F1AC28F93FF900CFFE3B /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1AB28F93FF900CFFE3B /* Tracking */; };
-		64B1F1AE28F93FF900CFFE3B /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1AD28F93FF900CFFE3B /* Yage */; };
-		64B1F1B028F93FF900CFFE3B /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1AF28F93FF900CFFE3B /* Schwifty */; };
-		64B1F1B228F93FF900CFFE3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1B128F93FF900CFFE3B /* Squanch */; };
-		64B1F1B428F93FF900CFFE3B /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 64B1F1B328F93FF900CFFE3B /* RateKit */; };
-		64F4B6E328F9E31F0021DDA1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E228F9E31F0021DDA1 /* HomeView.swift */; };
-		64F4B6E528FA97E50021DDA1 /* SettingsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47528BD185D002F377D /* SettingsApi.swift */; };
-		64F4B6E728FAF7910021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		64F4B6E928FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7B42874766200A9F738 /* InAppPurchases */; };
@@ -120,9 +103,6 @@
 		1E33599B28CDFA25007BB53E /* CheatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsView.swift; sourceTree = "<group>"; };
 		1E7FB47528BD185D002F377D /* SettingsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApi.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
-		64B1F19028F8623800CFFE3B /* Desktop Pets iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		64B1F19228F8623800CFFE3B /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
-		64F4B6E228F9E31F0021DDA1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsImplementation.swift; sourceTree = "<group>"; };
 		A66B2C1928746D2E00D695EA /* DesktopPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,23 +124,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		64B1F18D28F8623800CFFE3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64B1F1B228F93FF900CFFE3B /* Squanch in Frameworks */,
-				64B1F1A628F93FF900CFFE3B /* InAppPurchases in Frameworks */,
-				64B1F1B028F93FF900CFFE3B /* Schwifty in Frameworks */,
-				64B1F1B428F93FF900CFFE3B /* RateKit in Frameworks */,
-				64B1F1A228F8644100CFFE3B /* AppState in Frameworks */,
-				64B1F1AA28F93FF900CFFE3B /* Pets in Frameworks */,
-				64B1F1A828F93FF900CFFE3B /* Lang in Frameworks */,
-				64B1F1A428F8644500CFFE3B /* DesignSystem in Frameworks */,
-				64B1F1AE28F93FF900CFFE3B /* Yage in Frameworks */,
-				64B1F1AC28F93FF900CFFE3B /* Tracking in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A65FE35A283D80C900D1F5C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,15 +227,6 @@
 			path = PetsGrid;
 			sourceTree = "<group>";
 		};
-		64B1F19128F8623800CFFE3B /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				64B1F19228F8623800CFFE3B /* PhoneApp.swift */,
-				64F4B6E228F9E31F0021DDA1 /* HomeView.swift */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
 		A63AC7942874739100A9F738 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,7 +244,6 @@
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
 				A6FB7D8828740F9A00AB872E /* Tests */,
-				64B1F19028F8623800CFFE3B /* Desktop Pets iOS.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,11 +263,10 @@
 			isa = PBXGroup;
 			children = (
 				A6FB7D5B28740F8E00AB872E /* About */,
+				A6FB7D5528740F8E00AB872E /* App */,
 				A6FB7D5228740F8E00AB872E /* Cheats */,
 				1E7FB47428BD184C002F377D /* Feedback */,
 				1E1FA9A728AE851F0082A113 /* Homepage */,
-				64B1F19128F8623800CFFE3B /* iOS */,
-				A6FB7D5528740F8E00AB872E /* macOS */,
 				1E7FB47928BD1C5A002F377D /* Settings */,
 				A6FB7D5928740F8E00AB872E /* StatusBar */,
 			);
@@ -331,14 +283,14 @@
 			path = Cheats;
 			sourceTree = "<group>";
 		};
-		A6FB7D5528740F8E00AB872E /* macOS */ = {
+		A6FB7D5528740F8E00AB872E /* App */ = {
 			isa = PBXGroup;
 			children = (
 				A6FB7D5628740F8E00AB872E /* MacApp.swift */,
 				A6FB7D5728740F8E00AB872E /* MainWindow.swift */,
 				A6FB7D5828740F8E00AB872E /* MainView.swift */,
 			);
-			path = macOS;
+			path = App;
 			sourceTree = "<group>";
 		};
 		A6FB7D5928740F8E00AB872E /* StatusBar */ = {
@@ -369,35 +321,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		64B1F18F28F8623800CFFE3B /* Desktop Pets iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 64B1F19B28F8623900CFFE3B /* Build configuration list for PBXNativeTarget "Desktop Pets iOS" */;
-			buildPhases = (
-				64B1F18C28F8623800CFFE3B /* Sources */,
-				64B1F18D28F8623800CFFE3B /* Frameworks */,
-				64B1F18E28F8623800CFFE3B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Desktop Pets iOS";
-			packageProductDependencies = (
-				64B1F1A128F8644100CFFE3B /* AppState */,
-				64B1F1A328F8644500CFFE3B /* DesignSystem */,
-				64B1F1A528F93FF900CFFE3B /* InAppPurchases */,
-				64B1F1A728F93FF900CFFE3B /* Lang */,
-				64B1F1A928F93FF900CFFE3B /* Pets */,
-				64B1F1AB28F93FF900CFFE3B /* Tracking */,
-				64B1F1AD28F93FF900CFFE3B /* Yage */,
-				64B1F1AF28F93FF900CFFE3B /* Schwifty */,
-				64B1F1B128F93FF900CFFE3B /* Squanch */,
-				64B1F1B328F93FF900CFFE3B /* RateKit */,
-			);
-			productName = "Desktop Pets iOS";
-			productReference = 64B1F19028F8623800CFFE3B /* Desktop Pets iOS.app */;
-			productType = "com.apple.product-type.application";
-		};
 		A65FE35C283D80C900D1F5C8 /* Desktop Pets Dev */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A65FE382283D80CB00D1F5C8 /* Build configuration list for PBXNativeTarget "Desktop Pets Dev" */;
@@ -494,9 +417,6 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					64B1F18F28F8623800CFFE3B = {
-						CreatedOnToolsVersion = 14.0;
-					};
 					A65FE35C283D80C900D1F5C8 = {
 						CreatedOnToolsVersion = 13.4;
 						LastSwiftMigration = 1340;
@@ -530,22 +450,11 @@
 				A65FE35C283D80C900D1F5C8 /* Desktop Pets Dev */,
 				A6E5AAB42860525A008AA653 /* Desktop Pets */,
 				A65FE36D283D80CB00D1F5C8 /* Desktop Pets Tests */,
-				64B1F18F28F8623800CFFE3B /* Desktop Pets iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		64B1F18E28F8623800CFFE3B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64B1F19F28F8636B00CFFE3B /* Secrets.plist in Resources */,
-				64B1F1A028F8636E00CFFE3B /* Localizable.strings in Resources */,
-				64B1F19E28F8636600CFFE3B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A65FE35B283D80C900D1F5C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -651,17 +560,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		64B1F18C28F8623800CFFE3B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64F4B6E328F9E31F0021DDA1 /* HomeView.swift in Sources */,
-				64B1F19328F8623800CFFE3B /* PhoneApp.swift in Sources */,
-				64F4B6E528FA97E50021DDA1 /* SettingsApi.swift in Sources */,
-				64F4B6E728FAF7910021DDA1 /* CheatsImplementation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A65FE359283D80C900D1F5C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,71 +644,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		64B1F19C28F8623900CFFE3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_iOS;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		64B1F19D28F8623900CFFE3B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_iOS;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		A65FE380283D80CB00D1F5C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1096,15 +929,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64B1F19B28F8623900CFFE3B /* Build configuration list for PBXNativeTarget "Desktop Pets iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				64B1F19C28F8623900CFFE3B /* Debug */,
-				64B1F19D28F8623900CFFE3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "DesktopPets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1245,49 +1069,6 @@
 		1EF696EB28B0E1B80042B9DA /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Squanch;
-		};
-		64B1F1A128F8644100CFFE3B /* AppState */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppState;
-		};
-		64B1F1A328F8644500CFFE3B /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
-		64B1F1A528F93FF900CFFE3B /* InAppPurchases */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = InAppPurchases;
-		};
-		64B1F1A728F93FF900CFFE3B /* Lang */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Lang;
-		};
-		64B1F1A928F93FF900CFFE3B /* Pets */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Pets;
-		};
-		64B1F1AB28F93FF900CFFE3B /* Tracking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Tracking;
-		};
-		64B1F1AD28F93FF900CFFE3B /* Yage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Yage;
-		};
-		64B1F1AF28F93FF900CFFE3B /* Schwifty */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
-			productName = Schwifty;
-		};
-		64B1F1B128F93FF900CFFE3B /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */;
-			productName = Squanch;
-		};
-		64B1F1B328F93FF900CFFE3B /* RateKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */;
-			productName = RateKit;
 		};
 		A63AC7B42874766200A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,8 +6,7 @@ import SwiftUI
 import Schwifty
 import Tracking
 
-struct MainWindow: Scene {
-    
+struct MainWindow: Scene {    
     var body: some Scene {
         WindowGroup {
             MainView()

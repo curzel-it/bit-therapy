@@ -47,13 +47,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/DesktopKit",
-        "identifier" : "DesktopKitTests",
-        "name" : "DesktopKitTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/Yage",
         "identifier" : "YageTests",
         "name" : "YageTests"

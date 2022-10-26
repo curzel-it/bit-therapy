@@ -1,5 +1,4 @@
 import AppState
-import DesktopKit
 import Foundation
 
 class DesktopObstaclesService: WindowObstaclesService {

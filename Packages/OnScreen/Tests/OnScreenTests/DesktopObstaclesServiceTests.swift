@@ -1,4 +1,3 @@
-import DesktopKit
 import XCTest
 import Yage
 
