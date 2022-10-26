@@ -1,7 +1,6 @@
 import Foundation
 
 extension Pet {
-    
     static let sunflower = Pet(
         id: "sunflower",
         fps: 0.5,

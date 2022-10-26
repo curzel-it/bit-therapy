@@ -70,7 +70,6 @@ private class UfoEntity: PetEntity {
 // MARK: - Animation
 
 private extension EntityAnimation {
-    
     static let abduction = EntityAnimation(
         id: "abduction",
         size: CGSize(width: 1, height: 3),

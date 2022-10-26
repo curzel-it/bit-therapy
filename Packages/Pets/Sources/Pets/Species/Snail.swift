@@ -1,7 +1,6 @@
 import Foundation
 
 extension Pet {
-    
     static let snail = Pet(
         id: "snail",
         capabilities: { .defaultsCrawler() },

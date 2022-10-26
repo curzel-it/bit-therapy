@@ -92,6 +92,7 @@
 "pet.name.cromulon_rainbow" = "Testone Figo";
 "pet.name.crow" = "Corvo";
 "pet.name.crow_white" = "Corvo Bianco";
+"pet.name.frog" = "Rana";
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Koala Pirata";
 "pet.name.hedgehog" = "Porcospino";
@@ -128,6 +129,7 @@
 "pet.about.cromulon_rainbow" = "Alieni a forma di teste umane, ma grandiBig come un pianeta...\n\"Mostrami cosa sai fare!\"";
 "pet.about.crow" = "Il preferito del designer!";
 "pet.about.crow_white" = "L'inverno è arrivato...";
+"pet.about.frog" = "Mangia le zanzare, quello nello schermo.";
 "pet.about.koala" = "Funzionalmente estinto!? Ma funzionalmente estinto sarai te!";
 "pet.about.koala_pirate" = "Facciamo i pirati, dicevano. Sarà divertente, dicevano...";
 "pet.about.hedgehog" = "Coccolare con attenzione.";

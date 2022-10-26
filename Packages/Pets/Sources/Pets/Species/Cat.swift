@@ -1,7 +1,6 @@
 import Foundation
 
 extension Pet {
-    
     static let cat = Pet(
         id: "cat",
         behaviors: [

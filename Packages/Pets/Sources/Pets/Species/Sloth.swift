@@ -41,7 +41,6 @@ extension Pet {
 }
 
 private extension EntityAnimation {
-    
     static let selfie = EntityAnimation(id: "selfie")
     
     static func climb(to position: Position) -> EntityAnimation {

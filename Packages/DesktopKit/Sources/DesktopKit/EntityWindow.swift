@@ -94,7 +94,6 @@ extension EntityWindow {
 // MARK: - Equatable
 
 extension EntityWindow {
-    
     static func == (lhs: EntityWindow, rhs: EntityWindow) -> Bool {
         lhs.entity == rhs.entity
     }

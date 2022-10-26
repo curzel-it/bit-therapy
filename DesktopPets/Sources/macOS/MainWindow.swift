@@ -17,7 +17,6 @@ struct MainWindow: Scene {
 }
 
 extension MainWindow {
-    
     static func show() {
         showMainWindow()
         trackAppLaunched()

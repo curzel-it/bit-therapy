@@ -1,7 +1,6 @@
 import Foundation
 
 extension Pet {
-    
     static let mushroomWizard = Pet(
         id: "mushroomwizard",
         behaviors: [

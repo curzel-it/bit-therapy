@@ -5,12 +5,10 @@ import OnScreen
 import SwiftUI
 
 class StatusBarItems {
-    
     static let main = MainStatusBarItem()
 }
 
-class MainStatusBarItem: NSObject {
-    
+class MainStatusBarItem: NSObject {    
     private var statusItem: NSStatusItem?
     
     func setup() {

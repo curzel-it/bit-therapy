@@ -92,6 +92,7 @@
 "pet.name.cromulon_rainbow" = "Big Head Rainbow";
 "pet.name.crow" = "Crow";
 "pet.name.crow_white" = "White Crow";
+"pet.name.frog" = "Frog";
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Pirate Koala";
 "pet.name.hedgehog" = "Hedgehog";
@@ -129,6 +130,7 @@
 "pet.about.cromulon_rainbow" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
 "pet.about.crow" = "They fly now!?";
 "pet.about.crow_white" = "Winter is here...";
+"pet.about.frog" = "Useful to remove flies off your screen.";
 "pet.about.koala" = "Functionally extinct!? You are functionally extinct!";
 "pet.about.koala_pirate" = "It's fun to be a pirate they said";
 "pet.about.hedgehog" = "Pet carefully.";

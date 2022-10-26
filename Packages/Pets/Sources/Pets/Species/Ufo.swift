@@ -23,7 +23,6 @@ extension Pet {
 }
     
 private extension EntityAnimation {
-    
     static let bombing = EntityAnimation(
         id: "bombing",
         size: CGSize(width: 4, height: 2)

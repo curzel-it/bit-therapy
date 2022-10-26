@@ -8,6 +8,7 @@ extension EntityAnimation {
     static let idle = EntityAnimation(id: "idle")
     static let jump = EntityAnimation(id: "jump")
     static let love = EntityAnimation(id: "love")
+    static let side = EntityAnimation(id: "side")
     static let sleep = EntityAnimation(id: "sleep")
     
     static func lightsaber(size: CGSize) -> EntityAnimation {

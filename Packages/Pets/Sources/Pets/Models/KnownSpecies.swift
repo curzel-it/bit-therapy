@@ -1,13 +1,13 @@
 import Foundation
 import Squanch
 
-extension Pet {
-    
+extension Pet {    
     static let allSpecies: [Pet] = [
         .betta,
         .catGray, .catBlue, .cat, .catBlack, .catGrumpy,
         .cromulon, .cromulonPink, .cromulonRainbow,
         .crow, .crowWhite,
+        .frog, .frogVenom,
         .koala, .koalaPirate,
         .hedgehog,
         .mushroom, .mushroomAmanita,

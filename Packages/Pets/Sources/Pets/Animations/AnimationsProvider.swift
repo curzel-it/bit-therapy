@@ -1,7 +1,6 @@
 import Yage
 
-class PetAnimationsProvider: AnimationsProvider {
-    
+class PetAnimationsProvider: AnimationsProvider {    
     private var pet: PetEntity? { subject as? PetEntity }
     private var species: Pet? { pet?.species }
     

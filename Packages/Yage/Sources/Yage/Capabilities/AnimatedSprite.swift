@@ -106,7 +106,6 @@ public class AnimatedSprite: Capability, ObservableObject {
 // MARK: - Image Animator
 
 public class ImageAnimator: TimedContentProvider<ImageFrame> {
-    
     static let none: ImageAnimator = ImageAnimator(baseName: "", frames: [], fps: 0)
     
     public let baseName: String

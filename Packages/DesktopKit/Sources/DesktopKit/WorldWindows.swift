@@ -98,7 +98,6 @@ open class WorldWindows: NSObject, NSWindowDelegate {
 // MARK: - Ids
 
 private extension WorldWindows {
-    
     static var id: Int = 0
     
     static func nextId() -> Int {

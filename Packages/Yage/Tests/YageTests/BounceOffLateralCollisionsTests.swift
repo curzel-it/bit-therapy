@@ -2,8 +2,7 @@ import XCTest
 
 @testable import Yage
 
-class BounceOnLateralCollisionsTests: XCTestCase {
-    
+class BounceOnLateralCollisionsTests: XCTestCase {    
     private let testEnv = World(bounds: CGRect(x: 0, y: 0, width: 100, height: 100))
     
     private lazy var testEntity: Entity = {

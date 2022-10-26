@@ -6,8 +6,7 @@ import Schwifty
 import Squanch
 import SwiftUI
 
-public struct OnScreen {
-    
+public struct OnScreen {    
     private static var viewModel: ViewModel?
     private static var worldWindows: OnScreenWindows?
     

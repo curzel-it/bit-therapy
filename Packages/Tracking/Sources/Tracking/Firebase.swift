@@ -3,7 +3,6 @@ import FirebaseAnalytics
 import Squanch
 
 extension FirebaseApp {
-    
     static func setup() -> Bool {
         if let path = firebasePlistPath(),
            let options = FirebaseOptions.init(contentsOfFile: path) {
@@ -19,7 +18,6 @@ extension FirebaseApp {
 }
 
 extension Tracking {
-    
     static func logView(_ name: String) {
         log(AnalyticsEventScreenView, with: [
             AnalyticsParameterScreenName: name,
