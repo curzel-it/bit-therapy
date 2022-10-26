@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "InAppPurchases",
-    platforms: [.macOS(.v12), .iOS(.v15)],
+    platforms: [.macOS(.v11), .iOS(.v15)],
     products: [
         .library(
             name: "InAppPurchases",
@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Lang"),
         .package(path: "../Tracking"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.7"),
         .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0")
     ],
     targets: [

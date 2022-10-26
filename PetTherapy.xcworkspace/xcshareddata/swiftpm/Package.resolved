@@ -77,8 +77,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sindresorhus/LaunchAtLogin",
       "state" : {
-        "branch" : "main",
-        "revision" : "05168c04c91fdf6c432852c2fe0737af6437195c"
+        "revision" : "e8171b3e38a2816f579f58f3dac1522aa39efe41",
+        "version" : "4.2.0"
       }
     },
     {
@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/notagif",
       "state" : {
-        "revision" : "e7e6c4c16b847be2762e428ecd390922ac7bb2de",
-        "version" : "1.0.6"
+        "revision" : "a5ecdd2135618a384840aa8baa5aa31801376fd3",
+        "version" : "1.0.7"
       }
     },
     {
@@ -113,8 +113,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/OnWindow",
       "state" : {
-        "branch" : "main",
-        "revision" : "d272b57aacf6068b83ff83067332878d4cb6a423"
+        "revision" : "6e74868e321bbdbe02b4f0ca37cdc29a5a584e51",
+        "version" : "1.0.1"
       }
     },
     {
@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/RateKit",
       "state" : {
-        "revision" : "1f2ffd311514919fae8411440348e7d9c5ea0f72",
-        "version" : "1.0.3"
+        "revision" : "017437decc247e675186d60b4d1cee0d971dd41e",
+        "version" : "1.0.4"
       }
     },
     {
@@ -149,8 +149,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/schwifty",
       "state" : {
-        "revision" : "3ea8ac1245417131b40a341842a4573979232192",
-        "version" : "1.0.3"
+        "revision" : "cefa806db291f57e48bb48d51a8d2c7f10d1857c",
+        "version" : "1.0.4"
       }
     },
     {
@@ -158,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/squanch",
       "state" : {
-        "revision" : "f473b18e20a15f5ada7bd4c4848ae178d563ba53",
-        "version" : "1.0.6"
+        "revision" : "74e25ba3ffaf5946afd93376de6bcb99ae1d491a",
+        "version" : "1.0.7"
       }
     },
     {

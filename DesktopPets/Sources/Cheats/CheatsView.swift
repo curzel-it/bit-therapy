@@ -17,7 +17,6 @@ struct CheatsView: View {
                     .frame(width: 350)
                     .frame(height: 40)
                     .textFieldStyle(.roundedBorder)
-                    .onSubmit { viewModel.enableCurrent() }
                 
                 if !viewModel.text.isEmpty {
                     Button("Enable", action: viewModel.enableCurrent)

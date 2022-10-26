@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Yage",
-    platforms: [.macOS(.v12), .iOS(.v15)],
+    platforms: [.macOS(.v11), .iOS(.v15)],
     products: [
         .library(
             name: "Yage",
@@ -12,8 +12,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/curzel-it/notagif", from: "1.0.6"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6")
+        .package(url: "https://github.com/curzel-it/notagif", from: "1.0.7"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.7")
     ],
     targets: [
         .target(

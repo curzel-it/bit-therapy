@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Tracking",
-    platforms: [.macOS(.v12), .iOS(.v15)],
+    platforms: [.macOS(.v11), .iOS(.v15)],
     products: [
         .library(
             name: "Tracking",
@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Lang"),
         .package(path: "../Pets"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.7"),
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "8.15.0")
     ],
     targets: [

@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "OnScreen",
-    platforms: [.macOS(.v12)],
+    platforms: [.macOS(.v11)],
     products: [
         .library(
             name: "OnScreen",
@@ -15,9 +15,9 @@ let package = Package(
         .package(path: "../AppState"),
         .package(path: "../Pets"),
         .package(path: "../Yage"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.3"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.6"),
-        .package(url: "https://github.com/curzel-it/windowsdetector", from: "1.0.4")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.4"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.7"),
+        .package(url: "https://github.com/curzel-it/windowsdetector", from: "1.0.3")
     ],
     targets: [
         .target(

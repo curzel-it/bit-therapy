@@ -44,7 +44,9 @@ public enum Lang {
     public enum Survey {
         public static let feedbackViaSurvey = "survey.feedbackViaSurvey".localized()
         public static let requestPetViaSurvey = "survey.requestPetViaSurvey".localized()
-        public static let takeSurvey = "survey.takeSurvey".localized()
+        public static let takeSurvey = "survey.takeSurvey".localized()        
+        public static var url: URL? { URL(string: urlString) }
+        private static let urlString = "survey.url".localized()
     }
     
     // MARK: - Settings

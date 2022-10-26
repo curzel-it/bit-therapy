@@ -5,8 +5,7 @@ public protocol Tabbable: Hashable, CustomStringConvertible {
     // ...
 }
 
-public struct TabSelector<T: Tabbable>: View {
-    
+public struct TabSelector<T: Tabbable>: View {    
     @Binding var selection: T
     
     let spacing: Spacing
@@ -29,7 +28,6 @@ public struct TabSelector<T: Tabbable>: View {
 }
 
 struct TabItem<T: Tabbable>: View {
-    
     @Binding var selection: T
     
     let value: T
@@ -44,7 +42,6 @@ struct TabItem<T: Tabbable>: View {
             .foregroundColor(fgColor)
             .padding(.vertical, .md)
             .padding(.horizontal, .md)
-            .tappableOnInvisibleAreas()
             .onTapGesture {
                 withAnimation {
                     selection = value
