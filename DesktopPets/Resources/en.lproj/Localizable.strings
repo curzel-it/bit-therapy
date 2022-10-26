@@ -94,6 +94,7 @@
 "pet.name.crow_white" = "White Crow";
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Pirate Koala";
+"pet.name.hedgehog" = "Hedgehog";
 "pet.name.moth" = "Moth";
 "pet.name.mushroom" = "Porcini Mushroom";
 "pet.name.mushroom_amanita" = "Amanita Mushroom";
@@ -130,6 +131,7 @@
 "pet.about.crow_white" = "Winter is here...";
 "pet.about.koala" = "Functionally extinct!? You are functionally extinct!";
 "pet.about.koala_pirate" = "It's fun to be a pirate they said";
+"pet.about.hedgehog" = "Pet carefully.";
 "pet.about.moth" = "Those wings were a pain to animate, let me tell you that much..!";
 "pet.about.mushroom" = "Porcini mushroom, the absolute best for risotto!";
 "pet.about.mushroom_amanita" = "I know it's cute, but please don't ever eat or touch it irl! 😅";
