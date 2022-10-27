@@ -94,6 +94,7 @@
 "pet.name.crow" = "Corvo";
 "pet.name.crow_white" = "Corvo Bianco";
 "pet.name.frog" = "Rana";
+"pet.name.frog" = "Rana Velenosa";
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Koala Pirata";
 "pet.name.hedgehog" = "Porcospino";
@@ -131,6 +132,7 @@
 "pet.about.crow" = "Il preferito del designer!";
 "pet.about.crow_white" = "L'inverno è arrivato...";
 "pet.about.frog" = "Mangia le zanzare, quello nello schermo.";
+"pet.about.frog_venom" = "Ma che fai? Smetti di leccarle la schiena! 😆";
 "pet.about.koala" = "Funzionalmente estinto!? Ma funzionalmente estinto sarai te!";
 "pet.about.koala_pirate" = "Facciamo i pirati, dicevano. Sarà divertente, dicevano...";
 "pet.about.hedgehog" = "Coccolare con attenzione.";
