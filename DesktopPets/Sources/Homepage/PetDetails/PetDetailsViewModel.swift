@@ -1,4 +1,3 @@
-import Lang
 import InAppPurchases
 import OnScreen
 import NotAGif

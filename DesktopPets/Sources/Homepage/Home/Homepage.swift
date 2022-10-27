@@ -1,6 +1,5 @@
 import DesignSystem
 import InAppPurchases
-import Lang
 import SwiftUI
 
 struct Homepage: View {

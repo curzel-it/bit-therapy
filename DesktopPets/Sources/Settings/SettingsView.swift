@@ -1,6 +1,5 @@
 import DesignSystem
 import InAppPurchases
-import Lang
 import LaunchAtLogin
 import OnScreen
 import SwiftUI
@@ -22,7 +21,7 @@ struct SettingsView: View {
                 StatusBarIconSwitch().positioned(.leading)
                 AnonymousTracking().positioned(.leading)
                 FixOnScreenPets().positioned(.leading)
-                RestorePurchasesButton().positioned(.leading)
+                RestorePurchasesButton()
                 CheatsView().positioned(.leading)
             }
             .padding(.md)
@@ -226,5 +225,21 @@ private struct Switch: View {
     
     var body: some View {
         Toggle(label, isOn: value).toggleStyle(.switch)
+    }
+}
+
+// MARK: - In-App Purchases
+
+struct RestorePurchasesButton: View {
+    var body: some View {
+        InAppPurchases.RestorePurchasesButton(with: Localized())
+            .positioned(.leading)
+    }
+    
+    struct Localized: InAppPurchases.Lang {
+        var done: String { Lang.done }
+        var loading: String { Lang.loading }
+        var restorePurchases: String { Lang.Settings.restorePurchases }
+        var somethingWentWrong: String { Lang.somethingWentWrong }
     }
 }

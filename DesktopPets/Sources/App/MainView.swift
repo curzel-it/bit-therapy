@@ -1,5 +1,4 @@
 import DesignSystem
-import Lang
 import OnWindow
 import Schwifty
 import SwiftUI

@@ -1,6 +1,5 @@
 import Firebase
 import FirebaseAnalytics
-import Lang
 import Pets
 import Squanch
 
@@ -58,7 +57,6 @@ extension Tracking {
     public static func purchased(pet: Pet, price: Double, success: Bool) {
         log(AnalyticsEventPurchase, with: [
             AnalyticsParameterItemID: pet.id,
-            AnalyticsParameterItemName: pet.name,
             AnalyticsParameterPrice: price,
             AnalyticsParameterSuccess: success
         ])

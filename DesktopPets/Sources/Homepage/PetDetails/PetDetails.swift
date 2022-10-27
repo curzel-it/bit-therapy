@@ -1,6 +1,5 @@
 import DesignSystem
 import InAppPurchases
-import Lang
 import NotAGif
 import Pets
 import Schwifty

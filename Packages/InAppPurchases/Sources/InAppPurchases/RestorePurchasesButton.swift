@@ -1,14 +1,12 @@
 import DesignSystem
-import Lang
 import SwiftUI
 import Tracking
 
-public struct RestorePurchasesButton: View {
+public struct RestorePurchasesButton: View {    
+    @StateObject private var viewModel: ViewModel
     
-    @StateObject private var viewModel = ViewModel()
-    
-    public init() {
-        // ...
+    public init(with lang: Lang) {
+        self._viewModel = StateObject(wrappedValue: ViewModel(with: lang))
     }
     
     public var body: some View {
@@ -21,20 +19,26 @@ public struct RestorePurchasesButton: View {
 }
 
 private class ViewModel: ObservableObject {
+    @Published var title: String
     
-    @Published var title: String = Lang.Settings.restorePurchases
+    private var lang: Lang
+    
+    init(with lang: Lang) {
+        self.lang = lang
+        self.title = lang.restorePurchases
+    }
     
     func restore() {
-        animateTitle(Lang.loading)
+        animateTitle(lang.loading)
         Task {
             let succeed = await PricingService.global.restorePurchases()
             Task { @MainActor in
                 if succeed {
-                    animateTitle("\(Lang.done)!")
+                    animateTitle("\(lang.done)!")
                 } else {
-                    animateTitle("\(Lang.somethingWentWrong)!")
+                    animateTitle("\(lang.somethingWentWrong)!")
                 }
-                animateTitle(Lang.Settings.restorePurchases, delay: 2)
+                animateTitle(lang.restorePurchases, delay: 2)
             }
         }
     }

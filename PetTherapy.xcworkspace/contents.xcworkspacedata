@@ -17,9 +17,6 @@
       location = "group:Packages/InAppPurchases">
    </FileRef>
    <FileRef
-      location = "group:Packages/Lang">
-   </FileRef>
-   <FileRef
       location = "group:Packages/OnScreen">
    </FileRef>
    <FileRef
