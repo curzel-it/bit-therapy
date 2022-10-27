@@ -11,9 +11,6 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:Packages/AppState">
-   </FileRef>
-   <FileRef
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef

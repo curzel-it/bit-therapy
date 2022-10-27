@@ -1,4 +1,3 @@
-import AppState
 import InAppPurchases
 import OnScreen
 import RateKit
@@ -18,7 +17,7 @@ struct MyApp: App {
         PricingService.global.setup()
         Cheats.enableCheats()
         Task { @MainActor in
-            OnScreen.show()
+            OnScreen.show(with: AppState.global)
             StatusBarItems.main.setup()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
@@ -43,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         printDebug("App", "Screen params changed, relaunching pets...")
         OnScreen.hide()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            OnScreen.show()
+            OnScreen.show(with: AppState.global)
         }
     }
 }

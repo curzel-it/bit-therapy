@@ -26,13 +26,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:..\/Packages\/AppState",
-        "identifier" : "AppStateTests",
-        "name" : "AppStateTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:..\/Packages\/OnScreen",
         "identifier" : "OnScreenTests",
         "name" : "OnScreenTests"

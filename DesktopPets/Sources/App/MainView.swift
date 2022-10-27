@@ -1,4 +1,3 @@
-import AppState
 import DesignSystem
 import Lang
 import OnWindow
@@ -7,6 +6,7 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var appState: AppState
+    @StateObject var viewModel = MainViewModel()
     
     var body: some View {
         VStack(spacing: .zero) {
@@ -17,12 +17,23 @@ struct MainView: View {
         .frame(minWidth: 600)
         .frame(minHeight: 600)
         .foregroundColor(.label)
-        .environmentObject(AppState.global)
+        .environmentObject(viewModel)
+        .environmentObject(appState)
     }
 }
 
+class MainViewModel: ObservableObject {
+    @Published public var selectedPage: AppPage = .home
+}
+
+enum AppPage: String, CaseIterable {
+    case home
+    case settings
+    case about
+}
+
 extension AppPage: CustomStringConvertible, Tabbable {
-    public var description: String {
+    var description: String {
         switch self {
         case .home: return Lang.Page.home
         case .settings: return Lang.Page.settings
@@ -33,11 +44,12 @@ extension AppPage: CustomStringConvertible, Tabbable {
 
 private struct Header: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var viewModel: MainViewModel
     
     var body: some View {
         HStack {
             TabSelector(
-                selection: $appState.selectedPage,
+                selection: $viewModel.selectedPage,
                 options: AppPage.allCases
             )
             JoinOurDiscord()
@@ -47,9 +59,10 @@ private struct Header: View {
 
 private struct PageContents: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var viewModel: MainViewModel
     
     var body: some View {
-        switch appState.selectedPage {
+        switch viewModel.selectedPage {
         case .home: Homepage()
         case .settings: SettingsView()
         case .about: AboutView()
@@ -59,9 +72,10 @@ private struct PageContents: View {
 
 private struct PageTitle: View {
     @EnvironmentObject var appState: AppState
+    @EnvironmentObject var viewModel: MainViewModel
     
     var body: some View {
-        Text(appState.selectedPage.description)
+        Text(viewModel.selectedPage.description)
             .textAlign(.center)
             .font(.largeTitle)
             .padding()

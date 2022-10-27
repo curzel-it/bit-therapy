@@ -1,4 +1,3 @@
-import AppState
 import Lang
 import InAppPurchases
 import OnScreen
@@ -9,9 +8,7 @@ import Tracking
 import Yage
 
 class PetDetailsViewModel: ObservableObject {
-    
     @Binding var isShown: Bool
-    
     @Published var buyTitle: String = ""
     
     let pet: Pet
@@ -55,14 +52,14 @@ class PetDetailsViewModel: ObservableObject {
     
     func select() {
         AppState.global.selectedPets.append(pet.id)
-        OnScreen.show()
+        OnScreen.show(with: AppState.global)
         Tracking.didSelect(pet)
         close()
     }
     
     func remove() {
         AppState.global.selectedPets.removeAll { $0 == pet.id }
-        OnScreen.show()
+        OnScreen.show(with: AppState.global)
         Tracking.didRemove(pet)
         close()
     }

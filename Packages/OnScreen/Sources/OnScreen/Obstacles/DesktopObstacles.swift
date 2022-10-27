@@ -1,8 +1,6 @@
-import AppState
 import Foundation
 
 class DesktopObstaclesService: WindowObstaclesService {
-        
     override func obstacles(fromWindowFrame frame: CGRect) -> [CGRect] {
         obstacles(from: frame, borderThickness: 10)
     }
@@ -21,6 +19,6 @@ class DesktopObstaclesService: WindowObstaclesService {
     
     override func isValidObstacle(frame: CGRect) -> Bool {
         guard super.isValidObstacle(frame: frame) else { return false }
-        return frame.minY > 25 + CGFloat(AppState.global.petSize)
+        return frame.minY > 100
     }
 }

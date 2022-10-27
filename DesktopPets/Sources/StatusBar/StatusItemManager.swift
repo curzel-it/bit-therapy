@@ -1,5 +1,4 @@
 import AppKit
-import AppState
 import Lang
 import OnScreen
 import SwiftUI
@@ -12,7 +11,7 @@ class MainStatusBarItem: NSObject {
     private var statusItem: NSStatusItem?
     
     func setup() {
-        guard AppState.global.statusBarIconEnabled else { return }
+        guard AppState.global.showInMenuBar else { return }
         guard statusItem == nil else { return }
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         let icon = NSImage(named: "StatusBarIcon")
@@ -32,10 +31,8 @@ class MainStatusBarItem: NSObject {
         let menu = NSMenu(title: "Desktop Pets")
         menu.items = [
             buildItem("home", #selector(showHome)),
-            buildItem("settings", #selector(showSettings)),
             buildItem("hide", #selector(hidePet)),
             buildItem("show", #selector(showPet)),
-            buildItem("about", #selector(showAbout)),
             buildItem("quit", #selector(closeApp))
         ]
         return menu
@@ -54,17 +51,6 @@ class MainStatusBarItem: NSObject {
     
     @objc private func showHome() {
         MainWindow.show()
-        AppState.global.selectedPage = .home
-    }
-    
-    @objc private func showSettings() {
-        MainWindow.show()
-        AppState.global.selectedPage = .settings
-    }
-    
-    @objc private func showAbout() {
-        MainWindow.show()
-        AppState.global.selectedPage = .about
     }
     
     @objc private func hidePet() {
@@ -72,7 +58,7 @@ class MainStatusBarItem: NSObject {
     }
     
     @objc private func showPet() {
-        OnScreen.show()
+        OnScreen.show(with: AppState.global)
     }
     
     @objc private func closeApp() {

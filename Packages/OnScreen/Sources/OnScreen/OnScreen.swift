@@ -1,19 +1,18 @@
 import AppKit
-import AppState
 import Combine
 import Pets
 import Schwifty
 import Squanch
 import Yage
 
-public struct OnScreen {    
+public struct OnScreen {
     private static var viewModel: ViewModel?
     private static var worldWindows: OnScreenWindows?
     
-    public static func show() {
+    public static func show(with settings: OnScreenSettings) {
         hide()
         printDebug("OnScreen", "Starting...")
-        self.viewModel = ViewModel()
+        self.viewModel = ViewModel(with: settings)
         self.worldWindows = OnScreenWindows(for: viewModel)
     }
     
@@ -43,9 +42,11 @@ class OnScreenWindows: WorldWindows {
 }
 
 class ViewModel: LiveWorld {
+    var settings: OnScreenSettings
     var desktopObstacles: DesktopObstaclesService!
     
-    init() {
+    init(with settings: OnScreenSettings) {
+        self.settings = settings
         super.init(id: "OnScreen", bounds: NSScreen.main?.frame.bounds ?? .zero)
         addSelectedPets()
         observeWindowsIfNeeded()
@@ -53,15 +54,15 @@ class ViewModel: LiveWorld {
     }
     
     private func observeWindowsIfNeeded() {
-        guard AppState.global.desktopInteractions else { return }
+        guard settings.desktopInteractions else { return }
         desktopObstacles = DesktopObstaclesService(world: self)
         desktopObstacles.start()
     }
     
     private func addSelectedPets() {
-        let pets: [DesktopPet] = AppState.global.selectedPets.map {
+        let pets: [DesktopPet] = settings.selectedPets.map {
             let species = Pet.by(id: $0) ?? .sloth
-            return DesktopPet(of: species, in: state.bounds)
+            return DesktopPet(of: species, in: state.bounds, settings: settings)
         }
         state.children.append(contentsOf: pets)
     }
@@ -70,4 +71,10 @@ class ViewModel: LiveWorld {
         desktopObstacles?.stop()
         super.kill()
     }
+}
+
+public protocol OnScreenSettings: PetsSettings {
+    var desktopInteractions: Bool { get }
+    var selectedPets: [String] { get }
+    var ufoAbductionSchedule: String { get }
 }

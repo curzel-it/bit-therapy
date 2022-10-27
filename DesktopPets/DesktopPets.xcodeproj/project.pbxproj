@@ -20,6 +20,8 @@
 		1E1FA9BA28AE851F0082A113 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */; };
 		1E1FA9BB28AE851F0082A113 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */; };
 		1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
+		1E2AC740290AA941003D0AB2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
+		1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1E2C550E28B8CE6200613F3B /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2C550D28B8CE6200613F3B /* Squanch */; };
 		1E33599928CDF6A8007BB53E /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
 		1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
@@ -34,10 +36,8 @@
 		1EDBC2C42891BD3200A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C32891BD3200A8D37B /* OnWindow */; };
 		1EE263FF2892866A00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE263FE2892866A00771170 /* Schwifty */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
-		1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7728A51BBF00BCBBD4 /* AppState */; };
 		1EF5CF7A28A51BBF00BCBBD4 /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7928A51BBF00BCBBD4 /* Lang */; };
 		1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF5CF7B28A51BBF00BCBBD4 /* Squanch */; };
-		1EF696E828B0E1B80042B9DA /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696E728B0E1B80042B9DA /* AppState */; };
 		1EF696EA28B0E1B80042B9DA /* Lang in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696E928B0E1B80042B9DA /* Lang */; };
 		1EF696EC28B0E1B80042B9DA /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696EB28B0E1B80042B9DA /* Squanch */; };
 		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
@@ -97,6 +97,7 @@
 		1E1FA9AD28AE851F0082A113 /* PetsGridItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGridItems.swift; sourceTree = "<group>"; };
 		1E1FA9AE28AE851F0082A113 /* PetsGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGrid.swift; sourceTree = "<group>"; };
 		1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
+		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1E33599828CDF6A8007BB53E /* Cheats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheats.swift; sourceTree = "<group>"; };
 		1E33599B28CDFA25007BB53E /* CheatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsView.swift; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 				A63AC7E7287479A800A9F738 /* DesignSystem in Frameworks */,
 				A63AC7B52874766200A9F738 /* InAppPurchases in Frameworks */,
 				A63AC7C72874766C00A9F738 /* LaunchAtLogin in Frameworks */,
-				1EF5CF7828A51BBF00BCBBD4 /* AppState in Frameworks */,
 				A63AC7BB2874766200A9F738 /* Pets in Frameworks */,
 				1EE263FF2892866A00771170 /* Schwifty in Frameworks */,
 				1EF5CF7C28A51BBF00BCBBD4 /* Squanch in Frameworks */,
@@ -154,7 +154,6 @@
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
-				1EF696E828B0E1B80042B9DA /* AppState in Frameworks */,
 				1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
 				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
@@ -196,6 +195,14 @@
 				1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1E2AC742290AB375003D0AB2 /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				1E2AC73F290AA941003D0AB2 /* AppState.swift */,
+			);
+			path = AppState;
 			sourceTree = "<group>";
 		};
 		1E7D1EA32909C31600CC036B /* Settings */ = {
@@ -260,6 +267,7 @@
 			children = (
 				A6FB7D5B28740F8E00AB872E /* About */,
 				A6FB7D5528740F8E00AB872E /* App */,
+				1E2AC742290AB375003D0AB2 /* AppState */,
 				A6FB7D5228740F8E00AB872E /* Cheats */,
 				1E7FB47428BD184C002F377D /* Feedback */,
 				1E1FA9A728AE851F0082A113 /* Homepage */,
@@ -341,7 +349,6 @@
 				A63AC7E6287479A800A9F738 /* DesignSystem */,
 				1EDBC2C32891BD3200A8D37B /* OnWindow */,
 				1EE263FE2892866A00771170 /* Schwifty */,
-				1EF5CF7728A51BBF00BCBBD4 /* AppState */,
 				1EF5CF7928A51BBF00BCBBD4 /* Lang */,
 				1EF5CF7B28A51BBF00BCBBD4 /* Squanch */,
 				1E2C550D28B8CE6200613F3B /* Squanch */,
@@ -394,7 +401,6 @@
 				A63AC7E8287479AD00A9F738 /* DesignSystem */,
 				1EDBC2C12891BD2C00A8D37B /* OnWindow */,
 				1EE264002892866E00771170 /* Schwifty */,
-				1EF696E728B0E1B80042B9DA /* AppState */,
 				1EF696E928B0E1B80042B9DA /* Lang */,
 				1EF696EB28B0E1B80042B9DA /* Squanch */,
 				1E5D3EA428C08E5F00AC50C6 /* RateKit */,
@@ -566,6 +572,7 @@
 				A6FB7D8428740F8E00AB872E /* StatusItemManager.swift in Sources */,
 				1E1FA9B828AE851F0082A113 /* PetsGrid.swift in Sources */,
 				A6FB7D8028740F8E00AB872E /* MainWindow.swift in Sources */,
+				1E2AC740290AA941003D0AB2 /* AppState.swift in Sources */,
 				64F4B6E928FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */,
 				A6FB7D8628740F8E00AB872E /* AboutView.swift in Sources */,
 				1E1FA9B028AE851F0082A113 /* PetDetails.swift in Sources */,
@@ -597,6 +604,7 @@
 				A6FB7D8528740F8E00AB872E /* StatusItemManager.swift in Sources */,
 				1E1FA9B928AE851F0082A113 /* PetsGrid.swift in Sources */,
 				A6FB7D8128740F8E00AB872E /* MainWindow.swift in Sources */,
+				1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */,
 				64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */,
 				1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
@@ -1040,10 +1048,6 @@
 			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
 		};
-		1EF5CF7728A51BBF00BCBBD4 /* AppState */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppState;
-		};
 		1EF5CF7928A51BBF00BCBBD4 /* Lang */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Lang;
@@ -1051,10 +1055,6 @@
 		1EF5CF7B28A51BBF00BCBBD4 /* Squanch */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Squanch;
-		};
-		1EF696E728B0E1B80042B9DA /* AppState */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppState;
 		};
 		1EF696E928B0E1B80042B9DA /* Lang */ = {
 			isa = XCSwiftPackageProductDependency;

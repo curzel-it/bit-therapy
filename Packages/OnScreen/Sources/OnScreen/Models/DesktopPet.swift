@@ -1,27 +1,18 @@
-import AppState
 import Combine
 import Pets
 import Schwifty
 import SwiftUI
 import Yage
 
-extension AppState: Pets.Settings {}
-
 class DesktopPet: PetEntity {
-    private var sizeCanc: AnyCancellable!
-    private var speedCanc: AnyCancellable!
-    private var gravityCanc: AnyCancellable!
-    
-    init(of species: Pet, in worldBounds: CGRect) {
-        super.init(of: species, size: AppState.global.petSize, in: worldBounds, settings: AppState.global)
+    init(of species: Pet, in worldBounds: CGRect, settings: PetsSettings) {
+        super.init(of: species, in: worldBounds, settings: settings)
         fps = species.fps
         setupAutoRespawn()
         setupMenu()
         setInitialPosition()
         setInitialDirection()
-        bindSizeToSettings()
-        bindSpeedToSettings()
-        bindGravityToSettings()
+        setGravity()
     }
     
     private func setInitialPosition() {
@@ -47,29 +38,6 @@ class DesktopPet: PetEntity {
     private func setInitialDirection() {
         set(direction: .init(dx: 1, dy: 0))
     }
-    
-    private func bindSizeToSettings() {
-        sizeCanc = AppState.global.$petSize.sink { size in
-            self.set(size: CGSize(square: size))
-        }
-    }
-    
-    private func bindSpeedToSettings() {
-        speedCanc = AppState.global.$speedMultiplier.sink { speedMultiplier in
-            self.speed = PetEntity.speed(
-                for: self.species,
-                size: AppState.global.petSize,
-                settings: speedMultiplier
-            )
-        }
-    }
-    
-    override func kill() {
-        speedCanc?.cancel()
-        sizeCanc?.cancel()
-        gravityCanc?.cancel()
-        super.kill()
-    }
 }
 
 private extension DesktopPet {
@@ -77,10 +45,7 @@ private extension DesktopPet {
         capability(for: WallCrawler.self) == nil
     }
     
-    func bindGravityToSettings() {
-        guard supportsGravity else { return }
-        gravityCanc = AppState.global.$gravityEnabled.sink { [weak self] in
-            self?.setGravity(enabled: $0)            
-        }
+    func setGravity() {
+        setGravity(enabled: settings.gravityEnabled && supportsGravity)
     }
 }

@@ -1,4 +1,3 @@
-import AppState
 import Foundation
 import Pets
 import Yage
@@ -7,7 +6,7 @@ import Yage
 
 extension ViewModel {
     func scheduleUfoAbduction() {
-        let settingsInterval = EventSchedule.from(string: AppState.global.ufoAbductionSchedule)
+        let settingsInterval = EventSchedule.from(string: settings.ufoAbductionSchedule)
         let actualInterval = settingsInterval ?? .timeOfDay(hour: 22, minute: 30)
         state.schedule(every: actualInterval) { [weak self] _ in
             self?.startUfoAbductionOfRandomVictim()
@@ -30,12 +29,12 @@ private extension ViewModel {
     }
     
     func animateUfoAbduction(of target: Entity) {
-        let ufo = UfoEntity(in: state.bounds)
+        let ufo = UfoEntity(in: state.bounds, with: settings)
         ufo.set(origin: state.bounds.topLeft.offset(x: -100, y: -100))
         state.children.append(ufo)
         ufo.abduct(target) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                OnScreen.show()
+                OnScreen.show(with: self.settings)
             }
         }
     }
@@ -44,13 +43,8 @@ private extension ViewModel {
 // MARK: - Entity
 
 private class UfoEntity: PetEntity {
-    init(in worldBounds: CGRect) {
-        super.init(
-            of: .ufo,
-            size: AppState.global.petSize,
-            in: worldBounds,
-            settings: AppState.global
-        )
+    init(in bounds: CGRect, with settings: PetsSettings) {
+        super.init(of: .ufo, in: bounds, settings: settings)
         setBounceOnLateralCollisions(enabled: false)
         uninstall(RandomAnimations.self)
         uninstall(ReactToHotspots.self)

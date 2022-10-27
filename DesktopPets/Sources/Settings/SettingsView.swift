@@ -1,4 +1,3 @@
-import AppState
 import DesignSystem
 import InAppPurchases
 import Lang
@@ -35,8 +34,10 @@ struct SettingsView: View {
 
 private struct FixOnScreenPets: View {
     var body: some View {
-        Button(Lang.PetSelection.fixOnScreenPets) { OnScreen.show() }
-            .buttonStyle(.regular)
+        Button(Lang.PetSelection.fixOnScreenPets) {
+            OnScreen.show(with: AppState.global)
+        }
+        .buttonStyle(.regular)
     }
 }
 
@@ -56,10 +57,10 @@ private struct DesktopInteractions: View {
     @EnvironmentObject var appState: AppState
     
     @State var showingDetails = false
-    
+        
     var body: some View {
         HStack(spacing: .sm) {
-            Switch(Lang.Settings.desktopInteractions, appState.$desktopInteractions)
+            Switch(Lang.Settings.desktopInteractions, $appState.desktopInteractions)
             Image(systemName: "info.circle.fill")
                 .font(.title)
                 .onTapGesture {
@@ -137,9 +138,9 @@ private struct AnonymousTracking: View {
 
 private struct StatusBarIconSwitch: View {
     var enabled: Binding<Bool> = Binding {
-        AppState.global.statusBarIconEnabled
+        AppState.global.showInMenuBar
     } set: { isEnabled in
-        AppState.global.statusBarIconEnabled = isEnabled
+        AppState.global.showInMenuBar = isEnabled
         Task { @MainActor in
             if isEnabled {
                 StatusBarItems.main.setup()

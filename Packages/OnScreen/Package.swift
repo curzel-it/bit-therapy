@@ -12,7 +12,6 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "../AppState"),
         .package(path: "../Pets"),
         .package(path: "../Yage"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.4"),
@@ -23,7 +22,6 @@ let package = Package(
         .target(
             name: "OnScreen",
             dependencies: [
-                .product(name: "AppState", package: "AppState"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Squanch", package: "Squanch"),

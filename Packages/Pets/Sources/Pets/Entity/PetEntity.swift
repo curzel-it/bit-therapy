@@ -3,25 +3,28 @@ import Squanch
 import SwiftUI
 import Yage
 
-public protocol Settings {
+public protocol PetsSettings {
+    var gravityEnabled: Bool { get }
+    var petSize: CGFloat { get }
     var speedMultiplier: CGFloat { get }
 }
 
 open class PetEntity: Entity {        
     public let species: Pet
-    private let settings: Settings
+    public let settings: PetsSettings
     
     public init(
         of pet: Pet,
-        size: CGFloat,
+        size: CGFloat? = nil,
         in worldBounds: CGRect,
-        settings: Settings
+        settings: PetsSettings
     ) {
         self.settings = settings
-        species = pet
+        self.species = pet
+        
         super.init(
             id: PetEntity.id(for: species),
-            frame: PetEntity.initialFrame(in: worldBounds, size: size),
+            frame: PetEntity.initialFrame(in: worldBounds, size: size ?? settings.petSize),
             in: worldBounds
         )
         resetSpeed()
