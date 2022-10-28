@@ -40,6 +40,8 @@
 "menu.item.about" = "About";
 "menu.item.hide" = "Hide Pet";
 "menu.item.show" = "Show Pet";
+"menu.item.hideThisPet" = "Hide this pet";
+"menu.item.hideAllPet" = "Hide all pets";
 
 // MARK: - Pet Selection
 

@@ -40,6 +40,8 @@
 "menu.item.about" = "Informazioni";
 "menu.item.hide" = "Nascondi Pet";
 "menu.item.show" = "Mostra Pet";
+"menu.item.hideThisPet" = "Nascondi";
+"menu.item.hideAllPet" = "Nascondi tutti";
 
 // MARK: - Pet Selection
 

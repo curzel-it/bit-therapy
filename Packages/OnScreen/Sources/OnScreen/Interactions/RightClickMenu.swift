@@ -1,53 +1,54 @@
 import Schwifty
 import SwiftUI
 
-struct RightClickMenu: View {
-    
-    @State var opacity: CGFloat = 0
-    
-    var body: some View {
-        Image(systemName: "xmark")
-            .font(.largeTitle)
-            .foregroundColor(.accent)
-            .onTapGesture {
-                OnScreen.hide()
-                fadeOut()
-            }
-        .onAppear { fadeIn() }
-        .opacity(opacity)
-    }
-    
-    func fadeIn() {
-        withAnimation {
-            opacity = 1
-        }
-    }
-    
-    func fadeOut() {
-        withAnimation(.easeInOut(duration: 0.1)) {
-            opacity = 0
-        }
-    }
-}
-
 class ShowsMenuOnRightClick: RightClickable {    
     weak var menu: NSView?
     
     override func onRightClick(with event: NSEvent) {
         guard isEnabled else { return }
-        
-        let menu = RightClickMenu().hosted()
-        menu.translatesAutoresizingMaskIntoConstraints = false
-        event.window?.contentView?.addSubview(menu)
-        
-        menu.constrain(.height, to: 100)
-        menu.constrain(.width, to: 200)
-        menu.constrainToCenterInParent()
-        self.menu = menu
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()+5) { [weak self] in
-            self?.menu?.removeFromSuperview()
-            self?.menu = nil
-        }
+        event.window?.contentView?.menu = petMenu()
+    }
+    
+    private func petMenu() -> NSMenu {
+        let menu = NSMenu(title: "MainMenu")
+        menu.addItem(hideThisPetItem())
+        menu.addItem(hideAllPetsItem())
+        return menu
+    }
+    
+    private func item(title: String, keyEquivalent: String, action: Selector, target: AnyObject) -> NSMenuItem {
+        let item = NSMenuItem(
+            title: NSLocalizedString("menu.item.\(title)", comment: title),
+            action: action,
+            keyEquivalent: keyEquivalent
+        )
+        item.target = self
+        return item
+    }
+    
+    private func hideThisPetItem() -> NSMenuItem {
+        item(
+            title: "hideThisPet",
+            keyEquivalent: "",
+            action: #selector(hideThisPet),
+            target: self
+        )
+    }
+    
+    @objc func hideThisPet() {
+        print("hideThisPet")
+    }
+    
+    private func hideAllPetsItem() -> NSMenuItem {
+        item(
+            title: "hideAllPet",
+            keyEquivalent: "",
+            action: #selector(hideThisPet),
+            target: self
+        )
+    }
+    
+    @objc func hideAllPets() {
+        print("hideAllPets")
     }
 }
