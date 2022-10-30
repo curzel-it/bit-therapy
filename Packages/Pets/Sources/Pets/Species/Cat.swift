@@ -1,4 +1,5 @@
 import Foundation
+import Yage
 
 extension Pet {
     static let cat = Pet(
@@ -22,4 +23,8 @@ extension Pet {
     static let catBlue = Pet.cat.shiny(id: "cat_blue", isPaid: false)
     static let catGray = Pet.cat.shiny(id: "cat_gray", isPaid: false)
     static let catGrumpy = Pet.cat.shiny(id: "cat_grumpy", isPaid: false)
+}
+
+private extension EntityAnimation {
+    static let angry = EntityAnimation(id: "angry")
 }
