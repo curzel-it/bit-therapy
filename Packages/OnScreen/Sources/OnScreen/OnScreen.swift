@@ -28,6 +28,10 @@ public struct OnScreen {
         printDebug("OnScreen", "Triggering UFO Abduction...")
         viewModel?.startUfoAbductionOfRandomVictim()
     }
+    
+    public static func remove(pet: Pet) {
+        viewModel?.remove(pet: pet)
+    }
 }
 
 class OnScreenWindows: WorldWindows {
@@ -67,6 +71,15 @@ class ViewModel: LiveWorld {
         state.children.append(contentsOf: pets)
     }
     
+    func remove(pet species: Pet) {
+        settings.remove(pet: species)
+        let petToRemove = state.children.first { child in
+            guard let pet = child as? PetEntity else { return false }
+            return pet.species == species
+        }
+        petToRemove?.kill()
+    }
+    
     override func kill() {
         desktopObstacles?.stop()
         super.kill()
@@ -77,4 +90,6 @@ public protocol OnScreenSettings: PetsSettings {
     var desktopInteractions: Bool { get }
     var selectedPets: [String] { get }
     var ufoAbductionSchedule: String { get }
+    
+    func remove(pet: Pet)
 }

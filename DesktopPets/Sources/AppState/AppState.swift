@@ -100,4 +100,9 @@ private class Storage {
 private let kInitialPetId = "sloth"
 
 extension AppState: PetsSettings {}
-extension AppState: OnScreenSettings {}
+
+extension AppState: OnScreenSettings {
+    public func remove(pet: Pet) {
+        selectedPets = selectedPets.filter { $0 != pet.id }
+    }
+}

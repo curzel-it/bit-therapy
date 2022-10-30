@@ -1,3 +1,4 @@
+import Pets
 import Schwifty
 import SwiftUI
 
@@ -36,19 +37,20 @@ class ShowsMenuOnRightClick: RightClickable {
     }
     
     @objc func hideThisPet() {
-        print("hideThisPet")
+        guard let pet = subject as? PetEntity else { return }
+        OnScreen.remove(pet: pet.species)
     }
     
     private func hideAllPetsItem() -> NSMenuItem {
         item(
             title: "hideAllPet",
             keyEquivalent: "",
-            action: #selector(hideThisPet),
+            action: #selector(hideAllPets),
             target: self
         )
     }
     
     @objc func hideAllPets() {
-        print("hideAllPets")
+        OnScreen.hide()
     }
 }
