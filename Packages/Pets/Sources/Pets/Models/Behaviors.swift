@@ -4,7 +4,6 @@ import Yage
 // MARK: - Behavior
 
 public struct PetBehavior {
-    
     let trigger: Trigger
     let possibleAnimations: [EntityAnimation]
     
@@ -17,7 +16,6 @@ public struct PetBehavior {
 // MARK: - Get Animations
 
 extension Pet {
-    
     public func action(whenTouching required: Hotspot) -> EntityAnimation? {
         behaviors
             .filter {
@@ -39,7 +37,6 @@ extension Pet {
 // MARK: - Random Animations
 
 extension Array where Element == EntityAnimation {
-    
     func random() -> EntityAnimation? {
         randomElement(distribution: probabilities())
     }

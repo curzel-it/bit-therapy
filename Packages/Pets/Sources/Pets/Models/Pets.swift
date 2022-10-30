@@ -36,7 +36,6 @@ public struct Pet {
 // MARK: - Equatable
 
 extension Pet: Equatable {
-    
     public static func == (lhs: Pet, rhs: Pet) -> Bool {
         lhs.id == rhs.id
     }
@@ -45,16 +44,16 @@ extension Pet: Equatable {
 // MARK: - Shiny
 
 extension Pet {
-    
     func shiny(
         id shinyId: String,
         isPaid shinyPaid: Bool = false,
-        additionalBehaviors: [PetBehavior] = []
+        additionalBehaviors: [PetBehavior] = [],
+        additionalCapabilities: Capabilities = []
     ) -> Pet {
         return Pet(
             id: shinyId,
             behaviors: behaviors + additionalBehaviors,
-            capabilities: capabilities,
+            capabilities: { capabilities() + additionalCapabilities },
             isPaid: shinyPaid,
             fps: fps,
             movementPath: movementPath,
@@ -67,7 +66,6 @@ extension Pet {
 // MARK: - Constants
 
 extension String {
-    
     public static let fly = "fly"
     public static let walk = "walk"
     public static let front = "front"
