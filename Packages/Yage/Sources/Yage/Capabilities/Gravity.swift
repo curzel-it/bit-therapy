@@ -6,8 +6,8 @@ public class Gravity: Capability {
     private var isFalling: Bool = false
     
     public override func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
-        guard subject?.state == .move || subject?.state == .freeFall else { return }
+        guard isEnabled, let state = subject?.state else { return }
+        guard state != .drag && !isAnimationThatRequiresNoGravity(state) else { return }
         
         if let groundLevel = groundLevel(from: collisions) {
             onGroundReached(at: groundLevel)
@@ -50,6 +50,7 @@ public class Gravity: Capability {
             body.set(origin: ground)
         }
         if isLanding {
+            body.movement?.isEnabled = true
             body.set(state: .move)
             body.set(direction: .init(dx: 1, dy: 0))
         }
@@ -61,10 +62,19 @@ public class Gravity: Capability {
         guard let body = subject else { return false }
         guard !isFalling else { return false }
         isFalling = true
+        body.movement?.isEnabled = true
         body.set(state: .freeFall)
         body.set(direction: Gravity.fallDirection)
         body.speed = 14
         return true
+    }
+    
+    private func isAnimationThatRequiresNoGravity(_ state: EntityState) -> Bool {
+        if case let .action(anim, _) = state {
+            if anim.position == .fromEntityBottomLeft { return true }
+            if anim.size != nil { return true }
+        }
+        return false
     }
 }
 
