@@ -46,10 +46,14 @@ extension Pet: Equatable {
 
 extension Pet {
     
-    func shiny(id shinyId: String, isPaid shinyPaid: Bool = false) -> Pet {
+    func shiny(
+        id shinyId: String,
+        isPaid shinyPaid: Bool = false,
+        additionalBehaviors: [PetBehavior] = []
+    ) -> Pet {
         return Pet(
             id: shinyId,
-            behaviors: behaviors,
+            behaviors: behaviors + additionalBehaviors,
             capabilities: capabilities,
             isPaid: shinyPaid,
             fps: fps,
