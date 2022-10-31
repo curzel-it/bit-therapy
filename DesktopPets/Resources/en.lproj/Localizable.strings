@@ -40,14 +40,14 @@
 "menu.item.about" = "About";
 "menu.item.hide" = "Hide Pet";
 "menu.item.show" = "Show Pet";
-"menu.item.hideThisPet" = "Hide this pet";
+"menu.item.hideThisPet" = "Remove this pet";
 "menu.item.hideAllPet" = "Hide all pets";
 
 // MARK: - Pet Selection
 
 "petSelection.joinDiscord" = "it's still quiet and desolate, but we also have a Discord server!";
 "petSelection.addPet" = "Add to screen";
-"petSelection.fixOnScreenPets" = "Fix on-screen pets";
+"petSelection.fixOnScreenPets" = "Apply Settings / Reset Pets";
 "petSelection.yourPets" = "Pets on screen:";
 "petSelection.morePets" = "More Pets:";
 
@@ -90,7 +90,8 @@
 "pet.name.cat_blue" = "Blue Cat";
 "pet.name.cat_gray" = "Cat";
 "pet.name.cat_grumpy" = "Grumpy Cat";
-"pet.name.clock" = "Clock";
+"pet.name.clockdigital" = "Digital Clock";
+"pet.name.clockanalog" = "Analog Clock";
 "pet.name.cromulon" = "Big Head";
 "pet.name.cromulon_pink" = "Big Head Pink";
 "pet.name.cromulon_rainbow" = "Big Head Rainbow";
@@ -130,7 +131,8 @@
 "pet.about.cat_blue" = "Well, it's just a cat!";
 "pet.about.cat_gray" = "Well, it's just a cat!";
 "pet.about.cat_grumpy" = "Such a judgy look on its face!";
-"pet.about.clock" = "It just shows the current time and does nothing else... 😅";
+"pet.about.clockdigital" = "It just shows the current time and does nothing else... 😅";
+"pet.about.clockanalog" = "It just shows the current time and does nothing else... 😅";
 "pet.about.cromulon" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
 "pet.about.cromulon_pink" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
 "pet.about.cromulon_rainbow" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";

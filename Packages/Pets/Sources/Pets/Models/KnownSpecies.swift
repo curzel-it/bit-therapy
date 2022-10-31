@@ -5,7 +5,7 @@ extension Pet {
     static let allSpecies: [Pet] = [
         .betta,
         .catGray, .catBlue, .cat, .catBlack, .catGrumpy,
-        .clock,
+        .clockAnalog, .clockDigital,
         .cromulon, .cromulonPink, .cromulonRainbow,
         .crow, .crowWhite,
         .frog, .frogVenom,

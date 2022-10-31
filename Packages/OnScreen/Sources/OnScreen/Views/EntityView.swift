@@ -71,6 +71,7 @@ private struct ContentView: View {
                     .frame(sizeOf: layer.frame)
                     .offset(x: layer.frame.midX)
                     .offset(y: layer.frame.midY)
+                    .rotation3DEffect(.radians(layer.zAngle), axis: (x: 0, y: 0, z: 1))
             }
             if viewModel.debug {
                 Text(entity.id)

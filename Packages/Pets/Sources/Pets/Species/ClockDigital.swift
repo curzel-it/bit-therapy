@@ -4,8 +4,8 @@ import Squanch
 import Yage
 
 extension Pet {
-    static let clock = Pet(
-        id: "clock",
+    static let clockDigital = Pet(
+        id: "clockdigital",
         capabilities: {
             let size = ClockSize(
                 mainSpriteWidth: 126,
@@ -15,7 +15,7 @@ extension Pet {
                 spaceBetweenHoursAndMinutes: 3,
                 digitSize: CGSize(width: 12, height: 9)
             )
-            return Capabilities.petAnimations() + [AnimatedSprite(), Clock(size: size)]
+            return Capabilities.petAnimations() + [AnimatedSprite(), DigitalClock(size: size)]
         },
         fps: 0.5,
         movementPath: .front,
@@ -24,8 +24,7 @@ extension Pet {
     )
 }
 
-private class Clock: Capability {
-    private var lastTime: String = ""
+private class DigitalClock: Clock {
     private let size: ClockSize
     var digitSprites: [ImageFrame] = []
     
@@ -36,8 +35,7 @@ private class Clock: Capability {
     override func install(on subject: Entity) {
         super.install(on: subject)
         subject.set(size: size.mainSpriteSize)
-        let species = (subject as? PetEntity)?.species.id ?? "clock"
-        digitSprites = subject.spritesProvider?.frames(for: "\(species)_numbers") ?? []
+        digitSprites = subject.spritesProvider?.frames(for: "clockdigital_numbers") ?? []
         subject.layers = (0..<4).map { index in
             ImageLayer(
                 sprite: digitSprites[index],
@@ -46,22 +44,8 @@ private class Clock: Capability {
         }
     }
     
-    override func update(with collisions: Collisions, after time: TimeInterval) {
-        let newTime = currentTime()
-        guard newTime != lastTime else { return }
-        lastTime = newTime
-        updateSprites(with: newTime)
-    }
-    
-    func currentTime() -> String {
-        let date = Date()
-        let hours = Calendar.current.component(.hour, from: date)
-        let minutes = Calendar.current.component(.minute, from: date)
-        return String(format: "%02d%02d", hours, minutes)
-    }
-    
-    func updateSprites(with hhmm: String) {
-        hhmm
+    override func update(given timeOfDay: TimeOfDay) {
+        String(format: "%02d%02d", timeOfDay.hour, timeOfDay.minute)
             .map { Int("\($0)") ?? 0 }
             .map { digitSprites[$0] }
             .enumerated()

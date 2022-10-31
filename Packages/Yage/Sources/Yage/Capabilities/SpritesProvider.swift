@@ -7,11 +7,13 @@ public struct ImageLayer: Identifiable {
     public var id: String
     public var frame: CGRect
     public var sprite: ImageFrame
+    public var zAngle: CGFloat
     
     public init(id: String = UUID().uuidString, sprite: ImageFrame, in frame: CGRect) {
         self.id = id
         self.sprite = sprite
         self.frame = frame
+        self.zAngle = 0
     }
 }
 
