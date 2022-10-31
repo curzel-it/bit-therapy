@@ -21,6 +21,7 @@ open class Entity: Identifiable, ObservableObject {
     @Published public var isAlive = true
     
     @Published public var sprite: ImageFrame?
+    @Published public var layers: [ImageLayer] = []
     @Published public var backgroundColor: Color = .clear
     
     public private(set) var capabilities: [Capability] = []

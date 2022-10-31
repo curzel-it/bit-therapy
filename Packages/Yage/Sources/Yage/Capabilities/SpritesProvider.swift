@@ -3,11 +3,23 @@ import SwiftUI
 
 public typealias ImageFrame = NotAGif.ImageFrame
 
+public struct ImageLayer: Identifiable {
+    public var id: String
+    public var frame: CGRect
+    public var sprite: ImageFrame
+    
+    public init(id: String = UUID().uuidString, sprite: ImageFrame, in frame: CGRect) {
+        self.id = id
+        self.sprite = sprite
+        self.frame = frame
+    }
+}
+
 open class SpritesProvider: Capability, ObservableObject {
     let framesProvider = FramesProvider(format: "%@-%d", fileExtension: .png, in: Bundle.main)
     
     open func frames(for name: String) -> [ImageFrame] {
-        framesProvider.frames(baseName: name)
+        framesProvider.frames(baseName: "name")
     }
 }
 

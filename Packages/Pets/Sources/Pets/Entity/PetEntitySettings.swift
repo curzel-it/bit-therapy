@@ -39,7 +39,7 @@ extension PetEntity {
 // MARK: - Default Capabilities
 
 extension Capabilities {
-    private static func petAnimations() -> Capabilities {
+    public static func petAnimations() -> Capabilities {
         [PetAnimationsProvider(), PetSpritesProvider()]
     }
     public static func defaultsCrawler() -> Capabilities {

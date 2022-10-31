@@ -63,6 +63,15 @@ private struct ContentView: View {
             if let sprite = entity.sprite {
                 Image(frame: sprite).pixelArt()
             }
+            ForEach(entity.layers) { layer in
+                Image(frame: layer.sprite)
+                    .pixelArt()
+                    .offset(x: -entity.frame.width/2)
+                    .offset(y: -entity.frame.height/2)
+                    .frame(sizeOf: layer.frame)
+                    .offset(x: layer.frame.midX)
+                    .offset(y: layer.frame.midY)
+            }
             if viewModel.debug {
                 Text(entity.id)
             }
