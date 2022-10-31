@@ -90,6 +90,7 @@
 "pet.name.cat_blue" = "Gatto Blu";
 "pet.name.cat_gray" = "Gatto";
 "pet.name.cat_grumpy" = "Gatto Scontroso";
+"pet.name.clock" = "Orologio";
 "pet.name.cromulon" = "Testone";
 "pet.name.cromulon_pink" = "Testone Rosa";
 "pet.name.cromulon_rainbow" = "Testone Figo";
@@ -128,6 +129,7 @@
 "pet.about.cat_blue" = "Beh, è un normalissimo gatto!";
 "pet.about.cat_gray" = "Beh, è un normalissimo gatto!";
 "pet.about.cat_grumpy" = "Guardalo, come ti giudica...";
+"pet.about.clock" = "Mostra l'ora corrente e nient'altro... 😅";
 "pet.about.cromulon" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
 "pet.about.cromulon_pink" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
 "pet.about.cromulon_rainbow" = "Alieni a forma di teste umane, ma grandiBig come un pianeta...\n\"Mostrami cosa sai fare!\"";

@@ -90,6 +90,7 @@
 "pet.name.cat_blue" = "Blue Cat";
 "pet.name.cat_gray" = "Cat";
 "pet.name.cat_grumpy" = "Grumpy Cat";
+"pet.name.clock" = "Clock";
 "pet.name.cromulon" = "Big Head";
 "pet.name.cromulon_pink" = "Big Head Pink";
 "pet.name.cromulon_rainbow" = "Big Head Rainbow";
@@ -129,6 +130,7 @@
 "pet.about.cat_blue" = "Well, it's just a cat!";
 "pet.about.cat_gray" = "Well, it's just a cat!";
 "pet.about.cat_grumpy" = "Such a judgy look on its face!";
+"pet.about.clock" = "It just shows the current time and does nothing else... 😅";
 "pet.about.cromulon" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
 "pet.about.cromulon_pink" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
 "pet.about.cromulon_rainbow" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";

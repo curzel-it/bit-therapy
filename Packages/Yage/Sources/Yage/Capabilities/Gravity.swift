@@ -71,7 +71,7 @@ public class Gravity: Capability {
     
     private func isAnimationThatRequiresNoGravity(_ state: EntityState) -> Bool {
         if case let .action(anim, _) = state {
-            if anim.position == .fromEntityBottomLeft { return true }
+            if anim.position != .fromEntityBottomLeft { return true }
             if anim.size != nil { return true }
         }
         return false

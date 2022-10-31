@@ -8,7 +8,6 @@ import SwiftUI
 import Yage
 
 struct PetsGridItem: View {
-    
     @EnvironmentObject var appState: AppState
     
     let pet: Pet
@@ -24,7 +23,6 @@ struct PetsGridItem: View {
 }
 
 private struct PetPreview: View {
-    
     @EnvironmentObject var viewModel: HomepageViewModel
     
     let pet: Pet
@@ -46,7 +44,6 @@ private struct PetPreview: View {
 }
 
 private struct SelectionIndicator: View {
-    
     let isSelected: Bool
     
     var body: some View {
@@ -62,7 +59,6 @@ private struct SelectionIndicator: View {
 }
 
 struct PetsGridTitle: View {
-    
     let title: String
     
     var body: some View {

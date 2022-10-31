@@ -4,7 +4,6 @@ import Pets
 import SwiftUI
 
 struct PetsGrid: View {
-    
     let title: String
     let columns: [GridItem]
     let pets: [Pet]

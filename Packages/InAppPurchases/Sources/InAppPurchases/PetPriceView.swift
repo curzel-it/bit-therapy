@@ -2,7 +2,6 @@ import DesignSystem
 import SwiftUI
 
 public struct PetPriceView: View {
-        
     @EnvironmentObject var pricing: PricingService
     
     let speciesId: String
@@ -32,7 +31,6 @@ public struct PetPriceView: View {
 }
 
 public struct PetPriceOverlay: View {
-    
     let speciesId: String
     
     var pricing: PricingService { PricingService.global }

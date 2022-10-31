@@ -8,9 +8,7 @@ import SwiftUI
 import Tracking
 
 struct PetDetails: View {
-    
-    @StateObject var viewModel: PetDetailsViewModel
-    
+    @StateObject var viewModel: PetDetailsViewModel    
     @EnvironmentObject var pricing: PricingService
     
     init(isShown: Binding<Bool>, pet: Pet) {
