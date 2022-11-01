@@ -8,7 +8,7 @@ extension Pet {
         id: "clockanalog",
         capabilities: {
             let size = ClockSize(
-                mainSpriteWidth: 160
+                mainSpriteWidth: 100
             )
             return Capabilities.petAnimations() + [AnimatedSprite(), AnalogClock(size: size)]
         },
