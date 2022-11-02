@@ -5,7 +5,6 @@ import SwiftUI
 import Yage
 
 public class PetsAssets {
-    
     public static func isAvailable(_ baseName: String) -> Bool {
         frames(for: baseName).count > 0
     }

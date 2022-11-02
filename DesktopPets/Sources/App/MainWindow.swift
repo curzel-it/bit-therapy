@@ -9,7 +9,6 @@ struct MainWindow: Scene {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environmentObject(AppState.global)
         }
     }
 }

@@ -4,7 +4,7 @@ import Schwifty
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var appState: AppState
+    @StateObject var appState = AppState.global
     @StateObject var viewModel = MainViewModel()
     
     var body: some View {
