@@ -10,7 +10,7 @@ Like the app? Consider supporting me [via Patreon](https://patreon.com/urinamara
 
 ## What's a Desktop Pet?
 
-It's just a cute little animal that lives in your computer.
+It's just a cute little pet or animal that lives in your computer.
 
 The most popular one was probably the [eSheep](https://github.com/Adrianotiger/desktopPet) for Windows 95.
 

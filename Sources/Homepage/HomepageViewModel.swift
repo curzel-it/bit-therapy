@@ -2,7 +2,6 @@ import Combine
 import DesignSystem
 import Pets
 import Schwifty
-import Squanch
 import SwiftUI
 
 class HomepageViewModel: ObservableObject {

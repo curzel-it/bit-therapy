@@ -1,6 +1,5 @@
 import NotAGif
 import Schwifty
-import Squanch
 import SwiftUI
 import Yage
 

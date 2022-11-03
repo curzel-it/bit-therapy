@@ -44,6 +44,13 @@
         "identifier" : "YageTests",
         "name" : "YageTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/PetDetails",
+        "identifier" : "PetDetailsTests",
+        "name" : "PetDetailsTests"
+      }
     }
   ],
   "version" : 1

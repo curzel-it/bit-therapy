@@ -1,7 +1,6 @@
 import Combine
 import NotAGif
 import Schwifty
-import Squanch
 import SwiftUI
 
 public class AnimatedSprite: Capability, ObservableObject {

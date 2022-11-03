@@ -1,6 +1,6 @@
 import Combine
 import DesignSystem
-import Squanch
+import Schwifty
 import SwiftUI
 
 struct CheatsView: View {

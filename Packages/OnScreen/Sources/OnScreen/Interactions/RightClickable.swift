@@ -1,5 +1,5 @@
 import AppKit
-import Squanch
+import Schwifty
 import Yage
 
 open class RightClickable: Capability {

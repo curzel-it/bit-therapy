@@ -14,8 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Pets"),
         .package(path: "../Yage"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.9"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.8"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11"),
         .package(url: "https://github.com/curzel-it/windowsdetector", from: "1.0.3")
     ],
     targets: [
@@ -24,7 +23,6 @@ let package = Package(
             dependencies: [
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Squanch", package: "Squanch"),
                 .product(name: "WindowsDetector", package: "WindowsDetector"),
                 .product(name: "Yage", package: "Yage")
             ]

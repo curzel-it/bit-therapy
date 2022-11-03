@@ -1,7 +1,6 @@
 import AppKit
 import Combine
 import Schwifty
-import Squanch
 import SwiftUI
 import Yage
 

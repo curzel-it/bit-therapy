@@ -1,5 +1,5 @@
 import DesignSystem
-import Squanch
+import Schwifty
 import SwiftUI
 
 struct AboutView: View {        
@@ -34,7 +34,8 @@ struct PrivacyPolicy: View {
     var body: some View {
         Button(Lang.About.privacyPolicy) {
             URL.visit(urlString: Lang.Urls.privacy)
-        }.buttonStyle(.regular)
+        }
+        .buttonStyle(.regular)
     }
 }
 

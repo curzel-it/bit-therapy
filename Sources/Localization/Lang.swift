@@ -79,6 +79,7 @@ public enum Lang {
     // MARK: - Pet Selection
     
     public enum PetSelection {
+        public static let petSelection = "petSelection.petSelection".localized()
         public static let joinDiscord = "petSelection.joinDiscord".localized()
         public static let fixOnScreenPets = "petSelection.fixOnScreenPets".localized()
         public static let addPet = "petSelection.addPet".localized()

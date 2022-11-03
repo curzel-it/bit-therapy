@@ -11,15 +11,13 @@ let package = Package(
             targets: ["DesignSystem"])
     ],
     dependencies: [
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.9"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.8")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11")
     ],
     targets: [
         .target(
             name: "DesignSystem",
             dependencies: [
-                .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Squanch", package: "Squanch")
+                .product(name: "Schwifty", package: "Schwifty")
             ]
         )
     ]

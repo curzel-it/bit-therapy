@@ -17,8 +17,7 @@ let package = Package(
         .package(path: "../Pets"),
         .package(path: "../Tracking"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.4"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.9"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.8")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11")
     ],
     targets: [
         .target(
@@ -29,7 +28,6 @@ let package = Package(
                 .product(name: "NotAGif", package: "NotAGif"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Squanch", package: "Squanch"),
                 .product(name: "Tracking", package: "Tracking")
             ]
         ),

@@ -1,5 +1,5 @@
 import SwiftUI
-import Squanch
+import Schwifty
 
 let boundDistanceAfterScreenEnd: CGFloat = 0
 let boundsThickness: CGFloat = 1000

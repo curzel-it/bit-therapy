@@ -1,5 +1,5 @@
 import Foundation
-import Squanch
+import Schwifty
 import Yage
 
 extension Pet {

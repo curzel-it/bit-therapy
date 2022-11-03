@@ -1,5 +1,5 @@
 import AppKit
-import Squanch
+import Schwifty
 import Yage
 
 class MouseDraggable: Capability {

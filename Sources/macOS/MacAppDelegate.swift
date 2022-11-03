@@ -1,6 +1,6 @@
 import AppKit
 import OnScreen
-import Squanch
+import Schwifty
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {

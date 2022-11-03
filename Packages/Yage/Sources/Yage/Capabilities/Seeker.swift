@@ -1,4 +1,4 @@
-import Squanch
+import Schwifty
 import SwiftUI
 
 public class Seeker: Capability {

@@ -1,5 +1,5 @@
 import DesignSystem
-import Squanch
+import Schwifty
 import SwiftUI
 
 struct RequestPetsViaSurvey: View {

@@ -1,5 +1,5 @@
 import Foundation
-import Squanch
+import Schwifty
 
 public class RandomAnimations: Capability {
     private var timer: Timer!

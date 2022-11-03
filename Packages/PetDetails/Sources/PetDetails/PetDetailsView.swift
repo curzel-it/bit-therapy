@@ -3,7 +3,6 @@ import InAppPurchases
 import NotAGif
 import Pets
 import Schwifty
-import Squanch
 import SwiftUI
 import Tracking
 

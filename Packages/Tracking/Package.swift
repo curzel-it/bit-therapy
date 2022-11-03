@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Pets"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.8"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11"),
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "8.15.0")
     ],
     targets: [
@@ -25,7 +25,7 @@ let package = Package(
                 .product(name: "FirebaseInstallations", package: "firebase-ios-sdk"),
                 .product(name: "FirebaseRemoteConfig", package: "firebase-ios-sdk"),
                 .product(name: "Pets", package: "Pets"),
-                .product(name: "Squanch", package: "Squanch")
+                .product(name: "Schwifty", package: "Schwifty")
             ]
         )
     ]

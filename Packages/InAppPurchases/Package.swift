@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Tracking"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.8"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11"),
         .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0")
     ],
     targets: [
@@ -21,7 +21,7 @@ let package = Package(
             name: "InAppPurchases",
             dependencies: [
                 .product(name: "RevenueCat", package: "purchases-ios"),
-                .product(name: "Squanch", package: "Squanch"),
+                .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Tracking", package: "Tracking")
             ]
         )

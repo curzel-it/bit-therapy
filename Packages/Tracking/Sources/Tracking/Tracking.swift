@@ -1,7 +1,7 @@
 import Firebase
 import FirebaseAnalytics
 import Pets
-import Squanch
+import Schwifty
 
 // MARK: - Setup
 

@@ -1,11 +1,12 @@
+import Schwifty
 import SwiftUI
 
 // MARK: - Constants
 
 public struct DesignSystem {
-    public static let defaultCornerRadius: CGFloat = 4
-    public static let buttonsHeight: CGFloat = 32
-    public static let buttonsMaxWidth: CGFloat? = 200
+    public static let defaultCornerRadius: CGFloat = DeviceRequirement.iOS.isSatisfied ? 8 : 4
+    public static let buttonsHeight: CGFloat = DeviceRequirement.iOS.isSatisfied ? 40 : 32
+    public static let buttonsMaxWidth: CGFloat? = DeviceRequirement.iPhone.isSatisfied ? nil : 200
     public static let lineWidth: CGFloat = 2
 }
 

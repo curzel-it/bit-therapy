@@ -1,5 +1,5 @@
 import Foundation
-import Squanch
+import Schwifty
 
 extension Pet {    
     static let allSpecies: [Pet] = [

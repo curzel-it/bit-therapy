@@ -45,6 +45,7 @@
 
 // MARK: - Pet Selection
 
+"petSelection.petSelection" = "Scegli pet";
 "petSelection.joinDiscord" = "È ancora silenzioso e desolato, ma abbiamo un server Discord!";
 "petSelection.addPet" = "Aggiungi";
 "petSelection.fixOnScreenPets" = "Applica / Resetta";
@@ -108,7 +109,7 @@
 "pet.name.crow" = "Corvo";
 "pet.name.crow_white" = "Corvo Bianco";
 "pet.name.frog" = "Rana";
-"pet.name.frog" = "Rana Velenosa";
+"pet.name.frog_venom" = "Rana Velenosa";
 "pet.name.koala" = "Koala";
 "pet.name.koala_pirate" = "Koala Pirata";
 "pet.name.hedgehog" = "Porcospino";

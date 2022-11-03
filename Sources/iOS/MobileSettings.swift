@@ -9,7 +9,11 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
-                Text("Coming soon")
+                SizeSlider()
+                SpeedSlider()
+                GravitySwitch().positioned(.leading)
+                RestorePurchasesButton()
+                CheatsView().positioned(.leading)
             }
             .padding(.md)
         }

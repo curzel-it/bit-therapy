@@ -1,24 +1,29 @@
 import Combine
 import Pets
 import Schwifty
-import Squanch
 import SwiftUI
 import Yage
 
 struct MainScene: Scene {
+    @StateObject var appState = AppState.global
+    @State var showPetSelection: Bool = false
+    @State var showAbout: Bool = false
+    @State var showSettings: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ZStack {
-                    ContentView()
-                    VStack {
-                        NavigationLink("Pet Selection", destination: { Homepage() })
-                        NavigationLink("About", destination: { AboutView() })
-                        NavigationLink("Settings", destination: { SettingsView() })
-                    }
+            ZStack {
+                ContentView()
+                VStack {
+                    Button(Lang.PetSelection.petSelection) { showPetSelection = true }
+                    Button(Lang.Page.about) { showAbout = true }
+                    Button(Lang.Page.settings) { showSettings = true }
                 }
             }
-            .environmentObject(AppState.global)
+            .sheet(isPresented: $showPetSelection) { Homepage() }
+            .sheet(isPresented: $showAbout) { AboutView() }
+            .sheet(isPresented: $showSettings) { SettingsView() }
+            .environmentObject(appState)
         }
     }
 }

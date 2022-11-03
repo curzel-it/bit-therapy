@@ -2,7 +2,6 @@ import AppKit
 import Combine
 import Pets
 import Schwifty
-import Squanch
 import Yage
 
 public struct OnScreen {

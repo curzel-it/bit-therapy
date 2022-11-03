@@ -3,7 +3,6 @@ import DesignSystem
 import InAppPurchases
 import Pets
 import Schwifty
-import Squanch
 import SwiftUI
 import Yage
 

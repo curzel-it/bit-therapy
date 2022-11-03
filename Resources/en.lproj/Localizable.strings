@@ -45,6 +45,7 @@
 
 // MARK: - Pet Selection
 
+"petSelection.petSelection" = "Select pets";
 "petSelection.joinDiscord" = "it's still quiet and desolate, but we also have a Discord server!";
 "petSelection.addPet" = "Add to screen";
 "petSelection.fixOnScreenPets" = "Apply Settings / Reset Pets";

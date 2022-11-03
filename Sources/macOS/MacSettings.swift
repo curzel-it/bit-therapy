@@ -29,27 +29,6 @@ struct SettingsView: View {
     }
 }
 
-// MARK: - Reset
-
-private struct FixOnScreenPets: View {
-    var body: some View {
-        Button(Lang.PetSelection.fixOnScreenPets) {
-            OnScreen.show(with: AppState.global)
-        }
-        .buttonStyle(.regular)
-    }
-}
-
-// MARK: - Gravity
-
-private struct GravitySwitch: View {
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        Switch(Lang.Settings.gravity, $appState.gravityEnabled)
-    }
-}
-
 // MARK: - Desktop Interactions
 
 private struct DesktopInteractions: View {
@@ -59,7 +38,10 @@ private struct DesktopInteractions: View {
     
     var body: some View {
         HStack(spacing: .sm) {
-            Switch(Lang.Settings.desktopInteractions, $appState.desktopInteractions)
+            SettingsSwitch(
+                label: Lang.Settings.desktopInteractions,
+                value: $appState.desktopInteractions
+            )
             Image(systemName: "info.circle.fill")
                 .font(.title)
                 .onTapGesture {
@@ -105,7 +87,7 @@ private struct AnonymousTracking: View {
     
     var body: some View {
         HStack(spacing: .sm) {
-            Switch(Lang.Settings.anonymousTracking, enabled)
+            SettingsSwitch(label: Lang.Settings.anonymousTracking, value: enabled)
             Image(systemName: "info.circle.fill")
                 .font(.title)
                 .onTapGesture {
@@ -150,7 +132,7 @@ private struct StatusBarIconSwitch: View {
     }
     
     var body: some View {
-        Switch(Lang.Settings.statusBarIconEnabled, enabled)
+        SettingsSwitch(label: Lang.Settings.statusBarIconEnabled, value: enabled)
     }
 }
 
@@ -166,80 +148,17 @@ private struct LaunchAtLoginSwitch: View {
     }
     
     var body: some View {
-        Switch(Lang.Settings.launchAtLogin, launchAtLogin)
+        SettingsSwitch(label: Lang.Settings.launchAtLogin, value: launchAtLogin)
     }
 }
 
-// MARK: - Pet Size
+// MARK: - Reset
 
-private struct SizeSlider: View {
-    @EnvironmentObject var appState: AppState
-    
+private struct FixOnScreenPets: View {
     var body: some View {
-        HStack(spacing: .md) {
-            Text("\(Lang.Settings.size) (\(Int(appState.petSize)))")
-                .textAlign(.leading)
-                .frame(width: 100)
-            Slider(
-                value: $appState.petSize,
-                in: PetSize.minSize...PetSize.maxSize
-            ) { EmptyView() }
-            
-            Button(Lang.reset) { appState.petSize = PetSize.defaultSize }
-                .buttonStyle(.text)
+        Button(Lang.PetSelection.fixOnScreenPets) {
+            OnScreen.show(with: AppState.global)
         }
-    }
-}
-
-// MARK: - Pet Speed Multiplier
-
-private struct SpeedSlider: View {
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        HStack(spacing: .md) {
-            Text("\(Lang.Settings.speed) (\(Int(appState.speedMultiplier * 100))%)")
-                .textAlign(.leading)
-                .frame(width: 100)
-            Slider(
-                value: $appState.speedMultiplier,
-                in: 0.25...2
-            ) { EmptyView() }
-            
-            Button(Lang.reset) { appState.speedMultiplier = 1.0 }
-                .buttonStyle(.text)
-        }
-    }
-}
-
-// MARK: - Utils
-
-private struct Switch: View {
-    let label: String
-    let value: Binding<Bool>
-    
-    init(_ label: String, _ value: Binding<Bool>) {
-        self.label = label
-        self.value = value
-    }
-    
-    var body: some View {
-        Toggle(label, isOn: value).toggleStyle(.switch)
-    }
-}
-
-// MARK: - In-App Purchases
-
-struct RestorePurchasesButton: View {
-    var body: some View {
-        InAppPurchases.RestorePurchasesButton(with: Localized())
-            .positioned(.leading)
-    }
-    
-    struct Localized: InAppPurchases.Lang {
-        var done: String { Lang.done }
-        var loading: String { Lang.loading }
-        var restorePurchases: String { Lang.Settings.restorePurchases }
-        var somethingWentWrong: String { Lang.somethingWentWrong }
+        .buttonStyle(.regular)
     }
 }

@@ -1,7 +1,6 @@
 import InAppPurchases
 import RateKit
 import Schwifty
-import Squanch
 import SwiftUI
 import Tracking
 

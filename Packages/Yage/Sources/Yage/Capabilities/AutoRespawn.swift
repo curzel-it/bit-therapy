@@ -1,5 +1,5 @@
 import Combine
-import Squanch
+import Schwifty
 import SwiftUI
 
 public class AutoRespawn: Capability {

@@ -1,4 +1,4 @@
-import Squanch
+import Schwifty
 import Yage
 
 // MARK: - Behavior

@@ -44,6 +44,9 @@
 		1E449A172913211C00DD97BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5D3EA428C08E5F00AC50C6 /* RateKit */; };
 		1E7D1EA62909C31600CC036B /* MacSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* MacSettings.swift */; };
+		1E9BB637291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
+		1E9BB638291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
+		1E9BB639291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
 		1EA055492913D7A50037803E /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055482913D7A50037803E /* PetDetails.swift */; };
 		1EA0554A2913D7A50037803E /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055482913D7A50037803E /* PetDetails.swift */; };
 		1EA0554B2913D7A50037803E /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055482913D7A50037803E /* PetDetails.swift */; };
@@ -129,6 +132,7 @@
 		1E449A1E291321CF00DD97BC /* InfoMac-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfoMac-Dev.plist"; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* MacSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSettings.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSettingsElements.swift; sourceTree = "<group>"; };
 		1EA055482913D7A50037803E /* PetDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetails.swift; sourceTree = "<group>"; };
 		1EA055522913DCD20037803E /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
 		1EA055552913E4B40037803E /* MobileAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +257,14 @@
 			path = Survey;
 			sourceTree = "<group>";
 		};
+		1E9BB635291449D1003D5CFB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		1ED1CFE42912C572004031BC /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,14 +322,15 @@
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A6FB7D5628740F8E00AB872E /* App.swift */,
 				A6FB7D5B28740F8E00AB872E /* About */,
+				A6FB7D5628740F8E00AB872E /* App.swift */,
 				1E2AC742290AB375003D0AB2 /* AppState */,
 				A6FB7D5228740F8E00AB872E /* Cheats */,
 				1E1FA9A728AE851F0082A113 /* Homepage */,
 				1ED1CFE52912C57E004031BC /* iOS */,
 				1ED1CFE42912C572004031BC /* Localization */,
 				A6FB7D5528740F8E00AB872E /* macOS */,
+				1E9BB635291449D1003D5CFB /* Settings */,
 				1E7FB47428BD184C002F377D /* Survey */,
 			);
 			path = Sources;
@@ -708,6 +721,7 @@
 				1E4499FF2913211C00DD97BC /* SurveyView.swift in Sources */,
 				1E449A002913211C00DD97BC /* AboutView.swift in Sources */,
 				1E449A012913211C00DD97BC /* MacSettings.swift in Sources */,
+				1E9BB638291449E5003D5CFB /* SharedSettingsElements.swift in Sources */,
 				1E449A032913211C00DD97BC /* App.swift in Sources */,
 				1EA055592913E4BE0037803E /* MacAppDelegate.swift in Sources */,
 				1E449A042913211C00DD97BC /* HomepageViewModel.swift in Sources */,
@@ -732,6 +746,7 @@
 				1ED1D03B2912C8A1004031BC /* Lang.swift in Sources */,
 				1EA0555A2913E5C10037803E /* App.swift in Sources */,
 				1ED1D0322912C8A1004031BC /* CheatsView.swift in Sources */,
+				1E9BB639291449E5003D5CFB /* SharedSettingsElements.swift in Sources */,
 				1ED1D0342912C8A1004031BC /* PetsGrid.swift in Sources */,
 				1ED1D01D2912C683004031BC /* MobileScene.swift in Sources */,
 				1ED1D0312912C8A1004031BC /* Cheats.swift in Sources */,
@@ -769,6 +784,7 @@
 				1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
 				1E7D1EA62909C31600CC036B /* MacSettings.swift in Sources */,
+				1E9BB637291449E5003D5CFB /* SharedSettingsElements.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
 				1EA055582913E4BE0037803E /* MacAppDelegate.swift in Sources */,
 				1E1FA9BB28AE851F0082A113 /* HomepageViewModel.swift in Sources */,

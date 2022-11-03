@@ -1,7 +1,7 @@
 import AppKit
 import Combine
 import SwiftUI
-import Squanch
+import Schwifty
 import Yage
 
 open class EntityWindow: NSWindow {

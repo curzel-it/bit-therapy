@@ -1,5 +1,5 @@
 import SwiftUI
-import Squanch
+import Schwifty
 
 public class Gravity: Capability {
     static let fallDirection = CGVector(dx: 0, dy: 8)

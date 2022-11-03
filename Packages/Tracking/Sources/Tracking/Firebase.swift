@@ -1,6 +1,6 @@
 import Firebase
 import FirebaseAnalytics
-import Squanch
+import Schwifty
 
 extension FirebaseApp {
     static func setup() -> Bool {

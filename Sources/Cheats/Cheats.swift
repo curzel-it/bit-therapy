@@ -1,5 +1,5 @@
 import Foundation
-import Squanch
+import Schwifty
 
 // As you have probably guessed, a piece of code is missing here.
 // Removing the code was the easiest way to hide both cheat codes and their effect...
