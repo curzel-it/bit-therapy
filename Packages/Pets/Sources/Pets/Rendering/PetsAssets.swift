@@ -26,10 +26,17 @@ public class PetsAssets {
     }
     
     private static func frames(fromDirectory dir: String) -> [ImageFrame] {
+#if os(macOS)
         let urls = Bundle.module.urls(forResourcesWithExtension: "png", subdirectory: dir) ?? []
         return urls
             .sortedByFrameIndex()
             .compactMap { NSImage(contentsOf: $0) }
+#else
+        let paths = Bundle.module.paths(forResourcesOfType: "png", inDirectory: dir)
+        return paths
+            .sortedByFrameIndex()
+            .compactMap { UIImage(contentsOfFile: $0) }
+#endif
     }
 }
 

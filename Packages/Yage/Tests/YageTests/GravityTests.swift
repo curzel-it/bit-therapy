@@ -4,7 +4,6 @@ import SwiftUI
 @testable import Yage
 
 class GravityTests: XCTestCase {
-    
     var env: World!
     var player: Entity!
     

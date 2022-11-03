@@ -6,14 +6,12 @@ public enum CustomButtonStyle {
 }
 
 extension View {
-    
     public func buttonStyle(_ style: CustomButtonStyle) -> some View {
         modifier(ButtonStyleMod(style: style))
     }
 }
 
 private struct ButtonStyleMod: ViewModifier {
-    
     let style: CustomButtonStyle
     
     func body(content: Content) -> some View {
@@ -27,7 +25,6 @@ private struct ButtonStyleMod: ViewModifier {
 // MARK: - Regular
 
 private struct RegularButton: ButtonStyle {
-    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .modifier(BaseButton())
@@ -41,7 +38,6 @@ private struct RegularButton: ButtonStyle {
 // MARK: - Text
 
 private struct TextButton: ButtonStyle {
-    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .modifier(BaseButton())
@@ -53,7 +49,6 @@ private struct TextButton: ButtonStyle {
 // MARK: - Base Style
 
 private struct BaseButton: ViewModifier {
-    
     func body(content: Content) -> some View {
         content
             .textCase(.uppercase)

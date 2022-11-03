@@ -3,7 +3,6 @@ import XCTest
 @testable import Yage
 
 // swiftlint:disable identifier_name
-
 class PointsTests: XCTestCase {
     func testAngleBetweenPointsIsCorrect() {
         let o = CGPoint.zero

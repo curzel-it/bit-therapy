@@ -13,14 +13,16 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.7"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.7")
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.8"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.9")
     ],
     targets: [
         .target(
             name: "Yage",
             dependencies: [
                 .product(name: "NotAGif", package: "NotAGif"),
-                .product(name: "Squanch", package: "Squanch")
+                .product(name: "Squanch", package: "Squanch"),
+                .product(name: "Schwifty", package: "Schwifty")
             ]
         ),
         .testTarget(

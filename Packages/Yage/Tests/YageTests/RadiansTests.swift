@@ -3,7 +3,6 @@ import XCTest
 @testable import Yage
 
 class RadiansTests: XCTestCase {
-    
     func testCorrectRadiansFromVector() {
         XCTAssertEqual(CGVector(dx: 0, dy: 0).radians, .pi * 0.0)
         XCTAssertEqual(CGVector(dx: 1, dy: 0).radians, .pi * 0.0)

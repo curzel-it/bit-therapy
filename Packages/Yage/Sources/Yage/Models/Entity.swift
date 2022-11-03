@@ -3,7 +3,7 @@ import SwiftUI
 
 open class Entity: Identifiable, ObservableObject {
     public let id: String
-    public let worldBounds: CGRect
+    public var worldBounds: CGRect
     public var fps: TimeInterval = 10
     public var isStatic: Bool = false
     public var isEphemeral: Bool = false

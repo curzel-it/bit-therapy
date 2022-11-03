@@ -34,7 +34,8 @@ Hope you like them too!
 1. Download and setup Xcode
 1. Open the `PetTherapy` workspace
 1. Give Xcode some time to figure out dependencies...
-1. Select target 'Desktop Pets Dev'
+1. Select target 'Desktop Pets' or 'Mobile Pets'
+1. Run...
 
 For daily use I recommend getting the App from the App Store.
 

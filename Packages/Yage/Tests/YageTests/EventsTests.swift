@@ -3,7 +3,6 @@ import XCTest
 @testable import Yage
 
 class EventsTests: XCTestCase {
-    
     func testScheduleIsProperlyConvertedToString() {
         XCTAssertEqual(
             EventSchedule.timeOfDay(hour: 0, minute: 0).description,

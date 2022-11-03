@@ -22,7 +22,7 @@ public enum Hotspot: String, CaseIterable {
 
 extension World {
     func hotspotEntities() -> [Entity] {
-        return [
+        [
             topBound(),
             bottomBound(),
             leftBound(),

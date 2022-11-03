@@ -1,9 +1,12 @@
 import SwiftUI
+import Squanch
 
 public class Gravity: Capability {
     static let fallDirection = CGVector(dx: 0, dy: 8)
     
-    private var isFalling: Bool = false
+    private var isFalling: Bool {
+        subject?.state == .freeFall
+    }
     
     public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled, let state = subject?.state else { return }
@@ -43,7 +46,6 @@ public class Gravity: Capability {
         let targetY = groundLevel - body.frame.height
         let isLanding = isFalling
         let isRaising = !isFalling && body.frame.minY != targetY
-        isFalling = false
         
         if isLanding || isRaising {
             let ground = CGPoint(x: body.frame.origin.x, y: targetY)
@@ -61,7 +63,6 @@ public class Gravity: Capability {
     func startFallingIfNeeded() -> Bool {
         guard let body = subject else { return false }
         guard !isFalling else { return false }
-        isFalling = true
         body.movement?.isEnabled = true
         body.set(state: .freeFall)
         body.set(direction: Gravity.fallDirection)

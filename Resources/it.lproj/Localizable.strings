@@ -1,0 +1,173 @@
+// MARK: - Generic
+
+"cancel" = "Annulla";
+"select" = "Seleziona";
+"remove" = "Rimuovi";
+"reset" = "Reset";
+"enable" = "Abilita";
+"disable" = "Disabilita";
+"loading" = "Caricando...";
+"somethingWentWrong" = "Qualcosa è andato storto, riprova";
+"done" = "Fatto";
+
+// MARK: - Survey
+
+"survey.takeSurvey" = "Questionario utenti";
+"survey.feedbackViaSurvey" = "Hai feedback, idee, opinioni o problemi con l'app? Faccelo sapere!";
+"survey.requestPetViaSurvey" = "Non hai trovato quello che cercavi? Faccelo sapere su Discord o con il questionario!";
+"survey.url" = "https://tally.so/r/mJ9Y2K";
+
+// MARK: - Purchases
+
+"purchases.buy" = "Acquista";
+"purchases.buyFor" = "Acquista";
+"purchases.purchasing" = "Acquisto in corso...";
+"purchases.purchased" = "Grazie! 😍";
+
+// MARK: - Cheats
+
+"cheats.title" = "Codici impostazioni";
+"cheats.placeholder" = "Codice";
+"cheats.enable" = "Abilita";
+"cheats.invalidCode" = "Curioso? Vieni su Discord!";
+"cheats.validCode" = "Attivato!";
+
+// MARK: - Menu Items
+
+"menu.item.quit" = "Esci";
+"menu.item.home" = "Home";
+"menu.item.settings" = "Impostazioni";
+"menu.item.about" = "Informazioni";
+"menu.item.hide" = "Nascondi Pet";
+"menu.item.show" = "Mostra Pet";
+"menu.item.hideThisPet" = "Rimuovi";
+"menu.item.hideAllPet" = "Nascondi tutti";
+
+// MARK: - Pet Selection
+
+"petSelection.joinDiscord" = "È ancora silenzioso e desolato, ma abbiamo un server Discord!";
+"petSelection.addPet" = "Aggiungi";
+"petSelection.fixOnScreenPets" = "Applica / Resetta";
+"petSelection.yourPets" = "Pets sullo schermo:";
+"petSelection.morePets" = "Altri pets:";
+
+// MARK: - Settings
+
+"settings.gravity" = "Abilita Gravità";
+"settings.statusBarIconEnabled" = "Mostra nella barra di stato";
+"settings.size" = "Dimensioni Pet";
+"settings.launchAtLogin" = "Avvia automaticamente al login";
+"settings.speed" = "Velocità";
+"settings.restorePurchases" = "Ripristina Acquisti In-App";
+"settings.anonymousTracking" = "Abilita Statistiche Anonime";
+"settings.anonymousTracking.title" = "Statistiche Anonime";
+"settings.anonymousTracking.message" = "Non vengono raccolti dati personali, solo statistiche di utilizzo aninome.\n\nPerchè raccogliamo informazioni?\nSemplice... Se non lo facessimo non avremmo le risposte alle domande più banali, tipo, qual'è il pet più popolare... Il che sembra abbastanza importante, no? 😂\n\nLe statistiche vengono raccolte e analizzate via Firebase.";
+"settings.desktopInteractions.title" = "Interazioni Desktop";
+"settings.desktopInteractions.message" = "Permette ai pet di muoversi sulla barra del titolo di app e finestre.";
+
+// MARK: - About
+
+"about.leaveReviewMessage" = "Ciao, ti piace l'App?\nSe sì, allora che ne diresti di lasciarci 5 stelle sull'App Store?";
+"about.leaveReview" = "Lascia una recensione";
+"about.joinRedditMessage" = "Hai problemi, domande o vuoi conoscere altri utenti?\nUnisciti al Subreddit r/DesktopPets!\n(Anche se, lo ammetto, è un posto decisamente desolato al momento 😅)";
+"about.joinReddit" = "Vai a Reddit";
+"about.mailMessage" = "Altrimenti, puoi sempre contattarmi direttamente!";
+"about.mail" = "Manda Email";
+"about.privacyPolicy" = "Privacy Policy";
+
+// MARK: - Page Titles
+
+"page.title.home" = "Pets";
+"page.title.settings" = "Impostazioni";
+"page.title.help" = "Aiuto";
+"page.title.about" = "Informazioni";
+
+// MARK: - URLs
+
+"urls.github" = "https://github.com/curzel-it/pet-therapy";
+"urls.appStore" = "https://apps.apple.com/app/desktop-pets/id1575542220";
+"urls.twitter" = "https://twitter.com/DesktopPets";
+"urls.discord" = "https://discord.gg/MCdEgXKSH5";
+"urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
+"urls.mailto" = "mailto:pets@curzel.it?subject=Desktop%20Pets&body=Ciao%20Federico%2C%20";
+"urls.privacy" = "https://curzel.it/privacy.html";
+
+// MARK: - Pet Names
+
+"pet.name.betta" = "Betta";
+"pet.name.cat" = "Gatto Rosso";
+"pet.name.cat_black" = "Gatto Nero";
+"pet.name.cat_blue" = "Gatto Blu";
+"pet.name.cat_gray" = "Gatto";
+"pet.name.cat_grumpy" = "Gatto Scontroso";
+"pet.name.clockdigital" = "Orologio Digitale";
+"pet.name.clockanalog" = "Orologio Analogico";
+"pet.name.cromulon" = "Testone";
+"pet.name.cromulon_pink" = "Testone Rosa";
+"pet.name.cromulon_rainbow" = "Testone Figo";
+"pet.name.crow" = "Corvo";
+"pet.name.crow_white" = "Corvo Bianco";
+"pet.name.frog" = "Rana";
+"pet.name.frog" = "Rana Velenosa";
+"pet.name.koala" = "Koala";
+"pet.name.koala_pirate" = "Koala Pirata";
+"pet.name.hedgehog" = "Porcospino";
+"pet.name.mushroom" = "Brisetta";
+"pet.name.mushroom_amanita" = "Amanita";
+"pet.name.mushroomwizard" = "Maghetto Chill";
+"pet.name.moth" = "Falena";
+"pet.name.nyan" = "Nyan D. Cat";
+"pet.name.panda" = "Panda";
+"pet.name.panda_vest" = "Pandorato";
+"pet.name.puppy_milo" = "Milo";
+"pet.name.sheep" = "Pecora";
+"pet.name.sheep_black" = "Pecora Nera";
+"pet.name.sloth" = "Bradipo";
+"pet.name.sloth_swag" = "Bradipo Stiloso";
+"pet.name.snail" = "Lumacamicio";
+"pet.name.snail_nicky" = "Lumacamicio Rosa";
+"pet.name.trex" = "Draghetto";
+"pet.name.trex_blue" = "Ceratosaurus";
+"pet.name.trex_violet" = "T-Rex Viola";
+"pet.name.trex_yellow" = "T-Rex Dorato";
+"pet.name.ufo" = "UFO";
+
+// MARK: - Pet Descriptions
+
+"pet.about.betta" = "Anche noto come 'Pesce Combattente', molto elegante e popolarissimo.";
+"pet.about.cat" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_black" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_blue" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_gray" = "Beh, è un normalissimo gatto!";
+"pet.about.cat_grumpy" = "Guardalo, come ti giudica...";
+"pet.about.clockdigital" = "Mostra l'ora corrente e nient'altro... 😅";
+"pet.about.clockanalog" = "Mostra l'ora corrente e nient'altro... 😅";
+"pet.about.cromulon" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
+"pet.about.cromulon_pink" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
+"pet.about.cromulon_rainbow" = "Alieni a forma di teste umane, ma grandiBig come un pianeta...\n\"Mostrami cosa sai fare!\"";
+"pet.about.crow" = "Il preferito del designer!";
+"pet.about.crow_white" = "L'inverno è arrivato...";
+"pet.about.frog" = "Mangia le zanzare, quello nello schermo.";
+"pet.about.frog_venom" = "Ma che fai? Smetti di leccarle la schiena! 😆";
+"pet.about.koala" = "Funzionalmente estinto!? Ma funzionalmente estinto sarai te!";
+"pet.about.koala_pirate" = "Facciamo i pirati, dicevano. Sarà divertente, dicevano...";
+"pet.about.hedgehog" = "Coccolare con attenzione.";
+"pet.about.moth" = "Lasciatemelo dire, animare quelle ali è stato un inferno..!";
+"pet.about.mushroom" = "Una piccola brisa, il top per il risotto!";
+"pet.about.mushroom_amanita" = "Lo so che è carina, ma se le vedi nel bosco non mangiarle 😅";
+"pet.about.mushroomwizard" = "Adora rilassarsi tanto quanto adora i funghetti...";
+"pet.about.nyan" = "Homage to one of the internet most famous cats.";
+"pet.about.panda" = "L'universo ci ha portato il Guerriero Dragone!";
+"pet.about.panda_vest" = "Non c'è prezzo per la miticità... Neppure per l'attraenza.";
+"pet.about.puppy_milo" = "Magari non è esattamente come te lo aspettavi, ma non sono esattamente un designer ad essere onesti! haha";
+"pet.about.sheep" = "La 'eSheep' per Windows 95 è stato uno dei primi Desktop Pet, sapevatelo!";
+"pet.about.sheep_black" = "Ho solo invertito i colori, lo sapete che sono pigro...";
+"pet.about.sloth" = "Lo sapevate che sono così lenti e pigri che gli crescono alghe sul pelo?";
+"pet.about.sloth_swag" = "Lento, ma con stile...";
+"pet.about.snail" = "Miao! Sei tu Gary?";
+"pet.about.snail_nicky" = "Me l'ha fatta disegnare la mia compagna, ringraziate lei haha";
+"pet.about.trex" = "T-Rex? Drago? Entrambi?";
+"pet.about.trex_blue" = "Praticamente T-Rex con un corno!";
+"pet.about.trex_violet" = "Questo sembra il dinosauro dei Flintstones :D";
+"pet.about.trex_yellow" = "Una versione dorata doveva pur esserci, no?";
+"pet.about.ufo" = "Chiamarlo UAP ti farebbe sentire meglio?";

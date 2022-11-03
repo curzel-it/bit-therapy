@@ -16,7 +16,7 @@ extension Pet {
             )
         ],
         movementPath: .walk,
-        speed: 0.7
+        speed: 0.6
     )
 }
 

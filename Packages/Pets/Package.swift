@@ -15,8 +15,8 @@ let package = Package(
         .package(path: "../DesignSystem"),
         .package(path: "../Yage"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.4"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.4"),
-        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.7")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.9"),
+        .package(url: "https://github.com/curzel-it/squanch", from: "1.0.8")
     ],
     targets: [
         .target(

@@ -1,19 +1,18 @@
 import SwiftUI
 
 open class World: ObservableObject {
-    
     @Published public var children: [Entity] = []
     
-    public private(set) var bounds: CGRect = .zero
-    
+    public private(set) var bounds: CGRect = .zero    
     public var events: [Event] = []
         
     public init(bounds rect: CGRect) {
         set(bounds: rect)
     }
     
-    open func set(bounds: CGRect) {
-        self.bounds = bounds
+    open func set(bounds newBounds: CGRect) {
+        self.bounds = newBounds
+        children.forEach { $0.worldBounds = newBounds }
         let hotspots = Hotspot.allCases.map { $0.rawValue }
         let oldBounds = children.filter { hotspots.contains($0.id) }
         oldBounds.forEach { $0.kill() }

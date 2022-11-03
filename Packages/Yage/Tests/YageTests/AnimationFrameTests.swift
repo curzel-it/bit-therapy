@@ -3,7 +3,6 @@ import XCTest
 @testable import Yage
 
 class AnimationFrameTests: XCTestCase {
-    
     var entity: Entity!
     
     override func setUp() {

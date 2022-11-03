@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension World {    
+extension World {
     func verticalCenter() -> Entity {
         let entity = Entity(
             id: Hotspot.verticalCenter.rawValue,

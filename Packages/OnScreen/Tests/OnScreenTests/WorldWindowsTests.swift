@@ -3,12 +3,12 @@ import Yage
 
 @testable import OnScreen
 
-class WorldWindowsTests: XCTestCase {
+class OnScreenWindowsTests: XCTestCase {
     
     var world: LiveWorld!
     var entity1: Entity!
     var entity2: Entity!
-    var windows: WorldWindows!
+    var windows: OnScreenWindows!
     
     override func setUp() {
         let baseSize = CGRect(origin: .zero, size: .init(square: 100))
@@ -18,10 +18,10 @@ class WorldWindowsTests: XCTestCase {
         world?.kill()
         windows?.kill()
         
-        world = LiveWorld(id: "WorldWindowsTests", bounds: CGRect(size: .init(square: 1000)))
+        world = LiveWorld(id: "OnScreenWindowsTests", bounds: CGRect(size: .init(square: 1000)))
         entity1 = Entity(id: "test1", frame: baseSize, in: world.state.bounds)
         entity2 = Entity(id: "test2", frame: baseSize, in: world.state.bounds)
-        windows = WorldWindows(for: world)
+        windows = OnScreenWindows(for: world)
     }
     
     func testWindowsAreSpawnedAutomatically() {

@@ -18,11 +18,11 @@ class AutoRespawnTests: XCTestCase {
         respawner.subject = entity
     }
     
-    func testOuterBoundsPropertlySet() {
-        XCTAssertEqual(respawner.outerBounds.minX, -250)
-        XCTAssertEqual(respawner.outerBounds.minY, -250)
-        XCTAssertEqual(respawner.outerBounds.width, 510)
-        XCTAssertEqual(respawner.outerBounds.height, 510)
+    func testOuterBoundsPropertlyCalculated() {
+        XCTAssertEqual(respawner.outerBounds().minX, -250)
+        XCTAssertEqual(respawner.outerBounds().minY, -250)
+        XCTAssertEqual(respawner.outerBounds().width, 510)
+        XCTAssertEqual(respawner.outerBounds().height, 510)
     }
     
     func testEntityInsideBoundsIsUntouched() {

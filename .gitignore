@@ -1,8 +1,12 @@
 Aseprite/
 *.aseprite
+GoogleService-Info.plist
+*/GoogleService-Info.plist
 Secrets.plist
+*/Secrets.plist
 CheatsImplementation.swift
 */CheatsImplementation.swift
+
 
 # Xcode
 #

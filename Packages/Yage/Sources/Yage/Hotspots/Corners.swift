@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension World {    
+extension World {
     func topLeftCorner() -> Entity {
         let entity = Entity(
             id: Hotspot.topLeftCorner.rawValue,

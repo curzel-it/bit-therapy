@@ -3,7 +3,6 @@ import XCTest
 @testable import Yage
 
 class LinearMovementTests: XCTestCase {
-    
     func testPositionProperlyUpdates() {
         let entity = Entity(
             id: "entity",

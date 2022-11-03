@@ -6,22 +6,22 @@ import Squanch
 import Yage
 
 public struct OnScreen {
-    private static var viewModel: ViewModel?
-    private static var worldWindows: OnScreenWindows?
+    private static var viewModel: DesktopEnvironment?
+    private static var windows: OnScreenWindows?
     
     public static func show(with settings: OnScreenSettings) {
         hide()
         printDebug("OnScreen", "Starting...")
-        self.viewModel = ViewModel(with: settings)
-        self.worldWindows = OnScreenWindows(for: viewModel)
+        self.viewModel = DesktopEnvironment(settings: settings)
+        self.windows = OnScreenWindows(for: viewModel)
     }
     
     public static func hide() {
         printDebug("OnScreen", "Hiding everything...")
         viewModel?.kill()
         viewModel = nil
-        worldWindows?.kill()
-        worldWindows = nil
+        windows?.kill()
+        windows = nil
     }
     
     public static func triggerUfoAbduction() {
@@ -34,50 +34,24 @@ public struct OnScreen {
     }
 }
 
-class OnScreenWindows: WorldWindows {
-    override func windowWillClose(_ notification: Notification) {
-        super.windowWillClose(notification)
-        if isAlive && windows.count == 0 {
-            printDebug("OnScreen", "No more windows, terminating")
-            kill()
-            OnScreen.hide()
-        }
-    }
-}
-
-class ViewModel: LiveWorld {
-    var settings: OnScreenSettings
-    var desktopObstacles: DesktopObstaclesService!
+class DesktopEnvironment: PetsEnvironment {
+    private var onScreenSettings: OnScreenSettings
+    private var desktopObstacles: DesktopObstaclesService!
     
-    init(with settings: OnScreenSettings) {
-        self.settings = settings
-        super.init(id: "OnScreen", bounds: NSScreen.main?.frame.bounds ?? .zero)
-        addSelectedPets()
+    init(settings: OnScreenSettings) {
+        self.onScreenSettings = settings
+        super.init(with: settings, bounds: NSScreen.main?.frame.bounds ?? .zero)
         observeWindowsIfNeeded()
-        scheduleUfoAbduction()
     }
     
     private func observeWindowsIfNeeded() {
-        guard settings.desktopInteractions else { return }
+        guard onScreenSettings.desktopInteractions else { return }
         desktopObstacles = DesktopObstaclesService(world: self)
         desktopObstacles.start()
     }
     
-    private func addSelectedPets() {
-        let pets: [DesktopPet] = settings.selectedPets.map {
-            let species = Pet.by(id: $0) ?? .sloth
-            return DesktopPet(of: species, in: state.bounds, settings: settings)
-        }
-        state.children.append(contentsOf: pets)
-    }
-    
-    func remove(pet species: Pet) {
-        settings.remove(pet: species)
-        let petToRemove = state.children.first { child in
-            guard let pet = child as? PetEntity else { return false }
-            return pet.species == species
-        }
-        petToRemove?.kill()
+    override func buildEntity(pet species: Pet) -> PetEntity {
+        DesktopPet(of: species, in: state.bounds, settings: onScreenSettings)
     }
     
     override func kill() {
@@ -88,8 +62,4 @@ class ViewModel: LiveWorld {
 
 public protocol OnScreenSettings: PetsSettings {
     var desktopInteractions: Bool { get }
-    var selectedPets: [String] { get }
-    var ufoAbductionSchedule: String { get }
-    
-    func remove(pet: Pet)
 }

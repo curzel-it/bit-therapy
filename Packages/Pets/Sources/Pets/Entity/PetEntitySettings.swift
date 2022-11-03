@@ -32,7 +32,7 @@ extension PetEntity {
 
 extension PetEntity {
     static func initialFrame(in worldBounds: CGRect, size: CGFloat) -> CGRect {
-        return CGRect(origin: .zero, size: CGSize(square: size))
+        CGRect(origin: .zero, size: CGSize(square: size))
     }
 }
 
@@ -42,9 +42,11 @@ extension Capabilities {
     public static func petAnimations() -> Capabilities {
         [PetAnimationsProvider(), PetSpritesProvider()]
     }
+    
     public static func defaultsCrawler() -> Capabilities {
         crawler() + petAnimations()
     }
+    
     public static func defaults() -> Capabilities {
         walker() + petAnimations()
     }

@@ -1,7 +1,6 @@
 import SwiftUI
 
 extension VStack {
-    
     @inlinable public init(
         alignment: HorizontalAlignment,
         spacing: Spacing,
@@ -25,8 +24,7 @@ extension VStack {
     }
 }
 
-extension HStack {
-    
+extension HStack {    
     @inlinable public init(
         alignment: VerticalAlignment,
         spacing: Spacing,

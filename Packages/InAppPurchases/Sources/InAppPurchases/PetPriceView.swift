@@ -20,7 +20,7 @@ public struct PetPriceView: View {
     public var body: some View {
         if isShown {
             Text(formattedPrice)
-                .font(.body)
+                .font(.headline)
                 .padding(.sm)
                 .frame(height: height)
                 .background(Color.paidBanner)
