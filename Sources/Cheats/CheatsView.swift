@@ -4,7 +4,6 @@ import Schwifty
 import SwiftUI
 
 struct CheatsView: View {
-    
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
