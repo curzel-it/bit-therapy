@@ -1,4 +1,5 @@
 import Combine
+import DesignSystem
 import Pets
 import Schwifty
 import SwiftUI
@@ -6,23 +7,13 @@ import Yage
 
 struct MainScene: Scene {
     @StateObject var appState = AppState.global
-    @State var showPetSelection: Bool = false
-    @State var showAbout: Bool = false
-    @State var showSettings: Bool = false
     
     var body: some Scene {
         WindowGroup {
             ZStack {
                 ContentView()
-                VStack {
-                    Button(Lang.PetSelection.petSelection) { showPetSelection = true }
-                    Button(Lang.Page.about) { showAbout = true }
-                    Button(Lang.Page.settings) { showSettings = true }
-                }
+                Menu()
             }
-            .sheet(isPresented: $showPetSelection) { Homepage() }
-            .sheet(isPresented: $showAbout) { AboutView() }
-            .sheet(isPresented: $showSettings) { SettingsView() }
             .environmentObject(appState)
         }
     }

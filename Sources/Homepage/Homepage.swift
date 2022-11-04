@@ -1,6 +1,7 @@
 import DesignSystem
 import InAppPurchases
 import PetDetails
+import Schwifty
 import SwiftUI
 
 struct Homepage: View {
@@ -10,6 +11,9 @@ struct Homepage: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xxl) {
+                if DeviceRequirement.iOS.isSatisfied {
+                    Text(Lang.Page.home).title()
+                }
                 PetsGrid(
                     title: Lang.PetSelection.yourPets,
                     columns: viewModel.gridColums,

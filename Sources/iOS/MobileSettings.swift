@@ -9,6 +9,7 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
+                Text(Lang.Page.settings).title()
                 SizeSlider()
                 SpeedSlider()
                 GravitySwitch().positioned(.leading)

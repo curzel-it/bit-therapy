@@ -4,24 +4,23 @@ import SwiftUI
 
 struct AboutView: View {        
     var body: some View {
-        VStack(alignment: .center, spacing: .xl) {
-            Section(
-                message: Lang.About.leaveReviewMessage,
-                linkTitle: Lang.About.leaveReview,
-                link: Lang.Urls.appStore
-            )
-            GiveFeedbackViaSurvey()
-            PrivacyPolicy().padding(.top, .xl)
-            
+        ScrollView {
             VStack(spacing: .xl) {
-                Socials().padding(.top, .lg)
-                Text(appVersion)
+                Text(Lang.Page.about).title()
+                
+                LeaveReview()
+                GiveFeedbackViaSurvey()
+                PrivacyPolicy().padding(.top, .xl)
+                
+                VStack(spacing: .xl) {
+                    Socials().padding(.top, .lg)
+                    Text(appVersion)
+                }
+                .positioned(.bottom)
             }
-            .positioned(.bottom)
+            .multilineTextAlignment(.center)
+            .padding(.md)
         }
-        .multilineTextAlignment(.center)
-        .padding(.md)
-        .padding(.top, .lg)
     }
     
     var appVersion: String {
@@ -63,16 +62,14 @@ private struct SocialIcon: View {
     }
 }
 
-private struct Section: View {
-    let message: String
-    let linkTitle: String
-    let link: String
-    
+private struct LeaveReview: View {
     var body: some View {
         VStack(spacing: .md) {
-            Text(message)
-            Button(linkTitle) { URL.visit(urlString: link) }
-                .buttonStyle(.regular)
+            Text(Lang.About.leaveReviewMessage)
+            Button(Lang.About.leaveReview) {
+                URL.visit(urlString: Lang.Urls.appStore)
+            }
+            .buttonStyle(.regular)
         }
     }
 }

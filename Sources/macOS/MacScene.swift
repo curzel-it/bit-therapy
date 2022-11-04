@@ -66,21 +66,7 @@ class MainViewModel: ObservableObject {
     @Published public var selectedPage: AppPage = .home
 }
 
-enum AppPage: String, CaseIterable {
-    case home
-    case settings
-    case about
-}
-
-extension AppPage: CustomStringConvertible, Tabbable {
-    var description: String {
-        switch self {
-        case .home: return Lang.Page.home
-        case .settings: return Lang.Page.settings
-        case .about: return Lang.Page.about
-        }
-    }
-}
+extension AppPage: Tabbable {}
 
 private struct Header: View {
     @EnvironmentObject var appState: AppState
@@ -90,7 +76,7 @@ private struct Header: View {
         HStack {
             TabSelector(
                 selection: $viewModel.selectedPage,
-                options: AppPage.allCases
+                options: [AppPage.home, AppPage.settings, AppPage.about]
             )
             JoinOurDiscord()
         }
@@ -103,9 +89,10 @@ private struct PageContents: View {
     
     var body: some View {
         switch viewModel.selectedPage {
+        case .about: AboutView()
         case .home: Homepage()
         case .settings: SettingsView()
-        case .about: AboutView()
+        case .none: EmptyView()
         }
     }
 }

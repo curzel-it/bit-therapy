@@ -117,7 +117,7 @@ struct SettingsSlider: View {
                 .frame(width: 100, when: .macOS)
             
             Slider(value: value, in: range) { EmptyView() }
-                .frame(minWidth: 200)
+                .frame(width: 300, when: .iPad)
             
             Button(Lang.reset) { reset() }
                 .buttonStyle(.text)

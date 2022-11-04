@@ -4,7 +4,7 @@ import Schwifty
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
-        printDebug("App", "Launched")        
+        printDebug("App", "Launched")
         OnScreen.show(with: AppState.global)
         StatusBarCoordinator.shared.show()
     }
