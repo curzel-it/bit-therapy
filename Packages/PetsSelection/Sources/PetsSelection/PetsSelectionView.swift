@@ -1,37 +1,34 @@
 import DesignSystem
 import InAppPurchases
-import PetDetails
 import Schwifty
 import SwiftUI
 
-struct Homepage: View {
-    @EnvironmentObject var appState: AppState
-    @StateObject var viewModel = HomepageViewModel()
+struct PetsSelectionView: View {
+    @StateObject var viewModel: PetsSelectionViewModel
+    let footer: AnyView
     
     var body: some View {
         ScrollView {
             VStack(spacing: .xxl) {
                 if DeviceRequirement.iOS.isSatisfied {
-                    Text(Lang.Page.home).title()
+                    Text(viewModel.localizedContent.title).title()
                 }
                 PetsGrid(
-                    title: Lang.PetSelection.yourPets,
+                    title: viewModel.localizedContent.yourPets,
                     columns: viewModel.gridColums,
                     pets: viewModel.selectedPets
                 )
                 PetsGrid(
-                    title: Lang.PetSelection.morePets,
+                    title: viewModel.localizedContent.morePets,
                     columns: viewModel.gridColums,
                     pets: viewModel.unselectedPets
                 )
-                RequestPetsViaSurvey()
+                footer
             }
             .padding(.md)
         }
         .sheet(isPresented: viewModel.showingDetails) {
-            if let pet = viewModel.selectedPet {
-                PetDetailsCoordinator.view(isShown: viewModel.showingDetails, pet: pet)
-            }
+            viewModel.petDetailsView()
         }
         .environmentObject(viewModel)
         .environmentObject(PricingService.global)

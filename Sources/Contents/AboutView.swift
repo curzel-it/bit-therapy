@@ -6,8 +6,9 @@ struct AboutView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
-                Text(Lang.Page.about).title()
-                
+                if DeviceRequirement.iOS.isSatisfied {
+                    Text(Lang.Page.about).title()
+                }                
                 LeaveReview()
                 GiveFeedbackViaSurvey()
                 PrivacyPolicy().padding(.top, .xl)

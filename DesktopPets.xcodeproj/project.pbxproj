@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E1FA9B528AE851F0082A113 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* Homepage.swift */; };
-		1E1FA9B728AE851F0082A113 /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetsGrid.swift */; };
-		1E1FA9BB28AE851F0082A113 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */; };
 		1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
@@ -17,7 +14,6 @@
 		1E33599D28CDFA25007BB53E /* CheatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599B28CDFA25007BB53E /* CheatsView.swift */; };
 		1E4499F62913211C00DD97BC /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
 		1E4499F72913211C00DD97BC /* MacScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5828740F8E00AB872E /* MacScene.swift */; };
-		1E4499F82913211C00DD97BC /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetsGrid.swift */; };
 		1E4499F92913211C00DD97BC /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D04029130C11004031BC /* StatusBar.swift */; };
 		1E4499FB2913211C00DD97BC /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
 		1E4499FD2913211C00DD97BC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
@@ -26,9 +22,7 @@
 		1E449A002913211C00DD97BC /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5C28740F8E00AB872E /* AboutView.swift */; };
 		1E449A012913211C00DD97BC /* MacSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* MacSettings.swift */; };
 		1E449A032913211C00DD97BC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
-		1E449A042913211C00DD97BC /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */; };
 		1E449A062913211C00DD97BC /* CheatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599B28CDFA25007BB53E /* CheatsView.swift */; };
-		1E449A072913211C00DD97BC /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* Homepage.swift */; };
 		1E449A092913211C00DD97BC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499EB2913211C00DD97BC /* DesignSystem */; };
 		1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E52913211C00DD97BC /* InAppPurchases */; };
 		1E449A0B2913211C00DD97BC /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499F12913211C00DD97BC /* RateKit */; };
@@ -45,12 +39,15 @@
 		1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5D3EA428C08E5F00AC50C6 /* RateKit */; };
 		1E7D1EA62909C31600CC036B /* MacSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* MacSettings.swift */; };
 		1E7D33DC29148D50002C0188 /* MobileMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33DB29148D50002C0188 /* MobileMenu.swift */; };
+		1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33DD29149491002C0188 /* PetsSelection */; };
+		1E7D33E029149498002C0188 /* PetsSelection in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33DF29149498002C0188 /* PetsSelection */; };
+		1E7D33E2291494AA002C0188 /* PetsSelection in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33E1291494AA002C0188 /* PetsSelection */; };
+		1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
+		1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
+		1E7D33E6291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
 		1E9BB637291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
 		1E9BB638291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
 		1E9BB639291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
-		1EA055492913D7A50037803E /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055482913D7A50037803E /* PetDetails.swift */; };
-		1EA0554A2913D7A50037803E /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055482913D7A50037803E /* PetDetails.swift */; };
-		1EA0554B2913D7A50037803E /* PetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055482913D7A50037803E /* PetDetails.swift */; };
 		1EA0554D2913D7AD0037803E /* PetDetails in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA0554C2913D7AD0037803E /* PetDetails */; };
 		1EA0554F2913D7B20037803E /* PetDetails in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA0554E2913D7B20037803E /* PetDetails */; };
 		1EA055512913D7B80037803E /* PetDetails in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA055502913D7B80037803E /* PetDetails */; };
@@ -72,13 +69,10 @@
 		1ED1D02B2912C83B004031BC /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D02A2912C83B004031BC /* Schwifty */; };
 		1ED1D02D2912C83C004031BC /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D02C2912C83C004031BC /* Squanch */; };
 		1ED1D02F2912C83C004031BC /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D02E2912C83C004031BC /* RateKit */; };
-		1ED1D0302912C8A1004031BC /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AC28AE851F0082A113 /* Homepage.swift */; };
 		1ED1D0312912C8A1004031BC /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
 		1ED1D0322912C8A1004031BC /* CheatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599B28CDFA25007BB53E /* CheatsView.swift */; };
-		1ED1D0342912C8A1004031BC /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AD28AE851F0082A113 /* PetsGrid.swift */; };
 		1ED1D0352912C8A1004031BC /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5C28740F8E00AB872E /* AboutView.swift */; };
 		1ED1D0372912C8A1004031BC /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
-		1ED1D0382912C8A1004031BC /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */; };
 		1ED1D03A2912C8A1004031BC /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1ED1D03B2912C8A1004031BC /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
 		1ED1D03C2912C8A1004031BC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
@@ -122,9 +116,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E1FA9AC28AE851F0082A113 /* Homepage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
-		1E1FA9AD28AE851F0082A113 /* PetsGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGrid.swift; sourceTree = "<group>"; };
-		1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
 		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1E2AC745290B1093003D0AB2 /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		1E33599828CDF6A8007BB53E /* Cheats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheats.swift; sourceTree = "<group>"; };
@@ -133,9 +124,9 @@
 		1E449A1E291321CF00DD97BC /* InfoMac-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfoMac-Dev.plist"; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* MacSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSettings.swift; sourceTree = "<group>"; };
 		1E7D33DB29148D50002C0188 /* MobileMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileMenu.swift; sourceTree = "<group>"; };
+		1E7D33E3291499FB002C0188 /* PetsSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsSelection.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSettingsElements.swift; sourceTree = "<group>"; };
-		1EA055482913D7A50037803E /* PetDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetails.swift; sourceTree = "<group>"; };
 		1EA055522913DCD20037803E /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
 		1EA055552913E4B40037803E /* MobileAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppDelegate.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* MacAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +157,7 @@
 			files = (
 				1E449A092913211C00DD97BC /* DesignSystem in Frameworks */,
 				1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */,
+				1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */,
 				1E449A0B2913211C00DD97BC /* RateKit in Frameworks */,
 				1E449A0C2913211C00DD97BC /* LaunchAtLogin in Frameworks */,
 				1E449A0D2913211C00DD97BC /* Pets in Frameworks */,
@@ -192,6 +184,7 @@
 				1ED1D0292912C83B004031BC /* Yage in Frameworks */,
 				1ED1D02D2912C83C004031BC /* Squanch in Frameworks */,
 				1EA055512913D7B80037803E /* PetDetails in Frameworks */,
+				1E7D33E2291494AA002C0188 /* PetsSelection in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +208,7 @@
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
+				1E7D33E029149498002C0188 /* PetsSelection in Frameworks */,
 				1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
 				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
@@ -231,17 +225,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E1FA9A728AE851F0082A113 /* Homepage */ = {
-			isa = PBXGroup;
-			children = (
-				1E1FA9AC28AE851F0082A113 /* Homepage.swift */,
-				1E1FA9AF28AE851F0082A113 /* HomepageViewModel.swift */,
-				1EA055482913D7A50037803E /* PetDetails.swift */,
-				1E1FA9AD28AE851F0082A113 /* PetsGrid.swift */,
-			);
-			path = Homepage;
-			sourceTree = "<group>";
-		};
 		1E2AC742290AB375003D0AB2 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,30 +232,6 @@
 				1E2AC73F290AA941003D0AB2 /* AppState.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		1E7FB47428BD184C002F377D /* Survey */ = {
-			isa = PBXGroup;
-			children = (
-				1E7FB47728BD1A7F002F377D /* SurveyView.swift */,
-			);
-			path = Survey;
-			sourceTree = "<group>";
-		};
-		1E9BB635291449D1003D5CFB /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		1ED1CFE42912C572004031BC /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				1E2AC745290B1093003D0AB2 /* Lang.swift */,
-			);
-			path = Localization;
 			sourceTree = "<group>";
 		};
 		1ED1CFE52912C57E004031BC /* iOS */ = {
@@ -324,15 +283,11 @@
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A6FB7D5B28740F8E00AB872E /* About */,
 				1E2AC742290AB375003D0AB2 /* App */,
 				A6FB7D5228740F8E00AB872E /* Cheats */,
-				1E1FA9A728AE851F0082A113 /* Homepage */,
+				A6FB7D5B28740F8E00AB872E /* Contents */,
 				1ED1CFE52912C57E004031BC /* iOS */,
-				1ED1CFE42912C572004031BC /* Localization */,
 				A6FB7D5528740F8E00AB872E /* macOS */,
-				1E9BB635291449D1003D5CFB /* Settings */,
-				1E7FB47428BD184C002F377D /* Survey */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -358,12 +313,16 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		A6FB7D5B28740F8E00AB872E /* About */ = {
+		A6FB7D5B28740F8E00AB872E /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				1E7D33E3291499FB002C0188 /* PetsSelection.swift */,
+				1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */,
+				1E7FB47728BD1A7F002F377D /* SurveyView.swift */,
+				1E2AC745290B1093003D0AB2 /* Lang.swift */,
 				A6FB7D5C28740F8E00AB872E /* AboutView.swift */,
 			);
-			path = About;
+			path = Contents;
 			sourceTree = "<group>";
 		};
 		A6FB7D8828740F9A00AB872E /* Tests */ = {
@@ -406,6 +365,7 @@
 				1E4499F12913211C00DD97BC /* RateKit */,
 				1E4499F32913211C00DD97BC /* StatusBarItems */,
 				1EA0554E2913D7B20037803E /* PetDetails */,
+				1E7D33DD29149491002C0188 /* PetsSelection */,
 			);
 			productName = MacPets;
 			productReference = 1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */;
@@ -435,6 +395,7 @@
 				1ED1D02C2912C83C004031BC /* Squanch */,
 				1ED1D02E2912C83C004031BC /* RateKit */,
 				1EA055502913D7B80037803E /* PetDetails */,
+				1E7D33E1291494AA002C0188 /* PetsSelection */,
 			);
 			productName = "Mobile Pets";
 			productReference = 1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */;
@@ -504,6 +465,7 @@
 				1E5D3EA428C08E5F00AC50C6 /* RateKit */,
 				1ED1D03E29130A86004031BC /* StatusBarItems */,
 				1EA0554C2913D7AD0037803E /* PetDetails */,
+				1E7D33DF29149498002C0188 /* PetsSelection */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -711,12 +673,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E4499F62913211C00DD97BC /* Cheats.swift in Sources */,
 				1E4499F72913211C00DD97BC /* MacScene.swift in Sources */,
-				1E4499F82913211C00DD97BC /* PetsGrid.swift in Sources */,
 				1E4499F92913211C00DD97BC /* StatusBar.swift in Sources */,
 				1E4499FB2913211C00DD97BC /* Lang.swift in Sources */,
-				1EA0554A2913D7A50037803E /* PetDetails.swift in Sources */,
 				1E4499FD2913211C00DD97BC /* AppState.swift in Sources */,
 				1E4499FE2913211C00DD97BC /* CheatsImplementation.swift in Sources */,
 				1E4499FF2913211C00DD97BC /* SurveyView.swift in Sources */,
@@ -725,9 +686,7 @@
 				1E9BB638291449E5003D5CFB /* SharedSettingsElements.swift in Sources */,
 				1E449A032913211C00DD97BC /* App.swift in Sources */,
 				1EA055592913E4BE0037803E /* MacAppDelegate.swift in Sources */,
-				1E449A042913211C00DD97BC /* HomepageViewModel.swift in Sources */,
 				1E449A062913211C00DD97BC /* CheatsView.swift in Sources */,
-				1E449A072913211C00DD97BC /* Homepage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,13 +694,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7D33E6291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1ED1D0352912C8A1004031BC /* AboutView.swift in Sources */,
 				1ED1D0372912C8A1004031BC /* CheatsImplementation.swift in Sources */,
-				1ED1D0382912C8A1004031BC /* HomepageViewModel.swift in Sources */,
-				1ED1D0302912C8A1004031BC /* Homepage.swift in Sources */,
 				1EA055532913DCD20037803E /* MobileSettings.swift in Sources */,
 				1EA055562913E4B40037803E /* MobileAppDelegate.swift in Sources */,
-				1EA0554B2913D7A50037803E /* PetDetails.swift in Sources */,
 				1ED1D03C2912C8A1004031BC /* AppState.swift in Sources */,
 				1ED1D03A2912C8A1004031BC /* SurveyView.swift in Sources */,
 				1E7D33DC29148D50002C0188 /* MobileMenu.swift in Sources */,
@@ -749,7 +706,6 @@
 				1EA0555A2913E5C10037803E /* App.swift in Sources */,
 				1ED1D0322912C8A1004031BC /* CheatsView.swift in Sources */,
 				1E9BB639291449E5003D5CFB /* SharedSettingsElements.swift in Sources */,
-				1ED1D0342912C8A1004031BC /* PetsGrid.swift in Sources */,
 				1ED1D01D2912C683004031BC /* MobileScene.swift in Sources */,
 				1ED1D0312912C8A1004031BC /* Cheats.swift in Sources */,
 			);
@@ -775,12 +731,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MacScene.swift in Sources */,
-				1E1FA9B728AE851F0082A113 /* PetsGrid.swift in Sources */,
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */,
-				1EA055492913D7A50037803E /* PetDetails.swift in Sources */,
 				1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */,
 				64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */,
 				1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */,
@@ -789,9 +744,7 @@
 				1E9BB637291449E5003D5CFB /* SharedSettingsElements.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
 				1EA055582913E4BE0037803E /* MacAppDelegate.swift in Sources */,
-				1E1FA9BB28AE851F0082A113 /* HomepageViewModel.swift in Sources */,
 				1E33599D28CDFA25007BB53E /* CheatsView.swift in Sources */,
-				1E1FA9B528AE851F0082A113 /* Homepage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1433,6 +1386,18 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */;
 			productName = RateKit;
+		};
+		1E7D33DD29149491002C0188 /* PetsSelection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PetsSelection;
+		};
+		1E7D33DF29149498002C0188 /* PetsSelection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PetsSelection;
+		};
+		1E7D33E1291494AA002C0188 /* PetsSelection */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PetsSelection;
 		};
 		1EA0554C2913D7AD0037803E /* PetDetails */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -28,10 +28,10 @@ struct PetsGrid: View {
 // MARK: - Grid Item
 
 private struct Item: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var viewModel: PetsSelectionViewModel
     
     let pet: Pet
-    var isSelected: Bool { appState.selectedPets.contains(pet.id) }
+    var isSelected: Bool { viewModel.isSelected(pet) }
     
     var body: some View {
         ZStack {
@@ -44,7 +44,7 @@ private struct Item: View {
 // MARK: - Item Preview
 
 private struct Preview: View {
-    @EnvironmentObject var viewModel: HomepageViewModel
+    @EnvironmentObject var viewModel: PetsSelectionViewModel
     
     let pet: Pet
     

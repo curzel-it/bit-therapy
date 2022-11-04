@@ -65,15 +65,15 @@ private struct Footer: View {
     
     var body: some View {
         HStack {
-            Button(viewModel.lang.translation(for: .cancel), action: viewModel.close)
+            Button(viewModel.lang.cancel, action: viewModel.close)
                 .buttonStyle(.text)
             
             if viewModel.canSelect {
-                Button(viewModel.lang.translation(for: .addPet), action: viewModel.select)
+                Button(viewModel.lang.addPet, action: viewModel.select)
                     .buttonStyle(.regular)
             }
             if viewModel.canRemove {
-                Button(viewModel.lang.translation(for: .remove), action: viewModel.remove)
+                Button(viewModel.lang.remove, action: viewModel.remove)
                     .buttonStyle(.regular)
             }
             if viewModel.canBuy {

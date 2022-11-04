@@ -19,7 +19,7 @@ Hope you like them too!
 ## Screenshots
 
 ![App running on my mac](Gallery/demo.gif)
-![Homepage, light mode](Gallery/1.png)
+![PetsSelectionView, light mode](Gallery/1.png)
 ![Settings, light mode](Gallery/3.png)
 
 ## How does it work?

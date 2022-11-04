@@ -68,7 +68,7 @@ class PetDetailsViewModel: ObservableObject {
             Tracking.purchased(pet: pet, price: -1, success: false)
             return
         }
-        animateBuyTitle(lang.translation(for: .purchasing))
+        animateBuyTitle(lang.purchasing)
         
         Task {
             let succeed = await PricingService.global.buy(item)
@@ -80,10 +80,10 @@ class PetDetailsViewModel: ObservableObject {
             
             Task { @MainActor in
                 if succeed {
-                    animateBuyTitle(lang.translation(for: .purchased))
+                    animateBuyTitle(lang.purchased)
                 } else {
-                    animateBuyTitle(lang.translation(for: .somethingWentWrong))
-                    animateBuyTitle(lang.translation(for: .loading), delay: 2)
+                    animateBuyTitle(lang.somethingWentWrong)
+                    animateBuyTitle(lang.loading, delay: 2)
                 }
             }
         }

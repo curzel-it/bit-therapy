@@ -11,20 +11,17 @@ public protocol PetDetailsManager {
 }
 
 public protocol LocalizedContentProvider {
+    var addPet: String { get }
+    var cancel: String { get }
+    var loading: String { get }
+    var purchasing: String { get }
+    var purchased: String { get }
+    var remove: String { get }
+    var somethingWentWrong: String { get }
+    
     func buyButtonTitle(formattedPrice: String) -> String
     func description(of pet: Pet) -> String
     func name(of pet: Pet) -> String
-    func translation(for: LocalizableKey) -> String
-}
-
-public enum LocalizableKey {
-    case addPet
-    case cancel
-    case loading
-    case purchasing
-    case purchased
-    case remove
-    case somethingWentWrong
 }
 
 public class PetDetailsViewCoordinator {

@@ -23,6 +23,9 @@
       location = "group:Packages/PetDetails">
    </FileRef>
    <FileRef
+      location = "group:Packages/PetsSelection">
+   </FileRef>
+   <FileRef
       location = "group:Packages/StatusBarItems">
    </FileRef>
    <FileRef

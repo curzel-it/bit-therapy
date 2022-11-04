@@ -56,7 +56,7 @@ struct Menu: View {
         ) {
             switch viewModel.selectedPage {
             case .about: AboutView()
-            case .home: Homepage()
+            case .home: PetsSelectionCoordinator.view()
             case .settings: SettingsView()
             case .none: EmptyView()
             }
