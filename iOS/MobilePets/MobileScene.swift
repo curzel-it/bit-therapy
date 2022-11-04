@@ -11,6 +11,7 @@ struct MainScene: Scene {
     var body: some Scene {
         WindowGroup {
             ZStack {
+                Background()
                 ContentView()
                 Menu()
             }

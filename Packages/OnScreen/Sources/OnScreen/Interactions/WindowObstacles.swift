@@ -9,26 +9,30 @@ class DesktopObstaclesService: ObservableObject {
     private let windowsDetector = WindowsDetector().started(pollInterval: 1)
     private var windowsCanc: AnyCancellable!
     
-    public init(world: LiveWorld) {
+    init(world: LiveWorld) {
         self.world = world
     }
     
-    public func start() {
+    func start() {
         windowsCanc = windowsDetector.$userWindows.sink { [weak self] in
             self?.onWindows($0)
         }
     }
     
-    func onWindows(_ windowInfos: [WindowInfo]) {
-        let windows = windowInfos.map { SomeWindow(from: $0) }
+    func stop() {
+        windowsDetector.stop()
+        windowsCanc?.cancel()
+    }
+    
+    private func onWindows(_ windows: [WindowInfo]) {
         let obstacles = obstacles(from: windows)
         world.update(withObstacles: obstacles)
     }
     
-    func obstacles(from windows: [SomeWindow]) -> [Entity] {
+    private func obstacles(from windows: [WindowInfo]) -> [Entity] {
         windows
             .reversed()
-            .filter { isValidWindow(owner: $0.owner, frame: $0.frame) }
+            .filter { $0.isValidObstacle(within: world.state.bounds) }
             .map { $0.frame }
             .reduce([]) { obstacles, rect in
                 let visibleObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
@@ -39,7 +43,7 @@ class DesktopObstaclesService: ObservableObject {
             .map { WindowObstacle(of: $0, in: world) }
     }
     
-    func obstacles(fromWindowFrame frame: CGRect) -> [CGRect] {
+    private func obstacles(fromWindowFrame frame: CGRect) -> [CGRect] {
         obstacles(from: frame, borderThickness: 10)
     }
     
@@ -47,34 +51,8 @@ class DesktopObstaclesService: ObservableObject {
         [CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: borderThickness)]
     }
     
-    func isValidWindow(owner: String, frame: CGRect) -> Bool {
-        guard !frame.isNull && !frame.isEmpty && !frame.isInfinite else { return false }
-        guard frame != NSScreen.main?.frame.bounds else { return false }
-        guard !frame.contains(world.state.bounds) else { return false }
-        if owner.contains("desktop pets") {
-            return frame.width >= 450 && frame.height >= 450
-        }
-        if owner == "shades" { return false }
-        return true
-    }
-    
-    func isValidObstacle(frame: CGRect) -> Bool {
+    private func isValidObstacle(frame: CGRect) -> Bool {
         frame.minY > 100
-    }
-    
-    public func stop() {
-        windowsDetector.stop()
-        windowsCanc?.cancel()
-    }
-}
-
-struct SomeWindow: Codable {
-    let owner: String
-    let frame: CGRect
-    
-    init(from info: WindowInfo) {
-        owner = info.processName?.lowercased() ?? ""
-        frame = info.frame
     }
 }
 
@@ -92,7 +70,7 @@ class WindowObstacle: Entity {
     static var id: Int = 0
 }
 
-extension Entity {
+private extension Entity {
     var isWindowObstacle: Bool { self is WindowObstacle }
 }
 
@@ -115,5 +93,20 @@ extension LiveWorld {
         obstacles
             .filter { !existingRects.contains($0.frame) }
             .forEach { state.children.append($0) }
+    }
+}
+
+private extension WindowInfo {
+    var owner: String { processName?.lowercased() ?? "" }
+    
+    func isValidObstacle(within worldBounds: CGRect) -> Bool {
+        guard !frame.isNull && !frame.isEmpty && !frame.isInfinite else { return false }
+        guard frame != NSScreen.main?.frame.bounds else { return false }
+        guard !frame.contains(worldBounds) else { return false }
+        
+        if owner.contains("desktop pets") {
+            return frame.width >= 450 && frame.height >= 450
+        }
+        return true
     }
 }

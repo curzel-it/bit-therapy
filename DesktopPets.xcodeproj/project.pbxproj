@@ -45,6 +45,7 @@
 		1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
 		1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
 		1E7D33E6291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
+		1E7D33E829155CBE002C0188 /* MobileBackgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E729155CBE002C0188 /* MobileBackgrounds.swift */; };
 		1E9BB637291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
 		1E9BB638291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
 		1E9BB639291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
@@ -125,6 +126,7 @@
 		1E7D1EA42909C31600CC036B /* MacSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSettings.swift; sourceTree = "<group>"; };
 		1E7D33DB29148D50002C0188 /* MobileMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileMenu.swift; sourceTree = "<group>"; };
 		1E7D33E3291499FB002C0188 /* PetsSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsSelection.swift; sourceTree = "<group>"; };
+		1E7D33E729155CBE002C0188 /* MobileBackgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileBackgrounds.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSettingsElements.swift; sourceTree = "<group>"; };
 		1EA055522913DCD20037803E /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				1EA055522913DCD20037803E /* MobileSettings.swift */,
 				1EA055552913E4B40037803E /* MobileAppDelegate.swift */,
 				1E7D33DB29148D50002C0188 /* MobileMenu.swift */,
+				1E7D33E729155CBE002C0188 /* MobileBackgrounds.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7D33E829155CBE002C0188 /* MobileBackgrounds.swift in Sources */,
 				1E7D33E6291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1ED1D0352912C8A1004031BC /* AboutView.swift in Sources */,
 				1ED1D0372912C8A1004031BC /* CheatsImplementation.swift in Sources */,
