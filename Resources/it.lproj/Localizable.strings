@@ -78,10 +78,11 @@
 
 // MARK: - Page Titles
 
+"page.title.about" = "Informazioni";
+"page.title.game" = "Game";
+"page.title.help" = "Aiuto";
 "page.title.home" = "Pets";
 "page.title.settings" = "Impostazioni";
-"page.title.help" = "Aiuto";
-"page.title.about" = "Informazioni";
 
 // MARK: - URLs
 

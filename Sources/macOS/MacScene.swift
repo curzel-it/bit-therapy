@@ -1,4 +1,5 @@
 import DesignSystem
+import Game
 import LaunchAtLogin
 import OnWindow
 import Schwifty
@@ -72,12 +73,13 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
     
+    var options: [AppPage] {
+        [AppPage.home, AppPage.settings, AppPage.about]
+    }
+    
     var body: some View {
         HStack {
-            TabSelector(
-                selection: $viewModel.selectedPage,
-                options: [AppPage.home, AppPage.settings, AppPage.about]
-            )
+            TabSelector(selection: $viewModel.selectedPage, options: options)
             JoinOurDiscord()
         }
     }
@@ -92,7 +94,7 @@ private struct PageContents: View {
         case .about: AboutView()
         case .home: PetsSelectionCoordinator.view()
         case .settings: SettingsView()
-        case .none: EmptyView()
+        case .game, .none: EmptyView()
         }
     }
 }

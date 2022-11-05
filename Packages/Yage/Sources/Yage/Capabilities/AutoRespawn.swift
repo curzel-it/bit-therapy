@@ -8,7 +8,7 @@ public class AutoRespawn: Capability {
     public override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled, let subject = subject else { return }
         if !isWithinBounds(point: subject.frame.origin) {
-            printDebug(tag, subject.id, "is out of bounds, teleporting...")
+            printDebug(tag, subject.id, "Teleporting...")
             teleport()
         }
     }
@@ -27,6 +27,9 @@ public class AutoRespawn: Capability {
     }
     
     func isWithinBounds(point: CGPoint) -> Bool {
-        outerBounds().contains(point)
+        let bounds = outerBounds()
+        if bounds.contains(point) { return true }
+        printDebug(tag, subject?.id ?? "", "at", point.description, "is outside", bounds.description)
+        return false
     }
 }

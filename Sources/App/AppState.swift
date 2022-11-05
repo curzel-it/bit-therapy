@@ -10,6 +10,11 @@ class AppState: ObservableObject {
     
     let petsOnStage = CurrentValueSubject<[Pet], Never>([])
     
+    lazy var isDevApp: Bool = {
+        let bundle = Bundle.main.bundleIdentifier ?? ""
+        return bundle.contains(".dev")
+    }()
+    
     @Published var desktopInteractions: Bool = true {
         didSet {
             storage.desktopInteractions = desktopInteractions

@@ -18,9 +18,10 @@ public enum Lang {
     // MARK: - Pages
     
     public enum Page {
+        public static let about = "page.title.about".localized()
+        public static let game = "page.title.game".localized()
         public static let home = "page.title.home".localized()
         public static let settings = "page.title.settings".localized()
-        public static let about = "page.title.about".localized()
     }
     
     // MARK: - Menu

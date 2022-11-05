@@ -38,14 +38,20 @@
 		1E449A172913211C00DD97BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5D3EA428C08E5F00AC50C6 /* RateKit */; };
 		1E7D1EA62909C31600CC036B /* MacSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* MacSettings.swift */; };
-		1E7D33DC29148D50002C0188 /* MobileMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33DB29148D50002C0188 /* MobileMenu.swift */; };
 		1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33DD29149491002C0188 /* PetsSelection */; };
 		1E7D33E029149498002C0188 /* PetsSelection in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33DF29149498002C0188 /* PetsSelection */; };
 		1E7D33E2291494AA002C0188 /* PetsSelection in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33E1291494AA002C0188 /* PetsSelection */; };
 		1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
 		1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
 		1E7D33E6291499FB002C0188 /* PetsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E3291499FB002C0188 /* PetsSelection.swift */; };
-		1E7D33E829155CBE002C0188 /* MobileBackgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33E729155CBE002C0188 /* MobileBackgrounds.swift */; };
+		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
+		1E7D33F42915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
+		1E7D33F52915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
+		1E7D33F72915E82A002C0188 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33F62915E82A002C0188 /* Game */; };
+		1E7D33F92915E830002C0188 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33F82915E830002C0188 /* Game */; };
+		1E7D33FB2915E839002C0188 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33FA2915E839002C0188 /* Game */; };
+		1E7D33FD2915E8D7002C0188 /* MobileGameMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33FC2915E8D7002C0188 /* MobileGameMenu.swift */; };
+		1E7D33FF29166CA7002C0188 /* MobileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33FE29166CA7002C0188 /* MobileScene.swift */; };
 		1E9BB637291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
 		1E9BB638291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
 		1E9BB639291449E5003D5CFB /* SharedSettingsElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */; };
@@ -61,7 +67,6 @@
 		1ED1D01A2912C66C004031BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		1ED1D01B2912C674004031BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		1ED1D01C2912C677004031BC /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4428740F8E00AB872E /* Secrets.plist */; };
-		1ED1D01D2912C683004031BC /* MobileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1CFE62912C584004031BC /* MobileScene.swift */; };
 		1ED1D0212912C83B004031BC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D0202912C83B004031BC /* DesignSystem */; };
 		1ED1D0232912C83B004031BC /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D0222912C83B004031BC /* InAppPurchases */; };
 		1ED1D0252912C83B004031BC /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D0242912C83B004031BC /* Pets */; };
@@ -124,15 +129,15 @@
 		1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E449A1E291321CF00DD97BC /* InfoMac-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfoMac-Dev.plist"; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* MacSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSettings.swift; sourceTree = "<group>"; };
-		1E7D33DB29148D50002C0188 /* MobileMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileMenu.swift; sourceTree = "<group>"; };
 		1E7D33E3291499FB002C0188 /* PetsSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsSelection.swift; sourceTree = "<group>"; };
-		1E7D33E729155CBE002C0188 /* MobileBackgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileBackgrounds.swift; sourceTree = "<group>"; };
+		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
+		1E7D33FC2915E8D7002C0188 /* MobileGameMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileGameMenu.swift; sourceTree = "<group>"; };
+		1E7D33FE29166CA7002C0188 /* MobileScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileScene.swift; sourceTree = "<group>"; };
 		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		1E9BB636291449E5003D5CFB /* SharedSettingsElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSettingsElements.swift; sourceTree = "<group>"; };
 		1EA055522913DCD20037803E /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
 		1EA055552913E4B40037803E /* MobileAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppDelegate.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* MacAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppDelegate.swift; sourceTree = "<group>"; };
-		1ED1CFE62912C584004031BC /* MobileScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MobileScene.swift; path = iOS/MobilePets/MobileScene.swift; sourceTree = SOURCE_ROOT; };
 		1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1CFFD2912C5EB004031BC /* Mobile Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 			files = (
 				1E449A092913211C00DD97BC /* DesignSystem in Frameworks */,
 				1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */,
+				1E7D33F92915E830002C0188 /* Game in Frameworks */,
 				1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */,
 				1E449A0B2913211C00DD97BC /* RateKit in Frameworks */,
 				1E449A0C2913211C00DD97BC /* LaunchAtLogin in Frameworks */,
@@ -186,6 +192,7 @@
 				1ED1D0292912C83B004031BC /* Yage in Frameworks */,
 				1ED1D02D2912C83C004031BC /* Squanch in Frameworks */,
 				1EA055512913D7B80037803E /* PetDetails in Frameworks */,
+				1E7D33FB2915E839002C0188 /* Game in Frameworks */,
 				1E7D33E2291494AA002C0188 /* PetsSelection in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +217,7 @@
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
+				1E7D33F72915E82A002C0188 /* Game in Frameworks */,
 				1E7D33E029149498002C0188 /* PetsSelection in Frameworks */,
 				1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
@@ -232,6 +240,7 @@
 			children = (
 				A6FB7D5628740F8E00AB872E /* App.swift */,
 				1E2AC73F290AA941003D0AB2 /* AppState.swift */,
+				1E7D33F22915E2B2002C0188 /* AppPages.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -239,11 +248,10 @@
 		1ED1CFE52912C57E004031BC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1ED1CFE62912C584004031BC /* MobileScene.swift */,
+				1E7D33FC2915E8D7002C0188 /* MobileGameMenu.swift */,
 				1EA055522913DCD20037803E /* MobileSettings.swift */,
+				1E7D33FE29166CA7002C0188 /* MobileScene.swift */,
 				1EA055552913E4B40037803E /* MobileAppDelegate.swift */,
-				1E7D33DB29148D50002C0188 /* MobileMenu.swift */,
-				1E7D33E729155CBE002C0188 /* MobileBackgrounds.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -369,6 +377,7 @@
 				1E4499F32913211C00DD97BC /* StatusBarItems */,
 				1EA0554E2913D7B20037803E /* PetDetails */,
 				1E7D33DD29149491002C0188 /* PetsSelection */,
+				1E7D33F82915E830002C0188 /* Game */,
 			);
 			productName = MacPets;
 			productReference = 1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */;
@@ -399,6 +408,7 @@
 				1ED1D02E2912C83C004031BC /* RateKit */,
 				1EA055502913D7B80037803E /* PetDetails */,
 				1E7D33E1291494AA002C0188 /* PetsSelection */,
+				1E7D33FA2915E839002C0188 /* Game */,
 			);
 			productName = "Mobile Pets";
 			productReference = 1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */;
@@ -469,6 +479,7 @@
 				1ED1D03E29130A86004031BC /* StatusBarItems */,
 				1EA0554C2913D7AD0037803E /* PetDetails */,
 				1E7D33DF29149498002C0188 /* PetsSelection */,
+				1E7D33F62915E82A002C0188 /* Game */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -679,6 +690,7 @@
 				1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E4499F62913211C00DD97BC /* Cheats.swift in Sources */,
 				1E4499F72913211C00DD97BC /* MacScene.swift in Sources */,
+				1E7D33F42915E2B2002C0188 /* AppPages.swift in Sources */,
 				1E4499F92913211C00DD97BC /* StatusBar.swift in Sources */,
 				1E4499FB2913211C00DD97BC /* Lang.swift in Sources */,
 				1E4499FD2913211C00DD97BC /* AppState.swift in Sources */,
@@ -697,7 +709,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7D33E829155CBE002C0188 /* MobileBackgrounds.swift in Sources */,
 				1E7D33E6291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1ED1D0352912C8A1004031BC /* AboutView.swift in Sources */,
 				1ED1D0372912C8A1004031BC /* CheatsImplementation.swift in Sources */,
@@ -705,12 +716,13 @@
 				1EA055562913E4B40037803E /* MobileAppDelegate.swift in Sources */,
 				1ED1D03C2912C8A1004031BC /* AppState.swift in Sources */,
 				1ED1D03A2912C8A1004031BC /* SurveyView.swift in Sources */,
-				1E7D33DC29148D50002C0188 /* MobileMenu.swift in Sources */,
+				1E7D33F52915E2B2002C0188 /* AppPages.swift in Sources */,
 				1ED1D03B2912C8A1004031BC /* Lang.swift in Sources */,
+				1E7D33FD2915E8D7002C0188 /* MobileGameMenu.swift in Sources */,
 				1EA0555A2913E5C10037803E /* App.swift in Sources */,
 				1ED1D0322912C8A1004031BC /* CheatsView.swift in Sources */,
+				1E7D33FF29166CA7002C0188 /* MobileScene.swift in Sources */,
 				1E9BB639291449E5003D5CFB /* SharedSettingsElements.swift in Sources */,
-				1ED1D01D2912C683004031BC /* MobileScene.swift in Sources */,
 				1ED1D0312912C8A1004031BC /* Cheats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -738,6 +750,7 @@
 				1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MacScene.swift in Sources */,
+				1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */,
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */,
 				1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */,
@@ -1402,6 +1415,18 @@
 		1E7D33E1291494AA002C0188 /* PetsSelection */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PetsSelection;
+		};
+		1E7D33F62915E82A002C0188 /* Game */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Game;
+		};
+		1E7D33F82915E830002C0188 /* Game */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Game;
+		};
+		1E7D33FA2915E839002C0188 /* Game */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Game;
 		};
 		1EA0554C2913D7AD0037803E /* PetDetails */ = {
 			isa = XCSwiftPackageProductDependency;

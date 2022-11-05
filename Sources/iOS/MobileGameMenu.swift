@@ -1,5 +1,45 @@
 import DesignSystem
+import Schwifty
 import SwiftUI
+
+struct GameMenu: View {
+    @EnvironmentObject var appState: AppState
+    @StateObject private var viewModel = MenuViewModel()
+    
+    var body: some View {
+        ZStack {
+            if viewModel.showingOptions {
+                VStack {
+                    MenuItemView(page: .home)
+                    MenuItemView(page: .settings)
+                    MenuItemView(page: .about)
+                }
+                .frame(width: 160)
+                .padding(.lg)
+                .background(Color.secondaryBackground)
+                .cornerRadius(20)
+                .shadow(radius: 8)
+                .padding(.lg)
+            } else {
+                MenuButton()
+            }
+        }
+        .padding(.md)
+        .positioned(.trailingTop)
+        .sheet(
+            isPresented: binding { viewModel.selectedPage != .none },
+            onDismiss: viewModel.close
+        ) {
+            switch viewModel.selectedPage {
+            case .about: AboutView()
+            case .home: PetsSelectionCoordinator.view()
+            case .settings: SettingsView()
+            case .game, .none: EmptyView()
+            }
+        }
+        .environmentObject(viewModel)
+    }
+}
 
 private class MenuViewModel: ObservableObject {
     @Published var showingOptions = false
@@ -27,50 +67,12 @@ private class MenuViewModel: ObservableObject {
     }
 }
 
-struct Menu: View {
-    @EnvironmentObject var appState: AppState
-    @StateObject private var viewModel = MenuViewModel()
-    
-    var body: some View {
-        ZStack {
-            if viewModel.showingOptions {
-                VStack {
-                    MenuItemView(page: .home)
-                    MenuItemView(page: .settings)
-                    MenuItemView(page: .about)
-                }
-                .frame(width: 160)
-                .padding(.lg)
-                .background(Color.secondaryBackground)
-                .cornerRadius(20)
-                .shadow(radius: 8)
-                .padding(.lg)
-            } else {
-                MenuButton()
-            }
-        }
-        .positioned(.trailingTop)
-        .sheet(
-            isPresented: binding { viewModel.selectedPage != .none },
-            onDismiss: viewModel.close
-        ) {
-            switch viewModel.selectedPage {
-            case .about: AboutView()
-            case .home: PetsSelectionCoordinator.view()
-            case .settings: SettingsView()
-            case .none: EmptyView()
-            }
-        }
-        .environmentObject(viewModel)
-    }
-}
-
 private struct MenuButton: View {
     @EnvironmentObject var viewModel: MenuViewModel
     
     var body: some View {
         Button { viewModel.open() } label: {
-            Image(systemName: "circle.grid.2x1")
+            Image(systemName: "circle.grid.2x1.fill")
                 .padding()
         }
     }
