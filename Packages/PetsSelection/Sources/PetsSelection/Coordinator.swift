@@ -16,6 +16,8 @@ public class PetsSelectionCoordinator {
 
 public protocol PetsProvider {
     var petsOnStage: CurrentValueSubject<[Pet], Never> { get }
+    func add(pet: Pet)
+    func remove(pet: Pet)
 }
 
 public protocol LocalizedContentProvider: PetDetails.LocalizedContentProvider {

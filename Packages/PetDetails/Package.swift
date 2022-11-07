@@ -17,7 +17,7 @@ let package = Package(
         .package(path: "../Pets"),
         .package(path: "../Tracking"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.4"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12")
     ],
     targets: [
         .target(

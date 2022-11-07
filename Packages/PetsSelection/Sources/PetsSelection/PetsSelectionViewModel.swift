@@ -19,7 +19,9 @@ class PetsSelectionViewModel: ObservableObject {
             self.selectedPet != nil
         } set: { isShown in
             guard !isShown else { return }
-            self.selectedPet = nil
+            Task { @MainActor in
+                self.selectedPet = nil
+            }
         }
     }()
     

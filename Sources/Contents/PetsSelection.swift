@@ -15,7 +15,11 @@ class PetsSelectionCoordinator {
     }
 }
 
-extension AppState: PetsProvider {}
+extension AppState: PetsProvider {
+    func add(pet: Pet) {
+        selectedPets.append(pet.id)
+    }
+}
 
 private struct LocalizedContent: LocalizedContentProvider {
     var addPet: String { Lang.PetSelection.addPet }

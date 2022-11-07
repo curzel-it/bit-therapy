@@ -109,15 +109,6 @@
       }
     },
     {
-      "identity" : "onwindow",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/curzel-it/OnWindow",
-      "state" : {
-        "revision" : "6e74868e321bbdbe02b4f0ca37cdc29a5a584e51",
-        "version" : "1.0.1"
-      }
-    },
-    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",
@@ -149,17 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/schwifty",
       "state" : {
-        "revision" : "ecbce67ae95db385c539eaea514328ec08caa3fe",
-        "version" : "1.0.11"
-      }
-    },
-    {
-      "identity" : "squanch",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/curzel-it/squanch",
-      "state" : {
-        "revision" : "a24b66ceae494516a60a83cd4240e663f0e64f06",
-        "version" : "1.0.8"
+        "revision" : "d989a7054c9f8a132078dfc1843ea5f2b55be47f",
+        "version" : "1.0.12"
       }
     },
     {

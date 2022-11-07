@@ -18,13 +18,8 @@ public struct GameView: View {
         ZStack {
             Background()
                 .frame(size: worldSize)
-            
-            if DeviceRequirement.iOS.isSatisfied {
-                WorldView(with: settings, size: $worldSize)
-                    .measureScreenSize(to: $worldSize)
-            } else {
-                WorldView(with: settings, size: $worldSize)
-            }
+            WorldView(with: settings, size: $worldSize)
+                .measureAvailableSize { worldSize = $0 }
         }
     }
 }
@@ -32,7 +27,8 @@ public struct GameView: View {
 private struct WorldView: View {
     @Binding var worldSize: CGSize
     @StateObject var world: GameEnvironment
-    
+    @State var entities: [String] = []
+        
     init(with settings: PetsSettings, size: Binding<CGSize>) {
         self._worldSize = size
         let env = GameEnvironment(with: settings, bounds: .zero)
@@ -41,18 +37,20 @@ private struct WorldView: View {
     
     var body: some View {
         ZStack {
-            ForEach(world.state.children) { entity in
-                if let pet = entity as? PetEntity {
-                    BaseEntityView(representing: pet, applyOffset: true)
-                }
+            ForEach(entities, id: \.self) {
+                PetView(entityId: $0)
             }
         }
         .offset(x: -worldSize.width/2)
         .offset(y: -worldSize.height/2)
         .environmentObject(world as PetsEnvironment)
         .environmentObject(world as LiveWorld)
+        .onReceive(world.state.$children) { newChildren in
+            let newIds = newChildren.compactMap { $0 as? PetEntity }.map { $0.id }
+            guard entities != newIds else { return }
+            entities = newIds
+        }
         .onReceive(Just(worldSize)) { newSize in
-            printDebug("WorldView", "Got new size", newSize.description)
             world.set(bounds: CGRect(size: newSize))
             world.state.children
                 .compactMap { $0.capability(for: AutoRespawn.self) }
@@ -61,15 +59,37 @@ private struct WorldView: View {
     }
 }
 
+private struct PetView: View {
+    @EnvironmentObject var world: PetsEnvironment
+    
+    let entityId: String
+    
+    var body: some View {
+        let entity = world.state.children.first { $0.id == entityId }
+        if let pet = entity as? PetEntity {
+            BaseEntityView(representing: pet, applyOffset: true)
+                .draggable(pet)
+        }
+    }
+}
+
 class GameEnvironment: PetsEnvironment {
     override func set(bounds: CGRect) {
+        if let ground = ground() {
+            ground.kill()
+            state.children.remove(ground)
+        }
         super.set(bounds: bounds)
-        state.children.append(bottomBound())
+        state.children.append(buildGround())
     }
     
-    func bottomBound() -> Entity {
+    func ground() -> Entity? {
+        state.children.first { $0.id == kGround }
+    }
+    
+    func buildGround() -> Entity {
         let entity = Entity(
-            id: "ground",
+            id: kGround,
             frame: CGRect(
                 x: -1000,
                 y: state.bounds.maxY - 100,
@@ -82,3 +102,5 @@ class GameEnvironment: PetsEnvironment {
         return entity
     }
 }
+
+private let kGround = "ground"

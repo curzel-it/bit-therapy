@@ -17,16 +17,22 @@ class PetDetailsCoordinator {
 }
 
 private struct DetailsManager: PetDetailsManager {
-    var isShown: Binding<Bool>
+    @Binding var isShown: Bool
     let pet: Pet
     let pets: PetsProvider
     var isSelected: Bool { pets.petsOnStage.value.contains(pet) }
     
+    func close() {
+        isShown = false
+    }
+    
     func didSelect() {
+        pets.add(pet: pet)
         pets.petsOnStage.send(pets.petsOnStage.value + [pet])
     }
     
     func didRemove() {
-        pets.petsOnStage.send(pets.petsOnStage.value.filter { $0 == pet })
+        pets.remove(pet: pet)
+        pets.petsOnStage.send(pets.petsOnStage.value.filter { $0 != pet })
     }
 }

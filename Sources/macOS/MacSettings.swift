@@ -16,16 +16,25 @@ struct SettingsView: View {
                 SizeSlider()
                 SpeedSlider()
                 GravitySwitch().positioned(.leading)
-                DesktopInteractions().positioned(.leading)
-                LaunchAtLoginSwitch().positioned(.leading)
-                StatusBarIconSwitch().positioned(.leading)
+                DesktopSpecificSettings()
                 AnonymousTracking().positioned(.leading)
                 FixOnScreenPets().positioned(.leading)
                 RestorePurchasesButton()
                 CheatsView().positioned(.leading)
+                if appState.isDevApp {
+                    GameMode().positioned(.leading)
+                }
             }
             .padding(.md)
         }
+    }
+}
+
+private struct DesktopSpecificSettings: View {
+    var body: some View {
+        DesktopInteractions().positioned(.leading)
+        LaunchAtLoginSwitch().positioned(.leading)
+        StatusBarIconSwitch().positioned(.leading)
     }
 }
 
@@ -158,6 +167,19 @@ private struct FixOnScreenPets: View {
     var body: some View {
         Button(Lang.PetSelection.fixOnScreenPets) {
             OnScreen.show(with: AppState.global)
+        }
+        .buttonStyle(.regular)
+    }
+}
+
+// MARK: - Game Mode
+
+private struct GameMode: View {
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        Button(Lang.Page.game) {
+            GameCoordinator.show(with: appState)
         }
         .buttonStyle(.regular)
     }

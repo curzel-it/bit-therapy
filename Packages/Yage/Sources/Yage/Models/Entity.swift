@@ -99,6 +99,7 @@ open class Entity: Identifiable, ObservableObject {
         uninstallAllCapabilities()
         isAlive = false
         sprite = nil
+        layers = []
     }
     
     public func uninstallAllCapabilities() {

@@ -51,6 +51,20 @@
         "identifier" : "PetDetailsTests",
         "name" : "PetDetailsTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Game",
+        "identifier" : "GameTests",
+        "name" : "GameTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/PetsSelection",
+        "identifier" : "PetsSelectionTests",
+        "name" : "PetsSelectionTests"
+      }
     }
   ],
   "version" : 1

@@ -1,7 +1,5 @@
 import DesignSystem
-import Game
 import LaunchAtLogin
-import OnWindow
 import Schwifty
 import SwiftUI
 import Tracking
@@ -73,9 +71,7 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
     
-    var options: [AppPage] {
-        [AppPage.home, AppPage.settings, AppPage.about]
-    }
+    var options: [AppPage] = [.home, .settings, .about]
     
     var body: some View {
         HStack {
@@ -94,7 +90,7 @@ private struct PageContents: View {
         case .about: AboutView()
         case .home: PetsSelectionCoordinator.view()
         case .settings: SettingsView()
-        case .game, .none: EmptyView()
+        case .none: EmptyView()
         }
     }
 }

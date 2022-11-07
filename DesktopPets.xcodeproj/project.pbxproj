@@ -29,11 +29,9 @@
 		1E449A0C2913211C00DD97BC /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E92913211C00DD97BC /* LaunchAtLogin */; };
 		1E449A0D2913211C00DD97BC /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E72913211C00DD97BC /* Pets */; };
 		1E449A0E2913211C00DD97BC /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499EE2913211C00DD97BC /* Schwifty */; };
-		1E449A0F2913211C00DD97BC /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499F02913211C00DD97BC /* Squanch */; };
 		1E449A102913211C00DD97BC /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E62913211C00DD97BC /* OnScreen */; };
 		1E449A112913211C00DD97BC /* StatusBarItems in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499F32913211C00DD97BC /* StatusBarItems */; };
 		1E449A122913211C00DD97BC /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E82913211C00DD97BC /* Tracking */; };
-		1E449A132913211C00DD97BC /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499EC2913211C00DD97BC /* OnWindow */; };
 		1E449A162913211C00DD97BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		1E449A172913211C00DD97BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5D3EA428C08E5F00AC50C6 /* RateKit */; };
@@ -63,6 +61,8 @@
 		1EA055582913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA055592913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA0555A2913E5C10037803E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
+		1EA81FDF29172AC90028E4A1 /* MacGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA81FDE29172AC90028E4A1 /* MacGame.swift */; };
+		1EA81FE029172AC90028E4A1 /* MacGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA81FDE29172AC90028E4A1 /* MacGame.swift */; };
 		1ED1D0192912C64E004031BC /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */; };
 		1ED1D01A2912C66C004031BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		1ED1D01B2912C674004031BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
@@ -73,7 +73,6 @@
 		1ED1D0272912C83B004031BC /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D0262912C83B004031BC /* Tracking */; };
 		1ED1D0292912C83B004031BC /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D0282912C83B004031BC /* Yage */; };
 		1ED1D02B2912C83B004031BC /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D02A2912C83B004031BC /* Schwifty */; };
-		1ED1D02D2912C83C004031BC /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D02C2912C83C004031BC /* Squanch */; };
 		1ED1D02F2912C83C004031BC /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D02E2912C83C004031BC /* RateKit */; };
 		1ED1D0312912C8A1004031BC /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
 		1ED1D0322912C8A1004031BC /* CheatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599B28CDFA25007BB53E /* CheatsView.swift */; };
@@ -84,9 +83,7 @@
 		1ED1D03C2912C8A1004031BC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1ED1D03F29130A86004031BC /* StatusBarItems in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D03E29130A86004031BC /* StatusBarItems */; };
 		1ED1D04129130C11004031BC /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D04029130C11004031BC /* StatusBar.swift */; };
-		1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */ = {isa = PBXBuildFile; productRef = 1EDBC2C12891BD2C00A8D37B /* OnWindow */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
-		1EF696EC28B0E1B80042B9DA /* Squanch in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF696EB28B0E1B80042B9DA /* Squanch */; };
 		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
 		A63AC7D72874768400A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D62874768400A9F738 /* OnScreen */; };
@@ -138,6 +135,7 @@
 		1EA055522913DCD20037803E /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
 		1EA055552913E4B40037803E /* MobileAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppDelegate.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* MacAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppDelegate.swift; sourceTree = "<group>"; };
+		1EA81FDE29172AC90028E4A1 /* MacGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacGame.swift; sourceTree = "<group>"; };
 		1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1CFFD2912C5EB004031BC /* Mobile Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
@@ -171,11 +169,9 @@
 				1E449A0D2913211C00DD97BC /* Pets in Frameworks */,
 				1EA0554F2913D7B20037803E /* PetDetails in Frameworks */,
 				1E449A0E2913211C00DD97BC /* Schwifty in Frameworks */,
-				1E449A0F2913211C00DD97BC /* Squanch in Frameworks */,
 				1E449A102913211C00DD97BC /* OnScreen in Frameworks */,
 				1E449A112913211C00DD97BC /* StatusBarItems in Frameworks */,
 				1E449A122913211C00DD97BC /* Tracking in Frameworks */,
-				1E449A132913211C00DD97BC /* OnWindow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +186,6 @@
 				1ED1D02B2912C83B004031BC /* Schwifty in Frameworks */,
 				1ED1D0272912C83B004031BC /* Tracking in Frameworks */,
 				1ED1D0292912C83B004031BC /* Yage in Frameworks */,
-				1ED1D02D2912C83C004031BC /* Squanch in Frameworks */,
 				1EA055512913D7B80037803E /* PetDetails in Frameworks */,
 				1E7D33FB2915E839002C0188 /* Game in Frameworks */,
 				1E7D33E2291494AA002C0188 /* PetsSelection in Frameworks */,
@@ -224,11 +219,9 @@
 				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
 				1EA0554D2913D7AD0037803E /* PetDetails in Frameworks */,
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
-				1EF696EC28B0E1B80042B9DA /* Squanch in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
 				1ED1D03F29130A86004031BC /* StatusBarItems in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
-				1EDBC2C22891BD2C00A8D37B /* OnWindow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +313,7 @@
 				A6FB7D5828740F8E00AB872E /* MacScene.swift */,
 				1ED1D04029130C11004031BC /* StatusBar.swift */,
 				1EA055572913E4BE0037803E /* MacAppDelegate.swift */,
+				1EA81FDE29172AC90028E4A1 /* MacGame.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -370,9 +364,7 @@
 				1E4499E82913211C00DD97BC /* Tracking */,
 				1E4499E92913211C00DD97BC /* LaunchAtLogin */,
 				1E4499EB2913211C00DD97BC /* DesignSystem */,
-				1E4499EC2913211C00DD97BC /* OnWindow */,
 				1E4499EE2913211C00DD97BC /* Schwifty */,
-				1E4499F02913211C00DD97BC /* Squanch */,
 				1E4499F12913211C00DD97BC /* RateKit */,
 				1E4499F32913211C00DD97BC /* StatusBarItems */,
 				1EA0554E2913D7B20037803E /* PetDetails */,
@@ -404,7 +396,6 @@
 				1ED1D0262912C83B004031BC /* Tracking */,
 				1ED1D0282912C83B004031BC /* Yage */,
 				1ED1D02A2912C83B004031BC /* Schwifty */,
-				1ED1D02C2912C83C004031BC /* Squanch */,
 				1ED1D02E2912C83C004031BC /* RateKit */,
 				1EA055502913D7B80037803E /* PetDetails */,
 				1E7D33E1291494AA002C0188 /* PetsSelection */,
@@ -472,9 +463,7 @@
 				A63AC7E02874768400A9F738 /* Tracking */,
 				A63AC7E42874768400A9F738 /* LaunchAtLogin */,
 				A63AC7E8287479AD00A9F738 /* DesignSystem */,
-				1EDBC2C12891BD2C00A8D37B /* OnWindow */,
 				1EE264002892866E00771170 /* Schwifty */,
-				1EF696EB28B0E1B80042B9DA /* Squanch */,
 				1E5D3EA428C08E5F00AC50C6 /* RateKit */,
 				1ED1D03E29130A86004031BC /* StatusBarItems */,
 				1EA0554C2913D7AD0037803E /* PetDetails */,
@@ -519,9 +508,7 @@
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
 				A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
-				1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */,
 				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
-				1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */,
 				1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
@@ -690,6 +677,7 @@
 				1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E4499F62913211C00DD97BC /* Cheats.swift in Sources */,
 				1E4499F72913211C00DD97BC /* MacScene.swift in Sources */,
+				1EA81FE029172AC90028E4A1 /* MacGame.swift in Sources */,
 				1E7D33F42915E2B2002C0188 /* AppPages.swift in Sources */,
 				1E4499F92913211C00DD97BC /* StatusBar.swift in Sources */,
 				1E4499FB2913211C00DD97BC /* Lang.swift in Sources */,
@@ -750,6 +738,7 @@
 				1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MacScene.swift in Sources */,
+				1EA81FDF29172AC90028E4A1 /* MacGame.swift in Sources */,
 				1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */,
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */,
@@ -1149,7 +1138,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201606;
+				CURRENT_PROJECT_VERSION = 201607;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1187,7 +1176,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201606;
+				CURRENT_PROJECT_VERSION = 201607;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1276,36 +1265,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/squanch";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.7;
-			};
-		};
-		1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/OnWindow";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
 		1E4499EA2913211C00DD97BC /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.2.0;
-			};
-		};
-		1E4499ED2913211C00DD97BC /* XCRemoteSwiftPackageReference "OnWindow" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/OnWindow";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
 			};
 		};
 		1E4499EF2913211C00DD97BC /* XCRemoteSwiftPackageReference "schwifty" */ = {
@@ -1337,7 +1302,7 @@
 			repositoryURL = "https://github.com/curzel-it/schwifty";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.4;
+				minimumVersion = 1.0.12;
 			};
 		};
 		A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
@@ -1376,19 +1341,10 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
 		};
-		1E4499EC2913211C00DD97BC /* OnWindow */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E4499ED2913211C00DD97BC /* XCRemoteSwiftPackageReference "OnWindow" */;
-			productName = OnWindow;
-		};
 		1E4499EE2913211C00DD97BC /* Schwifty */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E4499EF2913211C00DD97BC /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
-		};
-		1E4499F02913211C00DD97BC /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Squanch;
 		};
 		1E4499F12913211C00DD97BC /* RateKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1465,11 +1421,6 @@
 			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
 		};
-		1ED1D02C2912C83C004031BC /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E2C550C28B8CE6200613F3B /* XCRemoteSwiftPackageReference "squanch" */;
-			productName = Squanch;
-		};
 		1ED1D02E2912C83C004031BC /* RateKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */;
@@ -1479,19 +1430,10 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = StatusBarItems;
 		};
-		1EDBC2C12891BD2C00A8D37B /* OnWindow */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E3CD2702891B734007BB24B /* XCRemoteSwiftPackageReference "OnWindow" */;
-			productName = OnWindow;
-		};
 		1EE264002892866E00771170 /* Schwifty */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
-		};
-		1EF696EB28B0E1B80042B9DA /* Squanch */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Squanch;
 		};
 		A63AC7D22874768400A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;

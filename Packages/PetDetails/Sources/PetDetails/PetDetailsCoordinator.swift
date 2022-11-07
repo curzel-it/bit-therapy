@@ -3,9 +3,9 @@ import SwiftUI
 
 public protocol PetDetailsManager {
     var isSelected: Bool { get }
-    var isShown: Binding<Bool> { get set }
     var pet: Pet { get }
     
+    func close()
     func didSelect()
     func didRemove()
 }

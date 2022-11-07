@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../Pets"),
         .package(path: "../Yage"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12"),
         .package(url: "https://github.com/curzel-it/windowsdetector", from: "1.0.3")
     ],
     targets: [

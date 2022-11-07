@@ -11,7 +11,7 @@ let package = Package(
             targets: ["DesignSystem"])
     ],
     dependencies: [
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.11")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12")
     ],
     targets: [
         .target(

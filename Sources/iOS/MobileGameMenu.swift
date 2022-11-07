@@ -9,34 +9,18 @@ struct GameMenu: View {
     var body: some View {
         ZStack {
             if viewModel.showingOptions {
-                VStack {
-                    MenuItemView(page: .home)
-                    MenuItemView(page: .settings)
-                    MenuItemView(page: .about)
-                }
-                .frame(width: 160)
-                .padding(.lg)
-                .background(Color.secondaryBackground)
-                .cornerRadius(20)
-                .shadow(radius: 8)
-                .padding(.lg)
+                MenuContents()
             } else {
                 MenuButton()
             }
         }
-        .padding(.md)
+        .padding(.top, .xl)
+        .padding(.trailing, .lg)
         .positioned(.trailingTop)
         .sheet(
             isPresented: binding { viewModel.selectedPage != .none },
             onDismiss: viewModel.close
-        ) {
-            switch viewModel.selectedPage {
-            case .about: AboutView()
-            case .home: PetsSelectionCoordinator.view()
-            case .settings: SettingsView()
-            case .game, .none: EmptyView()
-            }
-        }
+        ) { SelectedPage() }
         .environmentObject(viewModel)
     }
 }
@@ -67,13 +51,42 @@ private class MenuViewModel: ObservableObject {
     }
 }
 
+private struct SelectedPage: View {
+    @EnvironmentObject var viewModel: MenuViewModel
+    
+    var body: some View {
+        switch viewModel.selectedPage {
+        case .about: AboutView()
+        case .home: PetsSelectionCoordinator.view()
+        case .settings: SettingsView()
+        case .none: EmptyView()
+        }
+    }
+}
+
+private struct MenuContents: View {
+    var body: some View {
+        VStack {
+            MenuItemView(page: .home)
+            MenuItemView(page: .settings)
+            MenuItemView(page: .about)
+        }
+        .frame(width: 160)
+        .padding(.md)
+        .background(Color.secondaryBackground)
+        .cornerRadius(20)
+        .shadow(radius: 8)
+    }
+}
+
 private struct MenuButton: View {
     @EnvironmentObject var viewModel: MenuViewModel
     
     var body: some View {
         Button { viewModel.open() } label: {
-            Image(systemName: "circle.grid.2x1.fill")
-                .padding()
+            Image(systemName: "circle.grid.3x3.fill")
+                .font(.title2)
+                .padding(.top, .sm)
         }
     }
 }

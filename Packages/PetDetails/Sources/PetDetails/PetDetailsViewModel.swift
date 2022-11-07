@@ -46,9 +46,7 @@ class PetDetailsViewModel: ObservableObject {
     }
     
     func close() {
-        withAnimation {
-            manager.isShown.wrappedValue = false
-        }
+        manager.close()
     }
     
     func select() {
