@@ -3,6 +3,7 @@ import Schwifty
 
 extension Pet {    
     static let allSpecies: [Pet] = [
+        .ape,
         .betta,
         .catGray, .catBlue, .cat, .catBlack, .catGrumpy,
         // .clockAnalog,

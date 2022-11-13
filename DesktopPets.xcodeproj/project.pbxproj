@@ -122,6 +122,8 @@
 
 /* Begin PBXFileReference section */
 		1E1EBF30291F9E1800D2323D /* dogica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dogica.ttf; sourceTree = "<group>"; };
+		1E2A347A29218B620069114E /* InfoiOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoiOS.plist; sourceTree = "<group>"; };
+		1E2A347B29218C680069114E /* MobilePets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MobilePets.xctestplan; sourceTree = "<group>"; };
 		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1E2AC745290B1093003D0AB2 /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		1E33599828CDF6A8007BB53E /* Cheats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheats.swift; sourceTree = "<group>"; };
@@ -141,7 +143,6 @@
 		1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1CFFD2912C5EB004031BC /* Mobile Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
-		1ED75D41291AEEE0004C6B7B /* Mobile-Pets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mobile-Pets-Info.plist"; sourceTree = "<group>"; };
 		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
 		64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsImplementation.swift; sourceTree = "<group>"; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,16 +271,15 @@
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
-				1ED75D41291AEEE0004C6B7B /* Mobile-Pets-Info.plist */,
+				1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */,
+				A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */,
+				A66B2C1B28746D2E00D695EA /* Desktop Pets.app */,
 				A63AC7942874739100A9F738 /* Frameworks */,
+				1ED1CFFD2912C5EB004031BC /* Mobile Pets Tests.xctest */,
+				1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
 				A6FB7D8828740F9A00AB872E /* Tests */,
-				A66B2C1B28746D2E00D695EA /* Desktop Pets.app */,
-				1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */,
-				A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */,
-				1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */,
-				1ED1CFFD2912C5EB004031BC /* Mobile Pets Tests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -288,6 +288,7 @@
 			children = (
 				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
 				1ED75D30291AEEB8004C6B7B /* Fonts */,
+				1E2A347A29218B620069114E /* InfoiOS.plist */,
 				1E449A1E291321CF00DD97BC /* InfoMac-Dev.plist */,
 				A6FB7D4B28740F8E00AB872E /* InfoMac.plist */,
 				A6FB7D4528740F8E00AB872E /* Localizable.strings */,
@@ -345,6 +346,7 @@
 		A6FB7D8828740F9A00AB872E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1E2A347B29218C680069114E /* MobilePets.xctestplan */,
 				A6FB7D8928740F9A00AB872E /* DesktopPets.xctestplan */,
 				A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */,
 			);
@@ -885,7 +887,7 @@
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mobile-Pets-Info.plist";
+				INFOPLIST_FILE = Resources/InfoiOS.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pet Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -921,7 +923,7 @@
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mobile-Pets-Info.plist";
+				INFOPLIST_FILE = Resources/InfoiOS.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pet Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -957,11 +959,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "it.curzel.Mobile-PetsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -979,11 +985,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "it.curzel.Mobile-PetsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1118,7 +1128,8 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.macPets.MacPetsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1136,7 +1147,8 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.macPets.MacPetsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1154,7 +1166,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201607;
+				CURRENT_PROJECT_VERSION = 201710;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1173,7 +1185,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -1193,7 +1205,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201607;
+				CURRENT_PROJECT_VERSION = 201710;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1212,7 +1224,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;

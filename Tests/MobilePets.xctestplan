@@ -1,0 +1,59 @@
+{
+  "configurations" : [
+    {
+      "id" : "4D5B85BE-638C-44D1-B9BF-B2429F4E6E61",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Dialogs",
+        "identifier" : "DialogsTests",
+        "name" : "DialogsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Game",
+        "identifier" : "GameTests",
+        "name" : "GameTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/PetDetails",
+        "identifier" : "PetDetailsTests",
+        "name" : "PetDetailsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Pets",
+        "identifier" : "PetsTests",
+        "name" : "PetsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/PetsSelection",
+        "identifier" : "PetsSelectionTests",
+        "name" : "PetsSelectionTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Yage",
+        "identifier" : "YageTests",
+        "name" : "YageTests"
+      }
+    }
+  ],
+  "version" : 1
+}

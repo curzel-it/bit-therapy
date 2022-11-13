@@ -97,6 +97,7 @@
 
 // MARK: - Pet Names
 
+"pet.name.ape" = "Scimmia";
 "pet.name.betta" = "Betta";
 "pet.name.cat" = "Gatto Rosso";
 "pet.name.cat_black" = "Gatto Nero";
@@ -137,6 +138,7 @@
 
 // MARK: - Pet Descriptions
 
+"pet.about.ape" = "Ispirato da Bubbles e Sloking... Circa!";
 "pet.about.betta" = "Anche noto come 'Pesce Combattente', molto elegante e popolarissimo.";
 "pet.about.cat" = "Beh, è un normalissimo gatto!";
 "pet.about.cat_black" = "Beh, è un normalissimo gatto!";

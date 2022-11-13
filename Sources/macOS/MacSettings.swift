@@ -168,16 +168,3 @@ private struct FixOnScreenPets: View {
         .buttonStyle(.regular)
     }
 }
-
-// MARK: - Game Mode
-
-private struct GameMode: View {
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        Button(Lang.Page.game) {
-            GameCoordinator.show(with: appState)
-        }
-        .buttonStyle(.regular)
-    }
-}
