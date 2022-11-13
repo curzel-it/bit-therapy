@@ -1,4 +1,4 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.7.1
 
 import PackageDescription
 
@@ -29,7 +29,6 @@ let package = Package(
             resources: [
                 .copy("Assets")
             ]
-
         ),
         .testTarget(
             name: "PetsTests",

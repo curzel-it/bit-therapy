@@ -8,3 +8,9 @@ extension Text {
             .textAlign(.leading)
     }
 }
+
+extension Font {
+    public static let pixelBodySize: CGFloat = 13
+    public static let pixelBody: Font = .custom("Dogica", size: pixelBodySize)
+    public static let pixelTitle: Font = .custom("Dogica", size: pixelBodySize*2)
+}

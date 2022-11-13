@@ -8,8 +8,9 @@ struct AboutView: View {
             VStack(spacing: .xl) {
                 if DeviceRequirement.iOS.isSatisfied {
                     Text(Lang.Page.about).title()
-                }                
-                LeaveReview()
+                } else {
+                    LeaveReview()
+                }
                 GiveFeedbackViaSurvey()
                 PrivacyPolicy().padding(.top, .xl)
                 

@@ -6,6 +6,7 @@ import SwiftUI
 public struct DesignSystem {
     public static let defaultCornerRadius: CGFloat = DeviceRequirement.iOS.isSatisfied ? 8 : 4
     public static let buttonsHeight: CGFloat = DeviceRequirement.iOS.isSatisfied ? 40 : 32
+    public static let textFieldsHeight: CGFloat = 32
     public static let buttonsMaxWidth: CGFloat? = DeviceRequirement.iPhone.isSatisfied ? nil : 200
     public static let lineWidth: CGFloat = 2
 }

@@ -15,5 +15,9 @@
 	<false/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>dogica.ttf</string>
+	</array>
 </dict>
 </plist>

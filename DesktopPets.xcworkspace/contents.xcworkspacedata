@@ -11,6 +11,9 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
+      location = "group:Packages/Dialogs">
+   </FileRef>
+   <FileRef
       location = "group:Packages/Game">
    </FileRef>
    <FileRef

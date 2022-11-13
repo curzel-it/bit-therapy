@@ -16,6 +16,7 @@
 "survey.feedbackViaSurvey" = "Do you have any feedback, ideas, opinions, or issue of any kind? Tell us about it!";
 "survey.requestPetViaSurvey" = "Didn't find something you like? We're open to suggestions on Discord or via Survey";
 "survey.url" = "https://tally.so/r/mJ9Y2K";
+"survey.url.ios" = "https://tally.so/r/wArvMD";
 
 // MARK: - Purchases
 
@@ -175,3 +176,10 @@
 "pet.about.trex_violet" = "This one gives off some Flintstones vibes :D";
 "pet.about.trex_yellow" = "Gotta have a golden one";
 "pet.about.ufo" = "Does calling it an UAP makes you more comfortable?";
+
+// MARK: - Game
+
+"game.intro" = "Hello!\nThis is an app for meditation and relax...\nPick you favorite pets and put the device on your desk while you work or study, they'll keep you company!";
+"game.intro.close" = "Ok!";
+"game.intro.complete" = "That's all, enjoy!";
+"game.desktopApp" = "If you have a mac, the app is also available there, check us out on the App Store ;)";

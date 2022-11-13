@@ -90,8 +90,10 @@ public class PricingService: ObservableObject {
         let succeed = entitlements?[key]?.isActive ?? false
         
         if succeed {
-            withAnimation {
-                purchased.append(item.speciesId)
+            Task { @MainActor in                
+                withAnimation {
+                    purchased.append(item.speciesId)
+                }
             }
         }
         return succeed

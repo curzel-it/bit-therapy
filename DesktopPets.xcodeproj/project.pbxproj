@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1EBF31291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
+		1E1EBF32291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
+		1E1EBF33291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
 		1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
@@ -45,8 +48,6 @@
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
 		1E7D33F42915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
 		1E7D33F52915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
-		1E7D33F72915E82A002C0188 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33F62915E82A002C0188 /* Game */; };
-		1E7D33F92915E830002C0188 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33F82915E830002C0188 /* Game */; };
 		1E7D33FB2915E839002C0188 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7D33FA2915E839002C0188 /* Game */; };
 		1E7D33FD2915E8D7002C0188 /* MobileGameMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33FC2915E8D7002C0188 /* MobileGameMenu.swift */; };
 		1E7D33FF29166CA7002C0188 /* MobileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33FE29166CA7002C0188 /* MobileScene.swift */; };
@@ -61,8 +62,6 @@
 		1EA055582913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA055592913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA0555A2913E5C10037803E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
-		1EA81FDF29172AC90028E4A1 /* MacGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA81FDE29172AC90028E4A1 /* MacGame.swift */; };
-		1EA81FE029172AC90028E4A1 /* MacGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA81FDE29172AC90028E4A1 /* MacGame.swift */; };
 		1ED1D0192912C64E004031BC /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */; };
 		1ED1D01A2912C66C004031BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		1ED1D01B2912C674004031BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
@@ -83,6 +82,9 @@
 		1ED1D03C2912C8A1004031BC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1ED1D03F29130A86004031BC /* StatusBarItems in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED1D03E29130A86004031BC /* StatusBarItems */; };
 		1ED1D04129130C11004031BC /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D04029130C11004031BC /* StatusBar.swift */; };
+		1ED75D43291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
+		1ED75D44291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
+		1ED75D45291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
 		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
@@ -119,6 +121,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1EBF30291F9E1800D2323D /* dogica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dogica.ttf; sourceTree = "<group>"; };
 		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1E2AC745290B1093003D0AB2 /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		1E33599828CDF6A8007BB53E /* Cheats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheats.swift; sourceTree = "<group>"; };
@@ -135,10 +138,11 @@
 		1EA055522913DCD20037803E /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
 		1EA055552913E4B40037803E /* MobileAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppDelegate.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* MacAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppDelegate.swift; sourceTree = "<group>"; };
-		1EA81FDE29172AC90028E4A1 /* MacGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacGame.swift; sourceTree = "<group>"; };
 		1ED1CFEE2912C5EA004031BC /* Mobile Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1CFFD2912C5EB004031BC /* Mobile Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		1ED75D41291AEEE0004C6B7B /* Mobile-Pets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mobile-Pets-Info.plist"; sourceTree = "<group>"; };
+		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
 		64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsImplementation.swift; sourceTree = "<group>"; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +166,6 @@
 			files = (
 				1E449A092913211C00DD97BC /* DesignSystem in Frameworks */,
 				1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */,
-				1E7D33F92915E830002C0188 /* Game in Frameworks */,
 				1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */,
 				1E449A0B2913211C00DD97BC /* RateKit in Frameworks */,
 				1E449A0C2913211C00DD97BC /* LaunchAtLogin in Frameworks */,
@@ -212,7 +215,6 @@
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
-				1E7D33F72915E82A002C0188 /* Game in Frameworks */,
 				1E7D33E029149498002C0188 /* PetsSelection in Frameworks */,
 				1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
@@ -249,6 +251,15 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		1ED75D30291AEEB8004C6B7B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1E1EBF30291F9E1800D2323D /* dogica.ttf */,
+				1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A63AC7942874739100A9F738 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +270,7 @@
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
+				1ED75D41291AEEE0004C6B7B /* Mobile-Pets-Info.plist */,
 				A63AC7942874739100A9F738 /* Frameworks */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
@@ -275,8 +287,9 @@
 			isa = PBXGroup;
 			children = (
 				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
-				A6FB7D4B28740F8E00AB872E /* InfoMac.plist */,
+				1ED75D30291AEEB8004C6B7B /* Fonts */,
 				1E449A1E291321CF00DD97BC /* InfoMac-Dev.plist */,
+				A6FB7D4B28740F8E00AB872E /* InfoMac.plist */,
 				A6FB7D4528740F8E00AB872E /* Localizable.strings */,
 				A6FB7D4A28740F8E00AB872E /* MacPets.entitlements */,
 				A6FB7D4428740F8E00AB872E /* Secrets.plist */,
@@ -313,7 +326,6 @@
 				A6FB7D5828740F8E00AB872E /* MacScene.swift */,
 				1ED1D04029130C11004031BC /* StatusBar.swift */,
 				1EA055572913E4BE0037803E /* MacAppDelegate.swift */,
-				1EA81FDE29172AC90028E4A1 /* MacGame.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -369,7 +381,6 @@
 				1E4499F32913211C00DD97BC /* StatusBarItems */,
 				1EA0554E2913D7B20037803E /* PetDetails */,
 				1E7D33DD29149491002C0188 /* PetsSelection */,
-				1E7D33F82915E830002C0188 /* Game */,
 			);
 			productName = MacPets;
 			productReference = 1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */;
@@ -468,7 +479,6 @@
 				1ED1D03E29130A86004031BC /* StatusBarItems */,
 				1EA0554C2913D7AD0037803E /* PetDetails */,
 				1E7D33DF29149498002C0188 /* PetsSelection */,
-				1E7D33F62915E82A002C0188 /* Game */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -529,6 +539,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED75D44291AEF4E004C6B7B /* pixelar-regular.otf in Resources */,
+				1E1EBF32291F9E1800D2323D /* dogica.ttf in Resources */,
 				1E449A162913211C00DD97BC /* Assets.xcassets in Resources */,
 				1E449A172913211C00DD97BC /* Localizable.strings in Resources */,
 			);
@@ -538,8 +550,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1EBF33291F9E1800D2323D /* dogica.ttf in Resources */,
 				1ED1D01A2912C66C004031BC /* Assets.xcassets in Resources */,
 				1ED1D01C2912C677004031BC /* Secrets.plist in Resources */,
+				1ED75D45291AEF4E004C6B7B /* pixelar-regular.otf in Resources */,
 				1ED1D01B2912C674004031BC /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,8 +577,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1EBF31291F9E1800D2323D /* dogica.ttf in Resources */,
 				A6FB7D6828740F8E00AB872E /* Secrets.plist in Resources */,
 				A6FB7D6E28740F8E00AB872E /* Assets.xcassets in Resources */,
+				1ED75D43291AEF4E004C6B7B /* pixelar-regular.otf in Resources */,
 				A6FB7D6A28740F8E00AB872E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,7 +693,6 @@
 				1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E4499F62913211C00DD97BC /* Cheats.swift in Sources */,
 				1E4499F72913211C00DD97BC /* MacScene.swift in Sources */,
-				1EA81FE029172AC90028E4A1 /* MacGame.swift in Sources */,
 				1E7D33F42915E2B2002C0188 /* AppPages.swift in Sources */,
 				1E4499F92913211C00DD97BC /* StatusBar.swift in Sources */,
 				1E4499FB2913211C00DD97BC /* Lang.swift in Sources */,
@@ -738,7 +753,6 @@
 				1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */,
 				1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MacScene.swift in Sources */,
-				1EA81FDF29172AC90028E4A1 /* MacGame.swift in Sources */,
 				1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */,
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */,
@@ -871,13 +885,14 @@
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mobile-Pets-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Pet Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -906,13 +921,14 @@
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mobile-Pets-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Pet Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1148,6 +1164,7 @@
 				INFOPLIST_FILE = Resources/InfoMac.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Curzel Federico";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1186,6 +1203,7 @@
 				INFOPLIST_FILE = Resources/InfoMac.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Curzel Federico";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1371,14 +1389,6 @@
 		1E7D33E1291494AA002C0188 /* PetsSelection */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PetsSelection;
-		};
-		1E7D33F62915E82A002C0188 /* Game */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Game;
-		};
-		1E7D33F82915E830002C0188 /* Game */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Game;
 		};
 		1E7D33FA2915E839002C0188 /* Game */ = {
 			isa = XCSwiftPackageProductDependency;

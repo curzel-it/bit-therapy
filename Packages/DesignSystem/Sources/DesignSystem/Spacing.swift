@@ -2,6 +2,8 @@ import Schwifty
 import SwiftUI
 
 public enum Spacing: CGFloat {
+    case xxxxl = 80
+    case xxxl = 64
     case xxl = 48
     case xl = 32
     case lg = 24

@@ -21,9 +21,6 @@ struct SettingsView: View {
                 FixOnScreenPets().positioned(.leading)
                 RestorePurchasesButton()
                 CheatsView().positioned(.leading)
-                if appState.isDevApp {
-                    GameMode().positioned(.leading)
-                }
             }
             .padding(.md)
         }

@@ -3,22 +3,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "DesignSystem",
-    platforms: [.macOS(.v11), .iOS(.v15)],
+    name: "Dialogs",
+    platforms: [.iOS(.v16)],
     products: [
         .library(
-            name: "DesignSystem",
-            targets: ["DesignSystem"])
+            name: "Dialogs",
+            targets: ["Dialogs"]
+        )
     ],
     dependencies: [
+        .package(path: "../DesignSystem"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12")
     ],
     targets: [
         .target(
-            name: "DesignSystem",
+            name: "Dialogs",
             dependencies: [
+                .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "Schwifty", package: "Schwifty")
             ]
+        ),
+        .testTarget(
+            name: "DialogsTests",
+            dependencies: ["Dialogs"]
         )
     ]
 )

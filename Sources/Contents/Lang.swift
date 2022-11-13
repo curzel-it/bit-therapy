@@ -1,5 +1,6 @@
 import Foundation
 import Pets
+import Schwifty
 
 public enum Lang {
     
@@ -45,8 +46,11 @@ public enum Lang {
     public enum Survey {
         public static let feedbackViaSurvey = "survey.feedbackViaSurvey".localized()
         public static let requestPetViaSurvey = "survey.requestPetViaSurvey".localized()
-        public static let takeSurvey = "survey.takeSurvey".localized()        
-        public static let url = "survey.url".localized()
+        public static let takeSurvey = "survey.takeSurvey".localized()
+        
+        public static var url: String {
+            (DeviceRequirement.iOS.isSatisfied ? "survey.url.ios" : "survey.url").localized()
+        }
     }
     
     // MARK: - Settings
@@ -107,6 +111,15 @@ public enum Lang {
         public static let reddit = "urls.reddit".localized()
         public static let mailto = "urls.mailto".localized()
         public static let privacy = "urls.privacy".localized()
+    }
+    
+    // MARK: - Game
+    
+    public enum Game {
+        public static let intro = "game.intro".localized()
+        public static let introClose = "game.intro.close".localized()
+        public static let introComplete = "game.intro.complete".localized()
+        public static let desktopApp = "game.desktopApp".localized()
     }
 }
 

@@ -10,12 +10,14 @@ struct GameMenu: View {
         ZStack {
             if viewModel.showingOptions {
                 MenuContents()
+                    .padding(.trailing, .lg)
+                    .padding(.top, .xxl)
             } else {
                 MenuButton()
+                    .padding(.trailing, .md)
+                    .padding(.top, .xl)
             }
         }
-        .padding(.top, .xl)
-        .padding(.trailing, .lg)
         .positioned(.trailingTop)
         .sheet(
             isPresented: binding { viewModel.selectedPage != .none },
@@ -71,7 +73,7 @@ private struct MenuContents: View {
             MenuItemView(page: .settings)
             MenuItemView(page: .about)
         }
-        .frame(width: 160)
+        .frame(width: 200)
         .padding(.md)
         .background(Color.secondaryBackground)
         .cornerRadius(20)
@@ -84,7 +86,8 @@ private struct MenuButton: View {
     
     var body: some View {
         Button { viewModel.open() } label: {
-            Image(systemName: "circle.grid.3x3.fill")
+            Image(systemName: "circle.grid.3x3.fill")            
+                .foregroundColor(.label)
                 .font(.title2)
                 .padding(.top, .sm)
         }
@@ -107,6 +110,8 @@ private struct MenuItemView: View {
             }
             .frame(height: DesignSystem.buttonsHeight)
         }
+        .foregroundColor(.secondaryLabel)
+        .font(.pixelBody)
     }
 }
 
