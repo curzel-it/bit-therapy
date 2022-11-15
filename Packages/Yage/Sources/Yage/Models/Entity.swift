@@ -13,12 +13,11 @@ open class Entity: Identifiable, ObservableObject {
     @Published public var yAngle: CGFloat = 0
     @Published public var zAngle: CGFloat = 0
     
-    @Published public private(set) var state: EntityState = .move
-    @Published public private(set) var frame: CGRect
     @Published public private(set) var direction: CGVector = .zero
-    
-    @Published public var speed: CGFloat = 0
+    @Published public private(set) var frame: CGRect
     @Published public var isAlive = true
+    @Published public var speed: CGFloat = 0
+    @Published public private(set) var state: EntityState = .move
     
     @Published public var sprite: ImageFrame?
     @Published public var layers: [ImageLayer] = []
