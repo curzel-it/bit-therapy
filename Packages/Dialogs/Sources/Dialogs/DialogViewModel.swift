@@ -36,6 +36,10 @@ class DialogViewModel: ObservableObject {
         textOffsetLines > 0
     }
     
+    var maxWidth: CGFloat? {
+        DeviceRequirement.iPad.isSatisfied ? 500 : nil
+    }
+    
     init(contents: [MessageContent]) {
         self.contents = ([.text(text: "")] + contents)
             .enumerated()

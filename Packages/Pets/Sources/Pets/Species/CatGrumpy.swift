@@ -12,7 +12,7 @@ extension Pet {
             )
         ],
         additionalCapabilities: [
-            GetsAngryWhenMeetingOtherCats()
+            GetsAngryWhenMeetingOtherCats.self
         ]
     )
 }

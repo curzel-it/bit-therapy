@@ -33,7 +33,7 @@ public class ShapeShifter: Capability {
             width: body.frame.width + delta.width,
             height: body.frame.height + delta.height
         )
-        body.set(frame: newFrame)
+        body.frame = newFrame
         
         checkCompletion(given: delta)
     }

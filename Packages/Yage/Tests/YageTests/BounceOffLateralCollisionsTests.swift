@@ -11,8 +11,7 @@ class BounceOnLateralCollisionsTests: XCTestCase {
             frame: CGRect(x: 50, y: 0, width: 10, height: 10),
             in: testEnv.bounds
         )
-        bounce = BounceOnLateralCollisions()
-        entity.install(bounce)
+        bounce = BounceOnLateralCollisions.install(on: entity)
         testEnv.children.append(entity)
         return entity
     }()
@@ -20,8 +19,8 @@ class BounceOnLateralCollisionsTests: XCTestCase {
     private var bounce: BounceOnLateralCollisions!
     
     func testBouncesToLeftWhenHittingRight() {
-        testEntity.set(origin: CGPoint(x: 50, y: 0))
-        testEntity.set(direction: .init(dx: 1, dy: 0))
+        testEntity.frame.origin = CGPoint(x: 50, y: 0)
+        testEntity.direction = .init(dx: 1, dy: 0)
         let testRight = Entity(
             id: "right",
             frame: CGRect(
@@ -42,8 +41,8 @@ class BounceOnLateralCollisionsTests: XCTestCase {
     }
     
     func testBouncesToRightWhenHittingLeft() {
-        testEntity.set(origin: CGPoint(x: 50, y: 0))
-        testEntity.set(direction: .init(dx: -1, dy: 0))
+        testEntity.frame.origin = CGPoint(x: 50, y: 0)
+        testEntity.direction = .init(dx: -1, dy: 0)
         let testLeft = Entity(
             id: "left",
             frame: CGRect(

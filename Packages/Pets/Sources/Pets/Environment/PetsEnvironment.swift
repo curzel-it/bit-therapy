@@ -1,6 +1,7 @@
 import Combine
 import Foundation
 import Yage
+import YageLive
 
 open class PetsEnvironment: LiveWorld {
     var settings: PetsSettings
@@ -9,10 +10,6 @@ open class PetsEnvironment: LiveWorld {
     public init(with settings: PetsSettings, bounds: CGRect) {
         self.settings = settings
         super.init(id: "main", bounds: bounds)
-        start()
-    }
-    
-    public func start() {
         bindPetsOnStage()
         scheduleUfoAbduction()
     }

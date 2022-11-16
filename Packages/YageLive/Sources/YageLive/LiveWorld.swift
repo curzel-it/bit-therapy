@@ -1,13 +1,16 @@
 import Schwifty
 import SwiftUI
+import Yage
 
-open class LiveWorld: ObservableObject {    
-    @Published public var state: World
+open class LiveWorld: ObservableObject {
+    @Published public var children: [Entity] = []
     
     public var debug = false
     public let id: String
-    public let tag: String
     public let fps: Double = 15
+    public let state: World
+    public let tag: String
+    
     private var timer: Timer!
     private var lastUpdate: TimeInterval
     
@@ -16,30 +19,34 @@ open class LiveWorld: ObservableObject {
         self.tag = "World-\(id)"
         lastUpdate = Date.timeIntervalSinceReferenceDate
         state = World(bounds: bounds)
-        startRendering()
+        start()
     }
     
-    public func startRendering() {
-        printDebug(self.tag, "Starting to render...")
+    public func start() {
+        printDebug(self.tag, "Starting...")
         timer?.invalidate()
         timer = Timer(timeInterval: 1/fps, repeats: true) { [weak self] timer in
-            guard timer == self?.timer else { return }
-            self?.render()
+            guard let self = self else {
+                timer.invalidate()
+                return
+            }
+            self.loop()
+            self.children = self.state.children
         }
         RunLoop.main.add(timer, forMode: .common)
     }
     
-    public func render() {
+    public func pause() {
+        printDebug(tag, "Paused...")
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    public func loop() {
         let now = Date.timeIntervalSinceReferenceDate
         let frameTime = now - lastUpdate
         state.update(after: frameTime)
         lastUpdate = now
-    }
-    
-    public func pauseRendering() {
-        printDebug(tag, "Paused rendering")
-        timer?.invalidate()
-        timer = nil
     }
     
     public func scheduleAtTimeOfDay(hour: Int, minute: Int, action: @escaping () -> Void) {
@@ -51,7 +58,7 @@ open class LiveWorld: ObservableObject {
     }
     
     open func kill() {
-        pauseRendering()
+        pause()
         state.children.forEach { $0.kill() }
         state.children.removeAll()
         printDebug(self.tag, "Terminated.")

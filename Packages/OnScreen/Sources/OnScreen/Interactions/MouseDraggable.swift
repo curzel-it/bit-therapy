@@ -46,7 +46,7 @@ extension Entity {
             x: min(max(0, position.x), maxX),
             y: min(max(0, maxY - position.y), maxY)
         )
-        set(origin: fixedPosition)
+        frame.origin = fixedPosition
     }
 }
 

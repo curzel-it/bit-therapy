@@ -6,15 +6,10 @@ extension Pet {
     static let clockDigital = Pet(
         id: "clockdigital",
         capabilities: {
-            let size = ClockSize(
-                mainSpriteWidth: 126,
-                digitsLeadingMargin: 30,
-                digitsTopMargin: 86,
-                spaceBetweenDigits: 5,
-                spaceBetweenHoursAndMinutes: 3,
-                digitSize: CGSize(width: 12, height: 9)
-            )
-            return Capabilities.petAnimations() + [AnimatedSprite(), DigitalClock(size: size)]
+            Capabilities.petAnimations() + [
+                AnimatedSprite.self,
+                DigitalClock.self
+            ]
         },
         fps: 0.5,
         movementPath: .front,
@@ -24,16 +19,19 @@ extension Pet {
 }
 
 private class DigitalClock: Clock {
-    private let size: ClockSize
+    private let size = ClockSize(
+        mainSpriteWidth: 126,
+        digitsLeadingMargin: 30,
+        digitsTopMargin: 86,
+        spaceBetweenDigits: 5,
+        spaceBetweenHoursAndMinutes: 3,
+        digitSize: CGSize(width: 12, height: 9)
+    )
     var digitSprites: [ImageFrame] = []
     
-    init(size: ClockSize) {
-        self.size = size
-    }
-    
-    override func install(on subject: Entity) {
-        super.install(on: subject)
-        subject.set(size: size.mainSpriteSize)
+    public required init(for subject: Entity) {
+        super.init(for: subject)
+        subject.frame.size = size.mainSpriteSize
         digitSprites = subject.spritesProvider?.frames(for: "clockdigital_numbers") ?? []
         subject.layers = (0..<4).map { index in
             ImageLayer(

@@ -1,6 +1,7 @@
 import Schwifty
 import SwiftUI
 import Yage
+import YageLive
 
 class EntityView: NSView {
     let entity: Entity

@@ -17,10 +17,10 @@ class GravityTests: XCTestCase {
             in: env.bounds
         )
         player.speed = 1
-        player.set(direction: CGVector(dx: 1, dy: 0))
+        player.direction = CGVector(dx: 1, dy: 0)
         player.set(state: .move)
-        player.install(LinearMovement())
-        player.install(Gravity())
+        LinearMovement.install(on: player)
+        Gravity.install(on: player)
         env.children.append(player)
     }
     
@@ -34,8 +34,8 @@ class GravityTests: XCTestCase {
         
         let goRight = CGVector(dx: 1, dy: 0)
         player.speed = 1
-        player.set(origin: CGPoint(x: 50, y: 0))
-        player.set(direction: goRight)
+        player.frame.origin = CGPoint(x: 50, y: 0)
+        player.direction = goRight
         player.set(state: .move)
         
         env.update(after: 0.1)
@@ -56,11 +56,10 @@ class GravityTests: XCTestCase {
         )
         env.children.append(ground1)
         
-        let goRight = CGVector(dx: 1, dy: 0)
+        BounceOnLateralCollisions.install(on: player)
         player.speed = 1
-        player.install(BounceOnLateralCollisions())
-        player.set(origin: CGPoint(x: 50, y: 60))
-        player.set(direction: goRight)
+        player.frame.origin = CGPoint(x: 50, y: 60)
+        player.direction = CGVector(dx: 1, dy: 0)
         player.set(state: .move)
         
         env.update(after: 0.1)
@@ -83,12 +82,14 @@ class GravityTests: XCTestCase {
         )
         env.children.append(ground2)
         
-        let goRight = CGVector(dx: 1, dy: 0)
+        BounceOnLateralCollisions.install(on: player)
         player.speed = 1
-        player.install(BounceOnLateralCollisions())
-        player.set(size: CGSize(width: 70, height: 70))
-        player.set(origin: CGPoint(x: ground1.frame.maxX-40, y: ground1.frame.minY - player.frame.height))
-        player.set(direction: goRight)
+        player.frame.size = CGSize(width: 70, height: 70)
+        player.frame.origin = CGPoint(
+            x: ground1.frame.maxX - 40,
+            y: ground1.frame.minY - player.frame.height
+        )
+        player.direction = CGVector(dx: 1, dy: 0)
         player.set(state: .move)
         
         for _ in 0..<20 { env.update(after: 0.1) }

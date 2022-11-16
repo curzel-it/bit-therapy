@@ -29,43 +29,41 @@ public class WallCrawler: Capability {
     }
     
     private func crawlAlongTopBound(_ body: Entity) {
-        body.set(direction: .init(dx: -1, dy: 0))
+        body.direction = .init(dx: -1, dy: 0)
         body.isUpsideDown = true
-        body.set(origin: CGPoint(
-            x: body.frame.origin.x, y: 0
-        ))
+        body.frame.origin = CGPoint(x: body.frame.origin.x, y: 0)
         body.xAngle = .pi
         body.zAngle = 0
         body.yAngle = .pi
     }
     
     private func crawlUpRightBound(_ body: Entity) {
-        body.set(direction: .init(dx: 0, dy: -1))
-        body.set(origin: CGPoint(
+        body.direction = .init(dx: 0, dy: -1)
+        body.frame.origin = CGPoint(
             x: body.worldBounds.maxX - body.frame.width,
             y: body.frame.origin.y
-        ))
+        )
         body.xAngle = 0
         body.zAngle = .pi * 1.5
         body.yAngle = 0
     }
     
     private func crawlAlongBottomBound(_ body: Entity) {
-        body.set(direction: .init(dx: 1, dy: 0))
-        body.set(origin: CGPoint(
+        body.direction = .init(dx: 1, dy: 0)
+        body.frame.origin = CGPoint(
             x: body.frame.origin.x,
             y: body.worldBounds.maxY - body.frame.height
-        ))
+        )
         body.xAngle = 0
         body.zAngle = 0
         body.yAngle = 0
     }
     
     private func crawlDownLeftBound(_ body: Entity) {
-        body.set(direction: .init(dx: 0, dy: 1))
-        body.set(origin: CGPoint(
+        body.direction = .init(dx: 0, dy: 1)
+        body.frame.origin = CGPoint(
             x: 0, y: body.frame.origin.y
-        ))
+        )
         body.isUpsideDown = false
         body.xAngle = 0
         body.zAngle = .pi * 0.5

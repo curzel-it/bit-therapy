@@ -1,6 +1,7 @@
 import Dialogs
 import Schwifty
 import SwiftUI
+import WebKit
 
 struct IntroDialog: View {
     @EnvironmentObject var viewModel: ViewModel

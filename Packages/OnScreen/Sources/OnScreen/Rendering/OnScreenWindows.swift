@@ -3,6 +3,7 @@ import Combine
 import Schwifty
 import SwiftUI
 import Yage
+import YageLive
 
 open class OnScreenWindows: NSObject, NSWindowDelegate {
     weak var world: LiveWorld?
@@ -20,7 +21,7 @@ open class OnScreenWindows: NSObject, NSWindowDelegate {
     }
     
     private func startSpawningWindows() {
-        childrenCanc = world?.state.$children.sink { children in
+        childrenCanc = world?.$children.sink { children in
             guard let world = self.world else { return }
             children
                 .filter { $0.sprite != nil }

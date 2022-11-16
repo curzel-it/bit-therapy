@@ -17,8 +17,8 @@ public class AutoRespawn: Capability {
         guard let body = subject else { return }
         let worldWidth = body.worldBounds.width
         let randomX = worldWidth * CGFloat.random(in: 0...0.25)
-        body.set(origin: CGPoint(x: randomX, y: 30))
-        body.set(direction: CGVector(dx: 1, dy: 0))
+        body.frame.origin = CGPoint(x: randomX, y: 30)
+        body.direction = CGVector(dx: 1, dy: 0)
         body.set(state: .move)
     }
     

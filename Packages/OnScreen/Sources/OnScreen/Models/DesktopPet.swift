@@ -11,6 +11,6 @@ class DesktopPet: PetEntity {
     }
     
     private func setupMenu() {
-        install(ShowsMenuOnRightClick())
+        ShowsMenuOnRightClick.install(on: self)
     }
 }

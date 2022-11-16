@@ -3,33 +3,34 @@ import Combine
 import SwiftUI
 import Schwifty
 import Yage
+import YageLive
 
 open class EntityWindow: NSWindow {
     public let entity: Entity
     public let world: LiveWorld
-    
-    weak var entityView: NSView!
-    
-    private var boundsCanc: AnyCancellable!
-    private var aliveCanc: AnyCancellable!
-    
     private(set) var expectedFrame: CGRect = .zero
+    private var mouseDrag: MouseDraggable?
+    private var updater: WindowUpdater?
     
     public init(representing entity: Entity, in world: LiveWorld) {
         self.entity = entity
         self.world = world
         super.init(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
         setupWindow()
-        loadEntityView()
-        bindToEntityFrame()
-        bindToEntityLifecycle()
+        setupMouseDrag()
+        setupEntityView()
+        setupUpdater()
     }
     
-    private func loadEntityView() {
+    private func setupEntityView() {
         let view = buildEntityView()
         contentView?.addSubview(view)
         view.constrainToFillParent()
-        entityView = view
+    }
+    private func setupUpdater() {
+        let updater = WindowUpdater(for: self)
+        world.state.children.append(updater)
+        self.updater = updater
     }
     
     open func buildEntityView() -> NSView {
@@ -42,52 +43,61 @@ open class EntityWindow: NSWindow {
         isOpaque = false
         hasShadow = false
         backgroundColor = .clear
-        isMovableByWindowBackground = !entity.isStatic        
+        isMovableByWindowBackground = !entity.isStatic
         level = .statusBar
         collectionBehavior = .canJoinAllSpaces
-        
-        if !entity.isStatic, entity.capability(for: MouseDraggable.self) == nil {
-            entity.install(MouseDraggable())
-        }
+    }
+    
+    private func setupMouseDrag() {
+        guard !entity.isStatic else { return }
+        mouseDrag = entity.capability(for: MouseDraggable.self) ?? MouseDraggable.install(on: entity)
+    }
+    
+    func onEntityUpdated() {
+        updateFrameIfNeeded()
+        if !entity.isAlive { close() }
     }
     
     open override func close() {
-        boundsCanc?.cancel()
-        boundsCanc = nil
         super.close()
-    }
-}
-
-// MARK: - Frame
-
-private extension EntityWindow {
-    
-    func bindToEntityFrame() {
-        boundsCanc = entity.$frame.sink { frame in
-            self.updateFrame(toShow: frame)
-        }
+        updater?.kill()
+        updater = nil
     }
     
-    func updateFrame(toShow entityFrame: CGRect) {
-        let world = world.state.bounds
-        expectedFrame = CGRect(
-            origin: CGPoint(x: entityFrame.minX, y: world.height - entityFrame.maxY),
-            size: entityFrame.size
+    private func updateFrameIfNeeded() {
+        guard mouseDrag?.isBeingDragged != true else { return }
+        
+        let newFrame = CGRect(
+            origin: CGPoint(
+                x: entity.frame.minX,
+                y: world.state.bounds.height - entity.frame.maxY
+            ),
+            size: entity.frame.size
         )
-        setFrame(expectedFrame, display: true, animate: false)
+        if newFrame != frame {
+            expectedFrame = newFrame
+            setFrame(newFrame, display: true, animate: false)
+        }
     }
 }
 
-// MARK: - Alive
+// MARK: - Updater
 
-extension EntityWindow {
+private class WindowUpdater: Entity {
+    weak var window: EntityWindow?
     
-    func bindToEntityLifecycle() {
-        aliveCanc = entity.$isAlive.sink { isAlive in
-            if !isAlive {
-                self.close()
-            }
-        }
+    init(for window: EntityWindow) {
+        self.window = window
+        super.init(id: "window-updater-\(window.entity)", frame: .zero, in: .zero)
+    }
+    
+    override func update(with collisions: Collisions, after time: TimeInterval) {
+        window?.onEntityUpdated()
+    }
+    
+    override func kill() {
+        window = nil
+        super.kill()
     }
 }
 

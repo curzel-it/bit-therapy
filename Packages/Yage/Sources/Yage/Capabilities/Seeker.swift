@@ -11,9 +11,9 @@ public class Seeker: Capability {
     private var targetReached: Bool = false
     private var report: (State) -> Void = { _ in }
     
-    public override func install(on subject: Entity) {
-        super.install(on: subject)
-        self.baseSpeed = subject.speed
+    public required init(for subject: Entity) {
+        super.init(for: subject)
+        baseSpeed = subject.speed
     }
     
     // MARK: - Follow
@@ -67,10 +67,10 @@ public class Seeker: Capability {
     
     private func adjustDirection(towards target: CGPoint, with distance: CGFloat) {
         if distance < minDistance {
-            subject?.set(direction: .zero)
+            subject?.direction = .zero
         } else {
             let origin = subject?.frame.origin ?? .zero
-            subject?.set(direction: .unit(from: origin, to: target))
+            subject?.direction = .unit(from: origin, to: target)
         }
     }
     
@@ -109,10 +109,10 @@ public class Seeker: Capability {
     
     // MARK: - Uninstall
     
-    public override func kill() {
-        super.kill()
+    public override func kill(autoremove: Bool = true) {
         targetEntity = nil
         report = { _ in }
+        super.kill(autoremove: autoremove)
     }
 }
 

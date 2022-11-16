@@ -17,6 +17,7 @@ public struct Dialog: View {
             Spacer()
             ControlsView()
         }
+        .frame(maxWidth: viewModel.maxWidth)
         .environmentObject(viewModel)
     }
 }

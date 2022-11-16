@@ -49,12 +49,12 @@ public class Gravity: Capability {
         
         if isLanding || isRaising {
             let ground = CGPoint(x: body.frame.origin.x, y: targetY)
-            body.set(origin: ground)
+            body.frame.origin = ground
         }
         if isLanding {
             body.movement?.isEnabled = true
             body.set(state: .move)
-            body.set(direction: .init(dx: 1, dy: 0))
+            body.direction = .init(dx: 1, dy: 0)
         }
         return true
     }
@@ -65,7 +65,7 @@ public class Gravity: Capability {
         guard !isFalling else { return false }
         body.movement?.isEnabled = true
         body.set(state: .freeFall)
-        body.set(direction: Gravity.fallDirection)
+        body.direction = Gravity.fallDirection
         body.speed = 14
         return true
     }
@@ -81,13 +81,15 @@ public class Gravity: Capability {
 
 extension Entity {
     public func setGravity(enabled: Bool) {
+        let gravity = capability(for: Gravity.self)
         if enabled {
-            guard capability(for: Gravity.self) == nil else { return }
-            install(Gravity())
+            if gravity == nil {
+                Gravity.install(on: self)
+            }
         } else {
-            uninstall(Gravity.self)
+            gravity?.kill()
             if direction.dy > 0 {
-                set(direction: .init(dx: 1, dy: 0))
+                direction = .init(dx: 1, dy: 0)
             }
             set(state: .move)
         }

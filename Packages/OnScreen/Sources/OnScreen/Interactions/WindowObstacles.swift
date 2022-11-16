@@ -3,6 +3,7 @@ import Schwifty
 import SwiftUI
 import WindowsDetector
 import Yage
+import YageLive
 
 class DesktopObstaclesService: ObservableObject {
     private let world: LiveWorld

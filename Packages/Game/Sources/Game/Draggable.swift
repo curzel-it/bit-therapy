@@ -9,7 +9,7 @@ extension View {
                 x: -entity.frame.width,
                 y: -entity.frame.height
             )
-            entity.set(origin: newPosition)
+            entity.frame.origin = newPosition
         }
         return self.gesture(
             DragGesture()

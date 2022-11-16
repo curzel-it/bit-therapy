@@ -4,47 +4,51 @@ import Schwifty
 import SwiftUI
 
 public class AnimatedSprite: Capability, ObservableObject {
-    @Published public private(set) var animation: ImageAnimator = .none
+    public private(set) var animation: ImageAnimator = .none
     
     private var lastFrameBeforeAnimations: CGRect = .zero
     private var lastState: EntityState = .drag
     private var stateCanc: AnyCancellable!
         
-    public override func install(on subject: Entity) {
-        super.install(on: subject)
+    public required init(for subject: Entity) {
+        super.init(for: subject)
         self.lastFrameBeforeAnimations = subject.frame
-        
-        stateCanc = subject.$state.sink { newState in
-            Task { @MainActor in
-                self.lastState = newState
-                self.updateSprite()
-            }
-        }
     }
     
     public override func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled, let subject = subject else { return }
-        
-        if let next = animation.nextFrame(after: time) {
-            setSprite(next)
-        }
-        if !subject.state.isAction {
-            lastFrameBeforeAnimations = subject.frame
-        }
+        guard isEnabled else { return }
+        updateSpriteIfStateChanged()
+        loadNextFrame(after: time)
+        storeFrameIfNeeded()
     }
     
-    public override func kill() {
+    public override func kill(autoremove: Bool = true) {
         setSprite(nil)
-        super.kill()
+        super.kill(autoremove: autoremove)
         animation = .none
         stateCanc?.cancel()
         stateCanc = nil
     }
     
-    @MainActor
-    func updateSprite() {
-        guard let renderable = subject else { return }
-        guard let path = renderable.animationPath(for: lastState) else { return }
+    private func updateSpriteIfStateChanged() {
+        guard let newState = subject?.state, newState != lastState else { return }
+        lastState = newState
+        updateSprite()
+    }
+    
+    private func loadNextFrame(after time: TimeInterval) {
+        guard let next = animation.nextFrame(after: time) else { return }
+        setSprite(next)
+    }
+    
+    private func storeFrameIfNeeded() {
+        guard let subject = subject else { return }
+        guard !subject.state.isAction else { return }
+        lastFrameBeforeAnimations = subject.frame
+    }
+    
+    private func updateSprite() {
+        guard let path = subject?.animationPath(for: lastState) else { return }
         guard path != animation.baseName else { return }
         printDebug(tag, "Loading", path)
         animation.clearHooks()
@@ -87,12 +91,12 @@ public class AnimatedSprite: Capability, ObservableObject {
     func handleAnimationStarted(setFrame requiredFrame: CGRect) {
         printDebug(tag, "Animation started")
         subject?.movement?.isEnabled = false
-        subject?.set(frame: requiredFrame)
+        subject?.frame = requiredFrame
     }
     
     func handleAnimationCompleted() {
         printDebug(tag, "Animation completed")
-        subject?.set(frame: lastFrameBeforeAnimations)
+        subject?.frame = lastFrameBeforeAnimations
         subject?.set(state: .move)
         subject?.movement?.isEnabled = true
     }

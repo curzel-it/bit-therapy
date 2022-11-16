@@ -2,26 +2,19 @@ import Combine
 import SwiftUI
 
 public class FlipHorizontallyWhenGoingLeft: Capability {
-    private var directionCanc: AnyCancellable!
-    private var stateCanc: AnyCancellable!
     private var lastDirection: CGVector = .zero
     private var lastState: EntityState = .drag
     
-    public override func install(on subject: Entity) {
-        super.install(on: subject)
+    public required init(for subject: Entity) {
         lastDirection = subject.direction
         lastState = subject.state
-        
-        stateCanc = subject.$state.sink { [weak self] state in
-            guard let self = self else { return }
-            self.updateYAngle(for: self.lastDirection, state: state)
-            self.lastState = state
-        }
-        directionCanc = subject.$direction.sink { [weak self] direction in
-            guard let self = self else { return }
-            self.updateYAngle(for: direction, state: self.lastState)
-            self.lastDirection = direction
-        }
+        super.init(for: subject)
+    }
+    
+    public override func update(with collisions: Collisions, after time: TimeInterval) {
+        guard isEnabled else { return }
+        guard let subject = subject else { return }
+        updateYAngle(for: subject.direction, state: subject.state)
     }
     
     private func updateYAngle(for direction: CGVector, state: EntityState) {
@@ -35,11 +28,5 @@ public class FlipHorizontallyWhenGoingLeft: Capability {
     private func updateYAngle(for direction: CGVector) {
         let isGoingLeft = direction.dx < -0.0001
         subject?.yAngle = isGoingLeft ? .pi : .zero
-    }
-    
-    public override func kill() {
-        directionCanc?.cancel()
-        directionCanc = nil
-        super.kill()
     }
 }

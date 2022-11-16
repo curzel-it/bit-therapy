@@ -28,7 +28,7 @@ open class PetEntity: Entity {
     func loadProperties() {
         fps = species.fps
         resetSpeed()
-        species.capabilities().forEach { install($0) }
+        species.capabilities().forEach { $0.install(on: self) }
         setupAutoRespawn()
         setInitialPosition()
         setInitialDirection()
@@ -61,15 +61,15 @@ open class PetEntity: Entity {
         } else {
             randomY = CGFloat.random(in: 0.1..<0.5) * worldBounds.height
         }
-        set(origin: CGPoint(x: randomX, y: randomY))
+        frame.origin = CGPoint(x: randomX, y: randomY)
     }
     
     private func setupAutoRespawn() {
-        install(AutoRespawn())
+        AutoRespawn.install(on: self)
     }
     
     private func setInitialDirection() {
-        set(direction: .init(dx: 1, dy: 0))
+        direction = .init(dx: 1, dy: 0)
     }
     
     public var supportsGravity: Bool {

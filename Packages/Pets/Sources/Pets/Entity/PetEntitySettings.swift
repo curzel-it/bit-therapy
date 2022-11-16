@@ -40,7 +40,7 @@ extension PetEntity {
 
 extension Capabilities {
     public static func petAnimations() -> Capabilities {
-        [PetAnimationsProvider(), PetSpritesProvider()]
+        [PetAnimationsProvider.self, PetSpritesProvider.self]
     }
     
     public static func defaultsCrawler() -> Capabilities {

@@ -6,10 +6,10 @@ extension Pet {
     static let clockAnalog = Pet(
         id: "clockanalog",
         capabilities: {
-            let size = ClockSize(
-                mainSpriteWidth: 100
-            )
-            return Capabilities.petAnimations() + [AnimatedSprite(), AnalogClock(size: size)]
+            Capabilities.petAnimations() + [
+                AnimatedSprite.self,
+                AnalogClock.self
+            ]
         },
         fps: 0.5,
         movementPath: .front,
@@ -19,15 +19,11 @@ extension Pet {
 }
 
 private class AnalogClock: Clock {
-    private let size: ClockSize
+    private let size = ClockSize(mainSpriteWidth: 100)
     
-    init(size: ClockSize) {
-        self.size = size
-    }
-    
-    override func install(on subject: Entity) {
-        super.install(on: subject)
-        subject.set(size: size.mainSpriteSize)
+    required init(for subject: Entity) {
+        super.init(for: subject)
+        subject.frame.size = size.mainSpriteSize
         loadHand(for: "hours")
         loadHand(for: "minutes")
     }

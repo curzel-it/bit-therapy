@@ -1,4 +1,5 @@
 import SwiftUI
+import Yage
 
 public struct BaseEntityView: View {
     @EnvironmentObject var viewModel: LiveWorld

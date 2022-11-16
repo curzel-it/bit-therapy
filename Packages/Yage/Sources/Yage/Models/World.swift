@@ -1,7 +1,7 @@
 import SwiftUI
 
 open class World: ObservableObject {
-    @Published public var children: [Entity] = []
+    public var children: [Entity] = []
     
     public private(set) var bounds: CGRect = .zero    
     public var events: [Event] = []

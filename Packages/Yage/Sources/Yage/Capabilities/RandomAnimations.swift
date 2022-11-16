@@ -4,8 +4,8 @@ import Schwifty
 public class RandomAnimations: Capability {
     private var timer: Timer!
            
-    public override func install(on subject: Entity) {
-        super.install(on: subject)
+    public required init(for subject: Entity) {
+        super.init(for: subject)
         startAnimating()
     }
     
@@ -48,9 +48,9 @@ public class RandomAnimations: Capability {
         subject?.set(state: .action(action: animation, loops: times))
     }
     
-    public override func kill() {
+    public override func kill(autoremove: Bool = true) {
         timer?.invalidate()
         timer = nil
-        super.kill()
+        super.kill(autoremove: autoremove)
     }
 }

@@ -5,7 +5,7 @@ public class LinearMovement: Capability {
         guard isEnabled, let body = subject else { return }
         let distance = movement(after: time)
         let newPosition = body.frame.origin.offset(by: distance)
-        body.set(origin: newPosition)
+        body.frame.origin = newPosition
     }
     
     func movement(after time: TimeInterval) -> CGPoint {

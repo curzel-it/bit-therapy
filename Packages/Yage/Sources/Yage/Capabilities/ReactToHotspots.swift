@@ -4,13 +4,7 @@ import SwiftUI
 
 public class ReactToHotspots: Capability {
     private var lastTouched: [Hotspot] = []    
-    private var dragCanc: AnyCancellable!
     private var isDragging = false
-    
-    public override func install(on subject: Entity) {
-        super.install(on: subject)
-        setResetLastTouchedOnDrag()
-    }
     
     // MARK: - Handle Hotspots
     
@@ -35,30 +29,22 @@ public class ReactToHotspots: Capability {
         guard case .move = subject?.state else { return }
         let touched = Hotspot.allCases.filter { collisions.contains($0) }
         let newTouched = touched.filter { !lastTouched.contains($0) }
+        resetTouchedBoundsIfBeingDragged()
         handle(touched: newTouched)
         lastTouched = touched
     }
     
     // MARK: - Drag
     
-    private func setResetLastTouchedOnDrag() {
-        dragCanc = subject?.$state.sink { state in
-            if case .drag = state {
-                self.isDragging = true
-            } else {
-                if self.isDragging {
-                    self.lastTouched = []
-                    self.isDragging = false
-                }
+    private func resetTouchedBoundsIfBeingDragged() {
+        guard let state = subject?.state else { return }
+        if case .drag = state {
+            isDragging = true
+        } else {
+            if isDragging {
+                lastTouched = []
+                isDragging = false
             }
         }
-    }
-    
-    // MARK: - Uninstall
-    
-    public override func kill() {
-        super.kill()
-        dragCanc?.cancel()
-        dragCanc = nil
     }
 }

@@ -9,8 +9,8 @@ class LinearMovementTests: XCTestCase {
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
             in: CGRect(x: 0, y: 0, width: 1000, height: 1000)
         )
-        entity.install(LinearMovement())
-        entity.set(direction: .init(dx: 1, dy: 0))
+        LinearMovement.install(on: entity)
+        entity.direction = .init(dx: 1, dy: 0)
         entity.speed = 1
         
         entity.update(with: [], after: 0.1)

@@ -16,6 +16,7 @@ let package = Package(
         .package(path: "../Dialogs"),
         .package(path: "../Pets"),
         .package(path: "../Yage"),
+        .package(path: "../YageLive"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12")
     ],
     targets: [
@@ -26,7 +27,8 @@ let package = Package(
                 .product(name: "Dialogs", package: "Dialogs"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),
-                .product(name: "Yage", package: "Yage")
+                .product(name: "Yage", package: "Yage"),
+                .product(name: "YageLive", package: "YageLive")
             ]
         ),
         .testTarget(

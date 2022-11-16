@@ -4,6 +4,7 @@ import Pets
 import Schwifty
 import SwiftUI
 import Yage
+import YageLive
 
 struct GameView: View {
     @StateObject var viewModel: ViewModel

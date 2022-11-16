@@ -1,5 +1,6 @@
 import XCTest
 import Yage
+import YageLive
 
 @testable import OnScreen
 

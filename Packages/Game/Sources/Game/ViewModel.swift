@@ -4,8 +4,10 @@ import SwiftUI
 import Yage
 
 class ViewModel: ObservableObject {
+    @Published var entities: [String] = []
     @Published var gotUsername = false
     @Published var username: String = ""
+    @Published var world: GameEnvironment
     @Published var worldSize: CGSize {
         didSet {
             world.set(bounds: CGRect(size: worldSize))
@@ -14,9 +16,6 @@ class ViewModel: ObservableObject {
                 .forEach { $0.teleport() }
         }
     }
-    @Published var world: GameEnvironment
-    @Published var entities: [String] = []
-    @Published var fruitIndex: Int = -1
     
     let settings: PetsSettings
     let lang: LocalizedContentProvider
@@ -35,7 +34,7 @@ class ViewModel: ObservableObject {
             with: settings,
             bounds: CGRect(size: size)
         )
-        childrenCanc = world.state.$children.sink { newChildren in
+        childrenCanc = world.$children.sink { newChildren in
             self.entities = newChildren.map { $0.id }
         }
     }
