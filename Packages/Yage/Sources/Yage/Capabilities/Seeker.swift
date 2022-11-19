@@ -5,6 +5,7 @@ public class Seeker: Capability {
     private weak var targetEntity: Entity?
     private var targetPosition: Position = .center
     private var targetOffset: CGSize = .zero
+    private var autoAdjustSpeed: Bool = true
     private var minDistance: CGFloat = 5
     private var maxDistance: CGFloat = 20
     private var baseSpeed: CGFloat = 0
@@ -22,6 +23,7 @@ public class Seeker: Capability {
         _ target: Entity,
         to position: Position,
         offset: CGSize = .zero,
+        autoAdjustSpeed: Bool = true,
         minDistance: CGFloat = 5,
         maxDistance: CGFloat = 20,
         report: @escaping (State) -> Void
@@ -29,6 +31,7 @@ public class Seeker: Capability {
         self.targetEntity = target
         self.targetPosition = position
         self.targetOffset = offset
+        self.autoAdjustSpeed = autoAdjustSpeed
         self.minDistance = minDistance
         self.maxDistance = maxDistance
         self.report = report
@@ -43,7 +46,7 @@ public class Seeker: Capability {
 
         let distance = body.frame.origin.distance(from: target)
         checkTargetReached(with: distance)
-        adjustSpeed(with: distance)
+        adjustSpeedIfNeeded(with: distance)
         adjustDirection(towards: target, with: distance)
     }
     
@@ -76,11 +79,14 @@ public class Seeker: Capability {
     
     // MARK: - Speed
     
-    private func adjustSpeed(with distance: CGFloat) {
+    private func adjustSpeedIfNeeded(with distance: CGFloat) {
+        guard autoAdjustSpeed else { return }
         if distance < minDistance {
             subject?.speed = baseSpeed * 0.25
         } else if distance < maxDistance {
             subject?.speed = baseSpeed * 0.5
+        } else {
+            subject?.speed = baseSpeed
         }
     }
     
@@ -117,7 +123,6 @@ public class Seeker: Capability {
 }
 
 extension Seeker {
-    
     public enum Position {
         case center
         case above
@@ -125,7 +130,6 @@ extension Seeker {
 }
 
 extension Seeker {
-    
     public enum State: CustomStringConvertible {
         case captured
         case escaped

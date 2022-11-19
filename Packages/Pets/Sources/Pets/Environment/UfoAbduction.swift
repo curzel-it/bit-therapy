@@ -87,7 +87,12 @@ private class UfoAbduction: Capability {
         let seeker = Seeker.install(on: body)
         let distance = CGSize(width: 0, height: -50)
         
-        seeker.follow(target, to: .above, offset: distance) { captureState in
+        seeker.follow(target, to: .above, offset: distance) { [weak self] captureState in
+            guard let self = self else {
+                seeker.kill()
+                onCompletion()
+                return
+            }
             guard case .captured = captureState else { return }
             seeker.isEnabled = false
             self.paralizeTarget()

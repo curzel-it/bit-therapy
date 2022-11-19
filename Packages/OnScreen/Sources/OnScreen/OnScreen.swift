@@ -47,10 +47,17 @@ class DesktopEnvironment: PetsEnvironment {
         guard onScreenSettings.desktopInteractions else { return }
         desktopObstacles = DesktopObstaclesService(world: self)
         desktopObstacles.start()
+        state.children.forEach {
+            guard let pet = $0 as? PetEntity else { return }
+            pet.setupJumperIfPossible(with: desktopObstacles)
+        }
     }
     
     override func buildEntity(pet species: Pet) -> PetEntity {
-        DesktopPet(of: species, in: state.bounds, settings: onScreenSettings)
+        let entity = PetEntity(of: species, in: state.bounds, settings: onScreenSettings)
+        ShowsMenuOnRightClick.install(on: entity)
+        entity.setupJumperIfPossible(with: desktopObstacles)
+        return entity
     }
     
     override func kill() {
@@ -61,4 +68,25 @@ class DesktopEnvironment: PetsEnvironment {
 
 public protocol OnScreenSettings: PetsSettings {
     var desktopInteractions: Bool { get }
+}
+
+extension DesktopObstaclesService: JumperPlatformsProvider {
+    func platforms() -> [Entity] {
+        world.children.filter { $0.isWindowObstacle || $0.isGround }
+    }
+}
+
+private extension Entity {
+    var isGround: Bool {
+        id == Hotspot.bottomBound.rawValue
+    }
+}
+
+private extension PetEntity {
+    func setupJumperIfPossible(with platforms: JumperPlatformsProvider?) {
+        guard let platforms = platforms else { return }
+        guard RandomPlatformJumper.compatible(with: self) else { return }
+        let jumper = RandomPlatformJumper.install(on: self)
+        jumper.start(with: platforms)
+    }
 }

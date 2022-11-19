@@ -6,7 +6,7 @@ import Yage
 import YageLive
 
 class DesktopObstaclesService: ObservableObject {
-    private let world: LiveWorld
+    let world: LiveWorld
     private let windowsDetector = WindowsDetector().started(pollInterval: 1)
     private var windowsCanc: AnyCancellable!
     
@@ -71,7 +71,7 @@ class WindowObstacle: Entity {
     static var id: Int = 0
 }
 
-private extension Entity {
+extension Entity {
     var isWindowObstacle: Bool { self is WindowObstacle }
 }
 
