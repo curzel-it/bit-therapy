@@ -1,7 +1,7 @@
 import Schwifty
 import SwiftUI
 
-open class Entity: Identifiable, ObservableObject {
+open class Entity: Identifiable {
     public let id: String
     public var backgroundColor: Color = .clear
     public var capabilities: [Capability] = []

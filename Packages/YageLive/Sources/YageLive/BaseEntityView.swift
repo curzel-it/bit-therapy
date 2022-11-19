@@ -3,13 +3,13 @@ import Yage
 
 public struct BaseEntityView: View {
     @EnvironmentObject var viewModel: LiveWorld
-    @StateObject var entity: Entity
     
+    let entity: Entity
     let applyOffset: Bool
     
     public init(representing entity: Entity, applyOffset: Bool = false) {
         self.applyOffset = applyOffset
-        self._entity = StateObject(wrappedValue: entity)
+        self.entity = entity
     }
     
     public var body: some View {

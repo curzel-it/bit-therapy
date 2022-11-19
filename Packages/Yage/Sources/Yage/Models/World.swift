@@ -1,6 +1,6 @@
 import SwiftUI
 
-open class World: ObservableObject {
+open class World {
     public var children: [Entity] = []
     
     public private(set) var bounds: CGRect = .zero    

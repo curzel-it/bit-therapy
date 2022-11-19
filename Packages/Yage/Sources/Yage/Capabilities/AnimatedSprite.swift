@@ -3,7 +3,7 @@ import NotAGif
 import Schwifty
 import SwiftUI
 
-public class AnimatedSprite: Capability, ObservableObject {
+public class AnimatedSprite: Capability {
     public private(set) var animation: ImageAnimator = .none
     
     private var lastFrameBeforeAnimations: CGRect = .zero

@@ -17,7 +17,7 @@ public struct ImageLayer: Identifiable {
     }
 }
 
-open class SpritesProvider: Capability, ObservableObject {
+open class SpritesProvider: Capability {
     let framesProvider = FramesProvider(format: "%@-%d", fileExtension: .png, in: Bundle.main)
     
     open func frames(for name: String) -> [ImageFrame] {
