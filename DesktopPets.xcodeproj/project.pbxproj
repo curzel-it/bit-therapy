@@ -62,6 +62,8 @@
 		1EA055582913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA055592913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA0555A2913E5C10037803E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
+		1EB1C779292D599200AAC4DD /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB1C778292D599200AAC4DD /* Taku */; };
+		1EB1C77B292D5A0100AAC4DD /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB1C77A292D5A0100AAC4DD /* Taku */; };
 		1ED1D0192912C64E004031BC /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */; };
 		1ED1D01A2912C66C004031BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		1ED1D01B2912C674004031BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
@@ -166,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E449A092913211C00DD97BC /* DesignSystem in Frameworks */,
+				1EB1C779292D599200AAC4DD /* Taku in Frameworks */,
 				1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */,
 				1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */,
 				1E449A0B2913211C00DD97BC /* RateKit in Frameworks */,
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
+				1EB1C77B292D5A0100AAC4DD /* Taku in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
 				1E7D33E029149498002C0188 /* PetsSelection in Frameworks */,
 				1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */,
@@ -383,6 +387,7 @@
 				1E4499F32913211C00DD97BC /* StatusBarItems */,
 				1EA0554E2913D7B20037803E /* PetDetails */,
 				1E7D33DD29149491002C0188 /* PetsSelection */,
+				1EB1C778292D599200AAC4DD /* Taku */,
 			);
 			productName = MacPets;
 			productReference = 1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */;
@@ -481,6 +486,7 @@
 				1ED1D03E29130A86004031BC /* StatusBarItems */,
 				1EA0554C2913D7AD0037803E /* PetDetails */,
 				1E7D33DF29149498002C0188 /* PetsSelection */,
+				1EB1C77A292D5A0100AAC4DD /* Taku */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -1417,6 +1423,14 @@
 		1EA055502913D7B80037803E /* PetDetails */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PetDetails;
+		};
+		1EB1C778292D599200AAC4DD /* Taku */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Taku;
+		};
+		1EB1C77A292D5A0100AAC4DD /* Taku */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Taku;
 		};
 		1ED1D0202912C83B004031BC /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
