@@ -15,7 +15,7 @@ extension AppPage: CustomStringConvertible {
         case .home: return Lang.Page.home
         case .none: return ""
         case .settings: return Lang.Page.settings
-        case .taku: return "Taku Demo"
+        case .taku: return "News"
         }
     }
 }

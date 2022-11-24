@@ -6,13 +6,15 @@ public struct TakuView: View {
     
     public init(token: String) {
         // swiftlint:disable line_length
-        let xxx = "57xBLe1vWlroM2zxjmp5UkpktGTQHdcQTkvRYCCyLmh2L%2BEhRT5uamjeFuyKWLqZeYd%2BXTNVjmwE7IjzfTz3s%2BT0qYzMfOY7DKHsst%2FbBw8yGj46y6kpCsBtC%2F7zy%2BKYRLEH7pfhGkSuXeusmdh3DfZfOZC%2BtNUFCubJoR1knz8%3D"
-        self._viewModel = StateObject(wrappedValue: TakuViewModel(token: xxx))
+        let token = "znJfBeHgzbOegRTE/x2B4DLjhHs6bHMXTav4v/Q0LCdhr7h3wAqTC7YgqGrWdPTtWdLmgpPSV/gUkQ9UVxL/bjix47VA6bPYCozLoUscwcpDIm7jHO0wnVJEMDeyNJgM+lMzOHvdPYmMSkZcZwYLbn6FoetrsKAwmbqass0UnhU="
+        let userId = "1"
+        
+        self._viewModel = StateObject(wrappedValue: TakuViewModel(apiToken: token, userIdentificator: userId))
     }
     
     public var body: some View {
         ZStack {
-            WebView(request: viewModel.urlRequest, navigationDelegate: viewModel)
+            WebView(token: viewModel.token, userId: viewModel.userId, navigationDelegate: viewModel)
                 .opacity(viewModel.isLoading ? 0 : 1)
             
             ProgressView()
@@ -26,11 +28,12 @@ public struct TakuView: View {
 class TakuViewModel: NSObject, ObservableObject, WKNavigationDelegate {
     @Published var isLoading: Bool = true
     
-    let urlRequest: URLRequest
+    let token: String
+    let userId: String
     
-    init(token: String) {
-        let url = URL(string: "https://ui.taku-app.com/v1/feed?tk=\(token)")
-        urlRequest = URLRequest(url: url!)
+    init(apiToken: String, userIdentificator: String) {
+        token = apiToken
+        userId = userIdentificator
         super.init()
     }
     
