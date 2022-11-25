@@ -2,7 +2,6 @@ import DesignSystem
 import LaunchAtLogin
 import Schwifty
 import SwiftUI
-import Taku
 import Tracking
 
 struct MainScene: Scene {
@@ -72,7 +71,13 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
     
-    var options: [AppPage] = [.home, .settings, .about, .taku]
+    var options: [AppPage] {
+        var tabs: [AppPage] = [.home, .settings, .about]
+        if TakuService.shared.isAvailable() {
+            tabs.append(.news)
+        }
+        return tabs
+    }
     
     var body: some View {
         HStack {
@@ -91,7 +96,7 @@ private struct PageContents: View {
         case .about: AboutView()
         case .home: PetsSelectionCoordinator.view()
         case .settings: SettingsView()
-        case .taku: TakuView(token: "TODO: addMeToSecrets", userId: "userid")
+        case .news: NewsView()
         case .none: EmptyView()
         }
     }

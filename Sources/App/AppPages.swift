@@ -4,7 +4,7 @@ enum AppPage: String, CaseIterable {
     case about
     case home
     case none
-    case taku
+    case news
     case settings
 }
 
@@ -15,7 +15,7 @@ extension AppPage: CustomStringConvertible {
         case .home: return Lang.Page.home
         case .none: return ""
         case .settings: return Lang.Page.settings
-        case .taku: return "News"
+        case .news: return Lang.Page.news
         }
     }
 }
@@ -26,7 +26,7 @@ extension AppPage {
         case .about, .none: return "info.square.fill"
         case .home: return "circle.grid.3x3.fill"
         case .settings: return "gearshape.fill"
-        case .taku: return "message.fill"
+        case .news: return "message.fill"
         }
     }
 }

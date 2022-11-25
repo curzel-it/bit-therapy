@@ -88,6 +88,9 @@
 		1ED75D44291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
 		1ED75D45291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
+		1EE5662529312DE100DC81DF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE5662429312DE100DC81DF /* News.swift */; };
+		1EE5662629312DE100DC81DF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE5662429312DE100DC81DF /* News.swift */; };
+		1EE5662729312DE100DC81DF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE5662429312DE100DC81DF /* News.swift */; };
 		64DFB2082930313D00748B46 /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 64DFB2072930313D00748B46 /* Taku */; };
 		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
@@ -147,6 +150,7 @@
 		1ED1CFFD2912C5EB004031BC /* Mobile Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
+		1EE5662429312DE100DC81DF /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatsImplementation.swift; sourceTree = "<group>"; };
 		A66B2C1A28746D2E00D695EA /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +349,7 @@
 				1E7FB47728BD1A7F002F377D /* SurveyView.swift */,
 				1E2AC745290B1093003D0AB2 /* Lang.swift */,
 				A6FB7D5C28740F8E00AB872E /* AboutView.swift */,
+				1EE5662429312DE100DC81DF /* News.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7D33E5291499FB002C0188 /* PetsSelection.swift in Sources */,
+				1EE5662629312DE100DC81DF /* News.swift in Sources */,
 				1E4499F62913211C00DD97BC /* Cheats.swift in Sources */,
 				1E4499F72913211C00DD97BC /* MacScene.swift in Sources */,
 				1E7D33F42915E2B2002C0188 /* AppPages.swift in Sources */,
@@ -725,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7D33E6291499FB002C0188 /* PetsSelection.swift in Sources */,
+				1EE5662729312DE100DC81DF /* News.swift in Sources */,
 				1ED1D0352912C8A1004031BC /* AboutView.swift in Sources */,
 				1ED1D0372912C8A1004031BC /* CheatsImplementation.swift in Sources */,
 				1EA055532913DCD20037803E /* MobileSettings.swift in Sources */,
@@ -763,6 +770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7D33E4291499FB002C0188 /* PetsSelection.swift in Sources */,
+				1EE5662529312DE100DC81DF /* News.swift in Sources */,
 				1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MacScene.swift in Sources */,
 				1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */,
@@ -1176,7 +1184,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201800;
+				CURRENT_PROJECT_VERSION = 201801;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1215,7 +1223,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201800;
+				CURRENT_PROJECT_VERSION = 201801;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;

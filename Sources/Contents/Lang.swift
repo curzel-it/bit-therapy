@@ -23,6 +23,7 @@ public enum Lang {
         public static let game = "page.title.game".localized()
         public static let home = "page.title.home".localized()
         public static let settings = "page.title.settings".localized()
+        public static let news = "page.title.news".localized()
     }
     
     // MARK: - Menu
