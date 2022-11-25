@@ -2,6 +2,7 @@ import DesignSystem
 import LaunchAtLogin
 import Schwifty
 import SwiftUI
+import Taku
 import Tracking
 
 struct MainScene: Scene {
@@ -71,7 +72,7 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
     
-    var options: [AppPage] = [.home, .settings, .about]
+    var options: [AppPage] = [.home, .settings, .about, .taku]
     
     var body: some View {
         HStack {
@@ -90,6 +91,7 @@ private struct PageContents: View {
         case .about: AboutView()
         case .home: PetsSelectionCoordinator.view()
         case .settings: SettingsView()
+        case .taku: TakuView(token: "TODO: addMeToSecrets", userId: "userid")
         case .none: EmptyView()
         }
     }

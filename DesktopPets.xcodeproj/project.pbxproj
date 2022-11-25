@@ -62,6 +62,8 @@
 		1EA055582913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA055592913E4BE0037803E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* MacAppDelegate.swift */; };
 		1EA0555A2913E5C10037803E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
+		1EB1C779292D599200AAC4DD /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB1C778292D599200AAC4DD /* Taku */; };
+		1EB1C77B292D5A0100AAC4DD /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB1C77A292D5A0100AAC4DD /* Taku */; };
 		1ED1D0192912C64E004031BC /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D8A28740F9A00AB872E /* DesktopPetsTests.swift */; };
 		1ED1D01A2912C66C004031BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		1ED1D01B2912C674004031BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
@@ -86,6 +88,7 @@
 		1ED75D44291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
 		1ED75D45291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
 		1EE264012892866E00771170 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EE264002892866E00771170 /* Schwifty */; };
+		64DFB2082930313D00748B46 /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 64DFB2072930313D00748B46 /* Taku */; };
 		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
 		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
 		A63AC7D72874768400A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D62874768400A9F738 /* OnScreen */; };
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E449A092913211C00DD97BC /* DesignSystem in Frameworks */,
+				1EB1C779292D599200AAC4DD /* Taku in Frameworks */,
 				1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */,
 				1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */,
 				1E449A0B2913211C00DD97BC /* RateKit in Frameworks */,
@@ -215,12 +219,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
+				1EB1C77B292D5A0100AAC4DD /* Taku in Frameworks */,
 				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
 				1E7D33E029149498002C0188 /* PetsSelection in Frameworks */,
 				1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
 				A63AC7D92874768400A9F738 /* Pets in Frameworks */,
 				1EA0554D2913D7AD0037803E /* PetDetails in Frameworks */,
+				64DFB2082930313D00748B46 /* Taku in Frameworks */,
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
 				1ED1D03F29130A86004031BC /* StatusBarItems in Frameworks */,
@@ -383,6 +389,7 @@
 				1E4499F32913211C00DD97BC /* StatusBarItems */,
 				1EA0554E2913D7B20037803E /* PetDetails */,
 				1E7D33DD29149491002C0188 /* PetsSelection */,
+				1EB1C778292D599200AAC4DD /* Taku */,
 			);
 			productName = MacPets;
 			productReference = 1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */;
@@ -481,6 +488,8 @@
 				1ED1D03E29130A86004031BC /* StatusBarItems */,
 				1EA0554C2913D7AD0037803E /* PetDetails */,
 				1E7D33DF29149498002C0188 /* PetsSelection */,
+				1EB1C77A292D5A0100AAC4DD /* Taku */,
+				64DFB2072930313D00748B46 /* Taku */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -522,6 +531,7 @@
 				A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
 				1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */,
+				64DFB2062930313D00748B46 /* XCRemoteSwiftPackageReference "taku-swift" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -1335,6 +1345,14 @@
 				minimumVersion = 1.0.12;
 			};
 		};
+		64DFB2062930313D00748B46 /* XCRemoteSwiftPackageReference "taku-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TakuApp/taku-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
@@ -1418,6 +1436,14 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = PetDetails;
 		};
+		1EB1C778292D599200AAC4DD /* Taku */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Taku;
+		};
+		1EB1C77A292D5A0100AAC4DD /* Taku */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Taku;
+		};
 		1ED1D0202912C83B004031BC /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
@@ -1456,6 +1482,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
+		};
+		64DFB2072930313D00748B46 /* Taku */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64DFB2062930313D00748B46 /* XCRemoteSwiftPackageReference "taku-swift" */;
+			productName = Taku;
 		};
 		A63AC7D22874768400A9F738 /* InAppPurchases */ = {
 			isa = XCSwiftPackageProductDependency;
