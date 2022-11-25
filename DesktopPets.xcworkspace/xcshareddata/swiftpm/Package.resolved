@@ -154,6 +154,15 @@
       }
     },
     {
+      "identity" : "taku-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TakuApp/taku-swift",
+      "state" : {
+        "branch" : "main",
+        "revision" : "493e9fd43fb46437c5396608de8d8a69cc6c07b5"
+      }
+    },
+    {
       "identity" : "windowsdetector",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/windowsdetector",

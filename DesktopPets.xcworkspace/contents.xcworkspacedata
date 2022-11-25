@@ -35,9 +35,6 @@
       location = "group:Packages/StatusBarItems">
    </FileRef>
    <FileRef
-      location = "group:Packages/Taku">
-   </FileRef>
-   <FileRef
       location = "group:Packages/Tracking">
    </FileRef>
    <FileRef
