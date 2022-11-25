@@ -91,7 +91,7 @@ private struct PageContents: View {
         case .about: AboutView()
         case .home: PetsSelectionCoordinator.view()
         case .settings: SettingsView()
-        case .taku: TakuView(token: "znJfBeHgzbOegRTE/x2B4DLjhHs6bHMXTav4v/Q0LCdhr7h3wAqTC7YgqGrWdPTtWdLmgpPSV/gUkQ9UVxL/bjix47VA6bPYCozLoUscwcpDIm7jHO0wnVJEMDeyNJgM+lMzOHvdPYmMSkZcZwYLbn6FoetrsKAwmbqass0UnhU=", userId: "10")
+        case .taku: TakuView(token: "TODO: addMeToSecrets", userId: "userid")
         case .none: EmptyView()
         }
     }
