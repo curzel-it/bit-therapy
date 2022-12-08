@@ -73,7 +73,7 @@ private struct Header: View {
     
     var options: [AppPage] {
         var tabs: [AppPage] = [.home, .settings, .about]
-        if TakuService.shared.isAvailable() {
+        if appState.isDevApp && TakuService.shared.isAvailable() {
             tabs.append(.news)
         }
         return tabs
