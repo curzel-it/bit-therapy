@@ -8,7 +8,7 @@ import YageLive
 
 struct GameView: View {
     @StateObject var viewModel: ViewModel
-    
+
     var body: some View {
         ZStack {
             Background().frame(size: viewModel.worldSize)
@@ -26,23 +26,23 @@ struct GameView: View {
 
 private struct Inhabitants: View {
     @EnvironmentObject var viewModel: ViewModel
-    
+
     var body: some View {
         ZStack {
             ForEach(viewModel.entities, id: \.self) {
                 PetView(entityId: $0)
             }
         }
-        .offset(x: -viewModel.worldSize.width/2)
-        .offset(y: -viewModel.worldSize.height/2)
+        .offset(x: -viewModel.worldSize.width / 2)
+        .offset(y: -viewModel.worldSize.height / 2)
     }
 }
 
 private struct PetView: View {
     @EnvironmentObject var world: PetsEnvironment
-    
+
     let entityId: String
-    
+
     var body: some View {
         let entity = world.state.children.first { $0.id == entityId }
         if let pet = entity as? PetEntity {
@@ -51,4 +51,3 @@ private struct PetView: View {
         }
     }
 }
-

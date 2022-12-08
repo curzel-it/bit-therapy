@@ -11,7 +11,7 @@ extension View {
             )
             entity.frame.origin = newPosition
         }
-        return self.gesture(
+        return gesture(
             DragGesture()
                 .onChanged { onDrag($0.location) }
                 .onEnded { onDrag($0.location) }

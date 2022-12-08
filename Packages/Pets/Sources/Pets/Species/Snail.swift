@@ -1,14 +1,14 @@
 import Foundation
+import Yage
 
-extension Pet {
-    static let snail = Pet(
-        id: "snail",
-        capabilities: { .defaultsCrawler() },
-        fps: 1,
-        movementPath: .front,
-        dragPath: .front,
-        speed: 0.2
-    )
-    
-    static let snailNicky = Pet.snail.shiny(id: "snail_nicky")
+extension Species {
+    static let snail = Species.pet
+        .with(id: "snail")
+        .with(capability: WallCrawler.self)
+        .with(fps: 1)
+        .with(movementPath: "front")
+        .with(dragPath: "front")
+        .with(speed: 0.2)
+
+    static let snailNicky = Species.snail.with(id: "snail_nicky")
 }

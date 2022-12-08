@@ -5,7 +5,7 @@ import SwiftUI
 struct GameMenu: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var viewModel = MenuViewModel()
-    
+
     var body: some View {
         ZStack {
             if viewModel.showingOptions {
@@ -30,7 +30,7 @@ struct GameMenu: View {
 private class MenuViewModel: ObservableObject {
     @Published var showingOptions = false
     @Published var selectedPage: AppPage = .none
-    
+
     func open() {
         withAnimation {
             showingOptions = true
@@ -41,7 +41,7 @@ private class MenuViewModel: ObservableObject {
             }
         }
     }
-    
+
     func close() {
         withAnimation {
             if selectedPage != .none {
@@ -55,7 +55,7 @@ private class MenuViewModel: ObservableObject {
 
 private struct SelectedPage: View {
     @EnvironmentObject var viewModel: MenuViewModel
-    
+
     var body: some View {
         switch viewModel.selectedPage {
         case .about: AboutView()
@@ -83,10 +83,10 @@ private struct MenuContents: View {
 
 private struct MenuButton: View {
     @EnvironmentObject var viewModel: MenuViewModel
-    
+
     var body: some View {
         Button { viewModel.open() } label: {
-            Image(systemName: "circle.grid.3x3.fill")            
+            Image(systemName: "circle.grid.3x3.fill")
                 .foregroundColor(.label)
                 .font(.title2)
                 .padding(.top, .sm)
@@ -96,9 +96,9 @@ private struct MenuButton: View {
 
 private struct MenuItemView: View {
     @EnvironmentObject var viewModel: MenuViewModel
-    
+
     let page: AppPage
-    
+
     var body: some View {
         Button {
             viewModel.selectedPage = page
@@ -115,6 +115,6 @@ private struct MenuItemView: View {
     }
 }
 
-private func binding<T>(_ getter: @escaping () -> T) -> Binding <T> {
+private func binding<T>(_ getter: @escaping () -> T) -> Binding<T> {
     Binding(get: getter, set: { _, _ in })
 }

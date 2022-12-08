@@ -29,12 +29,12 @@ extension CGVector {
         if rad >= 0 { return rad }
         return rad + 2 * .pi
     }
-    
+
     init(radians: CGFloat) {
         let rad = radians > CGFloat.pi ? CGFloat.pi - radians : radians
         self.init(dx: cos(rad), dy: sin(rad))
     }
-    
+
     init(degrees: CGFloat) {
         self.init(radians: degreesToRadians(degrees))
     }

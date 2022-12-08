@@ -4,12 +4,12 @@ import SwiftUI
 
 public struct Dialog: View {
     @StateObject var viewModel: DialogViewModel
-    
+
     public init(contents: [MessageContent]) {
         let vm = DialogViewModel(contents: contents)
-        self._viewModel = StateObject(wrappedValue: vm)
+        _viewModel = StateObject(wrappedValue: vm)
     }
-    
+
     public var body: some View {
         VStack {
             Spacer()
@@ -24,7 +24,7 @@ public struct Dialog: View {
 
 private struct ContentView: View {
     @EnvironmentObject var viewModel: DialogViewModel
-    
+
     var body: some View {
         GeometryReader { geo in
             ScrollView {
@@ -52,7 +52,7 @@ private struct ContentView: View {
 
 private struct ContentPiece: View {
     let content: MessageContent
-    
+
     var body: some View {
         switch content {
         case .textInput(let placeholder, let value):
@@ -69,7 +69,7 @@ private struct ContentPiece: View {
 
 private struct ControlsView: View {
     @EnvironmentObject var viewModel: DialogViewModel
-    
+
     var body: some View {
         ZStack {
             GameBoyButton(icon: ">", condition: viewModel.canShowNext, action: viewModel.next)
@@ -86,11 +86,11 @@ private struct ControlsView: View {
 private struct GameBoyButton: View {
     static let size: CGFloat = DesignSystem.buttonsHeight * 1.2
     @EnvironmentObject var viewModel: DialogViewModel
-    
+
     let icon: String
     let condition: Bool
     let action: () -> Void
-    
+
     var body: some View {
         Button(action: action) {
             Text(icon)

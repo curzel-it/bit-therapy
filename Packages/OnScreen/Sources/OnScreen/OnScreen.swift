@@ -7,42 +7,42 @@ import Yage
 public struct OnScreen {
     private static var viewModel: DesktopEnvironment?
     private static var windows: OnScreenWindows?
-    
+
     public static func show(with settings: OnScreenSettings) {
         hide()
-        printDebug("OnScreen", "Starting...")
-        self.viewModel = DesktopEnvironment(settings: settings)
-        self.windows = OnScreenWindows(for: viewModel)
+        Logger.log("OnScreen", "Starting...")
+        viewModel = DesktopEnvironment(settings: settings)
+        windows = OnScreenWindows(for: viewModel)
     }
-    
+
     public static func hide() {
-        printDebug("OnScreen", "Hiding everything...")
+        Logger.log("OnScreen", "Hiding everything...")
         viewModel?.kill()
         viewModel = nil
         windows?.kill()
         windows = nil
     }
-    
+
     public static func triggerUfoAbduction() {
-        printDebug("OnScreen", "Triggering UFO Abduction...")
+        Logger.log("OnScreen", "Triggering UFO Abduction...")
         viewModel?.startUfoAbductionOfRandomVictim()
     }
-    
-    public static func remove(pet: Pet) {
-        viewModel?.remove(pet: pet)
+
+    public static func remove(species: Species) {
+        viewModel?.remove(species: species)
     }
 }
 
 class DesktopEnvironment: PetsEnvironment {
     private var onScreenSettings: OnScreenSettings
     private var desktopObstacles: DesktopObstaclesService!
-    
+
     init(settings: OnScreenSettings) {
-        self.onScreenSettings = settings
+        onScreenSettings = settings
         super.init(with: settings, bounds: NSScreen.main?.frame.bounds ?? .zero)
         observeWindowsIfNeeded()
     }
-    
+
     private func observeWindowsIfNeeded() {
         guard onScreenSettings.desktopInteractions else { return }
         desktopObstacles = DesktopObstaclesService(world: self)
@@ -52,14 +52,14 @@ class DesktopEnvironment: PetsEnvironment {
             pet.setupJumperIfPossible(with: desktopObstacles)
         }
     }
-    
-    override func buildEntity(pet species: Pet) -> PetEntity {
+
+    override func buildEntity(species: Species) -> PetEntity {
         let entity = PetEntity(of: species, in: state.bounds, settings: onScreenSettings)
         ShowsMenuOnRightClick.install(on: entity)
         entity.setupJumperIfPossible(with: desktopObstacles)
         return entity
     }
-    
+
     override func kill() {
         desktopObstacles?.stop()
         super.kill()

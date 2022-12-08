@@ -1,10 +1,11 @@
 import Pets
 import SwiftUI
+import Yage
 
 public protocol PetDetailsManager {
     var isSelected: Bool { get }
-    var pet: Pet { get }
-    
+    var species: Species { get }
+
     func close()
     func didSelect()
     func didRemove()
@@ -18,10 +19,10 @@ public protocol LocalizedContentProvider {
     var purchased: String { get }
     var remove: String { get }
     var somethingWentWrong: String { get }
-    
+
     func buyButtonTitle(formattedPrice: String) -> String
-    func description(of pet: Pet) -> String
-    func name(of pet: Pet) -> String
+    func description(of species: Species) -> String
+    func name(of species: Species) -> String
 }
 
 public class PetDetailsViewCoordinator {

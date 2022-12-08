@@ -1,28 +1,30 @@
 import DesignSystem
+import PetsAssets
 import SwiftUI
 import Yage
+import YageLive
 
 // MARK: - Incremental Id
 
 extension PetEntity {
-    static func id(for pet: Pet) -> String {
+    static func id(for species: Species) -> String {
         nextNumber += 1
-        return "\(pet.id)-\(nextNumber)"
+        return "\(species.id)-\(nextNumber)"
     }
-    
+
     private static var nextNumber = 0
 }
 
 // MARK: - Speed
 
-extension PetEntity {
-    static let baseSpeed: CGFloat = 30
-    
-    public static func speed(for species: Pet, size: CGFloat, settings: CGFloat) -> CGFloat {
+public extension PetEntity {
+    internal static let baseSpeed: CGFloat = 30
+
+    static func speed(for species: Species, size: CGFloat, settings: CGFloat) -> CGFloat {
         species.speed * speedMultiplier(for: size) * settings
     }
-    
-    public static func speedMultiplier(for size: CGFloat) -> CGFloat {
+
+    static func speedMultiplier(for size: CGFloat) -> CGFloat {
         let sizeRatio = size / PetSize.defaultSize
         return baseSpeed * sizeRatio
     }
@@ -33,21 +35,5 @@ extension PetEntity {
 extension PetEntity {
     static func initialFrame(in worldBounds: CGRect, size: CGFloat) -> CGRect {
         CGRect(origin: .zero, size: CGSize(square: size))
-    }
-}
-
-// MARK: - Default Capabilities
-
-extension Capabilities {
-    public static func petAnimations() -> Capabilities {
-        [PetAnimationsProvider.self, PetSpritesProvider.self]
-    }
-    
-    public static func defaultsCrawler() -> Capabilities {
-        crawler() + petAnimations()
-    }
-    
-    public static func defaults() -> Capabilities {
-        walker() + petAnimations()
     }
 }

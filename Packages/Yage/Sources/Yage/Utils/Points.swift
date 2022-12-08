@@ -16,12 +16,12 @@ extension CGPoint {
     func offset(by delta: CGPoint) -> CGPoint {
         offset(x: delta.x, y: delta.y)
     }
-    
+
     func offset(by delta: CGSize) -> CGPoint {
         offset(x: delta.width, y: delta.height)
     }
-    
-    func offset(x: CGFloat=0, y: CGFloat=0) -> CGPoint {
+
+    func offset(x: CGFloat = 0, y: CGFloat = 0) -> CGPoint {
         CGPoint(x: self.x + x, y: self.y + y)
     }
 }

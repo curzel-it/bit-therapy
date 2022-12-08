@@ -2,22 +2,23 @@ import Combine
 import PetDetails
 import Pets
 import SwiftUI
+import Yage
 
 public class PetsSelectionCoordinator {
     public static func view(
         localizedContent lang: LocalizedContentProvider,
-        pets: PetsProvider,
+        speciesProvider: PetsProvider,
         footer: AnyView
     ) -> some View {
-        let vm = PetsSelectionViewModel(localizedContent: lang, pets: pets)
+        let vm = PetsSelectionViewModel(localizedContent: lang, speciesProvider: speciesProvider)
         return PetsSelectionView(viewModel: vm, footer: footer)
     }
 }
 
 public protocol PetsProvider {
-    var petsOnStage: CurrentValueSubject<[Pet], Never> { get }
-    func add(pet: Pet)
-    func remove(pet: Pet)
+    var speciesOnStage: CurrentValueSubject<[Species], Never> { get }
+    func add(species: Species)
+    func remove(species: Species)
 }
 
 public protocol LocalizedContentProvider: PetDetails.LocalizedContentProvider {

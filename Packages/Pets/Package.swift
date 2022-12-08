@@ -13,10 +13,11 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
+        .package(path: "../PetsAssets"),
         .package(path: "../Yage"),
         .package(path: "../YageLive"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.4"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.13")
     ],
     targets: [
         .target(
@@ -24,12 +25,10 @@ let package = Package(
             dependencies: [
                 .product(name: "DesignSystem", package: "DesignSystem"),
                 .product(name: "NotAGif", package: "NotAGif"),
+                .product(name: "PetsAssets", package: "PetsAssets"),
                 .product(name: "Schwifty", package: "Schwifty"),
                 .product(name: "Yage", package: "Yage"),
                 .product(name: "YageLive", package: "YageLive")
-            ],
-            resources: [
-                .copy("Assets")
             ]
         ),
         .testTarget(

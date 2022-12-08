@@ -1,31 +1,22 @@
 import Foundation
 import Yage
 
-extension Pet {    
-    static let panda = Pet(
-        id: "panda",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front.with(loops: 3),
-                    .idle.with(loops: 2),
-                    .eat.with(loops: 5),
-                    .love,
-                    .backflip,
-                    .meditate.with(loops: 20),
-                    .selfie.with(loops: 3),
-                    .lightsaber(size: CGSize(width: 1.42, height: 1.2))
-                ]
-            )
-        ],
-        movementPath: .walk,
-        speed: 0.8
-    )
-    
-    static let pandaVest = Pet.panda.shiny(
-        id: "panda_vest", isPaid: false
-    )
+extension Species {
+    static let panda = Species.pet
+        .with(id: "panda")
+        .with(animation: .front.with(loops: 3))
+        .with(animation: .idle.with(loops: 2))
+        .with(animation: .eat.with(loops: 5))
+        .with(animation: .love)
+        .with(animation: .backflip)
+        .with(animation: .meditate.with(loops: 20))
+        .with(animation: .selfie.with(loops: 3))
+        .with(animation: .lightsaber(size: CGSize(width: 1.42, height: 1.2)))
+        .with(speed: 0.8)
+
+    static let pandaVest = Species.panda
+        .with(id: "panda_vest")
+        .with(isPaid: false)
 }
 
 private extension EntityAnimation {

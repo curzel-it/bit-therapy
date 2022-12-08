@@ -23,7 +23,7 @@ struct GiveFeedbackViaSurvey: View {
 private struct SurveyLink: View {
     let title: String
     let message: String
-    
+
     var body: some View {
         VStack(spacing: .md) {
             Text(message)

@@ -1,15 +1,15 @@
 import DesignSystem
 import InAppPurchases
-import SwiftUI
-import Tracking
 import LaunchAtLogin
 import OnScreen
+import SwiftUI
+import Tracking
 
 // MARK: - Settings
 
 struct SettingsView: View {
     @EnvironmentObject var appState: AppState
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
@@ -39,9 +39,9 @@ private struct DesktopSpecificSettings: View {
 
 private struct DesktopInteractions: View {
     @EnvironmentObject var appState: AppState
-    
+
     @State var showingDetails = false
-    
+
     var body: some View {
         HStack(spacing: .sm) {
             SettingsSwitch(
@@ -83,14 +83,14 @@ private struct DesktopInteractions: View {
 
 private struct AnonymousTracking: View {
     @State var showingDetails = false
-    
+
     var enabled: Binding<Bool> = Binding {
         AppState.global.trackingEnabled
     } set: { isEnabled in
         AppState.global.trackingEnabled = isEnabled
         Tracking.isEnabled = isEnabled
     }
-    
+
     var body: some View {
         HStack(spacing: .sm) {
             SettingsSwitch(label: Lang.Settings.anonymousTracking, value: enabled)
@@ -136,7 +136,7 @@ private struct StatusBarIconSwitch: View {
             }
         }
     }
-    
+
     var body: some View {
         SettingsSwitch(label: Lang.Settings.statusBarIconEnabled, value: enabled)
     }
@@ -146,13 +146,13 @@ private struct StatusBarIconSwitch: View {
 
 private struct LaunchAtLoginSwitch: View {
     @EnvironmentObject var appState: AppState
-    
+
     var launchAtLogin: Binding<Bool> = Binding {
         LaunchAtLogin.isEnabled
     } set: { newValue in
         LaunchAtLogin.isEnabled = newValue
     }
-    
+
     var body: some View {
         SettingsSwitch(label: Lang.Settings.launchAtLogin, value: launchAtLogin)
     }

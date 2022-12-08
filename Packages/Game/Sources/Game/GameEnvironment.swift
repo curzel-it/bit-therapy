@@ -7,12 +7,12 @@ class GameEnvironment: PetsEnvironment {
         super.init(with: settings, bounds: bounds)
         reloadGround()
     }
-    
+
     override func set(bounds: CGRect) {
         super.set(bounds: bounds)
         reloadGround()
     }
-    
+
     private func reloadGround() {
         if let ground = ground() {
             ground.kill()
@@ -20,13 +20,14 @@ class GameEnvironment: PetsEnvironment {
         }
         state.children.append(buildGround())
     }
-    
+
     func ground() -> Entity? {
         state.children.first { $0.id == kGround }
     }
-    
+
     func buildGround() -> Entity {
         let entity = Entity(
+            species: .agent,
             id: kGround,
             frame: CGRect(
                 x: -1000,

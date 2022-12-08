@@ -16,21 +16,21 @@ class ViewModel: ObservableObject {
                 .forEach { $0.teleport() }
         }
     }
-    
+
     let settings: PetsSettings
     let lang: LocalizedContentProvider
-    
+
     private var childrenCanc: AnyCancellable!
-    
+
     init(
         with settings: PetsSettings,
         initialSize size: CGSize,
         localizedContent: LocalizedContentProvider
     ) {
-        self.worldSize = size
+        worldSize = size
         self.settings = settings
-        self.lang = localizedContent
-        self.world = GameEnvironment(
+        lang = localizedContent
+        world = GameEnvironment(
             with: settings,
             bounds: CGRect(size: size)
         )

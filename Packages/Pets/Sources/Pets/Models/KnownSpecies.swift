@@ -1,13 +1,25 @@
 import Foundation
+import PetsAssets
 import Schwifty
+import Yage
+import YageLive
 
-extension Pet {    
-    static let allSpecies: [Pet] = [
+extension Species {
+    static let pet = Species(id: "")
+        .with(capability: RandomAnimations.self)
+        .with(capability: AnimatedSprite.self)
+        .with(capability: PetAnimationsProvider.self)
+        .with(capability: PetsSpritesProvider.self)
+        .with(capability: LinearMovement.self)
+        .with(capability: BounceOnLateralCollisions.self)
+        .with(capability: FlipHorizontallyWhenGoingLeft.self)
+}
+
+public extension Species {
+    internal static let allSpecies: [Species] = [
         .ape,
         .betta,
         .catGray, .catBlue, .cat, .catBlack, .catGrumpy,
-        // .clockAnalog,
-        .clockDigital,
         .cromulon, .cromulonPink, .cromulonRainbow,
         .crow, .crowWhite,
         .frog, .frogVenom,
@@ -25,16 +37,16 @@ extension Pet {
         .puppyMilo,
         .ufo
     ]
-    
-    public static var availableSpecies: [Pet] = {
-        allSpecies.filter { species in
-            let available = PetsAssets.isAvailable("\(species.id)_front")
-            if !available { printDebug("Pet", species.id, "is not available") }
-            return available
+
+    static var availableSpecies: [Species] = allSpecies.filter { species in
+        let available = PetsAssetsProvider.shared.assetsAvailable(for: species.id)
+        if !available {
+            Logger.log("Pet", species.id, "is not available")
         }
-    }()
-    
-    public static func by(id: String) -> Pet? {
+        return available
+    }
+
+    static func by(id: String) -> Species? {
         availableSpecies.first { $0.id == id }
     }
 }

@@ -7,11 +7,11 @@ public enum Hotspot: String, CaseIterable {
     case leftBound
     case rightBound
     case bottomBound
-    
+
     case center
     case horizontalCenter
     case verticalCenter
-    
+
     case topLeftCorner
     case bottomLeftCorner
     case topRightCorner
@@ -27,11 +27,11 @@ extension World {
             bottomBound(),
             leftBound(),
             rightBound(),
-            
+
             center(),
             horizontalCenter(),
             verticalCenter(),
-            
+
             topLeftCorner(),
             bottomLeftCorner(),
             topRightCorner(),
@@ -42,20 +42,20 @@ extension World {
 
 // MARK: - Properties
 
-extension Hotspot {
-    public var isCorner: Bool {
+public extension Hotspot {
+    var isCorner: Bool {
         switch self {
         case .topLeftCorner, .topRightCorner: return true
         case .bottomLeftCorner, .bottomRightCorner: return true
         default: return false
         }
     }
-    
-    public var isAnchor: Bool { self == .horizontalCenter }
-    
-    public var isLateralBound: Bool { self == .leftBound || self == .rightBound }
-    public var isVerticalBound: Bool { self == .topBound || self == .bottomBound }
-    public var isBound: Bool { isLateralBound || isVerticalBound }
+
+    var isAnchor: Bool { self == .horizontalCenter }
+
+    var isLateralBound: Bool { self == .leftBound || self == .rightBound }
+    var isVerticalBound: Bool { self == .topBound || self == .bottomBound }
+    var isBound: Bool { isLateralBound || isVerticalBound }
 }
 
 // MARK: - Description
@@ -66,19 +66,18 @@ extension Hotspot: CustomStringConvertible {
 
 // MARK: - Collisions
 
-extension Collision {
-    public var hotspot: Hotspot? {
+public extension Collision {
+    var hotspot: Hotspot? {
         Hotspot.allCases.first { $0.rawValue == bodyId }
     }
 }
 
-extension Collisions {
-    public func contains(_ hotspot: Hotspot) -> Bool {
+public extension Collisions {
+    func contains(_ hotspot: Hotspot) -> Bool {
         first { $0.hotspot == hotspot } != nil
     }
-    
-    public func contains(anyOf hotspots: [Hotspot]) -> Bool {
+
+    func contains(anyOf hotspots: [Hotspot]) -> Bool {
         hotspots.first { contains($0) } != nil
     }
 }
-

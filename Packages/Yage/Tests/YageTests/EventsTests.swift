@@ -29,17 +29,17 @@ class EventsTests: XCTestCase {
             "Every ~1.0 minutes"
         )
     }
-    
+
     func testTimeOfDayScheduleReturnsProperDate() {
         let date = EventSchedule.timeOfDay(hour: 23, minute: 59).nextDate()
         let components = Calendar.current.dateComponents([.day, .hour, .minute], from: date)
         XCTAssertEqual(components.hour, 23)
         XCTAssertEqual(components.minute, 59)
-        
+
         let today = Calendar.current.dateComponents([.day], from: Date()).day
-        XCTAssertEqual(components.day, today    )
+        XCTAssertEqual(components.day, today)
     }
-    
+
     func testTimeOfDayIntervalFromString() {
         XCTAssertEqual(
             EventSchedule.timeOfDay(from: "daily:00:00")?.description,
@@ -65,7 +65,7 @@ class EventsTests: XCTestCase {
         XCTAssertNil(EventSchedule.timeOfDay(from: "daily:23:99"))
         XCTAssertNil(EventSchedule.timeOfDay(from: "daily:25:99"))
     }
-    
+
     func testEveryIntervalFromString() {
         XCTAssertEqual(
             EventSchedule.everyTimeInterval(from: "every:minutes:0.1")?.description,

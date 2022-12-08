@@ -4,7 +4,7 @@ import SwiftUI
 
 struct MainScene: Scene {
     @StateObject var appState = AppState.global
-    
+
     var body: some Scene {
         WindowGroup {
             ZStack {

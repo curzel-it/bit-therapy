@@ -1,0 +1,28 @@
+--allman false
+--swiftversion 5
+--exclude Pods, **/DerivedData, **/fastlane, vendor/bundle
+--closingparen balanced
+--decimalgrouping 3,6
+--elseposition same-line
+--guardelse same-line
+--empty void
+--exponentcase lowercase
+--exponentgrouping disabled
+--fractiongrouping disabled
+--fragment false
+--hexliteralcase uppercase
+--ifdef indent
+--importgrouping alphabetized
+--linebreaks lf
+--nospaceoperators
+--operatorfunc spaced
+--patternlet inline
+--trailingclosures
+--trimwhitespace always
+--wraparguments before-first
+--wrapcollections before-first
+--wrapparameters before-first
+--xcodeindentation enabled
+--disable andOperator,unusedArguments,trailingCommas,enumNamespaces, wrapMultilineStatementBraces
+--enable redundantVoidReturnType
+

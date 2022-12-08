@@ -1,28 +1,18 @@
 import Foundation
 import Yage
 
-extension Pet {    
-    static let puppy = Pet(
-        id: "puppy",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front.with(loops: 2),
-                    .bone.with(loops: 5),
-                    .eat.with(loops: 5),
-                    .sleep.with(loops: 30)
-                ]
-            )
-        ],
-        movementPath: .walk,
-        speed: 0.8
-    )
-    
-    static let puppyMilo = Pet.puppy.shiny(id: "puppy_milo", isPaid: false)
+extension Species {
+    static let puppy = Species.pet
+        .with(id: "puppy")
+        .with(animation: .front.with(loops: 2))
+        .with(animation: .bone.with(loops: 5))
+        .with(animation: .eat.with(loops: 5))
+        .with(animation: .sleep.with(loops: 30))
+        .with(speed: 0.8)
+
+    static let puppyMilo = Species.puppy.with(id: "puppy_milo")
 }
 
 private extension EntityAnimation {
     static let bone = EntityAnimation(id: "bone")
 }
-

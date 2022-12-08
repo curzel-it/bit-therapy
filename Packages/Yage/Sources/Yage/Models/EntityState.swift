@@ -5,7 +5,7 @@ public enum EntityState {
     case drag
     case move
     case action(action: EntityAnimation, loops: Int?)
-    
+
     public var description: String {
         switch self {
         case .freeFall: return "freeFall"
@@ -18,8 +18,8 @@ public enum EntityState {
 
 // MARK: - Action State
 
-extension EntityState {
-    public var isAction: Bool {
+public extension EntityState {
+    var isAction: Bool {
         if case .action = self {
             return true
         } else {

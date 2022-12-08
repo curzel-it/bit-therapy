@@ -2,13 +2,13 @@ import DesignSystem
 import SwiftUI
 import Tracking
 
-public struct RestorePurchasesButton: View {    
+public struct RestorePurchasesButton: View {
     @StateObject private var viewModel: ViewModel
-    
+
     public init(with lang: Lang) {
-        self._viewModel = StateObject(wrappedValue: ViewModel(with: lang))
+        _viewModel = StateObject(wrappedValue: ViewModel(with: lang))
     }
-    
+
     public var body: some View {
         Button(viewModel.title) {
             viewModel.restore()
@@ -20,14 +20,14 @@ public struct RestorePurchasesButton: View {
 
 private class ViewModel: ObservableObject {
     @Published var title: String
-    
+
     private var lang: Lang
-    
+
     init(with lang: Lang) {
         self.lang = lang
-        self.title = lang.restorePurchases
+        title = lang.restorePurchases
     }
-    
+
     func restore() {
         animateTitle(lang.loading)
         Task {
@@ -42,8 +42,8 @@ private class ViewModel: ObservableObject {
             }
         }
     }
-    
-    func animateTitle(_ value: String, delay: TimeInterval=0) {
+
+    func animateTitle(_ value: String, delay: TimeInterval = 0) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
             withAnimation {
                 self?.title = value

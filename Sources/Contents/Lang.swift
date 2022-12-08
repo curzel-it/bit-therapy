@@ -1,11 +1,11 @@
 import Foundation
 import Pets
 import Schwifty
+import Yage
 
 public enum Lang {
-    
     // MARK: - Generic
-    
+
     public static let cancel = "cancel".localized()
     public static let select = "select".localized()
     public static let remove = "remove".localized()
@@ -15,9 +15,9 @@ public enum Lang {
     public static let loading = "loading".localized()
     public static let done = "done".localized()
     public static let somethingWentWrong = "somethingWentWrong".localized()
-    
+
     // MARK: - Pages
-    
+
     public enum Page {
         public static let about = "page.title.about".localized()
         public static let game = "page.title.game".localized()
@@ -25,15 +25,15 @@ public enum Lang {
         public static let settings = "page.title.settings".localized()
         public static let news = "page.title.news".localized()
     }
-    
+
     // MARK: - Menu
-    
+
     public enum Menu {
         public static func item(_ key: String) -> String { "menu.item.\(key)".localized() }
     }
-    
+
     // MARK: - Cheats
-    
+
     public enum Cheats {
         public static let title = "cheats.title".localized()
         public static let placeholder = "cheats.placeholder".localized()
@@ -41,21 +41,21 @@ public enum Lang {
         public static let invalidCode = "cheats.invalidCode".localized()
         public static let validCode = "cheats.validCode".localized()
     }
-    
+
     // MARK: - Survey
-    
+
     public enum Survey {
         public static let feedbackViaSurvey = "survey.feedbackViaSurvey".localized()
         public static let requestPetViaSurvey = "survey.requestPetViaSurvey".localized()
         public static let takeSurvey = "survey.takeSurvey".localized()
-        
+
         public static var url: String {
             (DeviceRequirement.iOS.isSatisfied ? "survey.url.ios" : "survey.url").localized()
         }
     }
-    
+
     // MARK: - Settings
-    
+
     public enum Settings {
         public static let gravity = "settings.gravity".localized()
         public static let size = "settings.size".localized()
@@ -69,9 +69,9 @@ public enum Lang {
         public static let desktopInteractions = "settings.desktopInteractions.title".localized()
         public static let desktopInteractionsMessage = "settings.desktopInteractions.message".localized()
     }
-    
+
     // MARK: - About
-    
+
     public enum About {
         public static let leaveReviewMessage = "about.leaveReviewMessage".localized()
         public static let leaveReview = "about.leaveReview".localized()
@@ -81,9 +81,9 @@ public enum Lang {
         public static let mail = "about.mail".localized()
         public static let privacyPolicy = "about.privacyPolicy".localized()
     }
-    
+
     // MARK: - Pet Selection
-    
+
     public enum PetSelection {
         public static let petSelection = "petSelection.petSelection".localized()
         public static let joinDiscord = "petSelection.joinDiscord".localized()
@@ -92,18 +92,18 @@ public enum Lang {
         public static let yourPets = "petSelection.yourPets".localized()
         public static let morePets = "petSelection.morePets".localized()
     }
-    
+
     // MARK: - Purchases
-    
+
     public enum Purchases {
         public static let buy = "purchases.buy".localized()
         public static let buyFor = "purchases.buyFor".localized()
         public static let purchasing = "purchases.purchasing".localized()
         public static let purchased = "purchases.purchased".localized()
     }
-    
+
     // MARK: - URLs
-    
+
     public enum Urls {
         public static let github = "urls.github".localized()
         public static let appStore = "urls.appStore".localized()
@@ -113,9 +113,9 @@ public enum Lang {
         public static let mailto = "urls.mailto".localized()
         public static let privacy = "urls.privacy".localized()
     }
-    
+
     // MARK: - Game
-    
+
     public enum Game {
         public static let intro = "game.intro".localized()
         public static let introClose = "game.intro.close".localized()
@@ -126,9 +126,9 @@ public enum Lang {
 
 // MARK: - Pets
 
-extension Pet {
-    public var name: String { "pet.name.\(id)".localized() }
-    public var about: String { "pet.about.\(id)".localized() }
+public extension Species {
+    var name: String { "species.name.\(id)".localized() }
+    var about: String { "species.about.\(id)".localized() }
 }
 
 // MARK: - Utils
@@ -138,4 +138,3 @@ private extension String {
         NSLocalizedString(self, bundle: bundle, comment: self)
     }
 }
-

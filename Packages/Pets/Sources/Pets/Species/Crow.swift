@@ -1,22 +1,17 @@
 import Foundation
+import Yage
 
-extension Pet {
-    static let crow = Pet(
-        id: "crow",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front.with(loops: 3),
-                    .idle.with(loops: 2),
-                    .eat.with(loops: 2),
-                    .love
-                ]
-            )
-        ],
-        movementPath: .fly,
-        speed: 1.4
-    )
-    
-    static let crowWhite = Pet.crow.shiny(id: "crow_white", isPaid: true)
+extension Species {
+    static let crow = Species.pet
+        .with(id: "crow")
+        .with(animation: .front.with(loops: 3))
+        .with(animation: .idle.with(loops: 2))
+        .with(animation: .eat.with(loops: 2))
+        .with(animation: .love)
+        .with(movementPath: "fly")
+        .with(speed: 1.4)
+
+    static let crowWhite = Species.crow
+        .with(id: "crow_white")
+        .with(isPaid: true)
 }

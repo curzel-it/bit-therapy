@@ -1,20 +1,11 @@
 import Foundation
 import Yage
 
-extension Pet {
-    static let catGrumpy = Pet.cat.shiny(id: "cat_grumpy", isPaid: false,
-        additionalBehaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .angry.with(loops: 7)
-                ]
-            )
-        ],
-        additionalCapabilities: [
-            GetsAngryWhenMeetingOtherCats.self
-        ]
-    )
+extension Species {
+    static let catGrumpy = Species.cat
+        .with(id: "cat_grumpy")
+        .with(animation: .angry.with(loops: 7))
+        .with(capability: GetsAngryWhenMeetingOtherCats.self)
 }
 
 private class GetsAngryWhenMeetingOtherCats: Capability {
@@ -25,14 +16,14 @@ private class GetsAngryWhenMeetingOtherCats: Capability {
         guard !isAngry() else { return }
         subject.set(state: .action(action: .angry, loops: 5))
     }
-    
+
     func isAngry() -> Bool {
-        if case let .action(anim, _) = subject?.state {
+        if case .action(let anim, _) = subject?.state {
             return anim.id == "angry"
         }
         return false
     }
-    
+
     func isTouchingAnotherCat(accordingTo collisions: Collisions) -> Bool {
         collisions.contains { collision in
             collision.bodyId.contains("cat")

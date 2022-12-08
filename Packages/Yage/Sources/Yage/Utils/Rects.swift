@@ -7,6 +7,6 @@ extension CGRect {
     var topRight: CGPoint { CGPoint(x: maxX, y: minY) }
     var bottomRight: CGPoint { CGPoint(x: maxX, y: maxY) }
     var centerBottom: CGPoint { CGPoint(x: midX, y: maxY) }
-    var bottomLeft: CGPoint { CGPoint(x: minX, y: maxY) }    
+    var bottomLeft: CGPoint { CGPoint(x: minX, y: maxY) }
     var corners: [CGPoint] { [topLeft, topRight, bottomLeft, bottomRight] }
 }

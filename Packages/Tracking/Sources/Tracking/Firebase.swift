@@ -5,13 +5,13 @@ import Schwifty
 extension FirebaseApp {
     static func setup() -> Bool {
         if let path = firebasePlistPath(),
-           let options = FirebaseOptions.init(contentsOfFile: path) {
+           let options = FirebaseOptions(contentsOfFile: path) {
             FirebaseApp.configure(options: options)
             return true
         }
         return false
     }
-    
+
     private static func firebasePlistPath() -> String? {
         Bundle.main.path(forResource: "Secrets", ofType: "plist")
     }
@@ -24,7 +24,7 @@ extension Tracking {
             AnalyticsParameterScreenClass: name
         ])
     }
-    
+
     static func log(_ eventName: String, with params: [String: Any] = [:]) {
         let name = eventName.cleaned()
         let bundle: [String: Any] = params.reduce(into: [:]) { partialResult, pair in
@@ -33,6 +33,6 @@ extension Tracking {
         if isEnabled {
             Analytics.logEvent(name, parameters: bundle)
         }
-        printDebug("Tracking", name, "with", bundle.jsonString())
+        Logger.log("Tracking", name, "with", bundle.jsonString())
     }
 }

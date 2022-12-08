@@ -13,36 +13,36 @@ public enum Spacing: CGFloat {
     case zero = 0
 }
 
-extension View {
-    public func padding(_ spacing: Spacing) -> some View {
+public extension View {
+    func padding(_ spacing: Spacing) -> some View {
         modifier(SpacingMod(edges: .all, spacing: spacing))
     }
-    
-    public func padding(_ edges: Edge.Set, _ spacing: Spacing) -> some View {
+
+    func padding(_ edges: Edge.Set, _ spacing: Spacing) -> some View {
         modifier(SpacingMod(edges: edges, spacing: spacing))
     }
-    
-    public func padding(_ spacing: Spacing, when condition: DeviceRequirement) -> AnyView {
+
+    func padding(_ spacing: Spacing, when condition: DeviceRequirement) -> AnyView {
         if condition.isSatisfied {
-            return AnyView(self.padding(spacing))
+            return AnyView(padding(spacing))
         } else {
             return AnyView(self)
         }
     }
-    
-    public func padding(_ edges: Edge.Set, _ spacing: Spacing, when condition: DeviceRequirement) -> AnyView {
+
+    func padding(_ edges: Edge.Set, _ spacing: Spacing, when condition: DeviceRequirement) -> AnyView {
         if condition.isSatisfied {
-            return AnyView(self.padding(edges, spacing))
+            return AnyView(padding(edges, spacing))
         } else {
             return AnyView(self)
         }
     }
 }
 
-private struct SpacingMod: ViewModifier {    
+private struct SpacingMod: ViewModifier {
     let edges: Edge.Set
     let spacing: Spacing?
-    
+
     func body(content: Content) -> some View {
         if let value = spacing?.rawValue {
             content.padding(edges, value)

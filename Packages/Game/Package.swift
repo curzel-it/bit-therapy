@@ -17,7 +17,7 @@ let package = Package(
         .package(path: "../Pets"),
         .package(path: "../Yage"),
         .package(path: "../YageLive"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.13")
     ],
     targets: [
         .target(

@@ -5,9 +5,9 @@ import WebKit
 
 struct IntroDialog: View {
     @EnvironmentObject var viewModel: ViewModel
-    
+
     @State var showIntro: Bool = !UserDefaults.standard.bool(forKey: kDidShowIntro)
-    
+
     var body: some View {
         if showIntro {
             Dialog(

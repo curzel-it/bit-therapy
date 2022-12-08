@@ -1,8 +1,8 @@
 import Foundation
 import SwiftUI
 
-extension View {
-    public func bordered(
+public extension View {
+    func bordered(
         color: Color = .label,
         cornerRadius: CGFloat = DesignSystem.defaultCornerRadius
     ) -> some View {
@@ -16,7 +16,7 @@ private struct BorderedMod: ViewModifier {
     let color: Color
     let cornerRadius: CGFloat
     let lineWidth: CGFloat = 4
-    
+
     func body(content: Content) -> some View {
         content
             .cornerRadius(cornerRadius)
@@ -24,6 +24,6 @@ private struct BorderedMod: ViewModifier {
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .stroke(color, lineWidth: lineWidth)
             )
-            .padding(lineWidth/2)
+            .padding(lineWidth / 2)
     }
 }

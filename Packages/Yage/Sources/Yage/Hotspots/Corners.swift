@@ -3,6 +3,7 @@ import SwiftUI
 extension World {
     func topLeftCorner() -> Entity {
         let entity = Entity(
+            species: .hotspot,
             id: Hotspot.topLeftCorner.rawValue,
             frame: CGRect(
                 x: 0,
@@ -16,9 +17,10 @@ extension World {
         entity.isStatic = true
         return entity
     }
-    
+
     func bottomLeftCorner() -> Entity {
         let entity = Entity(
+            species: .hotspot,
             id: Hotspot.bottomLeftCorner.rawValue,
             frame: CGRect(
                 x: 0,
@@ -32,9 +34,10 @@ extension World {
         entity.isStatic = true
         return entity
     }
-    
+
     func topRightCorner() -> Entity {
         let entity = Entity(
+            species: .hotspot,
             id: Hotspot.topRightCorner.rawValue,
             frame: CGRect(
                 x: bounds.width,
@@ -48,9 +51,10 @@ extension World {
         entity.isStatic = true
         return entity
     }
-    
+
     func bottomRightCorner() -> Entity {
         let entity = Entity(
+            species: .hotspot,
             id: Hotspot.bottomRightCorner.rawValue,
             frame: CGRect(
                 x: bounds.width,

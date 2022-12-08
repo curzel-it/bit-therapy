@@ -30,7 +30,7 @@ enum EditState {
     case empty
     case populated
     case inUse
-    
+
     static func given(_ value: String?, _ inUse: Bool) -> EditState {
         if inUse { return .inUse }
         if value?.isEmpty ?? true { return .empty }

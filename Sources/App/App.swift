@@ -5,15 +5,16 @@ import SwiftUI
 import Tracking
 
 @main
-struct MyApp: App {    
+struct MyApp: App {
     // swiftlint:disable:next weak_delegate
-#if os(macOS)
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-#else
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-#endif
-    
+    #if os(macOS)
+        @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #else
+        @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #endif
+
     init() {
+        Logger.isEnabled = AppState.global.isDevApp
         Tracking.setup(isEnabled: AppState.global.trackingEnabled)
         PricingService.global.setup()
         Cheats.enableCheats()
@@ -24,7 +25,7 @@ struct MyApp: App {
             ).askForRatingIfNeeded()
         }
     }
-    
+
     var body: some Scene {
         MainScene()
     }

@@ -1,10 +1,10 @@
 import Foundation
+import Yage
 
-extension Pet {
-    static let nyan = Pet(
-        id: "nyan",
-        movementPath: .front,
-        dragPath: .front,
-        speed: 0.9
-    )
+extension Species {
+    static let nyan = Species.pet
+        .with(id: "nyan")
+        .with(movementPath: "front")
+        .with(dragPath: "front")
+        .with(speed: 0.9)
 }

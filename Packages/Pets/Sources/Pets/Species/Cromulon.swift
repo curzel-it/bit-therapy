@@ -1,27 +1,19 @@
 import Foundation
 import Yage
 
-extension Pet {
-    static let cromulon = Pet(
-        id: "cromulon",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front,
-                    .bored.with(loops: 15),
-                    .talk.with(loops: 2),
-                    .stare.with(loops: 15),
-                    .shout.with(loops: 2)
-                ]
-            )
-        ],
-        movementPath: .front,
-        speed: 0.6
-    )
-    
-    static let cromulonPink = Pet.cromulon.shiny(id: "cromulon_pink", isPaid: false)
-    static let cromulonRainbow = Pet.cromulon.shiny(id: "cromulon_rainbow", isPaid: false)
+extension Species {
+    static let cromulon = Species.pet
+        .with(id: "cromulon")
+        .with(animation: .front)
+        .with(animation: .bored.with(loops: 15))
+        .with(animation: .talk.with(loops: 2))
+        .with(animation: .stare.with(loops: 15))
+        .with(animation: .shout.with(loops: 2))
+        .with(movementPath: "front")
+        .with(speed: 0.6)
+
+    static let cromulonPink = Species.cromulon.with(id: "cromulon_pink")
+    static let cromulonRainbow = Species.cromulon.with(id: "cromulon_rainbow")
 }
 
 private extension EntityAnimation {

@@ -6,7 +6,7 @@ import SwiftUI
 struct PetsSelectionView: View {
     @StateObject var viewModel: PetsSelectionViewModel
     let footer: AnyView
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: .xxl) {
@@ -16,12 +16,12 @@ struct PetsSelectionView: View {
                 PetsGrid(
                     title: viewModel.localizedContent.yourPets,
                     columns: viewModel.gridColums,
-                    pets: viewModel.selectedPets
+                    species: viewModel.speciesOnStage
                 )
                 PetsGrid(
                     title: viewModel.localizedContent.morePets,
                     columns: viewModel.gridColums,
-                    pets: viewModel.unselectedPets
+                    species: viewModel.unselectedSpecies
                 )
                 footer
             }

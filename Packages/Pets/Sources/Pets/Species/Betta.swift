@@ -1,23 +1,15 @@
 import Foundation
 import Yage
 
-extension Pet {
-    static let betta = Pet(
-        id: "betta",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front,
-                    .eat.with(loops: 2),
-                    .tsundere.with(loops: 3),
-                    .backflip
-                ]
-            )
-        ],
-        movementPath: .fly,
-        speed: 1.3
-    )
+extension Species {
+    static let betta = Species.pet
+        .with(id: "betta")
+        .with(animation: .front)
+        .with(animation: .eat.with(loops: 2))
+        .with(animation: .tsundere.with(loops: 3))
+        .with(animation: .backflip)
+        .with(movementPath: "fly")
+        .with(speed: 1.3)
 }
 
 private extension EntityAnimation {

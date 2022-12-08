@@ -1,8 +1,8 @@
-import UIKit
 import Schwifty
+import UIKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        printDebug("App", "Launched")
+        Logger.log("App", "Launched")
     }
 }

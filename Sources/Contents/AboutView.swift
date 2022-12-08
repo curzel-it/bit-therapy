@@ -2,7 +2,7 @@ import DesignSystem
 import Schwifty
 import SwiftUI
 
-struct AboutView: View {        
+struct AboutView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
@@ -13,7 +13,7 @@ struct AboutView: View {
                 }
                 GiveFeedbackViaSurvey()
                 PrivacyPolicy().padding(.top, .xl)
-                
+
                 VStack(spacing: .xl) {
                     Socials().padding(.top, .lg)
                     Text(appVersion)
@@ -24,7 +24,7 @@ struct AboutView: View {
             .padding(.md)
         }
     }
-    
+
     var appVersion: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         return "v. \(version ?? "n/a")"
@@ -54,7 +54,7 @@ private struct Socials: View {
 private struct SocialIcon: View {
     let name: String
     let link: String
-    
+
     var body: some View {
         Image(name)
             .resizable()
@@ -75,4 +75,3 @@ private struct LeaveReview: View {
         }
     }
 }
-

@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Tracking"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.12"),
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.13"),
         .package(url: "https://github.com/RevenueCat/purchases-ios", from: "4.0.0")
     ],
     targets: [

@@ -5,15 +5,15 @@ public enum CustomButtonStyle {
     case text
 }
 
-extension View {
-    public func buttonStyle(_ style: CustomButtonStyle) -> some View {
+public extension View {
+    func buttonStyle(_ style: CustomButtonStyle) -> some View {
         modifier(ButtonStyleMod(style: style))
     }
 }
 
 private struct ButtonStyleMod: ViewModifier {
     let style: CustomButtonStyle
-    
+
     func body(content: Content) -> some View {
         switch style {
         case .regular: content.buttonStyle(RegularButton())

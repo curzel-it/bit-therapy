@@ -1,20 +1,11 @@
 import Foundation
 import Yage
 
-extension Pet {
-    static let ape = Pet(
-        id: "ape",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front.with(loops: 5),
-                    .eat.with(loops: 5),
-                    .sleep.with(loops: 20)
-                ]
-            )
-        ],
-        movementPath: .walk,
-        speed: 0.7
-    )
+extension Species {
+    static let ape = Species.pet
+        .with(id: "ape")
+        .with(animation: .front.with(loops: 5))
+        .with(animation: .eat.with(loops: 5))
+        .with(animation: .sleep.with(loops: 20))
+        .with(speed: 0.7)
 }

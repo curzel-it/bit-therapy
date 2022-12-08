@@ -6,24 +6,24 @@ class MouseDraggable: Capability {
     var isBeingDragged: Bool {
         subject?.state == .drag
     }
-    
+
     func mouseDragged(with event: NSEvent) {
         guard isEnabled else { return }
         guard !isBeingDragged else { return }
         mouseDragStarted()
     }
-    
+
     func mouseDragStarted() {
         subject?.set(state: .drag)
         subject?.movement?.isEnabled = false
     }
-    
+
     func mouseUp(with event: NSEvent) {
         guard isEnabled else { return }
         guard isBeingDragged else { return }
         mouseDragEnded(for: event.window)
     }
-    
+
     func mouseDragEnded(for window: NSWindow?) {
         subject?.set(state: .move)
         subject?.setPosition(fromWindow: window)
@@ -49,4 +49,3 @@ extension Entity {
         frame.origin = fixedPosition
     }
 }
-

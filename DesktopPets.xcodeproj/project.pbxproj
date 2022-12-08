@@ -1350,7 +1350,7 @@
 			repositoryURL = "https://github.com/curzel-it/schwifty";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.12;
+				minimumVersion = 1.0.13;
 			};
 		};
 		64DFB2062930313D00748B46 /* XCRemoteSwiftPackageReference "taku-swift" */ = {

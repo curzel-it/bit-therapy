@@ -4,15 +4,16 @@ import XCTest
 
 class AnimationFrameTests: XCTestCase {
     var entity: Entity!
-    
+
     override func setUp() {
         entity = Entity(
+            species: .agent,
             id: "test",
             frame: CGRect(x: 5, y: 5, width: 5, height: 5),
             in: CGRect(x: 0, y: 0, width: 15, height: 15)
         )
     }
-    
+
     func testAnimationFrameIsSameAsEntityFrameIfNoCustomSizeOrPositionAreSet() {
         let animation = EntityAnimation(
             id: "test",
@@ -22,7 +23,7 @@ class AnimationFrameTests: XCTestCase {
         )
         XCTAssertEqual(entity.frame, animation.frame(for: entity))
     }
-    
+
     func testAnimationFrameIsCorrectWhenLargerThanEntityFromBottomLeft() {
         let animation = EntityAnimation(
             id: "test",

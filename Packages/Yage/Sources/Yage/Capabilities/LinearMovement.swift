@@ -1,13 +1,13 @@
 import SwiftUI
 
-public class LinearMovement: Capability {    
-    public override func update(with collisions: Collisions, after time: TimeInterval) {
+public class LinearMovement: Capability {
+    override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled, let body = subject else { return }
         let distance = movement(after: time)
         let newPosition = body.frame.origin.offset(by: distance)
         body.frame.origin = newPosition
     }
-    
+
     func movement(after time: TimeInterval) -> CGPoint {
         guard let body = subject else { return .zero }
         return CGPoint(
@@ -17,8 +17,8 @@ public class LinearMovement: Capability {
     }
 }
 
-extension Entity {    
-    public var movement: LinearMovement? {
+public extension Entity {
+    var movement: LinearMovement? {
         capability(for: LinearMovement.self)
     }
 }

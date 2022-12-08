@@ -1,8 +1,6 @@
 import Foundation
+import Yage
 
-extension Pet {
-    static let missingNo = Pet(
-        id: "missingno",
-        movementPath: .walk
-    )
+extension Species {
+    static let missingNo = Species.pet.with(id: "missingno")
 }

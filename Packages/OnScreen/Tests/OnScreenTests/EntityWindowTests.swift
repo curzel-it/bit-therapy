@@ -5,21 +5,21 @@ import YageLive
 @testable import OnScreen
 
 class EntityWindowTests: XCTestCase {
-    
     var entity: Entity!
     var world: LiveWorld!
     var window: EntityWindow!
-    
+
     override func setUp() {
         entity?.kill()
         world?.kill()
         window?.close()
-        
+
         world = LiveWorld(
             id: "test",
             bounds: CGRect(size: .init(square: 1000))
         )
         entity = Entity(
+            species: .agent,
             id: "test",
             frame: CGRect(origin: .zero, size: .init(square: 100)),
             in: world.state.bounds
@@ -28,28 +28,28 @@ class EntityWindowTests: XCTestCase {
         window = EntityWindow(representing: entity, in: world)
         window.show()
     }
-    
+
     func testWindowKeepsReferenceToEntity() {
         XCTAssertEqual(window.entity, entity)
     }
-    
+
     func testWindowKeepsReferenceToWorld() {
         XCTAssertEqual(window.world, world)
     }
-    
+
     func testKillingEntityClosesWindow() {
         let expectation = expectation(description: "")
         XCTAssertTrue(window.isVisible)
         entity.kill()
         window.world.loop()
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()
         }
         waitForExpectations(timeout: 1)
-        XCTAssertFalse(self.window?.isVisible ?? true)
+        XCTAssertFalse(window?.isVisible ?? true)
     }
-    
+
     func testUpdatingEntityFrameUpdatesWindowFrame() {
         window.world.loop()
         XCTAssertEqual(window.expectedFrame.size, entity.frame.size)
@@ -57,7 +57,7 @@ class EntityWindowTests: XCTestCase {
         window.world.loop()
         XCTAssertEqual(window.expectedFrame.size, entity.frame.size)
     }
-    
+
     func testAfterBeingClosedWindowFrameStopsUpdating() {
         let lastSize = entity.frame.size
         window.world.loop()

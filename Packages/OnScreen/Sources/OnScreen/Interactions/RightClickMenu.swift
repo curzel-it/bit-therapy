@@ -2,21 +2,21 @@ import Pets
 import Schwifty
 import SwiftUI
 
-class ShowsMenuOnRightClick: RightClickable {    
+class ShowsMenuOnRightClick: RightClickable {
     weak var menu: NSView?
-    
+
     override func onRightClick(with event: NSEvent) {
         guard isEnabled else { return }
         event.window?.contentView?.menu = petMenu()
     }
-    
+
     private func petMenu() -> NSMenu {
         let menu = NSMenu(title: "MainMenu")
         menu.addItem(hideThisPetItem())
         menu.addItem(hideAllPetsItem())
         return menu
     }
-    
+
     private func item(title: String, keyEquivalent: String, action: Selector, target: AnyObject) -> NSMenuItem {
         let item = NSMenuItem(
             title: NSLocalizedString("menu.item.\(title)", comment: title),
@@ -26,7 +26,7 @@ class ShowsMenuOnRightClick: RightClickable {
         item.target = self
         return item
     }
-    
+
     private func hideThisPetItem() -> NSMenuItem {
         item(
             title: "hideThisPet",
@@ -35,12 +35,12 @@ class ShowsMenuOnRightClick: RightClickable {
             target: self
         )
     }
-    
+
     @objc func hideThisPet() {
-        guard let pet = subject as? PetEntity else { return }
-        OnScreen.remove(pet: pet.species)
+        guard let species = subject?.species else { return }
+        OnScreen.remove(species: species)
     }
-    
+
     private func hideAllPetsItem() -> NSMenuItem {
         item(
             title: "hideAllPet",
@@ -49,7 +49,7 @@ class ShowsMenuOnRightClick: RightClickable {
             target: self
         )
     }
-    
+
     @objc func hideAllPets() {
         OnScreen.hide()
     }

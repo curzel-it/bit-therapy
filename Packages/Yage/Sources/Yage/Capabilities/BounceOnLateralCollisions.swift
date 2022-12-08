@@ -1,20 +1,20 @@
 import SwiftUI
 
 public class BounceOnLateralCollisions: Capability {
-    public override func update(with collisions: Collisions, after time: TimeInterval) {
+    override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         guard let body = subject, !body.isEphemeral, body.state == .move else { return }
         guard let angle = bouncingAngle(from: body.direction.radians, with: collisions) else { return }
         body.direction = CGVector(radians: angle)
     }
-    
+
     func bouncingAngle(from currentAngle: CGFloat, with collisions: Collisions) -> CGFloat? {
         guard let targetSide = targetSide() else { return nil }
         guard collisions.contains(overlapOnSide: targetSide) else { return nil }
         guard !collisions.contains(overlapOnSide: targetSide.opposite) else { return nil }
         return CGFloat.pi - currentAngle
     }
-    
+
     private func targetSide() -> Collision.Side? {
         guard let direction = subject?.direction.dx else { return nil }
         let isGoingLeft = direction < -0.0001
@@ -46,8 +46,8 @@ private extension Collision.Side {
     }
 }
 
-extension Entity {
-    public func setBounceOnLateralCollisions(enabled: Bool) {
+public extension Entity {
+    func setBounceOnLateralCollisions(enabled: Bool) {
         capability(for: BounceOnLateralCollisions.self)?.isEnabled = enabled
     }
 }

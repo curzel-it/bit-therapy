@@ -6,11 +6,11 @@ import SwiftUI
 import Foundation
 class StatusBarCoordinator {
     static let shared = StatusBarCoordinator()
-    
+
     func show() {
         StatusBar.show(with: self, localizedContent: self)
     }
-    
+
     func hide() {
         StatusBar.hide()
     }
@@ -22,7 +22,7 @@ extension StatusBarCoordinator: StatusBarItems.Handler {
         icon?.isTemplate = true
         return icon
     }
-    
+
     func showHome() { MainScene.show() }
     func hidePets() { OnScreen.hide() }
     func showPets() { OnScreen.show(with: AppState.global) }
@@ -30,7 +30,7 @@ extension StatusBarCoordinator: StatusBarItems.Handler {
 
 extension StatusBarCoordinator: StatusBarItems.LocalizedContentProvider {
     var menuTitle: String { "Desktop Pets" }
-    
+
     func translation(for key: MenuItem) -> String {
         switch key {
         case .home: return Lang.Menu.item("home")

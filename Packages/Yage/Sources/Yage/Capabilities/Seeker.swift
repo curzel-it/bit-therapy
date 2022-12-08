@@ -11,14 +11,14 @@ public class Seeker: Capability {
     private var baseSpeed: CGFloat = 0
     private var targetReached: Bool = false
     private var report: (State) -> Void = { _ in }
-    
+
     public required init(for subject: Entity) {
         super.init(for: subject)
         baseSpeed = subject.speed
     }
-    
+
     // MARK: - Follow
-    
+
     public func follow(
         _ target: Entity,
         to position: Position,
@@ -28,18 +28,18 @@ public class Seeker: Capability {
         maxDistance: CGFloat = 20,
         report: @escaping (State) -> Void
     ) {
-        self.targetEntity = target
-        self.targetPosition = position
-        self.targetOffset = offset
+        targetEntity = target
+        targetPosition = position
+        targetOffset = offset
         self.autoAdjustSpeed = autoAdjustSpeed
         self.minDistance = minDistance
         self.maxDistance = maxDistance
         self.report = report
     }
-    
+
     // MARK: - Update
-    
-    public override func update(with collisions: Collisions, after time: TimeInterval) {
+
+    override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         guard let body = subject else { return }
         guard let target = targetPoint() else { return }
@@ -49,9 +49,9 @@ public class Seeker: Capability {
         adjustSpeedIfNeeded(with: distance)
         adjustDirection(towards: target, with: distance)
     }
-    
+
     // MARK: - Destination Reached
-    
+
     private func checkTargetReached(with distance: CGFloat) {
         if !targetReached {
             if distance <= minDistance {
@@ -65,9 +65,9 @@ public class Seeker: Capability {
             report(.escaped)
         }
     }
-    
+
     // MARK: - Direction
-    
+
     private func adjustDirection(towards target: CGPoint, with distance: CGFloat) {
         if distance < minDistance {
             subject?.direction = .zero
@@ -76,9 +76,9 @@ public class Seeker: Capability {
             subject?.direction = .unit(from: origin, to: target)
         }
     }
-    
+
     // MARK: - Speed
-    
+
     private func adjustSpeedIfNeeded(with distance: CGFloat) {
         guard autoAdjustSpeed else { return }
         if distance < minDistance {
@@ -89,16 +89,16 @@ public class Seeker: Capability {
             subject?.speed = baseSpeed
         }
     }
-    
+
     // MARK: - Target Location
-    
+
     private func targetPoint() -> CGPoint? {
         guard let frame = subject?.frame else { return nil }
         guard let targetFrame = targetEntity?.frame else { return nil }
-        
-        let centerX = targetFrame.minX + targetFrame.width/2 - frame.width/2
-        let centerY = targetFrame.minY + targetFrame.height/2 - frame.height/2
-        
+
+        let centerX = targetFrame.minX + targetFrame.width / 2 - frame.width / 2
+        let centerY = targetFrame.minY + targetFrame.height / 2 - frame.height / 2
+
         switch targetPosition {
         case .center:
             return CGPoint(
@@ -112,29 +112,29 @@ public class Seeker: Capability {
             )
         }
     }
-    
+
     // MARK: - Uninstall
-    
-    public override func kill(autoremove: Bool = true) {
+
+    override public func kill(autoremove: Bool = true) {
         targetEntity = nil
         report = { _ in }
         super.kill(autoremove: autoremove)
     }
 }
 
-extension Seeker {
-    public enum Position {
+public extension Seeker {
+    enum Position {
         case center
         case above
     }
 }
 
-extension Seeker {
-    public enum State: CustomStringConvertible {
+public extension Seeker {
+    enum State: CustomStringConvertible {
         case captured
         case escaped
         case following(distance: CGFloat)
-        
+
         public var description: String {
             switch self {
             case .captured: return "Captured"

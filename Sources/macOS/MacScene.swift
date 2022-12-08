@@ -17,7 +17,7 @@ extension MainScene {
         showMainWindow()
         trackAppLaunched()
     }
-    
+
     private static func showMainWindow() {
         let view = NSHostingView(rootView: ContentView())
         let window = NSWindow(
@@ -31,14 +31,14 @@ extension MainScene {
         view.constrainToFillParent()
         window.show()
     }
-    
+
     private static func trackAppLaunched() {
         let appState = AppState.global
         Tracking.didLaunchApp(
             gravityEnabled: appState.gravityEnabled,
             petSize: appState.petSize,
             launchAtLogin: LaunchAtLogin.isEnabled,
-            selectedPets: appState.selectedPets
+            selectedSpecies: appState.selectedSpecies
         )
     }
 }
@@ -46,7 +46,7 @@ extension MainScene {
 private struct ContentView: View {
     @StateObject var appState = AppState.global
     @StateObject var viewModel = MainViewModel()
-    
+
     var body: some View {
         VStack(spacing: .zero) {
             Header()
@@ -70,7 +70,7 @@ extension AppPage: Tabbable {}
 private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
-    
+
     var options: [AppPage] {
         var tabs: [AppPage] = [.home, .settings, .about]
         if appState.isDevApp && TakuService.shared.isAvailable() {
@@ -78,7 +78,7 @@ private struct Header: View {
         }
         return tabs
     }
-    
+
     var body: some View {
         HStack {
             TabSelector(selection: $viewModel.selectedPage, options: options)
@@ -90,7 +90,7 @@ private struct Header: View {
 private struct PageContents: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
-    
+
     var body: some View {
         switch viewModel.selectedPage {
         case .about: AboutView()
@@ -105,7 +105,7 @@ private struct PageContents: View {
 private struct PageTitle: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
-    
+
     var body: some View {
         Text(viewModel.selectedPage.description)
             .textAlign(.center)

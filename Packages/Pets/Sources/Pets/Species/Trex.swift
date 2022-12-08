@@ -1,31 +1,22 @@
 import Foundation
 import Yage
 
-extension Pet {    
-    static let trex = Pet(
-        id: "trex",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front.with(loops: 2),
-                    .idle,
-                    .eat.with(loops: 4),
-                    .selfie.with(loops: 2),
-                    .sendText.with(loops: 2),
-                    .roar.with(loops: 3),
-                    .playGuitar.with(loops: 3),
-                    .fireball.with(loops: 2)
-                ]
-            )
-        ],
-        movementPath: .walk,
-        speed: 1
-    )
-    
-    static let trexBlue = Pet.trex.shiny(id: "trex_blue")
-    static let trexViolet = Pet.trex.shiny(id: "trex_violet")
-    static let trexYellow = Pet.trex.shiny(id: "trex_yellow")
+extension Species {
+    static let trex = Species.pet
+        .with(id: "trex")
+        .with(animation: .front.with(loops: 2))
+        .with(animation: .idle)
+        .with(animation: .eat.with(loops: 4))
+        .with(animation: .selfie.with(loops: 2))
+        .with(animation: .sendText.with(loops: 2))
+        .with(animation: .roar.with(loops: 3))
+        .with(animation: .playGuitar.with(loops: 3))
+        .with(animation: .fireball.with(loops: 2))
+        .with(speed: 1)
+
+    static let trexBlue = Species.trex.with(id: "trex_blue")
+    static let trexViolet = Species.trex.with(id: "trex_violet")
+    static let trexYellow = Species.trex.with(id: "trex_yellow")
 }
 
 private extension EntityAnimation {

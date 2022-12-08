@@ -5,12 +5,12 @@ import SwiftUI
 struct TextInput: View {
     @EnvironmentObject var messageViewModel: DialogViewModel
     @StateObject private var viewModel: TextViewModel
-    
+
     init(placeholder: String, value: Binding<String>) {
         let vm = TextViewModel(placeholder: placeholder, value: value)
-        self._viewModel = StateObject(wrappedValue: vm)
+        _viewModel = StateObject(wrappedValue: vm)
     }
-    
+
     var body: some View {
         TextField("", text: $viewModel.value, prompt: Text(viewModel.placeholder))
             .textFieldStyle(.plain)
@@ -28,17 +28,17 @@ class TextViewModel: ObservableObject {
     @Published var editState: EditState = .empty
     @Published var value: String
     @Published var showPlaceholder: Bool = true
-    
+
     let placeholder: String
-    let styler: Styler = Styler()
+    let styler: Styler = .init()
     private var valueCanc: AnyCancellable!
-    
+
     init(placeholder: String, value: Binding<String>) {
-        self._actualValue = value
+        _actualValue = value
         self.value = value.wrappedValue
         self.placeholder = placeholder
-        self.editState = .given(self.value, false)
-                
+        editState = .given(self.value, false)
+
         valueCanc = $value.sink { value in
             self.updatePlaceholderState(actualValue: value)
             Task { @MainActor in
@@ -46,11 +46,11 @@ class TextViewModel: ObservableObject {
             }
         }
     }
-    
+
     func onEditingChanged(didBegin: Bool) {
         updatePlaceholderState()
     }
-    
+
     func updatePlaceholderState(actualValue: String? = nil) {
         Task { @MainActor in
             withAnimation {

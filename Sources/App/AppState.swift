@@ -2,84 +2,85 @@ import Combine
 import DesignSystem
 import Pets
 import SwiftUI
+import Yage
 
 // MARK: - App State
 
 class AppState: ObservableObject {
     static let global = AppState()
-    
-    let petsOnStage = CurrentValueSubject<[Pet], Never>([])
-    
+
+    let speciesOnStage = CurrentValueSubject<[Species], Never>([])
+
     lazy var isDevApp: Bool = {
         let bundle = Bundle.main.bundleIdentifier ?? ""
         return bundle.contains(".dev")
     }()
-    
+
     @Published var desktopInteractions: Bool = true {
         didSet {
             storage.desktopInteractions = desktopInteractions
         }
     }
-    
+
     @Published var gravityEnabled: Bool = true {
         didSet {
             storage.gravityEnabled = gravityEnabled
         }
     }
-    
+
     @Published var petSize: CGFloat = 0 {
         didSet {
             storage.petSize = petSize
         }
     }
-    
-    @Published var selectedPets: [String] = [] {
+
+    @Published var selectedSpecies: [String] = [] {
         didSet {
-            storage.selectedPets = selectedPets
-            let species = selectedPets.compactMap { Pet.by(id: $0) }
-            petsOnStage.send(species)
+            storage.selectedSpecies = selectedSpecies
+            let species = selectedSpecies.compactMap { Species.by(id: $0) }
+            speciesOnStage.send(species)
         }
     }
-    
+
     @Published var showInMenuBar: Bool = true {
         didSet {
             storage.showInMenuBar = showInMenuBar
         }
     }
-    
+
     @Published var speedMultiplier: CGFloat = 1 {
         didSet {
             storage.speedMultiplier = speedMultiplier
         }
     }
-    
+
     @Published var trackingEnabled: Bool = false {
         didSet {
             storage.trackingEnabled = trackingEnabled
         }
     }
-    
+
     @Published var ufoAbductionSchedule: String = "" {
         didSet {
             storage.ufoAbductionSchedule = ufoAbductionSchedule
         }
     }
-    
+
     private let storage = Storage()
-    
+
     init() {
         reload()
     }
-    
+
     func reload() {
-        self.desktopInteractions = storage.desktopInteractions
-        self.gravityEnabled = storage.gravityEnabled
-        self.petSize = storage.petSize
-        self.selectedPets = storage.selectedPets
-        self.showInMenuBar = storage.showInMenuBar
-        self.speedMultiplier = storage.speedMultiplier
-        self.trackingEnabled = storage.trackingEnabled
-        self.ufoAbductionSchedule = storage.ufoAbductionSchedule
+        desktopInteractions = storage.desktopInteractions
+        gravityEnabled = storage.gravityEnabled
+        petSize = storage.petSize
+        selectedSpecies = storage.selectedSpecies
+        showInMenuBar = storage.showInMenuBar
+        speedMultiplier = storage.speedMultiplier
+        trackingEnabled = storage.trackingEnabled
+        ufoAbductionSchedule = storage.ufoAbductionSchedule
     }
 }
 
@@ -87,22 +88,22 @@ private class Storage {
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
     @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
     @AppStorage("gravityEnabled") var gravityEnabled = true
-    @AppStorage("petId") private var selectedPetsValue: String = kInitialPetId
+    @AppStorage("petId") private var selectedSpeciesValue: String = kInitialPetId
     @AppStorage("showInMenuBar") var showInMenuBar = true
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("trackingEnabled") var trackingEnabled = false
     @AppStorage("ufoAbductionSchedule") var ufoAbductionSchedule: String = "daily:22:30"
-    
-    var selectedPets: [String] {
+
+    var selectedSpecies: [String] {
         get {
-            let pets = selectedPetsValue
+            let species = selectedSpeciesValue
                 .components(separatedBy: ",")
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
                 .filter { !$0.isEmpty }
-            return pets.count == 0 ? [kInitialPetId] : pets
+            return species.count == 0 ? [kInitialPetId] : species
         }
         set {
-            selectedPetsValue = newValue.joined(separator: ",")
+            selectedSpeciesValue = newValue.joined(separator: ",")
         }
     }
 }
@@ -110,8 +111,8 @@ private class Storage {
 // MARK: - Pets Settings
 
 extension AppState: PetsSettings {
-    func remove(pet: Pet) {
-        selectedPets = selectedPets.filter { $0 != pet.id }
+    func remove(species: Species) {
+        selectedSpecies = selectedSpecies.filter { $0 != species.id }
     }
 }
 

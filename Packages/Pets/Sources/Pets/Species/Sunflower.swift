@@ -1,11 +1,11 @@
 import Foundation
+import Yage
 
-extension Pet {
-    static let sunflower = Pet(
-        id: "sunflower",
-        fps: 0.5,
-        movementPath: .front,
-        dragPath: .front,
-        speed: 0
-    )
+extension Species {
+    static let sunflower = Species.pet
+        .with(id: "sunflower")
+        .with(fps: 0.5)
+        .with(movementPath: "front")
+        .with(dragPath: "front")
+        .with(speed: 0)
 }

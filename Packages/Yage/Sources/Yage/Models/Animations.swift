@@ -6,10 +6,10 @@ public struct EntityAnimation {
     public let chance: Double
     public let facingDirection: CGVector?
     public let requiredLoops: Int?
-    
+
     let size: CGSize?
     let position: Position
-    
+
     public init(
         id: String,
         size: CGSize? = nil,
@@ -25,7 +25,7 @@ public struct EntityAnimation {
         self.requiredLoops = requiredLoops
         self.chance = chance
     }
-    
+
     public func frame(for entity: Entity) -> CGRect {
         let newSize = size(for: entity.frame.size)
         let newPosition = position(
@@ -35,7 +35,7 @@ public struct EntityAnimation {
         )
         return CGRect(origin: newPosition, size: newSize)
     }
-    
+
     private func size(for originalSize: CGSize) -> CGSize {
         guard let customSize = size else { return originalSize }
         return CGSize(
@@ -43,30 +43,29 @@ public struct EntityAnimation {
             height: customSize.height * originalSize.height
         )
     }
-    
+
     private func position(
         originalFrame entityFrame: CGRect,
         newSize: CGSize,
         in worldBounds: CGRect
     ) -> CGPoint {
         switch position {
-            
         case .fromEntityBottomLeft:
             return entityFrame.origin
                 .offset(y: entityFrame.size.height - newSize.height)
-            
+
         case .entityTopLeft:
             return entityFrame.origin
-            
+
         case .worldTopLeft:
             return worldBounds.topLeft
-            
+
         case .worldTopRight:
             return worldBounds.topRight.offset(x: -entityFrame.width)
-            
+
         case .worldBottomRight:
             return worldBounds.bottomRight.offset(by: entityFrame.size.oppositeSign())
-            
+
         case .worldBottomLeft:
             return worldBounds.bottomLeft.offset(y: -entityFrame.height)
         }
@@ -77,9 +76,8 @@ extension EntityAnimation: CustomStringConvertible {
     public var description: String { id }
 }
 
-extension EntityAnimation {
-    
-    public enum Position {
+public extension EntityAnimation {
+    enum Position {
         case fromEntityBottomLeft
         case entityTopLeft
         case worldTopLeft
@@ -89,9 +87,8 @@ extension EntityAnimation {
     }
 }
 
-extension EntityAnimation {
-    
-    public func with(loops: Int) -> EntityAnimation {
+public extension EntityAnimation {
+    func with(loops: Int) -> EntityAnimation {
         EntityAnimation(
             id: id,
             size: size,

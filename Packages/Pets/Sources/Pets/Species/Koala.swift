@@ -1,26 +1,17 @@
 import Foundation
 import Yage
 
-extension Pet {    
-    static let koala = Pet(
-        id: "koala",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .front.with(loops: 2),
-                    .idle.with(loops: 2),
-                    .eat.with(loops: 3),
-                    .love,
-                    .backflip
-                ]
-            )
-        ],
-        movementPath: .walk,
-        speed: 0.8
-    )
-    
-    static let koalaPirate = Pet.koala.shiny(id: "koala_pirate", isPaid: false)
+extension Species {
+    static let koala = Species.pet
+        .with(id: "koala")
+        .with(animation: .front.with(loops: 2))
+        .with(animation: .idle.with(loops: 2))
+        .with(animation: .eat.with(loops: 3))
+        .with(animation: .love)
+        .with(animation: .backflip)
+        .with(speed: 0.8)
+
+    static let koalaPirate = Species.koala.with(id: "koala_pirate")
 }
 
 private extension EntityAnimation {

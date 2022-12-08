@@ -1,18 +1,10 @@
 import Foundation
+import Yage
 
-extension Pet {
-    static let mushroomWizard = Pet(
-        id: "mushroomwizard",
-        behaviors: [
-            .init(
-                trigger: .random,
-                possibleAnimations: [
-                    .idle.with(loops: 50),
-                    .sleep.with(loops: 20)
-                ]
-            )
-        ],
-        movementPath: .walk,
-        speed: 0.7
-    )
+extension Species {
+    static let mushroomWizard = Species.pet
+        .with(id: "mushroomwizard")
+        .with(animation: .idle.with(loops: 50))
+        .with(animation: .sleep.with(loops: 20))
+        .with(speed: 0.7)
 }

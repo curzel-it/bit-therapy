@@ -22,14 +22,14 @@ public enum MenuItem: String {
 
 public class StatusBar {
     static let manager = StatusBarManager()
-    
+
     public static func show(
         with handler: Handler,
         localizedContent lang: LocalizedContentProvider
     ) {
         StatusBar.manager.show(with: handler, localizedContent: lang)
     }
-    
+
     public static func hide() {
         StatusBar.manager.hide()
     }
@@ -38,7 +38,7 @@ public class StatusBar {
 class StatusBarManager: NSObject {
     private var statusItem: NSStatusItem?
     private weak var handler: Handler?
-    
+
     func show(
         with handler: Handler,
         localizedContent: LocalizedContentProvider
@@ -49,14 +49,14 @@ class StatusBarManager: NSObject {
         item.menu = buildMenu(with: localizedContent)
         statusItem = item
     }
-    
+
     func hide() {
         handler = nil
         guard let item = statusItem else { return }
         NSStatusBar.system.removeStatusItem(item)
         statusItem = nil
     }
-    
+
     private func buildMenu(with lang: LocalizedContentProvider) -> NSMenu {
         let menu = NSMenu(title: lang.menuTitle)
         menu.items = [
@@ -67,7 +67,7 @@ class StatusBarManager: NSObject {
         ]
         return menu
     }
-    
+
     private func buildItem(
         key: MenuItem,
         action: Selector,
@@ -82,7 +82,7 @@ class StatusBarManager: NSObject {
         item.target = self
         return item
     }
-    
+
     @objc private func showHome() { handler?.showHome() }
     @objc private func hidePets() { handler?.hidePets() }
     @objc private func showPets() { handler?.showPets() }
