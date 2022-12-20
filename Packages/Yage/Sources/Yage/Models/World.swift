@@ -1,15 +1,13 @@
 import SwiftUI
 
 open class World {
-    public var children: [Entity] = []
-
+    public var children: [Entity] = []    
     public private(set) var bounds: CGRect = .zero
-    public var events: [Event] = []
-
+    
     public init(bounds rect: CGRect) {
         set(bounds: rect)
     }
-
+    
     open func set(bounds newBounds: CGRect) {
         bounds = newBounds
         children.forEach { $0.worldBounds = newBounds }
@@ -19,7 +17,7 @@ open class World {
         children.removeAll { hotspots.contains($0.id) }
         children.append(contentsOf: hotspotEntities())
     }
-
+    
     public func update(after time: TimeInterval) {
         children
             .filter { !$0.isStatic }
@@ -27,15 +25,5 @@ open class World {
                 let collisions = child.collisions(with: children)
                 child.update(with: collisions, after: time)
             }
-    }
-
-    @discardableResult
-    public func schedule(
-        every time: EventSchedule,
-        do action: @escaping (World) -> Void
-    ) -> Event {
-        let event = Event(in: self, every: time, do: action)
-        events.append(event)
-        return event
     }
 }

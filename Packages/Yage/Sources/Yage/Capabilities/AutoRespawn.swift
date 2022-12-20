@@ -3,10 +3,8 @@ import Schwifty
 import SwiftUI
 
 public class AutoRespawn: Capability {
-    private var collisionAlreadyHandled = false
-
     override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled, let subject = subject else { return }
+        guard isEnabled, let subject else { return }
         if !isWithinBounds(point: subject.frame.origin) {
             Logger.log(tag, subject.id, "Teleporting...")
             teleport()
@@ -14,12 +12,12 @@ public class AutoRespawn: Capability {
     }
 
     public func teleport() {
-        guard let body = subject else { return }
-        let worldWidth = body.worldBounds.width
+        guard let subject else { return }
+        let worldWidth = subject.worldBounds.width
         let randomX = worldWidth * CGFloat.random(in: 0 ... 0.25)
-        body.frame.origin = CGPoint(x: randomX, y: 30)
-        body.direction = CGVector(dx: 1, dy: 0)
-        body.set(state: .move)
+        subject.frame.origin = CGPoint(x: randomX, y: 30)
+        subject.direction = CGVector(dx: 1, dy: 0)
+        subject.set(state: .move)
     }
 
     func outerBounds() -> CGRect {

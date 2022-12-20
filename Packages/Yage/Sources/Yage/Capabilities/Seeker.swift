@@ -69,24 +69,24 @@ public class Seeker: Capability {
     // MARK: - Direction
 
     private func adjustDirection(towards target: CGPoint, with distance: CGFloat) {
+        guard let subject else { return }
         if distance < minDistance {
-            subject?.direction = .zero
+            subject.direction = .zero
         } else {
-            let origin = subject?.frame.origin ?? .zero
-            subject?.direction = .unit(from: origin, to: target)
+            subject.direction = .unit(from: subject.frame.origin, to: target)
         }
     }
 
     // MARK: - Speed
 
     private func adjustSpeedIfNeeded(with distance: CGFloat) {
-        guard autoAdjustSpeed else { return }
+        guard let subject, autoAdjustSpeed else { return }
         if distance < minDistance {
-            subject?.speed = baseSpeed * 0.25
+            subject.speed = baseSpeed * 0.25
         } else if distance < maxDistance {
-            subject?.speed = baseSpeed * 0.5
+            subject.speed = baseSpeed * 0.5
         } else {
-            subject?.speed = baseSpeed
+            subject.speed = baseSpeed
         }
     }
 

@@ -42,31 +42,30 @@ public class Gravity: Capability {
 
     @discardableResult
     func onGroundReached(at groundLevel: CGFloat) -> Bool {
-        guard let body = subject else { return false }
-        let targetY = groundLevel - body.frame.height
+        guard let subject else { return false }
+        let targetY = groundLevel - subject.frame.height
         let isLanding = isFalling
-        let isRaising = !isFalling && body.frame.minY != targetY
+        let isRaising = !isFalling && subject.frame.minY != targetY
 
         if isLanding || isRaising {
-            let ground = CGPoint(x: body.frame.origin.x, y: targetY)
-            body.frame.origin = ground
+            let ground = CGPoint(x: subject.frame.origin.x, y: targetY)
+            subject.frame.origin = ground
         }
         if isLanding {
-            body.movement?.isEnabled = true
-            body.set(state: .move)
-            body.direction = .init(dx: 1, dy: 0)
+            subject.movement?.isEnabled = true
+            subject.direction = .init(dx: 1, dy: 0)
+            subject.set(state: .move)
         }
         return true
     }
 
     @discardableResult
     func startFallingIfNeeded() -> Bool {
-        guard let body = subject else { return false }
-        guard !isFalling else { return false }
-        body.movement?.isEnabled = true
-        body.set(state: .freeFall)
-        body.direction = Gravity.fallDirection
-        body.speed = 14
+        guard let subject, let movement = subject.movement, !isFalling else { return false }
+        subject.set(state: .freeFall)
+        subject.direction = Gravity.fallDirection
+        subject.speed = 14
+        movement.isEnabled = true
         return true
     }
 

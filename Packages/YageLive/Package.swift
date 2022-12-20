@@ -13,14 +13,16 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Yage"),
+        .package(url: "https://github.com/curzel-it/NotAGif", from: "1.0.7"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.13")
     ],
     targets: [
         .target(
             name: "YageLive",
             dependencies: [
-                .product(name: "Yage", package: "Yage"),
-                .product(name: "Schwifty", package: "Schwifty")
+                .product(name: "NotAGif", package: "NotAGif"),
+                .product(name: "Schwifty", package: "Schwifty"),
+                .product(name: "Yage", package: "Yage")
             ]
         ),
         .testTarget(

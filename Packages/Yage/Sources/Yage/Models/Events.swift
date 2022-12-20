@@ -1,5 +1,21 @@
 import Foundation
 
+// MARK: - Event
+
+public class Event: Identifiable {
+    public let id: String = UUID().uuidString
+    public let schedulingRule: EventSchedule
+    public var action: () -> Void
+
+    public init(
+        every time: EventSchedule,
+        do action: @escaping () -> Void
+    ) {
+        schedulingRule = time
+        self.action = action
+    }
+}
+
 // MARK: - Schedule
 
 public enum EventSchedule: Equatable {
@@ -30,33 +46,9 @@ public enum EventSchedule: Equatable {
         return .every(timeInterval: unit * count)
     }
 }
-
-extension EventSchedule: CustomStringConvertible {
-    public var description: String {
-        switch self {
-        case .timeOfDay(let hour, let minute):
-            let hours = String(format: "%02d", hour)
-            let minutes = String(format: "%02d", minute)
-            return "Every day at \(hours):\(minutes)"
-
-        case .every(let timeInterval):
-            let minutes = String(format: "%0.1f", timeInterval / 60.0)
-            return "Every ~\(minutes) minutes"
-        }
-    }
-}
-
+    
 extension EventSchedule {
-    public func timer(action: @escaping () -> Void) -> Timer {
-        switch self {
-        case .timeOfDay:
-            return Timer(fire: nextDate(), interval: .oneDay, repeats: true) { _ in action() }
-        case .every(let timeInterval):
-            return Timer(timeInterval: timeInterval, repeats: true) { _ in action() }
-        }
-    }
-
-    func nextDate() -> Date {
+    public func nextDate() -> Date {
         switch self {
         case .timeOfDay(let hour, let minute):
             guard let nextDate = Calendar.current.date(
@@ -74,48 +66,20 @@ extension EventSchedule {
     }
 }
 
-// MARK: - Event
+// MARK: - Debug
 
-public class Event: Identifiable {
-    public let id: String = UUID().uuidString
-    public let schedulingRule: EventSchedule
+extension EventSchedule: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .timeOfDay(let hour, let minute):
+            let hours = String(format: "%02d", hour)
+            let minutes = String(format: "%02d", minute)
+            return "Every day at \(hours):\(minutes)"
 
-    private weak var environment: World?
-    private var action: (World) -> Void
-    private var timer: Timer?
-
-    init(
-        in environment: World,
-        every time: EventSchedule,
-        do action: @escaping (World) -> Void
-    ) {
-        schedulingRule = time
-        self.action = action
-        self.environment = environment
-        schedule(every: time)
-    }
-
-    // MARK: - Scheduling
-
-    private func schedule(every time: EventSchedule) {
-        timer = time.timer { [weak self] in
-            guard let env = self?.environment else { return }
-            self?.action(env)
-            self?.cancel()
+        case .every(let timeInterval):
+            let minutes = String(format: "%0.1f", timeInterval / 60.0)
+            return "Every ~\(minutes) minutes"
         }
-        if let timer = timer {
-            RunLoop.current.add(timer, forMode: .common)
-        }
-    }
-
-    // MARK: - Cancellation
-
-    public func cancel() {
-        timer?.invalidate()
-        timer = nil
-        environment?.events.removeAll { $0 == self }
-        environment = nil
-        action = { _ in }
     }
 }
 

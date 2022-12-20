@@ -10,6 +10,7 @@ open class LiveWorld: ObservableObject {
     public let fps: Double = 15
     public let state: World
     public let tag: String
+    var events: [ScheduledEvent] = []
 
     private var timer: Timer!
     private var lastUpdate: TimeInterval
@@ -47,10 +48,6 @@ open class LiveWorld: ObservableObject {
         let frameTime = now - lastUpdate
         state.update(after: frameTime)
         lastUpdate = now
-    }
-
-    public func scheduleAtTimeOfDay(hour: Int, minute: Int, action: @escaping () -> Void) {
-        state.schedule(every: .timeOfDay(hour: hour, minute: minute)) { _ in action() }
     }
 
     open func set(bounds: CGRect) {

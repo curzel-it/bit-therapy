@@ -8,7 +8,7 @@ extension PetsEnvironment {
     func scheduleUfoAbduction() {
         let settingsInterval = EventSchedule.from(string: settings.ufoAbductionSchedule)
         let actualInterval = settingsInterval ?? .timeOfDay(hour: 22, minute: 30)
-        state.schedule(every: actualInterval) { [weak self] _ in
+        schedule(every: actualInterval) { [weak self] in
             self?.startUfoAbductionOfRandomVictim()
         }
     }

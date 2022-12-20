@@ -8,9 +8,6 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:RUST.md">
-   </FileRef>
-   <FileRef
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef

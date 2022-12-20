@@ -4,7 +4,6 @@ import SwiftUI
 open class Entity: Identifiable {
     public let species: Species
     public let id: String
-    public var backgroundColor: Color = .clear
     public var capabilities: [Capability] = []
     public var direction: CGVector = .zero
     public var fps: TimeInterval = 10
@@ -12,14 +11,10 @@ open class Entity: Identifiable {
     public var isAlive = true
     public var isEphemeral: Bool = false
     public var isStatic: Bool = false
-    public var isUpsideDown = false
     public var speed: CGFloat = 0
     public var sprite: String?
     public private(set) var state: EntityState = .move
     public var worldBounds: CGRect
-    public var xAngle: CGFloat = 0
-    public var yAngle: CGFloat = 0
-    public var zAngle: CGFloat = 0
 
     public init(species: Species, id: String, frame: CGRect, in worldBounds: CGRect) {
         self.species = species
@@ -61,6 +56,14 @@ open class Entity: Identifiable {
     public func uninstallAllCapabilities() {
         capabilities.forEach { $0.kill(autoremove: false) }
         capabilities = []
+    }
+}
+
+// MARK: - Debug
+
+extension Entity: CustomStringConvertible {
+    public var description: String {
+        id
     }
 }
 

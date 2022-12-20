@@ -4,6 +4,8 @@ import XCTest
 
 class BounceOnLateralCollisionsTests: XCTestCase {
     private let testEnv = World(bounds: CGRect(x: 0, y: 0, width: 100, height: 100))
+    private var movement: LinearMovement!
+    private var bounce: BounceOnLateralCollisions!
 
     private lazy var testEntity: Entity = {
         let entity = Entity(
@@ -13,11 +15,10 @@ class BounceOnLateralCollisionsTests: XCTestCase {
             in: testEnv.bounds
         )
         bounce = BounceOnLateralCollisions.install(on: entity)
+        movement = LinearMovement.install(on: entity)
         testEnv.children.append(entity)
         return entity
     }()
-
-    private var bounce: BounceOnLateralCollisions!
 
     func testBouncesToLeftWhenHittingRight() {
         testEntity.frame.origin = CGPoint(x: 50, y: 0)

@@ -23,11 +23,17 @@ public struct BaseEntityView: View {
             }
         }
         .frame(sizeOf: entity.frame)
-        .rotation3DEffect(.radians(entity.xAngle), axis: (x: 1, y: 0, z: 0))
-        .rotation3DEffect(.radians(entity.yAngle), axis: (x: 0, y: 1, z: 0))
-        .rotation3DEffect(.radians(entity.zAngle), axis: (x: 0, y: 0, z: 1))
-        .background(entity.backgroundColor)
+        .rotated(with: entity.rotation?.angles)
         .offset(x: applyOffset ? entity.frame.midX : 0)
         .offset(y: applyOffset ? entity.frame.midY : 0)
+    }
+}
+
+private extension View {
+    func rotated(with rotation: Rotation?) -> some View {
+        self
+            .rotation3DEffect(.radians(rotation?.x ?? 0), axis: (x: 1, y: 0, z: 0))
+            .rotation3DEffect(.radians(rotation?.y ?? 0), axis: (x: 0, y: 1, z: 0))
+            .rotation3DEffect(.radians(rotation?.z ?? 0), axis: (x: 0, y: 0, z: 1))
     }
 }

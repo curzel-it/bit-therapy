@@ -12,8 +12,7 @@ public class FlipHorizontallyWhenGoingLeft: Capability {
     }
 
     override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
-        guard let subject = subject else { return }
+        guard let subject, isEnabled else { return }
         updateYAngle(for: subject.direction, state: subject.state)
     }
 
@@ -27,6 +26,6 @@ public class FlipHorizontallyWhenGoingLeft: Capability {
 
     private func updateYAngle(for direction: CGVector) {
         let isGoingLeft = direction.dx < -0.0001
-        subject?.yAngle = isGoingLeft ? .pi : .zero
+        subject?.rotation?.angles.y = isGoingLeft ? .pi : .zero
     }
 }

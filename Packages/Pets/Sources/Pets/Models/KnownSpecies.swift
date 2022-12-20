@@ -11,6 +11,7 @@ extension Species {
         .with(capability: PetAnimationsProvider.self)
         .with(capability: PetsSpritesProvider.self)
         .with(capability: LinearMovement.self)
+        .with(capability: Rotating.self)
         .with(capability: BounceOnLateralCollisions.self)
         .with(capability: FlipHorizontallyWhenGoingLeft.self)
 }
