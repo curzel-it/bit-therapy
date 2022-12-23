@@ -30,6 +30,7 @@ private struct LocalizedContent: LocalizedContentProvider {
     var purchasing: String { Lang.Purchases.purchasing }
     var purchased: String { Lang.Purchases.purchased }
     var remove: String { Lang.remove }
+    var screen: String { Lang.screen }
     var somethingWentWrong: String { Lang.somethingWentWrong }
     var title: String { Lang.Page.home }
     var yourPets: String { Lang.PetSelection.yourPets }

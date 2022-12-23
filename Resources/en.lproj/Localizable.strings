@@ -4,6 +4,7 @@
 "select" = "Select";
 "remove" = "Remove";
 "reset" = "Reset";
+"screen" = "Screen";
 "enable" = "Enable";
 "disable" = "Disable";
 "loading" = "Loading...";

@@ -8,7 +8,7 @@ extension Species {
     static let pet = Species(id: "")
         .with(capability: RandomAnimations.self)
         .with(capability: AnimatedSprite.self)
-        .with(capability: PetAnimationsProvider.self)
+        .with(capability: AnimationsProvider.self)
         .with(capability: PetsSpritesProvider.self)
         .with(capability: LinearMovement.self)
         .with(capability: Rotating.self)

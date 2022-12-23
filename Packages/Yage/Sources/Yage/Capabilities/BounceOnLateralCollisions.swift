@@ -3,9 +3,9 @@ import SwiftUI
 public class BounceOnLateralCollisions: Capability {
     override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
-        guard let body = subject, !body.isEphemeral, body.state == .move else { return }
-        guard let angle = bouncingAngle(from: body.direction.radians, with: collisions) else { return }
-        body.direction = CGVector(radians: angle)
+        guard let subject, !subject.isEphemeral, subject.state == .move else { return }
+        guard let angle = bouncingAngle(from: subject.direction.radians, with: collisions) else { return }
+        subject.direction = CGVector(radians: angle)
     }
 
     func bouncingAngle(from currentAngle: CGFloat, with collisions: Collisions) -> CGFloat? {

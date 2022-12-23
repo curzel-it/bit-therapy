@@ -6,13 +6,12 @@ public class ShapeShifter: Capability {
     var delta: CGSize = .zero
 
     public func scaleLinearly(to size: CGSize, duracy: TimeInterval) {
-        guard let body = subject else { return }
-
+        guard let subject else { return }
         isEnabled = true
         targetSize = size
         delta = CGSize(
-            width: size.width - body.frame.width,
-            height: size.height - body.frame.height
+            width: size.width - subject.frame.width,
+            height: size.height - subject.frame.height
         )
         animationDuracy = duracy
         isEnabled = true
@@ -20,19 +19,19 @@ public class ShapeShifter: Capability {
 
     override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
-        guard let body = subject else { return }
+        guard let subject else { return }
 
         let delta = CGSize(
-            width: time * (targetSize.width - body.frame.width) / animationDuracy,
-            height: time * (targetSize.height - body.frame.height) / animationDuracy
+            width: time * (targetSize.width - subject.frame.width) / animationDuracy,
+            height: time * (targetSize.height - subject.frame.height) / animationDuracy
         )
         let newFrame = CGRect(
-            x: body.frame.origin.x - delta.width / 2,
-            y: body.frame.origin.y - delta.height / 2,
-            width: body.frame.width + delta.width,
-            height: body.frame.height + delta.height
+            x: subject.frame.origin.x - delta.width / 2,
+            y: subject.frame.origin.y - delta.height / 2,
+            width: subject.frame.width + delta.width,
+            height: subject.frame.height + delta.height
         )
-        body.frame = newFrame
+        subject.frame = newFrame
 
         checkCompletion(given: delta)
     }

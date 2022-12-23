@@ -2,15 +2,6 @@ import Combine
 import SwiftUI
 
 public class FlipHorizontallyWhenGoingLeft: Capability {
-    private var lastDirection: CGVector = .zero
-    private var lastState: EntityState = .drag
-
-    public required init(for subject: Entity) {
-        lastDirection = subject.direction
-        lastState = subject.state
-        super.init(for: subject)
-    }
-
     override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard let subject, isEnabled else { return }
         updateYAngle(for: subject.direction, state: subject.state)
@@ -26,6 +17,6 @@ public class FlipHorizontallyWhenGoingLeft: Capability {
 
     private func updateYAngle(for direction: CGVector) {
         let isGoingLeft = direction.dx < -0.0001
-        subject?.rotation?.angles.y = isGoingLeft ? .pi : .zero
+        subject?.rotation?.isFlippedHorizontally = isGoingLeft
     }
 }

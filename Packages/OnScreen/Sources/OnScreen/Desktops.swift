@@ -4,60 +4,96 @@ import Pets
 import Schwifty
 import Yage
 
-class DesktopEnvironment: PetsEnvironment {
-    private var onScreenSettings: OnScreenSettings
+class DesktopEnvironment {
+    private var desktopSettings: DesktopSettings
     private var desktopObstacles: DesktopObstaclesService!
 
-    init(settings: OnScreenSettings) {
-        onScreenSettings = settings
-        super.init(with: settings, bounds: NSScreen.main?.frame.bounds ?? .zero)
+    var worlds: [ScreenEnvironment]!
+    
+    init(settings: DesktopSettings) {
+        desktopSettings = settings
+        loadWorlds()
         observeWindowsIfNeeded()
     }
-
-    private func observeWindowsIfNeeded() {
-        guard onScreenSettings.desktopInteractions else { return }
-        desktopObstacles = DesktopObstaclesService(world: self)
-        desktopObstacles.start()
-        state.children.forEach {
-            guard let pet = $0 as? PetEntity else { return }
-            pet.setupJumperIfPossible(with: desktopObstacles)
-        }
+    
+    private func loadWorlds() {
+        worlds = NSScreen.screens
+            .filter { desktopSettings.isEnabled(screen: $0) }
+            .map {
+                ScreenEnvironment(
+                    name: $0.localizedName,
+                    with: desktopSettings,
+                    bounds: $0.frame,
+                    entityBuilder: buildEntity
+                )
+            }
     }
-
-    override func buildEntity(species: Species) -> PetEntity {
-        let entity = PetEntity(of: species, in: state.bounds, settings: onScreenSettings)
+    
+    private func observeWindowsIfNeeded() {
+        guard desktopSettings.desktopInteractions else { return }
+        if let world = worlds.first {
+            desktopObstacles = DesktopObstaclesService(world: world)
+            desktopObstacles.start()
+        }
+        installJumpers()
+    }
+    
+    private func installJumpers() {
+        worlds
+            .flatMap { $0.children }
+            .compactMap { $0 as? PetEntity }
+            .forEach { $0.setupJumperIfPossible(with: desktopObstacles) }
+    }
+    
+    func startUfoAbductionOfRandomVictim() {
+        worlds
+            .filter { $0.hasAnyPets }
+            .first?
+            .startUfoAbductionOfRandomVictim()
+    }
+    
+    func remove(species: Species) {
+        worlds.forEach { $0.remove(species: species) }
+    }
+    
+    func buildEntity(species: Species, in bounds: CGRect) -> PetEntity {
+        let entity = PetEntity(of: species, in: bounds, settings: desktopSettings)
         ShowsMenuOnRightClick.install(on: entity)
-        entity.setupJumperIfPossible(with: desktopObstacles)
+        MouseDraggable.install(on: entity)
         return entity
     }
-
-    override func kill() {
+    
+    func kill() {
         desktopObstacles?.stop()
-        super.kill()
+        worlds.forEach { $0.kill() }
     }
 }
 
-public protocol OnScreenSettings: PetsSettings {
+// MARK: - Screen Environment
+
+class ScreenEnvironment: PetsEnvironment {
+    typealias EntityBuilder = (Species, CGRect) -> PetEntity
+    
+    private var entityBuilder: EntityBuilder
+    
+    var hasAnyPets: Bool {
+        children.contains { $0 is PetEntity }
+    }
+    
+    init(name: String, with settings: PetsSettings, bounds: CGRect, entityBuilder: @escaping EntityBuilder) {
+        self.entityBuilder = entityBuilder
+        super.init(name: name, with: settings, bounds: bounds)
+    }
+    
+    override func buildEntity(species: Species) -> PetEntity {
+        entityBuilder(species, state.bounds)
+    }
+}
+
+// MARK: - Settings
+
+public protocol DesktopSettings: PetsSettings {
     var desktopInteractions: Bool { get }
-}
-
-extension DesktopObstaclesService: JumperPlatformsProvider {
-    func platforms() -> [Entity] {
-        world.children.filter { $0.isWindowObstacle || $0.isGround }
-    }
-}
-
-private extension Entity {
-    var isGround: Bool {
-        id == Hotspot.bottomBound.rawValue
-    }
-}
-
-private extension PetEntity {
-    func setupJumperIfPossible(with platforms: JumperPlatformsProvider?) {
-        guard let platforms = platforms else { return }
-        guard RandomPlatformJumper.compatible(with: self) else { return }
-        let jumper = RandomPlatformJumper.install(on: self)
-        jumper.start(with: platforms)
-    }
+    
+    func isEnabled(screen: NSScreen) -> Bool
 }

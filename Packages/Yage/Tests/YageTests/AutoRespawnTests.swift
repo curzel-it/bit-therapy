@@ -18,17 +18,9 @@ class AutoRespawnTests: XCTestCase {
         respawner.subject = entity
     }
 
-    func testOuterBoundsPropertlyCalculated() {
-        XCTAssertEqual(respawner.outerBounds().minX, -250)
-        XCTAssertEqual(respawner.outerBounds().minY, -250)
-        XCTAssertEqual(respawner.outerBounds().width, 510)
-        XCTAssertEqual(respawner.outerBounds().height, 510)
-    }
-
     func testEntityInsideBoundsIsUntouched() {
-        for y in -250 ..< 260 {
+        for y in 0..<10 {
             let point = CGPoint(x: 0, y: y)
-            print("y: \(point.y) - \(respawner.isWithinBounds(point: point))")
             XCTAssertTrue(respawner.isWithinBounds(point: point))
         }
     }

@@ -18,6 +18,7 @@ public protocol LocalizedContentProvider {
     var purchasing: String { get }
     var purchased: String { get }
     var remove: String { get }
+    var screen: String { get }
     var somethingWentWrong: String { get }
 
     func buyButtonTitle(formattedPrice: String) -> String

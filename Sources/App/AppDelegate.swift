@@ -1,6 +1,7 @@
 import AppKit
 import OnScreen
 import Schwifty
+import Yage
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -18,4 +19,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
-extension AppState: OnScreenSettings {}
+extension AppState: DesktopSettings {}

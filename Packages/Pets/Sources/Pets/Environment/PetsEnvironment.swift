@@ -7,9 +7,9 @@ open class PetsEnvironment: LiveWorld {
     var settings: PetsSettings
     private var petsCanc: AnyCancellable!
 
-    public init(with settings: PetsSettings, bounds: CGRect) {
+    public init(name: String, with settings: PetsSettings, bounds: CGRect) {
         self.settings = settings
-        super.init(id: "main", bounds: bounds)
+        super.init(name: name, bounds: bounds)
         bindPetsOnStage()
         scheduleUfoAbduction()
     }

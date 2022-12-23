@@ -3,12 +3,10 @@ import Schwifty
 import SwiftUI
 import Yage
 
-protocol JumperPlatformsProvider {
-    func platforms() -> [Entity]
-}
+// MARK: - Platform Jumper
 
 class RandomPlatformJumper: Capability {
-    static func compatible(with species: PetEntity) -> Bool {
+    static func compatible(with species: Entity) -> Bool {
         species.species.movementPath == "fly"
     }
 
@@ -89,5 +87,30 @@ class RandomPlatformJumper: Capability {
     override func kill(autoremove: Bool = true) {
         restoreInitialConditions()
         super.kill(autoremove: autoremove)
+    }
+}
+
+// MARK: - Entity Extension
+
+extension Entity {
+    func setupJumperIfPossible(with platforms: JumperPlatformsProvider?) {
+        guard let platforms = platforms else { return }
+        guard RandomPlatformJumper.compatible(with: self) else { return }
+        let jumper = RandomPlatformJumper.install(on: self)
+        jumper.start(with: platforms)
+    }
+}
+
+// MARK: - Platforms Provider
+
+protocol JumperPlatformsProvider {
+    func platforms() -> [Entity]
+}
+
+extension DesktopObstaclesService: JumperPlatformsProvider {
+    func platforms() -> [Entity] {
+        world.children.filter {
+            $0.isWindowObstacle || $0.id == Hotspot.bottomBound.rawValue
+        }
     }
 }

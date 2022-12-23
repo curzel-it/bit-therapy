@@ -18,10 +18,10 @@ class OnScreenWindowsTests: XCTestCase {
         world?.kill()
         windows?.kill()
 
-        world = LiveWorld(id: "OnScreenWindowsTests", bounds: CGRect(size: .init(square: 1000)))
+        world = LiveWorld(name: "test", bounds: CGRect(size: .init(square: 1000)))
         entity1 = Entity(species: .agent, id: "test1", frame: baseSize, in: world.state.bounds)
         entity2 = Entity(species: .agent, id: "test2", frame: baseSize, in: world.state.bounds)
-        windows = OnScreenWindows(for: world)
+        windows = OnScreenWindows(for: [world])
     }
 
     func testWindowsAreSpawnedAutomatically() {

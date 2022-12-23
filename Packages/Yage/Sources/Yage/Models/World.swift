@@ -1,10 +1,13 @@
+import Schwifty
 import SwiftUI
 
 open class World {
+    public let name: String
     public var children: [Entity] = []    
     public private(set) var bounds: CGRect = .zero
     
-    public init(bounds rect: CGRect) {
+    public init(name: String, bounds rect: CGRect) {
+        self.name = name
         set(bounds: rect)
     }
     

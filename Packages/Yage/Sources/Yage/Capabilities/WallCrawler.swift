@@ -38,17 +38,21 @@ public class WallCrawler: Capability {
         guard let subject else { return }
         subject.direction = .init(dx: -1, dy: 0)
         subject.frame.origin = CGPoint(x: subject.frame.origin.x, y: 0)
-        subject.rotation?.set(x: .pi, y: .pi, z: 0)
+        subject.rotation?.isFlippedHorizontally = true
+        subject.rotation?.isFlippedVertically = true
+        subject.rotation?.z = 0
     }
 
     private func crawlUpRightBound() {
         guard let subject else { return }
         subject.direction = .init(dx: 0, dy: -1)
         subject.frame.origin = CGPoint(
-            x: subject.worldBounds.maxX - subject.frame.width,
+            x: subject.worldBounds.width - subject.frame.width,
             y: subject.frame.origin.y
         )
-        subject.rotation?.set(x: 0, y: 0, z: .pi * 1.5)
+        subject.rotation?.isFlippedHorizontally = false
+        subject.rotation?.isFlippedVertically = false
+        subject.rotation?.z = .pi * 0.5
     }
 
     private func crawlAlongBottomBound() {
@@ -56,9 +60,11 @@ public class WallCrawler: Capability {
         subject.direction = .init(dx: 1, dy: 0)
         subject.frame.origin = CGPoint(
             x: subject.frame.origin.x,
-            y: subject.worldBounds.maxY - subject.frame.height
+            y: subject.worldBounds.height - subject.frame.height
         )
-        subject.rotation?.set(x: 0, y: 0, z: 0)
+        subject.rotation?.isFlippedHorizontally = false
+        subject.rotation?.isFlippedVertically = false
+        subject.rotation?.z = 0
     }
 
     private func crawlDownLeftBound() {
@@ -67,30 +73,30 @@ public class WallCrawler: Capability {
         subject.frame.origin = CGPoint(
             x: 0, y: subject.frame.origin.y
         )
-        subject.rotation?.set(x: 0, y: 0, z: .pi * 0.5)
+        subject.rotation?.isFlippedHorizontally = false
+        subject.rotation?.isFlippedVertically = false
+        subject.rotation?.z = .pi * 1.5
     }
 
     private func touchesScreenTop() -> Bool {
         guard let subject else { return false }
-        let bound = subject.worldBounds.minY
-        return subject.frame.minY <= bound
+        return subject.frame.minY <= 0
     }
 
     private func touchesScreenRight() -> Bool {
         guard let subject else { return false }
-        let bound = subject.worldBounds.maxX
+        let bound = subject.worldBounds.width
         return subject.frame.maxX >= bound
     }
 
     private func touchesScreenBottom() -> Bool {
         guard let subject else { return false }
-        let bound = subject.worldBounds.maxY
+        let bound = subject.worldBounds.height
         return subject.frame.maxY >= bound
     }
 
     private func touchesScreenLeft() -> Bool {
         guard let subject else { return false }
-        let bound = subject.worldBounds.minX
-        return subject.frame.minX <= bound
+        return subject.frame.minX <= 0
     }
 }

@@ -11,7 +11,7 @@ public class Gravity: Capability {
     override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled, let state = subject?.state else { return }
         guard state != .drag && !isAnimationThatRequiresNoGravity(state) else { return }
-
+        
         if let groundLevel = groundLevel(from: collisions) {
             onGroundReached(at: groundLevel)
         } else {

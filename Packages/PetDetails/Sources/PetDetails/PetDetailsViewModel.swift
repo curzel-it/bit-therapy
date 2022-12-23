@@ -11,7 +11,7 @@ class PetDetailsViewModel: ObservableObject {
 
     var lang: LocalizedContentProvider
     var manager: PetDetailsManager
-
+    
     var canBuy: Bool { !isFree && !hasBeenPaid }
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected && (isFree || hasBeenPaid) }
@@ -52,7 +52,7 @@ class PetDetailsViewModel: ObservableObject {
         manager.close()
     }
 
-    func select() {
+    func selected() {
         manager.didSelect()
         Tracking.didSelect(species.id)
         close()
@@ -96,5 +96,11 @@ class PetDetailsViewModel: ObservableObject {
                 self?.buyTitle = value
             }
         }
+    }
+}
+
+extension NSScreen: Identifiable {
+    public var id: String {
+        "\(localizedName)@\(frame.description)"
     }
 }

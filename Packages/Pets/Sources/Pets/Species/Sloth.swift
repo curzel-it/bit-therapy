@@ -10,7 +10,6 @@ extension Species {
         .with(animation: .love)
         .with(animation: .selfie.with(loops: 2))
         .with(animation: .lightsaber(size: CGSize(width: 3.36, height: 1.86)))
-        .with(capability: ReactToHotspots.self)
         .with(speed: 0.6)
 
     static let slothSwag = Species.sloth

@@ -5,27 +5,29 @@ import SwiftUI
 import Yage
 import YageLive
 
-open class OnScreenWindows: NSObject, NSWindowDelegate {
-    weak var world: LiveWorld?
-    public private(set) var windows: [EntityWindow] = []
-    public private(set) var isAlive = true
-    private var childrenCanc: AnyCancellable!
+class OnScreenWindows: NSObject, NSWindowDelegate {
+    private(set) var worlds: [LiveWorld]
+    private(set) var windows: [EntityWindow] = []
+    private(set) var isAlive = true
+    private var disposables = Set<AnyCancellable>()
 
     let tag: String
 
-    public init(for world: LiveWorld?) {
+    init(for worlds: [LiveWorld]) {
         tag = "OnScreenWindows-\(OnScreenWindows.nextId())"
-        self.world = world
+        self.worlds = worlds
         super.init()
         startSpawningWindows()
     }
 
     private func startSpawningWindows() {
-        childrenCanc = world?.$children.sink { children in
-            guard let world = self.world else { return }
-            children
-                .filter { $0.sprite != nil }
-                .forEach { self.showWindow(representing: $0, in: world) }
+        worlds.forEach { world in
+            world.$children.sink { [weak self] children in
+                guard let self else { return }
+                children
+                    .filter { $0.sprite != nil }
+                    .forEach { self.showWindow(representing: $0, in: world) }
+            }.store(in: &disposables)
         }
     }
 
@@ -41,14 +43,14 @@ open class OnScreenWindows: NSObject, NSWindowDelegate {
         if let window = existingWindow(representing: entity) {
             return window
         }
-        let window = newWindow(representing: entity, in: world)
+        let window = newWindow(representing: entity)
         Logger.log(tag, "Created window for", entity.id)
         register(window)
         return window
     }
 
-    open func newWindow(representing entity: Entity, in world: LiveWorld) -> EntityWindow {
-        EntityWindow(representing: entity, in: world)
+    func newWindow(representing entity: Entity) -> EntityWindow {
+        EntityWindow(representing: entity)
     }
 
     // MARK: - Cached Windows
@@ -67,7 +69,7 @@ open class OnScreenWindows: NSObject, NSWindowDelegate {
 
     // MARK: - Window Closed
 
-    open func windowWillClose(_ notification: Notification) {
+    func windowWillClose(_ notification: Notification) {
         guard windows.count > 0 else { return }
         guard let windowBeingClosed = notification.object as? EntityWindow else { return }
         windows.removeAll { $0 == windowBeingClosed }
@@ -82,11 +84,10 @@ open class OnScreenWindows: NSObject, NSWindowDelegate {
 
     // MARK: - Kill Switch
 
-    open func kill() {
+    func kill() {
         isAlive = false
-        childrenCanc?.cancel()
-        childrenCanc = nil
-        world = nil
+        disposables.removeAll()
+        worlds.removeAll()
         windows.forEach { window in
             window.delegate = nil
             if window.isVisible {

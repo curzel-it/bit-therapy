@@ -14,14 +14,14 @@ public class AutoRespawn: Capability {
     public func teleport() {
         guard let subject else { return }
         let worldWidth = subject.worldBounds.width
-        let randomX = worldWidth * CGFloat.random(in: 0 ... 0.25)
+        let randomX = worldWidth * CGFloat.random(in: 0.2 ... 0.8)
         subject.frame.origin = CGPoint(x: randomX, y: 30)
         subject.direction = CGVector(dx: 1, dy: 0)
         subject.set(state: .move)
     }
 
     func outerBounds() -> CGRect {
-        subject?.worldBounds.inset(by: -boundsThickness / 4) ?? .zero
+        (subject?.worldBounds.bounds ?? .zero).inset(by: -boundsThickness)
     }
 
     func isWithinBounds(point: CGPoint) -> Bool {

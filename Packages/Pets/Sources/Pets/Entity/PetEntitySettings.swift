@@ -34,6 +34,7 @@ public extension PetEntity {
 
 extension PetEntity {
     static func initialFrame(in worldBounds: CGRect, size: CGFloat) -> CGRect {
-        CGRect(origin: .zero, size: CGSize(square: size))
+        let randomX = worldBounds.width * CGFloat.random(in: 0.2 ... 0.8)
+        return CGRect(origin: CGPoint(x: randomX, y: 30), size: CGSize(square: size))
     }
 }

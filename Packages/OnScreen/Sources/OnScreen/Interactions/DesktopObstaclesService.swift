@@ -7,22 +7,25 @@ import YageLive
 
 class DesktopObstaclesService: ObservableObject {
     let world: LiveWorld
-    private let windowsDetector = WindowsDetector().started(pollInterval: 1)
-    private var windowsCanc: AnyCancellable!
+    private static let windowsDetector = WindowsDetector().started(pollInterval: 1)
+    private var disposables = Set<AnyCancellable>()
 
     init(world: LiveWorld) {
         self.world = world
     }
 
     func start() {
-        windowsCanc = windowsDetector.$userWindows.sink { [weak self] in
-            self?.onWindows($0)
+        guard NSScreen.screens.count == 1 else {
+            Logger.log("DesktopObstaclesService", "Refusing to start: Multiple screen are not yet supported.")
+            return
         }
+        DesktopObstaclesService.windowsDetector.$userWindows
+            .sink { [weak self] in self?.onWindows($0) }
+            .store(in: &disposables)
     }
 
     func stop() {
-        windowsDetector.stop()
-        windowsCanc?.cancel()
+        disposables.removeAll()
     }
 
     private func onWindows(_ windows: [WindowInfo]) {
@@ -107,7 +110,7 @@ private extension WindowInfo {
 
     func isValidObstacle(within worldBounds: CGRect) -> Bool {
         guard !frame.isNull && !frame.isEmpty && !frame.isInfinite else { return false }
-        guard frame != NSScreen.main?.frame.bounds else { return false }
+        guard frame != worldBounds else { return false }
         guard !frame.contains(worldBounds) else { return false }
         guard owner != "shades" else { return false }
 

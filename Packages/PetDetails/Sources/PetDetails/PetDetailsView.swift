@@ -62,14 +62,11 @@ private struct AnimatedPreview: View {
 
 private struct Footer: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
-
+    
     var body: some View {
         HStack {
-            Button(viewModel.lang.cancel, action: viewModel.close)
-                .buttonStyle(.text)
-
             if viewModel.canSelect {
-                Button(viewModel.lang.addPet, action: viewModel.select)
+                Button(viewModel.lang.addPet, action: viewModel.selected)
                     .buttonStyle(.regular)
             }
             if viewModel.canRemove {
@@ -80,6 +77,9 @@ private struct Footer: View {
                 Button(viewModel.buyTitle, action: viewModel.buy)
                     .buttonStyle(.regular)
             }
+            
+            Button(viewModel.lang.cancel, action: viewModel.close)
+                .buttonStyle(.text)
         }
     }
 }

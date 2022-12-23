@@ -47,7 +47,7 @@ open class PetEntity: Entity {
     }
 
     private func setInitialPosition() {
-        let randomX = CGFloat.random(in: 0.1 ..< 0.75) * worldBounds.width
+        let randomX = CGFloat.random(in: 0.1 ..< 0.75) * worldBounds.width 
         let randomY: CGFloat
 
         if capability(for: WallCrawler.self) != nil {

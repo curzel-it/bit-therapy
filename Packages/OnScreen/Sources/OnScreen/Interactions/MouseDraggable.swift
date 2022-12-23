@@ -6,28 +6,31 @@ class MouseDraggable: Capability {
     var isBeingDragged: Bool {
         subject?.state == .drag
     }
-
-    func mouseDragged(with event: NSEvent) {
+    
+    func mouseDragged() {
+        guard subject?.isStatic == false else { return }
         guard isEnabled else { return }
         guard !isBeingDragged else { return }
         mouseDragStarted()
     }
-
-    func mouseDragStarted() {
+    
+    private func mouseDragStarted() {
         subject?.set(state: .drag)
         subject?.movement?.isEnabled = false
     }
-
-    func mouseUp(with event: NSEvent) {
+    
+    func mouseUp(at point: CGPoint) {
+        guard subject?.isStatic == false else { return }
         guard isEnabled else { return }
         guard isBeingDragged else { return }
-        mouseDragEnded(for: event.window)
+        mouseDragEnded(at: point)
     }
-
-    func mouseDragEnded(for window: NSWindow?) {
-        subject?.set(state: .move)
-        subject?.setPosition(fromWindow: window)
-        subject?.movement?.isEnabled = true
+    
+    private func mouseDragEnded(at point: CGPoint) {
+        guard let subject else { return }
+        subject.setPosition(fromWindow: point)
+        subject.set(state: .move)
+        subject.movement?.isEnabled = true
     }
 }
 
@@ -37,15 +40,11 @@ extension Entity {
     }
 }
 
-extension Entity {
-    func setPosition(fromWindow window: NSWindow?) {
-        guard let position = window?.frame.origin else { return }
-        let maxX = worldBounds.maxX - frame.width
-        let maxY = worldBounds.maxY - frame.height
-        let fixedPosition = CGPoint(
-            x: min(max(0, position.x), maxX),
-            y: min(max(0, maxY - position.y), maxY)
+private extension Entity {
+    func setPosition(fromWindow position: CGPoint) {
+        frame.origin = CGPoint(
+            x: position.x,
+            y: worldBounds.height - position.y
         )
-        frame.origin = fixedPosition
     }
 }

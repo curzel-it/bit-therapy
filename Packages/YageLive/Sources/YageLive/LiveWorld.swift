@@ -6,25 +6,22 @@ open class LiveWorld: ObservableObject {
     @Published public var children: [Entity] = []
 
     public var debug = false
-    public let id: String
     public let fps: Double = 15
     public let state: World
-    public let tag: String
+    public var name: String { state.name }
     var events: [ScheduledEvent] = []
 
     private var timer: Timer!
     private var lastUpdate: TimeInterval
 
-    public init(id: String, bounds: CGRect) {
-        self.id = id
-        tag = "World-\(id)"
+    public init(name: String, bounds: CGRect) {
         lastUpdate = Date.timeIntervalSinceReferenceDate
-        state = World(bounds: bounds)
+        state = World(name: name, bounds: bounds)
         start()
     }
 
     public func start() {
-        Logger.log(tag, "Starting...")
+        Logger.log(name, "Starting...")
         timer?.invalidate()
         timer = Timer(timeInterval: 1 / fps, repeats: true) { [weak self] timer in
             guard let self = self else {
@@ -38,7 +35,7 @@ open class LiveWorld: ObservableObject {
     }
 
     public func pause() {
-        Logger.log(tag, "Paused...")
+        Logger.log(name, "Paused...")
         timer?.invalidate()
         timer = nil
     }
@@ -58,6 +55,6 @@ open class LiveWorld: ObservableObject {
         pause()
         state.children.forEach { $0.kill() }
         state.children.removeAll()
-        Logger.log(tag, "Terminated.")
+        Logger.log(name, "Terminated.")
     }
 }

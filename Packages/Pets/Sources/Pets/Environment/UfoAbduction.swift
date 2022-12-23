@@ -51,7 +51,6 @@ private class UfoEntity: PetEntity {
         super.init(of: .ufo, in: bounds, settings: settings)
         setBounceOnLateralCollisions(enabled: false)
         capability(for: RandomAnimations.self)?.kill()
-        capability(for: ReactToHotspots.self)?.kill()
     }
 
     func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
@@ -80,12 +79,12 @@ private class UfoAbduction: Capability {
     private var onCompletion: () -> Void = {}
 
     func abduct(_ target: Entity, _ onCompletion: @escaping () -> Void) {
-        guard let body = subject else { return }
-        subjectOriginalSize = body.frame.size
+        guard let subject else { return }
+        subjectOriginalSize = subject.frame.size
         self.target = target
         self.onCompletion = onCompletion
 
-        let seeker = Seeker.install(on: body)
+        let seeker = Seeker.install(on: subject)
         let distance = CGSize(width: 0, height: -50)
 
         seeker.follow(target, to: .above, offset: distance) { [weak self] captureState in

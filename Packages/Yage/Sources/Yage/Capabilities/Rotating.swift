@@ -1,13 +1,9 @@
 import SwiftUI
 
 public class Rotating: Capability {
-    public var angles = Rotation()
-    
-    public func set(x: Double, y: Double, z: Double) {
-        angles.x = x
-        angles.y = y
-        angles.z = z
-    }
+    public var z: Double = 0
+    public var isFlippedVertically: Bool = false
+    public var isFlippedHorizontally: Bool = false
     
     public required init(for subject: Entity) {
         super.init(for: subject)
@@ -19,10 +15,4 @@ public extension Entity {
     var rotation: Rotating? {
         capability(for: Rotating.self)
     }
-}
-
-public struct Rotation {
-    public var x: Double = 0
-    public var y: Double = 0
-    public var z: Double = 0
 }

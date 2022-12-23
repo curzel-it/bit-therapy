@@ -6,11 +6,11 @@ public struct OnScreen {
     private static var environment: DesktopEnvironment?
     private static var windows: OnScreenWindows?
 
-    public static func show(with settings: OnScreenSettings) {
+    public static func show(with settings: DesktopSettings) {
         hide()
         Logger.log("OnScreen", "Starting...")
         environment = DesktopEnvironment(settings: settings)
-        windows = OnScreenWindows(for: environment)
+        windows = OnScreenWindows(for: environment?.worlds ?? [])
     }
 
     public static func hide() {

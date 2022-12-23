@@ -76,7 +76,7 @@ extension Entity {
     func collisions(with neighbors: [Entity]) -> Collisions {
         neighbors
             .filter { $0 != self }
-            .compactMap { self.collision(with: $0) }
+            .compactMap { collision(with: $0) }
     }
 
     func collision(with other: Entity) -> Collision? {

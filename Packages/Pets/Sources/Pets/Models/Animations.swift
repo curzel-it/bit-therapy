@@ -23,16 +23,6 @@ class PetsSpritesProvider: SpritesProvider {
     }
 }
 
-class PetAnimationsProvider: AnimationsProvider {
-    override func action(whenTouching required: Hotspot) -> EntityAnimation? {
-        subject?.species.action(whenTouching: required)
-    }
-
-    override func randomAnimation() -> EntityAnimation? {
-        subject?.species.randomAnimation()
-    }
-}
-
 extension EntityAnimation {
     public static let front = EntityAnimation(id: "front")
 

@@ -41,10 +41,10 @@ public class Seeker: Capability {
 
     override public func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
-        guard let body = subject else { return }
+        guard let subject else { return }
         guard let target = targetPoint() else { return }
 
-        let distance = body.frame.origin.distance(from: target)
+        let distance = subject.frame.origin.distance(from: target)
         checkTargetReached(with: distance)
         adjustSpeedIfNeeded(with: distance)
         adjustDirection(towards: target, with: distance)

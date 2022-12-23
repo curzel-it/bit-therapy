@@ -3,8 +3,6 @@ import SwiftUI
 import Yage
 
 public struct BaseEntityView: View {
-    @EnvironmentObject var viewModel: LiveWorld
-
     let entity: Entity
     let applyOffset: Bool
 
@@ -18,17 +16,14 @@ public struct BaseEntityView: View {
             if let image = PetsAssetsProvider.shared.image(sprite: entity.sprite) {
                 Image(frame: image).pixelArt()
             }
-            if viewModel.debug {
-                Text("\(entity.id) \(entity.frame.description)")
-            }
         }
         .frame(sizeOf: entity.frame)
-        .rotated(with: entity.rotation?.angles)
+        // .rotated(with: entity.rotation?.angles)
         .offset(x: applyOffset ? entity.frame.midX : 0)
         .offset(y: applyOffset ? entity.frame.midY : 0)
     }
 }
-
+/*
 private extension View {
     func rotated(with rotation: Rotation?) -> some View {
         self
@@ -37,3 +32,4 @@ private extension View {
             .rotation3DEffect(.radians(rotation?.z ?? 0), axis: (x: 0, y: 0, z: 1))
     }
 }
+*/
