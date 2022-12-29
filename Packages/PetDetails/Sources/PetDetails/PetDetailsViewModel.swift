@@ -100,7 +100,5 @@ class PetDetailsViewModel: ObservableObject {
 }
 
 extension NSScreen: Identifiable {
-    public var id: String {
-        "\(localizedName)@\(frame.description)"
-    }
+    public var id: String { localizedName.lowercased() }
 }

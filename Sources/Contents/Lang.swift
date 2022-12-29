@@ -67,6 +67,7 @@ public enum Lang {
         public static let anonymousTrackingExplained = "settings.anonymousTracking.message".localized()
         public static let speed = "settings.speed".localized()
         public static let restorePurchases = "settings.restorePurchases".localized()
+        public static let enabledDisplays = "settings.enabledDisplays".localized()
         public static let desktopInteractions = "settings.desktopInteractions.title".localized()
         public static let desktopInteractionsMessage = "settings.desktopInteractions.message".localized()
     }

@@ -119,7 +119,7 @@ private class Storage {
         get {
             disabledScreensValue
                 .components(separatedBy: ",")
-                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
+                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                 .filter { !$0.isEmpty }
         }
         set {

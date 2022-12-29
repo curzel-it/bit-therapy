@@ -8,7 +8,7 @@ struct CheatsView: View {
 
     var body: some View {
         VStack(spacing: .sm) {
-            Text(Lang.Cheats.title).font(.headline).textAlign(.leading)
+            Text(Lang.Cheats.title).font(.title3.bold()).textAlign(.leading)
             HStack(spacing: .md) {
                 TextField(Lang.Cheats.placeholder, text: $viewModel.text)
                     .frame(width: 350)
