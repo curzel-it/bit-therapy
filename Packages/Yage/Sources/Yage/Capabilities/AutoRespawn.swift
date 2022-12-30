@@ -21,7 +21,7 @@ public class AutoRespawn: Capability {
     }
 
     func outerBounds() -> CGRect {
-        (subject?.worldBounds.bounds ?? .zero).inset(by: -boundsThickness)
+        (subject?.worldBounds.bounds ?? .zero).inset(by: -boundsThickness*5)
     }
 
     func isWithinBounds(point: CGPoint) -> Bool {

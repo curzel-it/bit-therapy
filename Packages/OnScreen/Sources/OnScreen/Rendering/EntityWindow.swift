@@ -8,7 +8,6 @@ import YageLive
 class EntityWindow: NSWindow {
     let entity: Entity
     private(set) var expectedFrame: CGRect = .zero
-    private var lastScreenFrame: CGRect = .zero
     private var updater: WindowUpdater?
     private var entityView: EntityView!
 
@@ -21,8 +20,10 @@ class EntityWindow: NSWindow {
     }
 
     private func setupEntityView() {
+        guard let contentView else { return }
         let view = EntityView(representing: entity)
-        contentView?.addSubview(view)
+        view.frame = contentView.bounds
+        contentView.addSubview(view)
         view.constrainToFillParent()
         entityView = view
     }

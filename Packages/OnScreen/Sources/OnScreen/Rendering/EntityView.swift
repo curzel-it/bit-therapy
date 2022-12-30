@@ -9,8 +9,7 @@ class EntityView: NSImageView {
 
     private var lastWindowLocation: CGPoint = .zero
     private var lastSpriteHash: Int = 0
-    private var lastScreen: NSScreen?
-
+    
     init(representing entity: Entity) {
         self.entity = entity
         super.init(frame: CGRect(size: entity.frame.size))
@@ -27,6 +26,7 @@ class EntityView: NSImageView {
         if needsSpriteUpdate() {
             let newImage = PetsAssetsProvider.shared
                 .image(sprite: entity.sprite)?
+                .scaledDown(to: entity.frame.size)
                 .flipped(
                     horizontally: entity.rotation?.isFlippedHorizontally ?? false,
                     vertically: entity.rotation?.isFlippedVertically ?? false
@@ -62,7 +62,6 @@ class EntityView: NSImageView {
     override func mouseDown(with event: NSEvent) {
         guard let window else { return }
         lastWindowLocation = window.frame.origin
-        lastScreen = window.screen
     }
 
     override func mouseDragged(with event: NSEvent) {
@@ -123,5 +122,38 @@ extension NSImage {
         draw(at: .zero, from: rect, operation: .sourceOver, fraction: 1)
         flippedImage.unlockFocus()
         return flippedImage
+    }
+    
+    func scaledDown(to newSize: CGSize) -> NSImage {
+        guard size != newSize else { return self }
+        guard size.width > newSize.width || size.height > newSize.height else { return self }
+        
+        let targetFrame = CGRect(origin: .zero, size: newSize)
+        let targetImage = NSImage.init(size: newSize)
+        let ratioH = newSize.height / size.height
+        let ratioW = newSize.width / size.width
+        
+        var cropRect = CGRect.zero
+        if ratioH >= ratioW {
+            cropRect.size.width = floor(size.width / ratioH)
+            cropRect.size.height = size.height
+        } else {
+            cropRect.size.width = size.width
+            cropRect.size.height = floor(size.height/ratioW)
+        }
+        cropRect.origin.x = floor((size.width - cropRect.size.width) / 2)
+        cropRect.origin.y = floor((size.height - cropRect.size.height) / 2)
+        
+        targetImage.lockFocus()
+        draw(
+            in: targetFrame,
+            from: cropRect,
+            operation: .copy,
+            fraction: 1.0,
+            respectFlipped: true,
+            hints: nil
+        )
+        targetImage.unlockFocus()
+        return targetImage
     }
 }

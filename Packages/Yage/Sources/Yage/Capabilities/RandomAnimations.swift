@@ -22,7 +22,7 @@ public class RandomAnimations: Capability {
             return
         }
         let delay = TimeInterval.random(in: 10 ... 30)
-        let loops = animation.requiredLoops ?? Int.random(in: 1 ... 2)
+        let loops = animation.requiredLoops ?? 1
         schedule(animation, times: loops, after: delay)
         Logger.log(tag, "Scheduled", animation.description, "x\(loops) in \(delay)\"")
     }
