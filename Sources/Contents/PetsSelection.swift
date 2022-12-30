@@ -7,10 +7,13 @@ class PetsSelectionCoordinator {
     static func view() -> some View {
         PetsSelection.PetsSelectionCoordinator.view(
             localizedContent: LocalizedContent(),
-            speciesProvider: AppState.global
+            speciesProvider: AppState.global,
+            assetsProvider: PetsAssetsProvider.shared
         )
     }
 }
+
+extension PetsAssetsProvider: PetsSelection.AssetsProvider {}
 
 extension AppState: PetsProvider {
     func add(species: Species) {

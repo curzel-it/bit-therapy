@@ -1,7 +1,6 @@
 import Combine
 import DesignSystem
 import Pets
-import PetsAssets
 import Schwifty
 import SwiftUI
 import Yage
@@ -33,10 +32,10 @@ private struct ItemPreview: View {
     let species: Species
 
     var frame: NSImage? {
-        PetsAssetsProvider.shared
+        let path = viewModel.assetsProvider
             .frames(for: species.id, animation: "front")
-            .compactMap { PetsAssetsProvider.shared.image(sprite: $0) }
             .first
+        return viewModel.assetsProvider.image(sprite: path)
     }
 
     var body: some View {

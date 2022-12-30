@@ -25,8 +25,10 @@ extension StatusBarCoordinator: StatusBarItems.Handler {
 
     func showHome() { MainScene.show() }
     func hidePets() { OnScreen.hide() }
-    func showPets() { OnScreen.show(with: AppState.global) }
+    func showPets() { OnScreen.show(with: AppState.global, assets: PetsAssetsProvider.shared) }
 }
+
+extension PetsAssetsProvider: AssetsProvider {}
 
 extension StatusBarCoordinator: StatusBarItems.LocalizedContentProvider {
     var menuTitle: String { "Desktop Pets" }

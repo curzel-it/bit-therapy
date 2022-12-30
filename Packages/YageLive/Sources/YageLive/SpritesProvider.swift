@@ -1,5 +1,4 @@
 import NotAGif
-import PetsAssets
 import SwiftUI
 import Yage
 

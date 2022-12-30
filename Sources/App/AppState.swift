@@ -3,7 +3,6 @@ import DesignSystem
 import Pets
 import SwiftUI
 import Yage
-import PetDetails
 
 // MARK: - App State
 

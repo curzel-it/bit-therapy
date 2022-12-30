@@ -1,15 +1,14 @@
 import Foundation
-import PetsAssets
 import Schwifty
 import Yage
 import YageLive
 
 extension Species {
     static let pet = Species(id: "")
-        .with(capability: RandomAnimations.self)
         .with(capability: AnimatedSprite.self)
         .with(capability: AnimationsProvider.self)
         .with(capability: PetsSpritesProvider.self)
+        .with(capability: RandomAnimations.self)
         .with(capability: LinearMovement.self)
         .with(capability: Rotating.self)
         .with(capability: BounceOnLateralCollisions.self)
@@ -17,11 +16,11 @@ extension Species {
 }
 
 public extension Species {
-    internal static let allSpecies: [Species] = [
+    static let all: [Species] = [
         .ape,
         .betta,
         .catGray, .catBlue, .cat, .catBlack, .catGrumpy,
-        .cromulon, .cromulonPink, .cromulonRainbow,
+        .cromulon, .cromulonPink,
         .crow, .crowWhite,
         .frog, .frogVenom,
         .koala, .koalaPirate,
@@ -39,15 +38,7 @@ public extension Species {
         .ufo
     ]
 
-    static var availableSpecies: [Species] = allSpecies.filter { species in
-        let available = PetsAssetsProvider.shared.assetsAvailable(for: species.id)
-        if !available {
-            Logger.log("Pet", species.id, "is not available")
-        }
-        return available
-    }
-
     static func by(id: String) -> Species? {
-        availableSpecies.first { $0.id == id }
+        all.first { $0.id == id }
     }
 }

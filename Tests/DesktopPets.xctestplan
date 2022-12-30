@@ -47,13 +47,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/PetDetails",
-        "identifier" : "PetDetailsTests",
-        "name" : "PetDetailsTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Packages\/PetsSelection",
         "identifier" : "PetsSelectionTests",
         "name" : "PetsSelectionTests"

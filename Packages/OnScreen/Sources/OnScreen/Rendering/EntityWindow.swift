@@ -11,17 +11,17 @@ class EntityWindow: NSWindow {
     private var updater: WindowUpdater?
     private var entityView: EntityView!
 
-    init(representing entity: Entity) {
+    init(representing entity: Entity, assetsProvider: AssetsProvider) {
         self.entity = entity
         super.init(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
         setupWindow()
-        setupEntityView()
+        setupEntityView(with: assetsProvider)
         setupUpdater()
     }
 
-    private func setupEntityView() {
+    private func setupEntityView(with assetsProvider: AssetsProvider) {
         guard let contentView else { return }
-        let view = EntityView(representing: entity)
+        let view = EntityView(representing: entity, assetsProvider: assetsProvider)
         view.frame = contentView.bounds
         contentView.addSubview(view)
         view.constrainToFillParent()

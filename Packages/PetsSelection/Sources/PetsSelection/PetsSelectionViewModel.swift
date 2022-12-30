@@ -1,6 +1,5 @@
 import Combine
 import DesignSystem
-import PetDetails
 import Pets
 import Schwifty
 import SwiftUI
@@ -12,6 +11,7 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var unselectedSpecies: [Species] = []
     @Published var canShowDiscordBanner: Bool = true
 
+    let assetsProvider: AssetsProvider
     let localizedContent: LocalizedContentProvider
     let speciesProvider: PetsProvider
 
@@ -30,7 +30,12 @@ class PetsSelectionViewModel: ObservableObject {
 
     private var stateCanc: AnyCancellable!
 
-    init(localizedContent: LocalizedContentProvider, speciesProvider: PetsProvider) {
+    init(
+        localizedContent: LocalizedContentProvider,
+        speciesProvider: PetsProvider,
+        assetsProvider: AssetsProvider
+    ) {
+        self.assetsProvider = assetsProvider
         self.localizedContent = localizedContent
         self.speciesProvider = speciesProvider
         loadPets(selectedSpecies: speciesProvider.speciesOnStage.value)
@@ -38,8 +43,8 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     private func loadPets(selectedSpecies species: [Species]) {
-        speciesOnStage = Species.availableSpecies.filter { species.contains($0) }
-        unselectedSpecies = Species.availableSpecies.filter { !species.contains($0) }
+        speciesOnStage = Species.all.filter { species.contains($0) }
+        unselectedSpecies = Species.all.filter { !species.contains($0) }
     }
 
     func showDetails(of species: Species?) {
@@ -52,19 +57,5 @@ class PetsSelectionViewModel: ObservableObject {
 
     func isSelected(_ species: Species) -> Bool {
         speciesProvider.speciesOnStage.value.contains(species)
-    }
-
-    func petDetailsView() -> some View {
-        guard let species = selectedSpecies else {
-            return AnyView(EmptyView())
-        }
-        return AnyView(
-            PetDetailsCoordinator.view(
-                isShown: showingDetails,
-                localizedContent: localizedContent,
-                species: species,
-                speciesProvider: speciesProvider
-            )
-        )
     }
 }

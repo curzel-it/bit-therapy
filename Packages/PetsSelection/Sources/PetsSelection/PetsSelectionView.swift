@@ -25,7 +25,16 @@ struct PetsSelectionView: View {
             .padding(.md)
         }
         .sheet(isPresented: viewModel.showingDetails) {
-            viewModel.petDetailsView()
+            if let species = viewModel.selectedSpecies {
+                let vm = PetDetailsViewModel(
+                    isShown: viewModel.showingDetails,
+                    species: species,
+                    speciesProvider: viewModel.speciesProvider,
+                    localizedContent: viewModel.localizedContent,
+                    assetsProvider: viewModel.assetsProvider
+                )
+                PetDetailsView(viewModel: vm)
+            }
         }
         .environmentObject(viewModel)
     }

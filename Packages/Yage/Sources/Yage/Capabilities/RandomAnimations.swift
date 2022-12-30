@@ -2,11 +2,11 @@ import Foundation
 import Schwifty
 
 public class RandomAnimations: Capability {
-    private var scheduleAttempts = 0
-
     public required init(for subject: Entity) {
         super.init(for: subject)
-        scheduleAnimationAfterRandomInterval()
+        DispatchQueue.main.async { [weak self] in
+            self?.scheduleAnimationAfterRandomInterval()
+        }
     }
 
     public func animateNow() {
@@ -17,26 +17,11 @@ public class RandomAnimations: Capability {
     }
 
     private func scheduleAnimationAfterRandomInterval() {
-        guard let animation = subject?.animationsProvider?.randomAnimation() else {
-            attemptToScheduleAgainIfPossible()
-            return
-        }
+        guard let animation = subject?.animationsProvider?.randomAnimation() else { return }
         let delay = TimeInterval.random(in: 10 ... 30)
         let loops = animation.requiredLoops ?? 1
         schedule(animation, times: loops, after: delay)
         Logger.log(tag, "Scheduled", animation.description, "x\(loops) in \(delay)\"")
-    }
-
-    private func attemptToScheduleAgainIfPossible() {
-        scheduleAttempts += 1
-        guard scheduleAttempts <= 3 else {
-            Logger.log(tag, "No animations could be loaded after \(scheduleAttempts), giving up.")
-            return
-        }
-        Logger.log(tag, "No animations could be loaded, retrying in 1...")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            self?.scheduleAnimationAfterRandomInterval()
-        }
     }
 
     private func schedule(_ animation: EntityAnimation, times: Int, after delay: TimeInterval) {

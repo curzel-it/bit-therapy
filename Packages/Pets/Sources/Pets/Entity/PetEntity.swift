@@ -13,6 +13,7 @@ public protocol PetsSettings {
 }
 
 open class PetEntity: Entity {
+    public static var assetsProvider: AssetsProvider?
     public let settings: PetsSettings
 
     public init(of species: Species, in bounds: CGRect, settings: PetsSettings) {

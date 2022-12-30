@@ -1,5 +1,4 @@
 import DesignSystem
-import PetsAssets
 import SwiftUI
 import Yage
 import YageLive

@@ -1,17 +1,18 @@
-import PetsAssets
 import Schwifty
 import SwiftUI
 import Yage
 import YageLive
 
 class EntityView: NSImageView {
-    let entity: Entity
-
+    private let entity: Entity
+    private let assetsProvider: AssetsProvider
+    private var imageCache: [Int: NSImage] = [:]
     private var windowLocationOnLastDrag: CGPoint = .zero
     private var windowLocationOnMouseDown: CGPoint = .zero
     private var lastSpriteHash: Int = 0
     
-    init(representing entity: Entity) {
+    init(representing entity: Entity, assetsProvider: AssetsProvider) {
+        self.assetsProvider = assetsProvider
         self.entity = entity
         super.init(frame: CGRect(size: entity.frame.size))
         translatesAutoresizingMaskIntoConstraints = false
@@ -24,14 +25,9 @@ class EntityView: NSImageView {
     }
 
     func onEntityUpdated() {
-        if needsSpriteUpdate() {
-            let newImage = PetsAssetsProvider.shared
-                .image(sprite: entity.sprite)?
-                .scaledDown(to: entity.frame.size)
-                .flipped(
-                    horizontally: entity.rotation?.isFlippedHorizontally ?? false,
-                    vertically: entity.rotation?.isFlippedVertically ?? false
-                )
+        let hash = entity.spriteHash()
+        if needsSpriteUpdate(for: hash) {
+            let newImage = nextImage(for: hash)
             
             if let angle = entity.rotation?.z, angle != 0 {
                 var transform = CATransform3DIdentity
@@ -46,11 +42,29 @@ class EntityView: NSImageView {
         }
     }
     
-    private func needsSpriteUpdate() -> Bool {
-        let newHash = entity.spriteHash()
-        guard newHash != lastSpriteHash else { return false }
-        lastSpriteHash = newHash
-        return true
+    private func nextImage(for hash: Int) -> NSImage? {
+        if let cached = imageCache[hash] { return cached }
+        guard let image = interpolatedImageForCurrentSprite() else { return nil }
+        imageCache[hash] = image
+        return image
+    }
+    
+    private func interpolatedImageForCurrentSprite() -> NSImage? {
+        assetsProvider
+            .image(sprite: entity.sprite)?
+            .scaledDown(to: entity.frame.size)
+            .flipped(
+                horizontally: entity.rotation?.isFlippedHorizontally ?? false,
+                vertically: entity.rotation?.isFlippedVertically ?? false
+            )
+    }
+    
+    private func needsSpriteUpdate(for newHash: Int) -> Bool {
+        if newHash != lastSpriteHash {
+            lastSpriteHash = newHash
+            return true
+        }
+        return false
     }
     
     override func draw(_ rect: NSRect) {
@@ -135,28 +149,12 @@ extension NSImage {
     
     func scaledDown(to newSize: CGSize) -> NSImage {
         guard size != newSize else { return self }
-        guard size.width > newSize.width || size.height > newSize.height else { return self }
-        
-        let targetFrame = CGRect(origin: .zero, size: newSize)
         let targetImage = NSImage.init(size: newSize)
-        let ratioH = newSize.height / size.height
-        let ratioW = newSize.width / size.width
-        
-        var cropRect = CGRect.zero
-        if ratioH >= ratioW {
-            cropRect.size.width = floor(size.width / ratioH)
-            cropRect.size.height = size.height
-        } else {
-            cropRect.size.width = size.width
-            cropRect.size.height = floor(size.height/ratioW)
-        }
-        cropRect.origin.x = floor((size.width - cropRect.size.width) / 2)
-        cropRect.origin.y = floor((size.height - cropRect.size.height) / 2)
-        
         targetImage.lockFocus()
+        NSGraphicsContext.current?.imageInterpolation = .none
         draw(
-            in: targetFrame,
-            from: cropRect,
+            in: CGRect(origin: .zero, size: newSize),
+            from: CGRect(origin: .zero, size: size),
             operation: .copy,
             fraction: 1.0,
             respectFlipped: true,

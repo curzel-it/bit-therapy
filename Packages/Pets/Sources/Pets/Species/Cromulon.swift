@@ -13,7 +13,6 @@ extension Species {
         .with(speed: 0.6)
 
     static let cromulonPink = Species.cromulon.with(id: "cromulon_pink")
-    static let cromulonRainbow = Species.cromulon.with(id: "cromulon_rainbow")
 }
 
 private extension EntityAnimation {

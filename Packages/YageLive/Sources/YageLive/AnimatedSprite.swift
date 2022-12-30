@@ -8,7 +8,6 @@ public class AnimatedSprite: Capability {
     public private(set) var animation: SpritesAnimator = .none
     private var lastFrameBeforeAnimations: CGRect = .zero
     private var lastState: EntityState = .drag
-    private var stateCanc: AnyCancellable!
 
     public required init(for subject: Entity) {
         super.init(for: subject)
@@ -26,8 +25,6 @@ public class AnimatedSprite: Capability {
         setSprite(nil)
         super.kill(autoremove: autoremove)
         animation = .none
-        stateCanc?.cancel()
-        stateCanc = nil
     }
 
     private func updateSpriteIfStateChanged() {

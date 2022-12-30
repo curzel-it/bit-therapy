@@ -10,7 +10,9 @@ open class AnimationsProvider: Capability {
 }
 
 extension Entity {
-    var animationsProvider: AnimationsProvider? { capability(for: AnimationsProvider.self) }
+    var animationsProvider: AnimationsProvider? {
+        capability(for: AnimationsProvider.self)        
+    }
 }
 
 extension Array where Element == EntityAnimation {

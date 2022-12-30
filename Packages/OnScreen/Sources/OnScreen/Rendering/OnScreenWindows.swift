@@ -50,7 +50,7 @@ class OnScreenWindows: NSObject, NSWindowDelegate {
     }
 
     func newWindow(representing entity: Entity) -> EntityWindow {
-        EntityWindow(representing: entity)
+        EntityWindow(representing: entity, assetsProvider: OnScreen.assetsProvider)
     }
 
     // MARK: - Cached Windows

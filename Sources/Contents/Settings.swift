@@ -67,7 +67,7 @@ private struct ScreenSwitch: View {
         @Published var isEnabled: Bool {
             didSet {
                 AppState.global.set(screen: screen, enabled: isEnabled)
-                OnScreen.show(with: AppState.global)
+                OnScreen.show(with: AppState.global, assets: PetsAssetsProvider.shared)
             }
         }
         
@@ -213,7 +213,7 @@ private struct LaunchAtLoginSwitch: View {
 private struct FixOnScreenPets: View {
     var body: some View {
         Button(Lang.PetSelection.fixOnScreenPets) {
-            OnScreen.show(with: AppState.global)
+            OnScreen.show(with: AppState.global, assets: PetsAssetsProvider.shared)
         }
         .buttonStyle(.regular)
     }

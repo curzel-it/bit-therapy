@@ -14,19 +14,10 @@
       location = "group:Packages/Dialogs">
    </FileRef>
    <FileRef
-      location = "group:Packages/Game">
-   </FileRef>
-   <FileRef
       location = "group:Packages/OnScreen">
    </FileRef>
    <FileRef
       location = "group:Packages/Pets">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/PetsAssets">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/PetDetails">
    </FileRef>
    <FileRef
       location = "group:Packages/PetsSelection">
