@@ -7,7 +7,8 @@ import YageLive
 class EntityView: NSImageView {
     let entity: Entity
 
-    private var lastWindowLocation: CGPoint = .zero
+    private var windowLocationOnLastDrag: CGPoint = .zero
+    private var windowLocationOnMouseDown: CGPoint = .zero
     private var lastSpriteHash: Int = 0
     
     init(representing entity: Entity) {
@@ -61,22 +62,30 @@ class EntityView: NSImageView {
     
     override func mouseDown(with event: NSEvent) {
         guard let window else { return }
-        lastWindowLocation = window.frame.origin
+        windowLocationOnLastDrag = window.frame.origin
+        windowLocationOnMouseDown = window.frame.origin
     }
 
     override func mouseDragged(with event: NSEvent) {
         entity.mouseDrag?.mouseDragged()
-        let newOrigin = lastWindowLocation.offset(x: event.deltaX, y: -event.deltaY)
+        let newOrigin = windowLocationOnLastDrag.offset(x: event.deltaX, y: -event.deltaY)
         window?.setFrameOrigin(newOrigin)
-        lastWindowLocation = newOrigin
+        windowLocationOnLastDrag = newOrigin
     }
 
     override func mouseUp(with event: NSEvent) {
-        guard let window else { return }
-        let adjustedPosition = window.frame.origin
-            .offset(x: -(window.screen?.frame.origin.x ?? 0))
-            .offset(y: -(window.screen?.frame.origin.y ?? 0))
-        entity.mouseDrag?.mouseUp(at: adjustedPosition)
+        let delta = CGPoint(
+            x: windowLocationOnLastDrag.x - windowLocationOnMouseDown.x,
+            y: -(windowLocationOnLastDrag.y - windowLocationOnMouseDown.y)
+        )
+        
+        Logger.log(
+            entity.id,
+            "Moved from", windowLocationOnMouseDown.description,
+            "to", windowLocationOnLastDrag.description,
+            "delta is", delta.description
+        )
+        entity.mouseDrag?.mouseUp(translation: delta)
     }
 
     // MARK: - Right Click

@@ -19,32 +19,36 @@ class MouseDraggable: Capability {
         subject?.movement?.isEnabled = false
     }
     
-    func mouseUp(at point: CGPoint) {
+    func mouseUp(translation delta: CGPoint) {
         guard subject?.isStatic == false else { return }
         guard isEnabled else { return }
         guard isBeingDragged else { return }
-        mouseDragEnded(at: point)
+        mouseDragEnded(translatedBy: delta)
     }
     
-    private func mouseDragEnded(at point: CGPoint) {
+    private func mouseDragEnded(translatedBy delta: CGPoint) {
         guard let subject else { return }
-        subject.setPosition(fromWindow: point)
+        subject.frame.origin = offset(
+            position: subject.frame.origin,
+            size: subject.frame.size,
+            by: delta,
+            in: subject.worldBounds
+        )
         subject.set(state: .move)
         subject.movement?.isEnabled = true
+    }
+    
+    private func offset(position: CGPoint, size: CGSize, by delta: CGPoint, in bounds: CGRect) -> CGPoint {
+        let point = position.offset(by: delta)
+        return CGPoint(
+            x: max(0, min(point.x, bounds.width - size.width)),
+            y: max(0, min(point.y, bounds.height - size.height))
+        )
     }
 }
 
 extension Entity {
     var mouseDrag: MouseDraggable? {
         capability(for: MouseDraggable.self)
-    }
-}
-
-private extension Entity {
-    func setPosition(fromWindow position: CGPoint) {
-        frame.origin = CGPoint(
-            x: position.x,
-            y: worldBounds.height - position.y
-        )
     }
 }
