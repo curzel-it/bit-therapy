@@ -39,6 +39,6 @@ extension EntityAnimation {
     static let sleep = EntityAnimation(id: "sleep")
 
     static func lightsaber(size: CGSize) -> EntityAnimation {
-        .init(id: "lightsaber", size: size, chance: 0.1)
+        .init(id: "lightsaber", size: size)
     }
 }

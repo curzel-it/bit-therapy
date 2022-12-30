@@ -22,7 +22,7 @@ class EntityWindowTests: XCTestCase {
             in: world.state.bounds
         )
         world.state.children.append(entity)
-        window = EntityWindow(representing: entity)
+        window = EntityWindow(representing: entity, assetsProvider: MockAssets())
         window.show()
     }
 
@@ -65,5 +65,11 @@ class EntityWindowTests: XCTestCase {
 extension LiveWorld: Equatable {
     public static func == (lhs: LiveWorld, rhs: LiveWorld) -> Bool {
         lhs.name == rhs.name
+    }
+}
+
+class MockAssets: AssetsProvider {
+    func image(sprite: String?) -> NSImage? {
+        sprite != nil ? NSImage() : nil
     }
 }

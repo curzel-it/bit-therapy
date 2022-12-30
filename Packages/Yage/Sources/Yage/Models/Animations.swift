@@ -3,7 +3,6 @@ import SwiftUI
 
 public struct EntityAnimation {
     public let id: String
-    public let chance: Double
     public let facingDirection: CGVector?
     public let requiredLoops: Int?
 
@@ -15,15 +14,13 @@ public struct EntityAnimation {
         size: CGSize? = nil,
         position: Position = .fromEntityBottomLeft,
         facingDirection: CGVector? = nil,
-        requiredLoops: Int? = nil,
-        chance: Double = 1
+        requiredLoops: Int? = nil
     ) {
         self.id = id
         self.size = size
         self.position = position
         self.facingDirection = facingDirection
         self.requiredLoops = requiredLoops
-        self.chance = chance
     }
 
     public func frame(for entity: Entity) -> CGRect {
@@ -94,8 +91,7 @@ public extension EntityAnimation {
             size: size,
             position: position,
             facingDirection: facingDirection,
-            requiredLoops: loops,
-            chance: chance
+            requiredLoops: loops
         )
     }
 }
