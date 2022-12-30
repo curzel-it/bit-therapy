@@ -5,8 +5,8 @@ public class Rotating: Capability {
     public var isFlippedVertically: Bool = false
     public var isFlippedHorizontally: Bool = false
     
-    public required init(for subject: Entity) {
-        super.init(for: subject)
+    public override func install(on subject: Entity) {
+        super.install(on: subject)
         isEnabled = false
     }
 }

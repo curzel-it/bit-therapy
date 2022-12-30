@@ -7,12 +7,13 @@ extension Species {
     static let pet = Species(id: "")
         .with(capability: AnimatedSprite.self)
         .with(capability: AnimationsProvider.self)
-        .with(capability: PetsSpritesProvider.self)
-        .with(capability: RandomAnimations.self)
-        .with(capability: LinearMovement.self)
-        .with(capability: Rotating.self)
+        .with(capability: AutoRespawn.self)
         .with(capability: BounceOnLateralCollisions.self)
         .with(capability: FlipHorizontallyWhenGoingLeft.self)
+        .with(capability: LinearMovement.self)
+        .with(capability: PetsSpritesProvider.self)
+        .with(capability: RandomAnimations.self)
+        .with(capability: Rotating.self)
 }
 
 public extension Species {

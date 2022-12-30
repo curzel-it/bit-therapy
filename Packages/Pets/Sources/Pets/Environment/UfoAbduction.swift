@@ -54,7 +54,8 @@ private class UfoEntity: PetEntity {
     }
 
     func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
-        let abduction = UfoAbduction.install(on: self)
+        let abduction = UfoAbduction()
+        install(abduction)
         abduction.abduct(target, onCompletion)
     }
 }
@@ -84,7 +85,8 @@ private class UfoAbduction: Capability {
         self.target = target
         self.onCompletion = onCompletion
 
-        let seeker = Seeker.install(on: subject)
+        let seeker = Seeker()
+        subject.install(seeker)
         let distance = CGSize(width: 0, height: -50)
 
         seeker.follow(target, to: .above, offset: distance) { [weak self] captureState in
@@ -113,7 +115,8 @@ private class UfoAbduction: Capability {
         subject.set(state: .action(action: EntityAnimation.abduction, loops: 1))
         subject.capability(for: Seeker.self)?.kill()
 
-        let shape = ShapeShifter.install(on: target)
+        let shape = ShapeShifter()
+        target.install(shape)
         shape.scaleLinearly(to: CGSize(width: 5, height: 5), duracy: 1.1)
         scheduleAnimationCompletion(in: 1.25)
     }

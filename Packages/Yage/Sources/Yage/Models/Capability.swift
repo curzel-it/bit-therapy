@@ -5,22 +5,17 @@ open class Capability {
     public weak var subject: Entity?
     public var isEnabled: Bool = true
 
-    public required init(for subject: Entity) {
-        self.subject = subject
-    }
-
     public lazy var tag: String = {
         let name = String(describing: type(of: self))
         let id = subject?.id ?? "n/a"
         return "\(name)-\(id)"
     }()
+    
+    public required init() {}
 
-    @discardableResult
-    open class func install(on subject: Entity) -> Self {
+    open func install(on subject: Entity) {
         Logger.log(subject.id, "Installing", String(describing: self))
-        let capability = Self(for: subject)
-        subject.capabilities.append(capability)
-        return capability
+        self.subject = subject
     }
 
     open func update(with collisions: Collisions, after time: TimeInterval) {}
@@ -31,6 +26,13 @@ open class Capability {
         }
         subject = nil
         isEnabled = false
+    }
+}
+
+public extension Entity {
+    func install(_ capability: Capability) {
+        capability.install(on: self)
+        capabilities.append(capability)
     }
 }
 

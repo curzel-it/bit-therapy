@@ -20,8 +20,8 @@ class GravityTests: XCTestCase {
         player.speed = 1
         player.direction = CGVector(dx: 1, dy: 0)
         player.set(state: .move)
-        LinearMovement.install(on: player)
-        Gravity.install(on: player)
+        player.install(LinearMovement())
+        player.install(Gravity())
         env.children.append(player)
     }
 
@@ -59,7 +59,7 @@ class GravityTests: XCTestCase {
         )
         env.children.append(ground1)
 
-        BounceOnLateralCollisions.install(on: player)
+        player.install(BounceOnLateralCollisions())
         player.speed = 1
         player.frame.origin = CGPoint(x: 50, y: 60)
         player.direction = CGVector(dx: 1, dy: 0)
@@ -87,7 +87,7 @@ class GravityTests: XCTestCase {
         )
         env.children.append(ground2)
 
-        BounceOnLateralCollisions.install(on: player)
+        player.install(BounceOnLateralCollisions())
         player.speed = 1
         player.frame.size = CGSize(width: 70, height: 70)
         player.frame.origin = CGPoint(

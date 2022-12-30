@@ -2,8 +2,8 @@ import Foundation
 import Schwifty
 
 public class RandomAnimations: Capability {
-    public required init(for subject: Entity) {
-        super.init(for: subject)
+    public override func install(on subject: Entity) {
+        super.install(on: subject)
         DispatchQueue.main.async { [weak self] in
             self?.scheduleAnimationAfterRandomInterval()
         }

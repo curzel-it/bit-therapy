@@ -29,8 +29,10 @@ class EntityWindow: NSWindow {
     }
 
     private func setupUpdater() {
-        updater = WindowUpdater.install(on: entity)
-        updater?.window = self
+        let updater = WindowUpdater()
+        updater.window = self
+        entity.install(updater)
+        self.updater = updater
     }
 
     private func setupWindow() {
@@ -81,7 +83,7 @@ class EntityWindow: NSWindow {
 
 private class WindowUpdater: Capability {
     weak var window: EntityWindow?
-
+    
     override func update(with collisions: Collisions, after time: TimeInterval) {
         window?.onEntityUpdated()
     }

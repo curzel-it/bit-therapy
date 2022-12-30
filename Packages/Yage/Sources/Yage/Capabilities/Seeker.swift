@@ -12,8 +12,8 @@ public class Seeker: Capability {
     private var targetReached: Bool = false
     private var report: (State) -> Void = { _ in }
 
-    public required init(for subject: Entity) {
-        super.init(for: subject)
+    public override func install(on subject: Entity) {
+        super.install(on: subject)
         baseSpeed = subject.speed
     }
 

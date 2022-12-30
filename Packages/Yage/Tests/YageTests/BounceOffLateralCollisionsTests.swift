@@ -14,8 +14,10 @@ class BounceOnLateralCollisionsTests: XCTestCase {
             frame: CGRect(x: 50, y: 0, width: 10, height: 10),
             in: testEnv.bounds
         )
-        bounce = BounceOnLateralCollisions.install(on: entity)
-        movement = LinearMovement.install(on: entity)
+        bounce = BounceOnLateralCollisions()
+        entity.install(bounce)
+        movement = LinearMovement()
+        entity.install(movement)
         testEnv.children.append(entity)
         return entity
     }()

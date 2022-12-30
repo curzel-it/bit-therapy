@@ -20,6 +20,7 @@ struct PetDetailsView: View {
             Footer()
         }
         .padding(.lg)
+        .frame(width: 450)
         .onAppear {
             let species = viewModel.species.id
             Tracking.didEnterDetails(

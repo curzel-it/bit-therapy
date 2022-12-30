@@ -13,7 +13,8 @@ class AutoRespawnTests: XCTestCase {
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
             in: CGRect(x: 0, y: 0, width: 10, height: 10)
         )
-        respawner = AutoRespawn.install(on: entity)
+        respawner = AutoRespawn()
+        entity.install(respawner)
         respawner.kill()
         respawner.subject = entity
     }

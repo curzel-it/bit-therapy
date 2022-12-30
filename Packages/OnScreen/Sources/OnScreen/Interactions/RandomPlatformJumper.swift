@@ -61,7 +61,8 @@ class RandomPlatformJumper: Capability {
         gravity?.isEnabled = false
         animations?.isEnabled = false
 
-        let seeker = Seeker.install(on: subject)
+        let seeker = Seeker()
+        subject.install(seeker)
         seeker.follow(target, to: .above, autoAdjustSpeed: false) { [weak self] captureState in
             guard case .captured = captureState else { return }
             self?.restoreInitialConditions()
@@ -96,7 +97,8 @@ extension Entity {
     func setupJumperIfPossible(with platforms: JumperPlatformsProvider?) {
         guard let platforms = platforms else { return }
         guard RandomPlatformJumper.compatible(with: self) else { return }
-        let jumper = RandomPlatformJumper.install(on: self)
+        let jumper = RandomPlatformJumper()
+        install(jumper)
         jumper.start(with: platforms)
     }
 }

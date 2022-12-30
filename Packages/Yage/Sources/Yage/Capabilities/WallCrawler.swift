@@ -1,8 +1,8 @@
 import SwiftUI
 
 public class WallCrawler: Capability {
-    public required init(for subject: Entity) {
-        super.init(for: subject)
+    public override func install(on subject: Entity) {
+        super.install(on: subject)
         subject.capability(for: BounceOnLateralCollisions.self)?.isEnabled = false
         subject.capability(for: FlipHorizontallyWhenGoingLeft.self)?.isEnabled = false
     }

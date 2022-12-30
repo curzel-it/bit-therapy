@@ -83,7 +83,7 @@ public extension Entity {
         let gravity = capability(for: Gravity.self)
         if enabled {
             if gravity == nil {
-                Gravity.install(on: self)
+                install(Gravity())
             }
         } else {
             gravity?.kill()

@@ -115,6 +115,8 @@ private extension Entity {
     func spriteHash() -> Int {
         var hasher = Hasher()
         hasher.combine(sprite)
+        hasher.combine(frame.size.width)
+        hasher.combine(frame.size.height)
         hasher.combine(rotation?.isFlippedHorizontally ?? false)
         hasher.combine(rotation?.isFlippedVertically ?? false)
         hasher.combine(rotation?.z ?? 0)

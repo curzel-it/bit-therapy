@@ -7,7 +7,6 @@ public class ShapeShifter: Capability {
 
     public func scaleLinearly(to size: CGSize, duracy: TimeInterval) {
         guard let subject else { return }
-        isEnabled = true
         targetSize = size
         delta = CGSize(
             width: size.width - subject.frame.width,
@@ -22,8 +21,8 @@ public class ShapeShifter: Capability {
         guard let subject else { return }
 
         let delta = CGSize(
-            width: time * (targetSize.width - subject.frame.width) / animationDuracy,
-            height: time * (targetSize.height - subject.frame.height) / animationDuracy
+            width: time * delta.width / animationDuracy,
+            height: time * delta.height / animationDuracy
         )
         let newFrame = CGRect(
             x: subject.frame.origin.x - delta.width / 2,

@@ -58,8 +58,8 @@ class DesktopEnvironment {
     
     func buildEntity(species: Species, in bounds: CGRect) -> PetEntity {
         let entity = PetEntity(of: species, in: bounds, settings: desktopSettings)
-        ShowsMenuOnRightClick.install(on: entity)
-        MouseDraggable.install(on: entity)
+        entity.install(ShowsMenuOnRightClick())
+        entity.install(MouseDraggable())
         return entity
     }
     
