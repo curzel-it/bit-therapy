@@ -54,7 +54,6 @@ private class UfoEntity: PetEntity {
             settings: settings
         )
         setBounceOnLateralCollisions(enabled: false)
-        capability(for: RandomAnimations.self)?.kill()
     }
 
     func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
@@ -145,4 +144,17 @@ private class UfoAbduction: Capability {
         super.kill(autoremove: autoremove)
         target = nil
     }
+}
+
+private extension Species {
+    static let ufo = Species(id: "ufo")
+        .with(capability: "AnimatedSprite")
+        .with(capability: "AnimationsProvider")
+        .with(capability: "AutoRespawn")
+        .with(capability: "BounceOnLateralCollisions")
+        .with(capability: "LinearMovement")
+        .with(capability: "PetsSpritesProvider")
+        .with(movementPath: "front")
+        .with(dragPath: "front")
+        .with(speed: 2)
 }

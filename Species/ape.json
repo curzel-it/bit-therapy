@@ -1,0 +1,41 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 5
+    },
+    {
+      "id": "eat",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 5
+    },
+    {
+      "id": "sleep",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 20
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "ape",
+  "movementPath": "walk",
+  "speed": 0.7
+}

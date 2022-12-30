@@ -2,10 +2,7 @@ import Foundation
 
 open class AnimationsProvider: Capability {
     open func randomAnimation() -> EntityAnimation? {
-        subject?.species.behaviors
-            .filter { $0.trigger == .random }
-            .flatMap { $0.possibleAnimations }
-            .randomElement()
+        subject?.species.animations.randomElement()
     }
 }
 

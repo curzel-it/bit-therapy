@@ -1,0 +1,53 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 2
+    },
+    {
+      "id": "idle",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 2
+    },
+    {
+      "id": "eat",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 3
+    },
+    {
+      "id": "love",
+      "position": {
+        "fromEntityBottomLeft": {}
+      }
+    },
+    {
+      "id": "backflip",
+      "position": {
+        "fromEntityBottomLeft": {}
+      }
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "koala_pirate",
+  "movementPath": "walk",
+  "speed": 0.8
+}

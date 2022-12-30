@@ -1,7 +1,7 @@
 import Schwifty
 import SwiftUI
 
-public struct EntityAnimation {
+public struct EntityAnimation: Codable {
     public let id: String
     public let facingDirection: CGVector?
     public let requiredLoops: Int?
@@ -74,7 +74,7 @@ extension EntityAnimation: CustomStringConvertible {
 }
 
 public extension EntityAnimation {
-    enum Position {
+    enum Position: Codable {
         case fromEntityBottomLeft
         case entityTopLeft
         case worldTopLeft

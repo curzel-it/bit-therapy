@@ -1,0 +1,56 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 5
+    },
+    {
+      "id": "idle",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 2
+    },
+    {
+      "id": "eat",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 10
+    },
+    {
+      "id": "sleep",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 50
+    },
+    {
+      "id": "angry",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 7
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating",
+    "GetsAngryWhenMeetingOtherCats"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "cat_grumpy",
+  "movementPath": "walk",
+  "speed": 0.8
+}

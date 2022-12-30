@@ -118,7 +118,8 @@ private struct JoinOurDiscord: View {
     var body: some View {
         Image("discordLarge")
             .resizable()
-            .frame(width: 99, height: 24)
+            .antialiased(true)
+            .frame(width: 115, height: 28)
             .cornerRadius(4)
             .padding(.trailing, .md)
             .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }

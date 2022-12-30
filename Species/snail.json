@@ -1,0 +1,18 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating",
+    "WallCrawler"
+  ],
+  "dragPath": "front",
+  "fps": 1,
+  "id": "snail",
+  "movementPath": "front",
+  "speed": 0.2
+}

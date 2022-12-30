@@ -70,9 +70,7 @@ public class WallCrawler: Capability {
     private func crawlDownLeftBound() {
         guard let subject else { return }
         subject.direction = .init(dx: 0, dy: 1)
-        subject.frame.origin = CGPoint(
-            x: 0, y: subject.frame.origin.y
-        )
+        subject.frame.origin = CGPoint(x: 0, y: subject.frame.origin.y)
         subject.rotation?.isFlippedHorizontally = false
         subject.rotation?.isFlippedVertically = false
         subject.rotation?.z = .pi * 1.5

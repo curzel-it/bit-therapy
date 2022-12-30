@@ -1,0 +1,47 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 4
+    },
+    {
+      "id": "sleep",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 10
+    },
+    {
+      "id": "eat",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 4
+    },
+    {
+      "id": "ball",
+      "position": {
+        "fromEntityBottomLeft": {}
+      }
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "hedgehog",
+  "movementPath": "walk",
+  "speed": 0.6
+}

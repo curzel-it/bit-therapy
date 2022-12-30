@@ -1,0 +1,34 @@
+{
+  "animations": [
+    {
+      "id": "idle",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 50
+    },
+    {
+      "id": "sleep",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 20
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "mushroomwizard",
+  "movementPath": "walk",
+  "speed": 0.7
+}

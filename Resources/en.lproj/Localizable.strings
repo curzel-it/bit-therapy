@@ -1,5 +1,3 @@
-// MARK: - Generic
-
 "cancel" = "Cancel";
 "select" = "Select";
 "remove" = "Remove";
@@ -10,17 +8,11 @@
 "loading" = "Loading...";
 "somethingWentWrong" = "Something went wrong, please try again";
 "done" = "Done";
-
-// MARK: - Cheats
-
 "cheats.title" = "Change settings via code";
 "cheats.placeholder" = "Code";
 "cheats.enable" = "Enable";
 "cheats.invalidCode" = "Curious? Join our Discord!";
 "cheats.validCode" = "Activated!";
-
-// MARK: - Menu Items
-
 "menu.item.quit" = "Quit";
 "menu.item.home" = "Home";
 "menu.item.settings" = "Settings";
@@ -29,18 +21,12 @@
 "menu.item.show" = "Show Pet";
 "menu.item.hideThisPet" = "Remove this pet";
 "menu.item.hideAllPet" = "Hide all pets";
-
-// MARK: - Pet Selection
-
 "petSelection.petSelection" = "Select pets";
 "petSelection.joinDiscord" = "it's still quiet and desolate, but we also have a Discord server!";
 "petSelection.addPet" = "Add to screen";
 "petSelection.fixOnScreenPets" = "Apply Settings / Reset Pets";
 "petSelection.yourPets" = "Pets on screen:";
 "petSelection.morePets" = "More Pets:";
-
-// MARK: - Settings
-
 "settings.gravity" = "Enable gravity";
 "settings.statusBarIconEnabled" = "Show in status bar";
 "settings.size" = "Pet Size";
@@ -52,9 +38,6 @@
 "settings.anonymousTracking.message" = "No personal information is acquired, we only track a few, anonymous, usage stats.\n\nWhy is this important you might ask?\nIt allows us to answer even the simplest of questions, such as which pet is the most popular... Which sounds pretty critical, doesn't it? 😂\n\nUsage stats are gathered and stored using Firebase.";
 "settings.desktopInteractions.title" = "Desktop Interactions";
 "settings.desktopInteractions.message" = "Allows pets to walk on the title bar of other apps windows.\nIt's cool, but only works if you have a single display, sorry about that!";
-
-// MARK: - About
-
 "about.leaveReviewMessage" = "Hi, do you like the app?\nIf you do, please consider leaving a 5-star review on the App Store!";
 "about.leaveReview" = "Leave a review";
 "about.joinRedditMessage" = "Got any issues, questions or just want to get in touch?\nJoin our Subreddit r/DesktopPets!\n(I will admit, though, it's quite desolated 😅)";
@@ -62,18 +45,12 @@
 "about.mailMessage" = "Alternatively, feel free to reach out directly, I love direct feedback!";
 "about.mail" = "Send Email";
 "about.privacyPolicy" = "Privacy Policy";
-
-// MARK: - Page Titles
-
 "page.title.about" = "About";
 "page.title.game" = "Game";
 "page.title.help" = "Help";
 "page.title.home" = "Pets";
 "page.title.settings" = "Settings";
 "page.title.news" = "News";
-
-// MARK: - URLs
-
 "urls.github" = "https://github.com/curzel-it/pet-therapy";
 "urls.appStore" = "https://apps.apple.com/app/desktop-pets/id1575542220";
 "urls.twitter" = "https://twitter.com/DesktopPets";
@@ -81,9 +58,6 @@
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.mailto" = "mailto:pets@curzel.it?subject=Desktop%20Pets&body=Hi%20Federico%2C%20";
 "urls.privacy" = "https://curzel.it/privacy.html";
-
-// MARK: - Pet Names
-
 "species.name.ape" = "Ape";
 "species.name.betta" = "Betta";
 "species.name.cat" = "Red Cat";
@@ -123,9 +97,6 @@
 "species.name.trex_violet" = "Violet T-Rex";
 "species.name.trex_yellow" = "Golden T-Rex";
 "species.name.ufo" = "UFO";
-
-// MARK: - Pet Descriptions
-
 "species.about.ape" = "Inspired by Bubbles and Sloking... More or less!";
 "species.about.betta" = "Aka 'The Fighting Fish', elegant and very popular";
 "species.about.cat" = "Well, it's just a cat!";
@@ -165,17 +136,7 @@
 "species.about.trex_violet" = "This one gives off some Flintstones vibes :D";
 "species.about.trex_yellow" = "Gotta have a golden one";
 "species.about.ufo" = "Does calling it an UAP makes you more comfortable?";
-
-// MARK: - Game
-
-"game.intro" = "Hello!\nThis is an app for meditation and relax...\nPick you favorite pets and put the device on your desk while you work or study, they'll keep you company!";
-"game.intro.close" = "Ok!";
-"game.intro.complete" = "That's all, enjoy!";
-"game.desktopApp" = "If you have a mac, the app is also available there, check us out on the App Store ;)";
-
-// MARK: - Donations
-
 "donations.title" = "Support the project";
 "donations.message" = "I'll be honest: There's little to no perks - But if you like the app, support is appreciated!";
 "donations.linkTitle" = "Support via Patreon";
-"donations.link" = "https://www.patreon.com/urinamara";
+"urls.donations" = "https://www.patreon.com/urinamara";

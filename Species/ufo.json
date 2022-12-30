@@ -1,0 +1,56 @@
+{
+  "animations": [
+    {
+      "id": "bombing",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "size": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "landing",
+      "position": {
+        "fromEntityBottomLeft": {}
+      }
+    },
+    {
+      "id": "portal",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "size": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "crash",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "size": [
+        2,
+        1
+      ]
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "id": "ufo",
+  "movementPath": "front",
+  "speed": 2
+}

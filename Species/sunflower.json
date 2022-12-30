@@ -1,0 +1,19 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "front",
+  "fps": 0.5,
+  "id": "sunflower",
+  "movementPath": "front",
+  "speed": 0
+}

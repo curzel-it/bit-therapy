@@ -1,0 +1,19 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "id": "nyan",
+  "movementPath": "front",
+  "speed": 0.9
+}

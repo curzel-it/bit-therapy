@@ -1,0 +1,27 @@
+{
+  "animations": [
+    {
+      "id": "idle",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 50
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "mushroom",
+  "movementPath": "walk",
+  "speed": 0.3
+}

@@ -1,8 +1,8 @@
 import Foundation
 
-public struct Species {
+public struct Species: Codable {
     public fileprivate(set) var id: String
-    public fileprivate(set) var behaviors: [EntityBehavior] = []
+    public fileprivate(set) var animations: [EntityAnimation] = []
     public fileprivate(set) var capabilities: [String] = []
     public fileprivate(set) var fps: TimeInterval = 10
     public fileprivate(set) var speed: CGFloat = 1
@@ -15,7 +15,7 @@ public struct Species {
 
     init(from species: Species) {
         self.init(id: species.id)
-        behaviors = species.behaviors
+        animations = species.animations
         capabilities = species.capabilities
         fps = species.fps
         movementPath = species.movementPath
@@ -74,22 +74,9 @@ public extension Species {
         with(animations: [animation])
     }
 
-    func with(animation: EntityAnimation, when trigger: EntityBehavior.Trigger) -> Species {
-        with(additionalBehavior: .init(trigger: trigger, possibleAnimations: [animation]))
-    }
-
     func with(animations: [EntityAnimation]) -> Species {
-        let behavior = EntityBehavior(trigger: .random, possibleAnimations: animations)
-        return with(additionalBehavior: behavior)
-    }
-
-    func with(additionalBehavior: EntityBehavior) -> Species {
-        with(additionalBehaviors: [additionalBehavior])
-    }
-
-    func with(additionalBehaviors: [EntityBehavior]) -> Species {
         var species = Species(from: self)
-        species.behaviors.append(contentsOf: additionalBehaviors)
+        species.animations.append(contentsOf: animations)
         return species
     }
 

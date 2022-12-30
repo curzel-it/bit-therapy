@@ -1,0 +1,48 @@
+{
+  "animations": [
+    {
+      "id": "hypno",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 5
+    },
+    {
+      "id": "front",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 5
+    },
+    {
+      "id": "side",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 5
+    },
+    {
+      "id": "eat",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 3
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "frog",
+  "movementPath": "walk",
+  "speed": 1
+}

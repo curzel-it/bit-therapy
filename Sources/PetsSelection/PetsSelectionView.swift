@@ -22,6 +22,7 @@ struct PetsSelectionView: View {
                     columns: viewModel.gridColums,
                     species: viewModel.unselectedSpecies
                 )
+                .padding(.bottom, .xxl)
             }
             .padding(.md)
         }

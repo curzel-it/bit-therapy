@@ -80,10 +80,10 @@ private struct LeaveReview: View {
 private struct DonationsView: View {
     var body: some View {
         VStack(spacing: .md) {
-            Text(Lang.Donations.title).font(.title3.bold())
-            Text(Lang.Donations.message)
-            Button(Lang.Donations.linkTitle) {
-                URL.visit(urlString: Lang.Donations.link)
+            Text(lang.Donations.title).font(.title3.bold())
+            Text(lang.Donations.message)
+            Button(lang.Donations.linkTitle) {
+                URL.visit(urlString: Lang.urls.donations)
             }
             .buttonStyle(.regular)
         }

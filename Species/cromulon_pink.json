@@ -1,0 +1,54 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": {
+        "fromEntityBottomLeft": {}
+      }
+    },
+    {
+      "id": "bored",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 15
+    },
+    {
+      "id": "talking",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 2
+    },
+    {
+      "id": "staring",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 15
+    },
+    {
+      "id": "shouting",
+      "position": {
+        "fromEntityBottomLeft": {}
+      },
+      "requiredLoops": 2
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "RandomAnimations",
+    "Rotating"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "id": "cromulon_pink",
+  "movementPath": "front",
+  "speed": 0.6
+}

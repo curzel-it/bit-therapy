@@ -39,7 +39,7 @@ enum Lang {
     enum Donations {
         static let title = "donations.title".localized()
         static let message = "donations.message".localized()
-        static let link = "donations.link".localized()
+        static let link = "urls.donations".localized()
         static let linkTitle = "donations.linkTitle".localized()
     }
 
