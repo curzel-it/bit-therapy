@@ -5,19 +5,20 @@ import SwiftUI
 struct PetsSelectionView: View {
     @StateObject var viewModel: PetsSelectionViewModel
 
+    init() {
+        self._viewModel = StateObject(wrappedValue: PetsSelectionViewModel())
+    }
+    
     var body: some View {
         ScrollView {
             VStack(spacing: .xxl) {
-                if DeviceRequirement.iOS.isSatisfied {
-                    Text(viewModel.localizedContent.title).title()
-                }
                 PetsGrid(
-                    title: viewModel.localizedContent.yourPets,
+                    title: Lang.PetSelection.yourPets,
                     columns: viewModel.gridColums,
                     species: viewModel.speciesOnStage
                 )
                 PetsGrid(
-                    title: viewModel.localizedContent.morePets,
+                    title: Lang.PetSelection.morePets,
                     columns: viewModel.gridColums,
                     species: viewModel.unselectedSpecies
                 )
@@ -26,14 +27,10 @@ struct PetsSelectionView: View {
         }
         .sheet(isPresented: viewModel.showingDetails) {
             if let species = viewModel.selectedSpecies {
-                let vm = PetDetailsViewModel(
+                PetDetailsView(
                     isShown: viewModel.showingDetails,
-                    species: species,
-                    speciesProvider: viewModel.speciesProvider,
-                    localizedContent: viewModel.localizedContent,
-                    assetsProvider: viewModel.assetsProvider
+                    species: species
                 )
-                PetDetailsView(viewModel: vm)
             }
         }
         .environmentObject(viewModel)

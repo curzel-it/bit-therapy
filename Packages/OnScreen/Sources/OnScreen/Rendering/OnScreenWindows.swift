@@ -50,7 +50,7 @@ class OnScreenWindows: NSObject, NSWindowDelegate {
     }
 
     func newWindow(representing entity: Entity) -> EntityWindow {
-        EntityWindow(representing: entity, assetsProvider: OnScreen.assetsProvider)
+        EntityWindow(representing: entity, assetsProvider: OnScreenCoordinator.assetsProvider)
     }
 
     // MARK: - Cached Windows
@@ -78,7 +78,7 @@ class OnScreenWindows: NSObject, NSWindowDelegate {
         if isAlive && windows.count == 0 {
             Logger.log(tag, "No more windows, terminating")
             kill()
-            OnScreen.hide()
+            OnScreenCoordinator.hide()
         }
     }
 

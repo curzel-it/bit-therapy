@@ -19,7 +19,7 @@ class EntityWindowTests: XCTestCase {
             species: .agent,
             id: "test",
             frame: CGRect(origin: .zero, size: .init(square: 100)),
-            in: world.state.bounds
+            in: world.state
         )
         world.state.children.append(entity)
         window = EntityWindow(representing: entity, assetsProvider: MockAssets())

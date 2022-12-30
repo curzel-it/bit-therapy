@@ -5,15 +5,15 @@ import YageLive
 
 extension Species {
     static let pet = Species(id: "")
-        .with(capability: AnimatedSprite.self)
-        .with(capability: AnimationsProvider.self)
-        .with(capability: AutoRespawn.self)
-        .with(capability: BounceOnLateralCollisions.self)
-        .with(capability: FlipHorizontallyWhenGoingLeft.self)
-        .with(capability: LinearMovement.self)
-        .with(capability: PetsSpritesProvider.self)
-        .with(capability: RandomAnimations.self)
-        .with(capability: Rotating.self)
+        .with(capability: "AnimatedSprite")
+        .with(capability: "AnimationsProvider")
+        .with(capability: "AutoRespawn")
+        .with(capability: "BounceOnLateralCollisions")
+        .with(capability: "FlipHorizontallyWhenGoingLeft")
+        .with(capability: "LinearMovement")
+        .with(capability: "PetsSpritesProvider")
+        .with(capability: "RandomAnimations")
+        .with(capability: "Rotating")
 }
 
 public extension Species {

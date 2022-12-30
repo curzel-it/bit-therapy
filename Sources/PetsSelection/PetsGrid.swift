@@ -13,7 +13,7 @@ struct PetsGrid: View {
     let species: [Species]
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: .md) {
             Title(title: title)
             LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
                 ForEach(species) {
@@ -31,19 +31,11 @@ private struct ItemPreview: View {
 
     let species: Species
 
-    var frame: NSImage? {
-        let path = viewModel.assetsProvider
-            .frames(for: species.id, animation: "front")
-            .first
-        return viewModel.assetsProvider.image(sprite: path)
-    }
-
     var body: some View {
-        if let frame = frame {
+        if let frame = viewModel.image(for: species) {
             Image(frame: frame)
                 .pixelArt()
                 .frame(width: 80, height: 80)
-                .padding(.top, 20)
                 .onTapGesture { viewModel.showDetails(of: species) }
         }
     }

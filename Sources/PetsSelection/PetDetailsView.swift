@@ -3,13 +3,13 @@ import NotAGif
 import Pets
 import Schwifty
 import SwiftUI
-import Tracking
+import Yage
 
 struct PetDetailsView: View {
     @StateObject var viewModel: PetDetailsViewModel
 
-    init(viewModel: PetDetailsViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+    init(isShown: Binding<Bool>, species: Species) {
+        _viewModel = StateObject(wrappedValue: PetDetailsViewModel(isShown: isShown, species: species))
     }
 
     var body: some View {
@@ -21,15 +21,7 @@ struct PetDetailsView: View {
         }
         .padding(.lg)
         .frame(width: 450)
-        .onAppear {
-            let species = viewModel.species.id
-            Tracking.didEnterDetails(
-                species: species,
-                name: viewModel.lang.name(of: viewModel.species),
-                price: nil,
-                purchased: false
-            )
-        }
+        .onAppear { viewModel.didAppear() }
         .environmentObject(viewModel)
     }
 }
@@ -38,7 +30,7 @@ private struct About: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
 
     var body: some View {
-        Text(viewModel.lang.description(of: viewModel.species))
+        Text(viewModel.species.about)
             .lineLimit(5)
             .multilineTextAlignment(.center)
     }
@@ -65,15 +57,15 @@ private struct Footer: View {
     var body: some View {
         HStack {
             if viewModel.canSelect {
-                Button(viewModel.lang.addPet, action: viewModel.selected)
+                Button(Lang.PetSelection.addPet, action: viewModel.selected)
                     .buttonStyle(.regular)
             }
             if viewModel.canRemove {
-                Button(viewModel.lang.remove, action: viewModel.remove)
+                Button(Lang.remove, action: viewModel.remove)
                     .buttonStyle(.regular)
             }
             
-            Button(viewModel.lang.cancel, action: viewModel.close)
+            Button(Lang.cancel, action: viewModel.close)
                 .buttonStyle(.text)
         }
     }

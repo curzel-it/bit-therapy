@@ -101,6 +101,18 @@ class AppState: ObservableObject {
             disabledScreens.append(screen.id)
         }
     }
+    
+    func add(species: Species) {
+        selectedSpecies.append(species.id)
+        let newSpecies = speciesOnStage.value + [species]
+        speciesOnStage.send(newSpecies)
+    }
+    
+    func remove(species: Species) {
+        selectedSpecies.remove(species.id)
+        let newSpecies = speciesOnStage.value.filter { $0 != species }
+        speciesOnStage.send(newSpecies)
+    }
 }
 
 private class Storage {
@@ -137,14 +149,6 @@ private class Storage {
         set {
             selectedSpeciesValue = newValue.joined(separator: ",")
         }
-    }
-}
-
-// MARK: - Pets Settings
-
-extension AppState: PetsSettings {
-    func remove(species: Species) {
-        selectedSpecies = selectedSpecies.filter { $0 != species.id }
     }
 }
 

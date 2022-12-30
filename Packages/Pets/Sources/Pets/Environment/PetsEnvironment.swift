@@ -9,7 +9,11 @@ open class PetsEnvironment: LiveWorld {
 
     public init(name: String, with settings: PetsSettings, bounds: CGRect) {
         self.settings = settings
-        super.init(name: name, bounds: bounds)
+        super.init(
+            name: name,
+            bounds: bounds,
+            capabilitiesDiscoveryService: PetsCapabilitiesDiscoveryService.shared
+        )
         bindPetsOnStage()
         scheduleUfoAbduction()
     }
@@ -41,7 +45,7 @@ open class PetsEnvironment: LiveWorld {
     }
 
     open func buildEntity(species: Species) -> PetEntity {
-        PetEntity(of: species, in: state.bounds, settings: settings)
+        PetEntity(of: species, in: state, settings: settings)
     }
 
     public func remove(species speciesToRemove: Species) {

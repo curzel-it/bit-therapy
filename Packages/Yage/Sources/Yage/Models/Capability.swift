@@ -36,4 +36,6 @@ public extension Entity {
     }
 }
 
-public typealias Capabilities = [Capability.Type]
+public protocol CapabilitiesDiscoveryService {
+    func capability(for id: String) -> Capability?
+}

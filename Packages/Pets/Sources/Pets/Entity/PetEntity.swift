@@ -16,18 +16,20 @@ open class PetEntity: Entity {
     public static var assetsProvider: AssetsProvider?
     public let settings: PetsSettings
 
-    public init(of species: Species, in bounds: CGRect, settings: PetsSettings) {
+    public init(of species: Species, in world: World, settings: PetsSettings) {
         self.settings = settings
-        let id = PetEntity.id(for: species)
-        let frame = PetEntity.initialFrame(in: bounds, size: settings.petSize)
-        super.init(species: species, id: id, frame: frame, in: bounds)
+        super.init(
+            species: species,
+            id: PetEntity.id(for: species),
+            frame: PetEntity.initialFrame(in: world.bounds, size: settings.petSize),
+            in: world
+        )
         loadProperties()
     }
 
     func loadProperties() {
         fps = species.fps
         resetSpeed()
-        species.capabilities().forEach { install($0.init()) }
         setInitialPosition()
         setInitialDirection()
         setGravity()

@@ -5,7 +5,10 @@ import YageLive
 @testable import OnScreen
 
 final class DesktopObstaclesServiceTests: XCTestCase {
-    let world = LiveWorld(name: "test", bounds: CGRect(size: .init(square: 1000)))
+    let world = LiveWorld(
+        name: "test",
+        bounds: CGRect(size: .init(square: 1000))
+    )
 
     lazy var service: DesktopObstaclesService = .init(world: world)
 

@@ -3,7 +3,7 @@ import Pets
 import Schwifty
 import Yage
 
-public struct OnScreen {
+public struct OnScreenCoordinator {
     private static var environment: DesktopEnvironment?
     private static var windows: OnScreenWindows?
     static var assetsProvider: AssetsProvider = NoAssets()

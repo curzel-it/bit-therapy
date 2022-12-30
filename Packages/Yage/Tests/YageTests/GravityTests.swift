@@ -15,7 +15,7 @@ class GravityTests: XCTestCase {
             species: .agent,
             id: "player",
             frame: CGRect(x: 0, y: 0, width: 50, height: 50),
-            in: env.bounds
+            in: env
         )
         player.speed = 1
         player.direction = CGVector(dx: 1, dy: 0)
@@ -30,7 +30,7 @@ class GravityTests: XCTestCase {
             species: .agent,
             id: "ground1",
             frame: CGRect(x: 0, y: 100, width: 200, height: 50),
-            in: env.bounds
+            in: env
         )
         env.children.append(ground1)
 
@@ -55,7 +55,7 @@ class GravityTests: XCTestCase {
             species: .agent,
             id: "ground1",
             frame: CGRect(x: 0, y: 100, width: 200, height: 50),
-            in: env.bounds
+            in: env
         )
         env.children.append(ground1)
 
@@ -75,7 +75,7 @@ class GravityTests: XCTestCase {
             species: .agent,
             id: "ground1",
             frame: CGRect(x: 369, y: 354, width: 250, height: 48),
-            in: env.bounds
+            in: env
         )
         env.children.append(ground1)
 
@@ -83,7 +83,7 @@ class GravityTests: XCTestCase {
             species: .agent,
             id: "ground2",
             frame: CGRect(x: 396, y: 402, width: 687, height: 70),
-            in: env.bounds
+            in: env
         )
         env.children.append(ground2)
 

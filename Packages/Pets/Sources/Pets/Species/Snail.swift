@@ -4,7 +4,7 @@ import Yage
 extension Species {
     static let snail = Species.pet
         .with(id: "snail")
-        .with(capability: WallCrawler.self)
+        .with(capability: "WallCrawler")
         .with(fps: 1)
         .with(movementPath: "front")
         .with(dragPath: "front")

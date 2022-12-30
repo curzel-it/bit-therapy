@@ -5,14 +5,9 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         VStack(spacing: .xl) {
-            if DeviceRequirement.iOS.isSatisfied {
-                Text(Lang.Page.about).title()
-            } else {
-                LeaveReview()
-            }
+            LeaveReview()
             DonationsView()
-            Spacer()
-            
+            Spacer()            
             Socials()
             PrivacyPolicy()
             AppVersion()

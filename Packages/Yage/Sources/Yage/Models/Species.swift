@@ -3,7 +3,7 @@ import Foundation
 public struct Species {
     public fileprivate(set) var id: String
     public fileprivate(set) var behaviors: [EntityBehavior] = []
-    public fileprivate(set) var capabilities: () -> Capabilities = { [] }
+    public fileprivate(set) var capabilities: [String] = []
     public fileprivate(set) var fps: TimeInterval = 10
     public fileprivate(set) var speed: CGFloat = 1
     public fileprivate(set) var movementPath: String = "walk"
@@ -64,9 +64,9 @@ public extension Species {
         return species
     }
 
-    func with<T: Capability>(capability: T.Type) -> Species {
+    func with(capability: String) -> Species {
         var species = Species(from: self)
-        species.capabilities = { capabilities() + [capability] }
+        species.capabilities = capabilities + [capability]
         return species
     }
 

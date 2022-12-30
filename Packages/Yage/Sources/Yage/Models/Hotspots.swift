@@ -62,7 +62,7 @@ private extension World {
                 width: bounds.width,
                 height: boundsThickness
             ),
-            in: bounds
+            in: self
         )
         entity.isStatic = true
         return entity
@@ -78,7 +78,7 @@ private extension World {
                 width: bounds.width,
                 height: boundsThickness
             ),
-            in: bounds
+            in: self
         )
         entity.isStatic = true
         return entity
@@ -94,7 +94,7 @@ private extension World {
                 width: boundsThickness,
                 height: bounds.height
             ),
-            in: bounds
+            in: self
         )
         entity.isStatic = true
         return entity
@@ -110,7 +110,7 @@ private extension World {
                 width: boundsThickness,
                 height: bounds.height
             ),
-            in: bounds
+            in: self
         )
         entity.isStatic = true
         return entity

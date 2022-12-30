@@ -14,9 +14,17 @@ open class LiveWorld: ObservableObject {
     private var timer: Timer!
     private var lastUpdate: TimeInterval
 
-    public init(name: String, bounds: CGRect) {
+    public init(
+        name: String,
+        bounds: CGRect,
+        capabilitiesDiscoveryService: CapabilitiesDiscoveryService? = nil
+    ) {
         lastUpdate = Date.timeIntervalSinceReferenceDate
-        state = World(name: name, bounds: bounds)
+        state = World(
+            name: name,
+            bounds: bounds,
+            capabilitiesDiscoveryService: capabilitiesDiscoveryService
+        )
         start()
     }
 

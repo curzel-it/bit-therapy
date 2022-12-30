@@ -56,8 +56,8 @@ class DesktopEnvironment {
         worlds.forEach { $0.remove(species: species) }
     }
     
-    func buildEntity(species: Species, in bounds: CGRect) -> PetEntity {
-        let entity = PetEntity(of: species, in: bounds, settings: desktopSettings)
+    func buildEntity(species: Species, in world: World) -> PetEntity {
+        let entity = PetEntity(of: species, in: world, settings: desktopSettings)
         entity.install(ShowsMenuOnRightClick())
         entity.install(MouseDraggable())
         return entity
@@ -72,7 +72,7 @@ class DesktopEnvironment {
 // MARK: - Screen Environment
 
 class ScreenEnvironment: PetsEnvironment {
-    typealias EntityBuilder = (Species, CGRect) -> PetEntity
+    typealias EntityBuilder = (Species, World) -> PetEntity
     
     private var entityBuilder: EntityBuilder
     
@@ -86,7 +86,7 @@ class ScreenEnvironment: PetsEnvironment {
     }
     
     override func buildEntity(species: Species) -> PetEntity {
-        entityBuilder(species, state.bounds)
+        entityBuilder(species, state)
     }
 }
 

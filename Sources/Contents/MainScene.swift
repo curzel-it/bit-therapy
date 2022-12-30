@@ -94,7 +94,7 @@ private struct PageContents: View {
     var body: some View {
         switch viewModel.selectedPage {
         case .about: AboutView()
-        case .home: PetsSelectionCoordinator.view()
+        case .home: PetsSelectionView()
         case .settings: SettingsView()
         case .news: NewsView()
         case .none: EmptyView()

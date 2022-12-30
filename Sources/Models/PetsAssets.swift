@@ -1,3 +1,4 @@
+import OnScreen
 import Schwifty
 import SwiftUI
 
@@ -7,6 +8,11 @@ class PetsAssetsProvider {
     func frames(for species: String, animation: String) -> [String] {
         let assets = sortedAssetsByKey[key(for: species, animation: animation)] ?? []
         return assets.map { $0.sprite }
+    }
+    
+    func images(for species: String, animation: String) -> [NSImage] {
+        frames(for: species, animation: animation)
+            .compactMap { image(sprite: $0) }
     }
     
     func image(sprite: String?) -> NSImage? {
@@ -79,3 +85,5 @@ private extension String {
         return Int(indexString ?? "") ?? 99
     }
 }
+
+extension PetsAssetsProvider: OnScreen.AssetsProvider {}

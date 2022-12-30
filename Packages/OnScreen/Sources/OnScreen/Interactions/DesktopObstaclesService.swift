@@ -63,7 +63,12 @@ class DesktopObstaclesService: ObservableObject {
 class WindowObstacle: Entity {
     init(of frame: CGRect, in world: LiveWorld) {
         let id = WindowObstacle.nextId()
-        super.init(species: .window, id: id, frame: frame, in: world.state.bounds)
+        super.init(
+            species: .window,
+            id: id,
+            frame: frame,
+            in: world.state
+        )
         isStatic = true
     }
 

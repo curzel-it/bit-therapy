@@ -11,10 +11,6 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var unselectedSpecies: [Species] = []
     @Published var canShowDiscordBanner: Bool = true
 
-    let assetsProvider: AssetsProvider
-    let localizedContent: LocalizedContentProvider
-    let speciesProvider: PetsProvider
-
     lazy var showingDetails: Binding<Bool> = Binding {
         self.selectedSpecies != nil
     } set: { isShown in
@@ -30,16 +26,9 @@ class PetsSelectionViewModel: ObservableObject {
 
     private var stateCanc: AnyCancellable!
 
-    init(
-        localizedContent: LocalizedContentProvider,
-        speciesProvider: PetsProvider,
-        assetsProvider: AssetsProvider
-    ) {
-        self.assetsProvider = assetsProvider
-        self.localizedContent = localizedContent
-        self.speciesProvider = speciesProvider
-        loadPets(selectedSpecies: speciesProvider.speciesOnStage.value)
-        stateCanc = speciesProvider.speciesOnStage.sink { self.loadPets(selectedSpecies: $0) }
+    init() {
+        loadPets(selectedSpecies: AppState.global.speciesOnStage.value)
+        stateCanc = AppState.global.speciesOnStage.sink { self.loadPets(selectedSpecies: $0) }
     }
 
     private func loadPets(selectedSpecies species: [Species]) {
@@ -56,6 +45,13 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     func isSelected(_ species: Species) -> Bool {
-        speciesProvider.speciesOnStage.value.contains(species)
+        AppState.global.speciesOnStage.value.contains(species)
+    }
+    
+    func image(for species: Species) -> NSImage? {
+        let path = PetsAssetsProvider.shared
+            .frames(for: species.id, animation: "front")
+            .first
+        return PetsAssetsProvider.shared.image(sprite: path)
     }
 }

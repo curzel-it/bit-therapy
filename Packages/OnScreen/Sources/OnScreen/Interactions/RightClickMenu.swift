@@ -38,7 +38,7 @@ class ShowsMenuOnRightClick: RightClickable {
 
     @objc func hideThisPet() {
         guard let species = subject?.species else { return }
-        OnScreen.remove(species: species)
+        OnScreenCoordinator.remove(species: species)
     }
 
     private func hideAllPetsItem() -> NSMenuItem {
@@ -51,6 +51,6 @@ class ShowsMenuOnRightClick: RightClickable {
     }
 
     @objc func hideAllPets() {
-        OnScreen.hide()
+        OnScreenCoordinator.hide()
     }
 }

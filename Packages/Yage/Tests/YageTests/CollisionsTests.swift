@@ -3,6 +3,9 @@ import XCTest
 @testable import Yage
 
 class CollisionsTests: XCTestCase {
+    private lazy var testEnv: World = {
+        World(name: "test", bounds: testBounds)
+    }()
     private let testBounds = CGRect(x: 0, y: 0, width: 100, height: 100)
 
     func testMultipleCollisionsCanBeDetected() {
@@ -10,7 +13,7 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "main",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let others: [Entity] = (0 ..< 12).map { (count: Int) in
             Entity(
@@ -20,7 +23,7 @@ class CollisionsTests: XCTestCase {
                     x: 0.1 * Double(count),
                     y: 0, width: 1, height: 1
                 ),
-                in: testBounds
+                in: testEnv
             )
         }
         let collisions = main.collisions(with: others)
@@ -35,27 +38,27 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 2, y: 2, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         XCTAssertNil(collision)
     }
 
     func testEqualEntitiesDoCollide() {
-        let entity = Entity(species: .agent, id: "someEntity", frame: .zero, in: testBounds)
+        let entity = Entity(species: .agent, id: "someEntity", frame: .zero, in: testEnv)
         let collision = entity.collision(with: entity)
         XCTAssertNotNil(collision)
     }
 
     func testEntitiesWithSameFrameCollide() {
-        let entity1 = Entity(species: .agent, id: "entity1", frame: .zero, in: testBounds)
-        let entity2 = Entity(species: .agent, id: "entity2", frame: .zero, in: testBounds)
+        let entity1 = Entity(species: .agent, id: "entity1", frame: .zero, in: testEnv)
+        let entity2 = Entity(species: .agent, id: "entity2", frame: .zero, in: testEnv)
         let collision = entity1.collision(with: entity2)
         XCTAssertNotNil(collision)
     }
@@ -65,13 +68,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 1, y: 1, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let expectedIntersection = CGRect(x: 1, y: 1, width: 0, height: 0)
@@ -84,13 +87,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 1, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let expectedIntersection = CGRect(x: 1, y: 0, width: 0, height: 1)
@@ -103,13 +106,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 2, height: 2),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 1, y: 1, width: 2, height: 2),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let expectedIntersection = CGRect(x: 1, y: 1, width: 1, height: 1)
@@ -118,8 +121,8 @@ class CollisionsTests: XCTestCase {
     }
 
     func testCollisionWithEphimeralEntitiesAreProperlyMarked() {
-        let entity1 = Entity(species: .agent, id: "entity1", frame: .zero, in: testBounds)
-        let entity2 = Entity(species: .agent, id: "entity2", frame: .zero, in: testBounds)
+        let entity1 = Entity(species: .agent, id: "entity1", frame: .zero, in: testEnv)
+        let entity2 = Entity(species: .agent, id: "entity2", frame: .zero, in: testEnv)
         entity2.isEphemeral = true
         let collision = entity1.collision(with: entity2)
         XCTAssertTrue(collision?.isEphemeral ?? false)
@@ -130,13 +133,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 0.9, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let sides = collision?.sides() ?? []
@@ -148,13 +151,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 0.9, y: 0.25, width: 1, height: 0.5),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let sides = collision?.sides() ?? []
@@ -166,13 +169,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 0.9, y: -1, width: 1, height: 3),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let sides = collision?.sides() ?? []
@@ -184,13 +187,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 0.9, y: 0.9, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let sides = collision?.sides() ?? []
@@ -202,13 +205,13 @@ class CollisionsTests: XCTestCase {
             species: .agent,
             id: "entity1",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let entity2 = Entity(
             species: .agent,
             id: "entity2",
             frame: CGRect(x: 0.9, y: -0.9, width: 1, height: 1),
-            in: testBounds
+            in: testEnv
         )
         let collision = entity1.collision(with: entity2)
         let sides = collision?.sides() ?? []

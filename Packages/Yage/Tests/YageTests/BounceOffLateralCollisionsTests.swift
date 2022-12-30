@@ -12,7 +12,7 @@ class BounceOnLateralCollisionsTests: XCTestCase {
             species: .agent,
             id: "entity",
             frame: CGRect(x: 50, y: 0, width: 10, height: 10),
-            in: testEnv.bounds
+            in: testEnv
         )
         bounce = BounceOnLateralCollisions()
         entity.install(bounce)
@@ -32,7 +32,7 @@ class BounceOnLateralCollisionsTests: XCTestCase {
                 x: testEntity.frame.maxX - 5,
                 y: 0, width: 50, height: 50
             ),
-            in: testEnv.bounds
+            in: testEnv
         )
         testEnv.children.append(testRight)
 
@@ -55,7 +55,7 @@ class BounceOnLateralCollisionsTests: XCTestCase {
                 x: testEntity.frame.minX - 50 + 5,
                 y: 0, width: 50, height: 50
             ),
-            in: testEnv.bounds
+            in: testEnv
         )
         testEnv.children.append(testLeft)
 

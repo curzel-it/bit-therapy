@@ -29,7 +29,7 @@ private extension PetsEnvironment {
     }
 
     func animateUfoAbduction(of target: PetEntity) {
-        let ufo = UfoEntity(in: state.bounds, with: settings)
+        let ufo = UfoEntity(in: state, with: settings)
         ufo.frame.origin = state.bounds.topLeft.offset(x: -100, y: -100)
         state.children.append(ufo)
         ufo.abduct(target) {
@@ -47,8 +47,12 @@ private extension PetsEnvironment {
 // MARK: - Entity
 
 private class UfoEntity: PetEntity {
-    init(in bounds: CGRect, with settings: PetsSettings) {
-        super.init(of: .ufo, in: bounds, settings: settings)
+    init(in world: World, with settings: PetsSettings) {
+        super.init(
+            of: .ufo,
+            in: world,
+            settings: settings
+        )
         setBounceOnLateralCollisions(enabled: false)
         capability(for: RandomAnimations.self)?.kill()
     }

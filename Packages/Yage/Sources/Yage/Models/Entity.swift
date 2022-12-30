@@ -16,11 +16,26 @@ open class Entity: Identifiable {
     public private(set) var state: EntityState = .move
     public var worldBounds: CGRect
 
-    public init(species: Species, id: String, frame: CGRect, in worldBounds: CGRect) {
+    public init(
+        species: Species,
+        id: String,
+        frame: CGRect,
+        in world: World
+    ) {
         self.species = species
         self.id = id
         self.frame = frame
-        self.worldBounds = worldBounds
+        self.worldBounds = world.bounds
+        self.installCapabilities(from: world.capabilitiesDiscoveryService)
+    }
+    
+    private func installCapabilities(from service: CapabilitiesDiscoveryService?) {
+        guard let service else { return }
+        species.capabilities.forEach {
+            if let capability = service.capability(for: $0) {
+                install(capability)
+            }
+        }
     }
 
     // MARK: - Capabilities

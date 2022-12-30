@@ -3,11 +3,17 @@ import SwiftUI
 
 open class World {
     public let name: String
-    public var children: [Entity] = []    
+    public let capabilitiesDiscoveryService: CapabilitiesDiscoveryService?
+    public var children: [Entity] = []
     public private(set) var bounds: CGRect = .zero
     
-    public init(name: String, bounds rect: CGRect) {
+    public init(
+        name: String,
+        bounds rect: CGRect,
+        capabilitiesDiscoveryService: CapabilitiesDiscoveryService? = nil
+    ) {
         self.name = name
+        self.capabilitiesDiscoveryService = capabilitiesDiscoveryService
         set(bounds: rect)
     }
     
