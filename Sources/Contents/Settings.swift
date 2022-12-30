@@ -13,9 +13,11 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
-                SizeSlider()
-                SpeedSlider()
-                Switches()
+                VStack(spacing: .lg) {
+                    SizeSlider()
+                    SpeedSlider()
+                    Switches()
+                }
                 FixOnScreenPets().positioned(.leading)
                 ScreensOnOffSettings()
                 CheatsView().positioned(.leading)
@@ -27,11 +29,18 @@ struct SettingsView: View {
 
 private struct Switches: View {
     var body: some View {
-        GravitySwitch().positioned(.leading)
-        DesktopInteractionsSwitch().positioned(.leading)
-        LaunchAtLoginSwitch().positioned(.leading)
-        StatusBarIconSwitch().positioned(.leading)
-        AnonymousTrackingSwitch().positioned(.leading)
+        HStack {
+            VStack(spacing: .lg) {
+                GravitySwitch().positioned(.leading)
+                DesktopInteractionsSwitch().positioned(.leading)
+                LaunchAtLoginSwitch().positioned(.leading)
+            }
+            Spacer()
+            VStack(spacing: .lg) {
+                StatusBarIconSwitch().positioned(.leading)
+                AnonymousTrackingSwitch().positioned(.leading)
+            }
+        }
     }
 }
 

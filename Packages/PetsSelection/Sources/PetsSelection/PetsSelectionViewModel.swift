@@ -25,12 +25,7 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     var gridColums: [GridItem] {
-        let item = GridItem(
-            .adaptive(minimum: 100, maximum: 200),
-            spacing: Spacing.lg.rawValue
-        )
-        let numberOfColumns = Screen.main.bounds.width < 500 ? 3 : 5
-        return [GridItem](repeating: item, count: numberOfColumns)
+        [.init(.adaptive(minimum: 100, maximum: 140), spacing: Spacing.lg.rawValue)]
     }
 
     private var stateCanc: AnyCancellable!
