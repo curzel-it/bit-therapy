@@ -1,5 +1,4 @@
 import DesignSystem
-import InAppPurchases
 import LaunchAtLogin
 import OnScreen
 import Schwifty
@@ -18,7 +17,6 @@ struct SettingsView: View {
                 SpeedSlider()
                 Switches()
                 FixOnScreenPets().positioned(.leading)
-                RestorePurchasesButton()
                 ScreensOnOffSettings()
                 CheatsView().positioned(.leading)
             }
@@ -154,12 +152,9 @@ private struct AnonymousTrackingSwitch: View {
                 Text(Lang.Settings.anonymousTrackingExplained)
                     .font(.body)
                     .multilineTextAlignment(.center)
-                HStack {
-                    Button(Lang.cancel) { showingDetails = false }
-                        .buttonStyle(.text)
-                    Spacer()
-                    PrivacyPolicy()
-                }
+                
+                Button(Lang.cancel) { showingDetails = false }
+                    .buttonStyle(.text)
             }
             .padding()
             .frame(width: 450)
@@ -255,22 +250,6 @@ struct SpeedSlider: View {
             range: 0.25 ... 2,
             reset: { appState.speedMultiplier = 1.0 }
         )
-    }
-}
-
-// MARK: - In-App Purchases
-
-struct RestorePurchasesButton: View {
-    var body: some View {
-        InAppPurchases.RestorePurchasesButton(with: Localized())
-            .positioned(.leading)
-    }
-
-    struct Localized: InAppPurchases.Lang {
-        var done: String { Lang.done }
-        var loading: String { Lang.loading }
-        var restorePurchases: String { Lang.Settings.restorePurchases }
-        var somethingWentWrong: String { Lang.somethingWentWrong }
     }
 }
 

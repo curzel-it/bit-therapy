@@ -118,15 +118,6 @@
       }
     },
     {
-      "identity" : "purchases-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/RevenueCat/purchases-ios",
-      "state" : {
-        "revision" : "bd5fcfcbe0b578545e7b06b539739b692eb8251b",
-        "version" : "4.13.4"
-      }
-    },
-    {
       "identity" : "ratekit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/RateKit",

@@ -11,21 +11,6 @@
 "somethingWentWrong" = "Qualcosa è andato storto, riprova";
 "done" = "Fatto";
 
-// MARK: - Survey
-
-"survey.takeSurvey" = "Questionario utenti";
-"survey.feedbackViaSurvey" = "Hai feedback, idee, opinioni o problemi con l'app? Faccelo sapere!";
-"survey.requestPetViaSurvey" = "Non hai trovato quello che cercavi? Faccelo sapere su Discord o con il questionario!";
-"survey.url" = "https://tally.so/r/mJ9Y2K";
-"survey.url.ios" = "https://tally.so/r/wArvMD";
-
-// MARK: - Purchases
-
-"purchases.buy" = "Acquista";
-"purchases.buyFor" = "Acquista";
-"purchases.purchasing" = "Acquisto in corso...";
-"purchases.purchased" = "Grazie! 😍";
-
 // MARK: - Cheats
 
 "cheats.title" = "Codici impostazioni";
@@ -61,7 +46,6 @@
 "settings.size" = "Dimensioni Pet";
 "settings.launchAtLogin" = "Avvia automaticamente al login";
 "settings.speed" = "Velocità";
-"settings.restorePurchases" = "Ripristina Acquisti In-App";
 "settings.enabledDisplays" = "Display Abilitati";
 "settings.anonymousTracking" = "Abilita Statistiche Anonime";
 "settings.anonymousTracking.title" = "Statistiche Anonime";
@@ -186,3 +170,10 @@
 "game.intro.close" = "Ok!";
 "game.intro.complete" = "Questo è tutto per ora, ciaoooo!";
 "game.desktopApp" = "L'app è disponibile anche per macOS, se hai un mac, cercaci sull'App Store ;)";
+
+// MARK: - Donations
+
+"donations.title" = "Supporta il progetto su Patreon";
+"donations.message" = "Sarò onesto: Ci sono meno benefit per i supporter di quanti ne vorrei offrire - Ma se vuoi comunque supportare il progetto, beh, grazie mille!";
+"donations.linkTitle" = "Supporta via Patreon";
+"donations.link" = "https://www.patreon.com/urinamara";

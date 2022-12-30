@@ -9,5 +9,4 @@ extension Species {
 
     static let mushroomAmanita = Species.mushroom
         .with(id: "mushroom_amanita")
-        .with(isPaid: true)
 }

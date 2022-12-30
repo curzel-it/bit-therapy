@@ -48,7 +48,7 @@ public extension Tracking {
             AnalyticsParameterItemID: species,
             AnalyticsParameterItemName: name,
             AnalyticsParameterPrice: price ?? 0,
-            "alreadyPurchased": price == nil || purchased
+            "already_purchased": price == nil || purchased
         ])
     }
 

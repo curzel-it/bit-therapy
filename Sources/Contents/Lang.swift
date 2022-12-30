@@ -42,17 +42,14 @@ public enum Lang {
         public static let invalidCode = "cheats.invalidCode".localized()
         public static let validCode = "cheats.validCode".localized()
     }
-
-    // MARK: - Survey
-
-    public enum Survey {
-        public static let feedbackViaSurvey = "survey.feedbackViaSurvey".localized()
-        public static let requestPetViaSurvey = "survey.requestPetViaSurvey".localized()
-        public static let takeSurvey = "survey.takeSurvey".localized()
-
-        public static var url: String {
-            (DeviceRequirement.iOS.isSatisfied ? "survey.url.ios" : "survey.url").localized()
-        }
+    
+    // MARK: - Donations
+    
+    public enum Donations {
+        public static let title = "donations.title".localized()
+        public static let message = "donations.message".localized()
+        public static let link = "donations.link".localized()
+        public static let linkTitle = "donations.linkTitle".localized()
     }
 
     // MARK: - Settings
@@ -66,7 +63,6 @@ public enum Lang {
         public static let anonymousTrackingExplainedTitle = "settings.anonymousTracking.title".localized()
         public static let anonymousTrackingExplained = "settings.anonymousTracking.message".localized()
         public static let speed = "settings.speed".localized()
-        public static let restorePurchases = "settings.restorePurchases".localized()
         public static let enabledDisplays = "settings.enabledDisplays".localized()
         public static let desktopInteractions = "settings.desktopInteractions.title".localized()
         public static let desktopInteractionsMessage = "settings.desktopInteractions.message".localized()
@@ -93,15 +89,6 @@ public enum Lang {
         public static let addPet = "petSelection.addPet".localized()
         public static let yourPets = "petSelection.yourPets".localized()
         public static let morePets = "petSelection.morePets".localized()
-    }
-
-    // MARK: - Purchases
-
-    public enum Purchases {
-        public static let buy = "purchases.buy".localized()
-        public static let buyFor = "purchases.buyFor".localized()
-        public static let purchasing = "purchases.purchasing".localized()
-        public static let purchased = "purchases.purchased".localized()
     }
 
     // MARK: - URLs

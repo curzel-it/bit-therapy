@@ -13,7 +13,6 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
-        .package(path: "../InAppPurchases"),
         .package(path: "../Pets"),
         .package(path: "../Tracking"),
         .package(path: "../Yage"),
@@ -25,7 +24,6 @@ let package = Package(
             name: "PetDetails",
             dependencies: [
                 .product(name: "DesignSystem", package: "DesignSystem"),
-                .product(name: "InAppPurchases", package: "InAppPurchases"),
                 .product(name: "NotAGif", package: "NotAGif"),
                 .product(name: "Pets", package: "Pets"),
                 .product(name: "Schwifty", package: "Schwifty"),

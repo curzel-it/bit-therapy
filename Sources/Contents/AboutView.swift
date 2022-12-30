@@ -4,39 +4,45 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        ScrollView {
-            VStack(spacing: .xl) {
-                if DeviceRequirement.iOS.isSatisfied {
-                    Text(Lang.Page.about).title()
-                } else {
-                    LeaveReview()
-                }
-                GiveFeedbackViaSurvey()
-                PrivacyPolicy().padding(.top, .xl)
-
-                VStack(spacing: .xl) {
-                    Socials().padding(.top, .lg)
-                    Text(appVersion)
-                }
-                .positioned(.bottom)
+        VStack(spacing: .xl) {
+            if DeviceRequirement.iOS.isSatisfied {
+                Text(Lang.Page.about).title()
+            } else {
+                LeaveReview()
             }
-            .multilineTextAlignment(.center)
-            .padding(.md)
+            DonationsView()
+            Spacer()
+            
+            Socials()
+            PrivacyPolicy()
+            AppVersion()
         }
-    }
-
-    var appVersion: String {
-        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        return "v. \(version ?? "n/a")"
+        .multilineTextAlignment(.center)
+        .padding(.md)
     }
 }
 
-struct PrivacyPolicy: View {
+private struct AppVersion: View {
+    @EnvironmentObject var appState: AppState
+        
+    var text: String {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let dev = appState.isDevApp ? "Dev" : ""
+        return ["v.", version ?? "n/a", dev]
+            .filter { !$0.isEmpty }.joined(separator: " ")
+    }
+    
+    var body: some View {
+        Text(text)
+    }
+}
+
+private struct PrivacyPolicy: View {
     var body: some View {
         Button(Lang.About.privacyPolicy) {
             URL.visit(urlString: Lang.Urls.privacy)
         }
-        .buttonStyle(.regular)
+        .buttonStyle(.text)
     }
 }
 
@@ -54,7 +60,7 @@ private struct Socials: View {
 private struct SocialIcon: View {
     let name: String
     let link: String
-
+    
     var body: some View {
         Image(name)
             .resizable()
@@ -70,6 +76,19 @@ private struct LeaveReview: View {
             Text(Lang.About.leaveReviewMessage)
             Button(Lang.About.leaveReview) {
                 URL.visit(urlString: Lang.Urls.appStore)
+            }
+            .buttonStyle(.regular)
+        }
+    }
+}
+
+private struct DonationsView: View {
+    var body: some View {
+        VStack(spacing: .md) {
+            Text(Lang.Donations.title).font(.title3.bold())
+            Text(Lang.Donations.message)
+            Button(Lang.Donations.linkTitle) {
+                URL.visit(urlString: Lang.Donations.link)
             }
             .buttonStyle(.regular)
         }

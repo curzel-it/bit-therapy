@@ -12,7 +12,6 @@ extension Species {
 
     static let sheepBlack = Species.sheep
         .with(id: "sheep_black")
-        .with(isPaid: true)
 }
 
 private extension EntityAnimation {

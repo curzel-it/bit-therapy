@@ -1,6 +1,5 @@
 import Combine
 import DesignSystem
-import InAppPurchases
 import Pets
 import PetsAssets
 import Schwifty
@@ -19,32 +18,16 @@ struct PetsGrid: View {
             Title(title: title)
             LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
                 ForEach(species) {
-                    Item(species: $0)
+                    ItemPreview(species: $0)
                 }
             }
         }
     }
 }
 
-// MARK: - Grid Item
-
-private struct Item: View {
-    @EnvironmentObject var viewModel: PetsSelectionViewModel
-
-    let species: Species
-    var isSelected: Bool { viewModel.isSelected(species) }
-
-    var body: some View {
-        ZStack {
-            Preview(species: species)
-            PetPriceOverlay(speciesId: species.id)
-        }
-    }
-}
-
 // MARK: - Item Preview
 
-private struct Preview: View {
+private struct ItemPreview: View {
     @EnvironmentObject var viewModel: PetsSelectionViewModel
 
     let species: Species

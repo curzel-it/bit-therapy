@@ -1,11 +1,9 @@
 import DesignSystem
-import InAppPurchases
 import Schwifty
 import SwiftUI
 
 struct PetsSelectionView: View {
     @StateObject var viewModel: PetsSelectionViewModel
-    let footer: AnyView
 
     var body: some View {
         ScrollView {
@@ -23,7 +21,6 @@ struct PetsSelectionView: View {
                     columns: viewModel.gridColums,
                     species: viewModel.unselectedSpecies
                 )
-                footer
             }
             .padding(.md)
         }
@@ -31,6 +28,5 @@ struct PetsSelectionView: View {
             viewModel.petDetailsView()
         }
         .environmentObject(viewModel)
-        .environmentObject(PricingService.global)
     }
 }

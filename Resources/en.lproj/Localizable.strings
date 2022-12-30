@@ -11,21 +11,6 @@
 "somethingWentWrong" = "Something went wrong, please try again";
 "done" = "Done";
 
-// MARK: - Survey
-
-"survey.takeSurvey" = "Take User Survey";
-"survey.feedbackViaSurvey" = "Do you have any feedback, ideas, opinions, or issue of any kind? Tell us about it!";
-"survey.requestPetViaSurvey" = "Didn't find something you like? We're open to suggestions on Discord or via Survey";
-"survey.url" = "https://tally.so/r/mJ9Y2K";
-"survey.url.ios" = "https://tally.so/r/wArvMD";
-
-// MARK: - Purchases
-
-"purchases.buy" = "Buy";
-"purchases.buyFor" = "Buy for";
-"purchases.purchasing" = "Purchasing...";
-"purchases.purchased" = "Thank you! 😍";
-
 // MARK: - Cheats
 
 "cheats.title" = "Change settings via code";
@@ -61,7 +46,6 @@
 "settings.size" = "Pet Size";
 "settings.launchAtLogin" = "Show pet on Login";
 "settings.speed" = "Speed";
-"settings.restorePurchases" = "Restore In-App Purchases";
 "settings.enabledDisplays" = "Enabled Displays";
 "settings.anonymousTracking" = "Enable anonymous usage stats";
 "settings.anonymousTracking.title" = "Anonymous Usage Stats";
@@ -188,3 +172,10 @@
 "game.intro.close" = "Ok!";
 "game.intro.complete" = "That's all, enjoy!";
 "game.desktopApp" = "If you have a mac, the app is also available there, check us out on the App Store ;)";
+
+// MARK: - Donations
+
+"donations.title" = "Support the project";
+"donations.message" = "I'll be honest: There's little to no perks - But if you like the app, support is appreciated!";
+"donations.linkTitle" = "Support via Patreon";
+"donations.link" = "https://www.patreon.com/urinamara";

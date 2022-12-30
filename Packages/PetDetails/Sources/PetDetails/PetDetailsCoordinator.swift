@@ -15,13 +15,10 @@ public protocol LocalizedContentProvider {
     var addPet: String { get }
     var cancel: String { get }
     var loading: String { get }
-    var purchasing: String { get }
-    var purchased: String { get }
     var remove: String { get }
     var screen: String { get }
     var somethingWentWrong: String { get }
 
-    func buyButtonTitle(formattedPrice: String) -> String
     func description(of species: Species) -> String
     func name(of species: Species) -> String
 }

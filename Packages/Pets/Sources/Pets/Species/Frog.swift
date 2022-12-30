@@ -12,7 +12,6 @@ extension Species {
 
     static let frogVenom = Species.frog
         .with(id: "frog_venom")
-        .with(isPaid: true)
 }
 
 private extension EntityAnimation {

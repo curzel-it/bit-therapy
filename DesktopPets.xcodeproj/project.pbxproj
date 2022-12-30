@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E1EBF31291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
 		1E1EBF32291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
-		1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
 		1E33599A28CDF6A8007BB53E /* Cheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599828CDF6A8007BB53E /* Cheats.swift */; };
@@ -20,13 +19,11 @@
 		1E4499FB2913211C00DD97BC /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
 		1E4499FD2913211C00DD97BC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1E4499FE2913211C00DD97BC /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
-		1E4499FF2913211C00DD97BC /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FB47728BD1A7F002F377D /* SurveyView.swift */; };
 		1E449A002913211C00DD97BC /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5C28740F8E00AB872E /* AboutView.swift */; };
 		1E449A012913211C00DD97BC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
 		1E449A032913211C00DD97BC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
 		1E449A062913211C00DD97BC /* CheatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33599B28CDFA25007BB53E /* CheatsView.swift */; };
 		1E449A092913211C00DD97BC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499EB2913211C00DD97BC /* DesignSystem */; };
-		1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E52913211C00DD97BC /* InAppPurchases */; };
 		1E449A0B2913211C00DD97BC /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499F12913211C00DD97BC /* RateKit */; };
 		1E449A0C2913211C00DD97BC /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E92913211C00DD97BC /* LaunchAtLogin */; };
 		1E449A0D2913211C00DD97BC /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = 1E4499E72913211C00DD97BC /* Pets */; };
@@ -59,7 +56,6 @@
 		1EE5662629312DE100DC81DF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE5662429312DE100DC81DF /* News.swift */; };
 		64DFB2082930313D00748B46 /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 64DFB2072930313D00748B46 /* Taku */; };
 		64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E628FAF7910021DDA1 /* CheatsImplementation.swift */; };
-		A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D22874768400A9F738 /* InAppPurchases */; };
 		A63AC7D72874768400A9F738 /* OnScreen in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D62874768400A9F738 /* OnScreen */; };
 		A63AC7D92874768400A9F738 /* Pets in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7D82874768400A9F738 /* Pets */; };
 		A63AC7E12874768400A9F738 /* Tracking in Frameworks */ = {isa = PBXBuildFile; productRef = A63AC7E02874768400A9F738 /* Tracking */; };
@@ -98,7 +94,6 @@
 		1E7D1EA42909C31600CC036B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1E7D33E3291499FB002C0188 /* PetsSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsSelection.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
-		1E7FB47728BD1A7F002F377D /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
@@ -126,7 +121,6 @@
 			files = (
 				1E449A092913211C00DD97BC /* DesignSystem in Frameworks */,
 				1EB1C779292D599200AAC4DD /* Taku in Frameworks */,
-				1E449A0A2913211C00DD97BC /* InAppPurchases in Frameworks */,
 				1E7D33DE29149491002C0188 /* PetsSelection in Frameworks */,
 				1E449A0B2913211C00DD97BC /* RateKit in Frameworks */,
 				1E449A0C2913211C00DD97BC /* LaunchAtLogin in Frameworks */,
@@ -152,7 +146,6 @@
 			files = (
 				A63AC7E9287479AD00A9F738 /* DesignSystem in Frameworks */,
 				1EB1C77B292D5A0100AAC4DD /* Taku in Frameworks */,
-				A63AC7D32874768400A9F738 /* InAppPurchases in Frameworks */,
 				1E7D33E029149498002C0188 /* PetsSelection in Frameworks */,
 				1E5D3EA528C08E5F00AC50C6 /* RateKit in Frameworks */,
 				A63AC7E52874768400A9F738 /* LaunchAtLogin in Frameworks */,
@@ -251,7 +244,6 @@
 				1E7D33E3291499FB002C0188 /* PetsSelection.swift */,
 				1E7D1EA42909C31600CC036B /* Settings.swift */,
 				1ED1D04029130C11004031BC /* StatusBar.swift */,
-				1E7FB47728BD1A7F002F377D /* SurveyView.swift */,
 				1E2AC745290B1093003D0AB2 /* Lang.swift */,
 				A6FB7D5C28740F8E00AB872E /* AboutView.swift */,
 				1EE5662429312DE100DC81DF /* News.swift */,
@@ -288,7 +280,6 @@
 			);
 			name = "Desktop Pets Dev";
 			packageProductDependencies = (
-				1E4499E52913211C00DD97BC /* InAppPurchases */,
 				1E4499E62913211C00DD97BC /* OnScreen */,
 				1E4499E72913211C00DD97BC /* Pets */,
 				1E4499E82913211C00DD97BC /* Tracking */,
@@ -339,7 +330,6 @@
 			);
 			name = "Desktop Pets";
 			packageProductDependencies = (
-				A63AC7D22874768400A9F738 /* InAppPurchases */,
 				A63AC7D62874768400A9F738 /* OnScreen */,
 				A63AC7D82874768400A9F738 /* Pets */,
 				A63AC7E02874768400A9F738 /* Tracking */,
@@ -526,7 +516,6 @@
 				1E4499FB2913211C00DD97BC /* Lang.swift in Sources */,
 				1E4499FD2913211C00DD97BC /* AppState.swift in Sources */,
 				1E4499FE2913211C00DD97BC /* CheatsImplementation.swift in Sources */,
-				1E4499FF2913211C00DD97BC /* SurveyView.swift in Sources */,
 				1E449A002913211C00DD97BC /* AboutView.swift in Sources */,
 				1E449A012913211C00DD97BC /* Settings.swift in Sources */,
 				1E449A032913211C00DD97BC /* App.swift in Sources */,
@@ -556,7 +545,6 @@
 				1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */,
 				1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */,
 				64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */,
-				1E28C01A28BD575300E82E2C /* SurveyView.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
 				1E7D1EA62909C31600CC036B /* Settings.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
@@ -1000,10 +988,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1E4499E52913211C00DD97BC /* InAppPurchases */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = InAppPurchases;
-		};
 		1E4499E62913211C00DD97BC /* OnScreen */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = OnScreen;
@@ -1081,10 +1065,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 64DFB2062930313D00748B46 /* XCRemoteSwiftPackageReference "taku-swift" */;
 			productName = Taku;
-		};
-		A63AC7D22874768400A9F738 /* InAppPurchases */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = InAppPurchases;
 		};
 		A63AC7D62874768400A9F738 /* OnScreen */ = {
 			isa = XCSwiftPackageProductDependency;

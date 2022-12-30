@@ -16,7 +16,6 @@ extension Species {
 
     static let pandaVest = Species.panda
         .with(id: "panda_vest")
-        .with(isPaid: false)
 }
 
 private extension EntityAnimation {

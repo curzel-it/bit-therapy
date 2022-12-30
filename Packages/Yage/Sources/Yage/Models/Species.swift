@@ -4,7 +4,6 @@ public struct Species {
     public fileprivate(set) var id: String
     public fileprivate(set) var behaviors: [EntityBehavior] = []
     public fileprivate(set) var capabilities: () -> Capabilities = { [] }
-    public fileprivate(set) var isPaid: Bool = false
     public fileprivate(set) var fps: TimeInterval = 10
     public fileprivate(set) var speed: CGFloat = 1
     public fileprivate(set) var movementPath: String = "walk"
@@ -18,7 +17,6 @@ public struct Species {
         self.init(id: species.id)
         behaviors = species.behaviors
         capabilities = species.capabilities
-        isPaid = species.isPaid
         fps = species.fps
         movementPath = species.movementPath
         dragPath = species.dragPath
@@ -51,12 +49,6 @@ public extension Species {
     func with(id: String) -> Species {
         var species = Species(from: self)
         species.id = id
-        return species
-    }
-
-    func with(isPaid: Bool) -> Species {
-        var species = Species(from: self)
-        species.isPaid = isPaid
         return species
     }
 

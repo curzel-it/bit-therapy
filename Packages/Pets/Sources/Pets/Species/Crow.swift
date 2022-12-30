@@ -13,5 +13,4 @@ extension Species {
 
     static let crowWhite = Species.crow
         .with(id: "crow_white")
-        .with(isPaid: true)
 }

@@ -65,7 +65,6 @@ private extension World {
             in: bounds
         )
         entity.isStatic = true
-        Logger.log(name, "Bottom bound", entity.frame.description)
         return entity
     }
 

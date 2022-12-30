@@ -21,7 +21,7 @@ extension MainScene {
     private static func showMainWindow() {
         let view = NSHostingView(rootView: ContentView())
         let window = NSWindow(
-            contentRect: CGRect(x: 400, y: 200, width: 600, height: 600),
+            contentRect: CGRect(x: 400, y: 200, width: 700, height: 700),
             styleMask: [.resizable, .closable, .titled],
             backing: .buffered,
             defer: false

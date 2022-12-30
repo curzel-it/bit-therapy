@@ -1,4 +1,3 @@
-import InAppPurchases
 import RateKit
 import Schwifty
 import SwiftUI
@@ -16,12 +15,11 @@ struct MyApp: App {
     init() {
         Logger.isEnabled = AppState.global.isDevApp
         Tracking.setup(isEnabled: AppState.global.trackingEnabled)
-        PricingService.global.setup()
         Cheats.enableCheats()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             RateKit.ratingsService(
-                debug: true,
-                launchesBeforeAskingForReview: 2
+                debug: AppState.global.isDevApp,
+                launchesBeforeAskingForReview: 10
             ).askForRatingIfNeeded()
         }
     }

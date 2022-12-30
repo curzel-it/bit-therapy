@@ -7,11 +7,10 @@ import Yage
 public class PetsSelectionCoordinator {
     public static func view(
         localizedContent lang: LocalizedContentProvider,
-        speciesProvider: PetsProvider,
-        footer: AnyView
+        speciesProvider: PetsProvider
     ) -> some View {
         let vm = PetsSelectionViewModel(localizedContent: lang, speciesProvider: speciesProvider)
-        return PetsSelectionView(viewModel: vm, footer: footer)
+        return PetsSelectionView(viewModel: vm)
     }
 }
 

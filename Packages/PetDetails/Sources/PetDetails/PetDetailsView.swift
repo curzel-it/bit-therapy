@@ -1,5 +1,4 @@
 import DesignSystem
-import InAppPurchases
 import NotAGif
 import Pets
 import Schwifty
@@ -8,7 +7,6 @@ import Tracking
 
 struct PetDetailsView: View {
     @StateObject var viewModel: PetDetailsViewModel
-    @EnvironmentObject var pricing: PricingService
 
     init(viewModel: PetDetailsViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -27,8 +25,8 @@ struct PetDetailsView: View {
             Tracking.didEnterDetails(
                 species: species,
                 name: viewModel.lang.name(of: viewModel.species),
-                price: pricing.price(for: species)?.doublePrice,
-                purchased: pricing.didPay(for: species)
+                price: nil,
+                purchased: false
             )
         }
         .environmentObject(viewModel)
@@ -71,10 +69,6 @@ private struct Footer: View {
             }
             if viewModel.canRemove {
                 Button(viewModel.lang.remove, action: viewModel.remove)
-                    .buttonStyle(.regular)
-            }
-            if viewModel.canBuy {
-                Button(viewModel.buyTitle, action: viewModel.buy)
                     .buttonStyle(.regular)
             }
             

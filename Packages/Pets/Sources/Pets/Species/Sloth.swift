@@ -14,7 +14,6 @@ extension Species {
 
     static let slothSwag = Species.sloth
         .with(id: "sloth_swag")
-        .with(isPaid: true)
 }
 
 private extension EntityAnimation {

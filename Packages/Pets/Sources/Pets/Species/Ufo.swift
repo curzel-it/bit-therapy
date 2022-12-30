@@ -8,7 +8,6 @@ public extension Species {
         .with(animation: .landing)
         .with(animation: .enterPortal)
         .with(animation: .crash)
-        .with(isPaid: true)
         .with(movementPath: "front")
         .with(dragPath: "front")
         .with(speed: 2)
