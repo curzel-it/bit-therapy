@@ -20,17 +20,24 @@ class PetsAssetsProvider {
         guard let url = url(sprite: sprite) else { return nil }
         return NSImage(contentsOf: url)
     }
+    
+    func allAssets(for species: String) -> [URL] {
+        allAssetsUrls.filter { $0.absoluteString.contains(species) }
+    }
+    
+    private lazy var allAssetsUrls: [URL] = {
+        Bundle.main.urls(forResourcesWithExtension: "png", subdirectory: "PetsAssets") ?? []
+    }()
         
     private lazy var sortedAssetsByKey: [String: [Asset]] = {
-        Bundle.main
-            .urls(forResourcesWithExtension: "png", subdirectory: "PetsAssets")?
+        allAssetsUrls
             .map { Asset(url: $0) }
             .sorted { $0.frame < $1.frame }
             .reduce([String: [Asset]](), { previousCache, asset in
                 var cache = previousCache
                 cache[asset.key] = (cache[asset.key] ?? []) + [asset]
                 return cache
-            }) ?? [:]
+            })
     }()
     
     private func url(sprite: String) -> URL? {

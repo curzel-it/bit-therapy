@@ -58,6 +58,10 @@
 		1E93C5FE29605EED007A5B91 /* CustomPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C5FC29605EED007A5B91 /* CustomPetsView.swift */; };
 		1E93C60029605F1B007A5B91 /* CustomPetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */; };
 		1E93C60129605F1B007A5B91 /* CustomPetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */; };
+		1E93C6052962396B007A5B91 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E93C6042962396B007A5B91 /* ZIPFoundation */; };
+		1E93C60729623992007A5B91 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E93C60629623992007A5B91 /* ZIPFoundation */; };
+		1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* PetsExporter.swift */; };
+		1E93C60A29623AE4007A5B91 /* PetsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* PetsExporter.swift */; };
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EA055592913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EB1C779292D599200AAC4DD /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB1C778292D599200AAC4DD /* Taku */; };
@@ -116,6 +120,8 @@
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
 		1E93C5FC29605EED007A5B91 /* CustomPetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsView.swift; sourceTree = "<group>"; };
 		1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsViewModel.swift; sourceTree = "<group>"; };
+		1E93C60229623192007A5B91 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E93C60829623AE4007A5B91 /* PetsExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsExporter.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 				1E449A0E2913211C00DD97BC /* Schwifty in Frameworks */,
 				1E449A102913211C00DD97BC /* OnScreen in Frameworks */,
 				1E449A122913211C00DD97BC /* Tracking in Frameworks */,
+				1E93C60729623992007A5B91 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +179,7 @@
 				1EE264012892866E00771170 /* Schwifty in Frameworks */,
 				A63AC7D72874768400A9F738 /* OnScreen in Frameworks */,
 				A63AC7E12874768400A9F738 /* Tracking in Frameworks */,
+				1E93C6052962396B007A5B91 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +231,7 @@
 			children = (
 				1E93C5FC29605EED007A5B91 /* CustomPetsView.swift */,
 				1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */,
+				1E93C60829623AE4007A5B91 /* PetsExporter.swift */,
 			);
 			path = CustomPets;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 				1E4499EE2913211C00DD97BC /* Schwifty */,
 				1E4499F12913211C00DD97BC /* RateKit */,
 				1EB1C778292D599200AAC4DD /* Taku */,
+				1E93C60629623992007A5B91 /* ZIPFoundation */,
 			);
 			productName = MacPets;
 			productReference = 1E449A1C2913211C00DD97BC /* Desktop Pets Dev.app */;
@@ -392,6 +402,7 @@
 				1E5D3EA428C08E5F00AC50C6 /* RateKit */,
 				1EB1C77A292D5A0100AAC4DD /* Taku */,
 				64DFB2072930313D00748B46 /* Taku */,
+				1E93C6042962396B007A5B91 /* ZIPFoundation */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -420,6 +431,7 @@
 				en,
 				Base,
 				it,
+				fr,
 			);
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
@@ -427,6 +439,7 @@
 				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
 				1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */,
 				64DFB2062930313D00748B46 /* XCRemoteSwiftPackageReference "taku-swift" */,
+				1E93C6032962396B007A5B91 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -581,6 +594,7 @@
 				1E449A012913211C00DD97BC /* Settings.swift in Sources */,
 				1E449A032913211C00DD97BC /* App.swift in Sources */,
 				1EA055592913E4BE0037803E /* AppDelegate.swift in Sources */,
+				1E93C60A29623AE4007A5B91 /* PetsExporter.swift in Sources */,
 				1E449A062913211C00DD97BC /* CheatsView.swift in Sources */,
 				1E36C820295F533D008EFB28 /* PetsSelectionView.swift in Sources */,
 			);
@@ -618,6 +632,7 @@
 				1E7D1EA62909C31600CC036B /* Settings.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
 				1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */,
+				1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */,
 				1E33599D28CDFA25007BB53E /* CheatsView.swift in Sources */,
 				1E36C81F295F533D008EFB28 /* PetsSelectionView.swift in Sources */,
 			);
@@ -639,6 +654,7 @@
 			children = (
 				A6FB7D4628740F8E00AB872E /* en */,
 				A6FB7D4728740F8E00AB872E /* it */,
+				1E93C60229623192007A5B91 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1031,6 +1047,14 @@
 				minimumVersion = 1.0.4;
 			};
 		};
+		1E93C6032962396B007A5B91 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.9;
+			};
+		};
 		1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/schwifty";
@@ -1093,6 +1117,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */;
 			productName = RateKit;
+		};
+		1E93C6042962396B007A5B91 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E93C6032962396B007A5B91 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+		1E93C60629623992007A5B91 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E93C6032962396B007A5B91 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
 		};
 		1EB1C778292D599200AAC4DD /* Taku */ = {
 			isa = XCSwiftPackageProductDependency;

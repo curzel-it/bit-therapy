@@ -7,14 +7,14 @@ import Yage
 
 struct PetDetailsView: View {
     @StateObject var viewModel: PetDetailsViewModel
-
+    
     init(isShown: Binding<Bool>, species: Species) {
         _viewModel = StateObject(wrappedValue: PetDetailsViewModel(isShown: isShown, species: species))
     }
-
+    
     var body: some View {
         VStack(spacing: .xl) {
-            Text(viewModel.title).font(.largeTitle.bold())
+            Header()
             AnimatedPreview()
             About().padding(.top, .lg)
             Footer()
@@ -26,9 +26,24 @@ struct PetDetailsView: View {
     }
 }
 
+private struct Header: View {
+    @EnvironmentObject var viewModel: PetDetailsViewModel
+    
+    var body: some View {
+        ZStack {
+            Text(viewModel.title).font(.largeTitle.bold())
+            
+            Image(systemName: "square.and.pencil")
+                .font(.title)
+                .onTapGesture { viewModel.export() }
+                .positioned(.trailingMiddle)
+        }
+    }
+}
+
 private struct About: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
-
+    
     var body: some View {
         Text(viewModel.species.about)
             .lineLimit(5)
@@ -38,7 +53,7 @@ private struct About: View {
 
 private struct AnimatedPreview: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
-
+    
     var body: some View {
         ZStack {
             AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { frame in

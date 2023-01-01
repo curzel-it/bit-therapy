@@ -47,6 +47,13 @@ class PetDetailsViewModel: ObservableObject {
         close()
     }
     
+    func export() {
+        PetsExporter.shared.export(species: species) { destination in
+            guard let destination else { return }
+            NSWorkspace.shared.open(destination)
+        }
+    }
+    
     func didAppear() {
         Tracking.didEnterDetails(
             species: species.id,

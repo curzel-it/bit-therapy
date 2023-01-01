@@ -55,6 +55,6 @@ private enum MenuItem: String {
     case quit
         
     var name: String {
-        Lang.Menu.item(rawValue)
+        Lang.name(forMenuItem: rawValue)
     }
 }

@@ -98,7 +98,7 @@ private struct DesktopInteractionsSwitch: View {
     var body: some View {
         HStack(spacing: .sm) {
             SettingsSwitch(
-                label: Lang.Settings.desktopInteractions,
+                label: Lang.Settings.desktopInteractionsTitle,
                 value: $appState.desktopInteractions
             )
             Image(systemName: "info.circle.fill")
@@ -109,7 +109,7 @@ private struct DesktopInteractionsSwitch: View {
         }
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
-                Text(Lang.Settings.desktopInteractions)
+                Text(Lang.Settings.desktopInteractionsTitle)
                     .font(.largeTitle)
                     .padding(.top)
                 Text(Lang.Settings.desktopInteractionsMessage)
@@ -155,10 +155,10 @@ private struct AnonymousTrackingSwitch: View {
         }
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
-                Text(Lang.Settings.anonymousTrackingExplainedTitle)
+                Text(Lang.Settings.anonymousTrackingTitle)
                     .font(.largeTitle)
                     .padding(.top)
-                Text(Lang.Settings.anonymousTrackingExplained)
+                Text(Lang.Settings.anonymousTrackingMessage)
                     .font(.body)
                     .multilineTextAlignment(.center)
                 
