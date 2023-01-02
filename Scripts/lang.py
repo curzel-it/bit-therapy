@@ -88,8 +88,19 @@ extension Lang {
 }
 
 extension Species {
-    var name: String { "species.name.\(id)".localized() }
-    var about: String { "species.about.\(id)".localized() }
+    var name: String {
+        let key = "species.name.\(id)"
+        let value = key.localized()
+        if key != value { return value }
+        return key
+    }
+    
+    var about: String {
+        let key = "species.about.\(id)"
+        let value = key.localized()
+        if key != value { return value }
+        return key
+    }
 }
 
 private extension String {
@@ -123,6 +134,7 @@ def swift_source_for_section(name, values):
     code = ''
     name = name.capitalize()
     if name == 'Petselection': name = 'PetSelection'
+    if name == 'Custompets': name = 'CustomPets'
     if name != '': code += f'enum {name} ' + '{\n'
     code += '\n'.join([swift_source(key) for key in values])
     if name != '': code += '\n}'

@@ -19,14 +19,3 @@ extension AppPage: CustomStringConvertible {
         }
     }
 }
-
-extension AppPage {
-    var icon: String {
-        switch self {
-        case .about, .none: return "info.square.fill"
-        case .home: return "circle.grid.3x3.fill"
-        case .settings: return "gearshape.fill"
-        case .news: return "message.fill"
-        }
-    }
-}

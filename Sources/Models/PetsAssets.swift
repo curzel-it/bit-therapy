@@ -5,6 +5,13 @@ import SwiftUI
 class PetsAssetsProvider {
     static let shared = PetsAssetsProvider()
     
+    private var allAssetsUrls: [URL] = []
+    private var sortedAssetsByKey: [String: [Asset]] = [:]
+    
+    init() {
+        reloadAssets()
+    }
+    
     func frames(for species: String, animation: String) -> [String] {
         let assets = sortedAssetsByKey[key(for: species, animation: animation)] ?? []
         return assets.map { $0.sprite }
@@ -25,12 +32,10 @@ class PetsAssetsProvider {
         allAssetsUrls.filter { $0.absoluteString.contains(species) }
     }
     
-    private lazy var allAssetsUrls: [URL] = {
-        Bundle.main.urls(forResourcesWithExtension: "png", subdirectory: "PetsAssets") ?? []
-    }()
+    func reloadAssets() {
+        allAssetsUrls = originalUrls() + customUrls()
         
-    private lazy var sortedAssetsByKey: [String: [Asset]] = {
-        allAssetsUrls
+        sortedAssetsByKey = allAssetsUrls
             .map { Asset(url: $0) }
             .sorted { $0.frame < $1.frame }
             .reduce([String: [Asset]](), { previousCache, asset in
@@ -38,7 +43,7 @@ class PetsAssetsProvider {
                 cache[asset.key] = (cache[asset.key] ?? []) + [asset]
                 return cache
             })
-    }()
+    }
     
     private func url(sprite: String) -> URL? {
         guard let key = key(fromSprite: sprite) else { return nil }
@@ -54,6 +59,21 @@ class PetsAssetsProvider {
     
     private func key(fromSprite sprite: String) -> String? {
         sprite.components(separatedBy: "-").first
+    }
+}
+
+private extension PetsAssetsProvider {
+    func originalUrls() -> [URL] {
+        Bundle.main.urls(forResourcesWithExtension: "png", subdirectory: "PetsAssets") ?? []
+    }
+    
+    func customUrls() -> [URL] {
+        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        guard let url else { return [] }
+        let urls = try? FileManager.default
+            .contentsOfDirectory(at: url, includingPropertiesForKeys: nil)
+            .filter { $0.pathExtension == "png" }
+        return urls ?? []
     }
 }
 

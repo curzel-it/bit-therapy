@@ -24,16 +24,21 @@ class PetsSelectionViewModel: ObservableObject {
         [.init(.adaptive(minimum: 100, maximum: 140), spacing: Spacing.lg.rawValue)]
     }
 
-    private var stateCanc: AnyCancellable!
+    private var disposables = Set<AnyCancellable>()
 
     init() {
-        loadPets(selectedSpecies: AppState.global.speciesOnStage.value)
-        stateCanc = AppState.global.speciesOnStage.sink { self.loadPets(selectedSpecies: $0) }
+        Publishers
+            .CombineLatest(Species.all, AppState.global.speciesOnStage)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] all, selected in
+                self?.loadPets(all: all, selected: selected)
+            }
+            .store(in: &disposables)
     }
 
-    private func loadPets(selectedSpecies species: [Species]) {
-        speciesOnStage = Species.all.filter { species.contains($0) }
-        unselectedSpecies = Species.all.filter { !species.contains($0) }
+    private func loadPets(all: [Species], selected: [Species]) {
+        speciesOnStage = all.filter { selected.contains($0) }
+        unselectedSpecies = all.filter { !selected.contains($0) }
     }
 
     func showDetails(of species: Species?) {

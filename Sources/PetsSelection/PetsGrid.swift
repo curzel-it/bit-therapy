@@ -49,7 +49,6 @@ private struct Title: View {
     var body: some View {
         Text(title)
             .textAlign(.leading)
-            .font(.title2, when: .macOS)
-            .font(.title2.bold(), when: .iOS)
+            .font(.title2)
     }
 }

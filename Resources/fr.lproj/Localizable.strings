@@ -12,6 +12,19 @@
 "cheats.placeholder" = "Code";
 "cheats.title" = "Changer les paramètres via le code";
 "cheats.validCode" = "Activé !";
+"customPets.dragAreaMessage" = "Drag and drop your zip file here";
+"customPets.exportSuccess" = "Exported!";
+"customPets.exportSuccessMessage" = "You can now unzip and customize the pet how you want, or crete a new one!";
+"customPets.genericImportError" = "There was an error importing your files, maybe close the app and try again? Or ask for help on our Discord!";
+"customPets.genericExportError" = "There was an error exporting, maybe close the app and try again? Or ask for help on our Discord!";
+"customPets.importSuccess" = "Successfully imported!";
+"customPets.invalidJson" = "Your species json file has some errors in it, please double check the documentation or ask for help on Discord!";
+"customPets.message" = "You can now create your own custom pets!\nIt requires some design work on your end, but it can be really rewarding!\nTo start, follow the instructions in the link below, then just drag and drop your zip file in the area below!";
+"customPets.missingFiles" = "Seems like something is missing (%@), check the documentation or ask for help on Discord!";
+"customPets.readTheDocs" = "Instructions";
+"customPets.speciesAlreadyExists" = "Seems like %@ already exists!\nTry a different name or remove the previous version.";
+"customPets.title" = "Create your own!";
+"delete" = "Effacer";
 "disable" = "Désactiver";
 "donations.linkTitle" = "Soutenir via Patreon";
 "donations.message" = "Je vais être honnête : il n'y a presque pas d'avantages - Mais si tu aimes l'application, le soutien est apprécié !";
@@ -27,6 +40,7 @@
 "menu.quit" = "Quitter";
 "menu.settings" = "Paramètres";
 "menu.show" = "Montrer les Animaux";
+"ok" = "Ok";
 "page.about" = "À propos";
 "page.help" = "Aide";
 "page.home" = "Animaux";
@@ -133,6 +147,7 @@
 "species.name.trex_yellow" = "T-Rex doré";
 "species.name.ufo" = "UFO";
 "urls.appStore" = "https://apps.apple.com/app/desktop-pets/id1575542220";
+"urls.customPetsDocs" = "https://curzel.it/pets/create-custom-pets.html";
 "urls.discord" = "https://discord.gg/MCdEgXKSH5";
 "urls.donations" = "https://www.patreon.com/urinamara";
 "urls.github" = "https://github.com/curzel-it/pet-therapy";

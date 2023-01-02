@@ -6,13 +6,66 @@ import AppKit
 import Foundation
 import Pets
 import Schwifty
+import SwiftUI
 import Yage
 import ZIPFoundation
 
-class PetsExporter {
+struct ExportSpeciesButton: View {
+    @State var title: String?
+    @State var message: String?
+    
+    let species: Species
+    
+    var body: some View {
+        Image(systemName: "square.and.pencil")
+            .font(.title)
+            .onTapGesture { export() }
+            .sheet(isPresented: Binding(get: { return message != nil }, set: { _, _ in })) {
+                VStack(spacing: .zero) {
+                    if let title {
+                        Text(title).padding(.top, .lg)
+                    }
+                    Text(message ?? "")
+                        .padding(.top, .lg)
+                        .padding(.bottom, .lg)
+                    HStack {
+                        Button(Lang.CustomPets.readTheDocs) {
+                            title = nil
+                            message = nil
+                            guard let url = URL(string: Lang.Urls.customPetsDocs) else { return }
+                            NSWorkspace.shared.open(url)
+                        }
+                        .buttonStyle(.text)
+                        
+                        Button(Lang.ok) {
+                            title = nil
+                            message = nil
+                        }
+                        .buttonStyle(.regular)
+                    }
+                }
+                .padding(.md)
+            }
+    }
+    
+    func export() {
+        PetsExporter.shared.export(species) { destination in
+            if let destination {
+                NSWorkspace.shared.open(destination)
+                title = Lang.CustomPets.exportSuccess
+                message = Lang.CustomPets.exportSuccessMessage
+            } else {
+                title = nil
+                message = Lang.CustomPets.genericExportError
+            }
+        }
+    }
+}
+
+private class PetsExporter {
     static let shared = PetsExporter()
     
-    func export(species: Species, completion: @escaping (URL?) -> Void) {
+    func export(_ species: Species, completion: @escaping (URL?) -> Void) {
         Logger.log("Exporter", "Exporting", species.id)
         guard let destination = exportUrl(for: species) else { return }
         guard let exportables = exportableUrls(for: species) else { return }

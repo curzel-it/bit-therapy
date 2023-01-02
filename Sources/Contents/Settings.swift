@@ -287,14 +287,12 @@ struct SettingsSlider: View {
         VHStack(axis, spacing: Spacing.md.rawValue) {
             Text(label)
                 .textAlign(.leading)
-                .frame(width: 100, when: .macOS)
+                .frame(width: 100)
 
             Slider(value: value, in: range) { EmptyView() }
-                .frame(width: 300, when: .iPad)
 
             Button(Lang.reset) { reset() }
                 .buttonStyle(.text)
-                .positioned(.trailing, when: .iOS)
         }
     }
 }

@@ -6,10 +6,12 @@ import Yage
 enum Lang {
     static let appName = "appName".localized()
     static let cancel = "cancel".localized()
+    static let delete = "delete".localized()
     static let disable = "disable".localized()
     static let done = "done".localized()
     static let enable = "enable".localized()
     static let loading = "loading".localized()
+    static let ok = "ok".localized()
     static let remove = "remove".localized()
     static let reset = "reset".localized()
     static let screen = "screen".localized()
@@ -25,17 +27,28 @@ enum Lang {
         static let mailMessage = "about.mailMessage".localized()
         static let privacyPolicy = "about.privacyPolicy".localized()
     }
-    
-    enum CustomPets {
-        static let export = "customPets.export".localized()
-    }
-    
+
     enum Cheats {
         static let enable = "cheats.enable".localized()
         static let invalidCode = "cheats.invalidCode".localized()
         static let placeholder = "cheats.placeholder".localized()
         static let title = "cheats.title".localized()
         static let validCode = "cheats.validCode".localized()
+    }
+
+    enum CustomPets {
+        static let dragAreaMessage = "customPets.dragAreaMessage".localized()
+        static let exportSuccess = "customPets.exportSuccess".localized()
+        static let exportSuccessMessage = "customPets.exportSuccessMessage".localized()
+        static let genericImportError = "customPets.genericImportError".localized()
+        static let genericExportError = "customPets.genericExportError".localized()
+        static let importSuccess = "customPets.importSuccess".localized()
+        static let invalidJson = "customPets.invalidJson".localized()
+        static let message = "customPets.message".localized()
+        static let missingFiles = "customPets.missingFiles".localized()
+        static let readTheDocs = "customPets.readTheDocs".localized()
+        static let speciesAlreadyExists = "customPets.speciesAlreadyExists".localized()
+        static let title = "customPets.title".localized()
     }
 
     enum Donations {
@@ -77,6 +90,7 @@ enum Lang {
 
     enum Urls {
         static let appStore = "urls.appStore".localized()
+        static let customPetsDocs = "urls.customPetsDocs".localized()
         static let discord = "urls.discord".localized()
         static let donations = "urls.donations".localized()
         static let github = "urls.github".localized()
@@ -94,8 +108,19 @@ extension Lang {
 }
 
 extension Species {
-    var name: String { "species.name.\(id)".localized() }
-    var about: String { "species.about.\(id)".localized() }
+    var name: String {
+        let key = "species.name.\(id)"
+        let value = key.localized()
+        if key != value { return value }
+        return key
+    }
+    
+    var about: String {
+        let key = "species.about.\(id)"
+        let value = key.localized()
+        if key != value { return value }
+        return key
+    }
 }
 
 private extension String {

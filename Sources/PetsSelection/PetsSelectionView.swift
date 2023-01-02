@@ -23,6 +23,9 @@ struct PetsSelectionView: View {
                     species: viewModel.unselectedSpecies
                 )
                 .padding(.bottom, .xxl)
+                
+                PetsImporterDragAndDropView()
+                    .padding(.bottom, .xxl)
             }
             .padding(.md)
         }

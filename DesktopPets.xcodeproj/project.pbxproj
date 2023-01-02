@@ -54,14 +54,14 @@
 		1E7D1EA62909C31600CC036B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
 		1E7D33F42915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
-		1E93C5FD29605EED007A5B91 /* CustomPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C5FC29605EED007A5B91 /* CustomPetsView.swift */; };
-		1E93C5FE29605EED007A5B91 /* CustomPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C5FC29605EED007A5B91 /* CustomPetsView.swift */; };
-		1E93C60029605F1B007A5B91 /* CustomPetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */; };
-		1E93C60129605F1B007A5B91 /* CustomPetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */; };
 		1E93C6052962396B007A5B91 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E93C6042962396B007A5B91 /* ZIPFoundation */; };
 		1E93C60729623992007A5B91 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E93C60629623992007A5B91 /* ZIPFoundation */; };
 		1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* PetsExporter.swift */; };
 		1E93C60A29623AE4007A5B91 /* PetsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* PetsExporter.swift */; };
+		1E93C60C29624891007A5B91 /* PetsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* PetsImporter.swift */; };
+		1E93C60D29624891007A5B91 /* PetsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* PetsImporter.swift */; };
+		1E93C60F2962E781007A5B91 /* PetsDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* PetsDeleter.swift */; };
+		1E93C6102962E781007A5B91 /* PetsDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* PetsDeleter.swift */; };
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EA055592913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EB1C779292D599200AAC4DD /* Taku in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB1C778292D599200AAC4DD /* Taku */; };
@@ -118,10 +118,10 @@
 		1E449A1E291321CF00DD97BC /* InfoMac-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfoMac-Dev.plist"; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
-		1E93C5FC29605EED007A5B91 /* CustomPetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsView.swift; sourceTree = "<group>"; };
-		1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsViewModel.swift; sourceTree = "<group>"; };
 		1E93C60229623192007A5B91 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E93C60829623AE4007A5B91 /* PetsExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsExporter.swift; sourceTree = "<group>"; };
+		1E93C60B29624891007A5B91 /* PetsImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsImporter.swift; sourceTree = "<group>"; };
+		1E93C60E2962E781007A5B91 /* PetsDeleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsDeleter.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
@@ -217,11 +217,11 @@
 		1E36C818295F533D008EFB28 /* PetsSelection */ = {
 			isa = PBXGroup;
 			children = (
-				1E36C819295F533D008EFB28 /* PetsSelectionView.swift */,
-				1E36C81A295F533D008EFB28 /* PetsGrid.swift */,
 				1E36C81B295F533D008EFB28 /* PetDetailsView.swift */,
-				1E36C81C295F533D008EFB28 /* PetsSelectionViewModel.swift */,
 				1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */,
+				1E36C81A295F533D008EFB28 /* PetsGrid.swift */,
+				1E36C819295F533D008EFB28 /* PetsSelectionView.swift */,
+				1E36C81C295F533D008EFB28 /* PetsSelectionViewModel.swift */,
 			);
 			path = PetsSelection;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 		1E93C5FB29605EDE007A5B91 /* CustomPets */ = {
 			isa = PBXGroup;
 			children = (
-				1E93C5FC29605EED007A5B91 /* CustomPetsView.swift */,
-				1E93C5FF29605F1B007A5B91 /* CustomPetsViewModel.swift */,
+				1E93C60E2962E781007A5B91 /* PetsDeleter.swift */,
 				1E93C60829623AE4007A5B91 /* PetsExporter.swift */,
+				1E93C60B29624891007A5B91 /* PetsImporter.swift */,
 			);
 			path = CustomPets;
 			sourceTree = "<group>";
@@ -583,16 +583,16 @@
 				1E4499F92913211C00DD97BC /* StatusBar.swift in Sources */,
 				1E36C824295F533D008EFB28 /* PetDetailsView.swift in Sources */,
 				1E42E4D5295F7A5200F425F8 /* Species.swift in Sources */,
-				1E93C60129605F1B007A5B91 /* CustomPetsViewModel.swift in Sources */,
 				1E33FD96295EEDD700B9FC36 /* PetsAssets.swift in Sources */,
 				1E4499FB2913211C00DD97BC /* Lang.swift in Sources */,
-				1E93C5FE29605EED007A5B91 /* CustomPetsView.swift in Sources */,
 				1E4499FD2913211C00DD97BC /* AppState.swift in Sources */,
 				1E36C826295F533D008EFB28 /* PetsSelectionViewModel.swift in Sources */,
 				1E4499FE2913211C00DD97BC /* CheatsImplementation.swift in Sources */,
 				1E449A002913211C00DD97BC /* AboutView.swift in Sources */,
+				1E93C6102962E781007A5B91 /* PetsDeleter.swift in Sources */,
 				1E449A012913211C00DD97BC /* Settings.swift in Sources */,
 				1E449A032913211C00DD97BC /* App.swift in Sources */,
+				1E93C60D29624891007A5B91 /* PetsImporter.swift in Sources */,
 				1EA055592913E4BE0037803E /* AppDelegate.swift in Sources */,
 				1E93C60A29623AE4007A5B91 /* PetsExporter.swift in Sources */,
 				1E449A062913211C00DD97BC /* CheatsView.swift in Sources */,
@@ -621,16 +621,16 @@
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1E36C823295F533D008EFB28 /* PetDetailsView.swift in Sources */,
 				1E42E4D4295F7A5200F425F8 /* Species.swift in Sources */,
-				1E93C60029605F1B007A5B91 /* CustomPetsViewModel.swift in Sources */,
 				1E33FD95295EEDD700B9FC36 /* PetsAssets.swift in Sources */,
 				1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */,
-				1E93C5FD29605EED007A5B91 /* CustomPetsView.swift in Sources */,
 				1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */,
 				1E36C825295F533D008EFB28 /* PetsSelectionViewModel.swift in Sources */,
 				64F4B6E828FAF7A90021DDA1 /* CheatsImplementation.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
+				1E93C60F2962E781007A5B91 /* PetsDeleter.swift in Sources */,
 				1E7D1EA62909C31600CC036B /* Settings.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
+				1E93C60C29624891007A5B91 /* PetsImporter.swift in Sources */,
 				1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */,
 				1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */,
 				1E33599D28CDFA25007BB53E /* CheatsView.swift in Sources */,

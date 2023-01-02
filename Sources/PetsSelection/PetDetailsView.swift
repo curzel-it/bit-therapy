@@ -31,11 +31,9 @@ private struct Header: View {
     
     var body: some View {
         ZStack {
-            Text(viewModel.title).font(.largeTitle.bold())
-            
-            Image(systemName: "square.and.pencil")
-                .font(.title)
-                .onTapGesture { viewModel.export() }
+            Text(viewModel.title)
+                .font(.largeTitle.bold())
+            ExportSpeciesButton(species: viewModel.species)
                 .positioned(.trailingMiddle)
         }
     }
@@ -70,18 +68,23 @@ private struct Footer: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
     var body: some View {
-        HStack {
-            if viewModel.canSelect {
-                Button(Lang.PetSelection.addPet, action: viewModel.selected)
-                    .buttonStyle(.regular)
+        VStack {
+            HStack {
+                if viewModel.canSelect {
+                    Button(Lang.PetSelection.addPet, action: viewModel.selected)
+                        .buttonStyle(.regular)
+                }
+                if viewModel.canRemove {
+                    Button(Lang.remove, action: viewModel.remove)
+                        .buttonStyle(.regular)
+                }
+                
+                Button(Lang.cancel, action: viewModel.close)
+                    .buttonStyle(.text)
             }
-            if viewModel.canRemove {
-                Button(Lang.remove, action: viewModel.remove)
-                    .buttonStyle(.regular)
+            DeletePetButton(species: viewModel.species) { deleted in
+                if deleted { viewModel.close() }
             }
-            
-            Button(Lang.cancel, action: viewModel.close)
-                .buttonStyle(.text)
         }
     }
 }
