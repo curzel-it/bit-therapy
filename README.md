@@ -19,19 +19,23 @@ For daily use I recommend getting the App from the App Store.
 
 Alternatively, you can download the latest release from [GitHub]( https://github.com/curzel-it/pet-therapy/releases/latest) or build from source (see below).
 
-[![Get it on the App Store](Gallery/appstore_badge.png)](https://apps.apple.com/app/desktop-pets/id1575542220)
+[![Get it on the App Store](docs/appstore_badge.png)](https://apps.apple.com/app/desktop-pets/id1575542220)
 
 ## Screenshots
 
-![App running on my mac](Gallery/demo.gif)
-![PetsSelectionView, light mode](Gallery/1.png)
-![Settings, light mode](Gallery/3.png)
+![App running on my mac](docs/demo.gif)
+![PetsSelectionView, light mode](docs/1.png)
+![Settings, light mode](docs/3.png)
 
 ## How does it work?
 
 * A window with transparent background moves around according to pet position
 * [Windows are detected as obstacles](https://github.com/curzel-it/windows-detector)
 * A lot of hard work with [Aseprite](https://github.com/aseprite/aseprite)
+
+## Create custom pets
+
+Starting from version 2.20 you can now create custom pets, please check [the documentation](https://curzel.it/pet-therapy/custompets).
 
 ## Build from Source
 
@@ -40,15 +44,6 @@ Alternatively, you can download the latest release from [GitHub]( https://github
 1. Give Xcode some time to figure out dependencies...
 1. Select target 'Desktop Pets Dev' or 'Mobile Pets'
 1. Run
-
-### Missing Cheats
-As you have probably guessed, a piece of code is missing.
-
-Removing the code was the easiest way to hide both cheat codes and their effect...
-
-I am a lazy guy, please understand 😅
-
-You can just `return false` in `Cheats.enableCheat(code:save:)` to make the app compile for personal use.
 
 ### Swift Packages not loading
 Unfortunately, Xcode does not like local swift packages very much. In case you get any error about missing packages, try the following:

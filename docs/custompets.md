@@ -5,10 +5,10 @@
 You can now create your own custom pets!
 
 ## TLDR;
-1. Modify or create your own sprite files
-1. Create a Json file describing your pet behaviors
-1. Zip everything
 1. Enable creator mode using cheat code `Set!creatorMode=true`
+1. Click on a pet you like and export it (see below)
+1. Modify the json file the sprites as you see fit
+1. Zip everything
 1. Drag and drop the zip in the app
 
 ## Species Definition
@@ -78,15 +78,14 @@ Each species needs to have at least a `front` animation, which is loaded in home
 * `fps` animations in some species are *slower* (such as snail or the sunflower), so no need to render them as fast
 
 ## Sprites
-**Filenames are critical and case-sensitive**
 
 Each animations is composed of multiple sprites, each in a dedicated `png` image file.
 
-Each file must follow this convention: 
+Each file **must** follow this convention: 
 
 `{species.id}_{animation.id}-{index}.png`.
 
-Indeces can be either 0-based or 1-based, but need to follow an incremental and sequential order.
+Indeces can be either 0-based or 1-based, but need to follow an incremental and sequential order. Names are also case-sensitive.
 
 For example:
 * `ape_front-1.png`
@@ -99,6 +98,11 @@ For example:
 * `ape_walk-3.png`
 * `sloth_swag_lightsaber-0.png`
 * ...
+
+To get you quickstarted, you can take a look at the [Aseprite files](https://github.com/curzel-it/pet-therapy/tree/main/Aseprite) for my pets!
+
+Aseprite is a great tool, more info [here](https://github.com/aseprite/aseprite).
+
 
 ## App Features
 ### Export

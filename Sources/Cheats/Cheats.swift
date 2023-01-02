@@ -8,7 +8,6 @@ struct Cheats {
 
     @discardableResult
     static func enableCheat(code: String, save: Bool = true) -> Bool {
-        // Comment out the body of this function and return false if building from source.
         guard let cheat = Cheat.from(code: code) else { return false }
         cheat.enable()
         if save && !cheat.isSingleUse {
