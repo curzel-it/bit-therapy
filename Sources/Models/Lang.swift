@@ -114,7 +114,7 @@ extension Species {
         if key != value { return value }
         return key
     }
-    
+
     var about: String {
         let key = "species.about.\(id)"
         let value = key.localized()
