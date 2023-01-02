@@ -16,7 +16,7 @@ struct PetsImporterDragAndDropView: View {
     var body: some View {
         if appState.creatorMode && PetsImporter.shared.canImport() {
             VStack(spacing: .zero) {
-                Text(Lang.CustomPets.title).font(.title2).padding(.bottom, .md)
+                Text(Lang.CustomPets.title).font(.title2.bold()).padding(.bottom, .md)
                 Text(Lang.CustomPets.message)
                 LinkToDocs().padding(.bottom, .lg)
                 DragAndDrop()
