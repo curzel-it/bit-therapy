@@ -15,7 +15,13 @@ class AppState: ObservableObject {
         let bundle = Bundle.main.bundleIdentifier ?? ""
         return bundle.contains(".dev")
     }()
-
+    
+    @Published var creatorMode: Bool = false {
+        didSet {
+            storage.creatorMode = creatorMode
+        }
+    }
+    
     @Published var desktopInteractions: Bool = true {
         didSet {
             storage.desktopInteractions = desktopInteractions
@@ -88,6 +94,7 @@ class AppState: ObservableObject {
         trackingEnabled = storage.trackingEnabled
         ufoAbductionSchedule = storage.ufoAbductionSchedule
         disabledScreens = storage.disabledScreens
+        creatorMode = storage.creatorMode
     }
     
     func isEnabled(screen: NSScreen) -> Bool {
@@ -123,6 +130,7 @@ private class Storage {
     @AppStorage("showInMenuBar") var showInMenuBar = true
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("trackingEnabled") var trackingEnabled = false
+    @AppStorage("creatorMode") var creatorMode = false
     @AppStorage("ufoAbductionSchedule") var ufoAbductionSchedule: String = "daily:22:30"
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     

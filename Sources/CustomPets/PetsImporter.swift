@@ -11,8 +11,10 @@ import Yage
 import ZIPFoundation
 
 struct PetsImporterDragAndDropView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
-        if PetsImporter.shared.canImport() {
+        if appState.creatorMode && PetsImporter.shared.canImport() {
             VStack(spacing: .zero) {
                 Text(Lang.CustomPets.title).font(.title2).padding(.bottom, .md)
                 Text(Lang.CustomPets.message)

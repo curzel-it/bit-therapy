@@ -8,11 +8,13 @@ import SwiftUI
 import Yage
 
 struct DeletePetButton: View {
+    @EnvironmentObject var appState: AppState
+    
     let species: Species
     let completion: (Bool) -> Void
     
     var body: some View {
-        if PetsDeleter.shared.canDelete(species) {
+        if appState.creatorMode && PetsDeleter.shared.canDelete(species) {
             Button(Lang.delete) {
                 let deleted = PetsDeleter.shared.safeDelete(species)
                 completion(deleted)

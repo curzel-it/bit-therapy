@@ -11,41 +11,45 @@ import Yage
 import ZIPFoundation
 
 struct ExportSpeciesButton: View {
+    @EnvironmentObject var appState: AppState
+    
     @State var title: String?
     @State var message: String?
     
     let species: Species
     
     var body: some View {
-        Image(systemName: "square.and.pencil")
-            .font(.title)
-            .onTapGesture { export() }
-            .sheet(isPresented: Binding(get: { return message != nil }, set: { _, _ in })) {
-                VStack(spacing: .zero) {
-                    if let title {
-                        Text(title).padding(.top, .lg)
-                    }
-                    Text(message ?? "")
-                        .padding(.top, .lg)
-                        .padding(.bottom, .lg)
-                    HStack {
-                        Button(Lang.CustomPets.readTheDocs) {
-                            title = nil
-                            message = nil
-                            guard let url = URL(string: Lang.Urls.customPetsDocs) else { return }
-                            NSWorkspace.shared.open(url)
+        if appState.creatorMode {
+            Image(systemName: "square.and.pencil")
+                .font(.title)
+                .onTapGesture { export() }
+                .sheet(isPresented: Binding(get: { return message != nil }, set: { _, _ in })) {
+                    VStack(spacing: .zero) {
+                        if let title {
+                            Text(title).padding(.top, .lg)
                         }
-                        .buttonStyle(.text)
-                        
-                        Button(Lang.ok) {
-                            title = nil
-                            message = nil
+                        Text(message ?? "")
+                            .padding(.top, .lg)
+                            .padding(.bottom, .lg)
+                        HStack {
+                            Button(Lang.CustomPets.readTheDocs) {
+                                title = nil
+                                message = nil
+                                guard let url = URL(string: Lang.Urls.customPetsDocs) else { return }
+                                NSWorkspace.shared.open(url)
+                            }
+                            .buttonStyle(.text)
+                            
+                            Button(Lang.ok) {
+                                title = nil
+                                message = nil
+                            }
+                            .buttonStyle(.regular)
                         }
-                        .buttonStyle(.regular)
                     }
+                    .padding(.md)
                 }
-                .padding(.md)
-            }
+        }
     }
     
     func export() {
