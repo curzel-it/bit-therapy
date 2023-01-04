@@ -117,11 +117,18 @@ private extension WindowInfo {
         guard !frame.isNull && !frame.isEmpty && !frame.isInfinite else { return false }
         guard frame != worldBounds else { return false }
         guard !frame.contains(worldBounds) else { return false }
-        guard owner != "shades" else { return false }
+        guard !ignoreList.contains(owner) else { return false }
 
         if owner.contains("desktop pets") {
             return frame.width >= 450 && frame.height >= 450
         }
+        Logger.log("WindowInfo", "Owner", owner)
         return true
     }
 }
+
+private let ignoreList: [String] = [
+    "parallels desktop",
+    "shades",
+    "tiles"
+]

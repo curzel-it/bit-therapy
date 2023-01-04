@@ -26,7 +26,8 @@ public extension Collision {
 
     func sides() -> [Side] {
         var sides: [Side] = []
-        let angle = sourceBody.center.angle(to: intersection.center)
+        let bodyCenter = sourceBody.center
+        let angle = bodyCenter.angle(to: intersection.center)
 
         func inBetween(_ angle: CGFloat, _ pi1: CGFloat, _ pi2: CGFloat) -> Bool {
             if pi1 == 2 || pi2 == 2 || pi1 == 0 || pi2 == 0 {
@@ -38,10 +39,10 @@ public extension Collision {
         }
 
         let intersectionEdges = intersection.corners.filter { $0.isOnEdge(of: sourceBody) }
-        let touchesTop = intersectionEdges.contains { $0.y == sourceBody.maxY }
-        let touchesRight = intersectionEdges.contains { $0.x == sourceBody.maxX }
-        let touchesBottom = intersectionEdges.contains { $0.y == sourceBody.minY }
-        let touchesLeft = intersectionEdges.contains { $0.x == sourceBody.minX }
+        let touchesTop = intersectionEdges.contains { bodyCenter.y < $0.y && $0.y <= sourceBody.maxY }
+        let touchesRight = intersectionEdges.contains { bodyCenter.x < $0.x && $0.x <= sourceBody.maxX }
+        let touchesBottom = intersectionEdges.contains { bodyCenter.y > $0.y && $0.y >= sourceBody.minY }
+        let touchesLeft = intersectionEdges.contains { bodyCenter.x > $0.x && $0.x >= sourceBody.minX }
 
         if touchesTop && inBetween(angle, 0.0, 1.0) { sides.append(.top) }
         if touchesRight && (inBetween(angle, 0.0, 0.5) || inBetween(angle, 1.5, 2.0)) { sides.append(.right) }

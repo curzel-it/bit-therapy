@@ -161,7 +161,7 @@ class CollisionsTests: XCTestCase {
         )
         let collision = entity1.collision(with: entity2)
         let sides = collision?.sides() ?? []
-        XCTAssertEqual(sides, [.right])
+        XCTAssertEqual(sides, [.top, .right, .bottom])
     }
 
     func testSidesDetectedWhenLargerCollidesOnRight() {
