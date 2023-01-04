@@ -51,7 +51,7 @@ All of these need to be defined in a json file, for example:
 }
 ```
 
-Complete json files for all original species can be found [here](https://github.com/curzel-it/pet-therapy/tree/main/Species).
+Complete json files for all original species can be found [here](https://github.com/curzel-it/pet-therapy/tree/main/Resources/Species).
 
 ### Capabilities
 Capabilities are behaviors that can be attached to a Pet to manipulate its state on update - some names are pretty self-explanatory, such as `BounceOnLateralCollisions` or `FlipHorizontallyWhenGoingLeft`.
