@@ -15,6 +15,7 @@ open class Entity: Identifiable {
     public var sprite: String?
     public private(set) var state: EntityState = .move
     public var worldBounds: CGRect
+    public var zIndex: Int = 0
 
     public init(
         species: Species,

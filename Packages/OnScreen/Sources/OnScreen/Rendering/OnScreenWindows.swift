@@ -22,12 +22,16 @@ class OnScreenWindows: NSObject, NSWindowDelegate {
 
     private func startSpawningWindows() {
         worlds.forEach { world in
-            world.$children.sink { [weak self] children in
-                guard let self else { return }
-                children
-                    .filter { $0.sprite != nil }
-                    .forEach { self.showWindow(representing: $0, in: world) }
-            }.store(in: &disposables)
+            world.$children
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] children in
+                    guard let self else { return }
+                    children
+                        .filter { $0.sprite != nil }
+                        .sorted { $0.zIndex < $1.zIndex }
+                        .forEach { self.showWindow(representing: $0, in: world) }
+                }
+                .store(in: &disposables)
         }
     }
 
@@ -36,7 +40,8 @@ class OnScreenWindows: NSObject, NSWindowDelegate {
     private func showWindow(representing entity: Entity, in world: LiveWorld) {
         let window = dequeueWindow(representing: entity, in: world)
         window.show()
-        window.makeKey()
+        window.orderedIndex = -entity.zIndex
+        // window.makeKey()
     }
 
     private func dequeueWindow(representing entity: Entity, in world: LiveWorld) -> EntityWindow {
