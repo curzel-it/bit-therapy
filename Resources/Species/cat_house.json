@@ -1,0 +1,16 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "PetsSpritesProvider",
+    "LinearMovement",
+    "CatHouse"
+  ],
+  "dragPath": "front",
+  "fps": 0.5,
+  "id": "cat_house",
+  "movementPath": "front",
+  "speed": 0
+}

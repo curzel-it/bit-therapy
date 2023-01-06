@@ -75,6 +75,7 @@
 "species.about.cat_blue" = "Beh, è un normalissimo gatto!";
 "species.about.cat_gray" = "Beh, è un normalissimo gatto!";
 "species.about.cat_grumpy" = "Guardalo, come ti giudica...";
+"species.about.cat_house" = "Una casetta dove far dormire il tuo gatto!\Se hai qualche idea per altri design, condividile su Discord!";
 "species.about.clockanalog" = "Mostra l'ora corrente e nient'altro... 😅";
 "species.about.clockdigital" = "Mostra l'ora corrente e nient'altro... 😅";
 "species.about.cromulon" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
@@ -113,6 +114,7 @@
 "species.name.cat_black" = "Gatto Nero";
 "species.name.cat_blue" = "Gatto Blu";
 "species.name.cat_gray" = "Gatto";
+"species.name.cat_house" = "Casetta per Gatti";
 "species.name.cat_grumpy" = "Gatto Scontroso";
 "species.name.clockanalog" = "Orologio Analogico";
 "species.name.clockdigital" = "Orologio Digitale";

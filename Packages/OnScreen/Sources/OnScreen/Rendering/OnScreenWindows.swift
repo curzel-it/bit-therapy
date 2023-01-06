@@ -41,7 +41,6 @@ class OnScreenWindows: NSObject, NSWindowDelegate {
         let window = dequeueWindow(representing: entity, in: world)
         window.show()
         window.orderedIndex = -entity.zIndex
-        // window.makeKey()
     }
 
     private func dequeueWindow(representing entity: Entity, in world: LiveWorld) -> EntityWindow {

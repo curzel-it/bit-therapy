@@ -14,12 +14,13 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "AnimationsProvider": AnimationsProvider.self,
         "AutoRespawn": AutoRespawn.self,
         "BounceOnLateralCollisions": BounceOnLateralCollisions.self,
+        "CatHouse": CatHouse.self,
         "FlipHorizontallyWhenGoingLeft": FlipHorizontallyWhenGoingLeft.self,
+        "GetsAngryWhenMeetingOtherCats": GetsAngryWhenMeetingOtherCats.self,
         "LinearMovement": LinearMovement.self,
         "PetsSpritesProvider": PetsSpritesProvider.self,
-        "RandomAnimations": RandomAnimations.self,
+        "AnimationsScheduler": AnimationsScheduler.self,
         "Rotating": Rotating.self,
-        "GetsAngryWhenMeetingOtherCats": GetsAngryWhenMeetingOtherCats.self,
         "WallCrawler": WallCrawler.self
     ]
     

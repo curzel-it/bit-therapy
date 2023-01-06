@@ -28,7 +28,6 @@ open class PetEntity: Entity {
     }
 
     func loadProperties() {
-        fps = species.fps
         resetSpeed()
         setInitialPosition()
         setInitialDirection()

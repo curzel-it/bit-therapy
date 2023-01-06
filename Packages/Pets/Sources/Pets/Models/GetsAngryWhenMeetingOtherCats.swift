@@ -7,7 +7,7 @@ import Yage
 
 class GetsAngryWhenMeetingOtherCats: Capability {
     override func update(with collisions: Collisions, after time: TimeInterval) {
-        guard let subject = subject else { return }
+        guard let subject else { return }
         guard subject.state != .freeFall && subject.state != .drag else { return }
         guard isTouchingAnotherCat(accordingTo: collisions) else { return }
         guard !isAngry() else { return }
@@ -23,7 +23,7 @@ class GetsAngryWhenMeetingOtherCats: Capability {
 
     private func isTouchingAnotherCat(accordingTo collisions: Collisions) -> Bool {
         collisions.contains { collision in
-            collision.bodyId.contains("cat")
+            collision.otherId.contains("cat")
         }
     }
 }

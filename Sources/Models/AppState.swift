@@ -81,6 +81,7 @@ class AppState: ObservableObject {
     private let storage = Storage()
 
     init() {
+        creatorMode = true // Enable creator mode for users with 2.20
         reload()
     }
 
@@ -130,7 +131,7 @@ private class Storage {
     @AppStorage("showInMenuBar") var showInMenuBar = true
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("trackingEnabled") var trackingEnabled = false
-    @AppStorage("creatorMode") var creatorMode = false
+    @AppStorage("creatorMode") var creatorMode = true
     @AppStorage("ufoAbductionSchedule") var ufoAbductionSchedule: String = "daily:22:30"
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     

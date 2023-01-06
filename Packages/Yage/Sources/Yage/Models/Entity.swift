@@ -25,6 +25,7 @@ open class Entity: Identifiable {
     ) {
         self.species = species
         self.id = id
+        self.fps = species.fps
         self.frame = frame
         self.worldBounds = world.bounds
         self.installCapabilities(from: world.capabilitiesDiscoveryService)

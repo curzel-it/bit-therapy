@@ -75,6 +75,7 @@
 "species.about.cat_blue" = "Well, it's just a cat!";
 "species.about.cat_gray" = "Well, it's just a cat!";
 "species.about.cat_grumpy" = "Such a judgy look on its face!";
+"species.about.cat_house" = "A small house for your cat to sleep in!\nI'm looking for more design ideas, if you have any, please reach out on Discord!";
 "species.about.clockanalog" = "It just shows the current time and does nothing else... 😅";
 "species.about.clockdigital" = "It just shows the current time and does nothing else... 😅";
 "species.about.cromulon" = "A species of planet-sized beings shaped as giant human heads...\n\"Show me what you got!\"";
@@ -113,6 +114,7 @@
 "species.name.cat_black" = "Black Cat";
 "species.name.cat_blue" = "Blue Cat";
 "species.name.cat_gray" = "Cat";
+"species.name.cat_house" = "Cat House";
 "species.name.cat_grumpy" = "Grumpy Cat";
 "species.name.clockanalog" = "Analog Clock";
 "species.name.clockdigital" = "Digital Clock";
