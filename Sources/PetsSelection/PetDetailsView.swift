@@ -44,8 +44,9 @@ private struct About: View {
     
     var body: some View {
         Text(viewModel.species.about)
-            .lineLimit(5)
+            .lineLimit(10)
             .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
     }
 }
 
