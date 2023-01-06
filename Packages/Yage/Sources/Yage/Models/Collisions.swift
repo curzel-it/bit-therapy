@@ -1,7 +1,8 @@
 import SwiftUI
 
 public struct Collision: Equatable {
-    public let bodyId: String
+    public weak private(set) var other: Entity?
+    public let otherId: String
     public let isEphemeral: Bool
     public let intersection: CGRect
     public let isOverlapping: Bool
@@ -9,12 +10,13 @@ public struct Collision: Equatable {
     let sourceBody: CGRect
     let otherBody: CGRect
 
-    init(of source: Entity, with body: Entity, on intersection: CGRect) {
-        bodyId = body.id
-        isEphemeral = body.isEphemeral
+    init(of source: Entity, with other: Entity, on intersection: CGRect) {
+        otherId = other.id
+        isEphemeral = other.isEphemeral
+        self.other = other
         self.intersection = intersection
         sourceBody = source.frame
-        otherBody = body.frame
+        otherBody = other.frame
         isOverlapping = intersection.width >= 1 && intersection.height >= 1
     }
 }

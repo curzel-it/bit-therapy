@@ -6,7 +6,7 @@
     "AutoRespawn",
     "LinearMovement",
     "PetsSpritesProvider",
-    "RandomAnimations",
+    "AnimationsScheduler",
     "Rotating",
     "WallCrawler"
   ],

@@ -36,7 +36,7 @@
     "FlipHorizontallyWhenGoingLeft",
     "LinearMovement",
     "PetsSpritesProvider",
-    "RandomAnimations",
+    "AnimationsScheduler",
     "Rotating"
   ],
   "dragPath": "drag",

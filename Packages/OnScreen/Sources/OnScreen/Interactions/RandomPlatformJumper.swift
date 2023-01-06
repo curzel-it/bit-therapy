@@ -21,8 +21,8 @@ class RandomPlatformJumper: Capability {
         subject?.capability(for: Seeker.self)
     }
 
-    private var animations: RandomAnimations? {
-        subject?.capability(for: RandomAnimations.self)
+    private var animations: AnimationsScheduler? {
+        subject?.capability(for: AnimationsScheduler.self)
     }
 
     public func start(with platformsProvider: JumperPlatformsProvider) {
@@ -55,7 +55,7 @@ class RandomPlatformJumper: Capability {
     }
 
     private func jump(to target: Entity) {
-        guard let subject = subject else { return }
+        guard let subject else { return }
         Logger.log(tag, "Jumping to \(target.id)", target.frame.description)
         lastPlatformId = target.id
         gravity?.isEnabled = false

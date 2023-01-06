@@ -39,7 +39,7 @@ public class AnimatedSprite: Capability {
     }
 
     private func storeFrameIfNeeded() {
-        guard let subject = subject else { return }
+        guard let subject else { return }
         guard !subject.state.isAction else { return }
         lastFrameBeforeAnimations = subject.frame
     }

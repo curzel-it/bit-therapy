@@ -44,7 +44,7 @@
     "FlipHorizontallyWhenGoingLeft",
     "LinearMovement",
     "PetsSpritesProvider",
-    "RandomAnimations",
+    "AnimationsScheduler",
     "Rotating",
     "GetsAngryWhenMeetingOtherCats"
   ],
