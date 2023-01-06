@@ -24,19 +24,11 @@ extension LiveWorld {
 
 private extension Event {
     func timer() -> Timer {
-        switch schedulingRule {
-        case .timeOfDay:
-            return Timer(
-                fire: schedulingRule.nextDate(),
-                interval: .oneDay,
-                repeats: true
-            ) { [weak self] _ in self?.action() }
-        case .every(let timeInterval):
-            return Timer(
-                timeInterval: timeInterval,
-                repeats: true
-            ) { [weak self] _ in self?.action() }
-        }
+        Timer(
+            fire: schedulingRule.nextDate(),
+            interval: .oneDay,
+            repeats: true
+        ) { [weak self] _ in self?.action() }
     }
 }
 

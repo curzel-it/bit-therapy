@@ -31,24 +31,6 @@ extension Hotspot: CustomStringConvertible {
     public var description: String { rawValue }
 }
 
-// MARK: - Collisions
-
-public extension Collision {
-    var hotspot: Hotspot? {
-        Hotspot.allCases.first { $0.rawValue == bodyId }
-    }
-}
-
-public extension Collisions {
-    func contains(_ hotspot: Hotspot) -> Bool {
-        first { $0.hotspot == hotspot } != nil
-    }
-
-    func contains(anyOf hotspots: [Hotspot]) -> Bool {
-        hotspots.first { contains($0) } != nil
-    }
-}
-
 // MARK: - Entities
 
 private extension World {

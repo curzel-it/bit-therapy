@@ -122,7 +122,6 @@ private extension WindowInfo {
         if owner.contains("desktop pets") {
             return frame.width >= 450 && frame.height >= 450
         }
-        Logger.log("WindowInfo", "Owner", owner)
         return true
     }
 }
