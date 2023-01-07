@@ -15,7 +15,7 @@
       "requiredLoops": 5
     },
     {
-      "id": "side",
+      "id": "idle",
       "position": {
         "fromEntityBottomLeft": {}
       },
