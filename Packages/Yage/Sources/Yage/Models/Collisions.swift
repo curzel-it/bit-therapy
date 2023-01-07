@@ -69,12 +69,6 @@ private extension CGPoint {
 
 public typealias Collisions = [Collision]
 
-public extension Collisions {
-    var nonEphemeral: Collisions {
-        filter { !$0.isEphemeral }
-    }
-}
-
 extension Entity {
     func collisions(with neighbors: [Entity]) -> Collisions {
         neighbors

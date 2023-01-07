@@ -17,10 +17,9 @@ public class BounceOnLateralCollisions: Capability {
 
     private func targetSide() -> Collision.Side? {
         guard let direction = subject?.direction.dx else { return nil }
-        let isGoingLeft = direction < -0.0001
-        let isGoingRight = direction > 0.0001
-        guard isGoingLeft || isGoingRight else { return nil }
-        return isGoingLeft ? .left : .right
+        if direction < -0.0001 { return .left }
+        if direction > 0.0001 { return .right }
+        return nil
     }
 }
 
