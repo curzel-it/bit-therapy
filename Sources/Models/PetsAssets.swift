@@ -42,7 +42,7 @@ class PetsAssetsProvider {
                 var cache = previousCache
                 let previousFrames = (cache[asset.key] ?? []).map { $0.frame }
                 if !previousFrames.contains(asset.frame) {
-                    cache[asset.key] = (cache[asset.key] ?? []) + [asset]                    
+                    cache[asset.key] = (cache[asset.key] ?? []) + [asset]
                 }
                 return cache
             })
