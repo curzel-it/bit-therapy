@@ -147,14 +147,18 @@ private class UfoAbduction: Capability {
 }
 
 private extension Species {
-    static let ufo = Species(id: "ufo")
-        .with(capability: "AnimatedSprite")
-        .with(capability: "AnimationsProvider")
-        .with(capability: "AutoRespawn")
-        .with(capability: "BounceOnLateralCollisions")
-        .with(capability: "LinearMovement")
-        .with(capability: "PetsSpritesProvider")
-        .with(movementPath: "front")
-        .with(dragPath: "front")
-        .with(speed: 2)
+    static let ufo = Species(
+        id: "ufo",
+        capabilities: [
+            "AnimatedSprite",
+            "AnimationsProvider",
+            "AutoRespawn",
+            "BounceOnLateralCollisions",
+            "LinearMovement",
+            "PetsSpritesProvider"
+        ],
+        movementPath: "front",
+        dragPath: "front",
+        speed: 2
+    )
 }

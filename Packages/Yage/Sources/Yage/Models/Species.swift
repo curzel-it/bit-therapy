@@ -1,26 +1,34 @@
 import Foundation
 
-public struct Species: Codable {
-    public fileprivate(set) var id: String
-    public fileprivate(set) var animations: [EntityAnimation] = []
-    public fileprivate(set) var capabilities: [String] = []
-    public fileprivate(set) var fps: TimeInterval = 10
-    public fileprivate(set) var speed: CGFloat = 1
-    public fileprivate(set) var movementPath: String = "walk"
-    public fileprivate(set) var dragPath: String = "drag"
+public struct Species: Codable, Hashable {
+    public let id: String
+    public let animations: [EntityAnimation]
+    public let capabilities: [String]
+    public let fps: TimeInterval
+    public let speed: CGFloat
+    public let movementPath: String
+    public let dragPath: String
 
-    public init(id: String) {
+    public init(
+        id: String,
+        animations: [EntityAnimation] = [],
+        capabilities: [String] = [],
+        fps: TimeInterval = 10,
+        movementPath: String = "walk",
+        dragPath: String = "drag",
+        speed: CGFloat = 1
+    ) {
         self.id = id
+        self.animations = animations
+        self.capabilities = capabilities
+        self.fps = fps
+        self.movementPath = movementPath
+        self.dragPath = dragPath
+        self.speed = speed
     }
-
-    init(from species: Species) {
-        self.init(id: species.id)
-        animations = species.animations
-        capabilities = species.capabilities
-        fps = species.fps
-        movementPath = species.movementPath
-        dragPath = species.dragPath
-        speed = species.speed
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 
@@ -41,54 +49,4 @@ extension Species: Identifiable {}
 public extension Species {
     static let agent = Species(id: "agent")
     static let hotspot = Species(id: "hotspot")
-}
-
-// MARK: - Builder
-
-public extension Species {
-    func with(id: String) -> Species {
-        var species = Species(from: self)
-        species.id = id
-        return species
-    }
-
-    func with(speed: CGFloat) -> Species {
-        var species = Species(from: self)
-        species.speed = speed
-        return species
-    }
-
-    func with(fps: CGFloat) -> Species {
-        var species = Species(from: self)
-        species.fps = fps
-        return species
-    }
-
-    func with(capability: String) -> Species {
-        var species = Species(from: self)
-        species.capabilities = capabilities + [capability]
-        return species
-    }
-
-    func with(animation: EntityAnimation) -> Species {
-        with(animations: [animation])
-    }
-
-    func with(animations: [EntityAnimation]) -> Species {
-        var species = Species(from: self)
-        species.animations.append(contentsOf: animations)
-        return species
-    }
-
-    func with(movementPath: String) -> Species {
-        var species = Species(from: self)
-        species.movementPath = movementPath
-        return species
-    }
-
-    func with(dragPath: String) -> Species {
-        var species = Species(from: self)
-        species.dragPath = dragPath
-        return species
-    }
 }
