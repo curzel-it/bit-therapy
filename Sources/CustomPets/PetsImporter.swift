@@ -159,7 +159,7 @@ private class PetsImporter {
     
     private func createTempUnzipFolder() throws -> URL {
         var destinationUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-        destinationUrl.appendPathComponent("temp-import")
+        destinationUrl.appendPathComponent("temp-import-\(Date().timeIntervalSince1970)")
         
         try? FileManager.default.removeItem(at: destinationUrl)
         
@@ -236,7 +236,7 @@ private struct Importables {
             throw ImporterError.noJsonFile
         }
         self.species = jsonUrl
-        self.assets = contents.filter { $0.pathExtension != "json"}
+        self.assets = contents.filter { $0.pathExtension == "png"}
     }
     
     func parseSpecies() throws -> Species {
