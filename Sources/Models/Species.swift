@@ -5,6 +5,7 @@
 import Combine
 import Foundation
 import Pets
+import Schwifty
 import Yage
 
 extension Species {
@@ -13,6 +14,7 @@ extension Species {
             .compactMap { try? Data(contentsOf: $0) }
             .compactMap { try? JSONDecoder().decode(Species.self, from: $0) }
             .sorted { $0.name < $1.name }
+            .removeDuplicates(keepOrder: true)
         return CurrentValueSubject<[Species], Never>(species)
     }()
     

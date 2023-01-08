@@ -16,7 +16,7 @@ let package = Package(
         .package(path: "../Yage"),
         .package(path: "../YageLive"),
         .package(url: "https://github.com/curzel-it/notagif", from: "1.0.4"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.13")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.14")
     ],
     targets: [
         .target(

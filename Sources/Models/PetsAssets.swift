@@ -40,7 +40,10 @@ class PetsAssetsProvider {
             .sorted { $0.frame < $1.frame }
             .reduce([String: [Asset]](), { previousCache, asset in
                 var cache = previousCache
-                cache[asset.key] = (cache[asset.key] ?? []) + [asset]
+                let previousFrames = (cache[asset.key] ?? []).map { $0.frame }
+                if !previousFrames.contains(asset.frame) {
+                    cache[asset.key] = (cache[asset.key] ?? []) + [asset]                    
+                }
                 return cache
             })
     }
