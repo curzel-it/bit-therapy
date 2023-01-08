@@ -41,12 +41,6 @@ open class LiveWorld: ObservableObject {
         RunLoop.main.add(timer, forMode: .common)
     }
 
-    public func pause() {
-        Logger.log(name, "Paused...")
-        timer?.invalidate()
-        timer = nil
-    }
-
     public func loop() {
         let now = Date.timeIntervalSinceReferenceDate
         let frameTime = now - lastUpdate
@@ -59,7 +53,8 @@ open class LiveWorld: ObservableObject {
     }
 
     open func kill() {
-        pause()
+        timer?.invalidate()
+        timer = nil
         state.children.forEach { $0.kill() }
         state.children.removeAll()
         Logger.log(name, "Terminated.")

@@ -19,7 +19,7 @@ class ShowsMenuOnRightClick: RightClickable {
 
     private func item(title: String, keyEquivalent: String, action: Selector, target: AnyObject) -> NSMenuItem {
         let item = NSMenuItem(
-            title: NSLocalizedString("menu.item.\(title)", comment: title),
+            title: NSLocalizedString("menu.\(title)", comment: title),
             action: action,
             keyEquivalent: keyEquivalent
         )
