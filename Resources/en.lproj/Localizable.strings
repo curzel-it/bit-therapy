@@ -12,6 +12,7 @@
 "cheats.placeholder" = "Code";
 "cheats.title" = "Change settings via code";
 "cheats.validCode" = "Activated!";
+"customPets.customPetDescription" = "This is a custom pet";
 "customPets.dragAreaMessage" = "Drag and drop your zip file here";
 "customPets.exportSuccess" = "Exported!";
 "customPets.exportSuccessMessage" = "You can now unzip and customize the pet how you want, or crete a new one!";
@@ -114,8 +115,8 @@
 "species.name.cat_black" = "Black Cat";
 "species.name.cat_blue" = "Blue Cat";
 "species.name.cat_gray" = "Cat";
-"species.name.cat_house" = "Cat House";
 "species.name.cat_grumpy" = "Grumpy Cat";
+"species.name.cat_house" = "Cat House";
 "species.name.clockanalog" = "Analog Clock";
 "species.name.clockdigital" = "Digital Clock";
 "species.name.cromulon" = "Big Head";

@@ -12,6 +12,7 @@
 "cheats.placeholder" = "Codice";
 "cheats.title" = "Codici impostazioni";
 "cheats.validCode" = "Attivato!";
+"customPets.customPetDescription" = "Questo è un pet custom";
 "customPets.dragAreaMessage" = "Trascina il tuo file zip qui";
 "customPets.exportSuccess" = "Fatto!";
 "customPets.exportSuccessMessage" = "Ora ti basta aprire l'archivio e dare un'occhiata, puoi customizzare il pet come preferisci, o crearne uno nuovo!";
@@ -114,8 +115,8 @@
 "species.name.cat_black" = "Gatto Nero";
 "species.name.cat_blue" = "Gatto Blu";
 "species.name.cat_gray" = "Gatto";
-"species.name.cat_house" = "Casetta per Gatti";
 "species.name.cat_grumpy" = "Gatto Scontroso";
+"species.name.cat_house" = "Casetta per Gatti";
 "species.name.clockanalog" = "Orologio Analogico";
 "species.name.clockdigital" = "Orologio Digitale";
 "species.name.cromulon" = "Testone";

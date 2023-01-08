@@ -37,6 +37,7 @@ enum Lang {
     }
 
     enum CustomPets {
+        static let customPetDescription = "customPets.customPetDescription".localized()
         static let dragAreaMessage = "customPets.dragAreaMessage".localized()
         static let exportSuccess = "customPets.exportSuccess".localized()
         static let exportSuccessMessage = "customPets.exportSuccessMessage".localized()
@@ -112,14 +113,14 @@ extension Species {
         let key = "species.name.\(id)"
         let value = key.localized()
         if key != value { return value }
-        return key
+        return id.replacingOccurrences(of: "_", with: " ").capitalized
     }
 
     var about: String {
         let key = "species.about.\(id)"
         let value = key.localized()
         if key != value { return value }
-        return key
+        return Lang.CustomPets.customPetDescription
     }
 }
 
