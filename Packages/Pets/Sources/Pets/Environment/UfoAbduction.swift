@@ -6,9 +6,7 @@ import YageLive
 
 extension PetsEnvironment {
     func scheduleUfoAbduction() {
-        let settingsInterval = EventSchedule(from: settings.ufoAbductionSchedule)
-        let actualInterval = settingsInterval ?? EventSchedule(hour: 22, minute: 30)
-        schedule(every: actualInterval) { [weak self] in
+        self.scheduleRandomly(withinHours: 0..<5) { [weak self] in
             self?.startUfoAbductionOfRandomVictim()
         }
     }

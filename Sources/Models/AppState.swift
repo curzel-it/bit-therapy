@@ -66,12 +66,6 @@ class AppState: ObservableObject {
         }
     }
     
-    @Published var ufoAbductionSchedule: String = "" {
-        didSet {
-            storage.ufoAbductionSchedule = ufoAbductionSchedule
-        }
-    }
-    
     @Published var disabledScreens: [String] = [] {
         didSet {
             storage.disabledScreens = disabledScreens
@@ -93,7 +87,6 @@ class AppState: ObservableObject {
         showInMenuBar = storage.showInMenuBar
         speedMultiplier = storage.speedMultiplier
         trackingEnabled = storage.trackingEnabled
-        ufoAbductionSchedule = storage.ufoAbductionSchedule
         disabledScreens = storage.disabledScreens
         creatorMode = storage.creatorMode
     }
@@ -132,7 +125,6 @@ private class Storage {
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("trackingEnabled") var trackingEnabled = false
     @AppStorage("creatorMode") var creatorMode = true
-    @AppStorage("ufoAbductionSchedule") var ufoAbductionSchedule: String = "daily:22:30"
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     
     var disabledScreens: [String] {

@@ -4,13 +4,12 @@ import Yage
 
 open class LiveWorld: ObservableObject {
     @Published public var children: [Entity] = []
-
+    
     public var debug = false
     public let fps: Double = 15
     public let state: World
     public var name: String { state.name }
-    var events: [ScheduledEvent] = []
-
+    
     private var timer: Timer!
     private var lastUpdate: TimeInterval
 
@@ -64,5 +63,12 @@ open class LiveWorld: ObservableObject {
         state.children.forEach { $0.kill() }
         state.children.removeAll()
         Logger.log(name, "Terminated.")
+    }
+    
+    public func scheduleRandomly(withinHours range: Range<Int>, action: @escaping () -> Void) {
+        let hours = TimeInterval(range.randomElement() ?? 2)
+        let minutes = TimeInterval((0..<60).randomElement() ?? 30)
+        let delay = hours * 3600 + minutes * 60
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: action)
     }
 }

@@ -8,7 +8,6 @@ public protocol PetsSettings {
     var petSize: CGFloat { get }
     var speciesOnStage: CurrentValueSubject<[Species], Never> { get }
     var speedMultiplier: CGFloat { get }
-    var ufoAbductionSchedule: String { get }
     func remove(species: Species)
 }
 
