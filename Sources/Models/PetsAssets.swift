@@ -106,14 +106,4 @@ private extension URL {
     }
 }
 
-private extension String {
-    var frameIndex: Int {
-        let indexString = components(separatedBy: "-")
-            .last?
-            .components(separatedBy: ".")
-            .first
-        return Int(indexString ?? "") ?? 99
-    }
-}
-
 extension PetsAssetsProvider: OnScreen.AssetsProvider {}
