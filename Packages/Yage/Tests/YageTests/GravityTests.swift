@@ -24,7 +24,30 @@ class GravityTests: XCTestCase {
         player.install(Gravity())
         env.children.append(player)
     }
+    
+    func testNonStaticEntitiesAreNotRecognizedAsGround() {
+        let ground1 = Entity(
+            species: .agent,
+            id: "ground1",
+            frame: CGRect(x: 0, y: 100, width: 200, height: 50),
+            in: env
+        )
+        env.children.append(ground1)
 
+        let goRight = CGVector(dx: 1, dy: 0)
+        player.speed = 1
+        player.frame.origin = CGPoint(x: 50, y: 0)
+        player.direction = goRight
+        player.set(state: .move)
+
+        env.update(after: 0.1)
+        XCTAssertEqual(player.state, .freeFall)
+        XCTAssertEqual(player.direction, Gravity.fallDirection)
+
+        for _ in 0 ..< 70 { env.update(after: 0.1) }
+        XCTAssertEqual(player.state, .freeFall)
+    }
+    
     func testEntitiesCanFallToGround() {
         let ground1 = Entity(
             species: .agent,
@@ -32,6 +55,7 @@ class GravityTests: XCTestCase {
             frame: CGRect(x: 0, y: 100, width: 200, height: 50),
             in: env
         )
+        ground1.isStatic = true
         env.children.append(ground1)
 
         let goRight = CGVector(dx: 1, dy: 0)
@@ -57,6 +81,7 @@ class GravityTests: XCTestCase {
             frame: CGRect(x: 0, y: 100, width: 200, height: 50),
             in: env
         )
+        ground1.isStatic = true
         env.children.append(ground1)
 
         player.install(BounceOnLateralCollisions())
@@ -77,6 +102,7 @@ class GravityTests: XCTestCase {
             frame: CGRect(x: 369, y: 354, width: 250, height: 48),
             in: env
         )
+        ground1.isStatic = true
         env.children.append(ground1)
 
         let ground2 = Entity(
@@ -85,6 +111,7 @@ class GravityTests: XCTestCase {
             frame: CGRect(x: 396, y: 402, width: 687, height: 70),
             in: env
         )
+        ground2.isStatic = true
         env.children.append(ground2)
 
         player.install(BounceOnLateralCollisions())
