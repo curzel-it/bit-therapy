@@ -24,6 +24,7 @@ public class Gravity: Capability {
         let requiredSurfaceContact = body.width / 2
 
         let groundCollisions = collisions
+            .filter { $0.other?.isStatic == true }
             .filter { !$0.isEphemeral }
             .filter { body.minY < $0.intersection.minY }
 
