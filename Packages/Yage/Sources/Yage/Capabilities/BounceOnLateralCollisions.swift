@@ -10,8 +10,9 @@ public class BounceOnLateralCollisions: Capability {
 
     func bouncingAngle(from currentAngle: CGFloat, with collisions: Collisions) -> CGFloat? {
         guard let targetSide = targetSide() else { return nil }
-        guard collisions.contains(overlapOnSide: targetSide) else { return nil }
-        guard !collisions.contains(overlapOnSide: targetSide.opposite) else { return nil }
+        let validCollisions = collisions.filter { $0.other?.isStatic == true }
+        guard validCollisions.contains(overlapOnSide: targetSide) else { return nil }
+        guard !validCollisions.contains(overlapOnSide: targetSide.opposite) else { return nil }
         return CGFloat.pi - currentAngle
     }
 
