@@ -50,6 +50,7 @@
   ],
   "dragPath": "front",
   "fps": 10,
+  "zIndex": 0,
   "id": "ufo",
   "movementPath": "front",
   "speed": 2

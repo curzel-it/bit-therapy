@@ -12,6 +12,7 @@
   ],
   "dragPath": "front",
   "fps": 1,
+  "zIndex": 0,
   "id": "snail_nicky",
   "movementPath": "front",
   "speed": 0.2

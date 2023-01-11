@@ -13,6 +13,7 @@
   ],
   "dragPath": "front",
   "fps": 0.5,
+  "zIndex": 0,
   "id": "sunflower",
   "movementPath": "front",
   "speed": 0

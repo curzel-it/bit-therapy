@@ -42,6 +42,7 @@
   ],
   "dragPath": "drag",
   "fps": 10,
+  "zIndex": 0,
   "id": "frog_venom",
   "movementPath": "walk",
   "speed": 1

@@ -35,6 +35,7 @@
   ],
   "dragPath": "drag",
   "fps": 10,
+  "zIndex": 0,
   "id": "ape",
   "movementPath": "walk",
   "speed": 0.7

@@ -1,7 +1,7 @@
 "about.joinReddit" = "Join Reddit";
 "about.joinRedditMessage" = "Got any issues, questions or just want to get in touch?\nJoin our Subreddit r/DesktopPets!\n(I will admit, though, it's quite desolated 😅)";
 "about.leaveReview" = "Leave a review";
-"about.leaveReviewMessage" = "Hi, do you like the app?\nIf you do, please consider leaving a 5-star review on the App Store!";
+"about.leaveReviewMessage" = "Support us for free by leaving a review!\n⭐️⭐️⭐️⭐️⭐️";
 "about.mail" = "Send Email";
 "about.mailMessage" = "Alternatively, feel free to reach out directly, I love direct feedback!";
 "about.privacyPolicy" = "Privacy Policy";
@@ -28,7 +28,7 @@
 "delete" = "Delete";
 "disable" = "Disable";
 "donations.linkTitle" = "Support via Patreon";
-"donations.message" = "I'll be honest: There's little to no perks - But if you like the app, support is appreciated!";
+"donations.message" = "If you like the app, please consider supporting me on Patreon! 🥹";
 "donations.title" = "Support the project";
 "done" = "Done";
 "enable" = "Enable";
@@ -86,6 +86,7 @@
 "species.about.crow_white" = "Winter is here...";
 "species.about.frog" = "Useful to remove flies off your screen.";
 "species.about.frog_venom" = "What are you doing? Stop licking its back! 😆";
+"species.about.gazebo" = "A little shade in the garden, to sleep on the grass...";
 "species.about.hedgehog" = "Pet carefully.";
 "species.about.koala" = "Functionally extinct!? You are functionally extinct!";
 "species.about.koala_pirate" = "It's fun to be a pirate they said...";
@@ -126,6 +127,7 @@
 "species.name.crow_white" = "White Crow";
 "species.name.frog" = "Frog";
 "species.name.frog_venom" = "Venomous Frog";
+"species.name.gazebo" = "Gazebo";
 "species.name.hedgehog" = "Hedgehog";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Pirate Koala";

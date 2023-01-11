@@ -1,7 +1,7 @@
 "about.joinReddit" = "Rejoindre le Reddit";
 "about.joinRedditMessage" = "Tu as des soucis, des questions ou tu veux juste nous contacter ? Rejoins notre Subreddit r/DesktopPets!\n(Je dois admettre, cependant, que c'est assez désert 😅)";
 "about.leaveReview" = "Laisser un avis";
-"about.leaveReviewMessage" = "Hey, tu aimes l'application ?\nSi oui, penses à laisser 5 étoiles sur l'App Store !";
+"about.leaveReviewMessage" = "Soutenez-nous en laissant une belle critique!\n⭐️⭐️⭐️⭐️⭐️";
 "about.mail" = "Envoyer un email";
 "about.mailMessage" = "Sinon, n'hésites pas à me contacter directement, j'adore les retours directs !";
 "about.privacyPolicy" = "Politique de confidentialité";
@@ -28,7 +28,7 @@
 "delete" = "Effacer";
 "disable" = "Désactiver";
 "donations.linkTitle" = "Soutenir via Patreon";
-"donations.message" = "Je vais être honnête : il n'y a presque pas d'avantages - Mais si tu aimes l'application, ton soutien est apprécié !";
+"donations.message" = "Si vous aimez l'application, pensez à me soutenir sur Patreon ! 🥹";
 "donations.title" = "Soutenir le projet";
 "done" = "Fait";
 "enable" = "Activer";
@@ -86,6 +86,7 @@
 "species.about.crow_white" = "L'hiver est arrivé...";
 "species.about.frog" = "Pratique pour retirer les mouches de ton écran.";
 "species.about.frog_venom" = "Qu'est-ce que tu fait ? Arrête de lécher son dos ! 😆";
+"species.about.gazebo" = "A little shade in the garden, to sleep on the grass...";
 "species.about.hedgehog" = "Caresse prudemment";
 "species.about.koala" = "En voie de disparition !? C'est toi qui es en voie de disparition !";
 "species.about.koala_pirate" = "C'est amusant d'être un pirate, qu'ils disaient...";
@@ -126,6 +127,7 @@
 "species.name.crow_white" = "Corbeau Blanc";
 "species.name.frog" = "Grenouille";
 "species.name.frog_venom" = "Grenouille Vénonimeuse";
+"species.name.gazebo" = "Belvédère";
 "species.name.hedgehog" = "Hérisson";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Koala Pirate";

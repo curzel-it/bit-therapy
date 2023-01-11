@@ -48,6 +48,7 @@
   ],
   "dragPath": "drag",
   "fps": 10,
+  "zIndex": 0,
   "id": "cromulon",
   "movementPath": "front",
   "speed": 0.6

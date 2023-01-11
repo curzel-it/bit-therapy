@@ -1,0 +1,17 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "PetsSpritesProvider",
+    "LinearMovement",
+    "SleepingPlace"
+  ],
+  "dragPath": "front",
+  "fps": 0.5,
+  "zIndex": -100,
+  "id": "gazebo",
+  "movementPath": "front",
+  "speed": 0
+}

@@ -8,6 +8,7 @@ public struct Species: Codable, Hashable {
     public let speed: CGFloat
     public let movementPath: String
     public let dragPath: String
+    public let zIndex: Int
 
     public init(
         id: String,
@@ -16,7 +17,8 @@ public struct Species: Codable, Hashable {
         fps: TimeInterval = 10,
         movementPath: String = "walk",
         dragPath: String = "drag",
-        speed: CGFloat = 1
+        speed: CGFloat = 1,
+        zIndex: Int = 0
     ) {
         self.id = id
         self.animations = animations
@@ -25,6 +27,7 @@ public struct Species: Codable, Hashable {
         self.movementPath = movementPath
         self.dragPath = dragPath
         self.speed = speed
+        self.zIndex = zIndex
     }
     
     public func hash(into hasher: inout Hasher) {

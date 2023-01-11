@@ -15,7 +15,7 @@ open class Entity: Identifiable {
     public var sprite: String?
     public private(set) var state: EntityState = .move
     public var worldBounds: CGRect
-    public var zIndex: Int = 0
+    public var zIndex: Int
 
     public init(
         species: Species,
@@ -26,6 +26,7 @@ open class Entity: Identifiable {
         self.species = species
         self.id = id
         self.fps = species.fps
+        self.zIndex = species.zIndex
         self.frame = frame
         self.worldBounds = world.bounds
         self.installCapabilities(from: world.capabilitiesDiscoveryService)

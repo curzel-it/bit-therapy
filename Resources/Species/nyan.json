@@ -13,6 +13,7 @@
   ],
   "dragPath": "front",
   "fps": 10,
+  "zIndex": 0,
   "id": "nyan",
   "movementPath": "front",
   "speed": 0.9
