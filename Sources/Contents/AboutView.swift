@@ -5,7 +5,7 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         VStack(spacing: .xl) {
-            LeaveReview()
+            LeaveReview().padding(.top, .xl)
             DonationsView()
             Spacer()            
             Socials()
@@ -48,6 +48,7 @@ private struct Socials: View {
             SocialIcon(name: "twitter", link: Lang.Urls.twitter)
             SocialIcon(name: "reddit", link: Lang.Urls.reddit)
             SocialIcon(name: "discord", link: Lang.Urls.discord)
+            // SocialIcon(name: "patreon", link: Lang.Urls.donations)
         }
     }
 }
@@ -82,10 +83,6 @@ private struct DonationsView: View {
         VStack(spacing: .md) {
             Text(Lang.Donations.title).font(.title3.bold())
             Text(Lang.Donations.message)
-            Button(Lang.Donations.linkTitle) {
-                URL.visit(urlString: Lang.Urls.donations)
-            }
-            .buttonStyle(.regular)
         }
     }
 }
