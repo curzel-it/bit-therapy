@@ -14,7 +14,7 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "AnimationsProvider": AnimationsProvider.self,
         "AutoRespawn": AutoRespawn.self,
         "BounceOnLateralCollisions": BounceOnLateralCollisions.self,
-        "CatHouse": CatHouse.self,
+        "SleepingPlace": SleepingPlace.self,
         "FlipHorizontallyWhenGoingLeft": FlipHorizontallyWhenGoingLeft.self,
         "GetsAngryWhenMeetingOtherCats": GetsAngryWhenMeetingOtherCats.self,
         "LinearMovement": LinearMovement.self,
