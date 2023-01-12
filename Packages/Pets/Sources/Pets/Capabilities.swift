@@ -1,7 +1,3 @@
-//
-// Pet Therapy.
-//
-
 import Foundation
 import Yage
 import YageLive
