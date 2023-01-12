@@ -85,14 +85,16 @@ extension Lang {
     static func name(forMenuItem item: String) -> String {
         "menu.\(item)".localized()
     }
+    
+    static func name(forTag tag: String) -> String {
+        "tag.\(tag)".localized(or: tag)
+    }
 }
 
 extension Species {
     var name: String {
-        let key = "species.name.\(id)"
-        let value = key.localized()
-        if key != value { return value }
-        return id.replacingOccurrences(of: "_", with: " ").capitalized
+        let fallback = id.replacingOccurrences(of: "_", with: " ").capitalized
+        return "species.name.\(id)".localized(or: fallback)
     }
 
     var about: String {

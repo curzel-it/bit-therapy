@@ -13,6 +13,7 @@
   "dragPath": "front",
   "fps": 1,
   "zIndex": 0,
+  "tags": ["slow motion", "memes"],
   "id": "snail",
   "movementPath": "front",
   "speed": 0.2

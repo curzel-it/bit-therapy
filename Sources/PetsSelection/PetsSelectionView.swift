@@ -12,20 +12,9 @@ struct PetsSelectionView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xxl) {
-                PetsGrid(
-                    title: Lang.PetSelection.yourPets,
-                    columns: viewModel.gridColums,
-                    species: viewModel.speciesOnStage
-                )
-                PetsGrid(
-                    title: Lang.PetSelection.morePets,
-                    columns: viewModel.gridColums,
-                    species: viewModel.unselectedSpecies
-                )
-                .padding(.bottom, .xxl)
-                
-                PetsImporterDragAndDropView()
-                    .padding(.bottom, .xxl)
+                MyPets()
+                MorePets().padding(.bottom, .xxl)
+                PetsImporterDragAndDropView().padding(.bottom, .xxl)
             }
             .padding(.md)
         }
@@ -38,5 +27,46 @@ struct PetsSelectionView: View {
             }
         }
         .environmentObject(viewModel)
+    }
+}
+
+private struct MyPets: View {
+    @EnvironmentObject var viewModel: PetsSelectionViewModel
+    
+    var body: some View {
+        VStack(spacing: .md) {
+            Text(Lang.PetSelection.yourPets)
+                .font(.title2)
+                .textAlign(.leading)
+            PetsGrid(
+                columns: viewModel.gridColums,
+                species: viewModel.speciesOnStage
+            )
+        }
+    }
+}
+
+private struct MorePets: View {
+    @EnvironmentObject var viewModel: PetsSelectionViewModel
+
+    var body: some View {
+        VStack(spacing: .md) {
+            Text(Lang.PetSelection.morePets.replacingOccurrences(of: ":", with: ""))
+                .font(.title.bold())
+                .textAlign(.leading)
+            HStack {
+                VStack {
+                    FiltersView().frame(width: 150)
+                    Spacer()
+                }
+                VStack {
+                    PetsGrid(
+                        columns: viewModel.gridColums,
+                        species: viewModel.unselectedSpecies
+                    )
+                    Spacer()
+                }
+            }
+        }
     }
 }

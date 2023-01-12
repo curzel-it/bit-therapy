@@ -106,26 +106,19 @@ extension Lang {
     static func name(forMenuItem item: String) -> String {
         "menu.\(item)".localized()
     }
+    
+    static func name(forTag tag: String) -> String {
+        "tag.\(tag)".localized(or: tag)
+    }
 }
 
 extension Species {
     var name: String {
-        let key = "species.name.\(id)"
-        let value = key.localized()
-        if key != value { return value }
-        return id.replacingOccurrences(of: "_", with: " ").capitalized
+        let fallback = id.replacingOccurrences(of: "_", with: " ").capitalized
+        return "species.name.\(id)".localized(or: fallback)
     }
 
     var about: String {
-        let key = "species.about.\(id)"
-        let value = key.localized()
-        if key != value { return value }
-        return Lang.CustomPets.customPetDescription
-    }
-}
-
-private extension String {
-    func localized(in bundle: Bundle = .main) -> String {
-        NSLocalizedString(self, bundle: bundle, comment: self)
+        "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
     }
 }

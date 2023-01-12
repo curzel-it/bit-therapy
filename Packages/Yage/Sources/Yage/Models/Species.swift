@@ -4,20 +4,22 @@ public struct Species: Codable, Hashable {
     public let id: String
     public let animations: [EntityAnimation]
     public let capabilities: [String]
-    public let fps: TimeInterval
-    public let speed: CGFloat
-    public let movementPath: String
     public let dragPath: String
+    public let fps: TimeInterval
+    public let movementPath: String
+    public let speed: CGFloat
+    public let tags: [String]
     public let zIndex: Int
 
     public init(
         id: String,
         animations: [EntityAnimation] = [],
         capabilities: [String] = [],
+        dragPath: String = "drag",
         fps: TimeInterval = 10,
         movementPath: String = "walk",
-        dragPath: String = "drag",
         speed: CGFloat = 1,
+        tags: [String] = [],
         zIndex: Int = 0
     ) {
         self.id = id
@@ -27,6 +29,7 @@ public struct Species: Codable, Hashable {
         self.movementPath = movementPath
         self.dragPath = dragPath
         self.speed = speed
+        self.tags = tags
         self.zIndex = zIndex
     }
     

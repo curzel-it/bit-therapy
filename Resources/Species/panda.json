@@ -72,6 +72,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
+  "tags": ["forest"],
   "id": "panda",
   "movementPath": "walk",
   "speed": 0.8

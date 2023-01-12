@@ -20,7 +20,7 @@ struct SettingsView: View {
                 }
                 FixOnScreenPets().positioned(.leading)
                 ScreensOnOffSettings()
-                CheatsView().positioned(.leading)
+                // CheatsView().positioned(.leading)
             }
             .padding(.md)
         }

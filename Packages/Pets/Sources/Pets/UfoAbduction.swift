@@ -155,8 +155,8 @@ private extension Species {
             "LinearMovement",
             "PetsSpritesProvider"
         ],
-        movementPath: "front",
         dragPath: "front",
+        movementPath: "front",
         speed: 2
     )
 }

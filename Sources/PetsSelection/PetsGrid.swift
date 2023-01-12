@@ -8,13 +8,11 @@ import Yage
 // MARK: - Grid
 
 struct PetsGrid: View {
-    let title: String
     let columns: [GridItem]
     let species: [Species]
 
     var body: some View {
         VStack(spacing: .md) {
-            Title(title: title)
             LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
                 ForEach(species) {
                     ItemPreview(species: $0)

@@ -22,6 +22,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
+  "tags": ["forest", "mushrooms"],
   "id": "mushroom",
   "movementPath": "walk",
   "speed": 0.3

@@ -70,6 +70,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
+  "tags": ["dinos", "pokèmon"],
   "id": "trex",
   "movementPath": "walk",
   "speed": 1

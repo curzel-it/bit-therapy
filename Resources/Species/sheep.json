@@ -41,6 +41,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
+  "tags": ["farm"],
   "id": "sheep",
   "movementPath": "walk",
   "speed": 0.8

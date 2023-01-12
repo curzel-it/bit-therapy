@@ -11,6 +11,7 @@
   "dragPath": "front",
   "fps": 0.5,
   "zIndex": 100,
+  "tags": ["decorations"],
   "id": "cat_house",
   "movementPath": "front",
   "speed": 0

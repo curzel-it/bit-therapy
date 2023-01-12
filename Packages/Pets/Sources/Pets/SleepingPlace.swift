@@ -17,6 +17,7 @@ class SleepingPlace: Capability {
     
     override func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
+        guard self.subject?.state == .move else { return }
         guard let entity = overlappingEntityThatCanSleep(from: collisions) else { return }
         putToSleep(entity)
         isEnabled = false

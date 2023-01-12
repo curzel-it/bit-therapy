@@ -10,6 +10,7 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var speciesOnStage: [Species] = []
     @Published var unselectedSpecies: [Species] = []
     @Published var canShowDiscordBanner: Bool = true
+    @Published private var selectedTags = Set<String>()
 
     lazy var showingDetails: Binding<Bool> = Binding {
         self.selectedSpecies != nil
@@ -27,18 +28,20 @@ class PetsSelectionViewModel: ObservableObject {
     private var disposables = Set<AnyCancellable>()
 
     init() {
-        Publishers
-            .CombineLatest(Species.all, AppState.global.speciesOnStage)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] all, selected in
-                self?.loadPets(all: all, selected: selected)
-            }
-            .store(in: &disposables)
+        Publishers.CombineLatest3(
+            Species.all,
+            AppState.global.speciesOnStage,
+            $selectedTags
+        )
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] all, selected, tags in
+            self?.loadPets(all: all, selected: selected, tags: tags)
+        }
+        .store(in: &disposables)
     }
-
-    private func loadPets(all: [Species], selected: [Species]) {
-        speciesOnStage = all.filter { selected.contains($0) }
-        unselectedSpecies = all.filter { !selected.contains($0) }
+    
+    func filtersChanged(to tags: Set<String>) {
+        selectedTags = tags
     }
 
     func showDetails(of species: Species?) {
@@ -58,5 +61,12 @@ class PetsSelectionViewModel: ObservableObject {
             .frames(for: species.id, animation: "front")
             .first
         return PetsAssetsProvider.shared.image(sprite: path)
+    }
+
+    private func loadPets(all: [Species], selected: [Species], tags: Set<String>) {
+        speciesOnStage = all.filter { selected.contains($0) }
+        unselectedSpecies = all
+            .filter { tags.isEmpty || $0.tags.contains(anyOf: tags) }
+            .filter { !selected.contains($0) }
     }
 }
