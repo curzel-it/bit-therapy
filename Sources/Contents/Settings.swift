@@ -1,9 +1,7 @@
 import DesignSystem
 import LaunchAtLogin
-import OnScreen
 import Schwifty
 import SwiftUI
-import Tracking
 
 // MARK: - Settings
 
@@ -20,7 +18,6 @@ struct SettingsView: View {
                 }
                 FixOnScreenPets().positioned(.leading)
                 ScreensOnOffSettings()
-                // CheatsView().positioned(.leading)
             }
             .padding(.md)
         }
@@ -67,7 +64,7 @@ private struct ScreenSwitch: View {
         @Published var isEnabled: Bool {
             didSet {
                 AppState.global.set(screen: screen, enabled: isEnabled)
-                OnScreenCoordinator.show(with: AppState.global, assets: PetsAssetsProvider.shared)
+                OnScreenCoordinator.show()
             }
         }
         
@@ -213,7 +210,7 @@ private struct LaunchAtLoginSwitch: View {
 private struct FixOnScreenPets: View {
     var body: some View {
         Button(Lang.PetSelection.fixOnScreenPets) {
-            OnScreenCoordinator.show(with: AppState.global, assets: PetsAssetsProvider.shared)
+            OnScreenCoordinator.show()
         }
         .buttonStyle(.regular)
     }

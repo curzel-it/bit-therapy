@@ -2,7 +2,6 @@ import DesignSystem
 import LaunchAtLogin
 import Schwifty
 import SwiftUI
-import Tracking
 
 struct MainScene: Scene {
     var body: some Scene {
@@ -71,13 +70,7 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
 
-    var options: [AppPage] {
-        var tabs: [AppPage] = [.home, .settings, .about]
-        if appState.isDevApp && TakuService.shared.isAvailable() {
-            tabs.append(.news)
-        }
-        return tabs
-    }
+    let options: [AppPage] = [.home, .settings, .about]
 
     var body: some View {
         HStack {
@@ -96,7 +89,6 @@ private struct PageContents: View {
         case .about: AboutView()
         case .home: PetsSelectionView()
         case .settings: SettingsView()
-        case .news: NewsView()
         case .none: EmptyView()
         }
     }

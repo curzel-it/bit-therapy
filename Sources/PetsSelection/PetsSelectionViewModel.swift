@@ -1,6 +1,5 @@
 import Combine
 import DesignSystem
-import Pets
 import Schwifty
 import SwiftUI
 import Yage
@@ -10,7 +9,7 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var speciesOnStage: [Species] = []
     @Published var unselectedSpecies: [Species] = []
     @Published var canShowDiscordBanner: Bool = true
-    @Published private var selectedTags = Set<String>()
+    @Published private var selectedTag: String?
 
     lazy var showingDetails: Binding<Bool> = Binding {
         self.selectedSpecies != nil
@@ -31,17 +30,17 @@ class PetsSelectionViewModel: ObservableObject {
         Publishers.CombineLatest3(
             Species.all,
             AppState.global.speciesOnStage,
-            $selectedTags
+            $selectedTag
         )
         .receive(on: DispatchQueue.main)
-        .sink { [weak self] all, selected, tags in
-            self?.loadPets(all: all, selected: selected, tags: tags)
+        .sink { [weak self] all, onStage, tag in
+            self?.loadPets(all: all, selected: onStage, tag: tag)
         }
         .store(in: &disposables)
     }
     
-    func filtersChanged(to tags: Set<String>) {
-        selectedTags = tags
+    func filterChanged(to tag: String?) {
+        selectedTag = tag
     }
 
     func showDetails(of species: Species?) {
@@ -63,10 +62,8 @@ class PetsSelectionViewModel: ObservableObject {
         return PetsAssetsProvider.shared.image(sprite: path)
     }
 
-    private func loadPets(all: [Species], selected: [Species], tags: Set<String>) {
+    private func loadPets(all: [Species], selected: [Species], tag: String?) {
         speciesOnStage = all.filter { selected.contains($0) }
-        unselectedSpecies = all
-            .filter { tags.isEmpty || $0.tags.contains(anyOf: tags) }
-            .filter { !selected.contains($0) }
+        unselectedSpecies = all.filter { tag == nil || $0.tags.contains(tag ?? "") }
     }
 }

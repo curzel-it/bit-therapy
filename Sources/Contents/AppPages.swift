@@ -4,7 +4,6 @@ enum AppPage: String, CaseIterable {
     case about
     case home
     case none
-    case news
     case settings
 }
 
@@ -15,7 +14,6 @@ extension AppPage: CustomStringConvertible {
         case .home: return Lang.Page.home
         case .none: return ""
         case .settings: return Lang.Page.settings
-        case .news: return Lang.Page.news
         }
     }
 }

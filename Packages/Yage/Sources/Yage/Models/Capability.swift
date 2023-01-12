@@ -36,6 +36,12 @@ public extension Entity {
     }
 }
 
-public protocol CapabilitiesDiscoveryService {
-    func capability(for id: String) -> Capability?
+open class CapabilitiesDiscoveryService {
+    public static var shared = CapabilitiesDiscoveryService()
+    
+    public init() {}
+    
+    open func capability(for id: String) -> Capability? {
+        fatalError("Override CapabilitiesDiscoveryService.shared with your own instance.")
+    }
 }

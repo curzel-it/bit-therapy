@@ -1,6 +1,5 @@
 import Combine
 import DesignSystem
-import Pets
 import Schwifty
 import SwiftUI
 import Yage

@@ -8,7 +8,7 @@ class LinearMovementTests: XCTestCase {
             species: .agent,
             id: "entity",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: World(name: "", bounds: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+            in: CGRect(x: 0, y: 0, width: 1000, height: 1000)
         )
         entity.install(LinearMovement())
         entity.direction = .init(dx: 1, dy: 0)

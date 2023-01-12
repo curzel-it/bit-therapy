@@ -21,21 +21,20 @@ open class Entity: Identifiable {
         species: Species,
         id: String,
         frame: CGRect,
-        in world: World
+        in worldBounds: CGRect
     ) {
         self.species = species
         self.id = id
         self.fps = species.fps
         self.zIndex = species.zIndex
         self.frame = frame
-        self.worldBounds = world.bounds
-        self.installCapabilities(from: world.capabilitiesDiscoveryService)
+        self.worldBounds = worldBounds
+        self.installCapabilities()
     }
     
-    private func installCapabilities(from service: CapabilitiesDiscoveryService?) {
-        guard let service else { return }
+    private func installCapabilities() {
         species.capabilities.forEach {
-            if let capability = service.capability(for: $0) {
+            if let capability = CapabilitiesDiscoveryService.shared.capability(for: $0) {
                 install(capability)
             }
         }

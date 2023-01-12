@@ -11,18 +11,9 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
-      location = "group:Packages/OnScreen">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/Pets">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/Tracking">
+      location = "group:Packages/MacWidgets">
    </FileRef>
    <FileRef
       location = "group:Packages/Yage">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/YageLive">
    </FileRef>
 </Workspace>

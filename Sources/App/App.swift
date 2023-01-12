@@ -1,8 +1,7 @@
-import Pets
 import RateKit
 import Schwifty
 import SwiftUI
-import Tracking
+import Yage
 
 @main
 struct MyApp: App {
@@ -10,10 +9,10 @@ struct MyApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     init() {
-        Logger.isEnabled = AppState.global.isDevApp
+        Logger.isEnabled = true
         Tracking.setup(isEnabled: AppState.global.trackingEnabled)
-        Cheats.enableCheats()
-        PetEntity.assetsProvider = PetsAssetsProvider.shared
+        CapabilitiesDiscoveryService.shared = PetsCapabilitiesDiscoveryService()
+       
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             RateKit.ratingsService(
                 debug: AppState.global.isDevApp,
@@ -26,5 +25,3 @@ struct MyApp: App {
         MainScene()
     }
 }
-
-extension PetsAssetsProvider: Pets.AssetsProvider {}

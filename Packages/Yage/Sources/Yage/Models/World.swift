@@ -3,17 +3,11 @@ import SwiftUI
 
 open class World {
     public let name: String
-    public let capabilitiesDiscoveryService: CapabilitiesDiscoveryService?
     public var children: [Entity] = []
     public private(set) var bounds: CGRect = .zero
     
-    public init(
-        name: String,
-        bounds rect: CGRect,
-        capabilitiesDiscoveryService: CapabilitiesDiscoveryService? = nil
-    ) {
+    public init(name: String, bounds rect: CGRect) {
         self.name = name
-        self.capabilitiesDiscoveryService = capabilitiesDiscoveryService
         set(bounds: rect)
     }
     
@@ -34,5 +28,10 @@ open class World {
                 let collisions = child.collisions(with: children)
                 child.update(with: collisions, after: time)
             }
+    }
+    
+    open func kill() {
+        children.forEach { $0.kill() }
+        children.removeAll()
     }
 }

@@ -1,4 +1,3 @@
-import OnScreen
 import Schwifty
 import SwiftUI
 
@@ -105,5 +104,3 @@ private extension URL {
             .first ?? ""
     }
 }
-
-extension PetsAssetsProvider: OnScreen.AssetsProvider {}

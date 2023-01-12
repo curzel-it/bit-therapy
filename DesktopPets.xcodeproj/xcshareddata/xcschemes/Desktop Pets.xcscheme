@@ -29,10 +29,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests/DesktopPets.xctestplan"
+            reference = "container:Tests/Desktop Pets.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E29446D29739B9B000A90B0"
+               BuildableName = "Desktop Pets Tests.xctest"
+               BlueprintName = "Desktop Pets Tests"
+               ReferencedContainer = "container:DesktopPets.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

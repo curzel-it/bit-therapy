@@ -1,7 +1,7 @@
 import SwiftUI
 
 public class Rotating: Capability {
-    public var z: Double = 0
+    public var z: CGFloat = 0
     public var isFlippedVertically: Bool = false
     public var isFlippedHorizontally: Bool = false
     

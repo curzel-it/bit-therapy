@@ -2,7 +2,6 @@ import SwiftUI
 
 public extension Color {
     static var accent: Color { Color("AccentColor") }
-    static var paidBanner: Color { Color("paidBanner") }
     static var background: Color { Color("background") }
     static var secondaryBackground: Color { Color("backgroundSecondary") }
     static var tertiaryBackground: Color { Color("backgroundTertiary") }

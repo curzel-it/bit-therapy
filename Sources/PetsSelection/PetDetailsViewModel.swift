@@ -1,7 +1,5 @@
 import NotAGif
-import Pets
 import SwiftUI
-import Tracking
 import Yage
 
 class PetDetailsViewModel: ObservableObject {

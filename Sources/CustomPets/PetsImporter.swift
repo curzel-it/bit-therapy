@@ -1,6 +1,5 @@
 import AppKit
 import Foundation
-import Pets
 import Schwifty
 import SwiftUI
 import Yage

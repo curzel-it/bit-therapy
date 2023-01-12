@@ -1,7 +1,6 @@
 import Combine
 import DesignSystem
 import Foundation
-import Pets
 import Schwifty
 import SwiftUI
 import Yage
@@ -20,8 +19,8 @@ struct FiltersView: View {
                 Spacer()
             }
         }
-        .onReceive(viewModel.$selectedTags) { tags in
-            petsSelection.filtersChanged(to: tags.filter { $0 != kTagAll })
+        .onReceive(viewModel.$selectedTag) { tag in
+            petsSelection.filterChanged(to: tag == kTagAll ? nil : tag)
         }
         .environmentObject(viewModel)
     }
@@ -29,21 +28,21 @@ struct FiltersView: View {
 
 private class FiltersViewModel: ObservableObject {
     @Published var availableTags: [String] = []
-    @Published var selectedTags = Set([kTagAll])
+    @Published var selectedTag = kTagAll
     
     private var disposables = Set<AnyCancellable>()
 
     init() {
         Species.all
-            .combineLatest($selectedTags)
+            .combineLatest($selectedTag)
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] species, selected in
-                self?.loadTags(from: species, selectedTags: selected)
+            .sink { [weak self] species, tag in
+                self?.loadTags(from: species, selectedTag: tag)
             }
             .store(in: &disposables)
     }
     
-    private func loadTags(from species: [Species], selectedTags: Set<String>) {
+    private func loadTags(from species: [Species], selectedTag: String?) {
         availableTags = [kTagAll] + species
             .flatMap { $0.tags }
             .removeDuplicates(keepOrder: false)
@@ -51,25 +50,12 @@ private class FiltersViewModel: ObservableObject {
     }
         
     func isSelected(tag: String) -> Bool {
-        selectedTags.contains(tag)
+        selectedTag == tag
     }
     
     func toggleSelection(tag: String) {
         withAnimation {
-            if tag == kTagAll {
-                selectedTags.removeAll()
-                selectedTags.insert(kTagAll)
-                return
-            }
-            if isSelected(tag: tag) {
-                selectedTags.remove(tag)
-            } else {
-                selectedTags.insert(tag)
-            }
-            selectedTags.remove(kTagAll)
-            if selectedTags.isEmpty {
-                selectedTags.insert(kTagAll)
-            }
+            selectedTag = tag
         }
     }
 }

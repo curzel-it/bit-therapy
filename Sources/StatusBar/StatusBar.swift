@@ -1,5 +1,4 @@
 import AppKit
-import OnScreen
 import SwiftUI
 
 class StatusBarCoordinator {
@@ -44,7 +43,7 @@ class StatusBarCoordinator {
     
     @objc private func showHome() { MainScene.show() }
     @objc private func hidePets() { OnScreenCoordinator.hide() }
-    @objc private func showPets() { OnScreenCoordinator.show(with: AppState.global, assets: PetsAssetsProvider.shared) }
+    @objc private func showPets() { OnScreenCoordinator.show() }
     @objc private func closeApp() { NSApp.terminate(self) }
 }
     

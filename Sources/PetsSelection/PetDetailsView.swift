@@ -1,6 +1,5 @@
 import DesignSystem
 import NotAGif
-import Pets
 import Schwifty
 import SwiftUI
 import Yage
