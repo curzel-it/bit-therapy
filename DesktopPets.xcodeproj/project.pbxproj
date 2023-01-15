@@ -10,7 +10,7 @@
 		1E03001A297377F300D770EF /* Windows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E030019297377F300D770EF /* Windows.swift */; };
 		1E1EBF31291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
 		1E29446829739856000A90B0 /* MacWidgets in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29446729739856000A90B0 /* MacWidgets */; };
-		1E29447129739B9B000A90B0 /* Desktop_Pets_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29447029739B9B000A90B0 /* Desktop_Pets_Tests.swift */; };
+		1E29447129739B9B000A90B0 /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29447029739B9B000A90B0 /* DesktopPetsTests.swift */; };
 		1E29448E2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29448D2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		1E2944902973A21A000A90B0 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29448F2973A21A000A90B0 /* FirebaseCrashlytics */; };
 		1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
@@ -81,8 +81,8 @@
 		1E030019297377F300D770EF /* Windows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windows.swift; sourceTree = "<group>"; };
 		1E1EBF30291F9E1800D2323D /* dogica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dogica.ttf; sourceTree = "<group>"; };
 		1E29446E29739B9B000A90B0 /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E29447029739B9B000A90B0 /* Desktop_Pets_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desktop_Pets_Tests.swift; sourceTree = "<group>"; };
-		1E29447529739BCE000A90B0 /* Desktop Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Desktop Pets.xctestplan"; path = "Tests/Desktop Pets.xctestplan"; sourceTree = SOURCE_ROOT; };
+		1E29447029739B9B000A90B0 /* DesktopPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopPetsTests.swift; sourceTree = "<group>"; };
+		1E29447529739BCE000A90B0 /* Desktop Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Desktop Pets.xctestplan"; path = "Tests/Desktop Pets.xctestplan"; sourceTree = SOURCE_ROOT; };
 		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1E2AC745290B1093003D0AB2 /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsAssets.swift; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				1E29447529739BCE000A90B0 /* Desktop Pets.xctestplan */,
-				1E29447029739B9B000A90B0 /* Desktop_Pets_Tests.swift */,
+				1E29447029739B9B000A90B0 /* DesktopPetsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -518,7 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E29447129739B9B000A90B0 /* Desktop_Pets_Tests.swift in Sources */,
+				1E29447129739B9B000A90B0 /* DesktopPetsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,8 +861,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.3.0;
+				kind = exactVersion;
+				version = 10.0.0;
 			};
 		};
 		1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */ = {
