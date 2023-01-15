@@ -36,11 +36,12 @@
 "menu.about" = "About";
 "menu.hide" = "Hide Pet";
 "menu.hideAllPet" = "Hide all pets";
-"menu.hideThisPet" = "Remove this pet";
+"menu.hideThisPet" = "Hide this pet";
 "menu.home" = "Home";
 "menu.quit" = "Quit";
 "menu.settings" = "Settings";
 "menu.show" = "Show Pet";
+"no" = "No";
 "ok" = "Ok";
 "page.about" = "About";
 "page.help" = "Help";
@@ -50,9 +51,9 @@
 "petSelection.addPet" = "Add to screen";
 "petSelection.fixOnScreenPets" = "Apply Settings / Reset Pets";
 "petSelection.joinDiscord" = "it's still quiet and desolate, but we also have a Discord server!";
-"petSelection.morePets" = "More Pets:";
+"petSelection.morePets" = "More Pets";
 "petSelection.petSelection" = "Select pets";
-"petSelection.yourPets" = "Pets on screen:";
+"petSelection.yourPets" = "On screen";
 "remove" = "Remove";
 "reset" = "Reset";
 "screen" = "Screen";
@@ -64,7 +65,8 @@
 "settings.desktopInteractionsTitle" = "Desktop Interactions";
 "settings.enabledDisplays" = "Enabled Displays";
 "settings.gravity" = "Enable gravity";
-"settings.launchAtLogin" = "Show pet on Login";
+"settings.launchAtLogin" = "Launch automatically";
+"settings.launchAtLoginPromo" = "Would you like the app to start automatically when you login?";
 "settings.size" = "Pet Size";
 "settings.speed" = "Speed";
 "settings.statusBarIconEnabled" = "Show in status bar";
@@ -160,3 +162,4 @@
 "urls.privacy" = "https://curzel.it/privacy.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.twitter" = "https://twitter.com/DesktopPets";
+"yes" = "Yes";

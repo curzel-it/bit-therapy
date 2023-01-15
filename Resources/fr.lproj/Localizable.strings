@@ -36,11 +36,12 @@
 "menu.about" = "À propos";
 "menu.hide" = "Masquer cet animal";
 "menu.hideAllPet" = "Masquer tous les animaux";
-"menu.hideThisPet" = "Supprimer cet animal";
+"menu.hideThisPet" = "Cacher cet animal";
 "menu.home" = "Accueil";
 "menu.quit" = "Quitter";
 "menu.settings" = "Paramètres";
 "menu.show" = "Afficher les animaux";
+"no" = "Non";
 "ok" = "Ok";
 "page.about" = "À propos";
 "page.help" = "Aide";
@@ -50,9 +51,9 @@
 "petSelection.addPet" = "Ajouter à l'écran";
 "petSelection.fixOnScreenPets" = "Appliquer les paramètres / Réinitialiser les animaux";
 "petSelection.joinDiscord" = "C'est encore calme et désert, mais nous avons un serveur Discord !";
-"petSelection.morePets" = "Plus d'animaux :";
+"petSelection.morePets" = "Plus d'animaux";
 "petSelection.petSelection" = "Sélectionner les animaux";
-"petSelection.yourPets" = "Animaux à l'écran :";
+"petSelection.yourPets" = "Sur l'écran";
 "remove" = "Retirer";
 "reset" = "Réinitialiser";
 "screen" = "Écran";
@@ -64,7 +65,8 @@
 "settings.desktopInteractionsTitle" = "Interactions avec les fenêtres";
 "settings.enabledDisplays" = "Écrans activés";
 "settings.gravity" = "Activer la gravité";
-"settings.launchAtLogin" = "Montrer les animaux à l'ouverture de session";
+"settings.launchAtLogin" = "Démarrer automatiquement";
+"settings.launchAtLoginPromo" = "Souhaitez-vous que l'application démarre automatiquement lorsque vous vous connectez ?";
 "settings.size" = "Taille des animaux";
 "settings.speed" = "Vitesse";
 "settings.statusBarIconEnabled" = "Afficher dans la barre d'état";
@@ -160,3 +162,4 @@
 "urls.privacy" = "https://curzel.it/privacy.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.twitter" = "https://twitter.com/DesktopPets";
+"yes" = "Oui";

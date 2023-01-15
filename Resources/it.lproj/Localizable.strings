@@ -36,11 +36,12 @@
 "menu.about" = "Informazioni";
 "menu.hide" = "Nascondi Pet";
 "menu.hideAllPet" = "Nascondi tutti";
-"menu.hideThisPet" = "Rimuovi";
+"menu.hideThisPet" = "Nasconti questo Pet";
 "menu.home" = "Home";
 "menu.quit" = "Esci";
 "menu.settings" = "Impostazioni";
 "menu.show" = "Mostra Pet";
+"no" = "No";
 "ok" = "Ok";
 "page.about" = "Informazioni";
 "page.help" = "Aiuto";
@@ -50,9 +51,9 @@
 "petSelection.addPet" = "Aggiungi";
 "petSelection.fixOnScreenPets" = "Applica / Resetta";
 "petSelection.joinDiscord" = "È ancora silenzioso e desolato, ma abbiamo un server Discord!";
-"petSelection.morePets" = "Altri pets:";
+"petSelection.morePets" = "Altri Pets";
 "petSelection.petSelection" = "Scegli pet";
-"petSelection.yourPets" = "Pets sullo schermo:";
+"petSelection.yourPets" = "Sullo schermo";
 "remove" = "Rimuovi";
 "reset" = "Reset";
 "screen" = "Schermo";
@@ -65,6 +66,7 @@
 "settings.enabledDisplays" = "Display Abilitati";
 "settings.gravity" = "Abilita Gravità";
 "settings.launchAtLogin" = "Avvia automaticamente al login";
+"settings.launchAtLoginPromo" = "Vuoi che l'app si avvii automaticamente al login?";
 "settings.size" = "Dimensioni Pet";
 "settings.speed" = "Velocità";
 "settings.statusBarIconEnabled" = "Mostra nella barra di stato";
@@ -160,3 +162,4 @@
 "urls.privacy" = "https://curzel.it/privacy.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.twitter" = "https://twitter.com/DesktopPets";
+"yes" = "Sì";

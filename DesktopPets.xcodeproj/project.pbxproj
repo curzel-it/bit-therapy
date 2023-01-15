@@ -15,6 +15,8 @@
 		1E2944902973A21A000A90B0 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29448F2973A21A000A90B0 /* FirebaseCrashlytics */; };
 		1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
 		1E2AC747290B1093003D0AB2 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
+		1E2D7D462974762C00DC7D5F /* EntityDoubleClickHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D7D452974762C00DC7D5F /* EntityDoubleClickHandler.swift */; };
+		1E2D7D4929747D9400DC7D5F /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D7D4829747D9400DC7D5F /* NewsView.swift */; };
 		1E33FD95295EEDD700B9FC36 /* PetsAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */; };
 		1E36C81F295F533D008EFB28 /* PetsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C819295F533D008EFB28 /* PetsSelectionView.swift */; };
 		1E36C821295F533D008EFB28 /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81A295F533D008EFB28 /* PetsGrid.swift */; };
@@ -34,8 +36,7 @@
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EAEA9062970D32900AB3EB0 /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
 		1EAEA9082970D32900AB3EB0 /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */; };
-		1EAEA90A2970D32900AB3EB0 /* RightClickMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* RightClickMenu.swift */; };
-		1EAEA90C2970D32900AB3EB0 /* RightClickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F52970D32900AB3EB0 /* RightClickable.swift */; };
+		1EAEA90A2970D32900AB3EB0 /* EntityRightClickHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* EntityRightClickHandler.swift */; };
 		1EAEA90E2970D32900AB3EB0 /* MouseDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */; };
 		1EAEA9102970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F82970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift */; };
 		1EAEA9142970D32900AB3EB0 /* ScreenEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FA2970D32900AB3EB0 /* ScreenEnvironment.swift */; };
@@ -85,6 +86,8 @@
 		1E29447529739BCE000A90B0 /* Desktop Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Desktop Pets.xctestplan"; path = "Tests/Desktop Pets.xctestplan"; sourceTree = SOURCE_ROOT; };
 		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1E2AC745290B1093003D0AB2 /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
+		1E2D7D452974762C00DC7D5F /* EntityDoubleClickHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDoubleClickHandler.swift; sourceTree = "<group>"; };
+		1E2D7D4829747D9400DC7D5F /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsAssets.swift; sourceTree = "<group>"; };
 		1E36C819295F533D008EFB28 /* PetsSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsSelectionView.swift; sourceTree = "<group>"; };
 		1E36C81A295F533D008EFB28 /* PetsGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsGrid.swift; sourceTree = "<group>"; };
@@ -105,8 +108,7 @@
 		1EA055572913E4BE0037803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPlatformJumper.swift; sourceTree = "<group>"; };
 		1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopObstaclesService.swift; sourceTree = "<group>"; };
-		1EAEA8F42970D32900AB3EB0 /* RightClickMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightClickMenu.swift; sourceTree = "<group>"; };
-		1EAEA8F52970D32900AB3EB0 /* RightClickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightClickable.swift; sourceTree = "<group>"; };
+		1EAEA8F42970D32900AB3EB0 /* EntityRightClickHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityRightClickHandler.swift; sourceTree = "<group>"; };
 		1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseDraggable.swift; sourceTree = "<group>"; };
 		1EAEA8F82970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetsAngryWhenMeetingOtherCats.swift; sourceTree = "<group>"; };
 		1EAEA8FA2970D32900AB3EB0 /* ScreenEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEnvironment.swift; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		1E2D7D4729747D8C00DC7D5F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				1E2D7D4829747D9400DC7D5F /* NewsView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		1E36C810295F4D9E008EFB28 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,8 +256,8 @@
 				1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */,
 				1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */,
 				1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */,
-				1EAEA8F52970D32900AB3EB0 /* RightClickable.swift */,
-				1EAEA8F42970D32900AB3EB0 /* RightClickMenu.swift */,
+				1EAEA8F42970D32900AB3EB0 /* EntityRightClickHandler.swift */,
+				1E2D7D452974762C00DC7D5F /* EntityDoubleClickHandler.swift */,
 			);
 			path = Interactions;
 			sourceTree = "<group>";
@@ -316,6 +326,7 @@
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1E2D7D4729747D8C00DC7D5F /* News */,
 				1E2AC742290AB375003D0AB2 /* App */,
 				A6FB7D5B28740F8E00AB872E /* Contents */,
 				1E93C5FB29605EDE007A5B91 /* CustomPets */,
@@ -547,18 +558,19 @@
 				1E2AC741290AA941003D0AB2 /* AppState.swift in Sources */,
 				1EAEA91A2970D32900AB3EB0 /* PetEntity.swift in Sources */,
 				1E36C825295F533D008EFB28 /* PetsSelectionViewModel.swift in Sources */,
+				1E2D7D462974762C00DC7D5F /* EntityDoubleClickHandler.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
 				1E93C60F2962E781007A5B91 /* PetsDeleter.swift in Sources */,
 				1EAEA91C2970D32900AB3EB0 /* Animations.swift in Sources */,
 				1E7D1EA62909C31600CC036B /* Settings.swift in Sources */,
-				1EAEA90C2970D32900AB3EB0 /* RightClickable.swift in Sources */,
-				1EAEA90A2970D32900AB3EB0 /* RightClickMenu.swift in Sources */,
+				1EAEA90A2970D32900AB3EB0 /* EntityRightClickHandler.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
 				1EAEA9142970D32900AB3EB0 /* ScreenEnvironment.swift in Sources */,
 				1E93C60C29624891007A5B91 /* PetsImporter.swift in Sources */,
 				1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */,
 				1EAEA9222970D32900AB3EB0 /* OnScreen.swift in Sources */,
 				1EAEA9062970D32900AB3EB0 /* RandomPlatformJumper.swift in Sources */,
+				1E2D7D4929747D9400DC7D5F /* NewsView.swift in Sources */,
 				1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */,
 				1EAEA9162970D32900AB3EB0 /* PetsEnvironment.swift in Sources */,
 				1E03001A297377F300D770EF /* Windows.swift in Sources */,

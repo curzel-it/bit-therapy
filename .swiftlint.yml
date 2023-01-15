@@ -14,6 +14,7 @@ identifier_name:
     error: 3
   excluded:
     - ok
+    - no
     - x
     - y
     - z

@@ -125,7 +125,7 @@ private struct JoinOurDiscord: View {
             .resizable()
             .antialiased(true)
             .frame(width: 115, height: 28)
-            .cornerRadius(4)
+            .cornerRadius(DesignSystem.defaultCornerRadius)
             .padding(.trailing, .md)
             .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }
     }

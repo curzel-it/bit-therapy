@@ -73,7 +73,6 @@ def generate_swift_source(data):
     code = '\n\n'.join([swift_source_for_section(name, sections[name]) for name in sections.keys()])
 
     header = """import Foundation
-import Pets
 import Schwifty
 import Yage
 
@@ -98,16 +97,7 @@ extension Species {
     }
 
     var about: String {
-        let key = "species.about.\(id)"
-        let value = key.localized()
-        if key != value { return value }
-        return Lang.CustomPets.customPetDescription
-    }
-}
-
-private extension String {
-    func localized(in bundle: Bundle = .main) -> String {
-        NSLocalizedString(self, bundle: bundle, comment: self)
+        "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
     }
 }"""
     code = '\n'.join([header, code, footer])

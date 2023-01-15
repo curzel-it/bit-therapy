@@ -10,12 +10,14 @@ enum Lang {
     static let done = "done".localized()
     static let enable = "enable".localized()
     static let loading = "loading".localized()
+    static let no = "no".localized()
     static let ok = "ok".localized()
     static let remove = "remove".localized()
     static let reset = "reset".localized()
     static let screen = "screen".localized()
     static let select = "select".localized()
     static let somethingWentWrong = "somethingWentWrong".localized()
+    static let yes = "yes".localized()
 
     enum About {
         static let joinReddit = "about.joinReddit".localized()
@@ -83,6 +85,7 @@ enum Lang {
         static let enabledDisplays = "settings.enabledDisplays".localized()
         static let gravity = "settings.gravity".localized()
         static let launchAtLogin = "settings.launchAtLogin".localized()
+        static let launchAtLoginPromo = "settings.launchAtLoginPromo".localized()
         static let size = "settings.size".localized()
         static let speed = "settings.speed".localized()
         static let statusBarIconEnabled = "settings.statusBarIconEnabled".localized()
@@ -105,7 +108,7 @@ extension Lang {
     static func name(forMenuItem item: String) -> String {
         "menu.\(item)".localized()
     }
-    
+
     static func name(forTag tag: String) -> String {
         "tag.\(tag)".localized(or: tag)
     }

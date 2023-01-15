@@ -12,6 +12,7 @@ struct PetsSelectionView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xxl) {
+                NewsView()
                 MyPets()
                 MorePets().padding(.bottom, .xxl)
                 PetsImporterDragAndDropView().padding(.bottom, .xxl)
@@ -35,9 +36,7 @@ private struct MyPets: View {
     
     var body: some View {
         VStack(spacing: .md) {
-            Text(Lang.PetSelection.yourPets)
-                .font(.title2)
-                .textAlign(.leading)
+            Title(text: Lang.PetSelection.yourPets)
             PetsGrid(
                 columns: viewModel.gridColums,
                 species: viewModel.speciesOnStage
@@ -51,9 +50,7 @@ private struct MorePets: View {
 
     var body: some View {
         VStack(spacing: .md) {
-            Text(Lang.PetSelection.morePets.replacingOccurrences(of: ":", with: ""))
-                .font(.title.bold())
-                .textAlign(.leading)
+            Title(text: Lang.PetSelection.morePets)
             HStack {
                 VStack {
                     FiltersView().frame(width: 150)
@@ -68,5 +65,15 @@ private struct MorePets: View {
                 }
             }
         }
+    }
+}
+
+private struct Title: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.title.bold())
+            .textAlign(.leading)
     }
 }
