@@ -4,30 +4,43 @@ import Schwifty
 import SwiftUI
 
 struct MainScene: Scene {
+    fileprivate static weak var currentWindow: NSWindow?
+    fileprivate static let minSize = CGSize(square: 700)
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onWindow {
+                    MainScene.currentWindow = $0
+                }
         }
     }
 }
 
 extension MainScene {
     static func show() {
-        showMainWindow()
+        if let window = MainScene.currentWindow {
+            window.makeKey()
+            window.makeMain()
+        } else {
+            showMainWindow()
+        }
         trackAppLaunched()
     }
 
     private static func showMainWindow() {
         let view = NSHostingView(rootView: ContentView())
         let window = NSWindow(
-            contentRect: CGRect(x: 400, y: 200, width: 700, height: 700),
-            styleMask: [.resizable, .closable, .titled],
+            contentRect: CGRect(origin: CGPoint(x: 400, y: 200), size: MainScene.minSize),
+            styleMask: [.resizable, .closable, .titled, .miniaturizable],
             backing: .buffered,
             defer: false
         )
+        window.minSize = MainScene.minSize
         window.title = "Desktop Pets"
         window.contentView?.addSubview(view)
         view.constrainToFillParent()
+        MainScene.currentWindow = window
         window.show()
     }
 
@@ -52,8 +65,8 @@ private struct ContentView: View {
             PageContents()
             Spacer(minLength: 0)
         }
-        .frame(minWidth: 600)
-        .frame(minHeight: 600)
+        .frame(minWidth: MainScene.minSize.width)
+        .frame(minHeight: MainScene.minSize.height)
         .foregroundColor(.label)
         .environmentObject(viewModel)
         .environmentObject(appState)

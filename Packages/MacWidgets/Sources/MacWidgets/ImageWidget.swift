@@ -12,6 +12,7 @@ public extension ImageWidget {
 
 public class ImageWidgetView<T: ImageWidget>: NSImageView {
     private let widget: T
+    private var lastMouseUp: TimeInterval = .zero
     private var windowLocationOnLastDrag: CGPoint = .zero
     private var windowLocationOnMouseDown: CGPoint = .zero
     private var interpolationMode: NSImageInterpolation = .default
@@ -19,14 +20,10 @@ public class ImageWidgetView<T: ImageWidget>: NSImageView {
     private let isMouseDragEnabled: Bool
     private var cachedImages: [Int: NSImage] = [:]
     private var disposables = Set<AnyCancellable>()
-        
-    private var rightClickDelegate: RightClickable? {
-        widget as? RightClickable
-    }
     
-    private var mouseDragDelegate: MouseDraggable? {
-        widget as? MouseDraggable
-    }
+    private var doubleClickDelegate: DoubleClickable? { widget as? DoubleClickable }
+    private var mouseDragDelegate: MouseDraggable? { widget as? MouseDraggable }
+    private var rightClickDelegate: RightClickable? { widget as? RightClickable }
     
     public init(representing widget: T) {
         self.widget = widget
@@ -82,6 +79,7 @@ public class ImageWidgetView<T: ImageWidget>: NSImageView {
     }
     
     public override func mouseUp(with event: NSEvent) {
+        handleDoubleClickIfPossible()
         guard isMouseDragEnabled else { return }
         guard let newOrigin = window?.frame.origin else { return }
         mouseDragDelegate?.mouseDragEnded(at: newOrigin, delta: currentMouseDragDelta())
@@ -99,9 +97,19 @@ public class ImageWidgetView<T: ImageWidget>: NSImageView {
     public override func rightMouseUp(with event: NSEvent) {
         rightClickDelegate?.rightClicked(with: event)
     }
-
-// MARK: - Image Manipulation
-
+    
+    // MARK: - Double Click
+    
+    func handleDoubleClickIfPossible() {
+        let now = Date().timeIntervalSince1970
+        if now - lastMouseUp < 250 {
+            doubleClickDelegate?.doubleClicked()
+        }
+        lastMouseUp = now
+    }
+    
+    // MARK: - Image Manipulation
+    
     func bindImage() {
         Publishers.CombineLatest(widget.asset(), widget.windowFrame())
             .map { FramedAsset(asset: $0, frame: $1) }

@@ -37,4 +37,8 @@ public protocol RightClickable {
     func rightClicked(with event: NSEvent)
 }
 
+public protocol DoubleClickable {
+    func doubleClicked()
+}
+
 public protocol PixelArtWidget: ImageWidget {}

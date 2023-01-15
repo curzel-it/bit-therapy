@@ -25,6 +25,7 @@ public class WidgetsCoordinator {
     public func kill() {
         disposables.removeAll()
         widgets.send(Set())
+        windows.values.forEach { $0.close() }
     }
     
     func bindWidgets() {

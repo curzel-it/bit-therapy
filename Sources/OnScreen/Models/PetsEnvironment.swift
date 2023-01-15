@@ -47,7 +47,6 @@ class ScreenEnvironment: World {
 
     func buildEntity(species: Species) -> PetEntity {
         let entity = PetEntity(of: species, in: bounds)
-        entity.install(ShowsMenuOnRightClick())
         entity.install(MouseDraggable())
         return entity
     }

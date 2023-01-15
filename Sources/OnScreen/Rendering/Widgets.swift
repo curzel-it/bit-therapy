@@ -60,7 +60,13 @@ extension EntityWidget {
 
 extension EntityWidget: MacWidgets.RightClickable {
     func rightClicked(with event: NSEvent) {
-        entity.rightClick?.onRightClick(with: event)
+        EntityRightClickHandler.shared.onRightClick(with: event)
+    }
+}
+
+extension EntityWidget: MacWidgets.DoubleClickable {
+    func doubleClicked() {
+        EntityDoubleClickHandler.shared.onDoubleClick()
     }
 }
 
