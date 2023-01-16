@@ -34,7 +34,7 @@ class ScreenEnvironment: World {
                 
                 let currentSpecies = currentPets.map { $0.species }
                 for newPet in newPets where !currentSpecies.contains(newPet) {
-                    newChildren.append(self.buildEntity(species: newPet))
+                    newChildren.append(PetEntity(of: newPet, in: self.bounds))
                 }
                 self.children = newChildren
             }
@@ -42,13 +42,7 @@ class ScreenEnvironment: World {
     }
 
     func add(pet species: Species) {
-        children.append(buildEntity(species: species))
-    }
-
-    func buildEntity(species: Species) -> PetEntity {
-        let entity = PetEntity(of: species, in: bounds)
-        entity.install(MouseDraggable())
-        return entity
+        children.append(PetEntity(of: species, in: bounds))
     }
 
     func remove(species speciesToRemove: Species) {

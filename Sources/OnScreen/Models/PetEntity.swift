@@ -22,6 +22,7 @@ open class PetEntity: Entity {
             in: worldBounds
         )
         loadProperties()
+        installAdditionalCapabilities()
     }
 
     func loadProperties() {
@@ -29,6 +30,12 @@ open class PetEntity: Entity {
         setInitialPosition()
         setInitialDirection()
         setGravity()
+    }
+    
+    private func installAdditionalCapabilities() {
+        install(MouseDraggable())
+        install(ShowMenuOnRightClick())
+        install(ShowHomeOnDoubleClick())
     }
 
     override open func set(state: EntityState) {

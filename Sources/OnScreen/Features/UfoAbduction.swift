@@ -3,6 +3,15 @@ import Yage
 
 // MARK: - Schedule Event
 
+extension DesktopEnvironment {
+    func startUfoAbductionOfRandomVictim() {
+        worlds
+            .filter { $0.hasAnyPets }
+            .first?
+            .startUfoAbductionOfRandomVictim()
+    }
+}
+
 extension ScreenEnvironment {
     func scheduleUfoAbduction() {
         scheduleRandomly(withinHours: 0..<5) { [weak self] in
@@ -10,7 +19,7 @@ extension ScreenEnvironment {
         }
     }
 
-    public func startUfoAbductionOfRandomVictim() {
+    func startUfoAbductionOfRandomVictim() {
         guard let victim = victim else { return }
         animateUfoAbduction(of: victim)
     }

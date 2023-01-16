@@ -1,13 +1,23 @@
 import Schwifty
 import SwiftUI
+import Yage
 
-class EntityRightClickHandler {
-    static let shared = EntityRightClickHandler()
-        
-    weak var lastWindow: NSWindow?
+open class RightClickable: Capability {
+    open func onRightClick(with event: NSEvent) {
+        // ...
+    }
+}
+
+extension Entity {
+    var rightClick: RightClickable? { capability(for: RightClickable.self) }
+}
+
+class ShowMenuOnRightClick: RightClickable {
+    weak var lastWindow: PetsWindow?
     
-    func onRightClick(with event: NSEvent) {
-        lastWindow = event.window
+    override func onRightClick(with event: NSEvent) {
+        guard let window = event.window as? PetsWindow else { return }
+        lastWindow = window
         lastWindow?.contentView?.menu = petMenu()
     }
 

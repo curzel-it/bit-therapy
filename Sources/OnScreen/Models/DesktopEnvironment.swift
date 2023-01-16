@@ -36,13 +36,6 @@ class DesktopEnvironment {
             .forEach { $0.setupJumperIfPossible(with: desktopObstacles) }
     }
     
-    func startUfoAbductionOfRandomVictim() {
-        worlds
-            .filter { $0.hasAnyPets }
-            .first?
-            .startUfoAbductionOfRandomVictim()
-    }
-    
     func remove(species: Species) {
         worlds.forEach { $0.remove(species: species) }
     }
