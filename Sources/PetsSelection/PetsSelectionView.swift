@@ -11,11 +11,13 @@ struct PetsSelectionView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: .xxl) {
+            VStack(spacing: .zero) {
                 NewsView()
-                MyPets()
-                MorePets().padding(.bottom, .xxl)
-                PetsImporterDragAndDropView().padding(.bottom, .xxl)
+                VStack(spacing: .xxl) {
+                    MyPets()
+                    MorePets().padding(.bottom, .xxl)
+                    PetsImporterDragAndDropView().padding(.bottom, .xxl)
+                }
             }
             .padding(.md)
         }
@@ -53,14 +55,16 @@ private struct MorePets: View {
             Title(text: Lang.PetSelection.morePets)
             HStack {
                 VStack {
-                    FiltersView().frame(width: 150)
-                    Spacer()
-                }
-                VStack {
                     PetsGrid(
                         columns: viewModel.gridColums,
                         species: viewModel.unselectedSpecies
                     )
+                    Spacer()
+                }
+                .frame(minWidth: nil)
+                .frame(maxWidth: .infinity)
+                VStack {
+                    FiltersView().frame(width: 150)
                     Spacer()
                 }
             }

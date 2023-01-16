@@ -14,7 +14,7 @@ struct FiltersView: View {
             VStack {
                 ForEach(viewModel.availableTags, id: \.self) {
                     TagView(tag: $0)
-                        .positioned(.leading)
+                        .positioned(.trailing)
                 }
                 Spacer()
             }

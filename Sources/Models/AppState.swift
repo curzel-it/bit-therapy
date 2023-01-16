@@ -154,4 +154,4 @@ private class Storage {
 
 // MARK: - Constants
 
-private let kInitialPetId = "sloth"
+private let kInitialPetId = "cat"

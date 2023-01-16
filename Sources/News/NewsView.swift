@@ -5,17 +5,14 @@ import SwiftUI
 
 struct NewsView: View {
     @EnvironmentObject var appState: AppState
-    @AppStorage("didShowStartAtLoginAlert1") var didShowStartAtLoginAlert1 = false
-    @AppStorage("didShowStartAtLoginAlert2") var didShowStartAtLoginAlert2 = false
-    @AppStorage("didShowStartAtLoginAlert3") var didShowStartAtLoginAlert3 = false
-    @AppStorage("didShowStartAtLoginAlert4") var didShowStartAtLoginAlert4 = false
+    @AppStorage("shouldShowStartAtLoginAlert") var shouldShowStartAtLoginAlert = true
     
     var body: some View {
-        VStack(spacing: .md) {
+        if shouldShowStartAtLoginAlert && !LaunchAtLogin.isEnabled {
             NewsBanner(
                 title: Lang.Settings.launchAtLogin,
                 message: Lang.Settings.launchAtLoginPromo,
-                shown: $didShowStartAtLoginAlert4,
+                shown: $shouldShowStartAtLoginAlert,
                 actions: [
                     .init(title: Lang.no, style: .text),
                     .init(title: Lang.yes, style: .regular) {
@@ -23,6 +20,7 @@ struct NewsView: View {
                     }
                 ]
             )
+            .padding(.bottom, .xxl)
         }
     }
 }
@@ -52,6 +50,10 @@ private struct NewsBanner: View {
         .padding()
         .background(Color.secondaryBackground)
         .cornerRadius(DesignSystem.largeCornerRadius)
+        .overlay(
+            RoundedRectangle(cornerRadius: DesignSystem.largeCornerRadius)
+                .stroke(Color.tertiaryLabel, lineWidth: 1)
+        )
     }
     
     func close() {
