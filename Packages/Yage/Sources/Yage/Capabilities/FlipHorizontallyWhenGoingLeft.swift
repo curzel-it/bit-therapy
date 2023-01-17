@@ -2,8 +2,8 @@ import Combine
 import SwiftUI
 
 public class FlipHorizontallyWhenGoingLeft: Capability {
-    override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard let subject, isEnabled else { return }
+    override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
+        guard let subject else { return }
         flip(for: subject.direction, state: subject.state)
     }
 

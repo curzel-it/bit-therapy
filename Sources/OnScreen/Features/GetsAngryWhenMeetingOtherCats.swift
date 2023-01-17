@@ -3,8 +3,7 @@ import Schwifty
 import Yage
 
 class GetsAngryWhenMeetingOtherCats: Capability {
-    override func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
+    override func doUpdate(with collisions: Collisions, after time: TimeInterval) {
         guard subject?.state == .move else { return }
         guard isTouchingAnotherCat(accordingTo: collisions) else { return }
         getAngry()

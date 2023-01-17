@@ -7,8 +7,7 @@ public class WallCrawler: Capability {
         subject.capability(for: FlipHorizontallyWhenGoingLeft.self)?.isEnabled = false
     }
 
-    override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
+    override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
         guard let direction = subject?.direction else { return }
 
         let isGoingUp = direction.dy < -0.0001

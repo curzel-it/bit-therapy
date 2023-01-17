@@ -17,8 +17,13 @@ open class Capability {
         Logger.log(subject.id, "Installing", String(describing: self))
         self.subject = subject
     }
-
-    open func update(with collisions: Collisions, after time: TimeInterval) {}
+    
+    func update(with collisions: Collisions, after time: TimeInterval) {
+        doUpdate(with: collisions, after: time)
+    }
+    
+    open func doUpdate(with collisions: Collisions, after time: TimeInterval) {
+    }
 
     open func kill(autoremove: Bool = true) {
         if autoremove {

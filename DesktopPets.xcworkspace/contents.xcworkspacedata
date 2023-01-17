@@ -11,9 +11,6 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
-      location = "group:Packages/MacWidgets">
-   </FileRef>
-   <FileRef
       location = "group:Packages/Yage">
    </FileRef>
 </Workspace>

@@ -8,8 +8,8 @@ public class Gravity: Capability {
         subject?.state == .freeFall
     }
 
-    override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled, let state = subject?.state else { return }
+    override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
+        guard let state = subject?.state else { return }
         guard state != .drag && !isAnimationThatRequiresNoGravity(state) else { return }
         
         if let groundLevel = groundLevel(from: collisions) {

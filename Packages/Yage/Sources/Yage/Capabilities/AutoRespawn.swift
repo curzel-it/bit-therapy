@@ -3,8 +3,8 @@ import Schwifty
 import SwiftUI
 
 public class AutoRespawn: Capability {
-    override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled, let subject else { return }
+    override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
+        guard let subject else { return }
         if !isWithinBounds(point: subject.frame.origin) {
             Logger.log(tag, subject.id, "Teleporting...")
             teleport()

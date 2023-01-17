@@ -16,8 +16,7 @@ public class ShapeShifter: Capability {
         isEnabled = true
     }
 
-    override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
+    override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
         guard let subject else { return }
 
         let delta = CGSize(

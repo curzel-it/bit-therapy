@@ -5,8 +5,7 @@ import Yage
 
 extension ScreenEnvironment {
     func scheduleUfoAbduction() {
-        // scheduleRandomly(withinHours: 0..<5) { [weak self] in
-        DispatchQueue.main.async { [weak self] in
+        scheduleRandomly(withinHours: 0..<5) { [weak self] in
             guard let self, let victim = self.randomVictim() else { return }
             self.animateUfoAbduction(of: victim)
         }

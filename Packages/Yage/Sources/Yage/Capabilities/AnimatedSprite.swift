@@ -13,8 +13,7 @@ public class AnimatedSprite: Capability {
         lastFrameBeforeAnimations = subject.frame
     }
 
-    override public func update(with collisions: Collisions, after time: TimeInterval) {
-        guard isEnabled else { return }
+    override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
         updateSpriteIfStateChanged()
         loadNextFrame(after: time)
         storeFrameIfNeeded()

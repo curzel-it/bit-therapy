@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1E1EBF31291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
-		1E29446829739856000A90B0 /* MacWidgets in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29446729739856000A90B0 /* MacWidgets */; };
 		1E29447129739B9B000A90B0 /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29447029739B9B000A90B0 /* DesktopPetsTests.swift */; };
 		1E29448E2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29448D2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		1E2944902973A21A000A90B0 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29448F2973A21A000A90B0 /* FirebaseCrashlytics */; };
@@ -62,7 +61,6 @@
 		1E5BC9A7297537A4002AE128 /* ScreenEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */; };
 		1E5BC9A9297537A4002AE128 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61F885296F6B52007863DE /* Filters.swift */; };
 		1E5BC9AA297537A4002AE128 /* PetsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C819295F533D008EFB28 /* PetsSelectionView.swift */; };
-		1E5BC9AC297537A4002AE128 /* MacWidgets in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC981297537A4002AE128 /* MacWidgets */; };
 		1E5BC9AD297537A4002AE128 /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC973297537A4002AE128 /* Yage */; };
 		1E5BC9AE297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC97E297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		1E5BC9AF297537A4002AE128 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC976297537A4002AE128 /* Schwifty */; };
@@ -206,7 +204,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E5BC9AC297537A4002AE128 /* MacWidgets in Frameworks */,
 				1E5BC9AD297537A4002AE128 /* Yage in Frameworks */,
 				1E5BC9AE297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1E5BC9AF297537A4002AE128 /* Schwifty in Frameworks */,
@@ -223,7 +220,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E29446829739856000A90B0 /* MacWidgets in Frameworks */,
 				1EF813B5297177A400D6B4E6 /* Yage in Frameworks */,
 				1EF813C5297177A500D6B4E6 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1EF813BB297177A400D6B4E6 /* Schwifty in Frameworks */,
@@ -409,11 +405,11 @@
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1E2D7D4729747D8C00DC7D5F /* News */,
 				1E2AC742290AB375003D0AB2 /* App */,
 				A6FB7D5B28740F8E00AB872E /* Contents */,
 				1E93C5FB29605EDE007A5B91 /* CustomPets */,
 				1E36C810295F4D9E008EFB28 /* Models */,
+				1E2D7D4729747D8C00DC7D5F /* News */,
 				1EAEA8F02970D32900AB3EB0 /* OnScreen */,
 				1E36C818295F533D008EFB28 /* PetsSelection */,
 				1E36C811295F4DB6008EFB28 /* StatusBar */,
@@ -492,7 +488,6 @@
 				1E5BC97C297537A4002AE128 /* WindowsDetector */,
 				1E5BC97E297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1E5BC980297537A4002AE128 /* FirebaseCrashlytics */,
-				1E5BC981297537A4002AE128 /* MacWidgets */,
 			);
 			productName = MacPets;
 			productReference = 1E5BC9C2297537A4002AE128 /* Desktop Pets Dev.app */;
@@ -523,7 +518,6 @@
 				1EF813C2297177A400D6B4E6 /* WindowsDetector */,
 				1EF813C4297177A500D6B4E6 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1EF813C6297177A500D6B4E6 /* FirebaseCrashlytics */,
-				1E29446729739856000A90B0 /* MacWidgets */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -1058,7 +1052,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203026;
+				CURRENT_PROJECT_VERSION = 203027;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1097,7 +1091,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203026;
+				CURRENT_PROJECT_VERSION = 203027;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1268,10 +1262,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1E29446729739856000A90B0 /* MacWidgets */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MacWidgets;
-		};
 		1E29448D2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -1324,10 +1314,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5BC97F297537A4002AE128 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
-		};
-		1E5BC981297537A4002AE128 /* MacWidgets */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MacWidgets;
 		};
 		1EF813B2297177A400D6B4E6 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;

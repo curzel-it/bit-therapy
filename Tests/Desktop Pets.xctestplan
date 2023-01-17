@@ -14,13 +14,6 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:Packages\/MacWidgets",
-        "identifier" : "MacWidgetsTests",
-        "name" : "MacWidgetsTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Packages\/Yage",
         "identifier" : "YageTests",
         "name" : "YageTests"

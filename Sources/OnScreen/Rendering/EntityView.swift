@@ -76,11 +76,11 @@ class EntityView: NSImageView {
     }
     
     override func mouseUp(with event: NSEvent) {
+        handleDoubleClickIfPossible()
         let delta = CGSize(
             width: locationOnLastDrag.x - locationOnMouseDown.x,
             height: locationOnMouseDown.y - locationOnLastDrag.y
         )
-        handleDoubleClickIfPossible()
         entity.mouseDrag?.mouseUp(totalDelta: delta)
     }
 
@@ -94,7 +94,7 @@ class EntityView: NSImageView {
     
     func handleDoubleClickIfPossible() {
         let now = Date().timeIntervalSince1970
-        if now - lastMouseUp < 250 {
+        if now - lastMouseUp < 0.25 {
             entity.doubleClick?.onDoubleClick()
         }
         lastMouseUp = now
@@ -129,7 +129,7 @@ private extension EntityView {
     func interpolatedImageForCurrentSprite() -> NSImage? {
         assetsProvider
             .image(sprite: entity.sprite)?
-            .scaled(to: frame.size) // entity.frame.size)
+            .scaled(to: frame.size)
             .flipped(
                 horizontally: entity.rotation?.isFlippedHorizontally ?? false,
                 vertically: entity.rotation?.isFlippedVertically ?? false
