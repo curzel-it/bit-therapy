@@ -55,9 +55,3 @@ private extension Entity {
         sleepAnimation() != nil
     }
 }
-
-private extension CGRect {
-    func area() -> CGFloat {
-        width * height
-    }
-}

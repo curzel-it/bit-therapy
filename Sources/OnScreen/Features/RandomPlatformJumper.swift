@@ -93,8 +93,7 @@ class RandomPlatformJumper: Capability {
 // MARK: - Entity Extension
 
 extension Entity {
-    func setupJumperIfPossible(with platforms: JumperPlatformsProvider?) {
-        guard let platforms = platforms else { return }
+    func setupJumperIfPossible(with platforms: JumperPlatformsProvider) {
         guard RandomPlatformJumper.compatible(with: self) else { return }
         let jumper = RandomPlatformJumper()
         install(jumper)

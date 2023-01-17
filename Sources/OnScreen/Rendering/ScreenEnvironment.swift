@@ -9,13 +9,28 @@ class ScreenEnvironment: World {
     }
     
     private var settings: AppState { AppState.global }
-    
+    private var desktopObstacles: DesktopObstaclesService!
     private var disposables = Set<AnyCancellable>()
 
     init(for screen: NSScreen) {
         super.init(name: screen.localizedName, bounds: screen.frame)
         bindPetsOnStage()
         scheduleUfoAbduction()
+        observeWindowsIfNeeded()
+    }
+    
+    private func observeWindowsIfNeeded() {
+        guard settings.desktopInteractions else { return }
+        guard name == NSScreen.main?.localizedName else { return }
+        desktopObstacles = DesktopObstaclesService(world: self)
+        desktopObstacles.start()
+    }
+    
+    private func installJumpers() {
+        guard let desktopObstacles else { return }
+        children
+            .compactMap { $0 as? PetEntity }
+            .forEach { $0.setupJumperIfPossible(with: desktopObstacles) }
     }
 
     private func bindPetsOnStage() {
@@ -54,6 +69,7 @@ class ScreenEnvironment: World {
 
     override func kill() {
         super.kill()
+        desktopObstacles?.stop()
         disposables.removeAll()
     }
     

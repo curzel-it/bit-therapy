@@ -27,11 +27,6 @@ public struct OnScreenCoordinator {
         windows.removeAll()
     }
 
-    public static func triggerUfoAbduction() {
-        Logger.log("OnScreen", "Triggering UFO Abduction...")
-        environment?.startUfoAbductionOfRandomVictim()
-    }
-
     public static func remove(species: Species) {
         environment?.remove(species: species)
     }

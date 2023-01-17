@@ -35,6 +35,7 @@ class EntityView: NSImageView {
     
     private func updateFrameIfNeeded() {
         guard entity.state != .drag else { return }
+        guard let size = max(entity.frame.size, .oneByOne) else { return }
         frame = CGRect(
             origin: .zero
                 .offset(x: entity.frame.minX)
@@ -42,7 +43,7 @@ class EntityView: NSImageView {
                 .offset(y: -entity.frame.maxY)
                 .offset(x: entity.worldBounds.origin.x)
                 .offset(y: -entity.worldBounds.origin.y),
-            size: entity.frame.size
+            size: size
         )
     }
     
@@ -128,7 +129,7 @@ private extension EntityView {
     func interpolatedImageForCurrentSprite() -> NSImage? {
         assetsProvider
             .image(sprite: entity.sprite)?
-            .scaled(to: entity.frame.size)
+            .scaled(to: frame.size) // entity.frame.size)
             .flipped(
                 horizontally: entity.rotation?.isFlippedHorizontally ?? false,
                 vertically: entity.rotation?.isFlippedVertically ?? false

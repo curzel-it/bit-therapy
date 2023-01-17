@@ -352,8 +352,6 @@
 			children = (
 				1EAEA8FE2970D32900AB3EB0 /* Animations.swift */,
 				1EAEA9002970D32900AB3EB0 /* Capabilities.swift */,
-				1EAEA8FA2970D32900AB3EB0 /* DesktopEnvironment.swift */,
-				1EAEA9012970D32900AB3EB0 /* OnScreen.swift */,
 				1EAEA8FD2970D32900AB3EB0 /* PetEntity.swift */,
 			);
 			path = Models;
@@ -362,6 +360,8 @@
 		1EAEA9022970D32900AB3EB0 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
+				1EAEA9012970D32900AB3EB0 /* OnScreen.swift */,
+				1EAEA8FA2970D32900AB3EB0 /* DesktopEnvironment.swift */,
 				1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */,
 				1E5BC9C429753B3E002AE128 /* PetsWindow.swift */,
 				1EA7E3BA2975612F00F5A409 /* EntityView.swift */,
