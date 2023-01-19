@@ -40,9 +40,7 @@ class EntityView: NSImageView {
             origin: .zero
                 .offset(x: entity.frame.minX)
                 .offset(y: entity.worldBounds.height)
-                .offset(y: -entity.frame.maxY)
-                .offset(x: entity.worldBounds.origin.x)
-                .offset(y: -entity.worldBounds.origin.y),
+                .offset(y: -entity.frame.maxY),
             size: size
         )
     }
