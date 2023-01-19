@@ -22,7 +22,7 @@ struct PetsSelectionView: View {
             .padding(.md)
         }
         .sheet(isPresented: viewModel.showingDetails) {
-            if let species = viewModel.selectedSpecies {
+            if let species = viewModel.openSpecies {
                 PetDetailsView(
                     isShown: viewModel.showingDetails,
                     species: species
@@ -41,7 +41,7 @@ private struct MyPets: View {
             Title(text: Lang.PetSelection.yourPets)
             PetsGrid(
                 columns: viewModel.gridColums,
-                species: viewModel.speciesOnStage
+                species: viewModel.selectedSpecies
             )
         }
     }

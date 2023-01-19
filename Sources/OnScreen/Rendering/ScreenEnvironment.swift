@@ -34,7 +34,7 @@ class ScreenEnvironment: World {
     }
 
     private func bindPetsOnStage() {
-        settings.speciesOnStage
+        settings.$selectedSpecies
             .sink { newPets in
                 var newChildren: [Entity] = self.children.filter { !($0 is PetEntity) }
                 

@@ -8,8 +8,6 @@ import Yage
 class AppState: ObservableObject {
     static let global = AppState()
 
-    let speciesOnStage = CurrentValueSubject<[Species], Never>([])
-
     lazy var isDevApp: Bool = {
         let bundle = Bundle.main.bundleIdentifier ?? ""
         return bundle.contains(".dev")
@@ -39,11 +37,9 @@ class AppState: ObservableObject {
         }
     }
 
-    @Published var selectedSpecies: [String] = [] {
+    @Published private(set) var selectedSpecies: [Species] = [] {
         didSet {
             storage.selectedSpecies = selectedSpecies
-            let species = selectedSpecies.compactMap { Species.by(id: $0) }
-            speciesOnStage.send(species)
         }
     }
 
@@ -102,15 +98,12 @@ class AppState: ObservableObject {
     }
     
     func add(species: Species) {
-        selectedSpecies.append(species.id)
-        let newSpecies = speciesOnStage.value + [species]
-        speciesOnStage.send(newSpecies)
+        remove(species: species)
+        selectedSpecies.append(species)
     }
     
     func remove(species: Species) {
-        selectedSpecies.remove(species.id)
-        let newSpecies = speciesOnStage.value.filter { $0 != species }
-        speciesOnStage.send(newSpecies)
+        selectedSpecies.remove(species)
     }
 }
 
@@ -137,16 +130,16 @@ private class Storage {
         }
     }
     
-    var selectedSpecies: [String] {
+    var selectedSpecies: [Species] {
         get {
-            let species = selectedSpeciesValue
+            let storedIds = selectedSpeciesValue
                 .components(separatedBy: ",")
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
-                .filter { !$0.isEmpty }
-            return species.count == 0 ? [kInitialPetId] : species
+            let speciesIds = storedIds.count == 0 ? [kInitialPetId] : storedIds
+            return speciesIds.compactMap { Species.by(id: $0) }
         }
         set {
-            selectedSpeciesValue = newValue.joined(separator: ",")
+            selectedSpeciesValue = newValue.map { $0.id }.joined(separator: ",")
         }
     }
 }

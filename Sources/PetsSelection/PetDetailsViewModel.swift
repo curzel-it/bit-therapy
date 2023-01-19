@@ -11,7 +11,7 @@ class PetDetailsViewModel: ObservableObject {
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected }
 
-    var isSelected: Bool { appState.speciesOnStage.value.contains(species) }
+    var isSelected: Bool { appState.selectedSpecies.contains(species) }
     var title: String { species.name }
 
     var animationFrames: [ImageFrame] {

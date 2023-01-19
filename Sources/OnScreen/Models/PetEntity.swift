@@ -3,14 +3,6 @@ import Schwifty
 import SwiftUI
 import Yage
 
-public protocol PetsSettings {
-    var gravityEnabled: Bool { get }
-    var petSize: CGFloat { get }
-    var speciesOnStage: CurrentValueSubject<[Species], Never> { get }
-    var speedMultiplier: CGFloat { get }
-    func remove(species: Species)
-}
-
 open class PetEntity: Entity {
     private var settings: AppState { AppState.global }
 

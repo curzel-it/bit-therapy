@@ -81,7 +81,7 @@ class PetsWindow: NSWindow {
     }
     
     private func spawnView(for child: Entity) {
-        guard var contentView else { return }
+        guard let contentView else { return }
         let view = EntityView(representing: child)
         
         for subview in contentView.subviews {

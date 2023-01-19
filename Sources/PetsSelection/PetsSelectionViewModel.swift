@@ -5,18 +5,18 @@ import SwiftUI
 import Yage
 
 class PetsSelectionViewModel: ObservableObject {
-    @Published var selectedSpecies: Species?
-    @Published var speciesOnStage: [Species] = []
+    @Published var openSpecies: Species?
+    @Published var selectedSpecies: [Species] = []
     @Published var unselectedSpecies: [Species] = []
     @Published var canShowDiscordBanner: Bool = true
     @Published private var selectedTag: String?
 
     lazy var showingDetails: Binding<Bool> = Binding {
-        self.selectedSpecies != nil
+        self.openSpecies != nil
     } set: { isShown in
         guard !isShown else { return }
         Task { @MainActor in
-            self.selectedSpecies = nil
+            self.openSpecies = nil
         }
     }
 
@@ -29,12 +29,12 @@ class PetsSelectionViewModel: ObservableObject {
     init() {
         Publishers.CombineLatest3(
             Species.all,
-            AppState.global.speciesOnStage,
+            AppState.global.$selectedSpecies,
             $selectedTag
         )
         .receive(on: DispatchQueue.main)
-        .sink { [weak self] all, onStage, tag in
-            self?.loadPets(all: all, selected: onStage, tag: tag)
+        .sink { [weak self] all, selected, tag in
+            self?.loadPets(all: all, selected: selected, tag: tag)
         }
         .store(in: &disposables)
     }
@@ -44,15 +44,15 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     func showDetails(of species: Species?) {
-        selectedSpecies = species
+        openSpecies = species
     }
 
     func closeDetails() {
-        selectedSpecies = nil
+        openSpecies = nil
     }
 
     func isSelected(_ species: Species) -> Bool {
-        AppState.global.speciesOnStage.value.contains(species)
+        AppState.global.selectedSpecies.contains(species)
     }
     
     func image(for species: Species) -> NSImage? {
@@ -63,7 +63,7 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     private func loadPets(all: [Species], selected: [Species], tag: String?) {
-        speciesOnStage = all.filter { selected.contains($0) }
+        selectedSpecies = selected
         unselectedSpecies = all.filter { tag == nil || $0.tags.contains(tag ?? "") }
     }
 }
