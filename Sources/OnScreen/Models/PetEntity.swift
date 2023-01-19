@@ -115,6 +115,7 @@ extension PetEntity {
 
 public struct PetSize {
     public static let defaultSize: CGFloat = 75
-    public static let minSize: CGFloat = 50
+    public static let minSize: CGFloat = 30
     public static let maxSize: CGFloat = 100
+    public static var range: ClosedRange<CGFloat> = PetSize.minSize...PetSize.maxSize
 }

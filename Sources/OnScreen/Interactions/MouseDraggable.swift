@@ -13,15 +13,16 @@ class MouseDraggable: Capability {
     
     func mouseDragged(currentDelta delta: CGSize) {
         guard dragEnabled, let subject else { return }
-        subject.frame.origin = subject.frame.origin.offset(by: delta)
         if !isBeingDragged {
             mouseDragStarted()
         }
+        let newFrame = subject.frame.offset(x: delta.width, y: delta.height)
+        subject.frame.origin = nearestPosition(for: newFrame, in: subject.worldBounds)
     }
     
-    func mouseUp(totalDelta _: CGSize) {
-        guard dragEnabled, isBeingDragged else { return }
-        mouseDragEnded()
+    func mouseUp(totalDelta _: CGSize) -> CGPoint {
+        guard dragEnabled, isBeingDragged else { return .zero }
+        return mouseDragEnded()
     }
     
     private func mouseDragStarted() {
@@ -29,16 +30,19 @@ class MouseDraggable: Capability {
         subject?.movement?.isEnabled = false
     }
     
-    private func mouseDragEnded() {
-        subject?.set(state: .move)
-        subject?.movement?.isEnabled = true
+    private func mouseDragEnded() -> CGPoint {
+        guard let subject else { return .zero }
+        let finalPosition = nearestPosition(for: subject.frame, in: subject.worldBounds)
+        subject.frame.origin = finalPosition
+        subject.set(state: .move)
+        subject.movement?.isEnabled = true
+        return finalPosition
     }
     
-    private func offset(position: CGPoint, size: CGSize, by delta: CGSize, in bounds: CGRect) -> CGPoint {
-        let point = position.offset(by: delta)
-        return CGPoint(
-            x: max(0, min(point.x, bounds.width - size.width)),
-            y: max(0, min(point.y, bounds.height - size.height))
+    private func nearestPosition(for rect: CGRect, in bounds: CGRect) -> CGPoint {
+        CGPoint(
+            x: min(max(rect.minX, bounds.minX), bounds.maxX - rect.width),
+            y: min(max(rect.minY, bounds.minY), bounds.maxY - rect.height)
         )
     }
 }

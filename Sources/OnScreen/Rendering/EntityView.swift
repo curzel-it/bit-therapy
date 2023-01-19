@@ -49,7 +49,6 @@ class EntityView: NSImageView {
         let hash = entity.spriteHash()
         guard needsSpriteUpdate(for: hash) else { return }
         let newImage = nextImage(for: hash)
-        layer?.transform = layerTransform(forAngle: entity.rotation?.z)
         image = newImage
     }
     
@@ -79,7 +78,9 @@ class EntityView: NSImageView {
             width: locationOnLastDrag.x - locationOnMouseDown.x,
             height: locationOnMouseDown.y - locationOnLastDrag.y
         )
-        entity.mouseDrag?.mouseUp(totalDelta: delta)
+        if let finalPosition = entity.mouseDrag?.mouseUp(totalDelta: delta) {
+            frame.origin = finalPosition
+        }
     }
 
     // MARK: - Right Click
@@ -128,6 +129,7 @@ private extension EntityView {
         assetsProvider
             .image(sprite: entity.sprite)?
             .scaled(to: frame.size)
+            .rotated(by: entity.rotation?.z)
             .flipped(
                 horizontally: entity.rotation?.isFlippedHorizontally ?? false,
                 vertically: entity.rotation?.isFlippedVertically ?? false
@@ -140,60 +142,5 @@ private extension EntityView {
             return true
         }
         return false
-    }
-    
-    func layerTransform(forAngle angle: CGFloat?) -> CATransform3D {
-        if let angle, angle != 0 {
-            var transform = CATransform3DIdentity
-            transform = CATransform3DTranslate(transform, bounds.midX, bounds.midY, 0)
-            transform = CATransform3DRotate(transform, angle, 0, 0, 1)
-            transform = CATransform3DTranslate(transform, -bounds.midX, -bounds.midY, 0)
-            return transform
-        } else {
-            return CATransform3DIdentity
-        }
-    }
-}
-
-// MARK: - Image Manipulation
-
-extension NSImage {
-    func flipped(horizontally: Bool = false, vertically: Bool = false) -> NSImage {
-        let flippedImage = NSImage(size: size)
-        let rect = CGRect(size: size)
-        flippedImage.lockFocus()
-        NSGraphicsContext.current?.imageInterpolation = .none
-
-        let transform = NSAffineTransform()
-        transform.translateX(
-            by: horizontally ? size.width : 0,
-            yBy: vertically ? size.height : 0
-        )
-        transform.scaleX(
-            by: horizontally ? -1 : 1,
-            yBy: vertically ? -1 : 1
-        )
-        transform.concat()
-
-        draw(at: .zero, from: rect, operation: .sourceOver, fraction: 1)
-        flippedImage.unlockFocus()
-        return flippedImage
-    }
-    
-    func scaled(to newSize: CGSize) -> NSImage {
-        guard size != newSize else { return self }
-        let targetImage = NSImage.init(size: newSize)
-        targetImage.lockFocus()
-        NSGraphicsContext.current?.imageInterpolation = .none
-        draw(
-            in: CGRect(origin: .zero, size: newSize),
-            from: CGRect(origin: .zero, size: size),
-            operation: .copy,
-            fraction: 1.0,
-            respectFlipped: true,
-            hints: nil
-        )
-        targetImage.unlockFocus()
-        return targetImage
     }
 }

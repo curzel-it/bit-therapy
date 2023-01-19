@@ -4,7 +4,7 @@ import SwiftUI
 
 public class AutoRespawn: Capability {
     override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
-        guard let subject else { return }
+        guard let subject, subject.state != .drag else { return }
         if !isWithinBounds(point: subject.frame.origin) {
             Logger.log(tag, subject.id, "Teleporting...")
             teleport()

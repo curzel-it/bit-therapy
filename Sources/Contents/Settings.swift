@@ -12,8 +12,8 @@ struct SettingsView: View {
         ScrollView {
             VStack(spacing: .xl) {
                 VStack(spacing: .lg) {
-                    SizeSlider()
-                    SpeedSlider()
+                    SizeControl()
+                    SpeedControl()
                     Switches()
                 }
                 FixOnScreenPets().positioned(.leading)
@@ -93,17 +93,11 @@ private struct DesktopInteractionsSwitch: View {
     @State var showingDetails = false
 
     var body: some View {
-        HStack(spacing: .sm) {
             SettingsSwitch(
                 label: Lang.Settings.desktopInteractionsTitle,
-                value: $appState.desktopInteractions
+                value: $appState.desktopInteractions,
+                showHelp: $showingDetails
             )
-            Image(systemName: "info.circle.fill")
-                .font(.title)
-                .onTapGesture {
-                    showingDetails = true
-                }
-        }
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
                 Text(Lang.Settings.desktopInteractionsTitle)
@@ -112,16 +106,8 @@ private struct DesktopInteractionsSwitch: View {
                 Text(Lang.Settings.desktopInteractionsMessage)
                     .font(.body)
                     .multilineTextAlignment(.center)
-                HStack {
-                    Button(Lang.enable) {
-                        appState.desktopInteractions = true
-                        showingDetails = false
-                    }
-                    .buttonStyle(.regular)
-                    Spacer()
-                    Button(Lang.cancel) { showingDetails = false }
-                        .buttonStyle(.text)
-                }
+                Button(Lang.cancel) { showingDetails = false }
+                    .buttonStyle(.text)
             }
             .padding()
             .frame(width: 450)
@@ -142,14 +128,11 @@ private struct AnonymousTrackingSwitch: View {
     }
 
     var body: some View {
-        HStack(spacing: .sm) {
-            SettingsSwitch(label: Lang.Settings.anonymousTracking, value: enabled)
-            Image(systemName: "info.circle.fill")
-                .font(.title)
-                .onTapGesture {
-                    showingDetails = true
-                }
-        }
+            SettingsSwitch(
+                label: Lang.Settings.anonymousTracking,
+                value: enabled,
+                showHelp: $showingDetails
+            )
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
                 Text(Lang.Settings.anonymousTrackingTitle)
@@ -158,7 +141,6 @@ private struct AnonymousTrackingSwitch: View {
                 Text(Lang.Settings.anonymousTrackingMessage)
                     .font(.body)
                     .multilineTextAlignment(.center)
-                
                 Button(Lang.cancel) { showingDetails = false }
                     .buttonStyle(.text)
             }
@@ -231,31 +213,55 @@ struct GravitySwitch: View {
 
 // MARK: - Pet Size
 
-struct SizeSlider: View {
+struct SizeControl: View {
     @EnvironmentObject var appState: AppState
 
+    @State var text: String = "\(Int(AppState.global.petSize))"
+    
     var body: some View {
-        SettingsSlider(
-            label: "\(Lang.Settings.size) (\(Int(appState.petSize)))",
-            value: $appState.petSize,
-            range: PetSize.minSize ... PetSize.maxSize,
-            reset: { appState.petSize = PetSize.defaultSize }
-        )
+        HStack {
+            Text(Lang.Settings.size).textAlign(.leading).frame(width: 150)
+            TextField(Lang.Settings.size, text: $text).frame(width: 100)
+            Spacer()
+        }
+        .onChange(of: appState.petSize) { newSizeValue in
+            let newSize = "\(Int(newSizeValue))"
+            if text != newSize { text = newSize }
+        }
+        .onChange(of: text) { newText in
+            guard let value = Float(newText) else { return }
+            let newSize = CGFloat(value)
+            guard appState.petSize != newSize else { return }
+            guard PetSize.range.contains(newSize) else { return }
+            appState.petSize = newSize
+        }
     }
 }
 
 // MARK: - Pet Speed Multiplier
 
-struct SpeedSlider: View {
+struct SpeedControl: View {
     @EnvironmentObject var appState: AppState
 
+    @State var text: String = "\(Int(AppState.global.speedMultiplier * 100))"
+    
     var body: some View {
-        SettingsSlider(
-            label: "\(Lang.Settings.speed) (\(Int(appState.speedMultiplier * 100))%)",
-            value: $appState.speedMultiplier,
-            range: 0.25 ... 2,
-            reset: { appState.speedMultiplier = 1.0 }
-        )
+        HStack {
+            Text(Lang.Settings.speed).textAlign(.leading).frame(width: 150)
+            TextField(Lang.Settings.speed, text: $text).frame(width: 100)
+            Spacer()
+        }
+        .onChange(of: appState.speedMultiplier) { newSpeedValue in
+            let newSpeed = "\(Int(newSpeedValue * 100))"
+            if text != newSpeed { text = newSpeed }
+        }
+        .onChange(of: text) { newText in
+            guard let value = Int(newText) else { return }
+            let newSpeed = CGFloat(value/100)
+            guard appState.speedMultiplier != newSpeed else { return }
+            guard 0.25 <= newSpeed && newSpeed <= 2 else { return }
+            appState.speedMultiplier = newSpeed
+        }
     }
 }
 
@@ -264,9 +270,21 @@ struct SpeedSlider: View {
 struct SettingsSwitch: View {
     let label: String
     let value: Binding<Bool>
-
+    var showHelp: Binding<Bool>?
+    
     var body: some View {
-        Toggle(label, isOn: value).toggleStyle(.switch)
+        HStack {
+            Text(label).textAlign(.leading).frame(width: 150)
+            Toggle("", isOn: value).toggleStyle(.switch)
+            if let showHelp {
+                Image(systemName: "info.circle.fill")
+                    .font(.title)
+                    .onTapGesture {
+                        showHelp.wrappedValue = true
+                    }
+            }
+            Spacer()
+        }
     }
 }
 

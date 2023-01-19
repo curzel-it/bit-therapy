@@ -8,6 +8,7 @@ public class WallCrawler: Capability {
     }
 
     override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
+        guard case .move = subject?.state else { return }
         guard let direction = subject?.direction else { return }
 
         let isGoingUp = direction.dy < -0.0001

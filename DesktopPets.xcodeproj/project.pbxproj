@@ -105,6 +105,8 @@
 		1EC3B0BA29637128009ECD6A /* PetsAssets in Resources */ = {isa = PBXBuildFile; fileRef = 1EC3B0B729637128009ECD6A /* PetsAssets */; };
 		1ED1D04129130C11004031BC /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D04029130C11004031BC /* StatusBar.swift */; };
 		1ED75D43291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
+		1EF021042979726900DC6873 /* ImageManupilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF021032979726900DC6873 /* ImageManupilation.swift */; };
+		1EF021052979726900DC6873 /* ImageManupilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF021032979726900DC6873 /* ImageManupilation.swift */; };
 		1EF813B3297177A400D6B4E6 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B2297177A400D6B4E6 /* DesignSystem */; };
 		1EF813B5297177A400D6B4E6 /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B4297177A400D6B4E6 /* Yage */; };
 		1EF813B9297177A400D6B4E6 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B8297177A400D6B4E6 /* LaunchAtLogin */; };
@@ -178,6 +180,7 @@
 		1EC3B0B729637128009ECD6A /* PetsAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PetsAssets; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
+		1EF021032979726900DC6873 /* ImageManupilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManupilation.swift; sourceTree = "<group>"; };
 		1EF813EF29718A1600D6B4E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A66B2C1B28746D2E00D695EA /* Desktop Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FB7D4628740F8E00AB872E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -361,6 +364,7 @@
 				1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */,
 				1E5BC9C429753B3E002AE128 /* PetsWindow.swift */,
 				1EA7E3BA2975612F00F5A409 /* EntityView.swift */,
+				1EF021032979726900DC6873 /* ImageManupilation.swift */,
 			);
 			path = Rendering;
 			sourceTree = "<group>";
@@ -736,6 +740,7 @@
 				1EA7E3BC2975612F00F5A409 /* EntityView.swift in Sources */,
 				1E5BC9A9297537A4002AE128 /* Filters.swift in Sources */,
 				1E5BC9AA297537A4002AE128 /* PetsSelectionView.swift in Sources */,
+				1EF021052979726900DC6873 /* ImageManupilation.swift in Sources */,
 				1E5BC9C629753B3E002AE128 /* PetsWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,6 +787,7 @@
 				1EA7E3BB2975612F00F5A409 /* EntityView.swift in Sources */,
 				1E61F886296F6B52007863DE /* Filters.swift in Sources */,
 				1E36C81F295F533D008EFB28 /* PetsSelectionView.swift in Sources */,
+				1EF021042979726900DC6873 /* ImageManupilation.swift in Sources */,
 				1E5BC9C529753B3E002AE128 /* PetsWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1052,7 +1058,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203028;
+				CURRENT_PROJECT_VERSION = 203101;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1071,7 +1077,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.23;
+				MARKETING_VERSION = 2.31;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -1091,7 +1097,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203028;
+				CURRENT_PROJECT_VERSION = 203101;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -1110,7 +1116,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.23;
+				MARKETING_VERSION = 2.31;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
