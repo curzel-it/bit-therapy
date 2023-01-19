@@ -81,8 +81,17 @@ class PetsWindow: NSWindow {
     }
     
     private func spawnView(for child: Entity) {
+        guard var contentView else { return }
         let view = EntityView(representing: child)
-        contentView?.addSubview(view)
+        
+        for subview in contentView.subviews {
+            guard let otherEntityView = subview as? EntityView else { continue }
+            if child.zIndex < otherEntityView.zIndex {
+                contentView.addSubview(view, positioned: .above, relativeTo: otherEntityView)
+                return
+            }
+        }
+        contentView.addSubview(view)
     }
 }
 

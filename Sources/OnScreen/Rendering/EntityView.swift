@@ -4,6 +4,8 @@ import SwiftUI
 import Yage
 
 class EntityView: NSImageView {
+    var zIndex: Int { entity.zIndex }
+    
     private let entity: Entity
     private let assetsProvider = PetsAssetsProvider.shared
     private var imageCache: [Int: NSImage] = [:]
