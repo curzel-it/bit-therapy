@@ -70,6 +70,7 @@
 "settings.size" = "Pet Size";
 "settings.speed" = "Speed";
 "settings.statusBarIconEnabled" = "Show in status bar";
+"settings.useImageInterpolation" = "Image interpolation";
 "somethingWentWrong" = "Something went wrong, please try again";
 "species.about.ape" = "Inspired by Bubbles and Sloking... More or less!";
 "species.about.betta" = "Aka 'The Fighting Fish', elegant and very popular";

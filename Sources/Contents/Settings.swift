@@ -7,7 +7,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var appState: AppState
-
+    
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
@@ -36,6 +36,7 @@ private struct Switches: View {
             VStack(spacing: .lg) {
                 StatusBarIconSwitch().positioned(.leading)
                 AnonymousTrackingSwitch().positioned(.leading)
+                ImageInterpolationSwitch().positioned(.leading)
             }
         }
     }
@@ -89,15 +90,15 @@ private struct ScreenSwitch: View {
 
 private struct DesktopInteractionsSwitch: View {
     @EnvironmentObject var appState: AppState
-
+    
     @State var showingDetails = false
-
+    
     var body: some View {
-            SettingsSwitch(
-                label: Lang.Settings.desktopInteractionsTitle,
-                value: $appState.desktopInteractions,
-                showHelp: $showingDetails
-            )
+        SettingsSwitch(
+            label: Lang.Settings.desktopInteractionsTitle,
+            value: $appState.desktopInteractions,
+            showHelp: $showingDetails
+        )
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
                 Text(Lang.Settings.desktopInteractionsTitle)
@@ -115,24 +116,37 @@ private struct DesktopInteractionsSwitch: View {
     }
 }
 
+// MARK: - Image Interpolation
+
+private struct ImageInterpolationSwitch: View {
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        SettingsSwitch(
+            label: Lang.Settings.useImageInterpolation,
+            value: $appState.useImageInterpolation
+        )
+    }
+}
+
 // MARK: - Anonymous Tracking
 
 private struct AnonymousTrackingSwitch: View {
     @State var showingDetails = false
-
+    
     var enabled: Binding<Bool> = Binding {
         AppState.global.trackingEnabled
     } set: { isEnabled in
         AppState.global.trackingEnabled = isEnabled
         Tracking.isEnabled = isEnabled
     }
-
+    
     var body: some View {
-            SettingsSwitch(
-                label: Lang.Settings.anonymousTracking,
-                value: enabled,
-                showHelp: $showingDetails
-            )
+        SettingsSwitch(
+            label: Lang.Settings.anonymousTracking,
+            value: enabled,
+            showHelp: $showingDetails
+        )
         .sheet(isPresented: $showingDetails) {
             VStack(alignment: .center, spacing: .xl) {
                 Text(Lang.Settings.anonymousTrackingTitle)
@@ -165,7 +179,7 @@ private struct StatusBarIconSwitch: View {
             }
         }
     }
-
+    
     var body: some View {
         SettingsSwitch(label: Lang.Settings.statusBarIconEnabled, value: enabled)
     }
@@ -175,13 +189,13 @@ private struct StatusBarIconSwitch: View {
 
 private struct LaunchAtLoginSwitch: View {
     @EnvironmentObject var appState: AppState
-
+    
     var launchAtLogin: Binding<Bool> = Binding {
         LaunchAtLogin.isEnabled
     } set: { newValue in
         LaunchAtLogin.isEnabled = newValue
     }
-
+    
     var body: some View {
         SettingsSwitch(label: Lang.Settings.launchAtLogin, value: launchAtLogin)
     }
@@ -202,7 +216,7 @@ private struct FixOnScreenPets: View {
 
 struct GravitySwitch: View {
     @EnvironmentObject var appState: AppState
-
+    
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.gravity,
@@ -215,24 +229,23 @@ struct GravitySwitch: View {
 
 struct SizeControl: View {
     @EnvironmentObject var appState: AppState
-
-    @State var text: String = "\(Int(AppState.global.petSize))"
+    
+    @State var text: String = ""
+    
+    var formattedValue: String {
+        "\(Int(appState.petSize))"
+    }
     
     var body: some View {
         HStack {
             Text(Lang.Settings.size).textAlign(.leading).frame(width: 150)
-            TextField(Lang.Settings.size, text: $text).frame(width: 100)
+            TextField(formattedValue, text: $text).frame(width: 100)
             Spacer()
-        }
-        .onChange(of: appState.petSize) { newSizeValue in
-            let newSize = "\(Int(newSizeValue))"
-            if text != newSize { text = newSize }
         }
         .onChange(of: text) { newText in
             guard let value = Float(newText) else { return }
-            let newSize = CGFloat(value)
+            let newSize = max(min(CGFloat(value), PetSize.maxSize), PetSize.minSize)
             guard appState.petSize != newSize else { return }
-            guard PetSize.range.contains(newSize) else { return }
             appState.petSize = newSize
         }
     }
@@ -242,18 +255,18 @@ struct SizeControl: View {
 
 struct SpeedControl: View {
     @EnvironmentObject var appState: AppState
-
-    @State var text: String = "\(Int(AppState.global.speedMultiplier * 100))"
+    
+    @State var text: String = ""
+    
+    var formattedValue: String {
+        "\(Int(AppState.global.speedMultiplier * 100))%"
+    }
     
     var body: some View {
         HStack {
             Text(Lang.Settings.speed).textAlign(.leading).frame(width: 150)
-            TextField(Lang.Settings.speed, text: $text).frame(width: 100)
+            TextField(formattedValue, text: $text).frame(width: 100)
             Spacer()
-        }
-        .onChange(of: appState.speedMultiplier) { newSpeedValue in
-            let newSpeed = "\(Int(newSpeedValue * 100))"
-            if text != newSpeed { text = newSpeed }
         }
         .onChange(of: text) { newText in
             guard let value = Int(newText) else { return }
@@ -293,19 +306,19 @@ struct SettingsSlider: View {
     let value: Binding<CGFloat>
     let range: ClosedRange<CGFloat>
     let reset: () -> Void
-
+    
     var axis: Axis.Set {
         DeviceRequirement.iPhone.isSatisfied ? .vertical : .horizontal
     }
-
+    
     var body: some View {
         VHStack(axis, spacing: Spacing.md.rawValue) {
             Text(label)
                 .textAlign(.leading)
                 .frame(width: 100)
-
+            
             Slider(value: value, in: range) { EmptyView() }
-
+            
             Button(Lang.reset) { reset() }
                 .buttonStyle(.text)
         }
@@ -316,7 +329,7 @@ public struct VHStack<Content: View>: View {
     let content: () -> Content
     let isHorizontal: Bool
     let spacing: CGFloat?
-
+    
     public init(
         _ axis: Axis.Set,
         spacing: CGFloat? = nil,
@@ -326,7 +339,7 @@ public struct VHStack<Content: View>: View {
         isHorizontal = axis.contains(.horizontal)
         self.spacing = spacing
     }
-
+    
     public var body: some View {
         ZStack {
             if isHorizontal {

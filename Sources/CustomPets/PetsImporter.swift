@@ -9,7 +9,7 @@ struct PetsImporterDragAndDropView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        if appState.creatorMode && PetsImporter.shared.canImport() {
+        if PetsImporter.shared.canImport() {
             VStack(spacing: .zero) {
                 Text(Lang.CustomPets.title).font(.title2.bold()).padding(.bottom, .md)
                 Text(Lang.CustomPets.message)

@@ -10,7 +10,7 @@ struct DeletePetButton: View {
     let completion: (Bool) -> Void
     
     var body: some View {
-        if appState.creatorMode && PetsDeleter.shared.canDelete(species) {
+        if PetsDeleter.shared.canDelete(species) {
             Button(Lang.delete) {
                 let deleted = PetsDeleter.shared.safeDelete(species)
                 completion(deleted)

@@ -7,6 +7,7 @@ class EntityView: NSImageView {
     private let entity: Entity
     private let assetsProvider = PetsAssetsProvider.shared
     private var imageCache: [Int: NSImage] = [:]
+    private let interpolationMode: NSImageInterpolation
     private var lastMouseUp: TimeInterval = .zero
     private var locationOnLastDrag: CGPoint = .zero
     private var locationOnMouseDown: CGPoint = .zero
@@ -14,6 +15,7 @@ class EntityView: NSImageView {
     
     init(representing entity: Entity) {
         self.entity = entity
+        self.interpolationMode = AppState.global.useImageInterpolation ? .default : .none
         super.init(frame: CGRect(size: entity.frame.size))
         translatesAutoresizingMaskIntoConstraints = false
         imageScaling = .scaleProportionallyUpOrDown
@@ -51,11 +53,12 @@ class EntityView: NSImageView {
         let newImage = nextImage(for: hash)
         image = newImage
     }
-    
+    /*
     override func draw(_ rect: NSRect) {
-        NSGraphicsContext.current?.cgContext.interpolationQuality = .none
+        NSGraphicsContext.current?.imageInterpolation = interpolationMode
+        NSGraphicsContext.current?.cgContext.interpolationQuality = interpolationQuality
         super.draw(rect)
-    }
+    }*/
     
     // MARK: - Mouse Drag
     
@@ -128,7 +131,7 @@ private extension EntityView {
     func interpolatedImageForCurrentSprite() -> NSImage? {
         assetsProvider
             .image(sprite: entity.sprite)?
-            .scaled(to: frame.size)
+            .scaled(to: frame.size, with: interpolationMode)
             .rotated(by: entity.rotation?.z)
             .flipped(
                 horizontally: entity.rotation?.isFlippedHorizontally ?? false,

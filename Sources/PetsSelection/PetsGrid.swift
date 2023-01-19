@@ -24,6 +24,7 @@ struct PetsGrid: View {
 // MARK: - Item Preview
 
 private struct ItemPreview: View {
+    @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: PetsSelectionViewModel
 
     let species: Species
@@ -31,7 +32,7 @@ private struct ItemPreview: View {
     var body: some View {
         if let frame = viewModel.image(for: species) {
             Image(frame: frame)
-                .pixelArt()
+                .interpolation(appState.useImageInterpolation)
                 .frame(width: 80, height: 80)
                 .onTapGesture { viewModel.showDetails(of: species) }
         }

@@ -15,15 +15,15 @@ class AppState: ObservableObject {
         return bundle.contains(".dev")
     }()
     
-    @Published var creatorMode: Bool = false {
-        didSet {
-            storage.creatorMode = creatorMode
-        }
-    }
-    
     @Published var desktopInteractions: Bool = true {
         didSet {
             storage.desktopInteractions = desktopInteractions
+        }
+    }
+    
+    @Published var useImageInterpolation: Bool = false {
+        didSet {
+            storage.useImageInterpolation = useImageInterpolation
         }
     }
 
@@ -74,7 +74,6 @@ class AppState: ObservableObject {
     private let storage = Storage()
 
     init() {
-        creatorMode = true // Enable creator mode for users with 2.20
         reload()
     }
 
@@ -87,7 +86,7 @@ class AppState: ObservableObject {
         speedMultiplier = storage.speedMultiplier
         trackingEnabled = storage.trackingEnabled
         disabledScreens = storage.disabledScreens
-        creatorMode = storage.creatorMode
+        useImageInterpolation = storage.useImageInterpolation
     }
     
     func isEnabled(screen: NSScreen) -> Bool {
@@ -117,14 +116,14 @@ class AppState: ObservableObject {
 
 private class Storage {
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
-    @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
+    @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true
+    @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
     @AppStorage("petId") private var selectedSpeciesValue: String = kInitialPetId
     @AppStorage("showInMenuBar") var showInMenuBar = true
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("trackingEnabled") var trackingEnabled = false
-    @AppStorage("creatorMode") var creatorMode = true
-    @AppStorage("disabledScreens") var disabledScreensValue: String = ""
+    @AppStorage("useImageInterpolation") var useImageInterpolation = false
     
     var disabledScreens: [String] {
         get {

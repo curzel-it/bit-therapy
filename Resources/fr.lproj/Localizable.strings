@@ -70,6 +70,7 @@
 "settings.size" = "Taille des animaux";
 "settings.speed" = "Vitesse";
 "settings.statusBarIconEnabled" = "Afficher dans la barre d'état";
+"settings.useImageInterpolation" = "Interpolation d'images";
 "somethingWentWrong" = "Il y a eu un problème, réessaie plus tard";
 "species.about.ape" = "Inspiré par Bubbles et Sloking... Plus ou moins !";
 "species.about.betta" = "Alias \"Le Poisson Combattant\", élégant et très populaire.";

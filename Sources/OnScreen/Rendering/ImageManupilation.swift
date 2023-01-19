@@ -50,11 +50,11 @@ extension NSImage {
         return flippedImage
     }
     
-    func scaled(to newSize: CGSize) -> NSImage {
+    func scaled(to newSize: CGSize, with interpolation: NSImageInterpolation) -> NSImage {
         guard size != newSize else { return self }
         let targetImage = NSImage.init(size: newSize)
         targetImage.lockFocus()
-        NSGraphicsContext.current?.imageInterpolation = .none
+        NSGraphicsContext.current?.imageInterpolation = interpolation
         draw(
             in: CGRect(origin: .zero, size: newSize),
             from: CGRect(origin: .zero, size: size),

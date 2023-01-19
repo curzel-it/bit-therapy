@@ -50,13 +50,14 @@ private struct About: View {
 }
 
 private struct AnimatedPreview: View {
+    @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
     var body: some View {
         ZStack {
             AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { frame in
                 Image(frame: frame)
-                    .pixelArt()
+                    .interpolation(appState.useImageInterpolation)
                     .frame(width: 150, height: 150)
             }
         }
@@ -86,5 +87,14 @@ private struct Footer: View {
                 if deleted { viewModel.close() }
             }
         }
+    }
+}
+
+extension Image {
+    func interpolation(_ enabled: Bool) -> some View {
+        self
+            .interpolation(enabled ? .medium : .none)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
     }
 }

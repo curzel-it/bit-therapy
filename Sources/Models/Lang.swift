@@ -89,6 +89,7 @@ enum Lang {
         static let size = "settings.size".localized()
         static let speed = "settings.speed".localized()
         static let statusBarIconEnabled = "settings.statusBarIconEnabled".localized()
+        static let useImageInterpolation = "settings.useImageInterpolation".localized()
     }
 
     enum Urls {

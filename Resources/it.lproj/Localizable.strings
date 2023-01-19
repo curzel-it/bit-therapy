@@ -70,6 +70,7 @@
 "settings.size" = "Dimensioni Pet";
 "settings.speed" = "Velocità";
 "settings.statusBarIconEnabled" = "Mostra nella barra di stato";
+"settings.useImageInterpolation" = "Interpolazione immagini";
 "somethingWentWrong" = "Qualcosa è andato storto, riprova";
 "species.about.ape" = "Ispirato da Bubbles e Sloking... Circa!";
 "species.about.betta" = "Anche noto come 'Pesce Combattente', molto elegante e popolarissimo.";
