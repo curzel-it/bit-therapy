@@ -8,8 +8,16 @@ You can now create your own custom pets!
 1. Enable creator mode using cheat code `Set!creatorMode=true`
 1. Click on a pet you like and export it (see below)
 1. Modify the json file the sprites as you see fit
+1. Double check filename (see [sprites section](#sprites))
 1. Zip everything
 1. Drag and drop the zip in the app
+
+## Setup
+You only need two things: 
+* An updated version of the app
+* Some tool do design your own sprites (I use [Aseprite](https://github.com/aseprite/aseprite)
+
+Building the app from source it's not required for creating custom pets, but you can build the app using Xcode if you want, here are [some instructions](https://github.com/curzel-it/pet-therapy) for that. 
 
 ## Species Definition
 A `Species` is defined by the following: 
@@ -23,10 +31,12 @@ All of these need to be defined in a json file, for example:
 ``` json
 {
   "id": "ape",
-  "movementPath": "walk",
-  "speed": 0.7,
   "dragPath": "drag",
   "fps": 10,
+  "zIndex": 0,
+  "tags": ["jungle"],
+  "movementPath": "walk",
+  "speed": 0.7,
   "capabilities": [
     "AnimatedSprite",
     "AnimationsProvider",
@@ -35,7 +45,7 @@ All of these need to be defined in a json file, for example:
     "FlipHorizontallyWhenGoingLeft",
     "LinearMovement",
     "PetsSpritesProvider",
-    "RandomAnimations",
+    "AnimationsScheduler",
     "Rotating"
   ],
   "animations": [
@@ -85,7 +95,7 @@ Each file **must** follow this convention:
 
 `{species.id}_{animation.id}-{index}.png`.
 
-Indeces can be either 0-based or 1-based, but need to follow an incremental and sequential order. Names are also case-sensitive.
+Indeces can either start from 0 or 1, but need to follow an incremental and sequential order. Names are also case-sensitive.
 
 For example:
 * `ape_front-1.png`
