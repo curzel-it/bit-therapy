@@ -40,15 +40,15 @@ class ShowMenuOnRightClick: RightClickable {
 
     private func hideThisPetItem() -> NSMenuItem {
         item(
-            title: "hideThisPet",
+            title: "home",
             keyEquivalent: "",
-            action: #selector(hideThisPet),
+            action: #selector(showHome),
             target: self
         )
     }
 
-    @objc func hideThisPet() {
-        lastWindow?.close()
+    @objc func showHome() {
+        MainScene.show()
     }
 
     private func hideAllPetsItem() -> NSMenuItem {

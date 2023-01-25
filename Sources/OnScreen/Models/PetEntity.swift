@@ -27,7 +27,6 @@ open class PetEntity: Entity {
     private func installAdditionalCapabilities() {
         install(MouseDraggable())
         install(ShowMenuOnRightClick())
-        install(ShowHomeOnDoubleClick())
     }
 
     override open func set(state: EntityState) {

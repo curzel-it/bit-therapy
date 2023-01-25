@@ -10,7 +10,7 @@ class EntityView: NSImageView {
     private let assetsProvider = PetsAssetsProvider.shared
     private var imageCache: [Int: NSImage] = [:]
     private let interpolationMode: NSImageInterpolation
-    private var lastMouseUp: TimeInterval = .zero
+    private var firstMouseClick: Date?
     private var locationOnLastDrag: CGPoint = .zero
     private var locationOnMouseDown: CGPoint = .zero
     private var lastSpriteHash: Int = 0
@@ -78,7 +78,6 @@ class EntityView: NSImageView {
     }
     
     override func mouseUp(with event: NSEvent) {
-        handleDoubleClickIfPossible()
         let delta = CGSize(
             width: locationOnLastDrag.x - locationOnMouseDown.x,
             height: locationOnMouseDown.y - locationOnLastDrag.y
@@ -92,16 +91,6 @@ class EntityView: NSImageView {
 
     override func rightMouseUp(with event: NSEvent) {
         entity.rightClick?.onRightClick(with: event)
-    }
-    
-    // MARK: - Double Click
-    
-    func handleDoubleClickIfPossible() {
-        let now = Date().timeIntervalSince1970
-        if now - lastMouseUp < 0.25 {
-            entity.doubleClick?.onDoubleClick()
-        }
-        lastMouseUp = now
     }
 }
 
