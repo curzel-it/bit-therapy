@@ -2,30 +2,22 @@
   "animations": [
     {
       "id": "front",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 3
     },
     {
       "id": "idle",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 2
     },
     {
       "id": "eat",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 2
     },
     {
       "id": "love",
-      "position": {
-        "fromEntityBottomLeft": {}
-      }
+      "position": "fromEntityBottomLeft"
     }
   ],
   "capabilities": [

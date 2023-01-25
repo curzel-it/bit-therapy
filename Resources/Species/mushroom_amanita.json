@@ -2,9 +2,7 @@
   "animations": [
     {
       "id": "idle",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 50
     }
   ],

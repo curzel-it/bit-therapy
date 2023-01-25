@@ -51,9 +51,7 @@ All of these need to be defined in a json file, for example:
   "animations": [
     {
       "id": "front",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 5
     },
     ...

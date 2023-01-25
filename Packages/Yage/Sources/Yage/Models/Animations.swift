@@ -22,6 +22,22 @@ public struct EntityAnimation: Codable {
         self.facingDirection = facingDirection
         self.requiredLoops = requiredLoops
     }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
+        self.facingDirection = try container.decodeIfPresent(CGVector.self, forKey: .facingDirection)
+        self.requiredLoops = try container.decodeIfPresent(Int.self, forKey: .requiredLoops)
+        self.size = try container.decodeIfPresent(CGSize.self, forKey: .size)
+        
+        do {
+            self.position = try container.decode(EntityAnimation.Position.self, forKey: .position)
+        } catch {
+            let legacyPosition = try container.decode([String: [String: String]].self, forKey: .position)
+            let positionKey = legacyPosition.keys.first ?? ""
+            self.position = Position(rawValue: positionKey) ?? .fromEntityBottomLeft
+        }
+    }
 
     public func frame(for entity: Entity) -> CGRect {
         let newSize = size(for: entity.frame.size)
@@ -74,7 +90,7 @@ extension EntityAnimation: CustomStringConvertible {
 }
 
 public extension EntityAnimation {
-    enum Position: Codable {
+    enum Position: String, Codable {
         case fromEntityBottomLeft
         case entityTopLeft
         case worldTopLeft

@@ -2,42 +2,30 @@
   "animations": [
     {
       "id": "front",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 2
     },
     {
       "id": "idle",
-      "position": {
-        "fromEntityBottomLeft": {}
-      }
+      "position": "fromEntityBottomLeft"
     },
     {
       "id": "eat",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 2
     },
     {
       "id": "love",
-      "position": {
-        "fromEntityBottomLeft": {}
-      }
+      "position": "fromEntityBottomLeft"
     },
     {
       "id": "selfie",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 2
     },
     {
       "id": "lightsaber",
-      "position": {
-        "fromEntityBottomLeft": {}
-      },
+      "position": "fromEntityBottomLeft",
       "size": [
         3.356,
         1.86
