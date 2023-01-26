@@ -18,12 +18,6 @@ class AppState: ObservableObject {
             storage.desktopInteractions = desktopInteractions
         }
     }
-    
-    @Published var useImageInterpolation: Bool = false {
-        didSet {
-            storage.useImageInterpolation = useImageInterpolation
-        }
-    }
 
     @Published var gravityEnabled: Bool = true {
         didSet {
@@ -82,7 +76,6 @@ class AppState: ObservableObject {
         speedMultiplier = storage.speedMultiplier
         trackingEnabled = storage.trackingEnabled
         disabledScreens = storage.disabledScreens
-        useImageInterpolation = storage.useImageInterpolation
     }
     
     func isEnabled(screen: NSScreen) -> Bool {
@@ -116,7 +109,6 @@ private class Storage {
     @AppStorage("showInMenuBar") var showInMenuBar = true
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("trackingEnabled") var trackingEnabled = false
-    @AppStorage("useImageInterpolation") var useImageInterpolation = false
     
     var disabledScreens: [String] {
         get {

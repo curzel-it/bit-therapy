@@ -36,7 +36,6 @@ private struct Switches: View {
             VStack(spacing: .lg) {
                 StatusBarIconSwitch().positioned(.leading)
                 AnonymousTrackingSwitch().positioned(.leading)
-                ImageInterpolationSwitch().positioned(.leading)
             }
         }
     }
@@ -113,19 +112,6 @@ private struct DesktopInteractionsSwitch: View {
             .padding()
             .frame(width: 450)
         }
-    }
-}
-
-// MARK: - Image Interpolation
-
-private struct ImageInterpolationSwitch: View {
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        SettingsSwitch(
-            label: Lang.Settings.useImageInterpolation,
-            value: $appState.useImageInterpolation
-        )
     }
 }
 

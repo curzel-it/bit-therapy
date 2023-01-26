@@ -32,7 +32,7 @@ private struct ItemPreview: View {
     var body: some View {
         if let frame = viewModel.image(for: species) {
             Image(frame: frame)
-                .interpolation(appState.useImageInterpolation)
+                .pixelArt()
                 .frame(width: 80, height: 80)
                 .onTapGesture { viewModel.showDetails(of: species) }
         }

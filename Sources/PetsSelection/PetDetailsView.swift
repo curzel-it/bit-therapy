@@ -57,7 +57,7 @@ private struct AnimatedPreview: View {
         ZStack {
             AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { frame in
                 Image(frame: frame)
-                    .interpolation(appState.useImageInterpolation)
+                    .pixelArt()
                     .frame(width: 150, height: 150)
             }
         }
@@ -87,14 +87,5 @@ private struct Footer: View {
                 if deleted { viewModel.close() }
             }
         }
-    }
-}
-
-extension Image {
-    func interpolation(_ enabled: Bool) -> some View {
-        self
-            .interpolation(enabled ? .medium : .none)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
     }
 }
