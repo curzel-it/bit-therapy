@@ -5,11 +5,11 @@ import Schwifty
 // MARK: - Setup
 
 public struct Tracking {
-    public static var isEnabled = false
+    public static private(set) var isEnabled = false
 
-    public static func setup(isEnabled: Bool) {
+    public static func setup() {
         let firebaseAvailable = FirebaseApp.setup()
-        self.isEnabled = isEnabled && firebaseAvailable
+        isEnabled = firebaseAvailable
     }
 }
 

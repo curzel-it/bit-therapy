@@ -40,7 +40,7 @@ public class WallCrawler: Capability {
         subject.frame.origin = CGPoint(x: subject.frame.origin.x, y: 0)
         subject.rotation?.isFlippedHorizontally = true
         subject.rotation?.isFlippedVertically = true
-        subject.rotation?.z = 0
+        subject.rotation?.zAngle = 0
     }
 
     private func crawlUpRightBound() {
@@ -52,7 +52,7 @@ public class WallCrawler: Capability {
         )
         subject.rotation?.isFlippedHorizontally = false
         subject.rotation?.isFlippedVertically = false
-        subject.rotation?.z = .pi * 0.5
+        subject.rotation?.zAngle = .pi * 0.5
     }
 
     private func crawlAlongBottomBound() {
@@ -64,7 +64,7 @@ public class WallCrawler: Capability {
         )
         subject.rotation?.isFlippedHorizontally = false
         subject.rotation?.isFlippedVertically = false
-        subject.rotation?.z = 0
+        subject.rotation?.zAngle = 0
     }
 
     private func crawlDownLeftBound() {
@@ -73,7 +73,7 @@ public class WallCrawler: Capability {
         subject.frame.origin = CGPoint(x: 0, y: subject.frame.origin.y)
         subject.rotation?.isFlippedHorizontally = false
         subject.rotation?.isFlippedVertically = false
-        subject.rotation?.z = .pi * 1.5
+        subject.rotation?.zAngle = .pi * 1.5
     }
 
     private func touchesScreenTop() -> Bool {

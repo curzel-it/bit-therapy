@@ -16,7 +16,7 @@ class EntityView: NSImageView {
     
     init(representing entity: Entity) {
         self.entity = entity
-        super.init(frame: CGRect(size: entity.frame.size))
+        super.init(frame: CGRect(size: .oneByOne))
         translatesAutoresizingMaskIntoConstraints = false
         imageScaling = .scaleProportionallyUpOrDown
     }
@@ -96,7 +96,7 @@ private extension Entity {
         hasher.combine(frame.size.height)
         hasher.combine(rotation?.isFlippedHorizontally ?? false)
         hasher.combine(rotation?.isFlippedVertically ?? false)
-        hasher.combine(rotation?.z ?? 0)
+        hasher.combine(rotation?.zAngle ?? 0)
         return hasher.finalize()
     }
 }
@@ -112,10 +112,16 @@ private extension EntityView {
     }
     
     func interpolatedImageForCurrentSprite() -> NSImage? {
-        assetsProvider
-            .image(sprite: entity.sprite)?
-            .scaled(to: frame.size, with: interpolationMode())
-            .rotated(by: entity.rotation?.z)
+        guard let asset = assetsProvider.image(sprite: entity.sprite) else { return nil }
+        let interpolationMode = ImageInterpolation.mode(
+            for: asset,
+            renderingSize: frame.size,
+            screenScale: window?.backingScaleFactor ?? 1
+        )
+        
+        return asset
+            .scaled(to: frame.size, with: interpolationMode)
+            .rotated(by: entity.rotation?.zAngle)
             .flipped(
                 horizontally: entity.rotation?.isFlippedHorizontally ?? false,
                 vertically: entity.rotation?.isFlippedVertically ?? false
@@ -128,12 +134,5 @@ private extension EntityView {
             return true
         }
         return false
-    }
-    
-    func interpolationMode() -> NSImageInterpolation {
-        let scale = self.window?.screen?.backingScaleFactor ?? 1
-        if scale >= 2 { return .none }
-        if frame.width >= PetSize.defaultSize { return .none }
-        return .default
     }
 }

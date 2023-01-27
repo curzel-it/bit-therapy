@@ -19,7 +19,6 @@ class AppState: ObservableObject {
     @Published private(set) var selectedSpecies: [Species] = []
     @Published var showInMenuBar: Bool = true
     @Published var speedMultiplier: CGFloat = 1
-    @Published var trackingEnabled: Bool = false
     @Published var disabledScreens: [String] = []
     
     private let storage: AppStateStorage
@@ -58,7 +57,6 @@ class AppState: ObservableObject {
         selectedSpecies = storage.selectedSpecies
         showInMenuBar = storage.showInMenuBar
         speedMultiplier = storage.speedMultiplier
-        trackingEnabled = storage.trackingEnabled
         disabledScreens = storage.disabledScreens
     }
 }
@@ -73,7 +71,6 @@ protocol AppStateStorage {
     var selectedSpecies: [Species] { get }
     var showInMenuBar: Bool { get }
     var speedMultiplier: Double { get }
-    var trackingEnabled: Bool { get }
     func storeValues(of appState: AppState)
 }
 
@@ -87,7 +84,6 @@ private class AppStateStorageImpl: AppStateStorage {
     @AppStorage("petId") private var selectedSpeciesValue: String = kInitialPetId
     @AppStorage("showInMenuBar") var showInMenuBar = true
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
-    @AppStorage("trackingEnabled") var trackingEnabled = false
     
     var disabledScreens: [String] {
         get {
@@ -139,10 +135,6 @@ private class AppStateStorageImpl: AppStateStorage {
         
         appState.$speedMultiplier
             .sink { [weak self] in self?.speedMultiplier = $0 }
-            .store(in: &disposables)
-        
-        appState.$trackingEnabled
-            .sink { [weak self] in self?.trackingEnabled = $0 }
             .store(in: &disposables)
         
         appState.$disabledScreens

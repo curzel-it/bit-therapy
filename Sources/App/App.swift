@@ -10,7 +10,7 @@ struct MyApp: App {
 
     init() {
         Logger.isEnabled = true
-        Tracking.setup(isEnabled: AppState.global.trackingEnabled)
+        Tracking.setup()
         CapabilitiesDiscoveryService.shared = PetsCapabilitiesDiscoveryService()
        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {

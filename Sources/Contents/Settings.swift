@@ -26,17 +26,11 @@ struct SettingsView: View {
 
 private struct Switches: View {
     var body: some View {
-        HStack {
-            VStack(spacing: .lg) {
-                GravitySwitch().positioned(.leading)
-                DesktopInteractionsSwitch().positioned(.leading)
-                LaunchAtLoginSwitch().positioned(.leading)
-            }
-            Spacer()
-            VStack(spacing: .lg) {
-                StatusBarIconSwitch().positioned(.leading)
-                AnonymousTrackingSwitch().positioned(.leading)
-            }
+        VStack(spacing: .lg) {
+            LaunchAtLoginSwitch().positioned(.leading)
+            StatusBarIconSwitch().positioned(.leading)
+            GravitySwitch().positioned(.leading)
+            DesktopInteractionsSwitch().positioned(.leading)
         }
     }
 }
@@ -104,41 +98,6 @@ private struct DesktopInteractionsSwitch: View {
                     .font(.largeTitle)
                     .padding(.top)
                 Text(Lang.Settings.desktopInteractionsMessage)
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-                Button(Lang.cancel) { showingDetails = false }
-                    .buttonStyle(.text)
-            }
-            .padding()
-            .frame(width: 450)
-        }
-    }
-}
-
-// MARK: - Anonymous Tracking
-
-private struct AnonymousTrackingSwitch: View {
-    @State var showingDetails = false
-    
-    var enabled: Binding<Bool> = Binding {
-        AppState.global.trackingEnabled
-    } set: { isEnabled in
-        AppState.global.trackingEnabled = isEnabled
-        Tracking.isEnabled = isEnabled
-    }
-    
-    var body: some View {
-        SettingsSwitch(
-            label: Lang.Settings.anonymousTracking,
-            value: enabled,
-            showHelp: $showingDetails
-        )
-        .sheet(isPresented: $showingDetails) {
-            VStack(alignment: .center, spacing: .xl) {
-                Text(Lang.Settings.anonymousTrackingTitle)
-                    .font(.largeTitle)
-                    .padding(.top)
-                Text(Lang.Settings.anonymousTrackingMessage)
                     .font(.body)
                     .multilineTextAlignment(.center)
                 Button(Lang.cancel) { showingDetails = false }
