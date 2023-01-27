@@ -23,60 +23,7 @@
 		1E42E4D4295F7A5200F425F8 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42E4D3295F7A5200F425F8 /* Species.swift */; };
 		1E5AACB729716CB9007531DF /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB429716CB9007531DF /* Tracking.swift */; };
 		1E5AACB929716CB9007531DF /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB529716CB9007531DF /* Firebase.swift */; };
-		1E5BC984297537A4002AE128 /* Capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA9002970D32900AB3EB0 /* Capabilities.swift */; };
-		1E5BC985297537A4002AE128 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */; };
-		1E5BC986297537A4002AE128 /* UfoAbduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FF2970D32900AB3EB0 /* UfoAbduction.swift */; };
-		1E5BC987297537A4002AE128 /* SleepingPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FC2970D32900AB3EB0 /* SleepingPlace.swift */; };
-		1E5BC988297537A4002AE128 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5828740F8E00AB872E /* MainScene.swift */; };
-		1E5BC989297537A4002AE128 /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81A295F533D008EFB28 /* PetsGrid.swift */; };
-		1E5BC98A297537A4002AE128 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
-		1E5BC98B297537A4002AE128 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D04029130C11004031BC /* StatusBar.swift */; };
-		1E5BC98D297537A4002AE128 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB529716CB9007531DF /* Firebase.swift */; };
-		1E5BC98E297537A4002AE128 /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */; };
-		1E5BC98F297537A4002AE128 /* MouseDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */; };
-		1E5BC990297537A4002AE128 /* PetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81B295F533D008EFB28 /* PetDetailsView.swift */; };
-		1E5BC991297537A4002AE128 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42E4D3295F7A5200F425F8 /* Species.swift */; };
-		1E5BC992297537A4002AE128 /* PetsAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */; };
-		1E5BC993297537A4002AE128 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
-		1E5BC994297537A4002AE128 /* GetsAngryWhenMeetingOtherCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F82970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift */; };
-		1E5BC995297537A4002AE128 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB429716CB9007531DF /* Tracking.swift */; };
-		1E5BC996297537A4002AE128 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
-		1E5BC997297537A4002AE128 /* PetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FD2970D32900AB3EB0 /* PetEntity.swift */; };
-		1E5BC998297537A4002AE128 /* PetsSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81C295F533D008EFB28 /* PetsSelectionViewModel.swift */; };
-		1E5BC99A297537A4002AE128 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5C28740F8E00AB872E /* AboutView.swift */; };
-		1E5BC99B297537A4002AE128 /* PetsDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* PetsDeleter.swift */; };
-		1E5BC99C297537A4002AE128 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FE2970D32900AB3EB0 /* Animations.swift */; };
-		1E5BC99D297537A4002AE128 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
-		1E5BC99E297537A4002AE128 /* ShowMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */; };
-		1E5BC99F297537A4002AE128 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
-		1E5BC9A0297537A4002AE128 /* DesktopEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FA2970D32900AB3EB0 /* DesktopEnvironment.swift */; };
-		1E5BC9A1297537A4002AE128 /* PetsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* PetsImporter.swift */; };
-		1E5BC9A2297537A4002AE128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
-		1E5BC9A3297537A4002AE128 /* OnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA9012970D32900AB3EB0 /* OnScreen.swift */; };
-		1E5BC9A4297537A4002AE128 /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
-		1E5BC9A5297537A4002AE128 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D7D4829747D9400DC7D5F /* NewsView.swift */; };
-		1E5BC9A6297537A4002AE128 /* PetsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* PetsExporter.swift */; };
-		1E5BC9A7297537A4002AE128 /* ScreenEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */; };
-		1E5BC9A9297537A4002AE128 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61F885296F6B52007863DE /* Filters.swift */; };
-		1E5BC9AA297537A4002AE128 /* PetsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C819295F533D008EFB28 /* PetsSelectionView.swift */; };
-		1E5BC9AD297537A4002AE128 /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC973297537A4002AE128 /* Yage */; };
-		1E5BC9AE297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC97E297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		1E5BC9AF297537A4002AE128 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC976297537A4002AE128 /* Schwifty */; };
-		1E5BC9B0297537A4002AE128 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC972297537A4002AE128 /* DesignSystem */; };
-		1E5BC9B1297537A4002AE128 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC980297537A4002AE128 /* FirebaseCrashlytics */; };
-		1E5BC9B2297537A4002AE128 /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC978297537A4002AE128 /* RateKit */; };
-		1E5BC9B3297537A4002AE128 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC974297537A4002AE128 /* LaunchAtLogin */; };
-		1E5BC9B4297537A4002AE128 /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC97C297537A4002AE128 /* WindowsDetector */; };
-		1E5BC9B5297537A4002AE128 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E5BC97A297537A4002AE128 /* ZIPFoundation */; };
-		1E5BC9B7297537A4002AE128 /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
-		1E5BC9B8297537A4002AE128 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EF813EF29718A1600D6B4E6 /* GoogleService-Info.plist */; };
-		1E5BC9B9297537A4002AE128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
-		1E5BC9BA297537A4002AE128 /* Species in Resources */ = {isa = PBXBuildFile; fileRef = 1EC3B0B629637128009ECD6A /* Species */; };
-		1E5BC9BB297537A4002AE128 /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
-		1E5BC9BC297537A4002AE128 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
-		1E5BC9BD297537A4002AE128 /* PetsAssets in Resources */ = {isa = PBXBuildFile; fileRef = 1EC3B0B729637128009ECD6A /* PetsAssets */; };
 		1E5BC9C529753B3E002AE128 /* PetsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5BC9C429753B3E002AE128 /* PetsWindow.swift */; };
-		1E5BC9C629753B3E002AE128 /* PetsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5BC9C429753B3E002AE128 /* PetsWindow.swift */; };
 		1E61F886296F6B52007863DE /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61F885296F6B52007863DE /* Filters.swift */; };
 		1E7D1EA62909C31600CC036B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
@@ -85,7 +32,6 @@
 		1E93C60F2962E781007A5B91 /* PetsDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* PetsDeleter.swift */; };
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EA7E3BB2975612F00F5A409 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7E3BA2975612F00F5A409 /* EntityView.swift */; };
-		1EA7E3BC2975612F00F5A409 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7E3BA2975612F00F5A409 /* EntityView.swift */; };
 		1EAEA9062970D32900AB3EB0 /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
 		1EAEA9082970D32900AB3EB0 /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */; };
 		1EAEA90A2970D32900AB3EB0 /* ShowMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */; };
@@ -104,7 +50,6 @@
 		1ED1D04129130C11004031BC /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D04029130C11004031BC /* StatusBar.swift */; };
 		1ED75D43291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
 		1EF021042979726900DC6873 /* ImageManupilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF021032979726900DC6873 /* ImageManupilation.swift */; };
-		1EF021052979726900DC6873 /* ImageManupilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF021032979726900DC6873 /* ImageManupilation.swift */; };
 		1EF813B3297177A400D6B4E6 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B2297177A400D6B4E6 /* DesignSystem */; };
 		1EF813B5297177A400D6B4E6 /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B4297177A400D6B4E6 /* Yage */; };
 		1EF813B9297177A400D6B4E6 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B8297177A400D6B4E6 /* LaunchAtLogin */; };
@@ -149,7 +94,6 @@
 		1E42E4D3295F7A5200F425F8 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		1E5AACB429716CB9007531DF /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		1E5AACB529716CB9007531DF /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
-		1E5BC9C2297537A4002AE128 /* Desktop Pets Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Pets Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5BC9C429753B3E002AE128 /* PetsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsWindow.swift; sourceTree = "<group>"; };
 		1E61F885296F6B52007863DE /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -197,22 +141,6 @@
 			files = (
 				1E29448E2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1E2944902973A21A000A90B0 /* FirebaseCrashlytics in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E5BC9AB297537A4002AE128 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E5BC9AD297537A4002AE128 /* Yage in Frameworks */,
-				1E5BC9AE297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				1E5BC9AF297537A4002AE128 /* Schwifty in Frameworks */,
-				1E5BC9B0297537A4002AE128 /* DesignSystem in Frameworks */,
-				1E5BC9B1297537A4002AE128 /* FirebaseCrashlytics in Frameworks */,
-				1E5BC9B2297537A4002AE128 /* RateKit in Frameworks */,
-				1E5BC9B3297537A4002AE128 /* LaunchAtLogin in Frameworks */,
-				1E5BC9B4297537A4002AE128 /* WindowsDetector in Frameworks */,
-				1E5BC9B5297537A4002AE128 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				A66B2C1B28746D2E00D695EA /* Desktop Pets.app */,
-				1E5BC9C2297537A4002AE128 /* Desktop Pets Dev.app */,
 				1E29446E29739B9B000A90B0 /* Desktop Pets Tests.xctest */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
@@ -463,36 +390,6 @@
 			productReference = 1E29446E29739B9B000A90B0 /* Desktop Pets Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1E5BC971297537A4002AE128 /* Desktop Pets Dev */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E5BC9BF297537A4002AE128 /* Build configuration list for PBXNativeTarget "Desktop Pets Dev" */;
-			buildPhases = (
-				1E5BC982297537A4002AE128 /* SwiftLint */,
-				1E5BC983297537A4002AE128 /* Sources */,
-				1E5BC9AB297537A4002AE128 /* Frameworks */,
-				1E5BC9B6297537A4002AE128 /* Resources */,
-				1E5BC9BE297537A4002AE128 /* Launch at Login Helper */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Desktop Pets Dev";
-			packageProductDependencies = (
-				1E5BC972297537A4002AE128 /* DesignSystem */,
-				1E5BC973297537A4002AE128 /* Yage */,
-				1E5BC974297537A4002AE128 /* LaunchAtLogin */,
-				1E5BC976297537A4002AE128 /* Schwifty */,
-				1E5BC978297537A4002AE128 /* RateKit */,
-				1E5BC97A297537A4002AE128 /* ZIPFoundation */,
-				1E5BC97C297537A4002AE128 /* WindowsDetector */,
-				1E5BC97E297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport */,
-				1E5BC980297537A4002AE128 /* FirebaseCrashlytics */,
-			);
-			productName = MacPets;
-			productReference = 1E5BC9C2297537A4002AE128 /* Desktop Pets Dev.app */;
-			productType = "com.apple.product-type.application";
-		};
 		A6E5AAB42860525A008AA653 /* Desktop Pets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6E5B59C2860525A008AA653 /* Build configuration list for PBXNativeTarget "Desktop Pets" */;
@@ -562,7 +459,6 @@
 			projectRoot = "";
 			targets = (
 				A6E5AAB42860525A008AA653 /* Desktop Pets */,
-				1E5BC971297537A4002AE128 /* Desktop Pets Dev */,
 				1E29446D29739B9B000A90B0 /* Desktop Pets Tests */,
 			);
 		};
@@ -573,20 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E5BC9B6297537A4002AE128 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E5BC9B7297537A4002AE128 /* dogica.ttf in Resources */,
-				1E5BC9B8297537A4002AE128 /* GoogleService-Info.plist in Resources */,
-				1E5BC9B9297537A4002AE128 /* Assets.xcassets in Resources */,
-				1E5BC9BA297537A4002AE128 /* Species in Resources */,
-				1E5BC9BB297537A4002AE128 /* pixelar-regular.otf in Resources */,
-				1E5BC9BC297537A4002AE128 /* Localizable.strings in Resources */,
-				1E5BC9BD297537A4002AE128 /* PetsAssets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,44 +489,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E5BC982297537A4002AE128 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint \"$SRCROOT\" --config \"$SRCROOT\"/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		1E5BC9BE297537A4002AE128 /* Launch at Login Helper */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Launch at Login Helper";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
-		};
 		A6E5AAC22860525A008AA653 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -691,52 +535,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E29447129739B9B000A90B0 /* DesktopPetsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E5BC983297537A4002AE128 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E5BC984297537A4002AE128 /* Capabilities.swift in Sources */,
-				1E5BC985297537A4002AE128 /* PetDetailsViewModel.swift in Sources */,
-				1E5BC986297537A4002AE128 /* UfoAbduction.swift in Sources */,
-				1E5BC987297537A4002AE128 /* SleepingPlace.swift in Sources */,
-				1E5BC988297537A4002AE128 /* MainScene.swift in Sources */,
-				1E5BC989297537A4002AE128 /* PetsGrid.swift in Sources */,
-				1E5BC98A297537A4002AE128 /* AppPages.swift in Sources */,
-				1E5BC98B297537A4002AE128 /* StatusBar.swift in Sources */,
-				1E5BC98D297537A4002AE128 /* Firebase.swift in Sources */,
-				1E5BC98E297537A4002AE128 /* DesktopObstaclesService.swift in Sources */,
-				1E5BC98F297537A4002AE128 /* MouseDraggable.swift in Sources */,
-				1E5BC990297537A4002AE128 /* PetDetailsView.swift in Sources */,
-				1E5BC991297537A4002AE128 /* Species.swift in Sources */,
-				1E5BC992297537A4002AE128 /* PetsAssets.swift in Sources */,
-				1E5BC993297537A4002AE128 /* Lang.swift in Sources */,
-				1E5BC994297537A4002AE128 /* GetsAngryWhenMeetingOtherCats.swift in Sources */,
-				1E5BC995297537A4002AE128 /* Tracking.swift in Sources */,
-				1E5BC996297537A4002AE128 /* AppState.swift in Sources */,
-				1E5BC997297537A4002AE128 /* PetEntity.swift in Sources */,
-				1E5BC998297537A4002AE128 /* PetsSelectionViewModel.swift in Sources */,
-				1E5BC99A297537A4002AE128 /* AboutView.swift in Sources */,
-				1E5BC99B297537A4002AE128 /* PetsDeleter.swift in Sources */,
-				1E5BC99C297537A4002AE128 /* Animations.swift in Sources */,
-				1E5BC99D297537A4002AE128 /* Settings.swift in Sources */,
-				1E5BC99E297537A4002AE128 /* ShowMenuOnRightClick.swift in Sources */,
-				1E5BC99F297537A4002AE128 /* App.swift in Sources */,
-				1E5BC9A0297537A4002AE128 /* DesktopEnvironment.swift in Sources */,
-				1E5BC9A1297537A4002AE128 /* PetsImporter.swift in Sources */,
-				1E5BC9A2297537A4002AE128 /* AppDelegate.swift in Sources */,
-				1E5BC9A3297537A4002AE128 /* OnScreen.swift in Sources */,
-				1E5BC9A4297537A4002AE128 /* RandomPlatformJumper.swift in Sources */,
-				1E5BC9A5297537A4002AE128 /* NewsView.swift in Sources */,
-				1E5BC9A6297537A4002AE128 /* PetsExporter.swift in Sources */,
-				1E5BC9A7297537A4002AE128 /* ScreenEnvironment.swift in Sources */,
-				1EA7E3BC2975612F00F5A409 /* EntityView.swift in Sources */,
-				1E5BC9A9297537A4002AE128 /* Filters.swift in Sources */,
-				1E5BC9AA297537A4002AE128 /* PetsSelectionView.swift in Sources */,
-				1EF021052979726900DC6873 /* ImageManupilation.swift in Sources */,
-				1E5BC9C629753B3E002AE128 /* PetsWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,84 +642,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		1E5BC9C0297537A4002AE128 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203026;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Curzel Federico";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.23;
-				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.dev;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		1E5BC9C1297537A4002AE128 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Resources/MacPets.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203026;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Curzel Federico";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.23;
-				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.dev;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1133,15 +853,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E5BC9BF297537A4002AE128 /* Build configuration list for PBXNativeTarget "Desktop Pets Dev" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E5BC9C0297537A4002AE128 /* Debug */,
-				1E5BC9C1297537A4002AE128 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "DesktopPets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1167,56 +878,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = exactVersion;
-				version = 10.0.0;
-			};
-		};
-		1E5BC975297537A4002AE128 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
-			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
-			};
-		};
-		1E5BC977297537A4002AE128 /* XCRemoteSwiftPackageReference "schwifty" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/schwifty";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.13;
-			};
-		};
-		1E5BC979297537A4002AE128 /* XCRemoteSwiftPackageReference "RateKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/RateKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.4;
-			};
-		};
-		1E5BC97B297537A4002AE128 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.9;
-			};
-		};
-		1E5BC97D297537A4002AE128 /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/WindowsDetector";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.3;
-			};
-		};
-		1E5BC97F297537A4002AE128 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = exactVersion;
-				version = 10.0.0;
+				minimumVersion = 10.4.0;
 			};
 		};
 		1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */ = {
@@ -1270,49 +933,6 @@
 		1E29448F2973A21A000A90B0 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		1E5BC972297537A4002AE128 /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
-		1E5BC973297537A4002AE128 /* Yage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Yage;
-		};
-		1E5BC974297537A4002AE128 /* LaunchAtLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5BC975297537A4002AE128 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
-			productName = LaunchAtLogin;
-		};
-		1E5BC976297537A4002AE128 /* Schwifty */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5BC977297537A4002AE128 /* XCRemoteSwiftPackageReference "schwifty" */;
-			productName = Schwifty;
-		};
-		1E5BC978297537A4002AE128 /* RateKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5BC979297537A4002AE128 /* XCRemoteSwiftPackageReference "RateKit" */;
-			productName = RateKit;
-		};
-		1E5BC97A297537A4002AE128 /* ZIPFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5BC97B297537A4002AE128 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
-			productName = ZIPFoundation;
-		};
-		1E5BC97C297537A4002AE128 /* WindowsDetector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5BC97D297537A4002AE128 /* XCRemoteSwiftPackageReference "WindowsDetector" */;
-			productName = WindowsDetector;
-		};
-		1E5BC97E297537A4002AE128 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5BC97F297537A4002AE128 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		1E5BC980297537A4002AE128 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E5BC97F297537A4002AE128 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
 		1EF813B2297177A400D6B4E6 /* DesignSystem */ = {
