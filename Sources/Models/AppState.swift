@@ -13,7 +13,6 @@ class AppState: ObservableObject {
     @Published var gravityEnabled: Bool = true
     @Published var petSize: CGFloat = 0
     @Published private(set) var selectedSpecies: [Species] = []
-    @Published var showInMenuBar: Bool = true
     @Published var speedMultiplier: CGFloat = 1
     @Published var disabledScreens: [String] = []
     
@@ -48,7 +47,6 @@ class AppState: ObservableObject {
         gravityEnabled = storage.gravityEnabled
         petSize = storage.petSize
         selectedSpecies = storage.selectedSpecies
-        showInMenuBar = storage.showInMenuBar
         speedMultiplier = storage.speedMultiplier
         disabledScreens = storage.disabledScreens
     }

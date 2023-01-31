@@ -9,7 +9,6 @@ protocol AppStateStorage {
     var gravityEnabled: Bool { get }
     var petSize: Double { get }
     var selectedSpecies: [Species] { get }
-    var showInMenuBar: Bool { get }
     var speedMultiplier: Double { get }
     func storeValues(of appState: AppState)
 }
@@ -20,7 +19,6 @@ class AppStateStorageImpl: AppStateStorage {
     @AppStorage("gravityEnabled") var gravityEnabled = true
     @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
     @AppStorage("petId") private var selectedSpeciesValue: String = kInitialPetId
-    @AppStorage("showInMenuBar") var showInMenuBar = true
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     
     var disabledScreens: [String] {
@@ -65,10 +63,6 @@ class AppStateStorageImpl: AppStateStorage {
         
         appState.$selectedSpecies
             .sink { [weak self] in self?.selectedSpecies = $0 }
-            .store(in: &disposables)
-        
-        appState.$showInMenuBar
-            .sink { [weak self] in self?.showInMenuBar = $0 }
             .store(in: &disposables)
         
         appState.$speedMultiplier

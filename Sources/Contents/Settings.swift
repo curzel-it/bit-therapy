@@ -28,7 +28,6 @@ private struct Switches: View {
     var body: some View {
         VStack(spacing: .lg) {
             LaunchAtLoginSwitch().positioned(.leading)
-            StatusBarIconSwitch().positioned(.leading)
             GravitySwitch().positioned(.leading)
             DesktopInteractionsSwitch().positioned(.leading)
         }
@@ -106,27 +105,6 @@ private struct DesktopInteractionsSwitch: View {
             .padding()
             .frame(width: 450)
         }
-    }
-}
-
-// MARK: - Show in Menu Bar
-
-private struct StatusBarIconSwitch: View {
-    var enabled: Binding<Bool> = Binding {
-        AppState.global.showInMenuBar
-    } set: { isEnabled in
-        AppState.global.showInMenuBar = isEnabled
-        Task { @MainActor in
-            if isEnabled {
-                StatusBarCoordinator.shared.show()
-            } else {
-                StatusBarCoordinator.shared.hide()
-            }
-        }
-    }
-    
-    var body: some View {
-        SettingsSwitch(label: Lang.Settings.statusBarIconEnabled, value: enabled)
     }
 }
 
