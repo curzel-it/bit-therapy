@@ -1,31 +1,32 @@
 import Combine
 import Schwifty
 import SwiftUI
-import Yage
 
-class EntityView: NSImageView {
+class PixelArtEntityView: NSImageView, EntityView {
     var zIndex: Int { entity.zIndex }
     
-    private let entity: Entity
-    private let assetsProvider = PetsAssetsProvider.shared
+    private let entity: RenderableEntity
+    private let assetsProvider: AssetsProvider
     private var imageCache: [Int: NSImage] = [:]
     private var firstMouseClick: Date?
     private var locationOnLastDrag: CGPoint = .zero
     private var locationOnMouseDown: CGPoint = .zero
     private var lastSpriteHash: Int = 0
+    private let imageInterpolation = ImageInterpolationUseCase()
     
-    init(representing entity: Entity) {
+    init(representing entity: RenderableEntity, with assetsProvider: AssetsProvider) {
         self.entity = entity
+        self.assetsProvider = assetsProvider
         super.init(frame: CGRect(size: .oneByOne))
         translatesAutoresizingMaskIntoConstraints = false
         imageScaling = .scaleProportionallyUpOrDown
     }
-
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func update() {
         guard entity.isAlive else {
             removeFromSuperview()
@@ -36,12 +37,12 @@ class EntityView: NSImageView {
     }
     
     private func updateFrameIfNeeded() {
-        guard entity.state != .drag else { return }
+        guard !entity.isBeingDragged() else { return }
         guard let size = max(entity.frame.size, .oneByOne) else { return }
         frame = CGRect(
             origin: .zero
                 .offset(x: entity.frame.minX)
-                .offset(y: entity.worldBounds.height)
+                .offset(y: entity.windowSize.height)
                 .offset(y: -entity.frame.maxY),
             size: size
         )
@@ -66,7 +67,7 @@ class EntityView: NSImageView {
         frame.origin = newOrigin
         locationOnLastDrag = newOrigin
         let delta = CGSize(width: event.deltaX, height: event.deltaY)
-        entity.mouseDrag?.mouseDragged(currentDelta: delta)
+        entity.mouseDragged(currentDelta: delta)
     }
     
     override func mouseUp(with event: NSEvent) {
@@ -74,36 +75,19 @@ class EntityView: NSImageView {
             width: locationOnLastDrag.x - locationOnMouseDown.x,
             height: locationOnMouseDown.y - locationOnLastDrag.y
         )
-        if let finalPosition = entity.mouseDrag?.mouseUp(totalDelta: delta) {
+        if let finalPosition = entity.mouseUp(totalDelta: delta) {
             frame.origin = finalPosition
         }
     }
-
+    
     // MARK: - Right Click
-
+    
     override func rightMouseUp(with event: NSEvent) {
-        entity.rightClick?.onRightClick(with: event)
+        entity.rightClicked(with: event)
     }
-}
-
-// MARK: - Hash
-
-private extension Entity {
-    func spriteHash() -> Int {
-        var hasher = Hasher()
-        hasher.combine(sprite)
-        hasher.combine(frame.size.width)
-        hasher.combine(frame.size.height)
-        hasher.combine(rotation?.isFlippedHorizontally ?? false)
-        hasher.combine(rotation?.isFlippedVertically ?? false)
-        hasher.combine(rotation?.zAngle ?? 0)
-        return hasher.finalize()
-    }
-}
-
-// MARK: - Image Loading
-
-private extension EntityView {
+    
+    // MARK: - Image Loading
+    
     func nextImage(for hash: Int) -> NSImage? {
         if let cached = imageCache[hash] { return cached }
         guard let image = interpolatedImageForCurrentSprite() else { return nil }
@@ -113,7 +97,7 @@ private extension EntityView {
     
     func interpolatedImageForCurrentSprite() -> NSImage? {
         guard let asset = assetsProvider.image(sprite: entity.sprite) else { return nil }
-        let interpolationMode = ImageInterpolation.mode(
+        let interpolationMode = imageInterpolation.interpolationMode(
             for: asset,
             renderingSize: frame.size,
             screenScale: window?.backingScaleFactor ?? 1
@@ -121,10 +105,10 @@ private extension EntityView {
         
         return asset
             .scaled(to: frame.size, with: interpolationMode)
-            .rotated(by: entity.rotation?.zAngle)
+            .rotated(by: entity.spriteRotation?.zAngle)
             .flipped(
-                horizontally: entity.rotation?.isFlippedHorizontally ?? false,
-                vertically: entity.rotation?.isFlippedVertically ?? false
+                horizontally: entity.spriteRotation?.isFlippedHorizontally ?? false,
+                vertically: entity.spriteRotation?.isFlippedVertically ?? false
             )
     }
     

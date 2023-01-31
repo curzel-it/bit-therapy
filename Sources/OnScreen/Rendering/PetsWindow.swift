@@ -4,11 +4,14 @@
 
 import AppKit
 import Combine
+import EntityRendering
 import Schwifty
 import SwiftUI
 import Yage
 
 class PetsWindow: NSWindow {
+    @Inject var entityViewsProvider: EntityViewsProvider
+    
     private let tag: String
     private let world: World
     private var previousEntitiesIds: [String] = []
@@ -82,7 +85,7 @@ class PetsWindow: NSWindow {
     
     private func spawnView(for child: Entity) {
         guard let contentView else { return }
-        let view = EntityView(representing: child)
+        let view = entityViewsProvider.view(representing: child) // EntityView(representing: child)
         
         for subview in contentView.subviews {
             guard let otherEntityView = subview as? EntityView else { continue }

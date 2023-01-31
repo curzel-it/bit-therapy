@@ -1,4 +1,5 @@
-import Foundation
+import AppKit
+import EntityRendering
 import Swinject
 
 class Dependencies {
@@ -7,6 +8,9 @@ class Dependencies {
     static func setup() {
         let container = Container()
         container.register(AppStateStorage.self) { _ in AppStateStorageImpl() }
+        container.register(EntityViewsProvider.self) { _ in
+            EntityViewsProvider(assetsProvider: PetsAssetsProvider.shared)            
+        }
         resolver = container.synchronize()
     }
 }
@@ -28,4 +32,3 @@ class Inject<Value> {
         }()
     }
 }
-

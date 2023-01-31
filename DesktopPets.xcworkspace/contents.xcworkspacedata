@@ -11,6 +11,9 @@
       location = "group:Packages/DesignSystem">
    </FileRef>
    <FileRef
+      location = "group:Packages/EntityRendering">
+   </FileRef>
+   <FileRef
       location = "group:Packages/Yage">
    </FileRef>
 </Workspace>
