@@ -12,12 +12,14 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(path: "../DependencyInjectionUtils"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.17")
     ],
     targets: [
         .target(
             name: "EntityRendering",
             dependencies: [
+                .product(name: "DependencyInjectionUtils", package: "DependencyInjectionUtils"),
                 .product(name: "Schwifty", package: "Schwifty")
             ]
         ),

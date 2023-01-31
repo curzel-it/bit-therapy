@@ -1,9 +1,6 @@
-// 
-// Pet Therapy.
-// 
-
 import AppKit
 import Combine
+import DependencyInjectionUtils
 import EntityRendering
 import Schwifty
 import SwiftUI
@@ -85,7 +82,7 @@ class PetsWindow: NSWindow {
     
     private func spawnView(for child: Entity) {
         guard let contentView else { return }
-        let view = entityViewsProvider.view(representing: child) // EntityView(representing: child)
+        let view = entityViewsProvider.view(representing: child)
         
         for subview in contentView.subviews {
             guard let otherEntityView = subview as? EntityView else { continue }

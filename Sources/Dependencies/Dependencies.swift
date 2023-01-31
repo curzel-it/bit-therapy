@@ -1,41 +1,18 @@
 import AppKit
+import DependencyInjectionUtils
 import EntityRendering
 import Swinject
 
 class Dependencies {
-    fileprivate static var resolver: Resolver!
-    
     static func setup() {
         let container = Container()
         container.register(AppStateStorage.self) { _ in AppStateStorageImpl() }
+        container.register(EntityViewsProvider.self) { _ in EntityViewsProvider() }
         
-        container.register(PetsAssetsProvider.self) { _ in
-            PetsAssetsProviderImpl()
-        }
-        .inObjectScope(.container)
+        let assets = PetsAssetsProviderImpl()
+        container.registerSingleton(PetsAssetsProvider.self) { _ in assets }
+        container.registerSingleton(EntityRendering.AssetsProvider.self) { _ in assets }
         
-        container.register(EntityViewsProvider.self) { _ in
-            let assets = resolver.resolve(PetsAssetsProvider.self)!
-            return EntityViewsProvider(assetsProvider: assets)
-        }
-        resolver = container.synchronize()
-    }
-}
-
-@propertyWrapper
-class Inject<Value> {
-    private var storage: Value?
-
-    var wrappedValue: Value {
-        storage ?? {
-            guard let resolver = Dependencies.resolver else {
-                fatalError("Missing call to `Dependencies.setup()`")
-            }
-            guard let value = resolver.resolve(Value.self) else {
-                fatalError("Dependency `\(Value.self)` not found, register it in `Dependencies.setup()`")
-            }
-            storage = value
-            return value
-        }()
+        Container.propertyWrapperResolver = container.synchronize()
     }
 }

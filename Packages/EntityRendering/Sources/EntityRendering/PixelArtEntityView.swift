@@ -1,12 +1,14 @@
 import Combine
+import DependencyInjectionUtils
 import Schwifty
 import SwiftUI
 
 class PixelArtEntityView: NSImageView, EntityView {
+    @Inject var assetsProvider: AssetsProvider
+    
     var zIndex: Int { entity.zIndex }
     
     private let entity: RenderableEntity
-    private let assetsProvider: AssetsProvider
     private var imageCache: [Int: NSImage] = [:]
     private var firstMouseClick: Date?
     private var locationOnLastDrag: CGPoint = .zero
@@ -14,9 +16,8 @@ class PixelArtEntityView: NSImageView, EntityView {
     private var lastSpriteHash: Int = 0
     private let imageInterpolation = ImageInterpolationUseCase()
     
-    init(representing entity: RenderableEntity, with assetsProvider: AssetsProvider) {
+    init(representing entity: RenderableEntity) {
         self.entity = entity
-        self.assetsProvider = assetsProvider
         super.init(frame: CGRect(size: .oneByOne))
         translatesAutoresizingMaskIntoConstraints = false
         imageScaling = .scaleProportionallyUpOrDown

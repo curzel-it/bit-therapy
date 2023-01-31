@@ -30,6 +30,7 @@
 		1E7D1EA62909C31600CC036B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
 		1E861D122989BFD000EA074E /* EntityRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E861D112989BFD000EA074E /* EntityRendering.swift */; };
+		1E861D142989C49F00EA074E /* DependencyInjectionUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 1E861D132989C49F00EA074E /* DependencyInjectionUtils */; };
 		1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* PetsExporter.swift */; };
 		1E93C60C29624891007A5B91 /* PetsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* PetsImporter.swift */; };
 		1E93C60F2962E781007A5B91 /* PetsDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* PetsDeleter.swift */; };
@@ -163,6 +164,7 @@
 				1EF813B9297177A400D6B4E6 /* LaunchAtLogin in Frameworks */,
 				1EF813C3297177A400D6B4E6 /* WindowsDetector in Frameworks */,
 				1EF813C1297177A400D6B4E6 /* ZIPFoundation in Frameworks */,
+				1E861D142989C49F00EA074E /* DependencyInjectionUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +434,7 @@
 				1EF813C6297177A500D6B4E6 /* FirebaseCrashlytics */,
 				1E2527382989AB2C00756762 /* Swinject */,
 				1EAB525F2989B8F800EA4034 /* EntityRendering */,
+				1E861D132989C49F00EA074E /* DependencyInjectionUtils */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -966,6 +969,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		1E861D132989C49F00EA074E /* DependencyInjectionUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DependencyInjectionUtils;
 		};
 		1EAB525F2989B8F800EA4034 /* EntityRendering */ = {
 			isa = XCSwiftPackageProductDependency;
