@@ -10,18 +10,12 @@ open class PetEntity: Entity {
         super.init(
             species: species,
             id: PetEntity.id(for: species),
-            frame: PetEntity.initialFrame(in: worldBounds, size: AppState.global.petSize),
+            frame: CGRect(square: AppState.global.petSize),
             in: worldBounds
         )
-        loadProperties()
-        installAdditionalCapabilities()
-    }
-
-    func loadProperties() {
         resetSpeed()
-        setInitialPosition()
-        setInitialDirection()
         setGravity()
+        installAdditionalCapabilities()
     }
     
     private func installAdditionalCapabilities() {
@@ -41,21 +35,17 @@ open class PetEntity: Entity {
             settings: settings.speedMultiplier
         )
     }
-
-    private func setInitialPosition() {
-        let randomX = CGFloat.random(in: 0.1 ..< 0.75) * worldBounds.width 
+    
+    open override func setInitialPosition() {
+        let randomX = worldBounds.width * .random(in: 0.2...0.8)
         let randomY: CGFloat
 
         if capability(for: WallCrawler.self) != nil {
             randomY = worldBounds.height - frame.height
         } else {
-            randomY = CGFloat.random(in: 0.1 ..< 0.5) * worldBounds.height
+            randomY = worldBounds.height * .random(in: 0.1..<0.5)
         }
         frame.origin = CGPoint(x: randomX, y: randomY)
-    }
-
-    private func setInitialDirection() {
-        direction = .init(dx: 1, dy: 0)
     }
 
     public var supportsGravity: Bool {
@@ -90,15 +80,6 @@ public extension PetEntity {
     static func speedMultiplier(for size: CGFloat) -> CGFloat {
         let sizeRatio = size / PetSize.defaultSize
         return baseSpeed * sizeRatio
-    }
-}
-
-// MARK: - Initial Frame
-
-extension PetEntity {
-    static func initialFrame(in worldBounds: CGRect, size: CGFloat) -> CGRect {
-        let randomX = worldBounds.width * CGFloat.random(in: 0.2 ... 0.8)
-        return CGRect(origin: CGPoint(x: randomX, y: 30), size: CGSize(square: size))
     }
 }
 
