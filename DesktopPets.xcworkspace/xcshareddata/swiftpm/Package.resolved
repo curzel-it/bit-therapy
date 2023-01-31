@@ -145,6 +145,15 @@
       }
     },
     {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "8bc503e60965298984fb58cf47b71c541449fe2a",
+        "version" : "2.8.3"
+      }
+    },
+    {
       "identity" : "windowsdetector",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/windowsdetector",

@@ -9,13 +9,14 @@ struct MyApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     init() {
+        Dependencies.setup()
         Logger.isEnabled = true
         Tracking.setup()
         CapabilitiesDiscoveryService.shared = PetsCapabilitiesDiscoveryService()
        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             RateKit.ratingsService(
-                debug: AppState.global.isDevApp,
+                debug: true,
                 launchesBeforeAskingForReview: 10
             ).askForRatingIfNeeded()
         }

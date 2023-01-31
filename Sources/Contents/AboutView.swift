@@ -22,9 +22,14 @@ private struct AppVersion: View {
         
     var text: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        let dev = appState.isDevApp ? "Dev" : ""
+        let dev = isDevApp ? "Dev" : ""
         return ["v.", version ?? "n/a", dev]
             .filter { !$0.isEmpty }.joined(separator: " ")
+    }
+    
+    var isDevApp: Bool {
+        let bundle = Bundle.main.bundleIdentifier ?? ""
+        return bundle.contains(".dev")
     }
     
     var body: some View {

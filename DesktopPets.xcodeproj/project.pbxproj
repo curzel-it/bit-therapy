@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E1EBF31291F9E1800D2323D /* dogica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBF30291F9E1800D2323D /* dogica.ttf */; };
+		1E2527392989AB2C00756762 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2527382989AB2C00756762 /* Swinject */; };
+		1E25273B2989AB4C00756762 /* AppStateStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25273A2989AB4C00756762 /* AppStateStorage.swift */; };
+		1E25273D2989ABC300756762 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25273C2989ABC300756762 /* Dependencies.swift */; };
 		1E29447129739B9B000A90B0 /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29447029739B9B000A90B0 /* DesktopPetsTests.swift */; };
 		1E29448E2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29448D2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		1E2944902973A21A000A90B0 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E29448F2973A21A000A90B0 /* FirebaseCrashlytics */; };
@@ -79,6 +82,8 @@
 
 /* Begin PBXFileReference section */
 		1E1EBF30291F9E1800D2323D /* dogica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dogica.ttf; sourceTree = "<group>"; };
+		1E25273A2989AB4C00756762 /* AppStateStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateStorage.swift; sourceTree = "<group>"; };
+		1E25273C2989ABC300756762 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		1E29446E29739B9B000A90B0 /* Desktop Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E29447029739B9B000A90B0 /* DesktopPetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopPetsTests.swift; sourceTree = "<group>"; };
 		1E29447529739BCE000A90B0 /* Desktop Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Desktop Pets.xctestplan"; path = "Tests/Desktop Pets.xctestplan"; sourceTree = SOURCE_ROOT; };
@@ -149,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF813B5297177A400D6B4E6 /* Yage in Frameworks */,
+				1E2527392989AB2C00756762 /* Swinject in Frameworks */,
 				1EF813C5297177A500D6B4E6 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1EF813BB297177A400D6B4E6 /* Schwifty in Frameworks */,
 				1EF813B3297177A400D6B4E6 /* DesignSystem in Frameworks */,
@@ -175,6 +181,7 @@
 			children = (
 				A6FB7D5628740F8E00AB872E /* App.swift */,
 				1EA055572913E4BE0037803E /* AppDelegate.swift */,
+				1E25273C2989ABC300756762 /* Dependencies.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -191,8 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				1E2AC73F290AA941003D0AB2 /* AppState.swift */,
-				1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */,
+				1E25273A2989AB4C00756762 /* AppStateStorage.swift */,
 				1E2AC745290B1093003D0AB2 /* Lang.swift */,
+				1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */,
 				1E42E4D3295F7A5200F425F8 /* Species.swift */,
 			);
 			path = Models;
@@ -415,6 +423,7 @@
 				1EF813C2297177A400D6B4E6 /* WindowsDetector */,
 				1EF813C4297177A500D6B4E6 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1EF813C6297177A500D6B4E6 /* FirebaseCrashlytics */,
+				1E2527382989AB2C00756762 /* Swinject */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -453,6 +462,7 @@
 				1E93C6032962396B007A5B91 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				1E6A244C2970DA0600E62D08 /* XCRemoteSwiftPackageReference "WindowsDetector" */,
 				1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -573,7 +583,9 @@
 				1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */,
 				1EAEA9222970D32900AB3EB0 /* OnScreen.swift in Sources */,
 				1EAEA9062970D32900AB3EB0 /* RandomPlatformJumper.swift in Sources */,
+				1E25273B2989AB4C00756762 /* AppStateStorage.swift in Sources */,
 				1E2D7D4929747D9400DC7D5F /* NewsView.swift in Sources */,
+				1E25273D2989ABC300756762 /* Dependencies.swift in Sources */,
 				1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */,
 				1EAEA9162970D32900AB3EB0 /* ScreenEnvironment.swift in Sources */,
 				1EA7E3BB2975612F00F5A409 /* EntityView.swift in Sources */,
@@ -772,7 +784,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203302;
+				CURRENT_PROJECT_VERSION = 203401;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -791,7 +803,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.33;
+				MARKETING_VERSION = 2.34;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -811,7 +823,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203302;
+				CURRENT_PROJECT_VERSION = 203401;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -830,7 +842,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.33;
+				MARKETING_VERSION = 2.34;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -874,6 +886,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
 		1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -925,6 +945,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E2527382989AB2C00756762 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		1E29448D2973A21A000A90B0 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

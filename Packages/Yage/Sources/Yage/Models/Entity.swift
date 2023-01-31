@@ -29,20 +29,7 @@ open class Entity: Identifiable {
         self.zIndex = species.zIndex
         self.frame = frame
         self.worldBounds = worldBounds
-        setInitialPosition()
-        setInitialDirection()
         installCapabilities()
-    }
-    
-    open func setInitialPosition() {
-        let randomX = worldBounds.width * .random(in: 0.2...0.8)
-        let randomY = worldBounds.height * .random(in: 0.1...0.5)
-        frame.origin = CGPoint(x: randomX, y: randomY).offset(by: worldBounds.origin)
-    }
-
-    func setInitialDirection() {
-        direction = .init(dx: 1, dy: 0)
-        state = .move
     }
     
     private func installCapabilities() {

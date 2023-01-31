@@ -15,6 +15,8 @@ open class PetEntity: Entity {
         )
         resetSpeed()
         setGravity()
+        setInitialPosition()
+        setInitialDirection()
         installAdditionalCapabilities()
     }
     
@@ -36,7 +38,7 @@ open class PetEntity: Entity {
         )
     }
     
-    open override func setInitialPosition() {
+    func setInitialPosition() {
         let randomX = worldBounds.width * .random(in: 0.2...0.8)
         let randomY: CGFloat
 
@@ -46,6 +48,10 @@ open class PetEntity: Entity {
             randomY = worldBounds.height * .random(in: 0.1..<0.5)
         }
         frame.origin = CGPoint(x: randomX, y: randomY)
+    }
+
+    func setInitialDirection() {
+        direction = .init(dx: 1, dy: 0)
     }
 
     public var supportsGravity: Bool {
