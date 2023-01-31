@@ -7,7 +7,9 @@ public protocol AssetsProvider: AnyObject {
     func frames(for species: String, animation: String) -> [String]
 }
 
-class PetsSpritesProvider: SpritesProvider {
+class PetsSpritesProvider: SpritesProvider {    
+    @Inject var assets: PetsAssetsProvider
+    
     override func sprite(state: EntityState) -> String {
         guard let species = subject?.species else { return "" }
         switch state {
@@ -21,7 +23,7 @@ class PetsSpritesProvider: SpritesProvider {
     override func frames(state: EntityState) -> [String] {
         guard let species = subject?.species.id else { return [] }
         let path = sprite(state: state)
-        return PetsAssetsProvider.shared.frames(for: species, animation: path)
+        return assets.frames(for: species, animation: path)
     }
 }
 

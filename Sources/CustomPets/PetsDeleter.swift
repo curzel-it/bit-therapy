@@ -24,6 +24,8 @@ struct DeletePetButton: View {
 private class PetsDeleter {
     static let shared = PetsDeleter()
     
+    @Inject var assets: PetsAssetsProvider
+    
     func canDelete(_ species: Species) -> Bool {
         !species.isOriginal()
     }
@@ -31,7 +33,7 @@ private class PetsDeleter {
     func safeDelete(_ species: Species) -> Bool {
         do {
             try PetsDeleter.shared.delete(species)
-            PetsAssetsProvider.shared.reloadAssets()
+            assets.reloadAssets()
             Species.unregister(species)
             return true
         } catch let error {

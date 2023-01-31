@@ -1,9 +1,16 @@
+import EntityRendering
 import Schwifty
 import SwiftUI
 
-class PetsAssetsProvider {
-    static let shared = PetsAssetsProvider()
-    
+protocol PetsAssetsProvider: EntityRendering.AssetsProvider {
+    func frames(for species: String, animation: String) -> [String]
+    func images(for species: String, animation: String) -> [NSImage]
+    func image(sprite: String?) -> NSImage?
+    func allAssets(for species: String) -> [URL]
+    func reloadAssets()
+}
+
+class PetsAssetsProviderImpl: PetsAssetsProvider {
     private var allAssetsUrls: [URL] = []
     private var sortedAssetsByKey: [String: [Asset]] = [:]
     
@@ -46,8 +53,10 @@ class PetsAssetsProvider {
                 return cache
             })
     }
-    
-    private func url(sprite: String) -> URL? {
+}
+
+private extension PetsAssetsProviderImpl {
+    func url(sprite: String) -> URL? {
         guard let key = key(fromSprite: sprite) else { return nil }
         return sortedAssetsByKey[key]?
             .filter { $0.sprite == sprite }
@@ -55,16 +64,14 @@ class PetsAssetsProvider {
             .url
     }
     
-    private func key(for species: String, animation: String) -> String {
+    func key(for species: String, animation: String) -> String {
         "\(species)_\(animation)"
     }
     
-    private func key(fromSprite sprite: String) -> String? {
+    func key(fromSprite sprite: String) -> String? {
         sprite.components(separatedBy: "-").first
     }
-}
-
-private extension PetsAssetsProvider {
+    
     func originalUrls() -> [URL] {
         Bundle.main.urls(forResourcesWithExtension: "png", subdirectory: "PetsAssets") ?? []
     }

@@ -68,6 +68,8 @@ private struct DragAndDrop: View {
 private class PetsImporter {
     static let shared = PetsImporter()
     
+    @Inject var assets: PetsAssetsProvider
+    
     private var importedFolder: URL? = {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
     }()
@@ -131,7 +133,7 @@ private class PetsImporter {
             )
             try FileManager.default.moveItem(at: $0, to: assetDestination)
         }
-        PetsAssetsProvider.shared.reloadAssets()
+        assets.reloadAssets()
         Species.register(species)
     }
     

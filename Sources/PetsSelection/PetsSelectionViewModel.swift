@@ -5,6 +5,8 @@ import SwiftUI
 import Yage
 
 class PetsSelectionViewModel: ObservableObject {
+    @Inject var assets: PetsAssetsProvider
+    
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
     @Published var unselectedSpecies: [Species] = []
@@ -56,10 +58,10 @@ class PetsSelectionViewModel: ObservableObject {
     }
     
     func image(for species: Species) -> NSImage? {
-        let path = PetsAssetsProvider.shared
+        let path = assets
             .frames(for: species.id, animation: "front")
             .first
-        return PetsAssetsProvider.shared.image(sprite: path)
+        return assets.image(sprite: path)
     }
 
     private func loadPets(all: [Species], selected: [Species], tag: String?) {

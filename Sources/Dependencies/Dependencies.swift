@@ -8,8 +8,15 @@ class Dependencies {
     static func setup() {
         let container = Container()
         container.register(AppStateStorage.self) { _ in AppStateStorageImpl() }
+        
+        container.register(PetsAssetsProvider.self) { _ in
+            PetsAssetsProviderImpl()
+        }
+        .inObjectScope(.container)
+        
         container.register(EntityViewsProvider.self) { _ in
-            EntityViewsProvider(assetsProvider: PetsAssetsProvider.shared)            
+            let assets = resolver.resolve(PetsAssetsProvider.self)!
+            return EntityViewsProvider(assetsProvider: assets)
         }
         resolver = container.synchronize()
     }

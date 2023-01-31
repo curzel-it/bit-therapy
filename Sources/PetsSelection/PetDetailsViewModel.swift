@@ -2,7 +2,9 @@ import NotAGif
 import SwiftUI
 import Yage
 
-class PetDetailsViewModel: ObservableObject {
+class PetDetailsViewModel: ObservableObject {    
+    @Inject var assets: PetsAssetsProvider
+    
     @Binding var isShown: Bool
     
     let species: Species
@@ -15,7 +17,7 @@ class PetDetailsViewModel: ObservableObject {
     var title: String { species.name }
 
     var animationFrames: [ImageFrame] {
-        PetsAssetsProvider.shared.images(for: species.id, animation: "front")
+        assets.images(for: species.id, animation: "front")
     }
 
     var animationFps: TimeInterval {

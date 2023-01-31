@@ -62,6 +62,8 @@ struct ExportSpeciesButton: View {
 private class PetsExporter {
     static let shared = PetsExporter()
     
+    @Inject var assets: PetsAssetsProvider
+    
     func export(_ species: Species, completion: @escaping (URL?) -> Void) {
         Logger.log("Exporter", "Exporting", species.id)
         guard let destination = exportUrl(for: species) else { return }
@@ -83,7 +85,7 @@ private class PetsExporter {
             Logger.log("Exporter", "Could not find '\(species.id).json'")
             return nil
         }
-        let assets = PetsAssetsProvider.shared.allAssets(for: species.id)
+        let assets = assets.allAssets(for: species.id)
         let urls = [json] + assets
         
         if urls.count > 0 {
