@@ -25,6 +25,13 @@
         "identifier" : "1E29446D29739B9B000A90B0",
         "name" : "Desktop Pets Tests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/EntityRendering",
+        "identifier" : "EntityRenderingTests",
+        "name" : "EntityRenderingTests"
+      }
     }
   ],
   "version" : 1
