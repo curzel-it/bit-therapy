@@ -12,7 +12,6 @@ struct MyApp: App {
         Dependencies.setup()
         Logger.isEnabled = true
         Tracking.setup()
-        CapabilitiesDiscoveryService.shared = PetsCapabilitiesDiscoveryService()
        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             RateKit.ratingsService(

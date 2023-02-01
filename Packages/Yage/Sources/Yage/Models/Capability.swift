@@ -1,6 +1,10 @@
 import Schwifty
 import SwiftUI
 
+public protocol CapabilitiesDiscoveryService {
+    func capability(for id: String) -> Capability?
+}
+
 open class Capability {
     public weak var subject: Entity?
     public var isEnabled: Bool = true
@@ -38,15 +42,5 @@ public extension Entity {
     func install(_ capability: Capability) {
         capability.install(on: self)
         capabilities.append(capability)
-    }
-}
-
-open class CapabilitiesDiscoveryService {
-    public static var shared = CapabilitiesDiscoveryService()
-    
-    public init() {}
-    
-    open func capability(for id: String) -> Capability? {
-        fatalError("Override CapabilitiesDiscoveryService.shared with your own instance.")
     }
 }

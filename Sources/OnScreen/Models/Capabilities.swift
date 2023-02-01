@@ -17,7 +17,7 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "WallCrawler": WallCrawler.self
     ]
     
-    override func capability(for id: String) -> Capability? {
+    func capability(for id: String) -> Capability? {
         capabilities[id]?.init()
     }
 }

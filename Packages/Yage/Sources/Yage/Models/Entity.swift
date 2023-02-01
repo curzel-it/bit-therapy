@@ -1,3 +1,4 @@
+import DependencyInjectionUtils
 import Schwifty
 import SwiftUI
 
@@ -34,7 +35,8 @@ open class Entity: Identifiable {
     
     private func installCapabilities() {
         species.capabilities.forEach {
-            if let capability = CapabilitiesDiscoveryService.shared.capability(for: $0) {
+            @Inject var discoveryService: CapabilitiesDiscoveryService
+            if let capability = discoveryService.capability(for: $0) {
                 install(capability)
             }
         }
