@@ -5,8 +5,8 @@ import Yage
 
 class PetDetailsViewModel: ObservableObject {
     @Inject var assets: PetsAssetsProvider
-    @Inject var deletePet: DeletePetCoordinator
-    @Inject var exportPet: ExportPetCoordinator
+    private let deletePet = DeletePetButtonCoordinator()
+    private let exportPet = ExportPetButtonCoordinator()
     
     @Binding var isShown: Bool
     

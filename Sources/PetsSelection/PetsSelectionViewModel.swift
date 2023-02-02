@@ -7,7 +7,6 @@ import Yage
 
 class PetsSelectionViewModel: ObservableObject {
     @Inject var assets: PetsAssetsProvider
-    @Inject var importPet: ImportPetCoordinator
     
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
@@ -27,6 +26,8 @@ class PetsSelectionViewModel: ObservableObject {
     var gridColums: [GridItem] {
         [.init(.adaptive(minimum: 100, maximum: 140), spacing: Spacing.lg.rawValue)]
     }
+    
+    private let importPet = ImportPetDragAndDropCoordinator()
 
     private var disposables = Set<AnyCancellable>()
 

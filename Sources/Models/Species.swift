@@ -17,8 +17,8 @@ extension Species {
         all.value.first { $0.id == id }
     }
     
-    static func jsonDefinition(for species: Species) -> URL? {
-        allJsonUrls.first { $0.lastPathComponent == "\(species.id).json" }
+    static func jsonDefinition(for speciesId: String) -> URL? {
+        allJsonUrls.first { $0.lastPathComponent == "\(speciesId).json" }
     }
     
     static func register(_ species: Species) {
