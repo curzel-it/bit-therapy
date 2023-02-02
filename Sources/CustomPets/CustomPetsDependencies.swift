@@ -12,12 +12,6 @@ class CustomPetsResourcesProviderImpl: CustomPets.ResourcesProvider {
     }
 }
 
-class CustomPetsSpeciesProviderImpl: CustomPets.SpeciesProvider {
-    func allExistingSpecies() -> [String] {
-        Species.all.value.map { $0.id }
-    }
-}
-
 class CustomPetsLocalizedResourcesImpl: CustomPets.LocalizedResources {
     func string(for error: CustomPets.ImporterError) -> String {
         switch error {
@@ -29,10 +23,12 @@ class CustomPetsLocalizedResourcesImpl: CustomPets.LocalizedResources {
             return String(format: Lang.CustomPets.missingFiles, name)
         case .invalidJsonFile:
             return Lang.CustomPets.invalidJson
-        case .speciesAlreadyExists(let species):
+        case .itemAlreadyExists(let species):
             return String(format: Lang.CustomPets.speciesAlreadyExists, species.id)
         case .genericError:
             return Lang.CustomPets.genericImportError
         }
     }
 }
+
+extension Species: CustomPets.Item {}

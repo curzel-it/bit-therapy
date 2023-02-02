@@ -44,7 +44,7 @@ private class DeletePetButtonViewModel: ObservableObject {
     }
     
     func delete() {
-        let deleted = deletePetUseCase.safelyDelete(species: species)
+        let deleted = deletePetUseCase.safelyDelete(item: species)
         if deleted {
             assets.reloadAssets()
             Species.unregister(species)

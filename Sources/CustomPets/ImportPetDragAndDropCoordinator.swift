@@ -97,10 +97,10 @@ private class ImportDragAndDropViewModel: ObservableObject {
     }
     
     func handleDrop(of items: [NSItemProvider]) -> Bool {
-        importPetUseCase.handleDrop(of: items) { species, errorMessage in
+        importPetUseCase.handleDrop(of: items) { item, errorMessage in
             Task { @MainActor [weak self] in
                 guard let self else { return }
-                if let species {
+                if let species = item as? Species {
                     self.message = Lang.CustomPets.importSuccess
                     self.assets.reloadAssets()
                     Species.register(species)

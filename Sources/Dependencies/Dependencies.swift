@@ -15,8 +15,8 @@ class Dependencies {
         container.register(EntityViewsProvider.self) { _ in EntityViewsProvider() }
         container.register(CapabilitiesDiscoveryService.self) { _ in PetsCapabilitiesDiscoveryService() }
         container.register(CustomPets.ResourcesProvider.self) { _ in CustomPetsResourcesProviderImpl() }
-        container.register(CustomPets.SpeciesProvider.self) { _ in CustomPetsSpeciesProviderImpl() }
         container.register(CustomPets.LocalizedResources.self) { _ in CustomPetsLocalizedResourcesImpl() }
+        container.register(CustomPets.ImportVerifier.self) { _ in ImportVerifierImpl() }
         
         let assets = PetsAssetsProviderImpl()
         container.registerSingleton(PetsAssetsProvider.self) { _ in assets }

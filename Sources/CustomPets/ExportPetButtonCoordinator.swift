@@ -65,7 +65,7 @@ private class ExportSpeciesButtonViewModel: ObservableObject {
     }()
     
     func export() {
-        exportPetUseCase.export(species: species) { [weak self] destination in
+        exportPetUseCase.export(item: species) { [weak self] destination in
             Task { @MainActor [weak self] in
                 self?.doneExporting(to: destination)
             }

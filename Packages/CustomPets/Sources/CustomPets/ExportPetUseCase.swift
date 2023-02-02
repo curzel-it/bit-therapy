@@ -3,11 +3,10 @@ import DependencyInjectionUtils
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 import ZIPFoundation
 
 public protocol ExportPetUseCase {
-    func export(species: Species, completion: @escaping (URL?) -> Void)
+    func export(item: Item, completion: @escaping (URL?) -> Void)
 }
 
 public class ExportPetUseCaseImpl: ExportPetUseCase {
@@ -17,10 +16,10 @@ public class ExportPetUseCaseImpl: ExportPetUseCase {
     
     public init() {}
     
-    public func export(species: Species, completion: @escaping (URL?) -> Void) {
-        Logger.log(tag, "Exporting", species.id)
-        guard let destination = exportUrl(for: species) else { return }
-        guard let exportables = exportableUrls(for: species) else { return }
+    public func export(item: Item, completion: @escaping (URL?) -> Void) {
+        Logger.log(tag, "Exporting", item.id)
+        guard let destination = exportUrl(for: item) else { return }
+        guard let exportables = exportableUrls(for: item) else { return }
         
         try? FileManager.default.removeItem(at: destination)
         
@@ -33,8 +32,8 @@ public class ExportPetUseCaseImpl: ExportPetUseCase {
         }
     }
     
-    private func exportableUrls(for species: Species) -> [URL]? {
-        let urls = resources.allResources(for: species.id)
+    private func exportableUrls(for item: Item) -> [URL]? {
+        let urls = resources.allResources(for: item.id)
         
         if urls.count > 0 {
             Logger.log(tag, "Found \(urls.count) exportables")
@@ -55,13 +54,13 @@ public class ExportPetUseCaseImpl: ExportPetUseCase {
         Logger.log(tag, "Archive created!")
     }
     
-    private func exportUrl(for species: Species) -> URL? {
-        Logger.log(tag, "Asking path to export", species.id)
+    private func exportUrl(for item: Item) -> URL? {
+        Logger.log(tag, "Asking path to export", item.id)
         let dialog = NSSavePanel()
         dialog.title = "Choose export location"
         dialog.showsResizeIndicator = true
         dialog.showsHiddenFiles = false
-        dialog.nameFieldStringValue = "\(species.id).zip"
+        dialog.nameFieldStringValue = "\(item.id).zip"
         guard dialog.runModal() == .OK, let destination = dialog.url else {
             Logger.log(tag, "No destination path selected, aborting.")
             return nil

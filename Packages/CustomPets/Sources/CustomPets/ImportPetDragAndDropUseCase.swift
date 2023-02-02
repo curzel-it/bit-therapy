@@ -3,14 +3,13 @@ import DependencyInjectionUtils
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 import ZIPFoundation
 
 public protocol ImportDragAndDropPetUseCase {
     var supportedTypeId: String { get }
     
     func isAvailable() -> Bool
-    func handleDrop(of items: [NSItemProvider], completion: @escaping (Species?, String?) -> Void) -> Bool
+    func handleDrop(of items: [NSItemProvider], completion: @escaping (Item?, String?) -> Void) -> Bool
 }
 
 public enum ImporterError: Error {
@@ -18,14 +17,14 @@ public enum ImporterError: Error {
     case dropFailed
     case noJsonFile
     case invalidJsonFile
-    case speciesAlreadyExists(species: Species)
+    case itemAlreadyExists(item: Item)
     case missingAsset(name: String)
 }
 
 public class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
-    @Inject var resources: ResourcesProvider
+    @Inject var importVerifier: ImportVerifier
     @Inject var localization: LocalizedResources
-    @Inject var speciesProvider: SpeciesProvider
+    @Inject var resources: ResourcesProvider
     
     private let tag = "ImportDragAndDropPetUseCase"
     
@@ -41,7 +40,7 @@ public class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
         importedFolder != nil
     }
     
-    public func handleDrop(of items: [NSItemProvider], completion: @escaping (Species?, String?) -> Void) -> Bool {
+    public func handleDrop(of items: [NSItemProvider], completion: @escaping (Item?, String?) -> Void) -> Bool {
         guard let item = try? importableItem(from: items) else {
             completion(nil, localization.string(for: .dropFailed))
             return false
@@ -53,12 +52,12 @@ public class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
         return true
     }
     
-    private func handleDrop(of data: NSSecureCoding?, completion: @escaping (Species?, String?) -> Void) {
+    private func handleDrop(of data: NSSecureCoding?, completion: @escaping (Item?, String?) -> Void) {
         do {
             let url = try url(from: data)
-            let species = try importSpecies(fromZip: url)
+            let item = try importItem(fromZip: url)
             Logger.log(tag, "Done!")
-            completion(species, nil)
+            completion(item, nil)
         } catch let error {
             Logger.log(tag, "Import failed: \(error)")
             let actualError = (error as? ImporterError) ?? ImporterError.genericError
@@ -66,24 +65,22 @@ public class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
         }
     }
     
-    private func importSpecies(fromZip sourceUrl: URL) throws -> Species {
+    private func importItem(fromZip sourceUrl: URL) throws -> Item {
         Logger.log(tag, "Importing", sourceUrl.absoluteString)
         let destinationUrl = try createTempUnzipFolder()
         try FileManager.default.unzipItem(at: sourceUrl, to: destinationUrl)
-        return try importSpecies(fromUnzipped: destinationUrl)
+        return try importItem(fromUnzipped: destinationUrl)
     }
     
-    private func importSpecies(fromUnzipped unzipped: URL) throws -> Species {
+    private func importItem(fromUnzipped unzipped: URL) throws -> Item {
         let importables = try Importables(from: unzipped)
-        let species = try importables.parseSpecies()
         let destination = try importedFolder.unwrapped()
+        let item = try importVerifier.verify(json: importables.item, assets: importables.assets)
         
-        try verify(species, with: importables.assets)
-        
-        let speciesDestination = destination.appendingPathComponent(
-            "\(species.id).json", conformingTo: .fileURL
+        let itemDestination = destination.appendingPathComponent(
+            "\(item.id).json", conformingTo: .fileURL
         )
-        try FileManager.default.moveItem(at: importables.species, to: speciesDestination)
+        try FileManager.default.moveItem(at: importables.item, to: itemDestination)
         
         try importables.assets.forEach {
             let assetDestination = destination.appendingPathComponent(
@@ -91,24 +88,7 @@ public class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
             )
             try FileManager.default.moveItem(at: $0, to: assetDestination)
         }
-        return species
-    }
-    
-    private func verify(_ species: Species, with assetUrls: [URL]) throws {
-        let assets = assetUrls.map { $0.lastPathComponent }
-        if speciesProvider.allExistingSpecies().contains(species.id) {
-            throw ImporterError.speciesAlreadyExists(species: species)
-        }
-        
-        let movementPrefix = "\(species.id)_\(species.movementPath)"
-        if !assets.contains(where: { $0.hasPrefix(movementPrefix) }) {
-            throw ImporterError.missingAsset(name: movementPrefix)
-        }
-        
-        let dragPrefix = "\(species.id)_\(species.dragPath)"
-        if !assets.contains(where: { $0.hasPrefix(dragPrefix) }) {
-            throw ImporterError.missingAsset(name: dragPrefix)
-        }
+        return item
     }
     
     private func createTempUnzipFolder() throws -> URL {
@@ -149,7 +129,7 @@ public class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
 }
 
 private struct Importables {
-    let species: URL
+    let item: URL
     let assets: [URL]
     
     private let tag = "ImportDragAndDropPetUseCase"
@@ -171,21 +151,8 @@ private struct Importables {
             Logger.log(tag, "Could not find json file")
             throw ImporterError.noJsonFile
         }
-        species = jsonUrl
+        item = jsonUrl
         assets = contents.filter { $0.pathExtension == "png"}
-    }
-    
-    func parseSpecies() throws -> Species {
-        guard let jsonContents = try? Data(contentsOf: species) else {
-            Logger.log(tag, "Could not read json file")
-            throw ImporterError.invalidJsonFile
-        }
-        guard let species = try? JSONDecoder().decode(Species.self, from: jsonContents) else {
-            Logger.log(tag, "Could not decode species")
-            throw ImporterError.invalidJsonFile
-        }
-        Logger.log(tag, "Importing \(species.id)...")
-        return species
     }
 }
 

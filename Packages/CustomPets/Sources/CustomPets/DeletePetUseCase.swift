@@ -2,10 +2,9 @@ import DependencyInjectionUtils
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 
 public protocol DeletePetUseCase {
-    func safelyDelete(species: Species) -> Bool
+    func safelyDelete(item: Item) -> Bool
 }
 
 public class DeletePetUseCaseImpl: DeletePetUseCase {
@@ -15,9 +14,9 @@ public class DeletePetUseCaseImpl: DeletePetUseCase {
     
     public init() {}
     
-    public func safelyDelete(species: Species) -> Bool {
+    public func safelyDelete(item: Item) -> Bool {
         do {
-            try delete(species)
+            try delete(item)
             return true
         } catch let error {
             Logger.log(tag, "Could not delete: \(error)")
@@ -25,10 +24,10 @@ public class DeletePetUseCaseImpl: DeletePetUseCase {
         }
     }
     
-    private func delete(_ species: Species) throws {
-        Logger.log(tag, "Deleting \(species.id)")
+    private func delete(_ item: Item) throws {
+        Logger.log(tag, "Deleting \(item.id)")
         try resources
-            .allResources(for: species.id)
+            .allResources(for: item.id)
             .forEach {
                 Logger.log(tag, "Deleting '\($0)'...")
                 try FileManager.default.removeItem(at: $0)
