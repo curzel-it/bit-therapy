@@ -341,8 +341,8 @@
 			children = (
 				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
 				1ED75D30291AEEB8004C6B7B /* Fonts */,
-				A6FB7D4B28740F8E00AB872E /* Info.plist */,
 				1EF813EF29718A1600D6B4E6 /* GoogleService-Info.plist */,
+				A6FB7D4B28740F8E00AB872E /* Info.plist */,
 				A6FB7D4528740F8E00AB872E /* Localizable.strings */,
 				A6FB7D4A28740F8E00AB872E /* MacPets.entitlements */,
 				1EC3B0B729637128009ECD6A /* PetsAssets */,
@@ -354,10 +354,10 @@
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1E861D0E2989BFAC00EA074E /* Dependencies */,
 				1E2AC742290AB375003D0AB2 /* App */,
 				A6FB7D5B28740F8E00AB872E /* Contents */,
 				1E93C5FB29605EDE007A5B91 /* CustomPets */,
+				1E861D0E2989BFAC00EA074E /* Dependencies */,
 				1E36C810295F4D9E008EFB28 /* Models */,
 				1E2D7D4729747D8C00DC7D5F /* News */,
 				1EAEA8F02970D32900AB3EB0 /* OnScreen */,

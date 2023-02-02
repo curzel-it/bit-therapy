@@ -40,10 +40,12 @@ Starting from version 2.20 you can now create custom pets, please check [the doc
 ## Build from Source
 
 1. Download and setup Xcode
-1. Open the `PetTherapy` workspace
+1. Open the `DesktopPets` workspace
 1. Give Xcode some time to figure out dependencies...
-1. Select target 'Desktop Pets Dev' or 'Mobile Pets'
 1. Run
+
+### Do I need Xcode to create custom pets?
+No, no need! Just design your characters and follow [the instructions](https://curzel.it/pet-therapy/custompets), good luck!
 
 ### Swift Packages not loading
 Unfortunately, Xcode does not like local swift packages very much. In case you get any error about missing packages, try the following:
