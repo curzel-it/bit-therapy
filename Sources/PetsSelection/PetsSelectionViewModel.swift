@@ -7,6 +7,7 @@ import Yage
 
 class PetsSelectionViewModel: ObservableObject {
     @Inject var assets: PetsAssetsProvider
+    @Inject var importPet: ImportPetCoordinator
     
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
@@ -63,6 +64,10 @@ class PetsSelectionViewModel: ObservableObject {
             .frames(for: species.id, animation: "front")
             .first
         return assets.image(sprite: path)
+    }
+    
+    func importView() -> AnyView {
+        importPet.view()
     }
 
     private func loadPets(all: [Species], selected: [Species], tag: String?) {

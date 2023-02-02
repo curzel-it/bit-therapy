@@ -24,18 +24,20 @@ struct PetsGrid: View {
 // MARK: - Item Preview
 
 private struct ItemPreview: View {
-    @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: PetsSelectionViewModel
 
     let species: Species
 
     var body: some View {
-        if let frame = viewModel.image(for: species) {
-            Image(frame: frame)
-                .pixelArt()
-                .frame(width: 80, height: 80)
-                .onTapGesture { viewModel.showDetails(of: species) }
+        VStack {
+            if let frame = viewModel.image(for: species) {
+                Image(frame: frame).pixelArt()
+            } else {
+                Text(species.name).multilineTextAlignment(.center)
+            }
         }
+        .frame(width: 80, height: 80)
+        .onTapGesture { viewModel.showDetails(of: species) }
     }
 }
 

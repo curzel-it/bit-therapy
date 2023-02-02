@@ -6,7 +6,7 @@ import XCTest
 
 @testable import Desktop_Pets
 
-final class DesktopPetsTests: XCTestCase {
+final class DeletePetUseCaseTests: XCTestCase {
     func testExample() throws {
         XCTAssert(true)
     }

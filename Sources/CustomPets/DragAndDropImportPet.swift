@@ -6,17 +6,30 @@ import SwiftUI
 import Yage
 import ZIPFoundation
 
-struct PetsImporterDragAndDropView: View {
+protocol ImportPetCoordinator {
+    func view() -> AnyView
+}
+
+class ImportPetDragAndDropCoordinator: ImportPetCoordinator {
+    func view() -> AnyView {
+        let vm = ImportDragAndDropViewModel()
+        return AnyView(ImportDragAndDropView(viewModel: vm))
+    }
+}
+
+private struct ImportDragAndDropView: View {
     @EnvironmentObject var appState: AppState
+    @StateObject var viewModel: ImportDragAndDropViewModel
     
     var body: some View {
-        if PetsImporter.shared.canImport() {
+        if viewModel.canImport() {
             VStack(spacing: .zero) {
                 Text(Lang.CustomPets.title).font(.title2.bold()).padding(.bottom, .md)
                 Text(Lang.CustomPets.message)
                 LinkToDocs().padding(.bottom, .lg)
-                DragAndDrop()
+                DragAndDropView()
             }
+            .environmentObject(viewModel)
         }
     }
 }
@@ -31,8 +44,8 @@ private struct LinkToDocs: View {
     }
 }
 
-private struct DragAndDrop: View {
-    @State var message: String?
+private struct DragAndDropView: View {
+    @EnvironmentObject var viewModel: ImportDragAndDropViewModel
     
     var body: some View {
         Text(Lang.CustomPets.dragAreaMessage)
@@ -43,21 +56,15 @@ private struct DragAndDrop: View {
                     .stroke(style: StrokeStyle(lineWidth: 2, dash: [8, 4]))
                     .fill(Color.label)
             )
-            .onDrop(of: [PetsImporter.shared.registeredTypeIdentifier], isTargeted: nil) { (items) -> Bool in
-                PetsImporter.shared.handleDrop(of: items) { imported, errorMessage in
-                    if !imported {
-                        self.message = errorMessage ?? Lang.CustomPets.genericImportError
-                    } else {
-                        self.message = Lang.CustomPets.importSuccess
-                    }
-                }
+            .onDrop(of: viewModel.supportedTypesIdentifiers, isTargeted: nil) { (items) -> Bool in
+                viewModel.handleDrop(of: items)
             }
-            .sheet(isPresented: Binding(get: { return message != nil }, set: { _, _ in })) {
+            .sheet(isPresented: viewModel.isAlertShown) {
                 VStack(spacing: .zero) {
-                    Text(message ?? "")
+                    Text(viewModel.message ?? "")
                         .padding(.top, .lg)
                         .padding(.bottom, .lg)
-                    Button(Lang.ok) { message = nil }
+                    Button(Lang.ok, action: viewModel.clearMessage)
                         .buttonStyle(.regular)
                 }
                 .padding(.md)
@@ -66,18 +73,56 @@ private struct DragAndDrop: View {
     }
 }
 
-private class PetsImporter {
-    static let shared = PetsImporter()
+private class ImportDragAndDropViewModel: ObservableObject {
+    @Published private(set) var message: String?
     
+    lazy var isAlertShown: Binding<Bool> = {
+        Binding(
+            get: { self.message != nil },
+            set: { _ in }
+        )
+    }()
+    
+    var supportedTypesIdentifiers: [String] {
+        [importPetUseCase.supportedTypeId]
+    }
+    
+    private let importPetUseCase = DragAndDropImportPetUseCase()
+    
+    func canImport() -> Bool {
+        importPetUseCase.isAvailable()
+    }
+    
+    func clearMessage() {
+        message = nil
+    }
+    
+    func handleDrop(of items: [NSItemProvider]) -> Bool {
+        importPetUseCase.handleDrop(of: items) { imported, errorMessage in
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                if !imported {
+                    self.message = errorMessage ?? Lang.CustomPets.genericImportError
+                } else {
+                    self.message = Lang.CustomPets.importSuccess
+                }
+            }
+        }
+    }
+}
+
+private let tag = "DragAndDropImportPetUseCase"
+
+private class DragAndDropImportPetUseCase {
     @Inject var assets: PetsAssetsProvider
     
     private var importedFolder: URL? = {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
     }()
     
-    let registeredTypeIdentifier = "public.file-url"
+    let supportedTypeId = "public.file-url"
     
-    func canImport() -> Bool {
+    func isAvailable() -> Bool {
         importedFolder != nil
     }
     
@@ -87,7 +132,7 @@ private class PetsImporter {
             return false
         }
         
-        item.loadItem(forTypeIdentifier: registeredTypeIdentifier, options: nil) { data, _ in
+        item.loadItem(forTypeIdentifier: supportedTypeId, options: nil) { data, _ in
             self.handleDrop(of: data, completion: completion)
         }
         return true
@@ -99,7 +144,7 @@ private class PetsImporter {
             try importSpecies(fromZip: url)
             completion(true, nil)
         } catch let error {
-            Logger.log("Importer", "Import failed: \(error)")
+            Logger.log(tag, "Import failed: \(error)")
             if let error = error as? ImporterError {
                 completion(false, error.localizedMessage)
             } else {
@@ -109,11 +154,11 @@ private class PetsImporter {
     }
     
     private func importSpecies(fromZip sourceUrl: URL) throws {
-        Logger.log("Importer", "Importing", sourceUrl.absoluteString)
+        Logger.log(tag, "Importing", sourceUrl.absoluteString)
         let destinationUrl = try createTempUnzipFolder()
         try FileManager.default.unzipItem(at: sourceUrl, to: destinationUrl)
         try importSpecies(fromUnzipped: destinationUrl)
-        Logger.log("Importer", "Done!")
+        Logger.log(tag, "Done!")
     }
     
     private func importSpecies(fromUnzipped unzipped: URL) throws {
@@ -170,11 +215,11 @@ private class PetsImporter {
     }
     
     private func importableItem(from items: [NSItemProvider]) throws -> NSItemProvider {
-        let item = items.first { $0.registeredTypeIdentifiers.first == registeredTypeIdentifier }
+        let item = items.first { $0.registeredTypeIdentifiers.first == supportedTypeId }
         if let item {
             return item
         } else {
-            Logger.log("Importer", "Something dropped, but could not figure it out")
+            Logger.log(tag, "Something dropped, but could not figure it out")
             throw ImporterError.dropFailed
         }
     }
@@ -185,7 +230,7 @@ private class PetsImporter {
             let urlString = String(data: data, encoding: .utf8),
             let sourceUrl = URL(string: urlString)
         else {
-            Logger.log("Importer", "Something dropped, but not a valid url or file")
+            Logger.log(tag, "Something dropped, but not a valid url or file")
             throw ImporterError.dropFailed
         }
         return sourceUrl
@@ -230,7 +275,7 @@ private struct Importables {
             includingPropertiesForKeys: nil
         )
         guard let jsonUrl = contents.first(where: { $0.pathExtension == "json" }) else {
-            Logger.log("Importer", "Could not find json file")
+            Logger.log(tag, "Could not find json file")
             throw ImporterError.noJsonFile
         }
         self.species = jsonUrl
@@ -239,14 +284,14 @@ private struct Importables {
     
     func parseSpecies() throws -> Species {
         guard let jsonContents = try? Data(contentsOf: species) else {
-            Logger.log("Importer", "Could not read json file")
+            Logger.log(tag, "Could not read json file")
             throw ImporterError.invalidJsonFile
         }
         guard let species = try? JSONDecoder().decode(Species.self, from: jsonContents) else {
-            Logger.log("Importer", "Could not decode species")
+            Logger.log(tag, "Could not decode species")
             throw ImporterError.invalidJsonFile
         }
-        Logger.log("Importer", "Importing \(species.id)...")
+        Logger.log(tag, "Importing \(species.id)...")
         return species
     }
 }

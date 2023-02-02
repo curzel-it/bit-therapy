@@ -30,10 +30,8 @@ private struct Header: View {
     
     var body: some View {
         ZStack {
-            Text(viewModel.title)
-                .font(.largeTitle.bold())
-            ExportSpeciesButton(species: viewModel.species)
-                .positioned(.trailingMiddle)
+            Text(viewModel.title).font(.largeTitle.bold())
+            viewModel.exportButton().positioned(.trailingMiddle)
         }
     }
 }
@@ -83,9 +81,7 @@ private struct Footer: View {
                 Button(Lang.cancel, action: viewModel.close)
                     .buttonStyle(.text)
             }
-            DeletePetButton(species: viewModel.species) { deleted in
-                if deleted { viewModel.close() }
-            }
+            viewModel.deletePetButton()
         }
     }
 }

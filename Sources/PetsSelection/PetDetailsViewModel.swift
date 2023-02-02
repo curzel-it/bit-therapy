@@ -3,8 +3,10 @@ import NotAGif
 import SwiftUI
 import Yage
 
-class PetDetailsViewModel: ObservableObject {    
+class PetDetailsViewModel: ObservableObject {
     @Inject var assets: PetsAssetsProvider
+    @Inject var deletePet: DeletePetCoordinator
+    @Inject var exportPet: ExportPetCoordinator
     
     @Binding var isShown: Bool
     
@@ -55,6 +57,16 @@ class PetDetailsViewModel: ObservableObject {
             price: nil,
             purchased: false
         )
+    }
+    
+    func deletePetButton() -> some View {
+        deletePet.view(for: species) { [weak self] deleted in
+            if deleted { self?.close() }
+        }
+    }
+
+    func exportButton() -> some View {
+        exportPet.view(for: species)
     }
 }
 

@@ -31,9 +31,9 @@
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
 		1E861D122989BFD000EA074E /* EntityRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E861D112989BFD000EA074E /* EntityRendering.swift */; };
 		1E861D142989C49F00EA074E /* DependencyInjectionUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 1E861D132989C49F00EA074E /* DependencyInjectionUtils */; };
-		1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* PetsExporter.swift */; };
-		1E93C60C29624891007A5B91 /* PetsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* PetsImporter.swift */; };
-		1E93C60F2962E781007A5B91 /* PetsDeleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* PetsDeleter.swift */; };
+		1E93C60929623AE4007A5B91 /* ExportPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60829623AE4007A5B91 /* ExportPet.swift */; };
+		1E93C60C29624891007A5B91 /* DragAndDropImportPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* DragAndDropImportPet.swift */; };
+		1E93C60F2962E781007A5B91 /* DeletePet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* DeletePet.swift */; };
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EAB525E2989B3FD00EA4034 /* PetsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB525D2989B3FD00EA4034 /* PetsWindow.swift */; };
 		1EAB52602989B8F800EA4034 /* EntityRendering in Frameworks */ = {isa = PBXBuildFile; productRef = 1EAB525F2989B8F800EA4034 /* EntityRendering */; };
@@ -105,9 +105,9 @@
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
 		1E861D112989BFD000EA074E /* EntityRendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityRendering.swift; sourceTree = "<group>"; };
 		1E93C60229623192007A5B91 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E93C60829623AE4007A5B91 /* PetsExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsExporter.swift; sourceTree = "<group>"; };
-		1E93C60B29624891007A5B91 /* PetsImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsImporter.swift; sourceTree = "<group>"; };
-		1E93C60E2962E781007A5B91 /* PetsDeleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsDeleter.swift; sourceTree = "<group>"; };
+		1E93C60829623AE4007A5B91 /* ExportPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPet.swift; sourceTree = "<group>"; };
+		1E93C60B29624891007A5B91 /* DragAndDropImportPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropImportPet.swift; sourceTree = "<group>"; };
+		1E93C60E2962E781007A5B91 /* DeletePet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePet.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EAB525D2989B3FD00EA4034 /* PetsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsWindow.swift; sourceTree = "<group>"; };
 		1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPlatformJumper.swift; sourceTree = "<group>"; };
@@ -260,9 +260,9 @@
 		1E93C5FB29605EDE007A5B91 /* CustomPets */ = {
 			isa = PBXGroup;
 			children = (
-				1E93C60E2962E781007A5B91 /* PetsDeleter.swift */,
-				1E93C60829623AE4007A5B91 /* PetsExporter.swift */,
-				1E93C60B29624891007A5B91 /* PetsImporter.swift */,
+				1E93C60E2962E781007A5B91 /* DeletePet.swift */,
+				1E93C60829623AE4007A5B91 /* ExportPet.swift */,
+				1E93C60B29624891007A5B91 /* DragAndDropImportPet.swift */,
 			);
 			path = CustomPets;
 			sourceTree = "<group>";
@@ -584,21 +584,21 @@
 				1EAEA91A2970D32900AB3EB0 /* PetEntity.swift in Sources */,
 				1E36C825295F533D008EFB28 /* PetsSelectionViewModel.swift in Sources */,
 				A6FB7D8728740F8E00AB872E /* AboutView.swift in Sources */,
-				1E93C60F2962E781007A5B91 /* PetsDeleter.swift in Sources */,
+				1E93C60F2962E781007A5B91 /* DeletePet.swift in Sources */,
 				1EAEA91C2970D32900AB3EB0 /* Animations.swift in Sources */,
 				1E7D1EA62909C31600CC036B /* Settings.swift in Sources */,
 				1EAEA90A2970D32900AB3EB0 /* ShowMenuOnRightClick.swift in Sources */,
 				1E861D122989BFD000EA074E /* EntityRendering.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
 				1EAEA9142970D32900AB3EB0 /* DesktopEnvironment.swift in Sources */,
-				1E93C60C29624891007A5B91 /* PetsImporter.swift in Sources */,
+				1E93C60C29624891007A5B91 /* DragAndDropImportPet.swift in Sources */,
 				1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */,
 				1EAEA9222970D32900AB3EB0 /* OnScreen.swift in Sources */,
 				1EAEA9062970D32900AB3EB0 /* RandomPlatformJumper.swift in Sources */,
 				1E25273B2989AB4C00756762 /* AppStateStorage.swift in Sources */,
 				1E2D7D4929747D9400DC7D5F /* NewsView.swift in Sources */,
 				1E25273D2989ABC300756762 /* Dependencies.swift in Sources */,
-				1E93C60929623AE4007A5B91 /* PetsExporter.swift in Sources */,
+				1E93C60929623AE4007A5B91 /* ExportPet.swift in Sources */,
 				1EAEA9162970D32900AB3EB0 /* ScreenEnvironment.swift in Sources */,
 				1E61F886296F6B52007863DE /* Filters.swift in Sources */,
 				1EAB525E2989B3FD00EA4034 /* PetsWindow.swift in Sources */,
