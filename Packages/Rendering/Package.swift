@@ -3,12 +3,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "EntityRendering",
+    name: "Rendering",
     platforms: [.macOS(.v11)],
     products: [
         .library(
-            name: "EntityRendering",
-            targets: ["EntityRendering"]
+            name: "Rendering",
+            targets: ["Rendering"]
         )
     ],
     dependencies: [
@@ -17,15 +17,15 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "EntityRendering",
+            name: "Rendering",
             dependencies: [
                 .product(name: "DependencyInjectionUtils", package: "DependencyInjectionUtils"),
                 .product(name: "Schwifty", package: "Schwifty")
             ]
         ),
         .testTarget(
-            name: "EntityRenderingTests",
-            dependencies: ["EntityRendering"]
+            name: "RenderingTests",
+            dependencies: ["Rendering"]
         )
     ]
 )

@@ -1,8 +1,8 @@
-import EntityRendering
+import Rendering
 import Schwifty
 import SwiftUI
 
-protocol PetsAssetsProvider: EntityRendering.AssetsProvider {
+protocol PetsAssetsProvider: Rendering.AssetsProvider {
     func frames(for species: String, animation: String) -> [String]
     func images(for species: String, animation: String) -> [NSImage]
     func image(sprite: String?) -> NSImage?

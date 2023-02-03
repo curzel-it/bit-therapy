@@ -38,7 +38,7 @@
 		1E98A007298C7E7800CD88B9 /* ImportVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */; };
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EA0D848298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */; };
-		1EAB52602989B8F800EA4034 /* EntityRendering in Frameworks */ = {isa = PBXBuildFile; productRef = 1EAB525F2989B8F800EA4034 /* EntityRendering */; };
+		1EAB52602989B8F800EA4034 /* Rendering in Frameworks */ = {isa = PBXBuildFile; productRef = 1EAB525F2989B8F800EA4034 /* Rendering */; };
 		1EAEA9062970D32900AB3EB0 /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
 		1EAEA9082970D32900AB3EB0 /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */; };
 		1EAEA90A2970D32900AB3EB0 /* ShowMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */; };
@@ -161,7 +161,7 @@
 				1EF813BB297177A400D6B4E6 /* Schwifty in Frameworks */,
 				1EF813B3297177A400D6B4E6 /* DesignSystem in Frameworks */,
 				1EF813C7297177A500D6B4E6 /* FirebaseCrashlytics in Frameworks */,
-				1EAB52602989B8F800EA4034 /* EntityRendering in Frameworks */,
+				1EAB52602989B8F800EA4034 /* Rendering in Frameworks */,
 				1EF813BD297177A400D6B4E6 /* RateKit in Frameworks */,
 				1EF813B9297177A400D6B4E6 /* LaunchAtLogin in Frameworks */,
 				1EF813C3297177A400D6B4E6 /* WindowsDetector in Frameworks */,
@@ -435,7 +435,7 @@
 				1EF813C4297177A500D6B4E6 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1EF813C6297177A500D6B4E6 /* FirebaseCrashlytics */,
 				1E2527382989AB2C00756762 /* Swinject */,
-				1EAB525F2989B8F800EA4034 /* EntityRendering */,
+				1EAB525F2989B8F800EA4034 /* Rendering */,
 				1E861D132989C49F00EA074E /* DependencyInjectionUtils */,
 				1E326812298C73980019C346 /* CustomPets */,
 			);
@@ -973,9 +973,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DependencyInjectionUtils;
 		};
-		1EAB525F2989B8F800EA4034 /* EntityRendering */ = {
+		1EAB525F2989B8F800EA4034 /* Rendering */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = EntityRendering;
+			productName = Rendering;
 		};
 		1EF813B2297177A400D6B4E6 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;

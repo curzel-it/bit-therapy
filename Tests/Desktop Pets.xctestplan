@@ -28,9 +28,9 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/EntityRendering",
-        "identifier" : "EntityRenderingTests",
-        "name" : "EntityRenderingTests"
+        "containerPath" : "container:Packages\/Rendering",
+        "identifier" : "RenderingTests",
+        "name" : "RenderingTests"
       }
     }
   ],

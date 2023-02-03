@@ -1,5 +1,5 @@
 import AppKit
-import EntityRendering
+import Rendering
 import Schwifty
 import Yage
 

@@ -1,7 +1,7 @@
 import AppKit
 import XCTest
 
-@testable import EntityRendering
+@testable import Rendering
 
 final class ImageInterpolationUseCaseTests: XCTestCase {
     let image50by50 = NSImage().scaled(to: .init(square: 50), with: .default)

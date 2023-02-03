@@ -1,7 +1,7 @@
 import AppKit
 import CustomPets
 import DependencyInjectionUtils
-import EntityRendering
+import Rendering
 import Swinject
 import Yage
 
@@ -20,7 +20,7 @@ class Dependencies {
         
         let assets = PetsAssetsProviderImpl()
         container.registerSingleton(PetsAssetsProvider.self) { _ in assets }
-        container.registerSingleton(EntityRendering.AssetsProvider.self) { _ in assets }
+        container.registerSingleton(Rendering.AssetsProvider.self) { _ in assets }
         
         Container.propertyWrapperResolver = container.synchronize()
     }
