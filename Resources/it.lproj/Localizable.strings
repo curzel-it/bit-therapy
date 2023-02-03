@@ -67,6 +67,8 @@
 "settings.gravity" = "Abilita Gravità";
 "settings.launchAtLogin" = "Avvia automaticamente al login";
 "settings.launchAtLoginPromo" = "Vuoi che l'app si avvii automaticamente al login?";
+"settings.randomEventsTitle" = "Eventi Casuali";
+"settings.randomEventsMessage" = "Se abilitato, possono succedere cose strane... Potrebbero persino arrivare gli alieni!";
 "settings.size" = "Dimensioni Pet";
 "settings.speed" = "Velocità";
 "settings.statusBarIconEnabled" = "Mostra nella barra di stato";

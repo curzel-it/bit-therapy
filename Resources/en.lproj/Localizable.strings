@@ -67,6 +67,8 @@
 "settings.gravity" = "Enable gravity";
 "settings.launchAtLogin" = "Launch automatically";
 "settings.launchAtLoginPromo" = "Would you like the app to start automatically when you login?";
+"settings.randomEventsTitle" = "Random Events";
+"settings.randomEventsMessage" = "If enabled, some extra animations are played at random intervals... Who knows, aliens might even come to visit!";
 "settings.size" = "Pet Size";
 "settings.speed" = "Speed";
 "settings.statusBarIconEnabled" = "Show in status bar";

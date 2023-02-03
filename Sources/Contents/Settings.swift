@@ -30,6 +30,7 @@ private struct Switches: View {
             LaunchAtLoginSwitch().positioned(.leading)
             GravitySwitch().positioned(.leading)
             DesktopInteractionsSwitch().positioned(.leading)
+            RandomEventsSwitch().positioned(.leading)
         }
     }
 }
@@ -97,6 +98,36 @@ private struct DesktopInteractionsSwitch: View {
                     .font(.largeTitle)
                     .padding(.top)
                 Text(Lang.Settings.desktopInteractionsMessage)
+                    .font(.body)
+                    .multilineTextAlignment(.center)
+                Button(Lang.cancel) { showingDetails = false }
+                    .buttonStyle(.text)
+            }
+            .padding()
+            .frame(width: 450)
+        }
+    }
+}
+
+// MARK: - Random Events
+
+private struct RandomEventsSwitch: View {
+    @EnvironmentObject var appState: AppState
+    
+    @State var showingDetails = false
+    
+    var body: some View {
+        SettingsSwitch(
+            label: Lang.Settings.randomEventsTitle,
+            value: $appState.randomEvents,
+            showHelp: $showingDetails
+        )
+        .sheet(isPresented: $showingDetails) {
+            VStack(alignment: .center, spacing: .xl) {
+                Text(Lang.Settings.randomEventsTitle)
+                    .font(.largeTitle)
+                    .padding(.top)
+                Text(Lang.Settings.randomEventsMessage)
                     .font(.body)
                     .multilineTextAlignment(.center)
                 Button(Lang.cancel) { showingDetails = false }

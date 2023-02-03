@@ -7,6 +7,7 @@ protocol AppStateStorage {
     var desktopInteractions: Bool { get }
     var disabledScreens: [String] { get }
     var gravityEnabled: Bool { get }
+    var randomEvents: Bool { get }
     var petSize: Double { get }
     var selectedSpecies: [Species] { get }
     var speedMultiplier: Double { get }
@@ -17,6 +18,7 @@ class AppStateStorageImpl: AppStateStorage {
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true
+    @AppStorage("randomEvents") var randomEvents: Bool = true
     @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
     @AppStorage("petId") private var selectedSpeciesValue: String = kInitialPetId
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
@@ -71,6 +73,10 @@ class AppStateStorageImpl: AppStateStorage {
         
         appState.$disabledScreens
             .sink { [weak self] in self?.disabledScreens = $0 }
+            .store(in: &disposables)
+        
+        appState.$randomEvents
+            .sink { [weak self] in self?.randomEvents = $0 }
             .store(in: &disposables)
     }
 }

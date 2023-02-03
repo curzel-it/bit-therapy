@@ -12,6 +12,7 @@ class AppState: ObservableObject {
     @Published var desktopInteractions: Bool = true
     @Published var gravityEnabled: Bool = true
     @Published var petSize: CGFloat = 0
+    @Published var randomEvents: Bool = true
     @Published private(set) var selectedSpecies: [Species] = []
     @Published var speedMultiplier: CGFloat = 1
     @Published var disabledScreens: [String] = []
@@ -49,6 +50,7 @@ class AppState: ObservableObject {
         selectedSpecies = storage.selectedSpecies
         speedMultiplier = storage.speedMultiplier
         disabledScreens = storage.disabledScreens
+        randomEvents = storage.randomEvents
     }
 }
 

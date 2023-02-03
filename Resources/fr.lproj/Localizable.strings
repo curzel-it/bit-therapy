@@ -67,6 +67,8 @@
 "settings.gravity" = "Activer la gravité";
 "settings.launchAtLogin" = "Démarrer automatiquement";
 "settings.launchAtLoginPromo" = "Souhaitez-vous que l'application démarre automatiquement lorsque vous vous connectez ?";
+"settings.randomEventsTitle" = "Événements aléatoires";
+"settings.randomEventsMessage" = "Si activé, des animations supplémentaires sont jouées à intervalles aléatoires... Qui sait, des extraterrestres pourraient même venir nous rendre visite !";
 "settings.size" = "Taille des animaux";
 "settings.speed" = "Vitesse";
 "settings.statusBarIconEnabled" = "Afficher dans la barre d'état";
