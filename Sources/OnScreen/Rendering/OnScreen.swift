@@ -1,10 +1,12 @@
 import AppKit
+import EntityRendering
 import Schwifty
 import Yage
 
 public struct OnScreenCoordinator {
     private static var environment: DesktopEnvironment?
     private static var windows: [NSWindow] = []
+    private static let windowsProvider = WorldWindowsProvider()
 
     public static func show() {
         hide()
@@ -15,7 +17,7 @@ public struct OnScreenCoordinator {
     
     private static func spawnWindows() {
         let worlds = environment?.worlds ?? []
-        windows = worlds.map { PetsWindow(representing: $0) }
+        windows = worlds.map { windowsProvider.window(representing: $0) }
         windows.forEach { $0.show() }
     }
 

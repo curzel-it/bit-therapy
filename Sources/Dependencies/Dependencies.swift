@@ -12,10 +12,10 @@ class Dependencies {
         container.register(DeletePetUseCase.self) { _ in DeletePetUseCaseImpl() }
         container.register(ImportDragAndDropPetUseCase.self) { _ in ImportDragAndDropPetUseCaseImpl() }
         container.register(ExportPetUseCase.self) { _ in ExportPetUseCaseImpl() }
-        container.register(EntityViewsProvider.self) { _ in EntityViewsProvider() }
         container.register(CapabilitiesDiscoveryService.self) { _ in PetsCapabilitiesDiscoveryService() }
         container.register(CustomPets.ResourcesProvider.self) { _ in CustomPetsResourcesProviderImpl() }
         container.register(CustomPets.LocalizedResources.self) { _ in CustomPetsLocalizedResourcesImpl() }
+        container.register(CustomPets.ImportVerifier.self) { _ in ImportVerifierImpl() }
         container.register(CustomPets.ImportVerifier.self) { _ in ImportVerifierImpl() }
         
         let assets = PetsAssetsProviderImpl()

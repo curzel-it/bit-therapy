@@ -13,11 +13,10 @@ extension Entity {
 }
 
 class ShowMenuOnRightClick: RightClickable {
-    weak var lastWindow: PetsWindow?
+    weak var lastWindow: NSWindow?
     
     override func onRightClick(with event: NSEvent) {
-        guard let window = event.window as? PetsWindow else { return }
-        lastWindow = window
+        lastWindow = event.window
         lastWindow?.contentView?.menu = petMenu()
     }
 

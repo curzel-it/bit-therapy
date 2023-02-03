@@ -31,14 +31,13 @@
 		1E7B939C298C78B5001F045E /* CustomPetsDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B939B298C78B5001F045E /* CustomPetsDependencies.swift */; };
 		1E7D1EA62909C31600CC036B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
-		1E861D122989BFD000EA074E /* EntityRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E861D112989BFD000EA074E /* EntityRendering.swift */; };
+		1E861D122989BFD000EA074E /* RenderingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E861D112989BFD000EA074E /* RenderingDependencies.swift */; };
 		1E861D142989C49F00EA074E /* DependencyInjectionUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 1E861D132989C49F00EA074E /* DependencyInjectionUtils */; };
 		1E93C60C29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */; };
 		1E93C60F2962E781007A5B91 /* DeletePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */; };
 		1E98A007298C7E7800CD88B9 /* ImportVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */; };
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EA0D848298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */; };
-		1EAB525E2989B3FD00EA4034 /* PetsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB525D2989B3FD00EA4034 /* PetsWindow.swift */; };
 		1EAB52602989B8F800EA4034 /* EntityRendering in Frameworks */ = {isa = PBXBuildFile; productRef = 1EAB525F2989B8F800EA4034 /* EntityRendering */; };
 		1EAEA9062970D32900AB3EB0 /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
 		1EAEA9082970D32900AB3EB0 /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */; };
@@ -106,14 +105,13 @@
 		1E7B939B298C78B5001F045E /* CustomPetsDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsDependencies.swift; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
-		1E861D112989BFD000EA074E /* EntityRendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityRendering.swift; sourceTree = "<group>"; };
+		1E861D112989BFD000EA074E /* RenderingDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingDependencies.swift; sourceTree = "<group>"; };
 		1E93C60229623192007A5B91 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPetDragAndDropCoordinator.swift; sourceTree = "<group>"; };
 		1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePetButtonCoordinator.swift; sourceTree = "<group>"; };
 		1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportVerifier.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportPetButtonCoordinator.swift; sourceTree = "<group>"; };
-		1EAB525D2989B3FD00EA4034 /* PetsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsWindow.swift; sourceTree = "<group>"; };
 		1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPlatformJumper.swift; sourceTree = "<group>"; };
 		1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopObstaclesService.swift; sourceTree = "<group>"; };
 		1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMenuOnRightClick.swift; sourceTree = "<group>"; };
@@ -256,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				1E25273C2989ABC300756762 /* Dependencies.swift */,
-				1E861D112989BFD000EA074E /* EntityRendering.swift */,
+				1E861D112989BFD000EA074E /* RenderingDependencies.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -309,7 +307,6 @@
 			children = (
 				1EAEA9012970D32900AB3EB0 /* OnScreen.swift */,
 				1EAEA8FA2970D32900AB3EB0 /* DesktopEnvironment.swift */,
-				1EAB525D2989B3FD00EA4034 /* PetsWindow.swift */,
 				1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */,
 			);
 			path = Rendering;
@@ -596,7 +593,7 @@
 				1EAEA91C2970D32900AB3EB0 /* Animations.swift in Sources */,
 				1E7D1EA62909C31600CC036B /* Settings.swift in Sources */,
 				1EAEA90A2970D32900AB3EB0 /* ShowMenuOnRightClick.swift in Sources */,
-				1E861D122989BFD000EA074E /* EntityRendering.swift in Sources */,
+				1E861D122989BFD000EA074E /* RenderingDependencies.swift in Sources */,
 				A6FB7D7F28740F8E00AB872E /* App.swift in Sources */,
 				1EAEA9142970D32900AB3EB0 /* DesktopEnvironment.swift in Sources */,
 				1E93C60C29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift in Sources */,
@@ -608,7 +605,6 @@
 				1E25273D2989ABC300756762 /* Dependencies.swift in Sources */,
 				1EAEA9162970D32900AB3EB0 /* ScreenEnvironment.swift in Sources */,
 				1E61F886296F6B52007863DE /* Filters.swift in Sources */,
-				1EAB525E2989B3FD00EA4034 /* PetsWindow.swift in Sources */,
 				1E36C81F295F533D008EFB28 /* PetsSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,7 +797,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203401;
+				CURRENT_PROJECT_VERSION = 203501;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -820,7 +816,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.34;
+				MARKETING_VERSION = 2.35;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -840,7 +836,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203401;
+				CURRENT_PROJECT_VERSION = 203501;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -859,7 +855,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.34;
+				MARKETING_VERSION = 2.35;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
