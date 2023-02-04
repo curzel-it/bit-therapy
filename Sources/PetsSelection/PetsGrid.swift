@@ -25,18 +25,21 @@ struct PetsGrid: View {
 
 private struct ItemPreview: View {
     @EnvironmentObject var viewModel: PetsSelectionViewModel
-
+    
+    let size: CGFloat = 80
     let species: Species
 
     var body: some View {
         VStack {
             if let frame = viewModel.image(for: species) {
-                Image(frame: frame).pixelArt()
-            } else {
-                Text(species.name).multilineTextAlignment(.center)
+                Image(frame: frame)
+                    .pixelArt()
+                    .frame(width: size, height: size)
             }
+            Text(species.name).multilineTextAlignment(.center)
         }
-        .frame(width: 80, height: 80)
+        .frame(width: size)
+        .frame(minHeight: size)
         .onTapGesture { viewModel.showDetails(of: species) }
     }
 }
