@@ -102,6 +102,7 @@
 "species.about.nyan" = "Un hommage à l'un des chats les plus connus d'Internet.";
 "species.about.panda" = "L'Univers nous a amené le Guerrier Dragon !";
 "species.about.panda_vest" = "Il n'y a pas de prix pour être cool... ou charmant.";
+"species.about.poop" = "Il sent et laisse également des taches sur l'écran.";
 "species.about.puppy_milo" = "Peut-être que ce n'est pas exactement comme tu l'imaginait, mais je ne suis honnêtement pas vraiment un designer ! Haha";
 "species.about.sheep" = "Le \"eSheep\" pour Windows 95 était l'un des premiers Desktop Pets, le savais-tu?";
 "species.about.sheep_black" = "Si tu sais à quel point je peux être paresseux, tu comprendras que j'ai juste inversé les couleurs.";
@@ -143,6 +144,7 @@
 "species.name.nyan" = "Nyan D. Cat";
 "species.name.panda" = "Panda";
 "species.name.panda_vest" = "Panda doré";
+"species.name.poop" = "Caca";
 "species.name.puppy_milo" = "Milo";
 "species.name.sheep" = "Mouton";
 "species.name.sheep_black" = "Mouton noir";

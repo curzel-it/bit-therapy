@@ -1,0 +1,42 @@
+{
+  "animations": [
+      {
+        "id": "front",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 10
+      },
+      {
+        "id": "smell",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 10
+      },
+      {
+        "id": "talk",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 20
+      },
+      {
+        "id": "power",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 10
+      }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["emoji", "memes"],
+  "id": "poop",
+  "movementPath": "walk",
+  "speed": 0.65
+}
