@@ -6,12 +6,12 @@ import Yage
 open class PetEntity: Entity {
     private var settings: AppState { AppState.global }
 
-    public init(of species: Species, in worldBounds: CGRect) {
+    public init(of species: Species, in world: World) {
         super.init(
             species: species,
             id: PetEntity.id(for: species),
             frame: CGRect(square: AppState.global.petSize),
-            in: worldBounds
+            in: world
         )
         resetSpeed()
         setGravity()

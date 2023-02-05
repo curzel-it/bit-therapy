@@ -43,7 +43,7 @@ private extension ScreenEnvironment {
 
 private class UfoEntity: PetEntity {
     init(in world: World) {
-        super.init(of: .ufo, in: world.bounds)
+        super.init(of: .ufo, in: world)
         frame.origin = world.bounds.topLeft
     }
     

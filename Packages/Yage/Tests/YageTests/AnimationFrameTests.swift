@@ -10,7 +10,7 @@ class AnimationFrameTests: XCTestCase {
             species: .agent,
             id: "test",
             frame: CGRect(x: 5, y: 5, width: 5, height: 5),
-            in: CGRect(x: 0, y: 0, width: 25, height: 25)
+            in: World(name: "", bounds: CGRect(x: 0, y: 0, width: 25, height: 25))
         )
     }
 

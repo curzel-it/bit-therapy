@@ -49,7 +49,7 @@ class ScreenEnvironment: World {
                 
                 let currentSpecies = currentPets.map { $0.species }
                 for newPet in newPets where !currentSpecies.contains(newPet) {
-                    newChildren.append(PetEntity(of: newPet, in: self.bounds))
+                    newChildren.append(PetEntity(of: newPet, in: self))
                 }
                 self.children = newChildren
             }
@@ -57,7 +57,7 @@ class ScreenEnvironment: World {
     }
 
     func add(pet species: Species) {
-        children.append(PetEntity(of: species, in: bounds))
+        children.append(PetEntity(of: species, in: self))
     }
 
     func remove(species speciesToRemove: Species) {

@@ -23,10 +23,12 @@ open class Capability {
     }
     
     func update(with collisions: Collisions, after time: TimeInterval) {
+        guard isEnabled else { return }
         doUpdate(with: collisions, after: time)
     }
     
     open func doUpdate(with collisions: Collisions, after time: TimeInterval) {
+        // ...
     }
 
     open func kill(autoremove: Bool = true) {

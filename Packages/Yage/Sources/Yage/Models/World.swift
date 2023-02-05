@@ -13,7 +13,6 @@ open class World {
     
     open func set(bounds newBounds: CGRect) {
         bounds = newBounds
-        children.forEach { $0.worldBounds = newBounds }
         let hotspots = Hotspot.allCases.map { $0.rawValue }
         let oldBounds = children.filter { hotspots.contains($0.id) }
         oldBounds.forEach { $0.kill() }

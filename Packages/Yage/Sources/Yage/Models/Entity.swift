@@ -6,6 +6,7 @@ open class Entity: Identifiable {
     public let species: Species
     public let id: String
     public var capabilities: [Capability] = []
+    public let creationDate = Date()
     public var direction: CGVector = .zero
     public var fps: TimeInterval = 10
     public var frame: CGRect
@@ -15,21 +16,22 @@ open class Entity: Identifiable {
     public var speed: CGFloat = 0
     public var sprite: String?
     public private(set) var state: EntityState = .move
-    public var worldBounds: CGRect
+    public private(set) weak var world: World?
+    public var worldBounds: CGRect { world?.bounds ?? .zero }
     public var zIndex: Int
 
     public init(
         species: Species,
         id: String,
         frame: CGRect,
-        in worldBounds: CGRect
+        in world: World
     ) {
-        self.species = species
-        self.id = id
         self.fps = species.fps
-        self.zIndex = species.zIndex
         self.frame = frame
-        self.worldBounds = worldBounds
+        self.id = id
+        self.species = species
+        self.world = world
+        self.zIndex = species.zIndex
         installCapabilities()
     }
     

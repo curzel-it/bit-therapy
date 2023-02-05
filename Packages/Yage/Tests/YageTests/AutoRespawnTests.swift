@@ -11,7 +11,7 @@ class AutoRespawnTests: XCTestCase {
             species: .agent,
             id: "test",
             frame: CGRect(x: 0, y: 0, width: 1, height: 1),
-            in: CGRect(x: 0, y: 0, width: 10, height: 10)
+            in: World(name: "", bounds: CGRect(x: 0, y: 0, width: 10, height: 10))
         )
         respawner = AutoRespawn()
         entity.install(respawner)
