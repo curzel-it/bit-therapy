@@ -10,6 +10,7 @@ public class WorldWindowsProvider {
 }
 
 protocol EntityView: NSView {
+    var entityId: String { get }
     var zIndex: Int { get }
     func update()
 }

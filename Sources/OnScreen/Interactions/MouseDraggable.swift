@@ -4,7 +4,8 @@ import Yage
 
 class MouseDraggable: Capability {
     var dragEnabled: Bool {
-        isEnabled && subject?.isStatic == false
+        guard let subject else { return false }
+        return isEnabled && !subject.isStatic && !subject.isEphemeral
     }
     
     var isBeingDragged: Bool {

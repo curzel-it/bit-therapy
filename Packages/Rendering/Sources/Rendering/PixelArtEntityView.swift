@@ -6,6 +6,7 @@ import SwiftUI
 class PixelArtEntityView: NSImageView, EntityView {
     @Inject var assetsProvider: AssetsProvider
     
+    var entityId: String { entity.id }
     var zIndex: Int { entity.zIndex }
     
     private let entity: RenderableEntity

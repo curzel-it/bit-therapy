@@ -11,10 +11,6 @@ class WorldWindow: NSWindow {
     private var timer: Timer!
     private var lastUpdate = Date.timeIntervalSinceReferenceDate
     
-    private var entityViews: [EntityView] {
-        contentView?.subviews.compactMap { $0 as? EntityView } ?? []
-    }
-    
     init(representing world: RenderableWorld) {
         self.world = world
         self.tag = "Win-\(world.name)"
@@ -32,6 +28,10 @@ class WorldWindow: NSWindow {
         super.close()
         world.kill()
         Logger.log(tag, "Terminated.")
+    }
+    
+    private func entityViews() -> [EntityView] {
+        contentView?.subviews.compactMap { $0 as? EntityView } ?? []
     }
     
     private func configureWindow() {
@@ -66,7 +66,7 @@ class WorldWindow: NSWindow {
     }
 
     private func updateViews() {
-        entityViews.forEach { $0.update() }
+        entityViews().forEach { $0.update() }
     }
     
     private func spawnViewsForNewEntities() {
@@ -79,12 +79,8 @@ class WorldWindow: NSWindow {
     
     private func spawnView(for child: RenderableEntity) {
         guard let contentView else { return }
-        let view = PixelArtEntityView(representing: child)
-        
-        for otherEntityView in entityViews where child.zIndex < otherEntityView.zIndex {
-            contentView.addSubview(view, positioned: .above, relativeTo: otherEntityView)
-            return
-        }
-        contentView.addSubview(view)
+        let newView = PixelArtEntityView(representing: child)
+        contentView.addSubview(newView)
+        contentView.subviews = entityViews().sorted { $0.zIndex < $1.zIndex }
     }
 }
