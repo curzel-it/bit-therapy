@@ -16,7 +16,15 @@ class ScreenEnvironment: World {
         super.init(name: screen.localizedName, bounds: screen.frame)
         bindPetsOnStage()
         scheduleUfoAbduction()
+        scheduleRainyCloud()
         observeWindowsIfNeeded()
+    }
+    
+    func randomPet() -> PetEntity? {
+        children
+            .compactMap { $0 as? PetEntity }
+            .filter { $0.speed != 0 }
+            .randomElement()
     }
     
     private func observeWindowsIfNeeded() {

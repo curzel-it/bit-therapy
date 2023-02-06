@@ -7,19 +7,13 @@ extension ScreenEnvironment {
     func scheduleUfoAbduction() {
         scheduleRandomly(withinHours: 0..<5) { [weak self] in
             guard AppState.global.randomEvents else { return }
-            guard let self, let victim = self.randomVictim() else { return }
+            guard let self, let victim = self.randomPet() else { return }
             self.animateUfoAbduction(of: victim)
         }
     }
 }
 
-private extension ScreenEnvironment {
-    func randomVictim() -> PetEntity? {
-        children
-            .compactMap { $0 as? PetEntity }
-            .randomElement()
-    }
-    
+private extension ScreenEnvironment {    
     func animateUfoAbduction(of target: PetEntity) {
         let ufo = UfoEntity(in: self)
         children.append(ufo)

@@ -24,6 +24,13 @@ class PixelArtEntityView: NSImageView, EntityView {
         imageScaling = .scaleProportionallyUpOrDown
     }
     
+    override func hitTest(_ point: NSPoint) -> NSView? {
+        if entity.isInteractable {
+            return super.hitTest(point)
+        }
+        return nil
+    }
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

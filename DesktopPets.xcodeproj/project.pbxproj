@@ -36,6 +36,7 @@
 		1E93C60C29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */; };
 		1E93C60F2962E781007A5B91 /* DeletePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */; };
 		1E98A007298C7E7800CD88B9 /* ImportVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */; };
+		1E991F352991A33100AB2F6A /* FantozziCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E991F342991A33100AB2F6A /* FantozziCloud.swift */; };
 		1EA055582913E4BE0037803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA055572913E4BE0037803E /* AppDelegate.swift */; };
 		1EA0D848298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */; };
 		1EAB52602989B8F800EA4034 /* Rendering in Frameworks */ = {isa = PBXBuildFile; productRef = 1EAB525F2989B8F800EA4034 /* Rendering */; };
@@ -112,6 +113,7 @@
 		1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPetDragAndDropCoordinator.swift; sourceTree = "<group>"; };
 		1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePetButtonCoordinator.swift; sourceTree = "<group>"; };
 		1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportVerifier.swift; sourceTree = "<group>"; };
+		1E991F342991A33100AB2F6A /* FantozziCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantozziCloud.swift; sourceTree = "<group>"; };
 		1EA055572913E4BE0037803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportPetButtonCoordinator.swift; sourceTree = "<group>"; };
 		1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPlatformJumper.swift; sourceTree = "<group>"; };
@@ -237,12 +239,13 @@
 		1E485F5E2975DF5700AE9D3F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */,
+				1E991F342991A33100AB2F6A /* FantozziCloud.swift */,
 				1EAEA8F82970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift */,
-				1EAEA8FC2970D32900AB3EB0 /* SleepingPlace.swift */,
-				1EAEA8FF2970D32900AB3EB0 /* UfoAbduction.swift */,
 				1EFDB7A5298F98B5007EFC62 /* LeavesPoopStains.swift */,
 				1EFDB7A7298FD078007EFC62 /* LeavesTracesWhileWalking.swift */,
+				1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */,
+				1EAEA8FC2970D32900AB3EB0 /* SleepingPlace.swift */,
+				1EAEA8FF2970D32900AB3EB0 /* UfoAbduction.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				1EAEA9182970D32900AB3EB0 /* SleepingPlace.swift in Sources */,
 				A6FB7D8328740F8E00AB872E /* MainScene.swift in Sources */,
 				1E36C821295F533D008EFB28 /* PetsGrid.swift in Sources */,
+				1E991F352991A33100AB2F6A /* FantozziCloud.swift in Sources */,
 				1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */,
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1EA0D848298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift in Sources */,

@@ -3,6 +3,11 @@ import SwiftUI
 import Yage
 
 open class RightClickable: Capability {
+    open override func install(on subject: Entity) {
+        super.install(on: subject)
+        isEnabled = !subject.isEphemeral
+    }
+    
     open func onRightClick(with event: NSEvent) {
         // ...
     }

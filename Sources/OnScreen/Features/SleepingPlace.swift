@@ -4,7 +4,6 @@ import Yage
 class SleepingPlace: Capability {
     override func install(on subject: Entity) {
         super.install(on: subject)
-        subject.isEphemeral = true
         subject.frame.size = CGSize(
             width: subject.frame.width * 2,
             height: subject.frame.height * 2

@@ -14,6 +14,7 @@ public protocol RenderableEntity {
     var frame: CGRect { get }
     var id: String { get }
     var isAlive: Bool { get }
+    var isInteractable: Bool { get }
     var sprite: String? { get }
     var spriteRotation: SpriteRotation? { get }
     var windowSize: CGSize { get }
