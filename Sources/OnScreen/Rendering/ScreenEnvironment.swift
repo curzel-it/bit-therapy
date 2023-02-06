@@ -1,9 +1,13 @@
 import AppKit
 import Combine
+import DependencyInjectionUtils
 import Foundation
 import Yage
 
 class ScreenEnvironment: World {
+    @Inject var rainyCloudUseCase: RainyCloudUseCase
+    @Inject var ufoAbductionUseCase: UfoAbductionUseCase
+    
     var hasAnyPets: Bool {
         children.contains { $0 is PetEntity }
     }

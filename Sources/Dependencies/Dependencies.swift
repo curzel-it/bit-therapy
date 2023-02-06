@@ -17,6 +17,8 @@ class Dependencies {
         container.register(CustomPets.LocalizedResources.self) { _ in CustomPetsLocalizedResourcesImpl() }
         container.register(CustomPets.ImportVerifier.self) { _ in ImportVerifierImpl() }
         container.register(CustomPets.ImportVerifier.self) { _ in ImportVerifierImpl() }
+        container.register(RainyCloudUseCase.self) { _ in RainyCloudUseCaseImpl() }
+        container.register(UfoAbductionUseCase.self) { _ in UfoAbductionUseCaseImpl() }
         
         let assets = PetsAssetsProviderImpl()
         container.registerSingleton(PetsAssetsProvider.self) { _ in assets }

@@ -1,29 +1,29 @@
 import Foundation
 import Yage
 
-// MARK: - Schedule Event
-
 extension ScreenEnvironment {
     func scheduleRainyCloud() {
         scheduleRandomly(withinHours: 0..<5) { [weak self] in
             guard AppState.global.randomEvents else { return }
             guard let self, let victim = self.randomPet() else { return }
-            self.animateRainyCloud(of: victim)
+            self.rainyCloudUseCase.start(target: victim, world: self)
         }
     }
 }
 
-// MARK: - Logic
+protocol RainyCloudUseCase {
+    func start(target: Entity, world: World)
+}
 
-private extension ScreenEnvironment {
-    func animateRainyCloud(of target: PetEntity) {
-        let cloud = buildCloud(at: target.frame.origin)
+class RainyCloudUseCaseImpl: RainyCloudUseCase {
+    func start(target: Entity, world: World) {
+        let cloud = buildCloud(at: target.frame.origin, in: world)
         setupSeeker(for: cloud, to: target)
-        scheduleCleanUp(cloud: cloud)
+        scheduleCleanUp(cloud: cloud, world: world)
     }
     
-    func buildCloud(at origin: CGPoint) -> Entity {
-        let cloud = PetEntity(of: .cloud, in: self)
+    private func buildCloud(at origin: CGPoint, in world: World) -> Entity {
+        let cloud = PetEntity(of: .cloud, in: world)
         cloud.capability(for: Gravity.self)?.kill()
         cloud.frame.size = CGSize(
             width: cloud.frame.size.width * 2,
@@ -31,11 +31,11 @@ private extension ScreenEnvironment {
         )
         cloud.frame.origin = origin
         cloud.isEphemeral = true
-        children.append(cloud)
+        world.children.append(cloud)
         return cloud
     }
     
-    func setupSeeker(for cloud: Entity, to target: Entity) {
+    private func setupSeeker(for cloud: Entity, to target: Entity) {
         let yOffset = cloud.frame.height - target.frame.height
         let seeker = Seeker()
         cloud.install(seeker)
@@ -47,16 +47,14 @@ private extension ScreenEnvironment {
         ) { _ in }
     }
     
-    func scheduleCleanUp(cloud: Entity) {
+    private func scheduleCleanUp(cloud: Entity, world: World) {
         let duracy = TimeInterval.random(in: 60..<120)
-        DispatchQueue.main.asyncAfter(deadline: .now() + duracy) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + duracy) { [weak world] in
             cloud.kill()
-            self?.children.remove(cloud)
+            world?.children.remove(cloud)
         }
     }
 }
-
-// MARK: - Species
 
 private extension Species {
     static let cloud = Species(

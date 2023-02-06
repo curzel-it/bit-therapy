@@ -7,48 +7,56 @@ extension ScreenEnvironment {
     func scheduleUfoAbduction() {
         scheduleRandomly(withinHours: 0..<5) { [weak self] in
             guard AppState.global.randomEvents else { return }
-            guard let self, let victim = self.randomPet() else { return }
-            self.animateUfoAbduction(of: victim)
+            self?.scheduleUfoAbductionNow()
+        }
+    }
+    
+    private func scheduleUfoAbductionNow() {
+        guard let victim = randomPet() else { return }
+        let victimSpecies = victim.species        
+        ufoAbductionUseCase.start(with: victim, in: self) { [weak self] in
+            self?.add(pet: victimSpecies)
         }
     }
 }
 
-private extension ScreenEnvironment {    
-    func animateUfoAbduction(of target: PetEntity) {
-        let ufo = UfoEntity(in: self)
-        children.append(ufo)
-        ufo.abduct(target) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
-                self?.cleanUpAfterAbduction(of: target, by: ufo)
+protocol UfoAbductionUseCase {
+    func start(with target: Entity, in world: World, completion: @escaping () -> Void)
+}
+
+class UfoAbductionUseCaseImpl: UfoAbductionUseCase {
+    func start(with target: Entity, in world: World, completion: @escaping () -> Void) {
+        let ufo = buildUfo(in: world)
+        let abduction = ufo.capability(for: UfoAbduction.self)
+        abduction?.start(with: target) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self, weak world] in
+                guard let self, let world else { return }
+                self.cleanUpAfterAbduction(of: target, by: ufo, in: world, completion: completion)
             }
         }
     }
     
-    private func cleanUpAfterAbduction(of target: PetEntity, by ufo: PetEntity) {
+    private func cleanUpAfterAbduction(
+        of target: Entity,
+        by ufo: Entity,
+        in world: World,
+        completion: @escaping () -> Void
+    ) {
         ufo.kill()
         target.kill()
-        children.remove(ufo)
-        children.remove(target)
-        add(pet: target.species)
+        world.children.remove(ufo)
+        world.children.remove(target)
+        completion()
+    }
+
+    private func buildUfo(in world: World) -> Entity {
+        let ufo = PetEntity(of: .ufo, in: world)
+        ufo.frame.origin = world.bounds.topLeft
+        ufo.install(UfoAbduction())
+        world.children.append(ufo)
+        return ufo
     }
 }
-
-// MARK: - Entity
-
-private class UfoEntity: PetEntity {
-    init(in world: World) {
-        super.init(of: .ufo, in: world)
-        frame.origin = world.bounds.topLeft
-    }
-    
-    func abduct(_ target: Entity, onCompletion: @escaping () -> Void) {
-        let abduction = UfoAbduction()
-        install(abduction)
-        abduction.abduct(target, onCompletion)
-    }
-}
-
-// MARK: - Animation
 
 private extension EntityAnimation {
     static let abduction = EntityAnimation(
@@ -65,7 +73,7 @@ private class UfoAbduction: Capability {
     private var subjectOriginalSize: CGSize!
     private var onCompletion: () -> Void = {}
     
-    func abduct(_ target: Entity, _ onCompletion: @escaping () -> Void) {
+    func start(with target: Entity, onCompletion: @escaping () -> Void) {
         guard let subject else { return }
         subjectOriginalSize = subject.frame.size
         self.target = target
