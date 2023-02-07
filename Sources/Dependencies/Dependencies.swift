@@ -9,6 +9,7 @@ class Dependencies {
     static func setup() {
         let container = Container()
         container.register(AppStateStorage.self) { _ in AppStateStorageImpl() }
+        container.register(SpeciesNamesRepository.self) { _ in SpeciesNamesRepositoryImpl() }
         container.register(DeletePetUseCase.self) { _ in DeletePetUseCaseImpl() }
         container.register(ImportDragAndDropPetUseCase.self) { _ in ImportDragAndDropPetUseCaseImpl() }
         container.register(ExportPetUseCase.self) { _ in ExportPetUseCaseImpl() }

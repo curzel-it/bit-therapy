@@ -32,6 +32,7 @@
 		1E7D1EA62909C31600CC036B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
 		1E80AA9E2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */; };
+		1E80AAA02992F826008C64A2 /* SpeciesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9F2992F826008C64A2 /* SpeciesNames.swift */; };
 		1E861D122989BFD000EA074E /* RenderingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E861D112989BFD000EA074E /* RenderingDependencies.swift */; };
 		1E861D142989C49F00EA074E /* DependencyInjectionUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 1E861D132989C49F00EA074E /* DependencyInjectionUtils */; };
 		1E93C60C29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */; };
@@ -110,6 +111,7 @@
 		1E7D1EA42909C31600CC036B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
 		1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenamePetButtonCoordinator.swift; sourceTree = "<group>"; };
+		1E80AA9F2992F826008C64A2 /* SpeciesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesNames.swift; sourceTree = "<group>"; };
 		1E861D112989BFD000EA074E /* RenderingDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingDependencies.swift; sourceTree = "<group>"; };
 		1E93C60229623192007A5B91 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPetDragAndDropCoordinator.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				1E2AC745290B1093003D0AB2 /* Lang.swift */,
 				1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */,
 				1E42E4D3295F7A5200F425F8 /* Species.swift */,
+				1E80AA9F2992F826008C64A2 /* SpeciesNames.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1EA0D848298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift in Sources */,
 				1E5AACB929716CB9007531DF /* Firebase.swift in Sources */,
+				1E80AAA02992F826008C64A2 /* SpeciesNames.swift in Sources */,
 				1EAEA9082970D32900AB3EB0 /* DesktopObstaclesService.swift in Sources */,
 				1EAEA90E2970D32900AB3EB0 /* MouseDraggable.swift in Sources */,
 				1E36C823295F533D008EFB28 /* PetDetailsView.swift in Sources */,
