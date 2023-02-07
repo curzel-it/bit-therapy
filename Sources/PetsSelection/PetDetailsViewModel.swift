@@ -17,7 +17,7 @@ class PetDetailsViewModel: ObservableObject {
     var canSelect: Bool { !isSelected }
 
     var isSelected: Bool { appState.selectedSpecies.contains(species) }
-    var title: String { species.name }
+    var title: String { appState.names[species.id] ?? species.name }
 
     var animationFrames: [ImageFrame] {
         assets.images(for: species.id, animation: "front")

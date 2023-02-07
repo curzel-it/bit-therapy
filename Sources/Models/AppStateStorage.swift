@@ -7,6 +7,7 @@ protocol AppStateStorage {
     var desktopInteractions: Bool { get }
     var disabledScreens: [String] { get }
     var gravityEnabled: Bool { get }
+    var names: [String: String] { get }
     var randomEvents: Bool { get }
     var petSize: Double { get }
     var selectedSpecies: [Species] { get }
@@ -18,6 +19,7 @@ class AppStateStorageImpl: AppStateStorage {
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true
+    @AppStorage("names") var namesValue: String = ""
     @AppStorage("randomEvents") var randomEvents: Bool = true
     @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
     @AppStorage("petId") private var selectedSpeciesValue: String = kInitialPetId
@@ -32,6 +34,19 @@ class AppStateStorageImpl: AppStateStorage {
         }
         set {
             disabledScreensValue = newValue.joined(separator: ",")
+        }
+    }
+    
+    var names: [String: String] {
+        get {
+            guard let data = namesValue.data(using: .utf8) else { return [:] }
+            guard let json = try? JSONSerialization.jsonObject(with: data) else { return [:] }
+            return (json as? [String: String]) ?? [:]
+        }
+        set {
+            guard let data = try? JSONSerialization.data(withJSONObject: newValue) else { return }
+            guard let string = String(data: data, encoding: .utf8) else { return }
+            namesValue = string
         }
     }
     
