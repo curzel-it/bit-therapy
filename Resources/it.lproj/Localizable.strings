@@ -14,6 +14,7 @@
 "cheats.validCode" = "Attivato!";
 "customPets.customPetDescription" = "Questo è un pet custom";
 "customPets.dragAreaMessage" = "Trascina il tuo file zip qui";
+"customPets.export" = "Esporta";
 "customPets.exportSuccess" = "Fatto!";
 "customPets.exportSuccessMessage" = "Ora ti basta aprire l'archivio e dare un'occhiata, puoi customizzare il pet come preferisci, o crearne uno nuovo!";
 "customPets.genericImportError" = "C'è stato un errore nell'import dei tuoi file, prova a chiudere l'app e riprova, o chiedi aiuto su Discord!";

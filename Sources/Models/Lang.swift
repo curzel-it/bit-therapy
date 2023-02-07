@@ -40,6 +40,7 @@ enum Lang {
     enum CustomPets {
         static let customPetDescription = "customPets.customPetDescription".localized()
         static let dragAreaMessage = "customPets.dragAreaMessage".localized()
+        static let export = "customPets.export".localized()
         static let exportSuccess = "customPets.exportSuccess".localized()
         static let exportSuccessMessage = "customPets.exportSuccessMessage".localized()
         static let genericImportError = "customPets.genericImportError".localized()

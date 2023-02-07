@@ -14,6 +14,7 @@
 "cheats.validCode" = "Activé !";
 "customPets.customPetDescription" = "Ceci est un animal de compagnie fait sur mesure";
 "customPets.dragAreaMessage" = "Faites glisser et déposez votre fichier zip ici";
+"customPets.export" = "Exporter";
 "customPets.exportSuccess" = "Exporté !";
 "customPets.exportSuccessMessage" = "Vous pouvez maintenant décompresser et personnaliser l'animal comme vous le souhaitez, ou en créer un nouveau !";
 "customPets.genericImportError" = "Une erreur s'est produite lors de l'importation de vos fichiers, quittez l'application puis réessayez ? Ou demandez de l'aide sur notre Discord !";
