@@ -4,7 +4,7 @@ import SwiftUI
 import Yage
 
 class PetDetailsViewModel: ObservableObject {
-    @Inject var assets: PetsAssetsProvider
+    @Inject private var assets: PetsAssetsProvider
     private let deletePet = DeletePetButtonCoordinator()
     private let exportPet = ExportPetButtonCoordinator()
     
@@ -59,7 +59,7 @@ class PetDetailsViewModel: ObservableObject {
         )
     }
     
-    func deletePetButton() -> some View {
+    func deleteButton() -> some View {
         deletePet.view(for: species) { [weak self] deleted in
             if deleted { self?.close() }
         }

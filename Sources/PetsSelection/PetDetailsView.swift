@@ -30,8 +30,17 @@ private struct Header: View {
     
     var body: some View {
         ZStack {
-            Text(viewModel.title).font(.largeTitle.bold())
-            viewModel.exportButton().positioned(.trailingMiddle)
+            IconButton(systemName: "character.cursor.ibeam") {}
+                .positioned(.leading)
+            Text(viewModel.title)
+                .font(.largeTitle.bold())
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, .xxl)
+            HStack {
+                viewModel.deleteButton()
+                viewModel.exportButton()
+            }
+            .positioned(.trailing)
         }
     }
 }
@@ -81,7 +90,6 @@ private struct Footer: View {
                 Button(Lang.cancel, action: viewModel.close)
                     .buttonStyle(.text)
             }
-            viewModel.deletePetButton()
         }
     }
 }
