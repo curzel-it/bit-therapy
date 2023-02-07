@@ -60,13 +60,6 @@ class PetsSelectionViewModel: ObservableObject {
         AppState.global.selectedSpecies.contains(species)
     }
     
-    func image(for species: Species) -> NSImage? {
-        let path = assets
-            .frames(for: species.id, animation: "front")
-            .first
-        return assets.image(sprite: path)
-    }
-    
     func importView() -> AnyView {
         importPet.view()
     }

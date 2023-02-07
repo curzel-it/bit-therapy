@@ -14,33 +14,10 @@ struct PetsGrid: View {
         VStack(spacing: .md) {
             LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
                 ForEach(species) {
-                    ItemPreview(species: $0)
+                    PetPreview(species: $0)
                 }
             }
         }
-    }
-}
-
-// MARK: - Item Preview
-
-private struct ItemPreview: View {
-    @EnvironmentObject var viewModel: PetsSelectionViewModel
-    
-    let size: CGFloat = 80
-    let species: Species
-
-    var body: some View {
-        VStack {
-            if let frame = viewModel.image(for: species) {
-                Image(frame: frame)
-                    .pixelArt()
-                    .frame(width: size, height: size)
-            }
-            Text(species.name).multilineTextAlignment(.center)
-        }
-        .frame(width: size)
-        .frame(minHeight: size)
-        .onTapGesture { viewModel.showDetails(of: species) }
     }
 }
 

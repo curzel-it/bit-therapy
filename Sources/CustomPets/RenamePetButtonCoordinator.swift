@@ -47,21 +47,22 @@ private struct RenamePetButton: View {
 
 private class RenamePetButtonViewModel: ObservableObject {
     @Inject var assets: PetsAssetsProvider
+    @Inject var names: SpeciesNamesRepository
     
     @Published var isRenaming = false
-    @Published var name: String
+    @Published var name: String = ""
     
     let icon = "character.cursor.ibeam"
     private let species: Species
     
     init(species: Species) {
         self.species = species
-        self.name = species.name
+        self.name = names.currentName(for: species)
     }
     
     func cancel() {
         isRenaming = false
-        name = species.name
+        name = names.currentName(for: species)
     }
     
     func startRenaming() {

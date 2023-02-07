@@ -121,7 +121,7 @@ extension Lang {
 }
 
 extension Species {
-    var name: String {
+    var defaultName: String {
         let fallback = id.replacingOccurrences(of: "_", with: " ").capitalized
         return "species.name.\(id)".localized(or: fallback)
     }

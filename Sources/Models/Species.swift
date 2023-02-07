@@ -8,7 +8,7 @@ extension Species {
         let species = allJsonUrls
             .compactMap { try? Data(contentsOf: $0) }
             .compactMap { try? JSONDecoder().decode(Species.self, from: $0) }
-            .sorted { $0.name < $1.name }
+            .sorted { $0.id < $1.id }
             .removeDuplicates(keepOrder: true)
         return CurrentValueSubject<[Species], Never>(species)
     }()

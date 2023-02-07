@@ -6,6 +6,8 @@ import Yage
 
 class PetDetailsViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
+    @Inject private var names: SpeciesNamesRepository
+    
     private let deletePet = DeletePetButtonCoordinator()
     private let exportPet = ExportPetButtonCoordinator()
     private let renamePet = RenamePetButtonCoordinator()
@@ -32,6 +34,7 @@ class PetDetailsViewModel: ObservableObject {
     init(isShown: Binding<Bool>, species: Species) {
         self._isShown = isShown
         self.species = species
+        self.bindTitle()
     }
     
     func close() {
@@ -73,6 +76,12 @@ class PetDetailsViewModel: ObservableObject {
     
     func renameButton() -> some View {
         renamePet.view(for: species)
+    }
+    
+    private func bindTitle() {
+        names.name(for: species)
+            .sink { [weak self] name in self?.title = name }
+            .store(in: &disposables)
     }
 }
 
