@@ -43,6 +43,10 @@ class AppState: ObservableObject {
     func remove(species: Species) {
         selectedSpecies.remove(species)
     }
+    
+    func rename(_ species: Species, to newName: String) {
+        names[species.id] = newName
+    }
 
     private func readFromStorage() {
         desktopInteractions = storage.desktopInteractions

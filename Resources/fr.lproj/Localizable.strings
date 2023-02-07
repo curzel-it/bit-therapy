@@ -23,6 +23,8 @@
 "customPets.invalidJson" = "Votre fichier JSON d'espèce contient des erreurs, veuillez vérifier la documentation ou demander de l'aide sur Discord !";
 "customPets.message" = "Vous pouvez maintenant créer vos propres animaux de compagnie personnalisés !\nCela nécessite un travail de conception de votre part, mais cela peut être très gratifiant !\nPour commencer, suivez les instructions du lien ci-dessous, puis faites simplement glisser et déposez votre fichier zip dans la zone ci-dessous !";
 "customPets.missingFiles" = "Il semble qu'il manque quelque chose (%@), consultez la documentation ou demandez de l'aide sur Discord !";
+"customPets.setNameTitle" = "Changer de nom";
+"customPets.setNameMessage" = "Vous pouvez appeler vos animaux de compagnie comme vous voulez !";
 "customPets.readTheDocs" = "Instructions";
 "customPets.speciesAlreadyExists" = "Il semble que %@ existe déjà ! Essayez un nom différent ou supprimez la version précédente.";
 "customPets.title" = "Crée le tien !";

@@ -23,6 +23,8 @@
 "customPets.invalidJson" = "Your species json file has some errors in it, please double check the documentation or ask for help on Discord!";
 "customPets.message" = "You can now create your own custom pets!\nIt requires some design work on your end, but it can be really rewarding!\nTo start, follow the instructions in the link below, then just drag and drop your zip file in the area below!";
 "customPets.missingFiles" = "Seems like something is missing (%@), check the documentation or ask for help on Discord!";
+"customPets.setNameTitle" = "Change Nickname";
+"customPets.setNameMessage" = "You can give this pet any nickname, think of something cool!";
 "customPets.readTheDocs" = "Instructions";
 "customPets.speciesAlreadyExists" = "Seems like %@ already exists!\nTry a different name or remove the previous version.";
 "customPets.title" = "Create your own!";

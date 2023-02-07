@@ -49,6 +49,8 @@ enum Lang {
         static let invalidJson = "customPets.invalidJson".localized()
         static let message = "customPets.message".localized()
         static let missingFiles = "customPets.missingFiles".localized()
+        static let setNameTitle = "customPets.setNameTitle".localized()
+        static let setNameMessage = "customPets.setNameMessage".localized()
         static let readTheDocs = "customPets.readTheDocs".localized()
         static let speciesAlreadyExists = "customPets.speciesAlreadyExists".localized()
         static let title = "customPets.title".localized()

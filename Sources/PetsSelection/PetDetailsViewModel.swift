@@ -1,3 +1,4 @@
+import Combine
 import DependencyInjectionUtils
 import NotAGif
 import SwiftUI
@@ -7,17 +8,16 @@ class PetDetailsViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
     private let deletePet = DeletePetButtonCoordinator()
     private let exportPet = ExportPetButtonCoordinator()
+    private let renamePet = RenamePetButtonCoordinator()
     
     @Binding var isShown: Bool
+    @Published var title: String = ""
     
     let species: Species
-    
     var appState: AppState { AppState.global }
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected }
-
     var isSelected: Bool { appState.selectedSpecies.contains(species) }
-    var title: String { appState.names[species.id] ?? species.name }
 
     var animationFrames: [ImageFrame] {
         assets.images(for: species.id, animation: "front")
@@ -26,12 +26,14 @@ class PetDetailsViewModel: ObservableObject {
     var animationFps: TimeInterval {
         max(3, species.fps)
     }
+    
+    private var disposables = Set<AnyCancellable>()
 
     init(isShown: Binding<Bool>, species: Species) {
         self._isShown = isShown
         self.species = species
     }
-
+    
     func close() {
         withAnimation {
             isShown = false
@@ -67,6 +69,10 @@ class PetDetailsViewModel: ObservableObject {
 
     func exportButton() -> some View {
         exportPet.view(for: species)
+    }
+    
+    func renameButton() -> some View {
+        renamePet.view(for: species)
     }
 }
 

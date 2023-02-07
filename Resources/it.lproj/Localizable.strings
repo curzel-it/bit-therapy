@@ -23,6 +23,8 @@
 "customPets.invalidJson" = "Il file json con le informazioni sulla specie ha qualche errore, consulta la documentazione o chiedi aiuto su Discord!";
 "customPets.message" = "Lo sapevi che puoi creare tu stesso dei pet?\nDovrai metterti nei panni di un designer e lavorarci un pò, ma può essere davvero gratificante!\nPer iniziare, segui le istruzioni nel link qui sotto, poi trascina il tuo file zip nell'area indicata!";
 "customPets.missingFiles" = "Sembra che manchi qualcosa (%@), consulta la documentazione o chiedi aiuto su Discord!";
+"customPets.setNameTitle" = "Cambia nome";
+"customPets.setNameMessage" = "Puoi chiamare i tuoi animaletti come vuoi!";
 "customPets.readTheDocs" = "Istruzioni";
 "customPets.speciesAlreadyExists" = "Sembra che %@ esista già, prova a cambiare nome o rimuovi la versione esistente.";
 "customPets.title" = "Crea il tuo pet!";

@@ -74,6 +74,10 @@ class AppStateStorageImpl: AppStateStorage {
             .sink { [weak self] in self?.gravityEnabled = $0 }
             .store(in: &disposables)
         
+        appState.$names
+            .sink { [weak self] in self?.names = $0 }
+            .store(in: &disposables)
+        
         appState.$petSize
             .sink { [weak self] in self?.petSize = $0 }
             .store(in: &disposables)

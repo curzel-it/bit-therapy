@@ -29,18 +29,14 @@ private struct Header: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
     var body: some View {
-        ZStack {
-            IconButton(systemName: "character.cursor.ibeam") {}
-                .positioned(.leading)
+        HStack(spacing: .xl) {
             Text(viewModel.title)
                 .font(.largeTitle.bold())
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, .xxl)
-            HStack {
-                viewModel.deleteButton()
-                viewModel.exportButton()
-            }
-            .positioned(.trailing)
+                .multilineTextAlignment(.leading)
+            Spacer()
+            viewModel.renameButton()
+            viewModel.deleteButton()
+            viewModel.exportButton()
         }
     }
 }
