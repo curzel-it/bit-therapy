@@ -1,6 +1,7 @@
 import AppKit
 import CustomPets
 import DependencyInjectionUtils
+import DesignSystem
 import Foundation
 import Schwifty
 import SwiftUI
@@ -21,9 +22,7 @@ private struct ExportSpeciesButton: View {
     @StateObject var viewModel: ExportSpeciesButtonViewModel
     
     var body: some View {
-        Image(systemName: "square.and.pencil")
-            .font(.title)
-            .onTapGesture(perform: viewModel.export)
+        IconButton(systemName: viewModel.icon, action: viewModel.export)
             .sheet(isPresented: viewModel.isAlertShown) {
                 VStack(spacing: .zero) {
                     if let title = viewModel.title {
@@ -50,6 +49,8 @@ private class ExportSpeciesButtonViewModel: ObservableObject {
     @Published var message: String?
     
     @Inject var exportPetUseCase: ExportPetUseCase
+    
+    let icon = "square.and.arrow.up.on.square"
     
     private let species: Species
     

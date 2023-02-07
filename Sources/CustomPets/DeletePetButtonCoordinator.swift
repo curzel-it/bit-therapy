@@ -1,5 +1,6 @@
 import CustomPets
 import DependencyInjectionUtils
+import DesignSystem
 import Foundation
 import Schwifty
 import SwiftUI
@@ -20,9 +21,7 @@ private struct DeletePetButton: View {
     
     var body: some View {
         if viewModel.isEnabled {
-            Button(Lang.delete, action: viewModel.delete)
-                .buttonStyle(.text)
-                .scaleEffect(0.8)
+            IconButton(systemName: "trash", action: viewModel.delete)
         }
     }
 }
