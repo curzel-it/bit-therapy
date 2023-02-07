@@ -22,7 +22,7 @@ public protocol RenderableEntity {
     
     func isBeingDragged() -> Bool
     func mouseDragged(currentDelta: CGSize)
-    func mouseUp(totalDelta: CGSize) -> CGPoint?
+    func mouseUp(totalDelta: CGSize)
     func rightClicked(with: NSEvent)
 }
 

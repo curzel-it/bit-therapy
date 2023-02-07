@@ -52,6 +52,8 @@ class UfoAbductionUseCaseImpl: UfoAbductionUseCase {
     private func buildUfo(in world: World) -> Entity {
         let ufo = PetEntity(of: .ufo, in: world)
         ufo.frame.origin = world.bounds.topLeft
+        ufo.isEphemeral = true
+        ufo.capability(for: Gravity.self)?.kill()
         ufo.install(UfoAbduction())
         world.children.append(ufo)
         return ufo

@@ -21,9 +21,9 @@ class MouseDraggable: Capability {
         subject.frame.origin = nearestPosition(for: newFrame, in: subject.worldBounds)
     }
     
-    func mouseUp(totalDelta _: CGSize) -> CGPoint {
-        guard dragEnabled, isBeingDragged else { return .zero }
-        return mouseDragEnded()
+    func mouseUp(totalDelta _: CGSize) {
+        guard dragEnabled, isBeingDragged else { return }
+        mouseDragEnded()
     }
     
     private func mouseDragStarted() {
@@ -31,13 +31,10 @@ class MouseDraggable: Capability {
         subject?.movement?.isEnabled = false
     }
     
-    private func mouseDragEnded() -> CGPoint {
-        guard let subject else { return .zero }
-        let finalPosition = nearestPosition(for: subject.frame, in: subject.worldBounds)
-        subject.frame.origin = finalPosition
+    private func mouseDragEnded() {
+        guard let subject else { return }
         subject.set(state: .move)
         subject.movement?.isEnabled = true
-        return finalPosition
     }
     
     private func nearestPosition(for rect: CGRect, in bounds: CGRect) -> CGPoint {

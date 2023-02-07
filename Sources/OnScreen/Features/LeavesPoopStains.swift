@@ -4,7 +4,7 @@ import Yage
 class LeavesPoopStains: LeavesTracesWhileWalking {
     override func install(on subject: Entity) {
         speciesForTraceEntities = .poopStain
-        timeBetweenSpawns = 2.5
+        timeBetweenSpawns = 4
         traceExpirationTime = 17 / speciesForTraceEntities.fps
         super.install(on: subject)
     }

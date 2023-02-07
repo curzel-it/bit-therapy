@@ -84,9 +84,7 @@ class PixelArtEntityView: NSImageView, EntityView {
             width: locationOnLastDrag.x - locationOnMouseDown.x,
             height: locationOnMouseDown.y - locationOnLastDrag.y
         )
-        if let finalPosition = entity.mouseUp(totalDelta: delta) {
-            frame.origin = finalPosition
-        }
+        entity.mouseUp(totalDelta: delta)
     }
     
     // MARK: - Right Click
