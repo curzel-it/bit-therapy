@@ -27,7 +27,7 @@ class ScreenEnvironment: World {
     func randomPet() -> PetEntity? {
         children
             .compactMap { $0 as? PetEntity }
-            .filter { $0.speed != 0 }
+            .filter { $0.speed != 0 && !$0.isEphemeral }
             .randomElement()
     }
     
