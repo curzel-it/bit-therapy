@@ -27,7 +27,10 @@ let package = Package(
         ),
         .testTarget(
             name: "YageTests",
-            dependencies: ["Yage"]
+            dependencies: [
+                "Yage",
+                .product(name: "Schwifty", package: "Schwifty")
+            ]
         )
     ]
 )

@@ -1,3 +1,4 @@
+import Schwifty
 import XCTest
 
 @testable import Yage
