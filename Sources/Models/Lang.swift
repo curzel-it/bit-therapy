@@ -72,6 +72,7 @@ enum Lang {
 
     enum PetSelection {
         static let addPet = "petSelection.addPet".localized()
+        static let designedBy = "petSelection.designedBy".localized()
         static let fixOnScreenPets = "petSelection.fixOnScreenPets".localized()
         static let joinDiscord = "petSelection.joinDiscord".localized()
         static let morePets = "petSelection.morePets".localized()

@@ -9,9 +9,7 @@ import Yage
 class DeletePetButtonCoordinator {
     func view(for species: Species, completion: @escaping (Bool) -> Void) -> AnyView {
         let vm = DeletePetButtonViewModel(species: species, completion: completion)
-        return AnyView(
-            DeletePetButton(viewModel: vm)
-        )
+        return AnyView(DeletePetButton(viewModel: vm))
     }
 }
 

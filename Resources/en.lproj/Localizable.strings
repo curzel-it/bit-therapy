@@ -52,6 +52,7 @@
 "page.news" = "News";
 "page.settings" = "Settings";
 "petSelection.addPet" = "Add to screen";
+"petSelection.designedBy" = "Designed by";
 "petSelection.fixOnScreenPets" = "Apply Settings / Reset Pets";
 "petSelection.joinDiscord" = "it's still quiet and desolate, but we also have a Discord server!";
 "petSelection.morePets" = "More Pets";

@@ -38,5 +38,9 @@
   "tags": ["cats"],
   "id": "cat",
   "movementPath": "walk",
-  "speed": 0.8
+  "speed": 0.8,
+  "author" : {
+    "name": "Dimitirinhas",
+    "link": "https://www.deviantart.com/dimitri212"
+  }
 }

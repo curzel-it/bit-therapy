@@ -1,6 +1,7 @@
 import Foundation
 
 public struct Species: Codable, Hashable {
+    public let author: Author?
     public let id: String
     public let animations: [EntityAnimation]
     public let capabilities: [String]
@@ -22,6 +23,7 @@ public struct Species: Codable, Hashable {
         tags: [String] = [],
         zIndex: Int = 0
     ) {
+        self.author = nil
         self.id = id
         self.animations = animations
         self.capabilities = capabilities

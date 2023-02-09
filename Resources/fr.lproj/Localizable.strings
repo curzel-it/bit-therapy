@@ -52,6 +52,7 @@
 "page.news" = "Nouveautés";
 "page.settings" = "Paramètres";
 "petSelection.addPet" = "Ajouter à l'écran";
+"petSelection.designedBy" = "Conçu par";
 "petSelection.fixOnScreenPets" = "Appliquer les paramètres / Réinitialiser les animaux";
 "petSelection.joinDiscord" = "C'est encore calme et désert, mais nous avons un serveur Discord !";
 "petSelection.morePets" = "Plus d'animaux";
