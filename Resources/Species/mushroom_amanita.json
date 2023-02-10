@@ -4,6 +4,11 @@
       "id": "idle",
       "position": "fromEntityBottomLeft",
       "requiredLoops": 50
+    },
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
     }
   ],
   "capabilities": [
