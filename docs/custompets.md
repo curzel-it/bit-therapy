@@ -1,21 +1,19 @@
 # Custom Pets
 
-**Work in progress, I might finish next weekend!**
-
 You can now create your own custom pets!
 
 ## TLDR;
-1. Enable creator mode using cheat code `Set!creatorMode=true`
 1. Click on a pet you like and export it (see below)
 1. Modify the json file the sprites as you see fit
 1. Double check filename (see [sprites section](#sprites))
 1. Zip everything
 1. Drag and drop the zip in the app
+1. Show and share your work on [Discord](https://discord.gg/WvvnmPCy)!
 
 ## Setup
 You only need two things: 
 * An updated version of the app
-* Some tool do design your own sprites (I use [Aseprite](https://github.com/aseprite/aseprite)
+* Some tool do design your own sprites (I use [Aseprite](https://github.com/aseprite/aseprite), but any other will work just fine!)
 
 Building the app from source it's not required for creating custom pets, but you can build the app using Xcode if you want, here are [some instructions](https://github.com/curzel-it/pet-therapy) for that. 
 
@@ -30,6 +28,10 @@ All of these need to be defined in a json file, for example:
 
 ``` json
 {
+  "author": {
+    "name": "Urinamara",
+    "link": "https://curzel.it/"
+  },
   "id": "ape",
   "dragPath": "drag",
   "fps": 10,
@@ -66,7 +68,7 @@ Capabilities are behaviors that can be attached to a Pet to manipulate its state
 
 While I recommend using the set of capabilities in the example above for most pets, not all species have the same capabilities:
 * Grumpy Cat has a special one called `GetsAngryWhenMeetingOtherCats`
-* Snails are missing `BounceOnLateralCollisions` and has a special one called `WallCrawler`
+* Snails are missing `BounceOnLateralCollisions` and have a special one called `WallCrawler`, which is what makes them "crawl" along the borders of your screen
 
 ### Animations
 Animations are picked randomly from the list at a random interval.
