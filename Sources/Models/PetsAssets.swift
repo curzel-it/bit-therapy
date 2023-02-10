@@ -35,7 +35,13 @@ class PetsAssetsProviderImpl: PetsAssetsProvider {
     }
     
     func allAssets(for species: String) -> [URL] {
-        allAssetsUrls.filter { $0.absoluteString.contains(species) }
+        allAssetsUrls.filter {
+            let fileName = $0.absoluteString.components(separatedBy: "/").last ?? ""
+            guard fileName.hasPrefix(species) else { return false }
+            let restOfFileName = fileName.replacingOccurrences(of: species, with: "")
+            guard restOfFileName.hasPrefix("_") else { return false }
+            return restOfFileName.components(separatedBy: "_").count == 2
+        }
     }
     
     func reloadAssets() {
