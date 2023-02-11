@@ -26,7 +26,7 @@ private struct ItemView: View {
     var body: some View {
         VStack {
             HStack(spacing: 0) {
-                ProfilePic(url: contributor.pictureUrl).padding(.trailing, .lg)
+                ProfilePic(url: contributor.avatarUrl).padding(.trailing, .lg)
                 Text(contributor.name).font(.title2.bold()).padding(.trailing, .lg)
                 ForEach(contributor.roles, id: \.self) {
                     RoleView(role: $0).padding(.trailing, .sm)
@@ -70,16 +70,18 @@ private struct ProfilePic: View {
     var body: some View {
         KFImage
             .url(url)
-            .placeholder { _ in
-                Image(systemName: "questionmark")
-                    .font(.title)
-                    .foregroundColor(.black.opacity(0.8))
-            }
+            .placeholder(placeholder)
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: 56, height: 56)
             .background(Color.white.opacity(0.4))
             .cornerRadius(28)
+    }
+    
+    @ViewBuilder func placeholder(_: Progress) -> some View {
+        Image(systemName: "questionmark")
+            .font(.title)
+            .foregroundColor(.black.opacity(0.8))
     }
 }
 
@@ -108,74 +110,18 @@ private struct RoleView: View {
 private class ContributorsViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
     
-    let contributors: [Contributor] = [
-        Contributor(
-            name: "Urinamara",
-            roles: [.owner, .artist, .developer],
-            link: "https://curzel.it/",
-            thumbnail: "https://curzel.it/me64x64.png",
-            pets: [
-                "ape", "cat_grumpy", "cat_white", "frog", "frog_venom", "german", "mushroom_amanita",
-                "mushroomwizard", "nyan", "poop", "sheep", "snail", "ufo"
-            ]
-        ),
-        Contributor(
-            name: "Jayped",
-            roles: [.artist],
-            link: "https://linktr.ee/Jayped",
-            thumbnail: "https://github.com/curzel-it/pet-therapy/blob/main/docs/contributors/jayped.png?raw=true",
-            pets: ["sloth", "crow", "crow_white", "koala", "panda", "betta"]
-        ),
-        Contributor(
-            name: "Chaz",
-            roles: [.artist],
-            link: "https://twitter.com/chamorr__",
-            thumbnail: "https://pbs.twimg.com/profile_images/1623168039733559297/xKz5s9b9_200x200.jpg",
-            pets: ["jeansbear"]
-        ),
-        Contributor(
-            name: "Curren",
-            roles: [.artist],
-            link: "https://curren.carrd.co/",
-            thumbnail: "https://github.com/curzel-it/pet-therapy/blob/main/docs/contributors/curren.png?raw=true",
-            pets: ["milo"]
-        ),
-        Contributor(
-            name: "Anonymous D.",
-            roles: [.artist],
-            pets: ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
-        )
-    ]
+    var contributors: [Contributor] { Contributors.all }
     
     func thumbnail(for species: String) -> NSImage? {
         assets.image(sprite: "\(species)_front-1")
     }
 }
 
-private struct Contributor: Identifiable {
-    let name: String
-    let roles: [Role]
-    var link: String?
-    var thumbnail: String?
-    var pets: [String] = []
-    
-    var id: String { name }
-    var pictureUrl: URL? { URL(string: thumbnail ?? "") }
+private extension Contributor {
+    var profileUrl: URL? { URL(string: link ?? "") }
+    var avatarUrl: URL? { URL(string: thumbnail ?? "") }
 }
 
-private enum Role: String, CustomStringConvertible {
-    case artist
-    case developer
-    case moderator
-    case owner
-    case patreon
-    case translator
-    
-    var description: String {
-        "contributors.\(rawValue)".localized().uppercased()
-    }
-    
-    var isHightlighted: Bool {
-        self == .owner || self == .patreon
-    }
+extension Contributor: Identifiable {
+    var id: String { name }
 }

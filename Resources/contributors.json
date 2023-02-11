@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Urinamara",
+        "roles": ["owner", "artist", "developer"],
+        "link": "https://curzel.it/",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/urinamara.png?raw=true",
+        "pets": ["ape", "cat_grumpy", "cat_white", "frog", "frog_venom", "german", "mushroom_amanita", "mushroomwizard", "nyan", "poop", "sheep", "snail", "ufo"]
+    },
+    {
+        "name": "Jayped",
+        "roles": ["artist"],
+        "link": "https://linktr.ee/Jayped",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/jayped.png?raw=true",
+        "pets": ["sloth", "crow", "crow_white", "koala", "panda", "betta"]
+    },
+    {
+        "name": "Chaz",
+        "roles": ["artist"],
+        "link": "https://twitter.com/chamorr__",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/chaz.png?raw=true",
+        "pets": ["jeansbear"]
+    },
+    {
+        "name": "Curren",
+        "roles": ["artist"],
+        "link": "https://curren.carrd.co/",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/curren.png?raw=true",
+        "pets": ["milo"]
+    },
+    {
+        "name": "Anonymous D.",
+        "roles": ["artist"],
+        "pets": ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
+    }
+]
