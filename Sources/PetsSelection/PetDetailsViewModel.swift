@@ -88,7 +88,3 @@ class PetDetailsViewModel: ObservableObject {
 extension NSScreen: Identifiable {
     public var id: String { localizedName.lowercased() }
 }
-
-extension Author: Identifiable {
-    public var id: String { name }
-}

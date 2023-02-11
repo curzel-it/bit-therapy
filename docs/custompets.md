@@ -28,10 +28,6 @@ All of these need to be defined in a json file, for example:
 
 ``` json
 {
-  "author": {
-    "name": "Urinamara",
-    "link": "https://curzel.it/"
-  },
   "id": "ape",
   "dragPath": "drag",
   "fps": 10,

@@ -15,7 +15,7 @@ struct PetsSelectionView: View {
                 NewsView()
                 VStack(spacing: .xxl) {
                     MyPets()
-                    MorePets().padding(.bottom, .xxl)
+                    MorePets().padding(.bottom, .xl)
                     viewModel.importView().padding(.bottom, .xxl)
                 }
             }

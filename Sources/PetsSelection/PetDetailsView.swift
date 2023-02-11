@@ -15,36 +15,13 @@ struct PetDetailsView: View {
         VStack(spacing: .xl) {
             Header()
             AnimatedPreview()
-            VStack(spacing: .md) {
-                About()
-                DesignerAttribution()
-            }
-            .padding(.top, .lg)
+            About().padding(.top, .lg)
             Footer()
         }
         .padding(.lg)
         .frame(width: 450)
         .onAppear { viewModel.didAppear() }
         .environmentObject(viewModel)
-    }
-}
-
-private struct DesignerAttribution: View {
-    @EnvironmentObject var viewModel: PetDetailsViewModel
-    
-    var body: some View {
-        if let author = viewModel.species.author {
-            HStack {
-                Text("\(Lang.PetSelection.designedBy) \(author.name)")                
-                Image(systemName: "link")
-            }
-            .font(.caption)
-            .onTapGesture {
-                if let url = author.url {
-                    NSWorkspace.shared.open(url)
-                }
-            }
-        }
     }
 }
 
