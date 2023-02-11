@@ -28,6 +28,13 @@
         "pets": ["milo"]
     },
     {
+        "name": "Marwan",
+        "roles": ["artist"],
+        "link": "https://www.instagram.com/mar_vvan",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/marwan.png?raw=true",
+        "pets": ["cayman718", "pikachu"]
+    },
+    {
         "name": "Anonymous D.",
         "roles": ["artist"],
         "pets": ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
