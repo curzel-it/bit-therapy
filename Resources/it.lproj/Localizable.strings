@@ -90,6 +90,7 @@
 "species.about.cat" = "Beh, è un normalissimo gatto!";
 "species.about.cat_black" = "Beh, è un normalissimo gatto!";
 "species.about.cat_blue" = "Beh, è un normalissimo gatto!";
+"species.about.cat_floppa" = "Unisciti al battaglione Floppa";
 "species.about.cat_gray" = "Beh, è un normalissimo gatto!";
 "species.about.cat_grumpy" = "Guardalo, come ti giudica...";
 "species.about.cat_house" = "Una casetta dove far dormire il tuo gatto!\Se hai qualche idea per altri design, condividile su Discord!";
@@ -135,6 +136,7 @@
 "species.name.cat" = "Gatto Rosso";
 "species.name.cat_black" = "Gatto Nero";
 "species.name.cat_blue" = "Gatto Blu";
+"species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Gatto";
 "species.name.cat_grumpy" = "Gatto Scontroso";
 "species.name.cat_house" = "Casetta per Gatti";

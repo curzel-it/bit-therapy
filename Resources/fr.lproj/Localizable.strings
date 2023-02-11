@@ -90,6 +90,7 @@
 "species.about.cat" = "Bah, c'est juste un chat !";
 "species.about.cat_black" = "Bah, c'est juste un chat !";
 "species.about.cat_blue" = "Bah, c'est juste un chat !";
+"species.about.cat_floppa" = "Rejoindre l'armée Floppa";
 "species.about.cat_gray" = "Bah, c'est juste un chat !";
 "species.about.cat_grumpy" = "Vu sa tête, il te juge !";
 "species.about.cat_house" = "Une petite maison pour que votre chat puisse dormir !\nJe cherche d'autres idées de design, si vous en avez, n'hésitez pas à me contacter sur Discord !";
@@ -135,6 +136,7 @@
 "species.name.cat" = "Chat Roux";
 "species.name.cat_black" = "Chat Noir";
 "species.name.cat_blue" = "Chat Bleu";
+"species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Chat";
 "species.name.cat_grumpy" = "Grumpy Cat";
 "species.name.cat_house" = "Maison de chat";
