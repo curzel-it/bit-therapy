@@ -109,6 +109,15 @@ To get you quickstarted, you can take a look at the [Aseprite files](https://git
 
 Aseprite is a great tool, more info [here](https://github.com/aseprite/aseprite).
 
+## Animation Duracy
+
+All animations of a given species must have the same number of frames per second.
+
+In the json file, you change the `fps` property to set framerate.
+
+In order to save battery and processing power, the maximum frame rate is set to 20 fps.
+
+I recommend sticking to 10 fps, or 100 milliseconds per frame.
 
 ## App Features
 ### Export

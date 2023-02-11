@@ -37,6 +37,11 @@ Alternatively, you can download the latest release from [GitHub]( https://github
 
 Starting from version 2.20 you can now create custom pets, please check [the documentation](https://curzel.it/pet-therapy/custompets).
 
+## Contribute
+
+Contributors get a shout out in the app, just saying... 😏
+![Contributors, dark mode](docs/contributors.png)
+
 ## Build from Source
 
 1. Download and setup Xcode
