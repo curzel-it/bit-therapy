@@ -3,28 +3,28 @@
         "name": "Urinamara",
         "roles": ["owner", "artist", "developer"],
         "link": "https://curzel.it/",
-        "thumbnail": "https://curzel.it/me64x64.png",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/urinamara.png?raw=true",
         "pets": ["ape", "cat_grumpy", "cat_white", "frog", "frog_venom", "german", "mushroom_amanita", "mushroomwizard", "nyan", "poop", "sheep", "snail", "ufo"]
     },
     {
         "name": "Jayped",
         "roles": ["artist"],
         "link": "https://linktr.ee/Jayped",
-        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/docs/contributors/jayped.png?raw=true",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/jayped.png?raw=true",
         "pets": ["sloth", "crow", "crow_white", "koala", "panda", "betta"]
     },
     {
         "name": "Chaz",
         "roles": ["artist"],
         "link": "https://twitter.com/chamorr__",
-        "thumbnail": "https://pbs.twimg.com/profile_images/1623168039733559297/xKz5s9b9_200x200.jpg",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/chaz.png?raw=true",
         "pets": ["jeansbear"]
     },
     {
         "name": "Curren",
         "roles": ["artist"],
         "link": "https://curren.carrd.co/",
-        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/docs/contributors/curren.png?raw=true",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/curren.png?raw=true",
         "pets": ["milo"]
     },
     {

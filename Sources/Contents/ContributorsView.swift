@@ -1,4 +1,5 @@
 import DependencyInjectionUtils
+import Kingfisher
 import SwiftUI
 
 struct ContributorsView: View {
@@ -67,12 +68,20 @@ private struct ProfilePic: View {
     let url: URL?
     
     var body: some View {
-        Image("urinamara")
+        KFImage
+            .url(url)
+            .placeholder(placeholder)
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: 56, height: 56)
             .background(Color.white.opacity(0.4))
             .cornerRadius(28)
+    }
+    
+    @ViewBuilder func placeholder(_: Progress) -> some View {
+        Image(systemName: "questionmark")
+            .font(.title)
+            .foregroundColor(.black.opacity(0.8))
     }
 }
 
