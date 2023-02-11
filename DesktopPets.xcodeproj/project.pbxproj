@@ -28,12 +28,12 @@
 		1E5AACB729716CB9007531DF /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB429716CB9007531DF /* Tracking.swift */; };
 		1E5AACB929716CB9007531DF /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB529716CB9007531DF /* Firebase.swift */; };
 		1E61F886296F6B52007863DE /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61F885296F6B52007863DE /* Filters.swift */; };
-		1E6AA6FC2996F996002245E7 /* Contributors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AA6FB2996F996002245E7 /* Contributors.swift */; };
-		1E6AA7012996FCA0002245E7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1E6AA7002996FCA0002245E7 /* Kingfisher */; };
+		1E6AA6FC2996F996002245E7 /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AA6FB2996F996002245E7 /* ContributorsView.swift */; };
 		1E6AA70329970FCC002245E7 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = 1E6AA70229970FCC002245E7 /* docs */; };
 		1E7B939C298C78B5001F045E /* CustomPetsDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B939B298C78B5001F045E /* CustomPetsDependencies.swift */; };
 		1E7D1EA62909C31600CC036B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
 		1E7D33F32915E2B2002C0188 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
+		1E7E1E8C2997FD6B00F3E8FD /* contributors in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E1E8B2997FD6B00F3E8FD /* contributors */; };
 		1E80AA9E2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */; };
 		1E80AAA02992F826008C64A2 /* SpeciesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9F2992F826008C64A2 /* SpeciesNames.swift */; };
 		1E80AAA22992FAAB008C64A2 /* PetPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AAA12992FAAB008C64A2 /* PetPreview.swift */; };
@@ -63,6 +63,8 @@
 		1EC3B0BA29637128009ECD6A /* PetsAssets in Resources */ = {isa = PBXBuildFile; fileRef = 1EC3B0B729637128009ECD6A /* PetsAssets */; };
 		1ED1D04129130C11004031BC /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1D04029130C11004031BC /* StatusBar.swift */; };
 		1ED75D43291AEF4E004C6B7B /* pixelar-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */; };
+		1EE90BFB299802690019CA9A /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
+		1EF525832997E710004B64D2 /* ContributorsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF525822997E710004B64D2 /* ContributorsModels.swift */; };
 		1EF813B3297177A400D6B4E6 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B2297177A400D6B4E6 /* DesignSystem */; };
 		1EF813B5297177A400D6B4E6 /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B4297177A400D6B4E6 /* Yage */; };
 		1EF813B9297177A400D6B4E6 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF813B8297177A400D6B4E6 /* LaunchAtLogin */; };
@@ -111,11 +113,12 @@
 		1E5AACB429716CB9007531DF /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		1E5AACB529716CB9007531DF /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		1E61F885296F6B52007863DE /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
-		1E6AA6FB2996F996002245E7 /* Contributors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributors.swift; sourceTree = "<group>"; };
+		1E6AA6FB2996F996002245E7 /* ContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsView.swift; sourceTree = "<group>"; };
 		1E6AA70229970FCC002245E7 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = "<group>"; };
 		1E7B939B298C78B5001F045E /* CustomPetsDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsDependencies.swift; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
+		1E7E1E8B2997FD6B00F3E8FD /* contributors */ = {isa = PBXFileReference; lastKnownFileType = folder; path = contributors; sourceTree = "<group>"; };
 		1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenamePetButtonCoordinator.swift; sourceTree = "<group>"; };
 		1E80AA9F2992F826008C64A2 /* SpeciesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesNames.swift; sourceTree = "<group>"; };
 		1E80AAA12992FAAB008C64A2 /* PetPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPreview.swift; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 		1EC3B0B729637128009ECD6A /* PetsAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PetsAssets; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1ED75D42291AEF4E004C6B7B /* pixelar-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pixelar-regular.otf"; sourceTree = "<group>"; };
+		1EE90BFA299802690019CA9A /* contributors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contributors.json; sourceTree = "<group>"; };
+		1EF525822997E710004B64D2 /* ContributorsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsModels.swift; sourceTree = "<group>"; };
 		1EF813EF29718A1600D6B4E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EFDB7A5298F98B5007EFC62 /* LeavesPoopStains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeavesPoopStains.swift; sourceTree = "<group>"; };
 		1EFDB7A7298FD078007EFC62 /* LeavesTracesWhileWalking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeavesTracesWhileWalking.swift; sourceTree = "<group>"; };
@@ -180,7 +185,6 @@
 				1EF813C7297177A500D6B4E6 /* FirebaseCrashlytics in Frameworks */,
 				1EAB52602989B8F800EA4034 /* Rendering in Frameworks */,
 				1EF813BD297177A400D6B4E6 /* RateKit in Frameworks */,
-				1E6AA7012996FCA0002245E7 /* Kingfisher in Frameworks */,
 				1EF813B9297177A400D6B4E6 /* LaunchAtLogin in Frameworks */,
 				1EF813C3297177A400D6B4E6 /* WindowsDetector in Frameworks */,
 				1E861D142989C49F00EA074E /* DependencyInjectionUtils in Frameworks */,
@@ -345,11 +349,20 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		1EF525842997E779004B64D2 /* Contributors */ = {
+			isa = PBXGroup;
+			children = (
+				1EF525822997E710004B64D2 /* ContributorsModels.swift */,
+			);
+			path = Contributors;
+			sourceTree = "<group>";
+		};
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
 				A66B2C1B28746D2E00D695EA /* Desktop Pets.app */,
 				1E29446E29739B9B000A90B0 /* Desktop Pets Tests.xctest */,
+				1E7E1E8B2997FD6B00F3E8FD /* contributors */,
 				1E6AA70229970FCC002245E7 /* docs */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
@@ -362,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
+				1EE90BFA299802690019CA9A /* contributors.json */,
 				1ED75D30291AEEB8004C6B7B /* Fonts */,
 				1EF813EF29718A1600D6B4E6 /* GoogleService-Info.plist */,
 				A6FB7D4B28740F8E00AB872E /* Info.plist */,
@@ -378,6 +392,7 @@
 			children = (
 				1E2AC742290AB375003D0AB2 /* App */,
 				A6FB7D5B28740F8E00AB872E /* Contents */,
+				1EF525842997E779004B64D2 /* Contributors */,
 				1E93C5FB29605EDE007A5B91 /* CustomPets */,
 				1E861D0E2989BFAC00EA074E /* Dependencies */,
 				1E36C810295F4D9E008EFB28 /* Models */,
@@ -397,7 +412,7 @@
 				1E7D33F22915E2B2002C0188 /* AppPages.swift */,
 				A6FB7D5C28740F8E00AB872E /* AboutView.swift */,
 				1E7D1EA42909C31600CC036B /* Settings.swift */,
-				1E6AA6FB2996F996002245E7 /* Contributors.swift */,
+				1E6AA6FB2996F996002245E7 /* ContributorsView.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -464,7 +479,6 @@
 				1EAB525F2989B8F800EA4034 /* Rendering */,
 				1E861D132989C49F00EA074E /* DependencyInjectionUtils */,
 				1E326812298C73980019C346 /* CustomPets */,
-				1E6AA7002996FCA0002245E7 /* Kingfisher */,
 			);
 			productName = MacPets;
 			productReference = A66B2C1B28746D2E00D695EA /* Desktop Pets.app */;
@@ -503,7 +517,6 @@
 				1E6A244C2970DA0600E62D08 /* XCRemoteSwiftPackageReference "WindowsDetector" */,
 				1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */,
-				1E6AA6FF2996FCA0002245E7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -530,8 +543,10 @@
 				1E1EBF31291F9E1800D2323D /* dogica.ttf in Resources */,
 				1EF813F029718A1600D6B4E6 /* GoogleService-Info.plist in Resources */,
 				A6FB7D6E28740F8E00AB872E /* Assets.xcassets in Resources */,
+				1EE90BFB299802690019CA9A /* contributors.json in Resources */,
 				1EC3B0B829637128009ECD6A /* Species in Resources */,
 				1ED75D43291AEF4E004C6B7B /* pixelar-regular.otf in Resources */,
+				1E7E1E8C2997FD6B00F3E8FD /* contributors in Resources */,
 				1E6AA70329970FCC002245E7 /* docs in Resources */,
 				A6FB7D6A28740F8E00AB872E /* Localizable.strings in Resources */,
 				1EC3B0BA29637128009ECD6A /* PetsAssets in Resources */,
@@ -605,7 +620,8 @@
 				1ED1D04129130C11004031BC /* StatusBar.swift in Sources */,
 				1EA0D848298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift in Sources */,
 				1E5AACB929716CB9007531DF /* Firebase.swift in Sources */,
-				1E6AA6FC2996F996002245E7 /* Contributors.swift in Sources */,
+				1EF525832997E710004B64D2 /* ContributorsModels.swift in Sources */,
+				1E6AA6FC2996F996002245E7 /* ContributorsView.swift in Sources */,
 				1E80AAA02992F826008C64A2 /* SpeciesNames.swift in Sources */,
 				1EAEA9082970D32900AB3EB0 /* DesktopObstaclesService.swift in Sources */,
 				1EAEA90E2970D32900AB3EB0 /* MouseDraggable.swift in Sources */,
@@ -967,14 +983,6 @@
 				minimumVersion = 1.0.3;
 			};
 		};
-		1E6AA6FF2996FCA0002245E7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
 		1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/schwifty";
@@ -1012,11 +1020,6 @@
 		1E326812298C73980019C346 /* CustomPets */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CustomPets;
-		};
-		1E6AA7002996FCA0002245E7 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E6AA6FF2996FCA0002245E7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
 		};
 		1E861D132989C49F00EA074E /* DependencyInjectionUtils */ = {
 			isa = XCSwiftPackageProductDependency;
