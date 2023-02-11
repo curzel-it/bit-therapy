@@ -4,7 +4,7 @@
         "roles": ["owner", "artist", "developer"],
         "link": "https://curzel.it/",
         "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/urinamara.png?raw=true",
-        "pets": ["ape", "cat_grumpy", "cat_white", "frog", "frog_venom", "german", "mushroom_amanita", "mushroomwizard", "nyan", "poop", "sheep", "snail", "ufo"]
+        "pets": ["ape", "cat_floppa", "cat_grumpy", "frog", "german", "mushroom_amanita", "mushroomwizard", "sheep", "snail", "ufo"]
     },
     {
         "name": "Jayped",
