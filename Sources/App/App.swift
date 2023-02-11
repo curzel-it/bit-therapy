@@ -1,7 +1,6 @@
 import RateKit
 import Schwifty
 import SwiftUI
-import Yage
 
 @main
 struct MyApp: App {
@@ -11,6 +10,7 @@ struct MyApp: App {
     init() {
         Dependencies.setup()
         Logger.isEnabled = true
+        Logger.log("MyApp", "Init")
         Tracking.setup()
        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
@@ -18,6 +18,11 @@ struct MyApp: App {
                 debug: true,
                 launchesBeforeAskingForReview: 10
             ).askForRatingIfNeeded()
+        }
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            OnScreenCoordinator.show()
+            StatusBarCoordinator.shared.show()
         }
     }
 
