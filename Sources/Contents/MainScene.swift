@@ -83,7 +83,7 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
 
-    let options: [AppPage] = [.home, .settings, .about]
+    let options: [AppPage] = [.home, .settings, .contributors, .about]
 
     var body: some View {
         HStack {
@@ -100,6 +100,7 @@ private struct PageContents: View {
     var body: some View {
         switch viewModel.selectedPage {
         case .about: AboutView()
+        case .contributors: ContributorsView()
         case .home: PetsSelectionView()
         case .settings: SettingsView()
         case .none: EmptyView()

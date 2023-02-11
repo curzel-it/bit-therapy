@@ -37,6 +37,15 @@ enum Lang {
         static let validCode = "cheats.validCode".localized()
     }
 
+    enum Contributors {
+        static let artist = "contributors.artist".localized()
+        static let developer = "contributors.developer".localized()
+        static let moderator = "contributors.moderator".localized()
+        static let owner = "contributors.owner".localized()
+        static let patreon = "contributors.patreon".localized()
+        static let translator = "contributors.translator".localized()
+    }
+
     enum CustomPets {
         static let customPetDescription = "customPets.customPetDescription".localized()
         static let dragAreaMessage = "customPets.dragAreaMessage".localized()
@@ -64,6 +73,7 @@ enum Lang {
 
     enum Page {
         static let about = "page.about".localized()
+        static let contributors = "page.contributors".localized()
         static let help = "page.help".localized()
         static let home = "page.home".localized()
         static let news = "page.news".localized()

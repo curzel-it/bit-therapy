@@ -12,6 +12,12 @@
 "cheats.placeholder" = "Codice";
 "cheats.title" = "Codici impostazioni";
 "cheats.validCode" = "Attivato!";
+"contributors.artist" = "Artista";
+"contributors.developer" = "Developer";
+"contributors.moderator" = "Moderatore";
+"contributors.owner" = "Founder";
+"contributors.patreon" = "Patreon";
+"contributors.translator" = "Traduttore";
 "customPets.customPetDescription" = "Questo è un pet custom";
 "customPets.dragAreaMessage" = "Trascina il tuo file zip qui";
 "customPets.export" = "Esporta";
@@ -47,6 +53,7 @@
 "no" = "No";
 "ok" = "Ok";
 "page.about" = "Informazioni";
+"page.contributors" = "Contributors";
 "page.help" = "Aiuto";
 "page.home" = "Pets";
 "page.news" = "News";
@@ -99,6 +106,7 @@
 "species.about.gazebo" = "Un po di ombra in giardino, per dormire sull'erba...";
 "species.about.german" = "Se ti piace, ho decisamente bisogno di un po' di aiuto per disegnare altre animazioni! Contattami su Discord 😆";
 "species.about.hedgehog" = "Coccolare con attenzione.";
+"species.about.jeansbear" = "Disegnato da Chaz";
 "species.about.koala" = "Funzionalmente estinto!? Ma funzionalmente estinto sarai te!";
 "species.about.koala_pirate" = "Facciamo i pirati, dicevano. Sarà divertente, dicevano...";
 "species.about.milo" = "Magari non è esattamente come te lo aspettavi, ma non sono esattamente un designer ad essere onesti! haha";
@@ -143,6 +151,7 @@
 "species.name.gazebo" = "Gazebo";
 "species.name.german" = "Pastore Tedesco";
 "species.name.hedgehog" = "Porcospino";
+"species.name.jeansbear" = "Orso Jeans";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Koala Pirata";
 "species.name.milo" = "Milo";

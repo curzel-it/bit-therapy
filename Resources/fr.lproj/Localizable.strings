@@ -12,6 +12,12 @@
 "cheats.placeholder" = "Code";
 "cheats.title" = "Changer les paramètres via le code";
 "cheats.validCode" = "Activé !";
+"contributors.artist" = "Artiste";
+"contributors.developer" = "Developer";
+"contributors.moderator" = "Modérateur";
+"contributors.owner" = "Fondateur";
+"contributors.patreon" = "Patreon";
+"contributors.translator" = "Traducteur";
 "customPets.customPetDescription" = "Ceci est un animal de compagnie fait sur mesure";
 "customPets.dragAreaMessage" = "Faites glisser et déposez votre fichier zip ici";
 "customPets.export" = "Exporter";
@@ -47,6 +53,7 @@
 "no" = "Non";
 "ok" = "Ok";
 "page.about" = "À propos";
+"page.contributors" = "Contributors";
 "page.help" = "Aide";
 "page.home" = "Animaux";
 "page.news" = "Nouveautés";
@@ -99,6 +106,7 @@
 "species.about.gazebo" = "A little shade in the garden, to sleep on the grass...";
 "species.about.german" = "Si vous l'aimez, j'ai vraiment besoin d'aide pour dessiner plus d'animations ! Contactez-moi sur Discord 😆";
 "species.about.hedgehog" = "Caresse prudemment";
+"species.about.jeansbear" = "Dessiné par Chaz";
 "species.about.koala" = "En voie de disparition !? C'est toi qui es en voie de disparition !";
 "species.about.koala_pirate" = "C'est amusant d'être un pirate, qu'ils disaient...";
 "species.about.milo" = "Peut-être que ce n'est pas exactement comme tu l'imaginait, mais je ne suis honnêtement pas vraiment un designer ! Haha";
@@ -143,6 +151,7 @@
 "species.name.gazebo" = "Belvédère";
 "species.name.german" = "Berger allemand";
 "species.name.hedgehog" = "Hérisson";
+"species.name.jeansbear" = "Ours en jean";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Koala Pirate";
 "species.name.milo" = "Milo";
