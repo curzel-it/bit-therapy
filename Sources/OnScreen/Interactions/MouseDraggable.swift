@@ -39,8 +39,8 @@ class MouseDraggable: Capability {
     
     private func nearestPosition(for rect: CGRect, in bounds: CGRect) -> CGPoint {
         CGPoint(
-            x: min(max(rect.minX, bounds.minX), bounds.maxX - rect.width),
-            y: min(max(rect.minY, bounds.minY), bounds.maxY - rect.height)
+            x: min(max(rect.minX, 0), bounds.width - rect.width),
+            y: min(max(rect.minY, 0), bounds.height - rect.height)
         )
     }
 }
