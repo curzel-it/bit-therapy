@@ -9,7 +9,7 @@ open class Entity: Identifiable {
     public let creationDate = Date()
     public var direction: CGVector = .zero
     public var fps: TimeInterval = 10
-    public var frame: CGRect
+    public var frame: CGRect 
     public var isAlive = true
     public var isEphemeral: Bool = false
     public var isStatic: Bool = false

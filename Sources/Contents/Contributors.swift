@@ -120,6 +120,13 @@ private class ContributorsViewModel: ObservableObject {
             ]
         ),
         Contributor(
+            name: "Jayped",
+            roles: [.artist],
+            link: "https://linktr.ee/Jayped",
+            thumbnail: "https://github.com/curzel-it/pet-therapy/blob/main/docs/contributors/jayped.png?raw=true",
+            pets: ["sloth", "crow", "crow_white", "koala", "panda", "betta"]
+        ),
+        Contributor(
             name: "Chaz",
             roles: [.artist],
             link: "https://twitter.com/chamorr__",
@@ -137,11 +144,6 @@ private class ContributorsViewModel: ObservableObject {
             name: "Anonymous D.",
             roles: [.artist],
             pets: ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
-        ),
-        Contributor(
-            name: "Anonymous A.P.",
-            roles: [.artist],
-            pets: ["sloth", "crow", "crow_white", "koala", "panda", "betta"]
         )
     ]
     
