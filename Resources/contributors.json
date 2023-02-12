@@ -1,7 +1,7 @@
 [
     {
-        "name": "Urinamara",
-        "roles": ["owner", "artist", "developer"],
+        "name": "Curzel-it",
+        "roles": ["owner"],
         "link": "https://curzel.it/",
         "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/urinamara.png?raw=true",
         "pets": ["ape", "cat_floppa", "cat_grumpy", "frog", "german", "mushroom_amanita", "mushroomwizard", "sheep", "snail", "ufo"]

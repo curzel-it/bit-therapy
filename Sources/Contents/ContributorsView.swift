@@ -1,3 +1,4 @@
+import DesignSystem
 import DependencyInjectionUtils
 import Kingfisher
 import SwiftUI
@@ -5,9 +6,11 @@ import SwiftUI
 struct ContributorsView: View {
     @StateObject private var vm = ContributorsViewModel()
     
+    private let columns = [GridItem(.adaptive(minimum: 250, maximum: 800), spacing: Spacing.xl.rawValue)]
+    
     var body: some View {
         ScrollView {
-            VStack(spacing: .xl) {
+            LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
                 ForEach(vm.contributors) {
                     ItemView(contributor: $0)
                 }
@@ -25,25 +28,49 @@ private struct ItemView: View {
     
     var body: some View {
         VStack {
-            HStack(spacing: 0) {
-                ProfilePic(url: contributor.avatarUrl).padding(.trailing, .lg)
-                Text(contributor.name).font(.title2.bold()).padding(.trailing, .lg)
-                ForEach(contributor.roles, id: \.self) {
-                    RoleView(role: $0).padding(.trailing, .sm)
+            HStack(spacing: .md) {
+                ProfilePic(url: contributor.avatarUrl)
+                VStack(spacing: .xs) {
+                    Text(contributor.name).font(.title2.bold()).textAlign(.leading)
+                    RolesView(roles: contributor.roles)
                 }
                 Spacer()
             }
-            LazyVGrid(columns: [.init(.adaptive(minimum: 32, maximum: 200))]) {
-                ForEach(contributor.pets ?? [], id: \.self) {
-                    PetThumbnail(species: $0)
-                }
-                Spacer()
-            }
+            PetsView(pets: contributor.pets ?? [])
+            Spacer()
         }
         .onTapGesture {
             if let url = URL(string: contributor.link ?? "") {
                 NSWorkspace.shared.open(url)
             }
+        }
+    }
+}
+
+private struct PetsView: View {
+    let pets: [String]
+    
+    private let columns = [GridItem(.adaptive(minimum: 32, maximum: 200), spacing: Spacing.xs.rawValue)]
+    
+    var body: some View {
+        LazyVGrid(columns: columns, spacing: Spacing.sm.rawValue) {
+            ForEach(pets, id: \.self) {
+                PetThumbnail(species: $0)
+            }
+            Spacer()
+        }
+    }
+}
+
+private struct RolesView: View {
+    let roles: [Role]
+    
+    var body: some View {
+        HStack(spacing: .sm) {
+            ForEach(roles, id: \.self) {
+                RoleView(role: $0)
+            }
+            Spacer()
         }
     }
 }
@@ -59,7 +86,6 @@ private struct PetThumbnail: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32, height: 32)
-                .cornerRadius(16)
         }
     }
 }
@@ -98,12 +124,12 @@ private struct RoleView: View {
     
     var body: some View {
         Text(role.description)
-            .font(.headline)
-            .frame(height: 24)
-            .padding(.horizontal, .md)
+            .font(.caption.bold())
+            .padding(.horizontal, .sm)
+            .frame(height: 20)
             .foregroundColor(foreground)
             .background(background)
-            .cornerRadius(14)
+            .cornerRadius(10)
     }
 }
 
