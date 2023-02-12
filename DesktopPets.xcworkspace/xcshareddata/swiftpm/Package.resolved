@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/schwifty",
       "state" : {
-        "revision" : "a8698d096a22beee90c83f5e2a3cc6e475297c52",
-        "version" : "1.0.17"
+        "revision" : "18e57471c234e49bb4b1babff2466e9f3aec2fbf",
+        "version" : "1.0.18"
       }
     },
     {
