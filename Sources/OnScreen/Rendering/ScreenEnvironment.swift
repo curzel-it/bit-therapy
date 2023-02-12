@@ -63,26 +63,31 @@ class ScreenEnvironment: World {
             .store(in: &disposables)
     }
     
-    private func onPetSelectionChanged(to newPets: [String]) {
-        var newChildren: [Entity] = children.filter { !($0 is PetEntity) }
-        
-        let currentPets = children.compactMap { $0 as? PetEntity }
-        for pet in currentPets {
-            if newPets.contains(pet.species.id) {
-                newChildren.append(pet)
-            } else {
-                pet.kill()
+    private func onPetSelectionChanged(to newSelectedSpecies: [String]) {
+        removeUnselectedPets(given: newSelectedSpecies)
+        addNewPets(from: newSelectedSpecies)
+    }
+
+    private func removeUnselectedPets(given newPets: [String]) {
+        children
+            .compactMap { $0 as? PetEntity }
+            .filter { !newPets.contains($0.species.id) }
+            .forEach {
+                $0.kill()
+                children.remove($0)
             }
-        }
+    }
+
+    private func addNewPets(from newSelectedSpecies: [String]) {
+        let currentSpecies = children.map { $0.species.id }
+        let missingSpecies = Set(newSelectedSpecies).subtracting(Set(currentSpecies))
         
-        let currentSpecies = currentPets.map { $0.species }
-        let currentSpeciesIds = currentSpecies.map { $0.id }
-        for newPet in newPets where !currentSpeciesIds.contains(newPet) {
-            if let newSpecies = speciesProvider.by(id: newPet) {
-                newChildren.append(PetEntity(of: newSpecies, in: self))
+        missingSpecies
+            .forEach {
+                if let newSpecies = speciesProvider.by(id: $0) {
+                    children.append(PetEntity(of: newSpecies, in: self))
+                }
             }
-        }
-        children = newChildren
     }
 
     override func kill() {
