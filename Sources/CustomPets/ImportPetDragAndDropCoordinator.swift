@@ -71,7 +71,8 @@ private struct DragAndDropView: View {
 }
 
 private class ImportDragAndDropViewModel: ObservableObject {
-    @Inject var assets: PetsAssetsProvider
+    @Inject private var assets: PetsAssetsProvider
+    @Inject private var speciesProvider: SpeciesProvider
     
     @Published private(set) var message: String?
     
@@ -103,7 +104,7 @@ private class ImportDragAndDropViewModel: ObservableObject {
                 if let species = item as? Species {
                     self.message = Lang.CustomPets.importSuccess
                     self.assets.reloadAssets()
-                    Species.register(species)
+                    self.speciesProvider.register(species)
                 } else {
                     self.message = errorMessage ?? Lang.CustomPets.genericImportError
                 }

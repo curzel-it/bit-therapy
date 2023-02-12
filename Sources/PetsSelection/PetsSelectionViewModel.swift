@@ -6,7 +6,8 @@ import SwiftUI
 import Yage
 
 class PetsSelectionViewModel: ObservableObject {
-    @Inject var assets: PetsAssetsProvider
+    @Inject private var assets: PetsAssetsProvider
+    @Inject private var speciesProvider: SpeciesProvider
     
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
@@ -33,7 +34,7 @@ class PetsSelectionViewModel: ObservableObject {
 
     init() {
         Publishers.CombineLatest3(
-            Species.all,
+            speciesProvider.all,
             AppState.global.$selectedSpecies,
             $selectedTag
         )

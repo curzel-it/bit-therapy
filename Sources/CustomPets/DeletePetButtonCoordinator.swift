@@ -25,11 +25,12 @@ private struct DeletePetButton: View {
 }
 
 private class DeletePetButtonViewModel: ObservableObject {
-    @Inject var deletePetUseCase: DeletePetUseCase
-    @Inject var assets: PetsAssetsProvider
+    @Inject private var speciesProvider: SpeciesProvider
+    @Inject private var deletePetUseCase: DeletePetUseCase
+    @Inject private var assets: PetsAssetsProvider
     
     var isEnabled: Bool {
-        !species.isOriginal()
+        !speciesProvider.isOriginal(species)
     }
     
     private let species: Species
@@ -44,7 +45,7 @@ private class DeletePetButtonViewModel: ObservableObject {
         let deleted = deletePetUseCase.safelyDelete(item: species)
         if deleted {
             assets.reloadAssets()
-            Species.unregister(species)
+            speciesProvider.unregister(species)
         }
         completion(deleted)
     }

@@ -1,4 +1,5 @@
 import Combine
+import DependencyInjectionUtils
 import Foundation
 import SwiftUI
 import Yage
@@ -16,6 +17,8 @@ protocol AppStateStorage {
 }
 
 class AppStateStorageImpl: AppStateStorage {
+    @Inject private var speciesProvider: SpeciesProvider
+    
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true
@@ -56,7 +59,7 @@ class AppStateStorageImpl: AppStateStorage {
                 .components(separatedBy: ",")
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
             let speciesIds = storedIds.count == 0 ? [kInitialPetId] : storedIds
-            return speciesIds.compactMap { Species.by(id: $0) }
+            return speciesIds.compactMap { speciesProvider.by(id: $0) }
         }
         set {
             selectedSpeciesValue = newValue.map { $0.id }.joined(separator: ",")

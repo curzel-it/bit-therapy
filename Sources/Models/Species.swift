@@ -1,10 +1,21 @@
 import Combine
+import DependencyInjectionUtils
 import Foundation
 import Schwifty
 import Yage
 
-extension Species {
-    static var all: CurrentValueSubject<[Species], Never> = {
+protocol SpeciesProvider {
+    var all: CurrentValueSubject<[Species], Never> { get }
+    
+    func by(id: String) -> Species?
+    func jsonDefinition(for speciesId: String) -> URL?
+    func register(_ species: Species)
+    func unregister(_ species: Species)
+    func isOriginal(_ species: Species) -> Bool
+}
+
+class SpeciesProviderImpl: SpeciesProvider {
+    lazy var all: CurrentValueSubject<[Species], Never> = {
         let species = allJsonUrls
             .compactMap { try? Data(contentsOf: $0) }
             .compactMap { try? JSONDecoder().decode(Species.self, from: $0) }
@@ -13,47 +24,43 @@ extension Species {
         return CurrentValueSubject<[Species], Never>(species)
     }()
     
-    static func by(id: String) -> Species? {
+    func by(id: String) -> Species? {
         all.value.first { $0.id == id }
     }
     
-    static func jsonDefinition(for speciesId: String) -> URL? {
+    func jsonDefinition(for speciesId: String) -> URL? {
         allJsonUrls.first { $0.lastPathComponent == "\(speciesId).json" }
     }
     
-    static func register(_ species: Species) {
+    func register(_ species: Species) {
         let newSpecies = all.value + [species]
         all.send(newSpecies)
     }
     
-    static func unregister(_ species: Species) {
+    func unregister(_ species: Species) {
         AppState.global.remove(species: species)
         let newSpecies = all.value.filter { $0 != species }
         all.send(newSpecies)
     }
-}
-
-private extension Species {
-    static var allJsonUrls: [URL] = {
-        originalsUrls() + customUrls()
-    }()
     
-    static func originalsUrls() -> [URL] {
-        Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: "Species") ?? []
+    func isOriginal(_ species: Species) -> Bool {
+        originalsUrls.contains { $0.lastPathComponent == "\(species.id).json"}
     }
     
-    static func customUrls() -> [URL] {
+    private lazy var allJsonUrls: [URL] = {
+        originalsUrls + customUrls()
+    }()
+    
+    private lazy var originalsUrls: [URL] = {
+        Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: "Species") ?? []
+    }()
+    
+    private func customUrls() -> [URL] {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         guard let url else { return [] }
         let urls = try? FileManager.default
             .contentsOfDirectory(at: url, includingPropertiesForKeys: nil)
             .filter { $0.pathExtension == "json" }
         return urls ?? []
-    }
-}
-
-extension Species {
-    func isOriginal() -> Bool {
-        Species.originalsUrls().contains { $0.lastPathComponent == "\(id).json"}
     }
 }
