@@ -19,7 +19,7 @@ class PetDetailsViewModel: ObservableObject {
     var appState: AppState { AppState.global }
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected }
-    var isSelected: Bool { appState.selectedSpecies.contains(species) }
+    var isSelected: Bool { appState.isSelected(species.id) }
 
     var animationFrames: [ImageFrame] {
         assets.images(for: species.id, animation: "front")
@@ -44,13 +44,13 @@ class PetDetailsViewModel: ObservableObject {
     }
 
     func selected() {
-        appState.add(species: species)
+        appState.select(species.id)
         Tracking.didSelect(species.id)
         close()
     }
 
     func remove() {
-        appState.remove(species: species)
+        appState.deselect(species.id)
         Tracking.didRemove(species.id)
         close()
     }

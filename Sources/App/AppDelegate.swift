@@ -1,12 +1,9 @@
 import AppKit
 import Schwifty
-import Yage
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
-        Logger.log("App", "Launched")
-        OnScreenCoordinator.show()
-        StatusBarCoordinator.shared.show()
+        Logger.log("AppDelegate", "Did finish launching")
     }
 
     func applicationDidChangeScreenParameters(_ notification: Notification) {

@@ -5,6 +5,8 @@ import Schwifty
 import Yage
 
 class ImportVerifierImpl: ImportVerifier {
+    @Inject private var speciesProvider: SpeciesProvider
+    
     private let tag = "ImportVerifier"
     
     func verify(json: URL, assets: [URL]) throws -> Item {
@@ -44,6 +46,6 @@ class ImportVerifierImpl: ImportVerifier {
     }
     
     private func doesAlreadyExists(species: Species) -> Bool {
-        Species.all.value.contains(species)
+        speciesProvider.all.value.contains(species)
     }
 }

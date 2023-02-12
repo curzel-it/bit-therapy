@@ -2,7 +2,6 @@ import Combine
 import DependencyInjectionUtils
 import DesignSystem
 import SwiftUI
-import Yage
 
 class AppState: ObservableObject {
     static let global = AppState()
@@ -14,7 +13,7 @@ class AppState: ObservableObject {
     @Published var names: [String: String] = [:]
     @Published var petSize: CGFloat = 0
     @Published var randomEvents: Bool = true
-    @Published private(set) var selectedSpecies: [Species] = []
+    @Published private(set) var selectedSpecies: [String] = []
     @Published var speedMultiplier: CGFloat = 1
     @Published var disabledScreens: [String] = []
     
@@ -35,17 +34,21 @@ class AppState: ObservableObject {
         }
     }
     
-    func add(species: Species) {
-        remove(species: species)
+    func isSelected(_ species: String) -> Bool {
+        selectedSpecies.contains(species)
+    }
+    
+    func select(_ species: String) {
+        deselect(species)
         selectedSpecies.append(species)
     }
     
-    func remove(species: Species) {
+    func deselect(_ species: String) {
         selectedSpecies.remove(species)
     }
     
-    func rename(_ species: Species, to newName: String) {
-        names[species.id] = newName
+    func rename(_ species: String, to newName: String) {
+        names[species] = newName
     }
 
     private func readFromStorage() {

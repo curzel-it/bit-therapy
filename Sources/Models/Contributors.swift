@@ -1,19 +1,24 @@
+import Schwifty
 import SwiftUI
 
 struct Contributors {
     static var all: [Contributor] = {
-        guard let url = Bundle.main.url(forResource: "contributors", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let items = try? JSONDecoder().decode([Contributor].self, from: data)
-        else { return [] }
-        return items
+        do {
+            let url = try Bundle.main.url(forResource: "contributors", withExtension: "json").unwrap()
+            let data = try Data(contentsOf: url)
+            let items = try JSONDecoder().decode([Contributor].self, from: data)
+            return items
+        } catch let error {
+            Logger.log("Contributors", "Could not read contributors \(error)")
+        }
+        return []
     }()
 }
 
 struct Contributor: Codable {
     let name: String
     let roles: [Role]
-    let pets: [String]
+    let pets: [String]?
     let link: String?
     let thumbnail: String?
 }

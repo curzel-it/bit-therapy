@@ -1,4 +1,5 @@
 import Combine
+import DependencyInjectionUtils
 import DesignSystem
 import Foundation
 import Schwifty
@@ -27,13 +28,15 @@ struct FiltersView: View {
 }
 
 private class FiltersViewModel: ObservableObject {
+    @Inject private var speciesProvider: SpeciesProvider
+    
     @Published var availableTags: [String] = []
     @Published var selectedTag = kTagAll
     
     private var disposables = Set<AnyCancellable>()
 
     init() {
-        Species.all
+        speciesProvider.all
             .combineLatest($selectedTag)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] species, tag in

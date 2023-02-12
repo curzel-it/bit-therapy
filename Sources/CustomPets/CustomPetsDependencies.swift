@@ -4,10 +4,11 @@ import Foundation
 import Yage
 
 class CustomPetsResourcesProviderImpl: CustomPets.ResourcesProvider {
-    @Inject var assets: PetsAssetsProvider
+    @Inject private var assets: PetsAssetsProvider
+    @Inject private var speciesProvider: SpeciesProvider
     
     func allResources(for speciesId: String) -> [URL] {
-        guard let json = Species.jsonDefinition(for: speciesId) else { return [] }
+        guard let json = speciesProvider.jsonDefinition(for: speciesId) else { return [] }
         return [json] + assets.allAssets(for: speciesId)
     }
 }

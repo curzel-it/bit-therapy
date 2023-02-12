@@ -6,7 +6,8 @@ import SwiftUI
 import Yage
 
 class PetsSelectionViewModel: ObservableObject {
-    @Inject var assets: PetsAssetsProvider
+    @Inject private var assets: PetsAssetsProvider
+    @Inject private var speciesProvider: SpeciesProvider
     
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
@@ -33,13 +34,13 @@ class PetsSelectionViewModel: ObservableObject {
 
     init() {
         Publishers.CombineLatest3(
-            Species.all,
+            speciesProvider.all,
             AppState.global.$selectedSpecies,
             $selectedTag
         )
         .receive(on: DispatchQueue.main)
-        .sink { [weak self] all, selected, tag in
-            self?.loadPets(all: all, selected: selected, tag: tag)
+        .sink { [weak self] all, selectedIds, tag in
+            self?.loadPets(all: all, selectedIds: selectedIds, tag: tag)
         }
         .store(in: &disposables)
     }
@@ -57,14 +58,15 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     func isSelected(_ species: Species) -> Bool {
-        AppState.global.selectedSpecies.contains(species)
+        AppState.global.isSelected(species.id)
     }
     
     func importView() -> AnyView {
         importPet.view()
     }
 
-    private func loadPets(all: [Species], selected: [Species], tag: String?) {
+    private func loadPets(all: [Species], selectedIds: [String], tag: String?) {
+        let selected = selectedIds.compactMap { speciesProvider.by(id: $0) }
         selectedSpecies = selected
         unselectedSpecies = all.filter { tag == nil || $0.tags.contains(tag ?? "") }
     }

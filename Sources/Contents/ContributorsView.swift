@@ -34,7 +34,7 @@ private struct ItemView: View {
                 Spacer()
             }
             LazyVGrid(columns: [.init(.adaptive(minimum: 32, maximum: 200))]) {
-                ForEach(contributor.pets, id: \.self) {
+                ForEach(contributor.pets ?? [], id: \.self) {
                     PetThumbnail(species: $0)
                 }
                 Spacer()

@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(path: "../DependencyInjectionUtils"),
         .package(url: "https://github.com/curzel-it/NotAGif", from: "1.0.7"),
-        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.17")
+        .package(url: "https://github.com/curzel-it/schwifty", from: "1.0.18")
     ],
     targets: [
         .target(

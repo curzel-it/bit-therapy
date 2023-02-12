@@ -74,7 +74,7 @@ public class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
     
     private func importItem(fromUnzipped unzipped: URL) throws -> Item {
         let importables = try Importables(from: unzipped)
-        let destination = try importedFolder.unwrapped()
+        let destination = try importedFolder.unwrap()
         let item = try importVerifier.verify(json: importables.item, assets: importables.assets)
         
         let itemDestination = destination.appendingPathComponent(
@@ -153,18 +153,5 @@ private struct Importables {
         }
         item = jsonUrl
         assets = contents.filter { $0.pathExtension == "png"}
-    }
-}
-
-extension Optional {
-    func unwrapped() throws -> Wrapped {
-        switch self {
-        case .some(let value): return value
-        case .none: throw OptionalError.isNone
-        }
-    }
-    
-    enum OptionalError: Error {
-        case isNone
     }
 }

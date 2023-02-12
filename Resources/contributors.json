@@ -21,6 +21,12 @@
         "pets": ["jeansbear"]
     },
     {
+        "name": "Dimitirinhas",
+        "roles": ["artist"],
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/dimitirinhas.png?raw=true",
+        "pets": ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
+    },
+    {
         "name": "Curren",
         "roles": ["artist"],
         "link": "https://curren.carrd.co/",
@@ -28,8 +34,25 @@
         "pets": ["milo"]
     },
     {
-        "name": "Anonymous D.",
+        "name": "Marwan",
         "roles": ["artist"],
-        "pets": ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
+        "link": "https://www.instagram.com/mar_vvan",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/marwan.png?raw=true",
+        "pets": ["cayman718", "pikachu"]
+    },
+    {
+        "name": "Bicus",
+        "roles": ["translator"]
+    },
+    {
+        "name": "Jab",
+        "roles": ["translator"],
+        "link": "https://linktr.ee/agentpie",
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/jab.png?raw=true"
+    },
+    {
+        "name": "Laksaersa",
+        "roles": ["translator"]
     }
+    
 ]

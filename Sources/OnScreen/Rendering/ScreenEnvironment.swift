@@ -5,6 +5,7 @@ import Foundation
 import Yage
 
 class ScreenEnvironment: World {
+    @Inject private var speciesProvider: SpeciesProvider
     @Inject var rainyCloudUseCase: RainyCloudUseCase
     @Inject var ufoAbductionUseCase: UfoAbductionUseCase
     
@@ -31,6 +32,17 @@ class ScreenEnvironment: World {
             .randomElement()
     }
     
+    func add(pet species: Species) {
+        children.append(PetEntity(of: species, in: self))
+    }
+
+    func remove(species speciesToRemove: Species) {
+        settings.deselect(speciesToRemove.id)
+        children
+            .first { $0.species == speciesToRemove }?
+            .kill()
+    }
+    
     private func observeWindowsIfNeeded() {
         guard settings.desktopInteractions else { return }
         guard name == NSScreen.main?.localizedName else { return }
@@ -47,36 +59,35 @@ class ScreenEnvironment: World {
 
     private func bindPetsOnStage() {
         settings.$selectedSpecies
-            .sink { newPets in
-                var newChildren: [Entity] = self.children.filter { !($0 is PetEntity) }
-                
-                let currentPets = self.children.compactMap { $0 as? PetEntity }
-                for pet in currentPets {
-                    if newPets.contains(pet.species) {
-                        newChildren.append(pet)
-                    } else {
-                        pet.kill()
-                    }
-                }
-                
-                let currentSpecies = currentPets.map { $0.species }
-                for newPet in newPets where !currentSpecies.contains(newPet) {
-                    newChildren.append(PetEntity(of: newPet, in: self))
-                }
-                self.children = newChildren
-            }
-        .store(in: &disposables)
+            .sink { [weak self] in self?.onPetSelectionChanged(to: $0) }
+            .store(in: &disposables)
+    }
+    
+    private func onPetSelectionChanged(to newSelectedSpecies: [String]) {
+        removeUnselectedPets(given: newSelectedSpecies)
+        addNewPets(from: newSelectedSpecies)
     }
 
-    func add(pet species: Species) {
-        children.append(PetEntity(of: species, in: self))
-    }
-
-    func remove(species speciesToRemove: Species) {
-        settings.remove(species: speciesToRemove)
+    private func removeUnselectedPets(given newPets: [String]) {
         children
-            .first { $0.species == speciesToRemove }?
-            .kill()
+            .compactMap { $0 as? PetEntity }
+            .filter { !newPets.contains($0.species.id) }
+            .forEach {
+                $0.kill()
+                children.remove($0)
+            }
+    }
+
+    private func addNewPets(from newSelectedSpecies: [String]) {
+        let currentSpecies = children.map { $0.species.id }
+        let missingSpecies = Set(newSelectedSpecies).subtracting(Set(currentSpecies))
+        
+        missingSpecies
+            .forEach {
+                if let newSpecies = speciesProvider.by(id: $0) {
+                    children.append(PetEntity(of: newSpecies, in: self))
+                }
+            }
     }
 
     override func kill() {

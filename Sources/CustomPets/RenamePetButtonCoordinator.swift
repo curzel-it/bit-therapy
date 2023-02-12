@@ -70,7 +70,7 @@ private class RenamePetButtonViewModel: ObservableObject {
     }
     
     func confirm() {
-        AppState.global.rename(species, to: name)
+        AppState.global.rename(species.id, to: name)
         cancel()
     }
 }
