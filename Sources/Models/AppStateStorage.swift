@@ -2,7 +2,6 @@ import Combine
 import DependencyInjectionUtils
 import Foundation
 import SwiftUI
-import Yage
 
 protocol AppStateStorage {
     var desktopInteractions: Bool { get }
@@ -11,7 +10,7 @@ protocol AppStateStorage {
     var names: [String: String] { get }
     var randomEvents: Bool { get }
     var petSize: Double { get }
-    var selectedSpecies: [Species] { get }
+    var selectedSpecies: [String] { get }
     var speedMultiplier: Double { get }
     func storeValues(of appState: AppState)
 }
@@ -53,16 +52,15 @@ class AppStateStorageImpl: AppStateStorage {
         }
     }
     
-    var selectedSpecies: [Species] {
+    var selectedSpecies: [String] {
         get {
             let storedIds = selectedSpeciesValue
                 .components(separatedBy: ",")
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
-            let speciesIds = storedIds.count == 0 ? [kInitialPetId] : storedIds
-            return speciesIds.compactMap { speciesProvider.by(id: $0) }
+            return storedIds.count == 0 ? [kInitialPetId] : storedIds
         }
         set {
-            selectedSpeciesValue = newValue.map { $0.id }.joined(separator: ",")
+            selectedSpeciesValue = newValue.joined(separator: ",")
         }
     }
     

@@ -38,7 +38,7 @@ class SpeciesProviderImpl: SpeciesProvider {
     }
     
     func unregister(_ species: Species) {
-        AppState.global.remove(species: species)
+        AppState.global.deselect(species.id)
         let newSpecies = all.value.filter { $0 != species }
         all.send(newSpecies)
     }

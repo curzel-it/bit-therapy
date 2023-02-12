@@ -50,7 +50,7 @@ extension MainScene {
             gravityEnabled: appState.gravityEnabled,
             petSize: appState.petSize,
             launchAtLogin: LaunchAtLogin.isEnabled,
-            selectedSpecies: appState.selectedSpecies.map { $0.id }
+            selectedSpecies: appState.selectedSpecies
         )
     }
 }
