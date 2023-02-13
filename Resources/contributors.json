@@ -1,7 +1,7 @@
 [
     {
         "name": "Curzel-it",
-        "roles": ["owner"],
+        "roles": ["owner", "artist"],
         "link": "https://curzel.it/",
         "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/urinamara.png?raw=true",
         "pets": ["ape", "cat_floppa", "cat_grumpy", "frog", "german", "mushroom_amanita", "mushroomwizard", "sheep", "snail", "ufo"]
@@ -42,7 +42,8 @@
     },
     {
         "name": "Bicus",
-        "roles": ["translator"]
+        "roles": ["translator"],
+        "thumbnail": "https://github.com/curzel-it/pet-therapy/blob/main/contributors/bicus.png?raw=true"
     },
     {
         "name": "Jab",
