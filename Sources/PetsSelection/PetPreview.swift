@@ -54,7 +54,7 @@ private class PetPreviewViewModel: ObservableObject {
     }
     
     private func bindTitle() {
-        names.name(for: species)
+        names.name(forSpecies: species.id)
             .sink { [weak self] name in self?.title = name }
             .store(in: &disposables)
     }

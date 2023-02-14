@@ -1,6 +1,5 @@
 import Foundation
 import Schwifty
-import Yage
 
 enum Lang {
     static let appName = "appName".localized()
@@ -122,22 +121,24 @@ enum Lang {
 }
 
 extension Lang {
+    enum Species {
+        static func name(for id: String) -> String {
+            let fallback = id.replacingOccurrences(of: "_", with: " ").capitalized
+            return "species.name.\(id)".localized(or: fallback)
+        }
+
+        static func about(for id: String) -> String {
+            "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
+        }
+    }
+}
+
+extension Lang {
     static func name(forMenuItem item: String) -> String {
         "menu.\(item)".localized()
     }
 
     static func name(forTag tag: String) -> String {
         "tag.\(tag)".localized(or: tag)
-    }
-}
-
-extension Species {
-    var defaultName: String {
-        let fallback = id.replacingOccurrences(of: "_", with: " ").capitalized
-        return "species.name.\(id)".localized(or: fallback)
-    }
-
-    var about: String {
-        "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
     }
 }

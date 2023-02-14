@@ -95,6 +95,7 @@
 "species.about.cat_grumpy" = "Guardalo, come ti giudica...";
 "species.about.cat_house" = "Una casetta dove far dormire il tuo gatto!\Se hai qualche idea per altri design, condividile su Discord!";
 "species.about.cat_white" = "Beh, è un normalissimo gatto!";
+"species.about.cayman718" = "L'unica Porsche che potrò mai permettermi... 💸";
 "species.about.clockanalog" = "Mostra l'ora corrente e nient'altro... 😅";
 "species.about.clockdigital" = "Mostra l'ora corrente e nient'altro... 😅";
 "species.about.cromulon" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\"Mostrami cosa sai fare!\"";
@@ -118,6 +119,7 @@
 "species.about.nyan" = "Homage to one of the internet most famous cats.";
 "species.about.panda" = "L'universo ci ha portato il Guerriero Dragone!";
 "species.about.panda_vest" = "Non c'è prezzo per la miticità... Neppure per l'attraenza.";
+"species.about.pikachu" = "⚡️⚡️⚡️❤️";
 "species.about.poop" = "Puzza e lascerà pure delle macchie sullo schermo.";
 "species.about.sheep" = "La 'eSheep' per Windows 95 è stato uno dei primi Desktop Pet, sapevatelo!";
 "species.about.sheep_black" = "Ho solo invertito i colori, lo sapete che sono pigro...";
@@ -141,6 +143,7 @@
 "species.name.cat_grumpy" = "Gatto Scontroso";
 "species.name.cat_house" = "Casetta per Gatti";
 "species.name.cat_white" = "Gatto Bianco";
+"species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Orologio Analogico";
 "species.name.clockdigital" = "Orologio Digitale";
 "species.name.cromulon" = "Testone";
@@ -164,6 +167,7 @@
 "species.name.nyan" = "Nyan D. Cat";
 "species.name.panda" = "Panda";
 "species.name.panda_vest" = "Pandorato";
+"species.name.pikachu" = "Pikachu";
 "species.name.poop" = "Cacca";
 "species.name.sheep" = "Pecora";
 "species.name.sheep_black" = "Pecora Nera";

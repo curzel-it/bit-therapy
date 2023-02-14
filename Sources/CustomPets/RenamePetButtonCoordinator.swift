@@ -4,11 +4,10 @@ import DesignSystem
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 
 class RenamePetButtonCoordinator {
-    func view(for species: Species) -> AnyView {
-        let vm = RenamePetButtonViewModel(species: species)
+    func view(for speciesId: String) -> AnyView {
+        let vm = RenamePetButtonViewModel(speciesId: speciesId)
         return AnyView(
             RenamePetButton(viewModel: vm)
         )
@@ -53,16 +52,16 @@ private class RenamePetButtonViewModel: ObservableObject {
     @Published var name: String = ""
     
     let icon = "character.cursor.ibeam"
-    private let species: Species
+    private let speciesId: String
     
-    init(species: Species) {
-        self.species = species
-        self.name = names.currentName(for: species)
+    init(speciesId: String) {
+        self.speciesId = speciesId
+        self.name = names.currentName(forSpecies: speciesId)
     }
     
     func cancel() {
         isRenaming = false
-        name = names.currentName(for: species)
+        name = names.currentName(forSpecies: speciesId)
     }
     
     func startRenaming() {
@@ -70,7 +69,7 @@ private class RenamePetButtonViewModel: ObservableObject {
     }
     
     func confirm() {
-        AppState.global.rename(species.id, to: name)
+        AppState.global.rename(species: speciesId, to: name)
         cancel()
     }
 }

@@ -45,7 +45,7 @@ private struct About: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
     var body: some View {
-        Text(viewModel.species.about)
+        Text(viewModel.speciesAbout)
             .lineLimit(10)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
