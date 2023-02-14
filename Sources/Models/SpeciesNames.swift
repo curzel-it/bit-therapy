@@ -1,19 +1,22 @@
 import Combine
-import Yage
 
 protocol SpeciesNamesRepository {
-    func currentName(for species: Species) -> String
-    func name(for species: Species) -> AnyPublisher<String, Never>
+    func currentName(forSpecies species: String) -> String
+    func name(forSpecies species: String) -> AnyPublisher<String, Never>
 }
 
 class SpeciesNamesRepositoryImpl: SpeciesNamesRepository {
-    func currentName(for species: Species) -> String {
-        AppState.global.names[species.id] ?? species.defaultName
+    func currentName(forSpecies species: String) -> String {
+        AppState.global.names[species] ?? Lang.Species.name(for: species)
     }
     
-    func name(for species: Species) -> AnyPublisher<String, Never> {
+    func name(forSpecies species: String) -> AnyPublisher<String, Never> {
         AppState.global.$names
-            .map { $0[species.id] ?? species.defaultName }
+            .map { $0[species] ?? Lang.Species.name(for: species) }
             .eraseToAnyPublisher()
+    }
+    
+    private func defaultName(forSpecies species: String) -> String {
+        Lang.Species.name(for: species)
     }
 }

@@ -47,7 +47,7 @@ class AppState: ObservableObject {
         selectedSpecies.remove(species)
     }
     
-    func rename(_ species: String, to newName: String) {
+    func rename(species: String, to newName: String) {
         names[species] = newName
     }
 

@@ -15,8 +15,9 @@ class PetDetailsViewModel: ObservableObject {
     @Binding var isShown: Bool
     @Published var title: String = ""
     
-    let species: Species
-    var appState: AppState { AppState.global }
+    private let species: Species
+    private var appState: AppState { AppState.global }
+    let speciesAbout: String
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected }
     var isSelected: Bool { appState.isSelected(species.id) }
@@ -33,6 +34,7 @@ class PetDetailsViewModel: ObservableObject {
 
     init(isShown: Binding<Bool>, species: Species) {
         self._isShown = isShown
+        self.speciesAbout = Lang.Species.about(for: species.id)
         self.species = species
         self.bindTitle()
     }
@@ -75,11 +77,11 @@ class PetDetailsViewModel: ObservableObject {
     }
     
     func renameButton() -> some View {
-        renamePet.view(for: species)
+        renamePet.view(for: species.id)
     }
     
     private func bindTitle() {
-        names.name(for: species)
+        names.name(forSpecies: species.id)
             .sink { [weak self] name in self?.title = name }
             .store(in: &disposables)
     }

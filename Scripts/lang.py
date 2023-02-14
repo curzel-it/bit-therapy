@@ -9,9 +9,9 @@ from googleapiclient.errors import HttpError
 
 def login():
     creds = None
+    scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly']
     
     if os.path.exists('token.json'):
-        scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly']
         creds = Credentials.from_authorized_user_file('token.json', scopes)
     
     if not creds or not creds.valid:
@@ -74,30 +74,31 @@ def generate_swift_source(data):
 
     header = """import Foundation
 import Schwifty
-import Yage
 
 enum Lang {"""
 
     footer = """}
 
 extension Lang {
-    static func name(forMenuItem item: String) -> String {
-        "menu.\(item)".localized()
-    }
-    
-    static func name(forTag tag: String) -> String {
-        "tag.\(tag)".localized(or: tag)
+    enum Species {
+        static func name(for id: String) -> String {
+            let fallback = id.replacingOccurrences(of: "_", with: " ").capitalized
+            return "species.name.\(id)".localized(or: fallback)
+        }
+        
+        static func about(for id: String) -> String {
+            "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
+        }
     }
 }
 
-extension Species {
-    var defaultName: String {
-        let fallback = id.replacingOccurrences(of: "_", with: " ").capitalized
-        return "species.name.\(id)".localized(or: fallback)
+extension Lang {
+    static func name(forMenuItem item: String) -> String {
+        "menu.\(item)".localized()
     }
 
-    var about: String {
-        "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
+    static func name(forTag tag: String) -> String {
+        "tag.\(tag)".localized(or: tag)
     }
 }"""
     code = '\n'.join([header, code, footer])

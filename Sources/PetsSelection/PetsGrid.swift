@@ -4,8 +4,6 @@ import Schwifty
 import SwiftUI
 import Yage
 
-// MARK: - Grid
-
 struct PetsGrid: View {
     let columns: [GridItem]
     let species: [Species]
@@ -20,8 +18,6 @@ struct PetsGrid: View {
         }
     }
 }
-
-// MARK: - Grid Title
 
 private struct Title: View {
     let title: String

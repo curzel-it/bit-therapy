@@ -95,6 +95,7 @@
 "species.about.cat_grumpy" = "Vu sa tête, il te juge !";
 "species.about.cat_house" = "Une petite maison pour que votre chat puisse dormir !\nJe cherche d'autres idées de design, si vous en avez, n'hésitez pas à me contacter sur Discord !";
 "species.about.cat_white" = "Bah, c'est juste un chat !";
+"species.about.cayman718" = "La seule Porsche que je pourrai jamais m'offrir... 💸";
 "species.about.clockanalog" = "Ça affiche l'heure, rien d'autre... 😅";
 "species.about.clockdigital" = "Ça affiche l'heure, rien d'autre... 😅";
 "species.about.cromulon" = "Une espèce d'êtres planétaires en forme de têtes humaines géantes...\n\"Montrez-moi ce que vous avez !\"";
@@ -118,6 +119,7 @@
 "species.about.nyan" = "Un hommage à l'un des chats les plus connus d'Internet.";
 "species.about.panda" = "L'Univers nous a amené le Guerrier Dragon !";
 "species.about.panda_vest" = "Il n'y a pas de prix pour être cool... ou charmant.";
+"species.about.pikachu" = "⚡️⚡️⚡️❤️";
 "species.about.poop" = "Il sent et laisse également des taches sur l'écran.";
 "species.about.sheep" = "Le \"eSheep\" pour Windows 95 était l'un des premiers Desktop Pets, le savais-tu?";
 "species.about.sheep_black" = "Si tu sais à quel point je peux être paresseux, tu comprendras que j'ai juste inversé les couleurs.";
@@ -141,6 +143,7 @@
 "species.name.cat_grumpy" = "Grumpy Cat";
 "species.name.cat_house" = "Maison de chat";
 "species.name.cat_white" = "Chat Blanc";
+"species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Horloge Analogique";
 "species.name.clockdigital" = "Horloge Numérique";
 "species.name.cromulon" = "Grosse Tête";
@@ -164,6 +167,7 @@
 "species.name.nyan" = "Nyan D. Cat";
 "species.name.panda" = "Panda";
 "species.name.panda_vest" = "Panda doré";
+"species.name.pikachu" = "Pikachu";
 "species.name.poop" = "Caca";
 "species.name.sheep" = "Mouton";
 "species.name.sheep_black" = "Mouton noir";
