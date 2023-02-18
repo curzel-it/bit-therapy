@@ -72,7 +72,7 @@
 "settings.anonymousTracking" = "Abilita Statistiche Anonime";
 "settings.anonymousTrackingMessage" = "Non vengono raccolti dati personali, solo statistiche di utilizzo aninome.\n\nPerchè raccogliamo informazioni?\nSemplice... Se non lo facessimo non avremmo le risposte alle domande più banali, tipo, qual'è il pet più popolare... Il che sembra abbastanza importante, no? 😂\n\nLe statistiche vengono raccolte e analizzate via Firebase.";
 "settings.anonymousTrackingTitle" = "Statistiche Anonime";
-"settings.desktopInteractionsMessage" = "Permette ai pet di muoversi sulla barra del titolo di app e finestre.\nE' fico, ma funziona solo se hai un solo display, sorry!";
+"settings.desktopInteractionsMessage" = "Permette ai pet di muoversi sulla barra del titolo di app e finestre.\nFunzionerà solo sullo schermo principale.";
 "settings.desktopInteractionsTitle" = "Interazioni Desktop";
 "settings.enabledDisplays" = "Display Abilitati";
 "settings.gravity" = "Abilita Gravità";
