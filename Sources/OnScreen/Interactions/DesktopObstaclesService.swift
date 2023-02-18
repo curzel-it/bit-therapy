@@ -29,30 +29,15 @@ class DesktopObstaclesService: ObservableObject {
     }
 
     private func obstacles(from windows: [WindowInfo]) -> [Entity] {
-        NSScreen.screens.forEach { screen in
-            Logger.log(world.name, "Screen", screen.localizedName, screen.frame.description)
-        }
-        Logger.log(world.name, "World", world.bounds.description)
-        
-        return windows.reversed()
+        windows.reversed()
             .filter { $0.isValidObstacle(within: world.bounds) }
             .map { $0.frame }
-            .map {
-                Logger.log(world.name, "Window", $0.description)
-                return $0
-            }
             .reduce([]) { obstacles, rect in
                 let visibleObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
                 let newObstacles = self.obstacles(fromWindowFrame: rect)
                 return visibleObstacles + newObstacles
             }
             .map { WindowObstacle(of: $0, in: world) }
-            .map { frame in
-                if world.name.lowercased().contains("retina") {
-                    Logger.log("Windows", "Frame", frame.frame.description)
-                }
-                return frame
-            }
     }
 
     private func obstacles(fromWindowFrame frame: CGRect) -> [CGRect] {
