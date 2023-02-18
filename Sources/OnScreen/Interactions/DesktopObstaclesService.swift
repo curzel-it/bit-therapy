@@ -5,8 +5,8 @@ import WindowsDetector
 import Yage
 
 class DesktopObstaclesService: ObservableObject {
-    let world: World
     private static let windowsDetector = WindowsDetector().started(pollInterval: 1)
+    let world: World
     private var disposables = Set<AnyCancellable>()
 
     init(world: World) {
@@ -14,10 +14,6 @@ class DesktopObstaclesService: ObservableObject {
     }
 
     func start() {
-        guard NSScreen.screens.count == 1 else {
-            Logger.log("DesktopObstaclesService", "Refusing to start: Multiple screen are not yet supported.")
-            return
-        }
         DesktopObstaclesService.windowsDetector.$userWindows
             .sink { [weak self] in self?.onWindows($0) }
             .store(in: &disposables)
@@ -33,17 +29,30 @@ class DesktopObstaclesService: ObservableObject {
     }
 
     private func obstacles(from windows: [WindowInfo]) -> [Entity] {
-        windows
-            .reversed()
+        NSScreen.screens.forEach { screen in
+            Logger.log(world.name, "Screen", screen.localizedName, screen.frame.description)
+        }
+        Logger.log(world.name, "World", world.bounds.description)
+        
+        return windows.reversed()
             .filter { $0.isValidObstacle(within: world.bounds) }
             .map { $0.frame }
+            .map {
+                Logger.log(world.name, "Window", $0.description)
+                return $0
+            }
             .reduce([]) { obstacles, rect in
                 let visibleObstacles = obstacles.flatMap { $0.parts(bySubtracting: rect) }
                 let newObstacles = self.obstacles(fromWindowFrame: rect)
                 return visibleObstacles + newObstacles
             }
-            .filter { isValidObstacle(frame: $0) }
             .map { WindowObstacle(of: $0, in: world) }
+            .map { frame in
+                if world.name.lowercased().contains("retina") {
+                    Logger.log("Windows", "Frame", frame.frame.description)
+                }
+                return frame
+            }
     }
 
     private func obstacles(fromWindowFrame frame: CGRect) -> [CGRect] {
@@ -52,10 +61,6 @@ class DesktopObstaclesService: ObservableObject {
 
     func obstacles(from frame: CGRect, borderThickness: CGFloat) -> [CGRect] {
         [CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: borderThickness)]
-    }
-
-    private func isValidObstacle(frame: CGRect) -> Bool {
-        frame.minY > 100
     }
 }
 
@@ -108,15 +113,11 @@ private extension WindowInfo {
     var owner: String { processName?.lowercased() ?? "" }
 
     func isValidObstacle(within worldBounds: CGRect) -> Bool {
-        guard !frame.isNull && !frame.isEmpty && !frame.isInfinite else { return false }
-        guard frame != worldBounds else { return false }
-        guard !frame.contains(worldBounds) else { return false }
-        guard !ignoreList.contains(owner) else { return false }
-
-        if owner.contains("desktop pets") {
-            return frame.width >= 450 && frame.height >= 450
-        }
-        return true
+        if frame.isNull || frame.isEmpty || frame.isInfinite { return false }
+        if frame == worldBounds { return false }
+        if ignoreList.contains(owner) { return false }
+        if frame.size == worldBounds.size { return false }
+        return worldBounds.contains(frame)
     }
 }
 
