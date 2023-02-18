@@ -144,6 +144,7 @@
 		1EAEA8FF2970D32900AB3EB0 /* UfoAbduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UfoAbduction.swift; sourceTree = "<group>"; };
 		1EAEA9002970D32900AB3EB0 /* Capabilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capabilities.swift; sourceTree = "<group>"; };
 		1EAEA9012970D32900AB3EB0 /* OnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreen.swift; sourceTree = "<group>"; };
+		1EB5E8E729A12E4500FF9C9C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EC3B0B629637128009ECD6A /* Species */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Species; sourceTree = "<group>"; };
 		1EC3B0B729637128009ECD6A /* PetsAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PetsAssets; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
@@ -503,6 +504,7 @@
 				Base,
 				it,
 				fr,
+				id,
 			);
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
@@ -674,6 +676,7 @@
 				A6FB7D4628740F8E00AB872E /* en */,
 				A6FB7D4728740F8E00AB872E /* it */,
 				1E93C60229623192007A5B91 /* fr */,
+				1EB5E8E729A12E4500FF9C9C /* id */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -845,7 +848,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203701;
+				CURRENT_PROJECT_VERSION = 203702;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
@@ -884,7 +887,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 203701;
+				CURRENT_PROJECT_VERSION = 203702;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
