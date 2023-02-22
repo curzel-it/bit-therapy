@@ -72,7 +72,7 @@ Animations are picked randomly from the list at a random interval.
 Each animation has: 
 * `id` which determinates the sprite to be rendered
 * `position` 
-* `size` see sloth's [lightsaber animation](https://github.com/curzel-it/pet-therapy/blob/main/Species/sloth.json)
+* `size` see sloth's [lightsaber animation](https://github.com/curzel-it/pet-therapy/blob/main/Resources/Species/sloth.json)
 * `requiredLoops` number of times the animation will be repeated
 
 Each species needs to have at least a `front` animation, which is loaded in homepage and pet details.
