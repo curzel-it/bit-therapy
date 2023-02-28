@@ -53,8 +53,13 @@ def generate_translations_for_all_languages(data):
 def generate_translations(data, lang, index):
     translations = [localizable_line(line[0], line[index]) for line in data[1:]]
     translations = '\n'.join(translations)
-    path = f'generated/translations/{lang.lower()}.lproj'
+    path = f'generated/translations/{ios_localized_folder_name(lang)}.lproj'
     write_to_file(path, 'Localizable.strings', translations)
+
+def ios_localized_folder_name(lang):
+    name = lang.lower()
+    if name in ("zh-hans", "zh"): return "zh-Hans"
+    return name
 
 def write_to_file(filepath, filename, contents):
     if not os.path.exists(filepath): 
