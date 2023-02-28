@@ -111,6 +111,7 @@
 		1E36C81C295F533D008EFB28 /* PetsSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsSelectionViewModel.swift; sourceTree = "<group>"; };
 		1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailsViewModel.swift; sourceTree = "<group>"; };
 		1E42E4D3295F7A5200F425F8 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		1E50295629AE583A00117A23 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1E5AACB429716CB9007531DF /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		1E5AACB529716CB9007531DF /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		1E61F885296F6B52007863DE /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
@@ -505,6 +506,7 @@
 				it,
 				fr,
 				id,
+				"zh-Hans",
 			);
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
@@ -677,6 +679,7 @@
 				A6FB7D4728740F8E00AB872E /* it */,
 				1E93C60229623192007A5B91 /* fr */,
 				1EB5E8E729A12E4500FF9C9C /* id */,
+				1E50295629AE583A00117A23 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
