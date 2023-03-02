@@ -1,0 +1,34 @@
+disabled_rules:
+  - trailing_whitespace
+  - trailing_newline
+
+excluded:
+  - Tools 
+  - Pods
+  - .idea
+  - ./*/.build
+  - ./*/Tests
+
+identifier_name:
+  min_length: 
+    error: 3
+  excluded:
+    - ok
+    - no
+    - x
+    - y
+    - z
+    - on
+    - up
+    - js
+    - id
+    - to
+    - tz
+    - vc
+    - vm
+    - xs
+    - sm
+    - md
+    - lg
+    - xl
+    - qa
