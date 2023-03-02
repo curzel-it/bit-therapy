@@ -19,13 +19,16 @@ For daily use I recommend getting the App from the App Store.
 
 Alternatively, you can download the latest release from [GitHub]( https://github.com/curzel-it/pet-therapy/releases/latest) or build from source (see below).
 
-[![Get it on the App Store](Docs/appstore_badge.png)](https://apps.apple.com/app/desktop-pets/id1575542220)
+[![Get it on the App Store](docs/appstore_badge.png)](https://apps.apple.com/app/desktop-pets/id1575542220)
+
+## Support for Windows and Linux
+I'm working on a [Python port](https://github.com/curzel-it/pet-therapy/tree/main/Sources/windows) of the project that I will eventually ship to Windows and Linux, please hang on!
 
 ## Screenshots
 
-![App running on my mac](Docs/demo.gif)
-![PetsSelectionView, light mode](Docs/1.png)
-![Settings, light mode](Docs/3.png)
+![App running on my mac](docs/demo.gif)
+![PetsSelectionView, light mode](docs/1.png)
+![Settings, light mode](docs/3.png)
 
 ## How does it work?
 
@@ -40,12 +43,11 @@ Starting from version 2.20 you can now create custom pets, please check [the doc
 ## Contribute
 
 Contributors get a shout out in the app, just saying... 😏
-![Contributors, dark mode](Docs/contributors.png)
+![Contributors, dark mode](docs/contributors.png)
 
 ## Build from Source
-
 1. Download and setup Xcode
-1. Open the `DesktopPets` workspace
+1. Open the `Sources/macOS/DesktopPets.xcworkspace`
 1. Give Xcode some time to figure out dependencies...
 1. Run
 
