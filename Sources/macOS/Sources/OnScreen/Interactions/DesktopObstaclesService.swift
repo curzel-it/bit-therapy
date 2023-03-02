@@ -37,6 +37,7 @@ class DesktopObstaclesService: ObservableObject {
                 let newObstacles = self.obstacles(fromWindowFrame: rect)
                 return visibleObstacles + newObstacles
             }
+            .filter { $0.minY > AppState.global.petSize }
             .map { WindowObstacle(of: $0, in: world) }
     }
 
@@ -100,7 +101,6 @@ private extension WindowInfo {
     func isValidObstacle(within worldBounds: CGRect) -> Bool {
         if frame.isNull || frame.isEmpty || frame.isInfinite { return false }
         if frame.size == worldBounds.size { return false }
-        if frame.minY <= AppState.global.petSize { return false }
         if ignoreList.contains(owner) { return false }
         return true
     }
