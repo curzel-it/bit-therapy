@@ -224,9 +224,9 @@ struct SpeedControl: View {
         }
         .onChange(of: text) { newText in
             guard let value = Int(newText) else { return }
-            let newSpeed = CGFloat(value/100)
+            let newSpeed = CGFloat(value) / 100
             guard appState.speedMultiplier != newSpeed else { return }
-            guard 0.25 <= newSpeed && newSpeed <= 2 else { return }
+            guard 0 <= newSpeed && newSpeed <= 3 else { return }
             appState.speedMultiplier = newSpeed
         }
     }

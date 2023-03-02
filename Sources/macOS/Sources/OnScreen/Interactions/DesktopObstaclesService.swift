@@ -99,11 +99,10 @@ private extension WindowInfo {
 
     func isValidObstacle(within worldBounds: CGRect) -> Bool {
         if frame.isNull || frame.isEmpty || frame.isInfinite { return false }
-        if frame == worldBounds { return false }
+        if frame.size == worldBounds.size { return false }
         if frame.minY <= AppState.global.petSize { return false }
         if ignoreList.contains(owner) { return false }
-        if frame.size == worldBounds.size { return false }
-        return worldBounds.contains(frame)
+        return true
     }
 }
 
