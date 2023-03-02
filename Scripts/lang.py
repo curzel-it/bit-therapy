@@ -47,8 +47,9 @@ def translations_sheet(creds):
 def generate_translations_for_all_languages(data):
     for index, lang in enumerate(data[0][1:]):
         generate_translations(data, lang, index+1)
-    os.system("rm -rf ../Resources/*.lproj")
-    os.system("cp -r generated/translations/* ../Resources")
+    resources = "../Sources/macOS/Resources"
+    os.system(f"rm -rf {resources}/*.lproj")
+    os.system(f"cp -r generated/translations/* {resources}")
 
 def generate_translations(data, lang, index):
     translations = [localizable_line(line[0], line[index]) for line in data[1:]]
@@ -110,7 +111,7 @@ extension Lang {
 
     write_to_file('generated', 'Lang.swift', code)
     os.system('swiftformat generated/Lang.swift')
-    os.system("cp generated/Lang.swift ../Sources/Models/Lang.swift")
+    os.system("cp generated/Lang.swift ../Sources/macOS/Sources/Models/Lang.swift")
 
 def grouped_keys_by_section(keys):
     sections = [section_name(key) for key in keys]

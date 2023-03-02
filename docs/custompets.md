@@ -57,7 +57,7 @@ All of these need to be defined in a json file, for example:
 }
 ```
 
-Complete json files for all original species can be found [here](https://github.com/curzel-it/pet-therapy/tree/main/Resources/Species).
+Complete json files for all original species can be found [here](https://github.com/curzel-it/pet-therapy/tree/main/Species).
 
 ### Capabilities
 Capabilities are behaviors that can be attached to a Pet to manipulate its state on update - some names are pretty self-explanatory, such as `BounceOnLateralCollisions` or `FlipHorizontallyWhenGoingLeft`.
@@ -72,7 +72,7 @@ Animations are picked randomly from the list at a random interval.
 Each animation has: 
 * `id` which determinates the sprite to be rendered
 * `position` 
-* `size` see sloth's [lightsaber animation](https://github.com/curzel-it/pet-therapy/blob/main/Resources/Species/sloth.json)
+* `size` see sloth's [lightsaber animation](https://github.com/curzel-it/pet-therapy/blob/main/Species/sloth.json)
 * `requiredLoops` number of times the animation will be repeated
 
 Each species needs to have at least a `front` animation, which is loaded in homepage and pet details.

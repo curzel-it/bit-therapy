@@ -1,4 +1,3 @@
-import pdb
 import json
 import os
 
@@ -9,7 +8,7 @@ def _load_species_from_file(path):
 
 def _load_species():
     paths = []
-    for root, _, files in os.walk('../Resources/Species'):
+    for root, _, files in os.walk('../Species'):
         for file in files:
             if file.endswith('.json'):
                 paths.append(os.path.join(root, file))
@@ -17,7 +16,7 @@ def _load_species():
 
 def _load_all_sprites():
     paths = []
-    for root, _, files in os.walk('../Resources/PetsAssets'):
+    for root, _, files in os.walk('../PetsAssets'):
         for file in files:
             if file.endswith('.png'):
                 paths.append(os.path.join(root, file))
@@ -75,3 +74,6 @@ def check_sprites_for_all_species():
     for species in species: 
         _check_assets_for_species(species, all_animations)
     print("If you don't see any errors, you are good to go!")
+
+if __name__ == '__main__':
+    check_sprites_for_all_species()

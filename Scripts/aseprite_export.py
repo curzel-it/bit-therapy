@@ -3,7 +3,7 @@ from sprites_checker import check_sprites_for_all_species
 
 aseprite_path = "/Applications/Aseprite.app/Contents/MacOS/aseprite"
 aseprite_assets = "../Aseprite"
-pngs_folder = "../Resources/PetsAssets"
+pngs_folder = "../PetsAssets"
 
 def export_aseprite(file_path, destination_folder):
     asset_name = file_path.split('/')[-1].split('.')[0]
