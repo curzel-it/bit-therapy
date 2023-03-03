@@ -25,6 +25,13 @@
         "identifier" : "YageTests",
         "name" : "YageTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:DesktopPets.xcodeproj",
+        "identifier" : "1E9505CA29B21342007666BF",
+        "name" : "Desktop Pets UI Tests"
+      }
     }
   ],
   "version" : 1
