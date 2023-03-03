@@ -1,6 +1,4 @@
 import AppKit
-import CustomPets
-import DependencyInjectionUtils
 import Foundation
 import Schwifty
 import SwiftUI
@@ -98,10 +96,10 @@ private class ImportDragAndDropViewModel: ObservableObject {
     }
     
     func handleDrop(of items: [NSItemProvider]) -> Bool {
-        importPetUseCase.handleDrop(of: items) { item, errorMessage in
+        importPetUseCase.handleDrop(of: items) { species, errorMessage in
             Task { @MainActor [weak self] in
                 guard let self else { return }
-                if let species = item as? Species {
+                if let species {
                     self.message = Lang.CustomPets.importSuccess
                     self.assets.reloadAssets()
                     self.speciesProvider.register(species)

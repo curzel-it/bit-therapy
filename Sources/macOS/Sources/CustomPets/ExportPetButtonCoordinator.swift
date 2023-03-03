@@ -1,7 +1,4 @@
 import AppKit
-import CustomPets
-import DependencyInjectionUtils
-import DesignSystem
 import Foundation
 import Schwifty
 import SwiftUI

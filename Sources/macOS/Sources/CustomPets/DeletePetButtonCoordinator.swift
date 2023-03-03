@@ -1,9 +1,7 @@
-import CustomPets
-import DependencyInjectionUtils
-import DesignSystem
 import Foundation
 import Schwifty
 import SwiftUI
+import Swinject
 import Yage
 
 class DeletePetButtonCoordinator {

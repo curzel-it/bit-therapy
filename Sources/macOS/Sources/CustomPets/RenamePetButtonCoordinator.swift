@@ -1,8 +1,6 @@
-import CustomPets
-import DependencyInjectionUtils
-import DesignSystem
 import Foundation
 import Schwifty
+import Swinject
 import SwiftUI
 
 class RenamePetButtonCoordinator {

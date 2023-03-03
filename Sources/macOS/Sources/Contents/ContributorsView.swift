@@ -1,6 +1,4 @@
-import DesignSystem
-import DependencyInjectionUtils
-import Kingfisher
+import Swinject
 import SwiftUI
 
 struct ContributorsView: View {

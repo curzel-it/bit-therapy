@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1410"
+   LastUpgradeVersion = "1420"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6E5AAB42860525A008AA653"
+               BlueprintIdentifier = "1E9505B029B21341007666BF"
                BuildableName = "Desktop Pets.app"
                BlueprintName = "Desktop Pets"
                ReferencedContainer = "container:DesktopPets.xcodeproj">
@@ -39,7 +39,29 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E29446D29739B9B000A90B0"
+               BlueprintIdentifier = "1E6B85A629B20D6F00A70748"
+               BuildableName = "Desktop Pets Tests.xctest"
+               BlueprintName = "Desktop Pets Tests"
+               ReferencedContainer = "container:DesktopPets.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E9505CA29B21342007666BF"
+               BuildableName = "Desktop Pets UI Tests.xctest"
+               BlueprintName = "Desktop Pets UI Tests"
+               ReferencedContainer = "container:DesktopPets.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E9505C029B21342007666BF"
                BuildableName = "Desktop Pets Tests.xctest"
                BlueprintName = "Desktop Pets Tests"
                ReferencedContainer = "container:DesktopPets.xcodeproj">
@@ -61,7 +83,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6E5AAB42860525A008AA653"
+            BlueprintIdentifier = "1E9505B029B21341007666BF"
             BuildableName = "Desktop Pets.app"
             BlueprintName = "Desktop Pets"
             ReferencedContainer = "container:DesktopPets.xcodeproj">
@@ -78,7 +100,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6E5AAB42860525A008AA653"
+            BlueprintIdentifier = "1E9505B029B21341007666BF"
             BuildableName = "Desktop Pets.app"
             BlueprintName = "Desktop Pets"
             ReferencedContainer = "container:DesktopPets.xcodeproj">

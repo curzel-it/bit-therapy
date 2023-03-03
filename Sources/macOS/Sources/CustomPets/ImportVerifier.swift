@@ -1,7 +1,6 @@
-import CustomPets
-import DependencyInjectionUtils
 import Foundation
 import Schwifty
+import Swinject
 import Yage
 
 class ImportVerifierImpl: ImportVerifier {
@@ -9,7 +8,7 @@ class ImportVerifierImpl: ImportVerifier {
     
     private let tag = "ImportVerifier"
     
-    func verify(json: URL, assets: [URL]) throws -> Item {
+    func verify(json: URL, assets: [URL]) throws -> Species {
         let species = try parseSpecies(from: json)
         try verify(species: species, with: assets)
         return species

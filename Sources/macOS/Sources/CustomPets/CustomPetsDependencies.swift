@@ -1,9 +1,16 @@
-import CustomPets
-import DependencyInjectionUtils
 import Foundation
+import Swinject
 import Yage
 
-class CustomPetsResourcesProviderImpl: CustomPets.ResourcesProvider {
+protocol CustomPetsResourcesProvider {
+    func allResources(for itemId: String) -> [URL]
+}
+
+protocol ImportVerifier {
+    func verify(json: URL, assets: [URL]) throws -> Species
+}
+
+class CustomPetsResourcesProviderImpl: CustomPetsResourcesProvider {
     @Inject private var assets: PetsAssetsProvider
     @Inject private var speciesProvider: SpeciesProvider
     
@@ -12,24 +19,3 @@ class CustomPetsResourcesProviderImpl: CustomPets.ResourcesProvider {
         return [json] + assets.allAssets(for: speciesId)
     }
 }
-
-class CustomPetsLocalizedResourcesImpl: CustomPets.LocalizedResources {
-    func string(for error: CustomPets.ImporterError) -> String {
-        switch error {
-        case .dropFailed:
-            return Lang.CustomPets.genericImportError
-        case .noJsonFile:
-            return String(format: Lang.CustomPets.missingFiles, "<species>.json")
-        case .missingAsset(let name):
-            return String(format: Lang.CustomPets.missingFiles, name)
-        case .invalidJsonFile:
-            return Lang.CustomPets.invalidJson
-        case .itemAlreadyExists(let species):
-            return String(format: Lang.CustomPets.speciesAlreadyExists, species.id)
-        case .genericError:
-            return Lang.CustomPets.genericImportError
-        }
-    }
-}
-
-extension Species: CustomPets.Item {}

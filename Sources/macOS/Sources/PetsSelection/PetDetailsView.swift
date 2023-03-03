@@ -1,4 +1,3 @@
-import DesignSystem
 import NotAGif
 import Schwifty
 import SwiftUI

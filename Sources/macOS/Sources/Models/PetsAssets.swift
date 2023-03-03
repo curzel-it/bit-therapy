@@ -1,8 +1,7 @@
-import Rendering
 import Schwifty
 import SwiftUI
 
-protocol PetsAssetsProvider: Rendering.AssetsProvider {
+protocol PetsAssetsProvider {
     func frames(for species: String, animation: String) -> [String]
     func images(for species: String, animation: String) -> [NSImage]
     func image(sprite: String?) -> NSImage?

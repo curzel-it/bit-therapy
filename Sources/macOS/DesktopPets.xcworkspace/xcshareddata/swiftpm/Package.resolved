@@ -73,15 +73,6 @@
       }
     },
     {
-      "identity" : "kingfisher",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/onevcat/Kingfisher",
-      "state" : {
-        "revision" : "af4be924ad984cf4d16f4ae4df424e79a443d435",
-        "version" : "7.6.2"
-      }
-    },
-    {
       "identity" : "launchatlogin",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sindresorhus/LaunchAtLogin",
@@ -167,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/WindowsDetector",
       "state" : {
-        "revision" : "7784b059f9cb426459a5b57325e7597dd5266b69",
-        "version" : "1.0.4"
+        "revision" : "9649d329e30e692c32787dfb022119d0f6b173e8",
+        "version" : "1.0.5"
       }
     },
     {

@@ -1,10 +1,6 @@
 import Schwifty
 import SwiftUI
 
-public protocol CapabilitiesDiscoveryService {
-    func capability(for id: String) -> Capability?
-}
-
 open class Capability {
     public weak var subject: Entity?
     public var isEnabled: Bool = true
@@ -44,5 +40,19 @@ public extension Entity {
     func install(_ capability: Capability) {
         capability.install(on: self)
         capabilities.append(capability)
+    }
+}
+
+public protocol CapabilitiesDiscoveryService {
+    func capability(for id: String) -> Capability?
+}
+
+public class Capabilities {
+    public static var discovery: CapabilitiesDiscoveryService = NoCapabilities()
+}
+
+private class NoCapabilities: CapabilitiesDiscoveryService {
+    func capability(for id: String) -> Capability? {
+        fatalError("Implement your own `CapabilitiesDiscoveryService` and assign it to Capabilities.discovery")
     }
 }
