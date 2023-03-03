@@ -1,4 +1,5 @@
 import Combine
+import Schwifty
 import SwiftUI
 
 class AppState: ObservableObject {
@@ -20,11 +21,11 @@ class AppState: ObservableObject {
         storage.storeValues(of: self)
     }
     
-    func isEnabled(screen: NSScreen) -> Bool {
+    func isEnabled(screen: Screen) -> Bool {
         !disabledScreens.contains(screen.id)
     }
     
-    func set(screen: NSScreen, enabled: Bool) {
+    func set(screen: Screen, enabled: Bool) {
         if enabled {
             disabledScreens.remove(screen.id)
         } else {
@@ -61,3 +62,6 @@ class AppState: ObservableObject {
     }
 }
 
+extension Screen: Identifiable {
+    public var id: String { localizedName.lowercased() }
+}

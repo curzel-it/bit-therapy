@@ -1,15 +1,22 @@
+import NotAGif
 import Schwifty
 import SwiftUI
 
 protocol PetsAssetsProvider {
     func frames(for species: String, animation: String) -> [String]
-    func images(for species: String, animation: String) -> [NSImage]
-    func image(sprite: String?) -> NSImage?
+    func images(for species: String, animation: String) -> [ImageFrame]
+    func image(sprite: String?) -> ImageFrame?
     func allAssets(for species: String) -> [URL]
     func reloadAssets()
 }
 
+protocol ImageLoader {
+    func image(contentsOf url: URL) -> ImageFrame?
+}
+
 class PetsAssetsProviderImpl: PetsAssetsProvider {
+    @Inject private var imageLoader: ImageLoader
+    
     private var allAssetsUrls: [URL] = []
     private var sortedAssetsByKey: [String: [Asset]] = [:]
     
@@ -22,15 +29,15 @@ class PetsAssetsProviderImpl: PetsAssetsProvider {
         return assets.map { $0.sprite }
     }
     
-    func images(for species: String, animation: String) -> [NSImage] {
+    func images(for species: String, animation: String) -> [ImageFrame] {
         frames(for: species, animation: animation)
             .compactMap { image(sprite: $0) }
     }
     
-    func image(sprite: String?) -> NSImage? {
+    func image(sprite: String?) -> ImageFrame? {
         guard let sprite else { return nil }
         guard let url = url(sprite: sprite) else { return nil }
-        return NSImage(contentsOf: url)
+        return imageLoader.image(contentsOf: url)
     }
     
     func allAssets(for species: String) -> [URL] {

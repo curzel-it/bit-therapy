@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests/Desktop Pets.xctestplan"
+            reference = "container:Tests/Mac/Desktop Pets.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -39,7 +39,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E6B85A629B20D6F00A70748"
+               BlueprintIdentifier = "1E9505C029B21342007666BF"
                BuildableName = "Desktop Pets Tests.xctest"
                BlueprintName = "Desktop Pets Tests"
                ReferencedContainer = "container:DesktopPets.xcodeproj">

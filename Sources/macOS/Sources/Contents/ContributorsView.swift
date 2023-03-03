@@ -1,3 +1,4 @@
+import NotAGif
 import Swinject
 import SwiftUI
 
@@ -38,9 +39,7 @@ private struct ItemView: View {
             Spacer()
         }
         .onTapGesture {
-            if let url = URL(string: contributor.link ?? "") {
-                NSWorkspace.shared.open(url)
-            }
+            URL(string: contributor.link ?? "")?.visit()
         }
     }
 }
@@ -80,7 +79,7 @@ private struct PetThumbnail: View {
     
     var body: some View {
         if let asset = vm.thumbnail(for: species) {
-            Image(nsImage: asset)
+            Image(frame: asset)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32, height: 32)
@@ -128,7 +127,7 @@ private class ContributorsViewModel: ObservableObject {
     
     var contributors: [Contributor] { Contributors.all }
     
-    func thumbnail(for species: String) -> NSImage? {
+    func thumbnail(for species: String) -> ImageFrame? {
         assets.image(sprite: "\(species)_front-1")
     }
 }

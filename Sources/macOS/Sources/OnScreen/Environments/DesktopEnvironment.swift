@@ -1,4 +1,3 @@
-import AppKit
 import Combine
 import Schwifty
 import Yage
@@ -9,7 +8,7 @@ class DesktopEnvironment {
     var worlds: [ScreenEnvironment]!
     
     init() {
-        worlds = NSScreen.screens
+        worlds = Screen.screens
             .filter { settings.isEnabled(screen: $0) }
             .map { ScreenEnvironment(for: $0) }
     }

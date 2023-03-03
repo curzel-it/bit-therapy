@@ -1,5 +1,5 @@
-import AppKit
 import Foundation
+import NotAGif
 import Yage
 
 protocol RenderableWorld {
@@ -24,7 +24,7 @@ protocol RenderableEntity {
     func isBeingDragged() -> Bool
     func mouseDragged(currentDelta: CGSize)
     func mouseUp(totalDelta: CGSize)
-    func rightClicked(with: NSEvent)
+    func rightClicked(from window: SomeWindow?, at point: CGPoint)
 }
 
 protocol SpriteRotation {
@@ -34,7 +34,7 @@ protocol SpriteRotation {
 }
 
 protocol AssetsProvider {
-    func image(sprite: String?) -> NSImage?
+    func image(sprite: String?) -> ImageFrame?
 }
 
 extension RenderableEntity {
@@ -77,8 +77,8 @@ extension Entity: RenderableEntity {
         mouseDrag?.mouseUp(totalDelta: totalDelta)
     }
     
-    func rightClicked(with event: NSEvent) {
-        rightClick?.onRightClick(with: event)
+    func rightClicked(from window: SomeWindow?, at point: CGPoint) {
+        rightClick?.onRightClick(from: window, at: point)
     }
 }
 

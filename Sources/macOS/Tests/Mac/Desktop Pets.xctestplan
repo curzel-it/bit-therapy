@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "75E5E2D2-A56B-41C8-9C0D-8BD5D8812BCB",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DesktopPets.xcodeproj",
+        "identifier" : "1E9505C029B21342007666BF",
+        "name" : "Desktop Pets Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Yage",
+        "identifier" : "YageTests",
+        "name" : "YageTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:DesktopPets.xcodeproj",
+        "identifier" : "1E9505CA29B21342007666BF",
+        "name" : "Desktop Pets UI Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

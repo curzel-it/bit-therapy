@@ -7,6 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E185F4029B22FF20042E537 /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
+		1E185F4129B22FF60042E537 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E219229B0876E00AC9438 /* GoogleService-Info.plist */; };
+		1E185F4229B22FFA0042E537 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
+		1E185F4D29B231B90042E537 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F4C29B231B90042E537 /* MainScene.swift */; };
+		1E185F4E29B233D00042E537 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D33F22915E2B2002C0188 /* AppPages.swift */; };
+		1E185F4F29B233D00042E537 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5C28740F8E00AB872E /* AboutView.swift */; };
+		1E185F5029B233D00042E537 /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AA6FB2996F996002245E7 /* ContributorsView.swift */; };
+		1E185F5229B2348A0042E537 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059129B210A6007666BF /* Config.swift */; };
+		1E185F5329B2348A0042E537 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95058F29B210A6007666BF /* Buttons.swift */; };
+		1E185F5429B2348A0042E537 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059629B210A6007666BF /* Stacks.swift */; };
+		1E185F5529B2348A0042E537 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059429B210A6007666BF /* Colors.swift */; };
+		1E185F5629B2348A0042E537 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059329B210A6007666BF /* Spacing.swift */; };
+		1E185F5829B2348A0042E537 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059229B210A6007666BF /* IconButton.swift */; };
+		1E185F5929B234970042E537 /* AppStateStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25273A2989AB4C00756762 /* AppStateStorage.swift */; };
+		1E185F5A29B234970042E537 /* Contributors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF525822997E710004B64D2 /* Contributors.swift */; };
+		1E185F5B29B234970042E537 /* SpeciesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9F2992F826008C64A2 /* SpeciesNames.swift */; };
+		1E185F5C29B234970042E537 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC73F290AA941003D0AB2 /* AppState.swift */; };
+		1E185F5D29B234970042E537 /* PetsAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */; };
+		1E185F5E29B234970042E537 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42E4D3295F7A5200F425F8 /* Species.swift */; };
+		1E185F5F29B234970042E537 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
+		1E185F6329B236B80042E537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
+		1E185F6529B237EB0042E537 /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1E185F6429B237EB0042E537 /* Yage */; };
+		1E185F6A29B238340042E537 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F6929B238340042E537 /* Settings.swift */; };
+		1E185F6C29B239340042E537 /* PetsSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81C295F533D008EFB28 /* PetsSelectionViewModel.swift */; };
+		1E185F6D29B239340042E537 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61F885296F6B52007863DE /* Filters.swift */; };
+		1E185F6E29B239340042E537 /* PetsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C819295F533D008EFB28 /* PetsSelectionView.swift */; };
+		1E185F6F29B239340042E537 /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */; };
+		1E185F7029B239340042E537 /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81A295F533D008EFB28 /* PetsGrid.swift */; };
+		1E185F7129B239340042E537 /* PetPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AAA12992FAAB008C64A2 /* PetPreview.swift */; };
+		1E185F7229B239530042E537 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB429716CB9007531DF /* Tracking.swift */; };
+		1E185F7329B239530042E537 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB529716CB9007531DF /* Firebase.swift */; };
+		1E185F7D29B246120042E537 /* RenamePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */; };
+		1E185F8029B246B40042E537 /* PetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81B295F533D008EFB28 /* PetDetailsView.swift */; };
+		1E185F8229B246D70042E537 /* PetDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F8129B246D70042E537 /* PetDetailsHeader.swift */; };
+		1E185F8529B247FA0042E537 /* PetDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */; };
+		1E185F9329B24A520042E537 /* DeletePetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9229B24A520042E537 /* DeletePetUseCaseImpl.swift */; };
+		1E185F9429B24A550042E537 /* DeletePetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9029B24A3D0042E537 /* DeletePetUseCaseImpl.swift */; };
+		1E185F9529B24A5D0042E537 /* DeletePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */; };
+		1E185F9629B24A5D0042E537 /* DeletePetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89C11E29B1F78800C0EDB9 /* DeletePetUseCase.swift */; };
+		1E185F9729B24A960042E537 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25273C2989ABC300756762 /* Dependencies.swift */; };
+		1E185F9929B24CA00042E537 /* ExportPetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9829B24CA00042E537 /* ExportPetUseCaseImpl.swift */; };
+		1E185F9B29B24CA70042E537 /* ImportPetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9A29B24CA70042E537 /* ImportPetUseCaseImpl.swift */; };
+		1E185F9D29B24CB50042E537 /* ImportPetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9C29B24CB50042E537 /* ImportPetUseCaseImpl.swift */; };
+		1E185F9F29B24CBE0042E537 /* ExportPetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9E29B24CBE0042E537 /* ExportPetUseCaseImpl.swift */; };
+		1E185FA129B24D2C0042E537 /* ImportPetDragAndDropUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89C12029B1F78800C0EDB9 /* ImportPetDragAndDropUseCase.swift */; };
+		1E185FA229B24D300042E537 /* ImportVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */; };
+		1E185FA329B24D300042E537 /* ImportPetDragAndDropCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */; };
+		1E185FA429B24D330042E537 /* ExportPetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89C11F29B1F78800C0EDB9 /* ExportPetUseCase.swift */; };
+		1E185FA529B24D330042E537 /* ExportPetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */; };
 		1E9505C629B21342007666BF /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505C529B21342007666BF /* DesktopPetsTests.swift */; };
 		1E9505D029B21342007666BF /* DesktopPetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505CF29B21342007666BF /* DesktopPetsUITests.swift */; };
 		1E9505D229B21342007666BF /* DesktopPetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505D129B21342007666BF /* DesktopPetsUITestsLaunchTests.swift */; };
@@ -15,6 +64,33 @@
 		1E9505DE29B21492007666BF /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
 		1E9505DF29B21494007666BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E219229B0876E00AC9438 /* GoogleService-Info.plist */; };
 		1E9505E029B21496007666BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
+		1EB2BB9729B29C2800E7EF8F /* ImageInterpolationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A329B211DC007666BF /* ImageInterpolationUseCase.swift */; };
+		1EB2BB9929B29C2800E7EF8F /* RenderingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A529B211DC007666BF /* RenderingDependencies.swift */; };
+		1EB2BB9E29B29C3B00E7EF8F /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FE2970D32900AB3EB0 /* Animations.swift */; };
+		1EB2BB9F29B29C3B00E7EF8F /* PetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FD2970D32900AB3EB0 /* PetEntity.swift */; };
+		1EB2BBA029B29C3B00E7EF8F /* Capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA9002970D32900AB3EB0 /* Capabilities.swift */; };
+		1EB2BBA129B29C4700E7EF8F /* LeavesPoopStains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDB7A5298F98B5007EFC62 /* LeavesPoopStains.swift */; };
+		1EB2BBA229B29C4700E7EF8F /* LeavesTracesWhileWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDB7A7298FD078007EFC62 /* LeavesTracesWhileWalking.swift */; };
+		1EB2BBA329B29C4700E7EF8F /* UfoAbduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FF2970D32900AB3EB0 /* UfoAbduction.swift */; };
+		1EB2BBA429B29C4700E7EF8F /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
+		1EB2BBA529B29C4700E7EF8F /* SleepingPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FC2970D32900AB3EB0 /* SleepingPlace.swift */; };
+		1EB2BBA629B29C4700E7EF8F /* FantozziCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E991F342991A33100AB2F6A /* FantozziCloud.swift */; };
+		1EB2BBA729B29C4700E7EF8F /* GetsAngryWhenMeetingOtherCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F82970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift */; };
+		1EB2BBA829B29CA300E7EF8F /* ScreenEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */; };
+		1EB2BBA929B29D5100E7EF8F /* DesktopEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FA2970D32900AB3EB0 /* DesktopEnvironment.swift */; };
+		1EB2BBAF29B29DE900E7EF8F /* OnScreenCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBAE29B29DE900E7EF8F /* OnScreenCoordinatorImpl.swift */; };
+		1EB2BBB029B29E1600E7EF8F /* OnScreenCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBAC29B29DDE00E7EF8F /* OnScreenCoordinatorImpl.swift */; };
+		1EB2BBB129B29E2300E7EF8F /* OnScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA9012970D32900AB3EB0 /* OnScreenCoordinator.swift */; };
+		1EB2BBB329B2A1BE00E7EF8F /* PixelArtEntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBB229B2A1BE00E7EF8F /* PixelArtEntityView.swift */; };
+		1EB2BBB729B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBB629B2A3CA00E7EF8F /* EntityViewModel.swift */; };
+		1EB2BBB829B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBB629B2A3CA00E7EF8F /* EntityViewModel.swift */; };
+		1EB2BBBA29B2AA8600E7EF8F /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBB929B2AA8600E7EF8F /* DesktopObstaclesService.swift */; };
+		1EB2BBBB29B2AA8600E7EF8F /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBB929B2AA8600E7EF8F /* DesktopObstaclesService.swift */; };
+		1EB2BBBE29B2AB5000E7EF8F /* ImageManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBBC29B2AB5000E7EF8F /* ImageManipulation.swift */; };
+		1EB2BBBF29B2AED300E7EF8F /* MouseDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */; };
+		1EB2BBC029B2AF3100E7EF8F /* CustomPetsResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B939B298C78B5001F045E /* CustomPetsResources.swift */; };
+		1EB2BBC129B2B02700E7EF8F /* ShowMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */; };
+		1EB2BBC429B2B0B100E7EF8F /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2BBC329B2B0B100E7EF8F /* Schwifty */; };
 		1ED44B2F29B21A8F0091CDAE /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81A295F533D008EFB28 /* PetsGrid.swift */; };
 		1ED44B3029B21A900091CDAE /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
 		1ED44B3129B21A900091CDAE /* DeletePetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89C11E29B1F78800C0EDB9 /* DeletePetUseCase.swift */; };
@@ -34,7 +110,7 @@
 		1ED44B3F29B21A900091CDAE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
 		1ED44B4029B21A900091CDAE /* LeavesTracesWhileWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDB7A7298FD078007EFC62 /* LeavesTracesWhileWalking.swift */; };
 		1ED44B4129B21A900091CDAE /* ScreenEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */; };
-		1ED44B4229B21A900091CDAE /* CustomPetsDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B939B298C78B5001F045E /* CustomPetsDependencies.swift */; };
+		1ED44B4229B21A900091CDAE /* CustomPetsResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B939B298C78B5001F045E /* CustomPetsResources.swift */; };
 		1ED44B4329B21A900091CDAE /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059229B210A6007666BF /* IconButton.swift */; };
 		1ED44B4429B21A900091CDAE /* UfoAbduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FF2970D32900AB3EB0 /* UfoAbduction.swift */; };
 		1ED44B4529B21A900091CDAE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5C28740F8E00AB872E /* AboutView.swift */; };
@@ -46,7 +122,7 @@
 		1ED44B4B29B21A900091CDAE /* SpeciesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9F2992F826008C64A2 /* SpeciesNames.swift */; };
 		1ED44B4C29B21A900091CDAE /* SleepingPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FC2970D32900AB3EB0 /* SleepingPlace.swift */; };
 		1ED44B4D29B21A900091CDAE /* ExportPetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89C11F29B1F78800C0EDB9 /* ExportPetUseCase.swift */; };
-		1ED44B4E29B21A900091CDAE /* DesktopObstaclesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */; };
+		1ED44B4E29B21A900091CDAE /* DesktopObstaclesServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesServiceImpl.swift */; };
 		1ED44B4F29B21A900091CDAE /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FE2970D32900AB3EB0 /* Animations.swift */; };
 		1ED44B5029B21A900091CDAE /* PetsAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33FD94295EEDD700B9FC36 /* PetsAssets.swift */; };
 		1ED44B5129B21A900091CDAE /* ImageManupilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A429B211DC007666BF /* ImageManupilation.swift */; };
@@ -62,7 +138,6 @@
 		1ED44B5C29B21A900091CDAE /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059029B210A6007666BF /* Tabs.swift */; };
 		1ED44B5D29B21A900091CDAE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059429B210A6007666BF /* Colors.swift */; };
 		1ED44B5E29B21A900091CDAE /* MouseDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */; };
-		1ED44B5F29B21A900091CDAE /* Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A129B211DC007666BF /* Rendering.swift */; };
 		1ED44B6029B21A900091CDAE /* RenderingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A529B211DC007666BF /* RenderingDependencies.swift */; };
 		1ED44B6129B21A900091CDAE /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AA6FB2996F996002245E7 /* ContributorsView.swift */; };
 		1ED44B6229B21A900091CDAE /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
@@ -75,13 +150,12 @@
 		1ED44B6929B21A900091CDAE /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5828740F8E00AB872E /* MainScene.swift */; };
 		1ED44B6A29B21A900091CDAE /* PetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81B295F533D008EFB28 /* PetDetailsView.swift */; };
 		1ED44B6B29B21A900091CDAE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* Settings.swift */; };
-		1ED44B6C29B21A900091CDAE /* OnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA9012970D32900AB3EB0 /* OnScreen.swift */; };
+		1ED44B6C29B21A900091CDAE /* OnScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA9012970D32900AB3EB0 /* OnScreenCoordinator.swift */; };
 		1ED44B6D29B21A900091CDAE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059129B210A6007666BF /* Config.swift */; };
 		1ED44B6E29B21A900091CDAE /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */; };
 		1ED44B6F29B21A930091CDAE /* Species in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218F29B0874C00AC9438 /* Species */; };
 		1ED44B7229B21AD50091CDAE /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B7129B21AD50091CDAE /* Yage */; };
 		1ED44B7429B21AD50091CDAE /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B7329B21AD50091CDAE /* LaunchAtLogin */; };
-		1ED44B7629B21AD50091CDAE /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B7529B21AD50091CDAE /* Schwifty */; };
 		1ED44B7829B21AD50091CDAE /* RateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B7729B21AD50091CDAE /* RateKit */; };
 		1ED44B7C29B21AD50091CDAE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B7B29B21AD50091CDAE /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		1ED44B7E29B21AD50091CDAE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B7D29B21AD50091CDAE /* FirebaseCrashlytics */; };
@@ -89,6 +163,15 @@
 		1ED44B8229B21AD50091CDAE /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B8129B21AD50091CDAE /* ZIPFoundation */; };
 		1ED44B8829B221D10091CDAE /* ImageInterpolationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */; };
 		1ED44B8F29B229180091CDAE /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B8E29B229180091CDAE /* WindowsDetector */; };
+		1EF863EC29B22DD400413AEA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF863EB29B22DD400413AEA /* App.swift */; };
+		1EF863FD29B22DD500413AEA /* Mobile_PetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF863FC29B22DD500413AEA /* Mobile_PetsTests.swift */; };
+		1EF8640729B22DD500413AEA /* MobilePetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8640629B22DD500413AEA /* MobilePetsUITests.swift */; };
+		1EF8640929B22DD500413AEA /* MobilePetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8640829B22DD500413AEA /* MobilePetsUITestsLaunchTests.swift */; };
+		1EF8641D29B22F2500413AEA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF8641C29B22F2500413AEA /* FirebaseAnalyticsSwift */; };
+		1EF8641F29B22F2500413AEA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF8641E29B22F2500413AEA /* FirebaseCrashlytics */; };
+		1EF8642129B22F2500413AEA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF8642029B22F2500413AEA /* Swinject */; };
+		1EF8642329B22F5C00413AEA /* SwinjectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8642229B22F5C00413AEA /* SwinjectUtils.swift */; };
+		1EF8642429B22F5C00413AEA /* SwinjectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8642229B22F5C00413AEA /* SwinjectUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,9 +189,33 @@
 			remoteGlobalIDString = 1E9505B029B21341007666BF;
 			remoteInfo = "Desktop Pets";
 		};
+		1EF863F929B22DD500413AEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65FE355283D80C900D1F5C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EF863E829B22DD400413AEA;
+			remoteInfo = "Mobile Pets";
+		};
+		1EF8640329B22DD500413AEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65FE355283D80C900D1F5C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EF863E829B22DD400413AEA;
+			remoteInfo = "Mobile Pets";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E185F4C29B231B90042E537 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		1E185F6929B238340042E537 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		1E185F8129B246D70042E537 /* PetDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsHeader.swift; sourceTree = "<group>"; };
+		1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsHeader.swift; sourceTree = "<group>"; };
+		1E185F9029B24A3D0042E537 /* DeletePetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePetUseCaseImpl.swift; sourceTree = "<group>"; };
+		1E185F9229B24A520042E537 /* DeletePetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePetUseCaseImpl.swift; sourceTree = "<group>"; };
+		1E185F9829B24CA00042E537 /* ExportPetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPetUseCaseImpl.swift; sourceTree = "<group>"; };
+		1E185F9A29B24CA70042E537 /* ImportPetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPetUseCaseImpl.swift; sourceTree = "<group>"; };
+		1E185F9C29B24CB50042E537 /* ImportPetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPetUseCaseImpl.swift; sourceTree = "<group>"; };
+		1E185F9E29B24CBE0042E537 /* ExportPetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPetUseCaseImpl.swift; sourceTree = "<group>"; };
 		1E25273A2989AB4C00756762 /* AppStateStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateStorage.swift; sourceTree = "<group>"; };
 		1E25273C2989ABC300756762 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -126,7 +233,7 @@
 		1E5AACB529716CB9007531DF /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		1E61F885296F6B52007863DE /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		1E6AA6FB2996F996002245E7 /* ContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsView.swift; sourceTree = "<group>"; };
-		1E7B939B298C78B5001F045E /* CustomPetsDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsDependencies.swift; sourceTree = "<group>"; };
+		1E7B939B298C78B5001F045E /* CustomPetsResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsResources.swift; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
 		1E7E218D29B0873700AC9438 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Docs; path = ../../Docs; sourceTree = "<group>"; };
@@ -149,7 +256,6 @@
 		1E95059329B210A6007666BF /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		1E95059429B210A6007666BF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1E95059629B210A6007666BF /* Stacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
-		1E9505A129B211DC007666BF /* Rendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rendering.swift; sourceTree = "<group>"; };
 		1E9505A229B211DC007666BF /* WorldWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldWindow.swift; sourceTree = "<group>"; };
 		1E9505A329B211DC007666BF /* ImageInterpolationUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterpolationUseCase.swift; sourceTree = "<group>"; };
 		1E9505A429B211DC007666BF /* ImageManupilation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManupilation.swift; sourceTree = "<group>"; };
@@ -165,7 +271,7 @@
 		1E991F342991A33100AB2F6A /* FantozziCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantozziCloud.swift; sourceTree = "<group>"; };
 		1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportPetButtonCoordinator.swift; sourceTree = "<group>"; };
 		1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPlatformJumper.swift; sourceTree = "<group>"; };
-		1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopObstaclesService.swift; sourceTree = "<group>"; };
+		1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopObstaclesServiceImpl.swift; sourceTree = "<group>"; };
 		1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMenuOnRightClick.swift; sourceTree = "<group>"; };
 		1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseDraggable.swift; sourceTree = "<group>"; };
 		1EAEA8F82970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetsAngryWhenMeetingOtherCats.swift; sourceTree = "<group>"; };
@@ -176,13 +282,27 @@
 		1EAEA8FE2970D32900AB3EB0 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		1EAEA8FF2970D32900AB3EB0 /* UfoAbduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UfoAbduction.swift; sourceTree = "<group>"; };
 		1EAEA9002970D32900AB3EB0 /* Capabilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capabilities.swift; sourceTree = "<group>"; };
-		1EAEA9012970D32900AB3EB0 /* OnScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreen.swift; sourceTree = "<group>"; };
+		1EAEA9012970D32900AB3EB0 /* OnScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnScreenCoordinator.swift; sourceTree = "<group>"; };
+		1EB2BBAC29B29DDE00E7EF8F /* OnScreenCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnScreenCoordinatorImpl.swift; sourceTree = "<group>"; };
+		1EB2BBAE29B29DE900E7EF8F /* OnScreenCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnScreenCoordinatorImpl.swift; sourceTree = "<group>"; };
+		1EB2BBB229B2A1BE00E7EF8F /* PixelArtEntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelArtEntityView.swift; sourceTree = "<group>"; };
+		1EB2BBB629B2A3CA00E7EF8F /* EntityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityViewModel.swift; sourceTree = "<group>"; };
+		1EB2BBB929B2AA8600E7EF8F /* DesktopObstaclesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopObstaclesService.swift; sourceTree = "<group>"; };
+		1EB2BBBC29B2AB5000E7EF8F /* ImageManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManipulation.swift; sourceTree = "<group>"; };
 		1EB5E8E729A12E4500FF9C9C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
-		1ED44B8529B21C5F0091CDAE /* Desktop Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Desktop Pets.xctestplan"; sourceTree = "<group>"; };
+		1ED44B8529B21C5F0091CDAE /* Desktop Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Desktop Pets.xctestplan"; path = "../Mac/Desktop Pets.xctestplan"; sourceTree = "<group>"; };
 		1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterpolationUseCaseTests.swift; sourceTree = "<group>"; };
 		1EE90BFA299802690019CA9A /* contributors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contributors.json; sourceTree = "<group>"; };
 		1EF525822997E710004B64D2 /* Contributors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributors.swift; sourceTree = "<group>"; };
+		1EF863E929B22DD400413AEA /* Mobile Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF863EB29B22DD400413AEA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF863FC29B22DD500413AEA /* Mobile_PetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_PetsTests.swift; sourceTree = "<group>"; };
+		1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF8640629B22DD500413AEA /* MobilePetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilePetsUITests.swift; sourceTree = "<group>"; };
+		1EF8640829B22DD500413AEA /* MobilePetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilePetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1EF8642229B22F5C00413AEA /* SwinjectUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectUtils.swift; sourceTree = "<group>"; };
 		1EFDB7A5298F98B5007EFC62 /* LeavesPoopStains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeavesPoopStains.swift; sourceTree = "<group>"; };
 		1EFDB7A7298FD078007EFC62 /* LeavesTracesWhileWalking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeavesTracesWhileWalking.swift; sourceTree = "<group>"; };
 		A6FB7D4628740F8E00AB872E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -200,7 +320,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED44B7629B21AD50091CDAE /* Schwifty in Frameworks */,
+				1EB2BBC429B2B0B100E7EF8F /* Schwifty in Frameworks */,
 				1ED44B7C29B21AD50091CDAE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1ED44B7E29B21AD50091CDAE /* FirebaseCrashlytics in Frameworks */,
 				1ED44B7429B21AD50091CDAE /* LaunchAtLogin in Frameworks */,
@@ -226,13 +346,221 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1EF863E629B22DD400413AEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF8641F29B22F2500413AEA /* FirebaseCrashlytics in Frameworks */,
+				1EF8641D29B22F2500413AEA /* FirebaseAnalyticsSwift in Frameworks */,
+				1EF8642129B22F2500413AEA /* Swinject in Frameworks */,
+				1E185F6529B237EB0042E537 /* Yage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF863F529B22DD500413AEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF863FF29B22DD500413AEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E185F4329B230050042E537 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				A6FB7D4A28740F8E00AB872E /* DesktopPets.entitlements */,
+				A6FB7D4B28740F8E00AB872E /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E185F4429B2300E0042E537 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1E185F4A29B231A90042E537 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				A6FB7D5828740F8E00AB872E /* MainScene.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E185F4B29B231AE0042E537 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F4C29B231B90042E537 /* MainScene.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1E185F6629B2381B0042E537 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F6829B238250042E537 /* iOS */,
+				1E185F6729B2381F0042E537 /* macOS */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		1E185F6729B2381F0042E537 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E7D1EA42909C31600CC036B /* Settings.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E185F6829B238250042E537 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F6929B238340042E537 /* Settings.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1E185F7429B2450E0042E537 /* PetDetails */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F7629B245160042E537 /* iOS */,
+				1E185F7529B245130042E537 /* macOS */,
+				1E185F7729B2451B0042E537 /* Shared */,
+			);
+			path = PetDetails;
+			sourceTree = "<group>";
+		};
+		1E185F7529B245130042E537 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E185F7629B245160042E537 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F8129B246D70042E537 /* PetDetailsHeader.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1E185F7729B2451B0042E537 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */,
+				1E36C81B295F533D008EFB28 /* PetDetailsView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		1E185F8629B249A90042E537 /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F8F29B24A170042E537 /* iOS */,
+				1E185F8E29B24A130042E537 /* macOS */,
+				1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */,
+				1E89C11E29B1F78800C0EDB9 /* DeletePetUseCase.swift */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		1E185F8729B249AD0042E537 /* Rename */ = {
+			isa = PBXGroup;
+			children = (
+				1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */,
+			);
+			path = Rename;
+			sourceTree = "<group>";
+		};
+		1E185F8829B249B00042E537 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F8D29B24A0D0042E537 /* iOS */,
+				1E185F8C29B24A080042E537 /* macOS */,
+				1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */,
+				1E89C11F29B1F78800C0EDB9 /* ExportPetUseCase.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		1E185F8929B249B70042E537 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F8B29B24A040042E537 /* iOS */,
+				1E185F8A29B249FF0042E537 /* macOS */,
+				1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */,
+				1E89C12029B1F78800C0EDB9 /* ImportPetDragAndDropUseCase.swift */,
+				1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		1E185F8A29B249FF0042E537 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F9A29B24CA70042E537 /* ImportPetUseCaseImpl.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E185F8B29B24A040042E537 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F9C29B24CB50042E537 /* ImportPetUseCaseImpl.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1E185F8C29B24A080042E537 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F9829B24CA00042E537 /* ExportPetUseCaseImpl.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E185F8D29B24A0D0042E537 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F9E29B24CBE0042E537 /* ExportPetUseCaseImpl.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1E185F8E29B24A130042E537 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F9029B24A3D0042E537 /* DeletePetUseCaseImpl.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E185F8F29B24A170042E537 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E185F9229B24A520042E537 /* DeletePetUseCaseImpl.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		1E2AC742290AB375003D0AB2 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A6FB7D5628740F8E00AB872E /* App.swift */,
+				1EF8641929B22EAA00413AEA /* iOS */,
+				1EF8641829B22EA400413AEA /* macOS */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -270,8 +598,6 @@
 		1E36C818295F533D008EFB28 /* PetsSelection */ = {
 			isa = PBXGroup;
 			children = (
-				1E36C81B295F533D008EFB28 /* PetDetailsView.swift */,
-				1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */,
 				1E36C81A295F533D008EFB28 /* PetsGrid.swift */,
 				1E36C819295F533D008EFB28 /* PetsSelectionView.swift */,
 				1E36C81C295F533D008EFB28 /* PetsSelectionViewModel.swift */,
@@ -308,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				1E25273C2989ABC300756762 /* Dependencies.swift */,
+				1EF8642229B22F5C00413AEA /* SwinjectUtils.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -315,15 +642,11 @@
 		1E93C5FB29605EDE007A5B91 /* CustomPets */ = {
 			isa = PBXGroup;
 			children = (
-				1E7B939B298C78B5001F045E /* CustomPetsDependencies.swift */,
-				1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */,
-				1E89C11E29B1F78800C0EDB9 /* DeletePetUseCase.swift */,
-				1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */,
-				1E89C11F29B1F78800C0EDB9 /* ExportPetUseCase.swift */,
-				1E93C60B29624891007A5B91 /* ImportPetDragAndDropCoordinator.swift */,
-				1E89C12029B1F78800C0EDB9 /* ImportPetDragAndDropUseCase.swift */,
-				1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */,
-				1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */,
+				1E7B939B298C78B5001F045E /* CustomPetsResources.swift */,
+				1E185F8929B249B70042E537 /* Import */,
+				1E185F8829B249B00042E537 /* Export */,
+				1E185F8729B249AD0042E537 /* Rename */,
+				1E185F8629B249A90042E537 /* Delete */,
 			);
 			path = CustomPets;
 			sourceTree = "<group>";
@@ -345,12 +668,11 @@
 		1E9505A029B211DC007666BF /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
-				1E9505A129B211DC007666BF /* Rendering.swift */,
-				1E9505A229B211DC007666BF /* WorldWindow.swift */,
+				1EB2BB9D29B29C3000E7EF8F /* iOS */,
+				1EB2BB9C29B29C2C00E7EF8F /* macOS */,
 				1E9505A329B211DC007666BF /* ImageInterpolationUseCase.swift */,
-				1E9505A429B211DC007666BF /* ImageManupilation.swift */,
 				1E9505A529B211DC007666BF /* RenderingDependencies.swift */,
-				1E9505A629B211DC007666BF /* PixelArtEntityView.swift */,
+				1EB2BBB629B2A3CA00E7EF8F /* EntityViewModel.swift */,
 			);
 			path = Rendering;
 			sourceTree = "<group>";
@@ -358,9 +680,8 @@
 		1E9505C429B21342007666BF /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1ED44B8529B21C5F0091CDAE /* Desktop Pets.xctestplan */,
-				1E9505C529B21342007666BF /* DesktopPetsTests.swift */,
-				1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */,
+				1EF8641529B22E4200413AEA /* iOS */,
+				1EF8641429B22E3500413AEA /* macOS */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -368,8 +689,8 @@
 		1E9505CE29B21342007666BF /* Tests UI */ = {
 			isa = PBXGroup;
 			children = (
-				1E9505CF29B21342007666BF /* DesktopPetsUITests.swift */,
-				1E9505D129B21342007666BF /* DesktopPetsUITestsLaunchTests.swift */,
+				1EF8641729B22E4C00413AEA /* iOS */,
+				1EF8641629B22E4700413AEA /* macOS */,
 			);
 			path = "Tests UI";
 			sourceTree = "<group>";
@@ -389,9 +710,10 @@
 		1EAEA8F12970D32900AB3EB0 /* Interactions */ = {
 			isa = PBXGroup;
 			children = (
-				1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */,
+				1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesServiceImpl.swift */,
 				1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */,
 				1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */,
+				1EB2BBB929B2AA8600E7EF8F /* DesktopObstaclesService.swift */,
 			);
 			path = Interactions;
 			sourceTree = "<group>";
@@ -409,11 +731,48 @@
 		1EAEA9022970D32900AB3EB0 /* Environments */ = {
 			isa = PBXGroup;
 			children = (
-				1EAEA9012970D32900AB3EB0 /* OnScreen.swift */,
+				1EB2BBAB29B29DC800E7EF8F /* iOS */,
+				1EB2BBAA29B29DC300E7EF8F /* macOS */,
+				1EAEA9012970D32900AB3EB0 /* OnScreenCoordinator.swift */,
 				1EAEA8FA2970D32900AB3EB0 /* DesktopEnvironment.swift */,
 				1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		1EB2BB9C29B29C2C00E7EF8F /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E9505A429B211DC007666BF /* ImageManupilation.swift */,
+				1E9505A229B211DC007666BF /* WorldWindow.swift */,
+				1E9505A629B211DC007666BF /* PixelArtEntityView.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1EB2BB9D29B29C3000E7EF8F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1EB2BBB229B2A1BE00E7EF8F /* PixelArtEntityView.swift */,
+				1EB2BBBC29B2AB5000E7EF8F /* ImageManipulation.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1EB2BBAA29B29DC300E7EF8F /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1EB2BBAE29B29DE900E7EF8F /* OnScreenCoordinatorImpl.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1EB2BBAB29B29DC800E7EF8F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1EB2BBAC29B29DDE00E7EF8F /* OnScreenCoordinatorImpl.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		1ED44B7029B21AD50091CDAE /* Frameworks */ = {
@@ -421,6 +780,58 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EF8641429B22E3500413AEA /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1ED44B8529B21C5F0091CDAE /* Desktop Pets.xctestplan */,
+				1E9505C529B21342007666BF /* DesktopPetsTests.swift */,
+				1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1EF8641529B22E4200413AEA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1EF863FC29B22DD500413AEA /* Mobile_PetsTests.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1EF8641629B22E4700413AEA /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E9505CF29B21342007666BF /* DesktopPetsUITests.swift */,
+				1E9505D129B21342007666BF /* DesktopPetsUITestsLaunchTests.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1EF8641729B22E4C00413AEA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1EF8640629B22DD500413AEA /* MobilePetsUITests.swift */,
+				1EF8640829B22DD500413AEA /* MobilePetsUITestsLaunchTests.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		1EF8641829B22EA400413AEA /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				A6FB7D5628740F8E00AB872E /* App.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1EF8641929B22EAA00413AEA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1EF863EB29B22DD400413AEA /* App.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		A65FE354283D80C900D1F5C8 = {
@@ -437,18 +848,21 @@
 				1E9505C429B21342007666BF /* Tests */,
 				1E9505CE29B21342007666BF /* Tests UI */,
 				1ED44B7029B21AD50091CDAE /* Frameworks */,
+				1EF863E929B22DD400413AEA /* Mobile Pets.app */,
+				1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */,
+				1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		A6FB7D4328740F8E00AB872E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
 				1EE90BFA299802690019CA9A /* contributors.json */,
 				1E7E219229B0876E00AC9438 /* GoogleService-Info.plist */,
-				A6FB7D4B28740F8E00AB872E /* Info.plist */,
+				1E185F4429B2300E0042E537 /* iOS */,
 				A6FB7D4528740F8E00AB872E /* Localizable.strings */,
-				A6FB7D4A28740F8E00AB872E /* DesktopPets.entitlements */,
+				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
+				1E185F4329B230050042E537 /* macOS */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -464,7 +878,9 @@
 				1E36C810295F4D9E008EFB28 /* Models */,
 				1E2D7D4729747D8C00DC7D5F /* News */,
 				1EAEA8F02970D32900AB3EB0 /* OnScreen */,
+				1E185F7429B2450E0042E537 /* PetDetails */,
 				1E36C818295F533D008EFB28 /* PetsSelection */,
+				1E185F6629B2381B0042E537 /* Settings */,
 				1E36C811295F4DB6008EFB28 /* StatusBar */,
 				1E5AACB329716CB9007531DF /* Tracking */,
 			);
@@ -474,10 +890,10 @@
 		A6FB7D5B28740F8E00AB872E /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				A6FB7D5828740F8E00AB872E /* MainScene.swift */,
+				1E185F4B29B231AE0042E537 /* iOS */,
+				1E185F4A29B231A90042E537 /* macOS */,
 				1E7D33F22915E2B2002C0188 /* AppPages.swift */,
 				A6FB7D5C28740F8E00AB872E /* AboutView.swift */,
-				1E7D1EA42909C31600CC036B /* Settings.swift */,
 				1E6AA6FB2996F996002245E7 /* ContributorsView.swift */,
 			);
 			path = Contents;
@@ -504,13 +920,13 @@
 			packageProductDependencies = (
 				1ED44B7129B21AD50091CDAE /* Yage */,
 				1ED44B7329B21AD50091CDAE /* LaunchAtLogin */,
-				1ED44B7529B21AD50091CDAE /* Schwifty */,
 				1ED44B7729B21AD50091CDAE /* RateKit */,
 				1ED44B7B29B21AD50091CDAE /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1ED44B7D29B21AD50091CDAE /* FirebaseCrashlytics */,
 				1ED44B7F29B21AD50091CDAE /* Swinject */,
 				1ED44B8129B21AD50091CDAE /* ZIPFoundation */,
 				1ED44B8E29B229180091CDAE /* WindowsDetector */,
+				1EB2BBC329B2B0B100E7EF8F /* Schwifty */,
 			);
 			productName = "Desktop Pets";
 			productReference = 1E9505B129B21341007666BF /* Desktop Pets.app */;
@@ -552,6 +968,65 @@
 			productReference = 1E9505CB29B21342007666BF /* Desktop Pets UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1EF863E829B22DD400413AEA /* Mobile Pets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Mobile Pets" */;
+			buildPhases = (
+				1EF863E529B22DD400413AEA /* Sources */,
+				1EF863E629B22DD400413AEA /* Frameworks */,
+				1EF863E729B22DD400413AEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mobile Pets";
+			packageProductDependencies = (
+				1EF8641C29B22F2500413AEA /* FirebaseAnalyticsSwift */,
+				1EF8641E29B22F2500413AEA /* FirebaseCrashlytics */,
+				1EF8642029B22F2500413AEA /* Swinject */,
+				1E185F6429B237EB0042E537 /* Yage */,
+			);
+			productName = "Mobile Pets";
+			productReference = 1EF863E929B22DD400413AEA /* Mobile Pets.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1EF863F729B22DD500413AEA /* Mobile Pets Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Mobile Pets Tests" */;
+			buildPhases = (
+				1EF863F429B22DD500413AEA /* Sources */,
+				1EF863F529B22DD500413AEA /* Frameworks */,
+				1EF863F629B22DD500413AEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EF863FA29B22DD500413AEA /* PBXTargetDependency */,
+			);
+			name = "Mobile Pets Tests";
+			productName = "Mobile PetsTests";
+			productReference = 1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1EF8640129B22DD500413AEA /* Mobile Pets UI Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Mobile Pets UI Tests" */;
+			buildPhases = (
+				1EF863FE29B22DD500413AEA /* Sources */,
+				1EF863FF29B22DD500413AEA /* Frameworks */,
+				1EF8640029B22DD500413AEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EF8640429B22DD500413AEA /* PBXTargetDependency */,
+			);
+			name = "Mobile Pets UI Tests";
+			productName = "Mobile PetsUITests";
+			productReference = 1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -573,6 +1048,17 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 1E9505B029B21341007666BF;
 					};
+					1EF863E829B22DD400413AEA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					1EF863F729B22DD500413AEA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 1EF863E829B22DD400413AEA;
+					};
+					1EF8640129B22DD500413AEA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 1EF863E829B22DD400413AEA;
+					};
 				};
 			};
 			buildConfigurationList = A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "DesktopPets" */;
@@ -590,12 +1076,12 @@
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
 				A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
-				1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */,
 				1E5D3EA328C08E5F00AC50C6 /* XCRemoteSwiftPackageReference "RateKit" */,
 				1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */,
 				1E89C12429B1F7FF00C0EDB9 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */,
+				1EB2BBC229B2B0B100E7EF8F /* XCRemoteSwiftPackageReference "schwifty" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -604,6 +1090,9 @@
 				1E9505B029B21341007666BF /* Desktop Pets */,
 				1E9505C029B21342007666BF /* Desktop Pets Tests */,
 				1E9505CA29B21342007666BF /* Desktop Pets UI Tests */,
+				1EF863E829B22DD400413AEA /* Mobile Pets */,
+				1EF863F729B22DD500413AEA /* Mobile Pets Tests */,
+				1EF8640129B22DD500413AEA /* Mobile Pets UI Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -630,6 +1119,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1E9505C929B21342007666BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF863E729B22DD400413AEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E185F4229B22FFA0042E537 /* Localizable.strings in Resources */,
+				1E185F4029B22FF20042E537 /* contributors.json in Resources */,
+				1E185F6329B236B80042E537 /* Assets.xcassets in Resources */,
+				1E185F4129B22FF60042E537 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF863F629B22DD500413AEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF8640029B22DD500413AEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -686,41 +1200,47 @@
 			files = (
 				1ED44B5829B21A900091CDAE /* Firebase.swift in Sources */,
 				1ED44B3429B21A900091CDAE /* Dependencies.swift in Sources */,
-				1ED44B4229B21A900091CDAE /* CustomPetsDependencies.swift in Sources */,
+				1ED44B4229B21A900091CDAE /* CustomPetsResources.swift in Sources */,
 				1ED44B4A29B21A900091CDAE /* AppPages.swift in Sources */,
-				1ED44B4E29B21A900091CDAE /* DesktopObstaclesService.swift in Sources */,
+				1ED44B4E29B21A900091CDAE /* DesktopObstaclesServiceImpl.swift in Sources */,
 				1ED44B6529B21A900091CDAE /* AppState.swift in Sources */,
+				1EF8642329B22F5C00413AEA /* SwinjectUtils.swift in Sources */,
 				1ED44B4D29B21A900091CDAE /* ExportPetUseCase.swift in Sources */,
+				1E185F9429B24A550042E537 /* DeletePetUseCaseImpl.swift in Sources */,
 				1ED44B2F29B21A8F0091CDAE /* PetsGrid.swift in Sources */,
 				1ED44B4829B21A900091CDAE /* Buttons.swift in Sources */,
 				1ED44B3A29B21A900091CDAE /* DesktopEnvironment.swift in Sources */,
 				1ED44B5D29B21A900091CDAE /* Colors.swift in Sources */,
 				1ED44B4029B21A900091CDAE /* LeavesTracesWhileWalking.swift in Sources */,
 				1ED44B6B29B21A900091CDAE /* Settings.swift in Sources */,
+				1EB2BBBA29B2AA8600E7EF8F /* DesktopObstaclesService.swift in Sources */,
 				1ED44B5429B21A900091CDAE /* StatusBar.swift in Sources */,
 				1ED44B3129B21A900091CDAE /* DeletePetUseCase.swift in Sources */,
 				1ED44B6229B21A900091CDAE /* RandomPlatformJumper.swift in Sources */,
 				1ED44B4429B21A900091CDAE /* UfoAbduction.swift in Sources */,
+				1E185F9B29B24CA70042E537 /* ImportPetUseCaseImpl.swift in Sources */,
 				1ED44B3C29B21A900091CDAE /* DeletePetButtonCoordinator.swift in Sources */,
 				1ED44B5329B21A900091CDAE /* ImportPetDragAndDropCoordinator.swift in Sources */,
 				1ED44B5E29B21A900091CDAE /* MouseDraggable.swift in Sources */,
 				1ED44B6329B21A900091CDAE /* PetsSelectionView.swift in Sources */,
+				1E185F9929B24CA00042E537 /* ExportPetUseCaseImpl.swift in Sources */,
 				1ED44B3729B21A900091CDAE /* NewsView.swift in Sources */,
 				1ED44B6029B21A900091CDAE /* RenderingDependencies.swift in Sources */,
 				1ED44B3929B21A900091CDAE /* ImportVerifier.swift in Sources */,
 				1ED44B5029B21A900091CDAE /* PetsAssets.swift in Sources */,
 				1ED44B6A29B21A900091CDAE /* PetDetailsView.swift in Sources */,
 				1ED44B4329B21A900091CDAE /* IconButton.swift in Sources */,
-				1ED44B5F29B21A900091CDAE /* Rendering.swift in Sources */,
 				1ED44B5529B21A900091CDAE /* Tracking.swift in Sources */,
 				1ED44B5C29B21A900091CDAE /* Tabs.swift in Sources */,
 				1ED44B6929B21A900091CDAE /* MainScene.swift in Sources */,
 				1ED44B3F29B21A900091CDAE /* App.swift in Sources */,
 				1ED44B4B29B21A900091CDAE /* SpeciesNames.swift in Sources */,
 				1ED44B5629B21A900091CDAE /* ImportPetDragAndDropUseCase.swift in Sources */,
+				1E185F8529B247FA0042E537 /* PetDetailsHeader.swift in Sources */,
 				1ED44B6629B21A900091CDAE /* RenamePetButtonCoordinator.swift in Sources */,
 				1ED44B4629B21A900091CDAE /* ExportPetButtonCoordinator.swift in Sources */,
 				1ED44B6129B21A900091CDAE /* ContributorsView.swift in Sources */,
+				1EB2BBB729B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */,
 				1ED44B6D29B21A900091CDAE /* Config.swift in Sources */,
 				1ED44B3229B21A900091CDAE /* FantozziCloud.swift in Sources */,
 				1ED44B6729B21A900091CDAE /* Stacks.swift in Sources */,
@@ -732,17 +1252,19 @@
 				1ED44B5729B21A900091CDAE /* PixelArtEntityView.swift in Sources */,
 				1ED44B6E29B21A900091CDAE /* PetDetailsViewModel.swift in Sources */,
 				1ED44B5229B21A900091CDAE /* PetsSelectionViewModel.swift in Sources */,
+				1EB2BBAF29B29DE900E7EF8F /* OnScreenCoordinatorImpl.swift in Sources */,
 				1ED44B4129B21A900091CDAE /* ScreenEnvironment.swift in Sources */,
 				1ED44B3B29B21A900091CDAE /* ImageInterpolationUseCase.swift in Sources */,
 				1ED44B3529B21A900091CDAE /* WorldWindow.swift in Sources */,
 				1ED44B3029B21A900091CDAE /* Lang.swift in Sources */,
 				1ED44B3E29B21A900091CDAE /* ShowMenuOnRightClick.swift in Sources */,
-				1ED44B6C29B21A900091CDAE /* OnScreen.swift in Sources */,
+				1ED44B6C29B21A900091CDAE /* OnScreenCoordinator.swift in Sources */,
 				1ED44B4729B21A900091CDAE /* Filters.swift in Sources */,
 				1ED44B6429B21A900091CDAE /* Spacing.swift in Sources */,
 				1ED44B3329B21A900091CDAE /* GetsAngryWhenMeetingOtherCats.swift in Sources */,
 				1ED44B3D29B21A900091CDAE /* Species.swift in Sources */,
 				1ED44B5129B21A900091CDAE /* ImageManupilation.swift in Sources */,
+				1EB2BBB329B2A1BE00E7EF8F /* PixelArtEntityView.swift in Sources */,
 				1ED44B5929B21A900091CDAE /* Contributors.swift in Sources */,
 				1ED44B5B29B21A900091CDAE /* LeavesPoopStains.swift in Sources */,
 				1ED44B6829B21A900091CDAE /* PetEntity.swift in Sources */,
@@ -768,6 +1290,94 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1EF863E529B22DD400413AEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E185F9729B24A960042E537 /* Dependencies.swift in Sources */,
+				1E185F7229B239530042E537 /* Tracking.swift in Sources */,
+				1E185F8029B246B40042E537 /* PetDetailsView.swift in Sources */,
+				1EB2BBA229B29C4700E7EF8F /* LeavesTracesWhileWalking.swift in Sources */,
+				1E185F7329B239530042E537 /* Firebase.swift in Sources */,
+				1EB2BBB129B29E2300E7EF8F /* OnScreenCoordinator.swift in Sources */,
+				1E185F5829B2348A0042E537 /* IconButton.swift in Sources */,
+				1EB2BBBB29B2AA8600E7EF8F /* DesktopObstaclesService.swift in Sources */,
+				1E185F5E29B234970042E537 /* Species.swift in Sources */,
+				1EB2BBA729B29C4700E7EF8F /* GetsAngryWhenMeetingOtherCats.swift in Sources */,
+				1EB2BBA329B29C4700E7EF8F /* UfoAbduction.swift in Sources */,
+				1EB2BBA529B29C4700E7EF8F /* SleepingPlace.swift in Sources */,
+				1EB2BBC129B2B02700E7EF8F /* ShowMenuOnRightClick.swift in Sources */,
+				1E185F9D29B24CB50042E537 /* ImportPetUseCaseImpl.swift in Sources */,
+				1E185F5B29B234970042E537 /* SpeciesNames.swift in Sources */,
+				1E185F5C29B234970042E537 /* AppState.swift in Sources */,
+				1EB2BB9F29B29C3B00E7EF8F /* PetEntity.swift in Sources */,
+				1E185F9329B24A520042E537 /* DeletePetUseCaseImpl.swift in Sources */,
+				1E185F5429B2348A0042E537 /* Stacks.swift in Sources */,
+				1E185F7029B239340042E537 /* PetsGrid.swift in Sources */,
+				1EB2BB9E29B29C3B00E7EF8F /* Animations.swift in Sources */,
+				1EB2BBA429B29C4700E7EF8F /* RandomPlatformJumper.swift in Sources */,
+				1EB2BBA129B29C4700E7EF8F /* LeavesPoopStains.swift in Sources */,
+				1EB2BB9729B29C2800E7EF8F /* ImageInterpolationUseCase.swift in Sources */,
+				1EB2BBA929B29D5100E7EF8F /* DesktopEnvironment.swift in Sources */,
+				1E185F5A29B234970042E537 /* Contributors.swift in Sources */,
+				1E185F5D29B234970042E537 /* PetsAssets.swift in Sources */,
+				1E185F7129B239340042E537 /* PetPreview.swift in Sources */,
+				1E185F8229B246D70042E537 /* PetDetailsHeader.swift in Sources */,
+				1E185F4F29B233D00042E537 /* AboutView.swift in Sources */,
+				1E185F5029B233D00042E537 /* ContributorsView.swift in Sources */,
+				1E185F9F29B24CBE0042E537 /* ExportPetUseCaseImpl.swift in Sources */,
+				1E185F5329B2348A0042E537 /* Buttons.swift in Sources */,
+				1E185FA129B24D2C0042E537 /* ImportPetDragAndDropUseCase.swift in Sources */,
+				1E185F9629B24A5D0042E537 /* DeletePetUseCase.swift in Sources */,
+				1E185F7D29B246120042E537 /* RenamePetButtonCoordinator.swift in Sources */,
+				1E185F6F29B239340042E537 /* PetDetailsViewModel.swift in Sources */,
+				1E185F6E29B239340042E537 /* PetsSelectionView.swift in Sources */,
+				1E185FA229B24D300042E537 /* ImportVerifier.swift in Sources */,
+				1EB2BBA829B29CA300E7EF8F /* ScreenEnvironment.swift in Sources */,
+				1E185F6C29B239340042E537 /* PetsSelectionViewModel.swift in Sources */,
+				1E185F5929B234970042E537 /* AppStateStorage.swift in Sources */,
+				1EF8642429B22F5C00413AEA /* SwinjectUtils.swift in Sources */,
+				1E185F5629B2348A0042E537 /* Spacing.swift in Sources */,
+				1EB2BBB029B29E1600E7EF8F /* OnScreenCoordinatorImpl.swift in Sources */,
+				1EB2BBA029B29C3B00E7EF8F /* Capabilities.swift in Sources */,
+				1EB2BBA629B29C4700E7EF8F /* FantozziCloud.swift in Sources */,
+				1E185FA529B24D330042E537 /* ExportPetButtonCoordinator.swift in Sources */,
+				1E185F4D29B231B90042E537 /* MainScene.swift in Sources */,
+				1E185F5529B2348A0042E537 /* Colors.swift in Sources */,
+				1E185F5229B2348A0042E537 /* Config.swift in Sources */,
+				1EB2BBC029B2AF3100E7EF8F /* CustomPetsResources.swift in Sources */,
+				1E185F4E29B233D00042E537 /* AppPages.swift in Sources */,
+				1E185F6D29B239340042E537 /* Filters.swift in Sources */,
+				1EF863EC29B22DD400413AEA /* App.swift in Sources */,
+				1E185FA429B24D330042E537 /* ExportPetUseCase.swift in Sources */,
+				1E185FA329B24D300042E537 /* ImportPetDragAndDropCoordinator.swift in Sources */,
+				1E185F6A29B238340042E537 /* Settings.swift in Sources */,
+				1EB2BBB829B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */,
+				1E185F9529B24A5D0042E537 /* DeletePetButtonCoordinator.swift in Sources */,
+				1E185F5F29B234970042E537 /* Lang.swift in Sources */,
+				1EB2BBBF29B2AED300E7EF8F /* MouseDraggable.swift in Sources */,
+				1EB2BBBE29B2AB5000E7EF8F /* ImageManipulation.swift in Sources */,
+				1EB2BB9929B29C2800E7EF8F /* RenderingDependencies.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF863F429B22DD500413AEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF863FD29B22DD500413AEA /* Mobile_PetsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF863FE29B22DD500413AEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF8640929B22DD500413AEA /* MobilePetsUITestsLaunchTests.swift in Sources */,
+				1EF8640729B22DD500413AEA /* MobilePetsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -780,6 +1390,16 @@
 			isa = PBXTargetDependency;
 			target = 1E9505B029B21341007666BF /* Desktop Pets */;
 			targetProxy = 1E9505CC29B21342007666BF /* PBXContainerItemProxy */;
+		};
+		1EF863FA29B22DD500413AEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EF863E829B22DD400413AEA /* Mobile Pets */;
+			targetProxy = 1EF863F929B22DD500413AEA /* PBXContainerItemProxy */;
+		};
+		1EF8640429B22DD500413AEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EF863E829B22DD400413AEA /* Mobile Pets */;
+			targetProxy = 1EF8640329B22DD500413AEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -805,7 +1425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = Resources/DesktopPets.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 204010;
@@ -813,8 +1433,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				"INFOPLIST_FILE[sdk=*]" = Resources/Info.plist;
+				INFOPLIST_FILE = Resources/macOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -841,7 +1460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = Resources/DesktopPets.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 204010;
@@ -849,7 +1468,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = Resources/macOS/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Desktop Pets";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -969,6 +1588,167 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Desktop Pets";
+			};
+			name = Release;
+		};
+		1EF8640A29B22DD500413AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pet Therapy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EF8640B29B22DD500413AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pet Therapy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EF8640C29B22DD500413AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.curzel.Mobile-PetsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobile Pets.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mobile Pets";
+			};
+			name = Debug;
+		};
+		1EF8640D29B22DD500413AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.curzel.Mobile-PetsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobile Pets.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mobile Pets";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EF8640E29B22DD500413AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.curzel.Mobile-PetsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobile Pets";
+			};
+			name = Debug;
+		};
+		1EF8640F29B22DD500413AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.curzel.Mobile-PetsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobile Pets";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1119,6 +1899,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Mobile Pets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF8640A29B22DD500413AEA /* Debug */,
+				1EF8640B29B22DD500413AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Mobile Pets Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF8640C29B22DD500413AEA /* Debug */,
+				1EF8640D29B22DD500413AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Mobile Pets UI Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF8640E29B22DD500413AEA /* Debug */,
+				1EF8640F29B22DD500413AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "DesktopPets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1163,20 +1970,20 @@
 				minimumVersion = 0.9.9;
 			};
 		};
+		1EB2BBC229B2B0B100E7EF8F /* XCRemoteSwiftPackageReference "schwifty" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/schwifty";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
 		1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/WindowsDetector";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.5;
-			};
-		};
-		1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/schwifty";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.13;
 			};
 		};
 		A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
@@ -1190,6 +1997,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E185F6429B237EB0042E537 /* Yage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Yage;
+		};
+		1EB2BBC329B2B0B100E7EF8F /* Schwifty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB2BBC229B2B0B100E7EF8F /* XCRemoteSwiftPackageReference "schwifty" */;
+			productName = Schwifty;
+		};
 		1ED44B7129B21AD50091CDAE /* Yage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Yage;
@@ -1198,11 +2014,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A67373C1285386D1002DC8FA /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
-		};
-		1ED44B7529B21AD50091CDAE /* Schwifty */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EE263FC289285D200771170 /* XCRemoteSwiftPackageReference "schwifty" */;
-			productName = Schwifty;
 		};
 		1ED44B7729B21AD50091CDAE /* RateKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1233,6 +2044,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */;
 			productName = WindowsDetector;
+		};
+		1EF8641C29B22F2500413AEA /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		1EF8641E29B22F2500413AEA /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		1EF8642029B22F2500413AEA /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

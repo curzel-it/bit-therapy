@@ -1,22 +1,22 @@
-import AppKit
 import Combine
 import Foundation
+import Schwifty
 import Yage
 
 class ScreenEnvironment: World {
-    @Inject private var speciesProvider: SpeciesProvider
     @Inject var rainyCloudUseCase: RainyCloudUseCase
     @Inject var ufoAbductionUseCase: UfoAbductionUseCase
+    @Inject private var desktopObstacles: DesktopObstaclesService
+    @Inject private var speciesProvider: SpeciesProvider
     
     var hasAnyPets: Bool {
         children.contains { $0 is PetEntity }
     }
     
     private var settings: AppState { AppState.global }
-    private var desktopObstacles: DesktopObstaclesService!
     private var disposables = Set<AnyCancellable>()
 
-    init(for screen: NSScreen) {
+    init(for screen: Screen) {
         super.init(name: screen.localizedName, bounds: screen.frame)
         bindPetsOnStage()
         scheduleUfoAbduction()
@@ -44,16 +44,14 @@ class ScreenEnvironment: World {
     
     private func observeWindowsIfNeeded() {
         guard settings.desktopInteractions else { return }
-        guard name == NSScreen.main?.localizedName else { return }
-        desktopObstacles = DesktopObstaclesService(world: self)
-        desktopObstacles.start()
+        guard name == Screen.main?.localizedName else { return }
+        desktopObstacles.start(in: self)
     }
     
     private func installJumpers() {
-        guard let desktopObstacles else { return }
         children
             .compactMap { $0 as? PetEntity }
-            .forEach { $0.setupJumperIfPossible(with: desktopObstacles) }
+            .forEach { $0.setupJumperIfPossible() }
     }
 
     private func bindPetsOnStage() {
@@ -91,7 +89,7 @@ class ScreenEnvironment: World {
 
     override func kill() {
         super.kill()
-        desktopObstacles?.stop()
+        desktopObstacles.stop()
         disposables.removeAll()
     }
     

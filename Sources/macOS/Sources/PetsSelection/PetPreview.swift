@@ -1,4 +1,5 @@
 import Combine
+import NotAGif
 import SwiftUI
 import Yage
 
@@ -35,7 +36,7 @@ private class PetPreviewViewModel: ObservableObject {
     @Inject private var names: SpeciesNamesRepository
     
     let species: Species
-    var previewImage: NSImage?
+    var previewImage: ImageFrame?
     
     @Published var title = ""
     
