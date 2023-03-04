@@ -11,29 +11,20 @@ protocol EntityView: SomeView {
 }
 
 class WorldWindow: NSWindow {
-    private let tag: String
-    private let world: RenderableWorld
-    private var previousEntitiesIds: [String] = []
-    private var timer: Timer!
-    private var lastUpdate = Date.timeIntervalSinceReferenceDate
+    private let viewModel: WorldWindowViewModel
     
     init(representing world: RenderableWorld) {
-        self.world = world
-        self.tag = "Win-\(world.name)"
-        super.init(
-            contentRect: .zero,
-            styleMask: .borderless,
-            backing: .buffered,
-            defer: false
-        )
+        self.viewModel = WorldWindowViewModel(representing: world)
+        super.init(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
         configureWindow()
-        start(fps: 20)
+        viewModel.addSubview = { [weak self] in self?.addSubview(newView: $0) }
+        viewModel.entityViews = { [weak self] in self?.entityViews() ?? [] }
+        viewModel.start()
     }
     
     override func close() {
         super.close()
-        world.kill()
-        Logger.log(tag, "Terminated.")
+        viewModel.stop()
     }
     
     private func entityViews() -> [EntityView] {
@@ -41,7 +32,7 @@ class WorldWindow: NSWindow {
     }
     
     private func configureWindow() {
-        setFrame(world.bounds, display: true)
+        setFrame(viewModel.worldBounds, display: true)
         isOpaque = false
         hasShadow = false
         backgroundColor = .clear
@@ -49,28 +40,24 @@ class WorldWindow: NSWindow {
         collectionBehavior = [.canJoinAllSpaces]
     }
     
-    private func start(fps: Double) {
-        Logger.log(tag, "Starting...")
-        timer?.invalidate()
-        timer = Timer(timeInterval: 1 / fps, repeats: true) { [weak self] timer in
-            guard let self else {
-                timer.invalidate()
-                return
-            }
-            self.loop()
-        }
-        RunLoop.main.add(timer, forMode: .common)
+    private func addSubview(newView: EntityView) {
+        guard let contentView else { return }
+        contentView.addSubview(newView)
+        contentView.subviews = entityViews().sorted { $0.zIndex < $1.zIndex }
     }
+}
 
-    private func loop() {
-        let now = Date.timeIntervalSinceReferenceDate
-        let frameTime = now - lastUpdate
-        world.update(after: frameTime)
+private class WorldWindowViewModel: WorldViewModel {
+    private var previousEntitiesIds: [String] = []
+    var entityViews: () -> [EntityView] = { [] }
+    var addSubview: (EntityView) -> Void = { _ in }
+    
+    override func loop() {
+        super.loop()
         updateViews()
         spawnViewsForNewEntities()
-        lastUpdate = now
     }
-
+    
     private func updateViews() {
         entityViews().forEach { $0.update() }
     }
@@ -84,9 +71,7 @@ class WorldWindow: NSWindow {
     }
     
     private func spawnView(for child: RenderableEntity) {
-        guard let contentView else { return }
         let newView = PixelArtEntityView(representing: child)
-        contentView.addSubview(newView)
-        contentView.subviews = entityViews().sorted { $0.zIndex < $1.zIndex }
+        addSubview(newView)
     }
 }

@@ -6,6 +6,9 @@
 "about.mailMessage" = "另外，欢迎直接联系我们，我们喜欢垂直反馈!";
 "about.privacyPolicy" = "隐私条款";
 "appName" = "桌面宠物";
+"backgrounds.BackgroundMountainDay" = "蒙塔尼亚，乔尔诺";
+"backgrounds.BackgroundMountainNight" = "蒙塔尼亚, 诺特";
+"backgrounds.title" = "背景图";
 "cancel" = "取消";
 "cheats.enable" = "激活";
 "cheats.invalidCode" = "好奇吗？加入我们的 Discord!";
@@ -52,6 +55,8 @@
 "menu.show" = "显示宠物";
 "no" = "不";
 "ok" = "Ok";
+"onboarding.title" = "欢迎！";
+"onboarding.message" = "这是一个用于放松和冥想的应用程序...挑选您喜欢的角色，并在您学习或工作时在设备屏幕上漫步和愚弄，它们会让您保持陪伴！";
 "page.about" = "信息";
 "page.contributors" = "贡献者";
 "page.help" = "帮助";

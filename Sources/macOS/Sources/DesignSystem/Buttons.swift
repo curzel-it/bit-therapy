@@ -14,7 +14,7 @@ extension View {
 
 private struct ButtonStyleMod: ViewModifier {
     let style: CustomButtonStyle
-
+    
     func body(content: Content) -> some View {
         switch style {
         case .regular: content.buttonStyle(RegularButton())

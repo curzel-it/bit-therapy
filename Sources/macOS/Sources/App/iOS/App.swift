@@ -19,8 +19,15 @@ struct MyApp: App {
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    func applicationDidFinishLaunching(_ application: UIApplication) {
+    @Inject private var onScreen: OnScreenCoordinator
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+    ) -> Bool {
         Logger.log("AppDelegate", "Did finish launching")
+        onScreen.show()
+        return true
     }
 }
 

@@ -5,6 +5,7 @@ struct MainScene: Scene {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onboardingHandler()
         }
     }
 }
@@ -14,27 +15,19 @@ private struct ContentView: View {
     @StateObject var viewModel = MainViewModel()
 
     var body: some View {
-        TabView(selection: $viewModel.selectedPage) {
-            ForEach(viewModel.options, id: \.self) { page in
-                contents(of: page)
-                    .tabItem { Label(page.description, systemImage: icon(for: page)) }
-                    .tag(page)
-            }
+        ZStack {
+            contents(of: viewModel.selectedPage)            
+            TabBar(
+                selection: $viewModel.selectedPage,
+                options: viewModel.options
+            )
         }
-        .foregroundColor(.label)
         .environmentObject(viewModel)
         .environmentObject(appState)
     }
     
-    private func icon(for page: AppPage) -> String {
-        switch page {
-        case .about: return "info.circle"
-        case .contributors: return "info.circle"
-        case .petSelection: return "pawprint"
-        case .screensaver: return "binoculars"
-        case .settings: return "gearshape"
-        case .none: return "questionmark.diamond"
-        }
+    private var shouldShowTabBar: Bool {
+        viewModel.selectedPage != .screensaver
     }
     
     @ViewBuilder private func contents(of page: AppPage) -> some View {

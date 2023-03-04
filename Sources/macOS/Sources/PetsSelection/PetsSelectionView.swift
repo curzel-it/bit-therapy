@@ -11,9 +11,7 @@ struct PetsSelectionView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .zero) {
-                #if os(macOS)
                 NewsView()
-                #endif
                 VStack(spacing: .xxl) {
                     MyPets()
                     MorePets().padding(.bottom, .xl)

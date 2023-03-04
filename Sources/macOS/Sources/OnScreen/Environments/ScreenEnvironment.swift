@@ -8,6 +8,7 @@ class ScreenEnvironment: World {
     @Inject var ufoAbductionUseCase: UfoAbductionUseCase
     @Inject private var desktopObstacles: DesktopObstaclesService
     @Inject private var speciesProvider: SpeciesProvider
+    @Inject private var worldElements: WorldElementsService
     
     var hasAnyPets: Bool {
         children.contains { $0 is PetEntity }
@@ -18,6 +19,7 @@ class ScreenEnvironment: World {
 
     init(for screen: Screen) {
         super.init(name: screen.localizedName, bounds: screen.frame)
+        loadAdditionalElements()
         bindPetsOnStage()
         scheduleUfoAbduction()
         scheduleRainyCloud()
@@ -37,9 +39,12 @@ class ScreenEnvironment: World {
 
     func remove(species speciesToRemove: Species) {
         settings.deselect(speciesToRemove.id)
-        children
-            .first { $0.species == speciesToRemove }?
-            .kill()
+        children.first { $0.species == speciesToRemove }?.kill()
+    }
+    
+    private func loadAdditionalElements() {
+        let elements = worldElements.elements(for: self)
+        children.append(contentsOf: elements)
     }
     
     private func observeWindowsIfNeeded() {

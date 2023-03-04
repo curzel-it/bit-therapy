@@ -7,10 +7,11 @@ class AppState: ObservableObject {
 
     @Inject private var storage: AppStateStorage
         
+    @Published var background: String = "BackgroundMountainDay"
     @Published var desktopInteractions: Bool = true
     @Published var gravityEnabled: Bool = true
     @Published var names: [String: String] = [:]
-    @Published var petSize: CGFloat = 0
+    @Published var petSize: CGFloat = PetSize.defaultSize
     @Published var randomEvents: Bool = true
     @Published private(set) var selectedSpecies: [String] = []
     @Published var speedMultiplier: CGFloat = 1
@@ -51,6 +52,7 @@ class AppState: ObservableObject {
     }
 
     private func readFromStorage() {
+        background = storage.background
         desktopInteractions = storage.desktopInteractions
         gravityEnabled = storage.gravityEnabled
         names = storage.names

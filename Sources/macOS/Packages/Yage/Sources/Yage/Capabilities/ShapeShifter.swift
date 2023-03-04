@@ -2,6 +2,7 @@ import SwiftUI
 
 public class ShapeShifter: Capability {
     var animationDuracy: TimeInterval = 1
+    var remainingTime: TimeInterval = 0
     var targetSize: CGSize = .zero
     var delta: CGSize = .zero
 
@@ -13,30 +14,32 @@ public class ShapeShifter: Capability {
             height: size.height - subject.frame.height
         )
         animationDuracy = duracy
+        remainingTime = duracy
         isEnabled = true
     }
 
     override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
-        guard let subject else { return }
-
+        subject?.frame = updatedFrame(given: time)
+        checkCompletion(given: time)
+    }
+    
+    private func updatedFrame(given time: TimeInterval) -> CGRect {
+        guard let subject else { return .zero }
         let delta = CGSize(
             width: time * delta.width / animationDuracy,
             height: time * delta.height / animationDuracy
         )
-        let newFrame = CGRect(
+        return CGRect(
             x: subject.frame.origin.x - delta.width / 2,
             y: subject.frame.origin.y - delta.height / 2,
             width: subject.frame.width + delta.width,
             height: subject.frame.height + delta.height
         )
-        subject.frame = newFrame
-
-        checkCompletion(given: delta)
     }
 
-    private func checkCompletion(given delta: CGSize) {
-        let distance = sqrt(pow(delta.width, 2) + pow(delta.height, 2))
-        if distance < 0.01 {
+    private func checkCompletion(given time: TimeInterval) {
+        remainingTime -= time
+        if remainingTime <= 0.0001 {
             isEnabled = false
         }
     }

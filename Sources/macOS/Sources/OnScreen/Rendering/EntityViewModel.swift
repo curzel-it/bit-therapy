@@ -6,20 +6,25 @@ import SwiftUI
 
 class EntityViewModel: ObservableObject {
     @Inject var assetsProvider: PetsAssetsProvider
+    @Inject var coordinateSystem: CoordinateSystem
     
-    @Published var frame: CGRect = .init(square: 1)
-    @Published var isAlive: Bool = true
-    @Published var image: ImageFrame?
+    @Published private(set) var frame: CGRect = .init(square: 1)
+    @Published private(set) var isAlive: Bool = true
+    @Published private(set) var image: ImageFrame?
     
     var entityId: String { entity.id }
     var isInteractable: Bool { entity.isInteractable }
-    var screenScaleFactor: () -> CGFloat = { 1 }
+    var scaleFactor: CGFloat = 1
+    var windowSize: CGSize { entity.windowSize }
     var zIndex: Int { entity.zIndex }
+    private(set) var interpolationMode: ImageInterpolationMode = .none
     
     private let entity: RenderableEntity
     private var firstMouseClick: Date?
     private var imageCache: [Int: ImageFrame] = [:]
     private let imageInterpolation = ImageInterpolationUseCase()
+    private var isMouseDown = false
+    private var lastDragTranslation: CGSize = .zero
     private var locationOnLastDrag: CGPoint = .zero
     private var locationOnMouseDown: CGPoint = .zero
     private var lastSpriteHash: Int = 0
@@ -41,14 +46,7 @@ extension EntityViewModel {
     
     private func updateFrameIfNeeded() {
         guard !entity.isBeingDragged() else { return }
-        guard let size = max(entity.frame.size, .oneByOne) else { return }
-        frame = CGRect(
-            origin: .zero
-                .offset(x: entity.frame.minX)
-                .offset(y: entity.windowSize.height)
-                .offset(y: -entity.frame.maxY),
-            size: size
-        )
+        frame = coordinateSystem.frame(of: entity)
     }
     
     private func updateImageIfNeeded() {
@@ -63,8 +61,21 @@ extension EntityViewModel {
 
 extension EntityViewModel {
     func mouseDown() {
+        guard !isMouseDown else { return }
+        isMouseDown = true
+        lastDragTranslation = .zero
         locationOnLastDrag = frame.origin
         locationOnMouseDown = frame.origin
+    }
+    
+    func dragGestureChanged(translation: CGSize) {
+        mouseDown()
+        let delta = CGSize(
+            width: translation.width - lastDragTranslation.width,
+            height: translation.height - lastDragTranslation.height
+        )
+        lastDragTranslation = translation
+        mouseDragged(eventDelta: delta, viewDelta: delta)
     }
     
     func mouseDragged(eventDelta: CGSize, viewDelta: CGSize) {
@@ -75,6 +86,8 @@ extension EntityViewModel {
     }
     
     func mouseUp() {
+        guard isMouseDown else { return }
+        isMouseDown = false
         let delta = CGSize(
             width: locationOnLastDrag.x - locationOnMouseDown.x,
             height: locationOnMouseDown.y - locationOnLastDrag.y
@@ -99,14 +112,14 @@ private extension EntityViewModel {
     
     func interpolatedImageForCurrentSprite() -> ImageFrame? {
         guard let asset = assetsProvider.image(sprite: entity.sprite) else { return nil }
-        let interpolationMode = imageInterpolation.interpolationMode(
+        interpolationMode = imageInterpolation.interpolationMode(
             for: asset,
             renderingSize: frame.size,
-            screenScale: screenScaleFactor()
+            screenScale: scaleFactor
         )
         
         return asset
-            .scaled(to: frame.size, with: interpolationMode)
+            .scaled(to: renderingSize(), with: interpolationMode)
             .rotated(by: entity.spriteRotation?.zAngle)
             .flipped(
                 horizontally: entity.spriteRotation?.isFlippedHorizontally ?? false,
@@ -120,5 +133,12 @@ private extension EntityViewModel {
             return true
         }
         return false
+    }
+    
+    private func renderingSize() -> CGSize {
+        CGSize(
+            width: frame.size.width * scaleFactor,
+            height: frame.size.height * scaleFactor
+        )
     }
 }

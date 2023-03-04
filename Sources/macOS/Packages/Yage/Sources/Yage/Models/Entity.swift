@@ -56,6 +56,10 @@ open class Entity: Identifiable {
             $0.update(with: collisions, after: time)
         }
     }
+    
+    open func worldBoundsChanged() {
+        // ...
+    }
 
     // MARK: - State
 

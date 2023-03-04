@@ -1,5 +1,0 @@
-// 
-// Pet Therapy.
-// 
-
-import Foundation

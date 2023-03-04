@@ -1,4 +1,3 @@
-import LaunchAtLogin
 import Schwifty
 import SwiftUI
 
@@ -44,11 +43,12 @@ extension MainScene {
     }
 
     private static func trackAppLaunched() {
+        @Inject var launchAtLogin: LaunchAtLoginUseCase
         let appState = AppState.global
         Tracking.didLaunchApp(
             gravityEnabled: appState.gravityEnabled,
             petSize: appState.petSize,
-            launchAtLogin: LaunchAtLogin.isEnabled,
+            launchAtLogin: launchAtLogin.isEnabled,
             selectedSpecies: appState.selectedSpecies
         )
     }
@@ -74,19 +74,17 @@ private struct ContentView: View {
 
 class MainViewModel: ObservableObject {
     @Published public var selectedPage: AppPage = .petSelection
+    
+    let options: [AppPage] = [.petSelection, .settings, .contributors, .about]
 }
-
-extension AppPage: Tabbable {}
 
 private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
 
-    let options: [AppPage] = [.petSelection, .settings, .contributors, .about]
-
     var body: some View {
         HStack {
-            TabSelector(selection: $viewModel.selectedPage, options: options)
+            TabSelector(selection: $viewModel.selectedPage, options: viewModel.options)
             JoinOurDiscord().padding(.trailing, .md)
         }
     }

@@ -6,6 +6,9 @@
 "about.mailMessage" = "Atau, jangan ragu untuk menghubungi secara langsung, saya suka tanggapan langsung!";
 "about.privacyPolicy" = "Kebijakan Privasi";
 "appName" = "Desktop Pets";
+"backgrounds.BackgroundMountainDay" = "Gunung, Hari";
+"backgrounds.BackgroundMountainNight" = "Gunung, Malam";
+"backgrounds.title" = "Gambar latar belakang";
 "cancel" = "Batalkan";
 "cheats.enable" = "Izinkan";
 "cheats.invalidCode" = "Tertarik? Gabung Discord kami!";
@@ -52,6 +55,8 @@
 "menu.show" = "Tampilkan Peliharaan";
 "no" = "Tidak";
 "ok" = "Ok";
+"onboarding.title" = "Selamat datang!";
+"onboarding.message" = "Ini adalah aplikasi yang dimaksudkan untuk bersantai dan meditasi ... pilih karakter favorit Anda dan tonton mereka berjalan dan bermain -main di layar perangkat Anda saat Anda belajar atau bekerja, mereka akan menemani Anda!";
 "page.about" = "Tentang";
 "page.contributors" = "Kontributor";
 "page.help" = "Bantuan";

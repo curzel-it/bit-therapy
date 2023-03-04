@@ -112,6 +112,7 @@ struct JoinOurDiscord: View {
     var body: some View {
         Image("discordLarge")
             .resizable()
+            .antialiased(true)
             .scaledToFit()
             .frame(width: 115, when: .macOS)
             .frame(height: 28, when: .macOS)

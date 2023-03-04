@@ -2,21 +2,27 @@ import Schwifty
 import Yage
 
 class OnScreenCoordinatorImpl: OnScreenCoordinator {
-    private var environment: DesktopEnvironment?
+    var worlds: [ScreenEnvironment] = []
     
     func show() {
         hide()
         Logger.log("OnScreen", "Starting...")
-        environment = DesktopEnvironment()
+        loadWorlds()
+    }
+    
+    private func loadWorlds() {
+        worlds = Screen.screens
+            .filter { AppState.global.isEnabled(screen: $0) }
+            .map { ScreenEnvironment(for: $0) }
     }
 
     func hide() {
         Logger.log("OnScreen", "Hiding everything...")
-        environment?.kill()
-        environment = nil
+        worlds.forEach { $0.kill() }
+        worlds.removeAll()
     }
 
     func remove(species: Species) {
-        environment?.remove(species: species)
+        worlds.forEach { $0.remove(species: species) }
     }
 }

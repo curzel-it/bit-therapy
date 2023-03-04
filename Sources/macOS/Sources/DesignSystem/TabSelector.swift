@@ -1,15 +1,15 @@
 import Schwifty
 import SwiftUI
 
-protocol Tabbable: Hashable, CustomStringConvertible {
+protocol TabSelectable: Hashable, CustomStringConvertible {
     // ...
 }
 
-struct TabSelector<T: Tabbable>: View {
-    @Binding var selection: T
+struct TabSelector<T: TabSelectable>: View {
+    @Binding private var selection: T
 
-    let spacing: Spacing
-    let options: [T]
+    private let spacing: Spacing
+    private let options: [T]
 
     init(selection: Binding<T>, options: [T], spacing: Spacing = .md) {
         _selection = selection
@@ -20,19 +20,19 @@ struct TabSelector<T: Tabbable>: View {
     var body: some View {
         HStack(spacing: spacing) {
             ForEach(options, id: \.self) { option in
-                TabItem(selection: $selection, value: option)
+                TabSelectorItem(selection: $selection, value: option)
             }
             Spacer()
         }
     }
 }
 
-struct TabItem<T: Tabbable>: View {
+private struct TabSelectorItem<T: TabSelectable>: View {
     @Binding var selection: T
 
     let value: T
     var isSelected: Bool { value == selection }
-    var fgColor: Color { isSelected ? .label : .tertiaryLabel }
+    var fgColor: Color { isSelected ? .label : .labelTertiary }
     let font: Font = .title.bold()
 
     var body: some View {

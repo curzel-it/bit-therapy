@@ -28,6 +28,12 @@ enum Lang {
         static let privacyPolicy = "about.privacyPolicy".localized()
     }
 
+    enum Backgrounds {
+        static let BackgroundMountainDay = "backgrounds.BackgroundMountainDay".localized()
+        static let BackgroundMountainNight = "backgrounds.BackgroundMountainNight".localized()
+        static let title = "backgrounds.title".localized()
+    }
+
     enum Cheats {
         static let enable = "cheats.enable".localized()
         static let invalidCode = "cheats.invalidCode".localized()
@@ -68,6 +74,11 @@ enum Lang {
         static let linkTitle = "donations.linkTitle".localized()
         static let message = "donations.message".localized()
         static let title = "donations.title".localized()
+    }
+
+    enum Onboarding {
+        static let title = "onboarding.title".localized()
+        static let message = "onboarding.message".localized()
     }
 
     enum Page {

@@ -8,6 +8,7 @@ protocol RenderableWorld {
     var name: String { get }
     
     func kill()
+    func set(bounds newBounds: CGRect)
     func update(after: TimeInterval)
 }
 

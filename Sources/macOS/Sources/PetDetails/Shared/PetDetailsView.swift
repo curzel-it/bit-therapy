@@ -4,7 +4,7 @@ import SwiftUI
 import Yage
 
 struct PetDetailsView: View {
-    @StateObject var viewModel: PetDetailsViewModel
+    @StateObject private var viewModel: PetDetailsViewModel
     
     init(isShown: Binding<Bool>, species: Species) {
         _viewModel = StateObject(wrappedValue: PetDetailsViewModel(isShown: isShown, species: species))

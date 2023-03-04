@@ -3,6 +3,7 @@ import Foundation
 import SwiftUI
 
 protocol AppStateStorage {
+    var background: String { get }
     var desktopInteractions: Bool { get }
     var disabledScreens: [String] { get }
     var gravityEnabled: Bool { get }
@@ -17,6 +18,7 @@ protocol AppStateStorage {
 class AppStateStorageImpl: AppStateStorage {
     @Inject private var speciesProvider: SpeciesProvider
     
+    @AppStorage("background") var background: String = "BackgroundMountainDay"
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true
@@ -66,6 +68,10 @@ class AppStateStorageImpl: AppStateStorage {
     private var disposables = Set<AnyCancellable>()
         
     func storeValues(of appState: AppState) {
+        appState.$background
+            .sink { [weak self] in self?.background = $0 }
+            .store(in: &disposables)
+        
         appState.$desktopInteractions
             .sink { [weak self] in self?.desktopInteractions = $0 }
             .store(in: &disposables)

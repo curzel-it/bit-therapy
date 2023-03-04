@@ -1,8 +1,9 @@
+import SwiftUI
 import UIKit
 
 extension UIImage {
     func rotated(by radians: CGFloat?) -> UIImage {
-        guard let radians else { return self }
+        guard let radians, radians != 0 else { return self }
         let rotatedViewBox = UIView(frame: CGRect(origin: CGPoint.zero, size: size))
         let transform = CGAffineTransform(rotationAngle: radians)
         rotatedViewBox.transform = transform

@@ -92,7 +92,7 @@ public extension PetEntity {
 // MARK: - Pet Size
 
 public struct PetSize {
-    public static let defaultSize: CGFloat = 75
-    public static let minSize: CGFloat = 30
+    public static let defaultSize: CGFloat = DeviceRequirement.iOS.isSatisfied ? 50 : 75
+    public static let minSize: CGFloat = 25
     public static let maxSize: CGFloat = 350
 }

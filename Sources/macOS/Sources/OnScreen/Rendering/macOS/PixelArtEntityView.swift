@@ -15,7 +15,7 @@ class PixelArtEntityView: NSImageView, EntityView {
         super.init(frame: CGRect(size: .oneByOne))
         translatesAutoresizingMaskIntoConstraints = false
         imageScaling = .scaleProportionallyUpOrDown
-        viewModel.screenScaleFactor = { [weak self] in self?.window?.backingScaleFactor ?? 1 }
+        loadScaleFactor()
         bindFrame()
         bindImage()
         bindLifecycle()
@@ -54,6 +54,10 @@ class PixelArtEntityView: NSImageView, EntityView {
     
     override func rightMouseUp(with event: NSEvent) {
         viewModel.rightMouseUp(from: window, at: event.locationInWindow)
+    }
+    
+    private func loadScaleFactor() {
+        viewModel.scaleFactor = window?.backingScaleFactor ?? 1
     }
     
     private func bindFrame() {

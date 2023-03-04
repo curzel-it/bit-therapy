@@ -36,9 +36,9 @@ struct HorizontalFiltersView: View {
                 }
                 Spacer()
             }
-            .padding(.leading, .md)
+            .padding(.horizontal, .md)
         }
-        .padding(.leading, .inverseMd)
+        .padding(.horizontal, .inverseMd)
         .onReceive(viewModel.$selectedTag) { tag in
             petsSelection.filterChanged(to: tag == kTagAll ? nil : tag)
         }
@@ -92,11 +92,11 @@ private struct TagView: View {
     }
     
     var background: Color {
-        isSelected ? Color.accent : Color.white.opacity(0.8)
+        isSelected ? .accent : .white.opacity(0.8)
     }
     
     var foreground: Color {
-        isSelected ? Color.white : Color.black.opacity(0.8)
+        isSelected ? .white : .black.opacity(0.8)
     }
     
     var body: some View {
@@ -107,9 +107,7 @@ private struct TagView: View {
             .background(background)
             .cornerRadius(DesignSystem.tagsHeight/2)
             .foregroundColor(foreground)
-            .onTapGesture {
-                viewModel.toggleSelection(tag: tag)
-            }
+            .onTapGesture { viewModel.toggleSelection(tag: tag) }
     }
 }
 

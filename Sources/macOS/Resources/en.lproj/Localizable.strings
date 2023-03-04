@@ -6,6 +6,9 @@
 "about.mailMessage" = "Alternatively, feel free to reach out directly, I love direct feedback!";
 "about.privacyPolicy" = "Privacy Policy";
 "appName" = "Desktop Pets";
+"backgrounds.BackgroundMountainDay" = "Mountain, Day";
+"backgrounds.BackgroundMountainNight" = "Mountain, Notte";
+"backgrounds.title" = "Background";
 "cancel" = "Cancel";
 "cheats.enable" = "Enable";
 "cheats.invalidCode" = "Curious? Join our Discord!";
@@ -52,6 +55,8 @@
 "menu.show" = "Show Pet";
 "no" = "No";
 "ok" = "Ok";
+"onboarding.title" = "Welcome!";
+"onboarding.message" = "This is an app meant for relax and meditation... Pick you favorite characters and watch them walk and fool around on your device screen while you study or work, they'll keep you company!";
 "page.about" = "About";
 "page.contributors" = "Contributors";
 "page.help" = "Help";
