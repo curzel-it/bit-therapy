@@ -3,16 +3,23 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        VStack(spacing: .xl) {
-            LeaveReview().padding(.top, .xl)
-            DonationsView()
-            Spacer()            
-            Socials()
-            PrivacyPolicy()
-            AppVersion()
+        ScrollView {
+            VStack(spacing: .xl) {
+                if DeviceRequirement.iOS.isSatisfied {
+                    Text(Lang.Page.about).font(.boldTitle).positioned(.leading)
+                }
+                LeaveReview().padding(.top, .xl)                
+                if DeviceRequirement.iOS.isSatisfied {
+                    DiscordView()
+                }
+                DonationsView().padding(.bottom, .xl)
+                Socials()
+                PrivacyPolicy()
+                AppVersion()
+            }
+            .multilineTextAlignment(.center)
+            .padding(.md)
         }
-        .multilineTextAlignment(.center)
-        .padding(.md)
     }
 }
 
@@ -74,6 +81,7 @@ private struct LeaveReview: View {
     var body: some View {
         VStack(spacing: .md) {
             Text(Lang.About.leaveReviewMessage)
+                .multilineTextAlignment(.center)
             Button(Lang.About.leaveReview) {
                 URL.visit(urlString: Lang.Urls.appStore)
             }
@@ -88,5 +96,29 @@ private struct DonationsView: View {
             Text(Lang.Donations.title).font(.title3.bold())
             Text(Lang.Donations.message)
         }
+    }
+}
+
+private struct DiscordView: View {
+    var body: some View {
+        VStack(spacing: .md) {
+            Text(Lang.PetSelection.joinDiscord)
+            JoinOurDiscord()
+        }
+    }
+}
+
+struct JoinOurDiscord: View {
+    var body: some View {
+        Image("discordLarge")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 115, when: .macOS)
+            .frame(height: 28, when: .macOS)
+            .frame(height: DesignSystem.buttonsHeight, when: .iOS)
+            .positioned(.horizontalCenter, when: .iOS)
+            .background(Color("DiscordBrandColor"))
+            .cornerRadius(DesignSystem.buttonsCornerRadius)
+            .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }
     }
 }

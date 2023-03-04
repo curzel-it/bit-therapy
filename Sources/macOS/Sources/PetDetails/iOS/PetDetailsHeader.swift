@@ -11,7 +11,7 @@ private struct Header: View {
     
     var body: some View {
         Text(viewModel.title)
-            .font(.largeTitle.bold())
+            .font(.largeBoldTitle)
             .multilineTextAlignment(.center)
     }
 }

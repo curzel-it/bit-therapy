@@ -23,7 +23,12 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     var gridColums: [GridItem] {
-        [.init(.adaptive(minimum: 100, maximum: 140), spacing: Spacing.lg.rawValue)]
+        [.init(.adaptive(minimum: 100, maximum: 140), spacing: itemsSpacing)]
+    }
+    
+    private var itemsSpacing: CGFloat {
+        let spacing: Spacing = DeviceRequirement.iOS.isSatisfied ? .md : .lg
+        return spacing.rawValue
     }
     
     private let importPet = ImportPetDragAndDropCoordinator()

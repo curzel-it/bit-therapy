@@ -14,7 +14,7 @@ private struct Header: View {
     var body: some View {
         HStack(spacing: .xl) {
             Text(viewModel.title)
-                .font(.largeTitle.bold())
+                .font(.largeBoldTitle)
                 .multilineTextAlignment(.leading)
             Spacer()
             

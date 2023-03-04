@@ -63,6 +63,9 @@
 		1E1CF22A29B2C5E30018A994 /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E1CF22929B2C5E30018A994 /* WindowsDetector */; };
 		1E1CF22B29B2C6030018A994 /* PetsAssets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218E29B0874C00AC9438 /* PetsAssets */; };
 		1E1CF22C29B2C6090018A994 /* Species in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218F29B0874C00AC9438 /* Species */; };
+		1E1CF22F29B353130018A994 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1E1CF22E29B353130018A994 /* Schwifty */; };
+		1E1CF23129B3551D0018A994 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CF23029B3551D0018A994 /* Typography.swift */; };
+		1E1CF23229B355880018A994 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CF23029B3551D0018A994 /* Typography.swift */; };
 		1E9505C629B21342007666BF /* DesktopPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505C529B21342007666BF /* DesktopPetsTests.swift */; };
 		1E9505D029B21342007666BF /* DesktopPetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505CF29B21342007666BF /* DesktopPetsUITests.swift */; };
 		1E9505DC29B21475007666BF /* PetsAssets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218E29B0874C00AC9438 /* PetsAssets */; };
@@ -93,7 +96,6 @@
 		1EB2BBBF29B2AED300E7EF8F /* MouseDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */; };
 		1EB2BBC029B2AF3100E7EF8F /* CustomPetsResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B939B298C78B5001F045E /* CustomPetsResources.swift */; };
 		1EB2BBC129B2B02700E7EF8F /* ShowMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */; };
-		1EB2BBC429B2B0B100E7EF8F /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2BBC329B2B0B100E7EF8F /* Schwifty */; };
 		1ED44B2F29B21A8F0091CDAE /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81A295F533D008EFB28 /* PetsGrid.swift */; };
 		1ED44B3029B21A900091CDAE /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
 		1ED44B3129B21A900091CDAE /* DeletePetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89C11E29B1F78800C0EDB9 /* DeletePetUseCase.swift */; };
@@ -221,6 +223,7 @@
 		1E1CF22229B2BCF00018A994 /* ScreensaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensaverView.swift; sourceTree = "<group>"; };
 		1E1CF22629B2C32B0018A994 /* Mobile Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Mobile Pets.xctestplan"; path = "/Users/curzel/dev/pet-therapy/Sources/macOS/Tests/iOS/Mobile Pets.xctestplan"; sourceTree = "<absolute>"; };
 		1E1CF22729B2C34B0018A994 /* Desktop Pets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Desktop Pets.xctestplan"; sourceTree = "<group>"; };
+		1E1CF23029B3551D0018A994 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		1E25273A2989AB4C00756762 /* AppStateStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateStorage.swift; sourceTree = "<group>"; };
 		1E25273C2989ABC300756762 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		1E2AC73F290AA941003D0AB2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -321,7 +324,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EB2BBC429B2B0B100E7EF8F /* Schwifty in Frameworks */,
+				1E1CF22F29B353130018A994 /* Schwifty in Frameworks */,
 				1ED44B7C29B21AD50091CDAE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1ED44B7E29B21AD50091CDAE /* FirebaseCrashlytics in Frameworks */,
 				1ED44B7429B21AD50091CDAE /* LaunchAtLogin in Frameworks */,
@@ -671,6 +674,7 @@
 				1E95059329B210A6007666BF /* Spacing.swift */,
 				1E95059629B210A6007666BF /* Stacks.swift */,
 				1E95059029B210A6007666BF /* Tabs.swift */,
+				1E1CF23029B3551D0018A994 /* Typography.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -784,13 +788,6 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		1ED44B7029B21AD50091CDAE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		1EF8641429B22E3500413AEA /* macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,20 +842,19 @@
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
-				1E9505B129B21341007666BF /* Desktop Pets.app */,
 				1E9505C129B21342007666BF /* Desktop Pets Tests.xctest */,
 				1E9505CB29B21342007666BF /* Desktop Pets UI Tests.xctest */,
+				1E9505B129B21341007666BF /* Desktop Pets.app */,
 				1E7E218D29B0873700AC9438 /* Docs */,
+				1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */,
+				1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */,
+				1EF863E929B22DD400413AEA /* Mobile Pets.app */,
 				1E7E218E29B0874C00AC9438 /* PetsAssets */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
 				1E7E218F29B0874C00AC9438 /* Species */,
 				1E9505C429B21342007666BF /* Tests */,
 				1E9505CE29B21342007666BF /* Tests UI */,
-				1ED44B7029B21AD50091CDAE /* Frameworks */,
-				1EF863E929B22DD400413AEA /* Mobile Pets.app */,
-				1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */,
-				1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -935,7 +931,7 @@
 				1ED44B7F29B21AD50091CDAE /* Swinject */,
 				1ED44B8129B21AD50091CDAE /* ZIPFoundation */,
 				1ED44B8E29B229180091CDAE /* WindowsDetector */,
-				1EB2BBC329B2B0B100E7EF8F /* Schwifty */,
+				1E1CF22E29B353130018A994 /* Schwifty */,
 			);
 			productName = "Desktop Pets";
 			productReference = 1E9505B129B21341007666BF /* Desktop Pets.app */;
@@ -1091,7 +1087,7 @@
 				1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */,
 				1E89C12429B1F7FF00C0EDB9 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */,
-				1EB2BBC229B2B0B100E7EF8F /* XCRemoteSwiftPackageReference "schwifty" */,
+				1E1CF22D29B353130018A994 /* XCRemoteSwiftPackageReference "schwifty" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -1233,6 +1229,7 @@
 				1E185F9B29B24CA70042E537 /* ImportPetUseCaseImpl.swift in Sources */,
 				1ED44B3C29B21A900091CDAE /* DeletePetButtonCoordinator.swift in Sources */,
 				1ED44B5329B21A900091CDAE /* ImportPetDragAndDropCoordinator.swift in Sources */,
+				1E1CF23129B3551D0018A994 /* Typography.swift in Sources */,
 				1ED44B5E29B21A900091CDAE /* MouseDraggable.swift in Sources */,
 				1ED44B6329B21A900091CDAE /* PetsSelectionView.swift in Sources */,
 				1E185F9929B24CA00042E537 /* ExportPetUseCaseImpl.swift in Sources */,
@@ -1307,6 +1304,7 @@
 				1E185F9729B24A960042E537 /* Dependencies.swift in Sources */,
 				1E185F7229B239530042E537 /* Tracking.swift in Sources */,
 				1E185F8029B246B40042E537 /* PetDetailsView.swift in Sources */,
+				1E1CF23229B355880018A994 /* Typography.swift in Sources */,
 				1EB2BBA229B29C4700E7EF8F /* LeavesTracesWhileWalking.swift in Sources */,
 				1E185F7329B239530042E537 /* Firebase.swift in Sources */,
 				1EB2BBB129B29E2300E7EF8F /* OnScreenCoordinator.swift in Sources */,
@@ -1949,6 +1947,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1E1CF22D29B353130018A994 /* XCRemoteSwiftPackageReference "schwifty" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/schwifty";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.5;
+			};
+		};
 		1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -1981,14 +1987,6 @@
 				minimumVersion = 0.9.9;
 			};
 		};
-		1EB2BBC229B2B0B100E7EF8F /* XCRemoteSwiftPackageReference "schwifty" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/curzel-it/schwifty";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.4;
-			};
-		};
 		1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/WindowsDetector";
@@ -2017,9 +2015,9 @@
 			package = 1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */;
 			productName = WindowsDetector;
 		};
-		1EB2BBC329B2B0B100E7EF8F /* Schwifty */ = {
+		1E1CF22E29B353130018A994 /* Schwifty */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EB2BBC229B2B0B100E7EF8F /* XCRemoteSwiftPackageReference "schwifty" */;
+			package = 1E1CF22D29B353130018A994 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
 		};
 		1ED44B7129B21AD50091CDAE /* Yage */ = {

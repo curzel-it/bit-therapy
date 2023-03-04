@@ -15,10 +15,11 @@ struct PetDetailsView: View {
             viewModel.header()
             AnimatedPreview()
             About().padding(.top, .lg)
+            if DeviceRequirement.iOS.isSatisfied { Spacer() }
             Footer()
         }
         .padding(.lg)
-        .frame(width: 450)
+        .frame(width: 450, when: .macOS)
         .onAppear { viewModel.didAppear() }
         .environmentObject(viewModel)
     }
@@ -54,21 +55,23 @@ private struct AnimatedPreview: View {
 private struct Footer: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
+    var axis: Axis.Set {
+        DeviceRequirement.iOS.isSatisfied ? .vertical : .horizontal
+    }
+    
     var body: some View {
-        VStack {
-            HStack {
-                if viewModel.canSelect {
-                    Button(Lang.PetSelection.addPet, action: viewModel.selected)
-                        .buttonStyle(.regular)
-                }
-                if viewModel.canRemove {
-                    Button(Lang.remove, action: viewModel.remove)
-                        .buttonStyle(.regular)
-                }
-                
-                Button(Lang.cancel, action: viewModel.close)
-                    .buttonStyle(.text)
+        VHStack(axis) {
+            if viewModel.canSelect {
+                Button(Lang.PetSelection.addPet, action: viewModel.selected)
+                    .buttonStyle(.regular)
             }
+            if viewModel.canRemove {
+                Button(Lang.remove, action: viewModel.remove)
+                    .buttonStyle(.regular)
+            }
+            
+            Button(Lang.cancel, action: viewModel.close)
+                .buttonStyle(.text)
         }
     }
 }

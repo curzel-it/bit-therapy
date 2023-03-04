@@ -67,7 +67,7 @@ private struct GridAndFiltersVerticallyStacked: View {
     @EnvironmentObject var viewModel: PetsSelectionViewModel
     
     var body: some View {
-        VStack {
+        VStack(spacing: .lg) {
             HorizontalFiltersView()
             PetsGrid(
                 columns: viewModel.gridColums,

@@ -35,10 +35,10 @@ private class PetPreviewViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
     
+    @Published var title = ""
+    
     let species: Species
     var previewImage: ImageFrame?
-    
-    @Published var title = ""
     
     private var disposables = Set<AnyCancellable>()
     

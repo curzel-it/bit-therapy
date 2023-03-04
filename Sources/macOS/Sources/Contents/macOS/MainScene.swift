@@ -87,7 +87,7 @@ private struct Header: View {
     var body: some View {
         HStack {
             TabSelector(selection: $viewModel.selectedPage, options: options)
-            JoinOurDiscord()
+            JoinOurDiscord().padding(.trailing, .md)
         }
     }
 }
@@ -120,14 +120,3 @@ private struct PageTitle: View {
     }
 }
 
-private struct JoinOurDiscord: View {
-    var body: some View {
-        Image("discordLarge")
-            .resizable()
-            .antialiased(true)
-            .frame(width: 115, height: 28)
-            .cornerRadius(DesignSystem.defaultCornerRadius)
-            .padding(.trailing, .md)
-            .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }
-    }
-}

@@ -1,3 +1,4 @@
+import Schwifty
 import SwiftUI
 
 enum CustomButtonStyle {
@@ -30,7 +31,7 @@ private struct RegularButton: ButtonStyle {
             .modifier(BaseButton())
             .background(Color.accent)
             .foregroundColor(.white)
-            .cornerRadius(DesignSystem.defaultCornerRadius)
+            .cornerRadius(DesignSystem.buttonsCornerRadius)
             .opacity(configuration.isPressed ? 0.5 : 1)
     }
 }
@@ -55,5 +56,6 @@ private struct BaseButton: ViewModifier {
             .font(.headline)
             .frame(height: DesignSystem.buttonsHeight)
             .padding(.horizontal, .md)
+            .positioned(.horizontalCenter, when: .iPhone)
     }
 }

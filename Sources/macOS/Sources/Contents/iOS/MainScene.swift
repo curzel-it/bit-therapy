@@ -54,27 +54,3 @@ class MainViewModel: ObservableObject {
     
     let options: [AppPage] = [.petSelection, .screensaver, .settings, .about]
 }
-
-private struct PageTitle: View {
-    @EnvironmentObject var appState: AppState
-    @EnvironmentObject var viewModel: MainViewModel
-
-    var body: some View {
-        Text(viewModel.selectedPage.description)
-            .textAlign(.center)
-            .font(.largeTitle)
-            .padding()
-    }
-}
-
-private struct JoinOurDiscord: View {
-    var body: some View {
-        Image("discordLarge")
-            .resizable()
-            .antialiased(true)
-            .frame(width: 115, height: 28)
-            .cornerRadius(DesignSystem.defaultCornerRadius)
-            .padding(.trailing, .md)
-            .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }
-    }
-}
