@@ -73,7 +73,7 @@ private struct ContentView: View {
 }
 
 class MainViewModel: ObservableObject {
-    @Published public var selectedPage: AppPage = .home
+    @Published public var selectedPage: AppPage = .petSelection
 }
 
 extension AppPage: Tabbable {}
@@ -82,7 +82,7 @@ private struct Header: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var viewModel: MainViewModel
 
-    let options: [AppPage] = [.home, .settings, .contributors, .about]
+    let options: [AppPage] = [.petSelection, .settings, .contributors, .about]
 
     var body: some View {
         HStack {
@@ -100,7 +100,8 @@ private struct PageContents: View {
         switch viewModel.selectedPage {
         case .about: AboutView()
         case .contributors: ContributorsView()
-        case .home: PetsSelectionView()
+        case .petSelection: PetsSelectionView()
+        case .screensaver: ScreensaverView()
         case .settings: SettingsView()
         case .none: EmptyView()
         }

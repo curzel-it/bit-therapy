@@ -55,8 +55,8 @@
 "page.about" = "Tentang";
 "page.contributors" = "Kontributor";
 "page.help" = "Bantuan";
-"page.home" = "Hewan Peliharaan";
-"page.news" = "Berita";
+"page.screensaver" = "Santai";
+"page.petSelection" = "Hewan Peliharaan";
 "page.settings" = "Pengaturan";
 "petSelection.addPet" = "Tambahkan ke layar";
 "petSelection.designedBy" = "Dirancang oleh";
@@ -64,7 +64,7 @@
 "petSelection.joinDiscord" = "Masih sepi dan sepi, tapi kami juga punya server Discord!";
 "petSelection.morePets" = "Hewan peliharaan lainnya:";
 "petSelection.petSelection" = "Pilih Peliharaan";
-"petSelection.yourPets" = "Hewan peliharaan di layar:";
+"petSelection.yourPets" = "Terpilih";
 "remove" = "Hapus";
 "reset" = "Atur ulang";
 "screen" = "Layar";

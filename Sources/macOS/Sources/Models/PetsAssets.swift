@@ -10,13 +10,7 @@ protocol PetsAssetsProvider {
     func reloadAssets()
 }
 
-protocol ImageLoader {
-    func image(contentsOf url: URL) -> ImageFrame?
-}
-
-class PetsAssetsProviderImpl: PetsAssetsProvider {
-    @Inject private var imageLoader: ImageLoader
-    
+class PetsAssetsProviderImpl: PetsAssetsProvider {    
     private var allAssetsUrls: [URL] = []
     private var sortedAssetsByKey: [String: [Asset]] = [:]
     
@@ -37,7 +31,7 @@ class PetsAssetsProviderImpl: PetsAssetsProvider {
     func image(sprite: String?) -> ImageFrame? {
         guard let sprite else { return nil }
         guard let url = url(sprite: sprite) else { return nil }
-        return imageLoader.image(contentsOf: url)
+        return ImageFrame(contentsOf: url)
     }
     
     func allAssets(for species: String) -> [URL] {

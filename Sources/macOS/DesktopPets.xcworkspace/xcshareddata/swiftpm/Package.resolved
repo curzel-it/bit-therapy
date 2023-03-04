@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/curzel-it/NotAGif",
       "state" : {
-        "revision" : "a5ecdd2135618a384840aa8baa5aa31801376fd3",
-        "version" : "1.0.7"
+        "revision" : "cdcff2cd114aac80724b562cd5305df04a7b9995",
+        "version" : "1.0.8"
       }
     },
     {

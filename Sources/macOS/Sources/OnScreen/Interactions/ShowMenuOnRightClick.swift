@@ -19,10 +19,10 @@ extension Entity {
 
 #if os(macOS)
 class ShowMenuOnRightClick: RightClickable {
-    weak var lastWindow: NSWindow?
+    weak var lastWindow: SomeWindow?
     
     override func onRightClick(from window: SomeWindow?, at point: CGPoint) {
-        lastWindow = event.window
+        lastWindow = window
         lastWindow?.contentView?.menu = petMenu()
     }
 

@@ -98,6 +98,19 @@ extension Lang {
     }
 }
 
+extension AppPage: CustomStringConvertible {
+    var description: String {    
+        switch self {
+        case .about: return Lang.Page.about
+        case .contributors: return Lang.Page.contributors
+        case .petSelection: return Lang.Page.petSelection
+        case .screensaver: return Lang.Page.screensaver
+        case .settings: return Lang.Page.settings
+        case .none: return "???"
+        }
+    }
+}
+
 extension Lang {
     static func name(forMenuItem item: String) -> String {
         "menu.\(item)".localized()

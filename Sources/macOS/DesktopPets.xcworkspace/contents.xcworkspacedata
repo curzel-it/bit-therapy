@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Packages/Yage">
    </FileRef>
+   <FileRef
+      location = "group:/Users/curzel/dev/pet-therapy/Sources/macOS/Tests/iOS/MobilePets.xctestplan">
+   </FileRef>
 </Workspace>

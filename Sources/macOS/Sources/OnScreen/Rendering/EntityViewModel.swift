@@ -33,9 +33,7 @@ class EntityViewModel: ObservableObject {
 
 extension EntityViewModel {
     func update() {
-        if isAlive != entity.isAlive {
-            isAlive = entity.isAlive
-        }
+        isAlive = entity.isAlive
         guard entity.isAlive else { return }
         updateFrameIfNeeded()
         updateImageIfNeeded()

@@ -12,7 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/curzel-it/NotAGif", from: "1.0.7"),
+        .package(url: "https://github.com/curzel-it/NotAGif", from: "1.0.8"),
         .package(url: "https://github.com/curzel-it/schwifty", from: "1.1.1")
     ],
     targets: [

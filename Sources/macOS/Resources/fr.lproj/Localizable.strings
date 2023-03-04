@@ -55,8 +55,8 @@
 "page.about" = "À propos";
 "page.contributors" = "Contributors";
 "page.help" = "Aide";
-"page.home" = "Animaux";
-"page.news" = "Nouveautés";
+"page.screensaver" = "Regarder";
+"page.petSelection" = "Animaux";
 "page.settings" = "Paramètres";
 "petSelection.addPet" = "Ajouter à l'écran";
 "petSelection.designedBy" = "Conçu par";
@@ -64,7 +64,7 @@
 "petSelection.joinDiscord" = "C'est encore calme et désert, mais nous avons un serveur Discord !";
 "petSelection.morePets" = "Plus d'animaux";
 "petSelection.petSelection" = "Sélectionner les animaux";
-"petSelection.yourPets" = "Sur l'écran";
+"petSelection.yourPets" = "Choisi";
 "remove" = "Retirer";
 "reset" = "Réinitialiser";
 "screen" = "Écran";

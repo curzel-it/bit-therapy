@@ -54,20 +54,47 @@ private struct MorePets: View {
     var body: some View {
         VStack(spacing: .md) {
             Title(text: Lang.PetSelection.morePets)
-            HStack {
-                VStack {
-                    PetsGrid(
-                        columns: viewModel.gridColums,
-                        species: viewModel.unselectedSpecies
-                    )
-                    Spacer()
-                }
-                .frame(minWidth: nil)
-                .frame(maxWidth: .infinity)
-                VStack {
-                    FiltersView().frame(width: 150)
-                    Spacer()
-                }
+            if DeviceRequirement.macOS.isSatisfied || DeviceRequirement.iPad.isSatisfied {
+                GridAndFiltersSideToSide()
+            } else {
+                GridAndFiltersVerticallyStacked()
+            }
+        }
+    }
+}
+
+private struct GridAndFiltersVerticallyStacked: View {
+    @EnvironmentObject var viewModel: PetsSelectionViewModel
+    
+    var body: some View {
+        VStack {
+            HorizontalFiltersView()
+            PetsGrid(
+                columns: viewModel.gridColums,
+                species: viewModel.unselectedSpecies
+            )
+            Spacer()
+        }
+    }
+}
+
+private struct GridAndFiltersSideToSide: View {
+    @EnvironmentObject var viewModel: PetsSelectionViewModel
+    
+    var body: some View {
+        HStack {
+            VStack {
+                PetsGrid(
+                    columns: viewModel.gridColums,
+                    species: viewModel.unselectedSpecies
+                )
+                Spacer()
+            }
+            .frame(minWidth: nil)
+            .frame(maxWidth: .infinity)
+            VStack {
+                VerticalFiltersView().frame(width: 150)
+                Spacer()
             }
         }
     }

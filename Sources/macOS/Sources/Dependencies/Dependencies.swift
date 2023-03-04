@@ -10,6 +10,7 @@ class Dependencies {
         container.registerSingleton(SpeciesProvider.self) { _ in SpeciesProviderImpl() }
         container.registerSingleton(PetsAssetsProvider.self) { _ in PetsAssetsProviderImpl() }
         container.registerSingleton(OnScreenCoordinator.self) { _ in OnScreenCoordinatorImpl() }
+        container.register(DesktopObstaclesService.self) { _ in DesktopObstaclesServiceImpl() }
         container.register(PetDetailsHeaderBuilder.self) { _ in PetDetailsHeaderBuilderImpl() }
         container.register(DeletePetUseCase.self) { _ in DeletePetUseCaseImpl() }
         container.register(DeletePetButtonCoordinator.self) { _ in DeletePetButtonCoordinatorImpl() }

@@ -17,9 +17,7 @@ private struct ContentView: View {
         TabView(selection: $viewModel.selectedPage) {
             ForEach(viewModel.options, id: \.self) { page in
                 contents(of: page)
-                    .tabItem {
-                        Label(page.rawValue, systemImage: "gear")
-                    }
+                    .tabItem { Label(page.description, systemImage: icon(for: page)) }
                     .tag(page)
             }
         }
@@ -28,11 +26,23 @@ private struct ContentView: View {
         .environmentObject(appState)
     }
     
+    private func icon(for page: AppPage) -> String {
+        switch page {
+        case .about: return "info.circle"
+        case .contributors: return "info.circle"
+        case .petSelection: return "pawprint"
+        case .screensaver: return "binoculars"
+        case .settings: return "gearshape"
+        case .none: return "questionmark.diamond"
+        }
+    }
+    
     @ViewBuilder private func contents(of page: AppPage) -> some View {
         switch page {
         case .about: AboutView()
         case .contributors: ContributorsView()
-        case .home: PetsSelectionView()
+        case .petSelection: PetsSelectionView()
+        case .screensaver: ScreensaverView()
         case .settings: SettingsView()
         case .none: EmptyView()
         }
@@ -40,9 +50,9 @@ private struct ContentView: View {
 }
 
 class MainViewModel: ObservableObject {
-    @Published public var selectedPage: AppPage = .home
+    @Published public var selectedPage: AppPage = .petSelection
     
-    let options: [AppPage] = [.home, .settings, .contributors, .about]
+    let options: [AppPage] = [.petSelection, .screensaver, .settings, .about]
 }
 
 private struct PageTitle: View {

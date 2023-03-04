@@ -55,8 +55,8 @@
 "page.about" = "Informazioni";
 "page.contributors" = "Contributors";
 "page.help" = "Aiuto";
-"page.home" = "Pets";
-"page.news" = "News";
+"page.screensaver" = "Screensaver";
+"page.petSelection" = "Pets";
 "page.settings" = "Impostazioni";
 "petSelection.addPet" = "Aggiungi";
 "petSelection.designedBy" = "Disegnato da";
@@ -64,7 +64,7 @@
 "petSelection.joinDiscord" = "È ancora silenzioso e desolato, ma abbiamo un server Discord!";
 "petSelection.morePets" = "Altri Pets";
 "petSelection.petSelection" = "Scegli pet";
-"petSelection.yourPets" = "Sullo schermo";
+"petSelection.yourPets" = "Selezionati";
 "remove" = "Rimuovi";
 "reset" = "Reset";
 "screen" = "Schermo";

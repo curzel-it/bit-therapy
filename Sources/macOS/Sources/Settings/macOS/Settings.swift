@@ -75,7 +75,7 @@ private struct ScreenSwitch: View {
     }
     
     var body: some View {
-        Toggle(viewModel.screen.localizedName ?? "Default", isOn: $viewModel.isEnabled)
+        Toggle(viewModel.screen.localizedName, isOn: $viewModel.isEnabled)
     }
 }
 

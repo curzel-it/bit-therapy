@@ -55,8 +55,8 @@
 "page.about" = "信息";
 "page.contributors" = "贡献者";
 "page.help" = "帮助";
-"page.home" = "宠物";
-"page.news" = "消息";
+"page.screensaver" = "放松";
+"page.petSelection" = "宠物";
 "page.settings" = "设置";
 "petSelection.addPet" = "添加到屏幕上";
 "petSelection.designedBy" = "设计者";
@@ -64,7 +64,7 @@
 "petSelection.joinDiscord" = "它仍然安静和荒凉，但我们也有一个 Discord 服务器!";
 "petSelection.morePets" = "更多宠物";
 "petSelection.petSelection" = "选择宠物";
-"petSelection.yourPets" = "在屏幕上";
+"petSelection.yourPets" = "已选择";
 "remove" = "移除";
 "reset" = "重置";
 "screen" = "屏幕";

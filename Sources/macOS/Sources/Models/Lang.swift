@@ -74,8 +74,8 @@ enum Lang {
         static let about = "page.about".localized()
         static let contributors = "page.contributors".localized()
         static let help = "page.help".localized()
-        static let home = "page.home".localized()
-        static let news = "page.news".localized()
+        static let screensaver = "page.screensaver".localized()
+        static let petSelection = "page.petSelection".localized()
         static let settings = "page.settings".localized()
     }
 
@@ -129,6 +129,19 @@ extension Lang {
 
         static func about(for id: String) -> String {
             "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
+        }
+    }
+}
+
+extension AppPage: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .about: return Lang.Page.about
+        case .contributors: return Lang.Page.contributors
+        case .petSelection: return Lang.Page.petSelection
+        case .screensaver: return Lang.Page.screensaver
+        case .settings: return Lang.Page.settings
+        case .none: return "???"
         }
     }
 }
