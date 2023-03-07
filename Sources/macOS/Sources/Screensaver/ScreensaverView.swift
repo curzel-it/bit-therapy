@@ -19,7 +19,6 @@ struct ScreensaverView: View {
     
     var body: some View {
         ZStack {
-            Background(size: viewModel.worldBounds.size)
             ForEach(viewModel.entities, id: \.entityId) {
                 ScreensaverEntityView(viewModel: $0)
             }
@@ -74,21 +73,5 @@ private class ScreensaverViewModel: WorldViewModel, ObservableObject {
         let vm = EntityViewModel(representing: entity)
         vm.scaleFactor = Screen.main?.scale ?? 1
         entities.append(vm)
-    }
-}
-
-private struct Background: View {
-    @EnvironmentObject var appState: AppState
-    
-    let size: CGSize
-    
-    var body: some View {
-        Image(appState.background)
-            .interpolation(.none)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: size.width)
-            .frame(height: size.height)
-            .edgesIgnoringSafeArea(.all)
     }
 }

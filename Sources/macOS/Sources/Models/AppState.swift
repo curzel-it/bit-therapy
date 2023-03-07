@@ -7,7 +7,7 @@ class AppState: ObservableObject {
 
     @Inject private var storage: AppStateStorage
         
-    @Published var background: String = "BackgroundMountainDay"
+    @Published var background: String = "BackgroundMountainDynamic"
     @Published var desktopInteractions: Bool = true
     @Published var gravityEnabled: Bool = true
     @Published var names: [String: String] = [:]

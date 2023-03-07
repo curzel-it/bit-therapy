@@ -23,6 +23,7 @@ private class BackgroundsViewModel: ObservableObject {
     @Published private(set) var selectedItem = AppState.global.background
     
     let backgrounds: [String] = [
+        "BackgroundMountainDynamic",
         "BackgroundMountainDay",
         "BackgroundMountainNight"
     ]
@@ -32,8 +33,10 @@ private class BackgroundsViewModel: ObservableObject {
     }
     
     func select(_ item: String) {
-        AppState.global.background = item
-        selectedItem = item
+        withAnimation {
+            AppState.global.background = item
+            selectedItem = item
+        }
     }
 }
 

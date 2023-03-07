@@ -18,7 +18,7 @@ protocol AppStateStorage {
 class AppStateStorageImpl: AppStateStorage {
     @Inject private var speciesProvider: SpeciesProvider
     
-    @AppStorage("background") var background: String = "BackgroundMountainDay"
+    @AppStorage("backgroundName") var background: String = "BackgroundMountainDynamic"
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true

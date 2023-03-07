@@ -17,9 +17,12 @@ struct PetsSelectionView: View {
                     MorePets().padding(.bottom, .xl)
                     viewModel.importView().padding(.bottom, .xxl)
                 }
+                .background(.clear)
             }
             .padding(.md)
+            .background(.clear)
         }
+        .background(.clear)
         .sheet(isPresented: viewModel.showingDetails) {
             if let species = viewModel.openSpecies {
                 PetDetailsView(
@@ -29,6 +32,7 @@ struct PetsSelectionView: View {
             }
         }
         .environmentObject(viewModel)
+        .background(.clear)
     }
 }
 

@@ -27,9 +27,15 @@ private class GroundEntity: Entity {
         guard let world else { return }
         frame = CGRect(
             x: 0,
-            y: world.bounds.height - 100,
+            y: groundLevel(for: world.bounds.size),
             width: world.bounds.width,
             height: 50
         )
+    }
+    
+    private func groundLevel(for size: CGSize) -> CGFloat {
+        if size.width > size.height { return size.height - 100 }
+        if size.height / size.width > 1.7 { return size.height * 0.75 }
+        return size.height - 200
     }
 }
