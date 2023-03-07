@@ -12,14 +12,14 @@ struct PetDetailsView: View {
     
     var body: some View {
         VStack(spacing: .xl) {
-            viewModel.header()
+            PetDetailsHeader()
             AnimatedPreview()
             About().padding(.top, .lg)
             if DeviceRequirement.iOS.isSatisfied { Spacer() }
             Footer()
         }
         .padding(.lg)
-        .frame(width: 450, when: .macOS)
+        .frame(when: .macOS, width: 450)
         .onAppear { viewModel.didAppear() }
         .environmentObject(viewModel)
     }
@@ -56,7 +56,7 @@ private struct Footer: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
     var axis: Axis.Set {
-        DeviceRequirement.iOS.isSatisfied ? .vertical : .horizontal
+        DeviceRequirement.allSatisfied(.iOS, .portrait) ? .vertical : .horizontal
     }
     
     var body: some View {

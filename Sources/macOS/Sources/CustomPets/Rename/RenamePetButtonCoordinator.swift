@@ -2,10 +2,18 @@ import Foundation
 import Schwifty
 import Swinject
 import SwiftUI
+import Yage
 
-class RenamePetButtonCoordinator {
-    func view(for speciesId: String) -> AnyView {
-        let vm = RenamePetButtonViewModel(speciesId: speciesId)
+protocol RenamePetButtonCoordinator {
+    func view(for species: Species) -> AnyView
+}
+
+class RenamePetButtonCoordinatorImpl: RenamePetButtonCoordinator {
+    func view(for species: Species) -> AnyView {
+        guard DeviceRequirement.macOS.isSatisfied else {
+            return AnyView(EmptyView())
+        }
+        let vm = RenamePetButtonViewModel(speciesId: species.id)
         return AnyView(
             RenamePetButton(viewModel: vm)
         )

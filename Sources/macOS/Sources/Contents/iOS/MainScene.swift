@@ -58,26 +58,29 @@ private class MainViewModel: ObservableObject {
     @Published public var selectedPage: AppPage = .petSelection
     
     let options: [AppPage] = [.petSelection, .screensaver, .settings, .about]
+    
+    var backgroundOverlay: Color {
+        selectedPage == .screensaver ? .clear : .background.opacity(0.2)
+    }
+    
+    var backgroundImage: String {
+        AppState.global.background
+    }
 }
 
 private struct Background: View {
-    @EnvironmentObject private var appState: AppState
-    @EnvironmentObject private var mainViewModel: MainViewModel
-    
-    private var overlayColor: Color {
-        mainViewModel.selectedPage == .screensaver ? .clear : .background.opacity(0.2)
-    }
+    @EnvironmentObject private var viewModel: MainViewModel
         
     var body: some View {
         GeometryReader { geometry in
-            Image(appState.background)
+            Image(viewModel.backgroundImage)
                 .interpolation(.none)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: geometry.size.width + geometry.safeAreaInsets.horizontal)
                 .frame(height: geometry.size.height + geometry.safeAreaInsets.vertical)
                 .edgesIgnoringSafeArea(.all)
-                .overlay(overlayColor)
+                .overlay(viewModel.backgroundOverlay)
         }
     }
 }

@@ -30,7 +30,6 @@ class PetDetailsViewModel: ObservableObject {
         max(3, species.fps)
     }
     
-    private let renamePet = RenamePetButtonCoordinator()
     private var appState: AppState { AppState.global }
     private var disposables = Set<AnyCancellable>()
 
@@ -39,10 +38,6 @@ class PetDetailsViewModel: ObservableObject {
         self.speciesAbout = Lang.Species.about(for: species.id)
         self.species = species
         self.bindTitle()
-    }
-    
-    @ViewBuilder func header() -> some View {
-        headerBuilder.build(with: self)
     }
     
     func close() {
@@ -70,10 +65,6 @@ class PetDetailsViewModel: ObservableObject {
             price: nil,
             purchased: false
         )
-    }
-    
-    func renameButton() -> some View {
-        renamePet.view(for: species.id)
     }
     
     private func bindTitle() {

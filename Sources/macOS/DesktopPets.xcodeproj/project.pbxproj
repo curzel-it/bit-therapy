@@ -46,7 +46,6 @@
 		1E185F7329B239530042E537 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AACB529716CB9007531DF /* Firebase.swift */; };
 		1E185F7D29B246120042E537 /* RenamePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AA9D2992F2D2008C64A2 /* RenamePetButtonCoordinator.swift */; };
 		1E185F8029B246B40042E537 /* PetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81B295F533D008EFB28 /* PetDetailsView.swift */; };
-		1E185F8229B246D70042E537 /* PetDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F8129B246D70042E537 /* PetDetailsHeader.swift */; };
 		1E185F8529B247FA0042E537 /* PetDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */; };
 		1E185F9329B24A520042E537 /* DeletePetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9229B24A520042E537 /* DeletePetUseCaseImpl.swift */; };
 		1E185F9429B24A550042E537 /* DeletePetUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F9029B24A3D0042E537 /* DeletePetUseCaseImpl.swift */; };
@@ -72,6 +71,7 @@
 		1E1CF23229B355880018A994 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CF23029B3551D0018A994 /* Typography.swift */; };
 		1E50024A29B7C50C00F6C9B8 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024929B7C50C00F6C9B8 /* Blur.swift */; };
 		1E50024B29B7C50C00F6C9B8 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024929B7C50C00F6C9B8 /* Blur.swift */; };
+		1E50024C29B7D7B200F6C9B8 /* PetDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */; };
 		1E8D068029B4D6DF009C2B34 /* WorldElementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D067F29B4D6DF009C2B34 /* WorldElementsService.swift */; };
 		1E8D068129B4D6DF009C2B34 /* WorldElementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D067F29B4D6DF009C2B34 /* WorldElementsService.swift */; };
 		1E8D068329B4D6E5009C2B34 /* WorldElementsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D068229B4D6E5009C2B34 /* WorldElementsServiceImpl.swift */; };
@@ -239,7 +239,6 @@
 		1E09B0AC29B4C89A008967F5 /* CoordinateSystemImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystemImpl.swift; sourceTree = "<group>"; };
 		1E185F4C29B231B90042E537 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		1E185F6929B238340042E537 /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
-		1E185F8129B246D70042E537 /* PetDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsHeader.swift; sourceTree = "<group>"; };
 		1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsHeader.swift; sourceTree = "<group>"; };
 		1E185F9029B24A3D0042E537 /* DeletePetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePetUseCaseImpl.swift; sourceTree = "<group>"; };
 		1E185F9229B24A520042E537 /* DeletePetUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePetUseCaseImpl.swift; sourceTree = "<group>"; };
@@ -476,36 +475,11 @@
 		1E185F7429B2450E0042E537 /* PetDetails */ = {
 			isa = PBXGroup;
 			children = (
-				1E185F7629B245160042E537 /* iOS */,
-				1E185F7529B245130042E537 /* macOS */,
-				1E185F7729B2451B0042E537 /* Shared */,
-			);
-			path = PetDetails;
-			sourceTree = "<group>";
-		};
-		1E185F7529B245130042E537 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
 				1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		1E185F7629B245160042E537 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				1E185F8129B246D70042E537 /* PetDetailsHeader.swift */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		1E185F7729B2451B0042E537 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
 				1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */,
 				1E36C81B295F533D008EFB28 /* PetDetailsView.swift */,
 			);
-			path = Shared;
+			path = PetDetails;
 			sourceTree = "<group>";
 		};
 		1E185F8629B249A90042E537 /* Delete */ = {
@@ -1413,12 +1387,12 @@
 				1E185F7129B239340042E537 /* PetPreview.swift in Sources */,
 				1E09B0A629B3A3E5008967F5 /* WorldViewModel.swift in Sources */,
 				1EFECB5A29B72C2E00C7A028 /* NewsView.swift in Sources */,
-				1E185F8229B246D70042E537 /* PetDetailsHeader.swift in Sources */,
 				1E1CF22429B2BCF40018A994 /* ScreensaverView.swift in Sources */,
 				1E185F4F29B233D00042E537 /* AboutView.swift in Sources */,
 				1E185F5029B233D00042E537 /* ContributorsView.swift in Sources */,
 				1EFECB4329B65E1700C7A028 /* ScreensaverEntityView.swift in Sources */,
 				1E185F9F29B24CBE0042E537 /* ExportPetUseCaseImpl.swift in Sources */,
+				1E50024C29B7D7B200F6C9B8 /* PetDetailsHeader.swift in Sources */,
 				1E185F5329B2348A0042E537 /* Buttons.swift in Sources */,
 				1E185FA129B24D2C0042E537 /* ImportPetDragAndDropUseCase.swift in Sources */,
 				1E185F9629B24A5D0042E537 /* DeletePetUseCase.swift in Sources */,
@@ -1695,7 +1669,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 102051;
+				CURRENT_PROJECT_VERSION = 102052;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1711,7 +1685,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1731,7 +1705,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 102051;
+				CURRENT_PROJECT_VERSION = 102052;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1747,7 +1721,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2086,7 +2060,7 @@
 			repositoryURL = "https://github.com/curzel-it/schwifty";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.6;
+				minimumVersion = 1.1.7;
 			};
 		};
 		1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {

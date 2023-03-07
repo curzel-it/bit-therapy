@@ -56,6 +56,6 @@ private struct BaseButton: ViewModifier {
             .font(.headline)
             .frame(height: DesignSystem.buttonsHeight)
             .padding(.horizontal, .md)
-            .positioned(.horizontalCenter, when: .iPhone)
+            .positioned(when: .iPhone, align: .horizontalCenter)
     }
 }

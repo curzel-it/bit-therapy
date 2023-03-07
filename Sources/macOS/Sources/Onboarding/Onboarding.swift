@@ -1,3 +1,5 @@
+import NotAGif
+import Schwifty
 import SwiftUI
 
 extension View {
@@ -7,7 +9,7 @@ extension View {
 }
 
 private struct OnboardingMod: ViewModifier {
-    @AppStorage("shouldShowWelcome3") var shouldShowWelcome: Bool = true
+    @AppStorage("shouldShowWelcome") var shouldShowWelcome: Bool = true
     
     func body(content: Content) -> some View {
         content
@@ -18,7 +20,11 @@ private struct OnboardingMod: ViewModifier {
                         .multilineTextAlignment(.center)
                     Text(Lang.Onboarding.message)
                         .multilineTextAlignment(.center)
+                    
                     Spacer()
+                    PetChilling()
+                    Spacer()
+                    
                     Button(Lang.ok, action: close)
                         .buttonStyle(.regular)
                 }
@@ -28,5 +34,24 @@ private struct OnboardingMod: ViewModifier {
     
     private func close() {
         shouldShowWelcome = false
+    }
+}
+
+private struct PetChilling: View {
+    let animationFrames: [ImageFrame]
+    let fps: TimeInterval = 10
+    
+    init() {
+        @Inject var assets: PetsAssetsProvider
+        animationFrames = assets.images(for: "cat_blue", animation: "front")
+    }
+    
+    var body: some View {
+        
+        AnimatedContent(frames: animationFrames, fps: fps) { frame in
+            Image(frame: frame)
+                .pixelArt()
+                .frame(width: 150, height: 150)
+        }
     }
 }

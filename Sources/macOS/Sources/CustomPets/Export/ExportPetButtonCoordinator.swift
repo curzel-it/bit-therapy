@@ -9,6 +9,9 @@ protocol ExportPetButtonCoordinator {
 
 class ExportPetButtonCoordinatorImpl: ExportPetButtonCoordinator {
     func view(for species: Species) -> AnyView {
+        guard DeviceRequirement.macOS.isSatisfied else {
+            return AnyView(EmptyView())
+        }
         let vm = ExportSpeciesButtonViewModel(species: species)
         return AnyView(
             ExportSpeciesButton(viewModel: vm)
