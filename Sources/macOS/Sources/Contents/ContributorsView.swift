@@ -8,7 +8,7 @@ struct ContributorsView: View {
     private let columns = [GridItem(.adaptive(minimum: 250, maximum: 800), spacing: Spacing.xl.rawValue)]
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
                 Title()
                 LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {

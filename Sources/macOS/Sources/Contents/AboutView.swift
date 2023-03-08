@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
                 Title()
                 LeaveReview().padding(.top, .xl)                

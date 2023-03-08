@@ -9,7 +9,7 @@ struct PetsSelectionView: View {
     }
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: .zero) {
                 NewsView()
                 VStack(spacing: .xxl) {

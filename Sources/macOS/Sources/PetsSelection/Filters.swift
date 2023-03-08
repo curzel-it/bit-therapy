@@ -9,7 +9,7 @@ struct VerticalFiltersView: View {
     @StateObject private var viewModel = FiltersViewModel()
         
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 ForEach(viewModel.availableTags, id: \.self) {
                     TagView(tag: $0).positioned(.trailing)
@@ -29,7 +29,7 @@ struct HorizontalFiltersView: View {
     @StateObject private var viewModel = FiltersViewModel()
         
     var body: some View {
-        ScrollView(.horizontal) {
+        ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(viewModel.availableTags, id: \.self) {
                     TagView(tag: $0)
