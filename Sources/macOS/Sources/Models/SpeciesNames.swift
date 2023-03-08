@@ -6,12 +6,14 @@ protocol SpeciesNamesRepository {
 }
 
 class SpeciesNamesRepositoryImpl: SpeciesNamesRepository {
+    @Inject private var appState: AppState
+    
     func currentName(forSpecies species: String) -> String {
-        AppState.global.names[species] ?? Lang.Species.name(for: species)
+        appState.names[species] ?? Lang.Species.name(for: species)
     }
     
     func name(forSpecies species: String) -> AnyPublisher<String, Never> {
-        AppState.global.$names
+        appState.$names
             .map { $0[species] ?? Lang.Species.name(for: species) }
             .eraseToAnyPublisher()
     }

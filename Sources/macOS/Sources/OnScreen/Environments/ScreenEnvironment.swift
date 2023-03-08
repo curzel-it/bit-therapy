@@ -5,6 +5,7 @@ import Yage
 
 class ScreenEnvironment: World {
     @Inject var rainyCloudUseCase: RainyCloudUseCase
+    @Inject var settings: AppState
     @Inject var ufoAbductionUseCase: UfoAbductionUseCase
     @Inject private var desktopObstacles: DesktopObstaclesService
     @Inject private var speciesProvider: SpeciesProvider
@@ -14,7 +15,6 @@ class ScreenEnvironment: World {
         children.contains { $0 is PetEntity }
     }
     
-    private var settings: AppState { AppState.global }
     private var disposables = Set<AnyCancellable>()
 
     init(for screen: Screen) {
@@ -34,7 +34,8 @@ class ScreenEnvironment: World {
     }
     
     func add(pet species: Species) {
-        children.append(PetEntity(of: species, in: self))
+        let entity = PetEntity(of: species, in: self)
+        children.append(entity)
     }
 
     func remove(species speciesToRemove: Species) {
@@ -87,7 +88,7 @@ class ScreenEnvironment: World {
         missingSpecies
             .forEach {
                 if let newSpecies = speciesProvider.by(id: $0) {
-                    children.append(PetEntity(of: newSpecies, in: self))
+                    add(pet: newSpecies)
                 }
             }
     }

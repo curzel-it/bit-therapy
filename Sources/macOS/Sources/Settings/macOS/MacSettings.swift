@@ -17,23 +17,6 @@ struct ScreensOnOffSettings: View {
 }
 
 private struct ScreenSwitch: View {
-    class ViewModel: ObservableObject {
-        @Inject private var onScreen: OnScreenCoordinator
-        let screen: Screen
-        
-        @Published var isEnabled: Bool {
-            didSet {
-                AppState.global.set(screen: screen, enabled: isEnabled)
-                onScreen.show()
-            }
-        }
-        
-        init(screen: Screen) {
-            self.screen = screen
-            self.isEnabled = AppState.global.isEnabled(screen: screen)
-        }
-    }
-    
     @StateObject var viewModel: ViewModel
     
     init(screen: Screen) {
@@ -42,6 +25,26 @@ private struct ScreenSwitch: View {
     
     var body: some View {
         Toggle(viewModel.screen.localizedName, isOn: $viewModel.isEnabled)
+    }
+}
+
+private class ViewModel: ObservableObject {
+    @Inject private var appState: AppState
+    @Inject private var onScreen: OnScreenCoordinator
+    
+    let screen: Screen
+    
+    @Published var isEnabled: Bool {
+        didSet {
+            appState.set(screen: screen, enabled: isEnabled)
+            onScreen.show()
+        }
+    }
+    
+    init(screen: Screen) {
+        @Inject var appState: AppState
+        self.screen = screen
+        self.isEnabled = appState.isEnabled(screen: screen)
     }
 }
 

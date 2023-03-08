@@ -16,7 +16,9 @@ struct BackgroundSettings: View {
 }
 
 private class BackgroundsViewModel: ObservableObject {
-    @Published private(set) var selectedItem = AppState.global.background
+    @Inject private var appState: AppState
+    
+    @Published private(set) var selectedItem = ""
     
     let backgrounds: [String] = [
         "BackgroundMountainDynamic",
@@ -24,13 +26,17 @@ private class BackgroundsViewModel: ObservableObject {
         "BackgroundMountainNight"
     ]
     
+    init() {
+        selectedItem = appState.background
+    }
+    
     func title(for item: String) -> String {
         "backgrounds.\(item)".localized()
     }
     
     func select(_ item: String) {
         withAnimation {
-            AppState.global.background = item
+            appState.background = item
             selectedItem = item
         }
     }

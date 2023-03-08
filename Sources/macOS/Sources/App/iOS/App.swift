@@ -19,6 +19,7 @@ struct MyApp: App {
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    @Inject private var appState: AppState
     @Inject private var onScreen: OnScreenCoordinator
     
     func application(
@@ -30,7 +31,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let bgCommanyKey = "background="
         let bgCommand = CommandLine.arguments.first { $0.starts(with: bgCommanyKey) }
         if let bgName = bgCommand?.replacingOccurrences(of: bgCommanyKey, with: "") {
-            AppState.global.background = bgName
+            appState.background = bgName
         }
 #endif
         onScreen.show()

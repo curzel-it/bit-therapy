@@ -13,7 +13,7 @@ extension Container {
 }
 
 extension Container {
-    static var propertyWrapperResolver: Resolver!
+    static var main: Resolver!
 }
 
 @propertyWrapper
@@ -24,7 +24,7 @@ class Inject<Value> {
     
     var wrappedValue: Value {
         storage ?? {
-            guard let resolver = Container.propertyWrapperResolver else {
+            guard let resolver = Container.main else {
                 fatalError("Missing call to `Dependencies.setup()`")
             }
             guard let value = resolver.resolve(Value.self) else {

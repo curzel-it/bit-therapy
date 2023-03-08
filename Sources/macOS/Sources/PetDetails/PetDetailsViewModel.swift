@@ -9,6 +9,7 @@ protocol PetDetailsHeaderBuilder {
 }
 
 class PetDetailsViewModel: ObservableObject {
+    @Inject private var appState: AppState
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
     @Inject private var headerBuilder: PetDetailsHeaderBuilder
@@ -30,7 +31,6 @@ class PetDetailsViewModel: ObservableObject {
         max(3, species.fps)
     }
     
-    private var appState: AppState { AppState.global }
     private var disposables = Set<AnyCancellable>()
 
     init(isShown: Binding<Bool>, species: Species) {

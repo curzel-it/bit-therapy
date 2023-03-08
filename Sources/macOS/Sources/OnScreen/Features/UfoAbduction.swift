@@ -6,8 +6,9 @@ import Yage
 extension ScreenEnvironment {
     func scheduleUfoAbduction() {
         scheduleRandomly(withinHours: 0..<5) { [weak self] in
-            guard AppState.global.randomEvents else { return }
-            self?.scheduleUfoAbductionNow()
+            guard let self else { return }
+            guard self.settings.randomEvents else { return }
+            self.scheduleUfoAbductionNow()
         }
     }
     
@@ -25,6 +26,8 @@ protocol UfoAbductionUseCase {
 }
 
 class UfoAbductionUseCaseImpl: UfoAbductionUseCase {
+    @Inject private var settings: AppState
+    
     func start(with target: Entity, in world: World, completion: @escaping () -> Void) {
         let ufo = buildUfo(in: world)
         let abduction = ufo.capability(for: UfoAbduction.self)

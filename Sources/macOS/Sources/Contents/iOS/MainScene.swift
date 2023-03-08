@@ -1,15 +1,18 @@
 import Combine
 import Schwifty
 import SwiftUI
+import Swinject
 
 struct MainScene: Scene {
-    @StateObject var appState = AppState.global
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .onboardingHandler()
-                .environmentObject(appState)
+                .environmentObject(appState())
         }
+    }
+    
+    private func appState() -> AppState {
+        Container.main.resolve(AppState.self)!
     }
 }

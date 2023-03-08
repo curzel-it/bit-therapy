@@ -75,6 +75,10 @@
 		1E76531629B8772D002E6301 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531429B8772D002E6301 /* ContentView.swift */; };
 		1E76531729B8C009002E6301 /* BackgroundSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F6929B238340042E537 /* BackgroundSettings.swift */; };
 		1E76531929B8C031002E6301 /* MobileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531829B8C031002E6301 /* MobileSettings.swift */; };
+		1E76531C29B8D864002E6301 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531B29B8D864002E6301 /* Themes.swift */; };
+		1E76531D29B8D864002E6301 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531B29B8D864002E6301 /* Themes.swift */; };
+		1E76531F29B8E069002E6301 /* AppWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531E29B8E069002E6301 /* AppWindowManager.swift */; };
+		1E76532129B8E095002E6301 /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76532029B8E095002E6301 /* MacContentView.swift */; };
 		1E8D068029B4D6DF009C2B34 /* WorldElementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D067F29B4D6DF009C2B34 /* WorldElementsService.swift */; };
 		1E8D068129B4D6DF009C2B34 /* WorldElementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D067F29B4D6DF009C2B34 /* WorldElementsService.swift */; };
 		1E8D068329B4D6E5009C2B34 /* WorldElementsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D068229B4D6E5009C2B34 /* WorldElementsServiceImpl.swift */; };
@@ -271,6 +275,9 @@
 		1E6AA6FB2996F996002245E7 /* ContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsView.swift; sourceTree = "<group>"; };
 		1E76531429B8772D002E6301 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E76531829B8C031002E6301 /* MobileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSettings.swift; sourceTree = "<group>"; };
+		1E76531B29B8D864002E6301 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		1E76531E29B8E069002E6301 /* AppWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowManager.swift; sourceTree = "<group>"; };
+		1E76532029B8E095002E6301 /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
 		1E7B939B298C78B5001F045E /* CustomPetsResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsResources.swift; sourceTree = "<group>"; };
 		1E7D1EA42909C31600CC036B /* MacSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSettings.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
@@ -437,6 +444,8 @@
 			isa = PBXGroup;
 			children = (
 				A6FB7D5828740F8E00AB872E /* MainScene.swift */,
+				1E76531E29B8E069002E6301 /* AppWindowManager.swift */,
+				1E76532029B8E095002E6301 /* MacContentView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -663,8 +672,8 @@
 			isa = PBXGroup;
 			children = (
 				1E25273C2989ABC300756762 /* Dependencies.swift */,
-				1EF8642229B22F5C00413AEA /* SwinjectUtils.swift */,
 				1EFECB5729B72B7600C7A028 /* LaunchAtLogin.swift */,
+				1EF8642229B22F5C00413AEA /* SwinjectUtils.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -684,14 +693,15 @@
 		1E95058D29B210A6007666BF /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				1E95058F29B210A6007666BF /* Buttons.swift */,
 				1E50024929B7C50C00F6C9B8 /* Blur.swift */,
+				1E95058F29B210A6007666BF /* Buttons.swift */,
 				1E95059429B210A6007666BF /* Colors.swift */,
 				1E95059129B210A6007666BF /* Config.swift */,
 				1E95059229B210A6007666BF /* IconButton.swift */,
 				1E95059329B210A6007666BF /* Spacing.swift */,
 				1E95059629B210A6007666BF /* Stacks.swift */,
 				1EFECB3C29B61AB600C7A028 /* TabBar.swift */,
+				1E76531B29B8D864002E6301 /* Themes.swift */,
 				1E1CF23029B3551D0018A994 /* Typography.swift */,
 			);
 			path = DesignSystem;
@@ -1275,6 +1285,7 @@
 				1ED44B4229B21A900091CDAE /* CustomPetsResources.swift in Sources */,
 				1ED44B4A29B21A900091CDAE /* AppPages.swift in Sources */,
 				1ED44B4E29B21A900091CDAE /* DesktopObstaclesService.swift in Sources */,
+				1E76531F29B8E069002E6301 /* AppWindowManager.swift in Sources */,
 				1EFECB4E29B68B0100C7A028 /* Onboarding.swift in Sources */,
 				1ED44B6529B21A900091CDAE /* AppState.swift in Sources */,
 				1EFECB4729B67B1000C7A028 /* Settings.swift in Sources */,
@@ -1301,6 +1312,7 @@
 				1ED44B5E29B21A900091CDAE /* MouseDraggable.swift in Sources */,
 				1E09B0A529B3A3E5008967F5 /* WorldViewModel.swift in Sources */,
 				1ED44B6329B21A900091CDAE /* PetsSelectionView.swift in Sources */,
+				1E76531C29B8D864002E6301 /* Themes.swift in Sources */,
 				1E185F9929B24CA00042E537 /* ExportPetUseCaseImpl.swift in Sources */,
 				1ED44B3729B21A900091CDAE /* NewsView.swift in Sources */,
 				1E50024A29B7C50C00F6C9B8 /* Blur.swift in Sources */,
@@ -1330,6 +1342,7 @@
 				1ED44B3829B21A900091CDAE /* Capabilities.swift in Sources */,
 				1ED44B4C29B21A900091CDAE /* SleepingPlace.swift in Sources */,
 				1ED44B5729B21A900091CDAE /* PixelArtEntityView.swift in Sources */,
+				1E76532129B8E095002E6301 /* MacContentView.swift in Sources */,
 				1ED44B6E29B21A900091CDAE /* PetDetailsViewModel.swift in Sources */,
 				1ED44B5229B21A900091CDAE /* PetsSelectionViewModel.swift in Sources */,
 				1EB2BBAF29B29DE900E7EF8F /* OnScreenCoordinatorImpl.swift in Sources */,
@@ -1417,6 +1430,7 @@
 				1EFECB4329B65E1700C7A028 /* ScreensaverEntityView.swift in Sources */,
 				1E185F9F29B24CBE0042E537 /* ExportPetUseCaseImpl.swift in Sources */,
 				1E50024C29B7D7B200F6C9B8 /* PetDetailsHeader.swift in Sources */,
+				1E76531D29B8D864002E6301 /* Themes.swift in Sources */,
 				1E185F5329B2348A0042E537 /* Buttons.swift in Sources */,
 				1E185FA129B24D2C0042E537 /* ImportPetDragAndDropUseCase.swift in Sources */,
 				1E185F9629B24A5D0042E537 /* DeletePetUseCase.swift in Sources */,

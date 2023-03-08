@@ -1,7 +1,7 @@
 import Schwifty
 import Yage
 
-class OnScreenCoordinatorImpl: OnScreenCoordinator {
+class OnScreenCoordinatorImpl: OnScreenCoordinator {    
     var worlds: [ScreenEnvironment] = []
     
     func show() {
@@ -11,9 +11,7 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     }
     
     private func loadWorlds() {
-        worlds = Screen.screens
-            .filter { AppState.global.isEnabled(screen: $0) }
-            .map { ScreenEnvironment(for: $0) }
+        worlds = Screen.screens.map { ScreenEnvironment(for: $0) }
     }
 
     func hide() {

@@ -5,6 +5,7 @@ import Yage
 class Dependencies {
     static func setup() {
         let container = Container()
+        container.registerSingleton(AppState.self) { _ in AppState() }
         container.registerSingleton(AppStateStorage.self) { _ in AppStateStorageImpl() }
         container.registerSingleton(OnScreenCoordinator.self) { _ in OnScreenCoordinatorImpl() }
         container.registerSingleton(PetsAssetsProvider.self) { _ in PetsAssetsProviderImpl() }
@@ -22,10 +23,11 @@ class Dependencies {
         container.register(LaunchAtLoginUseCase.self) { _ in LaunchAtLoginUseCaseImpl() }
         container.register(RainyCloudUseCase.self) { _ in RainyCloudUseCaseImpl() }
         container.register(RenamePetButtonCoordinator.self) { _ in RenamePetButtonCoordinatorImpl() }
+        container.register(ThemeUseCase.self) { _ in ThemeUseCaseImpl() }
         container.register(WorldElementsService.self) { _ in WorldElementsServiceImpl() }
         container.register(UfoAbductionUseCase.self) { _ in UfoAbductionUseCaseImpl() }
         
-        Container.propertyWrapperResolver = container.synchronize()
+        Container.main = container.synchronize()
         
         Capabilities.discovery = PetsCapabilitiesDiscoveryService()
     }

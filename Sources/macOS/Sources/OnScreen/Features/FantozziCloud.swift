@@ -4,8 +4,9 @@ import Yage
 extension ScreenEnvironment {
     func scheduleRainyCloud() {
         scheduleRandomly(withinHours: 0..<5) { [weak self] in
-            guard AppState.global.randomEvents else { return }
-            guard let self, let victim = self.randomPet() else { return }
+            guard let self else { return }
+            guard self.settings.randomEvents else { return }
+            guard let victim = self.randomPet() else { return }
             self.rainyCloudUseCase.start(target: victim, world: self)
         }
     }

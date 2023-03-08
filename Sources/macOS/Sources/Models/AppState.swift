@@ -3,8 +3,6 @@ import Schwifty
 import SwiftUI
 
 class AppState: ObservableObject {
-    static let global = AppState()
-
     @Inject private var storage: AppStateStorage
         
     @Published var background: String = "BackgroundMountainDynamic"

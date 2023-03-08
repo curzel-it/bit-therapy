@@ -41,6 +41,8 @@ extension World {
 }
 
 class DesktopObstaclesServiceImpl: DesktopObstaclesService {
+    @Inject private var appState: AppState
+    
     private static let windowsDetector = WindowsDetector().started(pollInterval: 1)
     private weak var world: World?
     private var disposables = Set<AnyCancellable>()
@@ -75,7 +77,7 @@ class DesktopObstaclesServiceImpl: DesktopObstaclesService {
                 let newObstacles = self.obstacles(fromWindowFrame: rect)
                 return visibleObstacles + newObstacles
             }
-            .filter { $0.minY > AppState.global.petSize }
+            .filter { $0.minY > appState.petSize }
             .compactMap { WindowObstacle(of: $0, in: world) }
     }
 

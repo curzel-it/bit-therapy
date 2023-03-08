@@ -136,7 +136,7 @@ struct SpeedControl: View {
     @State var text: String = ""
     
     var formattedValue: String {
-        "\(Int(AppState.global.speedMultiplier * 100))%"
+        "\(Int(appState.speedMultiplier * 100))%"
     }
     
     var body: some View {

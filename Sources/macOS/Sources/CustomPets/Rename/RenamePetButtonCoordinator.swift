@@ -51,8 +51,9 @@ private struct RenamePetButton: View {
 }
 
 private class RenamePetButtonViewModel: ObservableObject {
-    @Inject var assets: PetsAssetsProvider
-    @Inject var names: SpeciesNamesRepository
+    @Inject private var appState: AppState
+    @Inject private var assets: PetsAssetsProvider
+    @Inject private var names: SpeciesNamesRepository
     
     @Published var isRenaming = false
     @Published var name: String = ""
@@ -75,7 +76,7 @@ private class RenamePetButtonViewModel: ObservableObject {
     }
     
     func confirm() {
-        AppState.global.rename(species: speciesId, to: name)
+        appState.rename(species: speciesId, to: name)
         cancel()
     }
 }

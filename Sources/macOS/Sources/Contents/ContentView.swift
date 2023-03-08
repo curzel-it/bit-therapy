@@ -16,7 +16,7 @@ struct ContentView: View {
             )
         }
         .environmentObject(viewModel)
-        .preferredColorScheme(appState.preferredColorScheme())
+        .preferredColorScheme(viewModel.colorScheme)
     }
     
     private var shouldShowTabBar: Bool {
@@ -36,9 +36,13 @@ struct ContentView: View {
 }
 
 private class ContentViewModel: ObservableObject {
-    @Published var selectedPage: AppPage = .petSelection
-    @Published var backgroundImage: String
+    @Inject private var appState: AppState
+    @Inject private var theme: ThemeUseCase
+    
     @Published var backgroundBlurRadius: CGFloat
+    @Published var backgroundImage: String = ""
+    @Published var colorScheme: ColorScheme?
+    @Published var selectedPage: AppPage = .petSelection
     
     lazy var options: [AppPage] = {
         if DeviceRequirement.iOS.isSatisfied {
@@ -52,19 +56,32 @@ private class ContentViewModel: ObservableObject {
     
     init() {
         selectedPage = .petSelection
-        backgroundImage = AppState.global.background
         backgroundBlurRadius = 10
+        backgroundImage = appState.background
         bindBackground()
+        bindColorScheme()
     }
     
     private func bindBackground() {
-        AppState.global.$background
+        appState.$background
             .sink { [weak self] in self?.backgroundImage = $0 }
             .store(in: &disposables)
         
         $selectedPage
             .sink { [weak self] in self?.backgroundBlurRadius = $0 != .screensaver ? 10 : 0 }
             .store(in: &disposables)
+    }
+    
+    private func bindColorScheme() {
+        theme.theme()
+            .sink { [weak self] theme in
+                guard let self else { return }
+                withAnimation {
+                    self.colorScheme = theme.colorScheme
+                }
+            }
+            .store(in: &disposables)
+        
     }
 }
 
@@ -82,14 +99,5 @@ private struct Background: View {
                 .edgesIgnoringSafeArea(.all)
                 .blur(radius: viewModel.backgroundBlurRadius)
         }
-    }
-}
-
-private extension AppState {
-    func preferredColorScheme() -> ColorScheme? {
-        let backgroundName = background.lowercased()
-        if backgroundName.contains("day") { return .light }
-        if backgroundName.contains("night") { return .dark }
-        return nil
     }
 }
