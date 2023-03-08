@@ -114,10 +114,9 @@ struct JoinOurDiscord: View {
             .resizable()
             .antialiased(true)
             .scaledToFit()
-            .frame(when: .macOS, width: 115)
-            .frame(when: .macOS, height: 28)
-            .frame(when: .iOS, height: DesignSystem.buttonsHeight)
-            .positioned(when: .iOS, align: .horizontalCenter)
+            .frame(when: .is(.macOS), width: 115, height: 28)
+            .frame(when: .is(.iOS), height: DesignSystem.buttonsHeight)
+            .positioned(when: .is(.iOS), align: .horizontalCenter)
             .background(Color("DiscordBrandColor"))
             .cornerRadius(DesignSystem.buttonsCornerRadius)
             .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }

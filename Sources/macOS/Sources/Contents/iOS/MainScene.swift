@@ -1,3 +1,4 @@
+import Combine
 import Schwifty
 import SwiftUI
 
@@ -55,16 +56,29 @@ private struct ContentView: View {
 }
 
 private class MainViewModel: ObservableObject {
-    @Published public var selectedPage: AppPage = .petSelection
+    @Published var selectedPage: AppPage = .petSelection
+    @Published var backgroundImage: String
+    @Published var backgroundBlurRadius: CGFloat
     
     let options: [AppPage] = [.petSelection, .screensaver, .settings, .about]
     
-    var backgroundOverlay: Color {
-        selectedPage == .screensaver ? .clear : .background.opacity(0.2)
+    private var disposables = Set<AnyCancellable>()
+    
+    init() {
+        selectedPage = .petSelection
+        backgroundImage = AppState.global.background
+        backgroundBlurRadius = 10
+        bindBackground()
     }
     
-    var backgroundImage: String {
-        AppState.global.background
+    private func bindBackground() {
+        AppState.global.$background
+            .sink { [weak self] in self?.backgroundImage = $0 }
+            .store(in: &disposables)
+        
+        $selectedPage
+            .sink { [weak self] in self?.backgroundBlurRadius = $0 != .screensaver ? 10 : 0 }
+            .store(in: &disposables)
     }
 }
 
@@ -80,7 +94,7 @@ private struct Background: View {
                 .frame(width: geometry.size.width + geometry.safeAreaInsets.horizontal)
                 .frame(height: geometry.size.height + geometry.safeAreaInsets.vertical)
                 .edgesIgnoringSafeArea(.all)
-                .overlay(viewModel.backgroundOverlay)
+                .blur(radius: viewModel.backgroundBlurRadius)
         }
     }
 }

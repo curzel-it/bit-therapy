@@ -19,7 +19,7 @@ struct PetDetailsView: View {
             Footer()
         }
         .padding(.lg)
-        .frame(when: .macOS, width: 450)
+        .frame(when: .is(.macOS), width: 450)
         .onAppear { viewModel.didAppear() }
         .environmentObject(viewModel)
     }

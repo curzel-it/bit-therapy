@@ -7,15 +7,25 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
-                if DeviceRequirement.iOS.isSatisfied {
-                    Text(Lang.Page.settings).font(.boldTitle).positioned(.leading)
-                }
+                Title()
                 Switches()
                 ScreensOnOffSettings()
                 BackgroundSettings()
-                FixOnScreenPets().positioned(.leading)
+                FixOnScreenPets()
             }
             .padding(.md)
+        }
+        .frame(when: .any(.macOS, .iPad, .landscape), width: 350)
+        .positioned(.leading)
+    }
+}
+
+private struct Title: View {
+    var body: some View {
+        if DeviceRequirement.iOS.isSatisfied {
+            Text(Lang.Page.settings)
+                .font(.boldTitle)
+                .positioned(.leading)
         }
     }
 }
@@ -42,6 +52,7 @@ struct FixOnScreenPets: View {
             onScreen.show()
         }
         .buttonStyle(.regular)
+        .positioned(.leading)
     }
 }
 
@@ -70,7 +81,7 @@ private struct RandomEventsSwitch: View {
                     .buttonStyle(.text)
             }
             .padding()
-            .frame(width: 450)
+            .frame(when: .is(.macOS), width: 400)
         }
         .positioned(.leading)
     }
@@ -103,8 +114,11 @@ struct SizeControl: View {
     
     var body: some View {
         HStack {
-            Text(Lang.Settings.size).textAlign(.leading).frame(width: 150)
-            TextField(formattedValue, text: $text).frame(width: 100)
+            Text(Lang.Settings.size)
+                .textAlign(.leading)
+            TextField(formattedValue, text: $text)
+                .frame(width: 100)
+                .textFieldStyle(.roundedBorder)
             Spacer()
         }
         .onChange(of: text) { newText in
@@ -129,8 +143,11 @@ struct SpeedControl: View {
     
     var body: some View {
         HStack {
-            Text(Lang.Settings.speed).textAlign(.leading).frame(width: 150)
-            TextField(formattedValue, text: $text).frame(width: 100)
+            Text(Lang.Settings.speed)
+                .textAlign(.leading)
+            TextField(formattedValue, text: $text)
+                .frame(width: 100)
+                .textFieldStyle(.roundedBorder)
             Spacer()
         }
         .onChange(of: text) { newText in
@@ -152,16 +169,14 @@ struct SettingsSwitch: View {
     
     var body: some View {
         HStack {
-            Text(label).textAlign(.leading).frame(width: 150)
-            Toggle("", isOn: value).toggleStyle(.switch)
+            Text(label)
             if let showHelp {
                 Image(systemName: "info.circle")
-                    .font(.title)
-                    .onTapGesture {
-                        showHelp.wrappedValue = true
-                    }
+                    .font(.title2)
+                    .onTapGesture { showHelp.wrappedValue = true }
             }
             Spacer()
+            Toggle("", isOn: value).toggleStyle(.switch)
         }
     }
 }
