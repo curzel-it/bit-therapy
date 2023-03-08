@@ -11,7 +11,7 @@ struct ScreensaverView: View {
         @Inject var onScreen: OnScreenCoordinator
         onScreen.hide()
         onScreen.show()
-        let world = onScreen.worlds.first ?? World(name: "", bounds: .zero)
+        let world = onScreen.worlds.first ?? World(name: "screensaver", bounds: .zero)
         let vm = ScreensaverViewModel(representing: world)
         vm.start()
         _viewModel = StateObject(wrappedValue: vm)
@@ -70,7 +70,7 @@ private class ScreensaverViewModel: WorldViewModel, ObservableObject {
     }
     
     private func add(_ entity: RenderableEntity) {
-        let vm = EntityViewModel(representing: entity)
+        let vm = EntityViewModel(representing: entity, in: .bottomUp)
         vm.scaleFactor = Screen.main?.scale ?? 1
         entities.append(vm)
     }

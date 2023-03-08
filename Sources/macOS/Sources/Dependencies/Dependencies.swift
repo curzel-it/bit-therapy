@@ -11,7 +11,6 @@ class Dependencies {
         container.registerSingleton(SpeciesNamesRepository.self) { _ in SpeciesNamesRepositoryImpl() }
         container.registerSingleton(SpeciesProvider.self) { _ in SpeciesProviderImpl() }
         
-        container.register(CoordinateSystem.self) { _ in CoordinateSystemImpl() }
         container.register(CustomPetsResourcesProvider.self) { _ in CustomPetsResourcesProviderImpl() }
         container.register(DeletePetButtonCoordinator.self) { _ in DeletePetButtonCoordinatorImpl() }
         container.register(DeletePetUseCase.self) { _ in DeletePetUseCaseImpl() }

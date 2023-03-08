@@ -11,8 +11,6 @@
 		1E09B0A629B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A829B4C869008967F5 /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */; };
 		1E09B0A929B4C869008967F5 /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */; };
-		1E09B0AB29B4C888008967F5 /* CoordinateSystemImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0AA29B4C888008967F5 /* CoordinateSystemImpl.swift */; };
-		1E09B0AD29B4C89A008967F5 /* CoordinateSystemImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0AC29B4C89A008967F5 /* CoordinateSystemImpl.swift */; };
 		1E185F4029B22FF20042E537 /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
 		1E185F4129B22FF60042E537 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E219229B0876E00AC9438 /* GoogleService-Info.plist */; };
 		1E185F4229B22FFA0042E537 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
@@ -238,8 +236,6 @@
 /* Begin PBXFileReference section */
 		1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewModel.swift; sourceTree = "<group>"; };
 		1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystem.swift; sourceTree = "<group>"; };
-		1E09B0AA29B4C888008967F5 /* CoordinateSystemImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystemImpl.swift; sourceTree = "<group>"; };
-		1E09B0AC29B4C89A008967F5 /* CoordinateSystemImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystemImpl.swift; sourceTree = "<group>"; };
 		1E185F4C29B231B90042E537 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		1E185F6929B238340042E537 /* BackgroundSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettings.swift; sourceTree = "<group>"; };
 		1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsHeader.swift; sourceTree = "<group>"; };
@@ -780,7 +776,6 @@
 		1EB2BB9C29B29C2C00E7EF8F /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				1E09B0AC29B4C89A008967F5 /* CoordinateSystemImpl.swift */,
 				1E9505A429B211DC007666BF /* ImageManupilation.swift */,
 				1E9505A629B211DC007666BF /* PixelArtEntityView.swift */,
 				1E9505A229B211DC007666BF /* WorldWindow.swift */,
@@ -791,7 +786,6 @@
 		1EB2BB9D29B29C3000E7EF8F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1E09B0AA29B4C888008967F5 /* CoordinateSystemImpl.swift */,
 				1EB2BBBC29B2AB5000E7EF8F /* ImageManipulation.swift */,
 			);
 			path = iOS;
@@ -1329,7 +1323,6 @@
 				1EB2BBB729B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */,
 				1ED44B6D29B21A900091CDAE /* Config.swift in Sources */,
 				1ED44B3229B21A900091CDAE /* FantozziCloud.swift in Sources */,
-				1E09B0AD29B4C89A008967F5 /* CoordinateSystemImpl.swift in Sources */,
 				1ED44B6729B21A900091CDAE /* Stacks.swift in Sources */,
 				1ED44B4529B21A900091CDAE /* AboutView.swift in Sources */,
 				1ED44B4F29B21A900091CDAE /* Animations.swift in Sources */,
@@ -1448,7 +1441,6 @@
 				1E185F5529B2348A0042E537 /* Colors.swift in Sources */,
 				1E185F5229B2348A0042E537 /* Config.swift in Sources */,
 				1EB2BBC029B2AF3100E7EF8F /* CustomPetsResources.swift in Sources */,
-				1E09B0AB29B4C888008967F5 /* CoordinateSystemImpl.swift in Sources */,
 				1E185F4E29B233D00042E537 /* AppPages.swift in Sources */,
 				1E185F6D29B239340042E537 /* Filters.swift in Sources */,
 				1EF863EC29B22DD400413AEA /* App.swift in Sources */,

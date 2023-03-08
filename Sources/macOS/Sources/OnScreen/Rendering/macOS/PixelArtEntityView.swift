@@ -11,7 +11,7 @@ class PixelArtEntityView: NSImageView, EntityView {
     private var disposables = Set<AnyCancellable>()
     
     init(representing entity: RenderableEntity) {
-        viewModel = EntityViewModel(representing: entity)
+        viewModel = EntityViewModel(representing: entity, in: .topDown)
         super.init(frame: CGRect(size: .oneByOne))
         translatesAutoresizingMaskIntoConstraints = false
         imageScaling = .scaleProportionallyUpOrDown

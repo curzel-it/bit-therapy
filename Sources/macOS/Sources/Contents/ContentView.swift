@@ -44,7 +44,7 @@ private class ContentViewModel: ObservableObject {
         if DeviceRequirement.iOS.isSatisfied {
             return [.petSelection, .screensaver, .settings, .about]
         } else {
-            return [.petSelection, .settings, .contributors, .about]
+            return [.petSelection, .screensaver, .settings, .contributors, .about]
         }
     }()
     

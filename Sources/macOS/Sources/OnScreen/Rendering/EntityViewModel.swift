@@ -6,7 +6,6 @@ import SwiftUI
 
 class EntityViewModel: ObservableObject {
     @Inject var assetsProvider: PetsAssetsProvider
-    @Inject var coordinateSystem: CoordinateSystem
     
     @Published private(set) var frame: CGRect = .init(square: 1)
     @Published private(set) var isAlive: Bool = true
@@ -19,6 +18,7 @@ class EntityViewModel: ObservableObject {
     var zIndex: Int { entity.zIndex }
     private(set) var interpolationMode: ImageInterpolationMode = .none
     
+    private let coordinateSystem: CoordinateSystem
     private let entity: RenderableEntity
     private var firstMouseClick: Date?
     private var imageCache: [Int: ImageFrame] = [:]
@@ -29,7 +29,8 @@ class EntityViewModel: ObservableObject {
     private var locationOnMouseDown: CGPoint = .zero
     private var lastSpriteHash: Int = 0
     
-    init(representing entity: RenderableEntity) {
+    init(representing entity: RenderableEntity, in coordinateSystem: CoordinateSystem) {
+        self.coordinateSystem = coordinateSystem
         self.entity = entity
     }
 }
