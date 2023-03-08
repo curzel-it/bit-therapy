@@ -15,7 +15,7 @@ struct PetsSelectionView: View {
                 VStack(spacing: .xxl) {
                     MyPets()
                     MorePets().padding(.bottom, .xl)
-                    viewModel.importView().padding(.bottom, .xxl)
+                    viewModel.importView().padding(.bottom, .xxxxl)
                 }
             }
             .padding(.md)

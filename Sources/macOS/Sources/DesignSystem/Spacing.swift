@@ -23,20 +23,8 @@ extension View {
         modifier(SpacingMod(edges: edges, spacing: spacing))
     }
 
-    func padding(_ spacing: Spacing, when condition: DeviceRequirement) -> AnyView {
-        if condition.isSatisfied {
-            return AnyView(padding(spacing))
-        } else {
-            return AnyView(self)
-        }
-    }
-
-    func padding(_ edges: Edge.Set, _ spacing: Spacing, when condition: DeviceRequirement) -> AnyView {
-        if condition.isSatisfied {
-            return AnyView(padding(edges, spacing))
-        } else {
-            return AnyView(self)
-        }
+    func padding(when condition: DeviceRequirements, _ edges: Edge.Set, _ spacing: Spacing? = nil) -> some View {
+        padding(when: condition, edges, spacing?.rawValue)
     }
 }
 

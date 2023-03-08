@@ -2,8 +2,6 @@ import LaunchAtLogin
 import Schwifty
 import SwiftUI
 
-typealias BackgroundSettings = EmptyView
-
 struct ScreensOnOffSettings: View {
     @State var isOn = true
     

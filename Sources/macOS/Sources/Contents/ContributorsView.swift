@@ -9,16 +9,26 @@ struct ContributorsView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
-                ForEach(vm.contributors) {
-                    ItemView(contributor: $0)
+            VStack(spacing: .xl) {
+                Title()
+                LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
+                    ForEach(vm.contributors) {
+                        ItemView(contributor: $0)
+                    }
                 }
             }
-            .padding(.top, .xl)
-            .padding(.horizontal, .lg)
-            .padding(.bottom, .xxl)
+            .padding(.md)
+            .padding(.bottom, .xxxxl)
         }
         .environmentObject(vm)
+    }
+}
+
+private struct Title: View {
+    var body: some View {
+        Text(Lang.Page.contributors)
+            .font(.boldTitle)
+            .positioned(.leading)
     }
 }
 

@@ -25,24 +25,10 @@ private struct BlurBackgroundMod: ViewModifier {
 }
 
 #if os(macOS)
-private struct Blur: NSViewRepresentable {
-    var style: NSVisualEffectView.Material = .hudWindow
-
-    func makeNSView(context: Context) -> NSVisualEffectView {
-        let view = NSVisualEffectView()
-        view.material = style
-        view.blendingMode = .behindWindow
-        view.state = .active
-        return view
-    }
-
-    func updateNSView(_ view: NSVisualEffectView, context: Context) {
-        view.material = style
-    }
-}
+private typealias Blur = EmptyView
 #else
 private struct Blur: UIViewRepresentable {
-    var style: UIBlurEffect.Style = .systemThinMaterial
+    var style: UIBlurEffect.Style = .regular
 
     func makeUIView(context: Context) -> UIVisualEffectView {
         UIVisualEffectView(effect: UIBlurEffect(style: style))

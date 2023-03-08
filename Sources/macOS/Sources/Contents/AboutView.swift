@@ -5,13 +5,9 @@ struct AboutView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: .xl) {
-                if DeviceRequirement.iOS.isSatisfied {
-                    Text(Lang.Page.about).font(.boldTitle).positioned(.leading)
-                }
+                Title()
                 LeaveReview().padding(.top, .xl)                
-                if DeviceRequirement.iOS.isSatisfied {
-                    DiscordView()
-                }
+                DiscordView()
                 DonationsView().padding(.bottom, .xl)
                 Socials()
                 PrivacyPolicy()
@@ -19,7 +15,16 @@ struct AboutView: View {
             }
             .multilineTextAlignment(.center)
             .padding(.md)
+            .padding(.bottom, .xxxxl)
         }
+    }
+}
+
+private struct Title: View {
+    var body: some View {
+        Text(Lang.Page.about)
+            .font(.boldTitle)
+            .positioned(.leading)
     }
 }
 

@@ -26,6 +26,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         Logger.log("AppDelegate", "Did finish launching")
+#if DEBUG
+        let bgCommanyKey = "background="
+        let bgCommand = CommandLine.arguments.first { $0.starts(with: bgCommanyKey) }
+        if let bgName = bgCommand?.replacingOccurrences(of: bgCommanyKey, with: "") {
+            AppState.global.background = bgName
+        }
+#endif
         onScreen.show()
         return true
     }

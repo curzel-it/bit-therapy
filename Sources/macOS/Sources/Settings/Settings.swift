@@ -5,28 +5,27 @@ struct SettingsView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
                 Title()
                 Switches()
+                FixOnScreenPets()
                 ScreensOnOffSettings()
                 BackgroundSettings()
-                FixOnScreenPets()
             }
             .padding(.md)
+            .padding(.bottom, .xxxxl)
+            .frame(when: .any(.macOS, .iPad, .landscape), width: 350)
+            .positioned(.leading)
         }
-        .frame(when: .any(.macOS, .iPad, .landscape), width: 350)
-        .positioned(.leading)
     }
 }
 
 private struct Title: View {
     var body: some View {
-        if DeviceRequirement.iOS.isSatisfied {
-            Text(Lang.Page.settings)
-                .font(.boldTitle)
-                .positioned(.leading)
-        }
+        Text(Lang.Page.settings)
+            .font(.boldTitle)
+            .positioned(.leading)
     }
 }
 
@@ -119,7 +118,6 @@ struct SizeControl: View {
             TextField(formattedValue, text: $text)
                 .frame(width: 100)
                 .textFieldStyle(.roundedBorder)
-            Spacer()
         }
         .onChange(of: text) { newText in
             guard let value = Float(newText) else { return }
@@ -148,7 +146,6 @@ struct SpeedControl: View {
             TextField(formattedValue, text: $text)
                 .frame(width: 100)
                 .textFieldStyle(.roundedBorder)
-            Spacer()
         }
         .onChange(of: text) { newText in
             guard let value = Int(newText) else { return }

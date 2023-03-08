@@ -10,25 +10,23 @@ protocol TabBarItem: Hashable {
 struct TabBar<T: TabBarItem>: View {
     @Binding private var selection: T
 
-    private let spacing: Spacing
     private let options: [T]
 
-    init(selection: Binding<T>, options: [T], spacing: Spacing = .md) {
+    init(selection: Binding<T>, options: [T]) {
         _selection = selection
-        self.spacing = spacing
         self.options = options
     }
 
     var body: some View {
-        HStack(spacing: spacing) {
+        HStack(spacing: .zero) {
             ForEach(options, id: \.self) { option in
                 TabBarItemView(selection: $selection, item: option)
             }
         }
-        .padding(.horizontal, .sm)
         .backgroundBlur()
         .cornerRadius(DesignSystem.largeCornerRadius)
         .positioned(.bottom)
+        .padding(when: .is(.macOS), .bottom, .lg)
     }
 }
 
@@ -39,6 +37,11 @@ private struct TabBarItemView<T: TabBarItem>: View {
     var icon: String { isSelected ? item.iconSelected : item.icon }
     var isSelected: Bool { item == selection }
     var fgColor: Color { isSelected ? .accent : .labelSecondary }
+    
+    var bgColor: Color {
+        let opacity = DeviceRequirement.macOS.isSatisfied ? 0.8 : 0.05
+        return .background.opacity(opacity)
+    }
     
     var body: some View {
         VStack {
@@ -51,8 +54,10 @@ private struct TabBarItemView<T: TabBarItem>: View {
             Spacer()
         }
         .foregroundColor(fgColor)
-        .frame(width: 64)
-        .frame(height: 56)
+        .frame(width: 60)
+        .frame(height: 60)
+        .padding(.horizontal, .sm)
+        .background(bgColor)
         .onTapGesture {
             withAnimation {
                 selection = item

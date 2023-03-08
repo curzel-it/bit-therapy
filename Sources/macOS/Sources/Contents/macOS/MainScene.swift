@@ -2,22 +2,31 @@ import Schwifty
 import SwiftUI
 
 struct MainScene: Scene {
+    var body: some Scene {
+        WindowGroup {
+            MacContentView()
+        }
+    }
+}
+
+private struct MacContentView: View {
+    @StateObject var appState = AppState.global
+    
     fileprivate static weak var currentWindow: NSWindow?
     fileprivate static let minSize = CGSize(square: 700)
     
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .onWindow {
-                    MainScene.currentWindow = $0
-                }
-        }
+    var body: some View {
+        ContentView()
+            .frame(minWidth: MacContentView.minSize.width)
+            .frame(minHeight: MacContentView.minSize.height)
+            .onWindow { MacContentView.currentWindow = $0 }
+            .environmentObject(appState)
     }
 }
 
 extension MainScene {
     static func show() {
-        if let window = MainScene.currentWindow {
+        if let window = MacContentView.currentWindow {
             window.makeKey()
             window.makeMain()
         } else {
@@ -27,19 +36,30 @@ extension MainScene {
     }
 
     private static func showMainWindow() {
-        let view = NSHostingView(rootView: ContentView())
+        let view = NSHostingView(rootView: MacContentView())
         let window = NSWindow(
-            contentRect: CGRect(origin: CGPoint(x: 400, y: 200), size: MainScene.minSize),
+            contentRect: MainScene.defaultWindowRect(),
             styleMask: [.resizable, .closable, .titled, .miniaturizable],
             backing: .buffered,
             defer: false
         )
-        window.minSize = MainScene.minSize
-        window.title = "Desktop Pets"
+        if let preferredAppearance = AppState.global.preferredAppearance() {
+            window.appearance = preferredAppearance
+        }
+        window.minSize = MacContentView.minSize
+        window.title = Lang.appName
         window.contentView?.addSubview(view)
         view.constrainToFillParent()
-        MainScene.currentWindow = window
+        MacContentView.currentWindow = window
         window.show()
+    }
+    
+    private static func defaultWindowRect() -> CGRect {
+        let center = Screen.main?.frame.center ?? CGPoint(x: 400, y: 200)
+        let size = MacContentView.minSize
+        return CGRect(origin: center, size: size)
+            .offset(x: -size.width/2)
+            .offset(y: -size.height/2)
     }
 
     private static func trackAppLaunched() {
@@ -54,67 +74,13 @@ extension MainScene {
     }
 }
 
-private struct ContentView: View {
-    @StateObject var appState = AppState.global
-    @StateObject var viewModel = MainViewModel()
-
-    var body: some View {
-        VStack(spacing: .zero) {
-            Header()
-            PageContents()
-            Spacer(minLength: 0)
-        }
-        .frame(minWidth: MainScene.minSize.width)
-        .frame(minHeight: MainScene.minSize.height)
-        .foregroundColor(.label)
-        .environmentObject(viewModel)
-        .environmentObject(appState)
+private extension AppState {
+    func preferredAppearance() -> NSAppearance? {
+        let backgroundName = background.lowercased()
+        if backgroundName.contains("day") { return NSAppearance(named: .aqua) }
+        if backgroundName.contains("night") { return NSAppearance(named: .darkAqua) }
+        return nil
     }
 }
 
-class MainViewModel: ObservableObject {
-    @Published public var selectedPage: AppPage = .petSelection
-    
-    let options: [AppPage] = [.petSelection, .settings, .contributors, .about]
-}
-
-private struct Header: View {
-    @EnvironmentObject var appState: AppState
-    @EnvironmentObject var viewModel: MainViewModel
-
-    var body: some View {
-        HStack {
-            TabSelector(selection: $viewModel.selectedPage, options: viewModel.options)
-            JoinOurDiscord().padding(.trailing, .md)
-        }
-    }
-}
-
-private struct PageContents: View {
-    @EnvironmentObject var appState: AppState
-    @EnvironmentObject var viewModel: MainViewModel
-
-    var body: some View {
-        switch viewModel.selectedPage {
-        case .about: AboutView()
-        case .contributors: ContributorsView()
-        case .petSelection: PetsSelectionView()
-        case .screensaver: ScreensaverView()
-        case .settings: SettingsView()
-        case .none: EmptyView()
-        }
-    }
-}
-
-private struct PageTitle: View {
-    @EnvironmentObject var appState: AppState
-    @EnvironmentObject var viewModel: MainViewModel
-
-    var body: some View {
-        Text(viewModel.selectedPage.description)
-            .textAlign(.center)
-            .font(.largeTitle)
-            .padding()
-    }
-}
-
+// TODO: Observe change in background to change window appearance
