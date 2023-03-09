@@ -2,13 +2,13 @@ import Schwifty
 import SwiftUI
 import Yage
 
-open class RightClickable: Capability {
-    open override func install(on subject: Entity) {
+class RightClickable: Capability {
+    override func install(on subject: Entity) {
         super.install(on: subject)
         isEnabled = !subject.isEphemeral
     }
     
-    open func onRightClick(with event: NSEvent) {
+    func onRightClick(from window: SomeWindow?, at point: CGPoint) {
         // ...
     }
 }
@@ -17,11 +17,12 @@ extension Entity {
     var rightClick: RightClickable? { capability(for: RightClickable.self) }
 }
 
+#if os(macOS)
 class ShowMenuOnRightClick: RightClickable {
-    weak var lastWindow: NSWindow?
+    weak var lastWindow: SomeWindow?
     
-    override func onRightClick(with event: NSEvent) {
-        lastWindow = event.window
+    override func onRightClick(from window: SomeWindow?, at point: CGPoint) {
+        lastWindow = window
         lastWindow?.contentView?.menu = petMenu()
     }
 
@@ -65,6 +66,10 @@ class ShowMenuOnRightClick: RightClickable {
     }
 
     @objc func hideAllPets() {
-        OnScreenCoordinator.hide()
+        @Inject var onScreen: OnScreenCoordinator
+        onScreen.hide()
     }
 }
+#else
+class ShowMenuOnRightClick: RightClickable {}
+#endif

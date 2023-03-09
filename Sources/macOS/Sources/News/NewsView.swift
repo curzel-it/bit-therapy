@@ -1,26 +1,47 @@
-import DesignSystem
-import LaunchAtLogin
 import Schwifty
 import SwiftUI
 
 struct NewsView: View {
-    @EnvironmentObject var appState: AppState
-    @AppStorage("shouldShowStartAtLoginAlert") var shouldShowStartAtLoginAlert = true
+    @StateObject private var viewModel = NewsViewModel()
     
     var body: some View {
-        if shouldShowStartAtLoginAlert && !LaunchAtLogin.isEnabled {
+        if viewModel.showStartAtLoginAlert {
             NewsBanner(
                 title: Lang.Settings.launchAtLogin,
                 message: Lang.Settings.launchAtLoginPromo,
-                shown: $shouldShowStartAtLoginAlert,
                 actions: [
-                    .init(title: Lang.no, style: .text),
-                    .init(title: Lang.yes, style: .regular) {
-                        LaunchAtLogin.isEnabled = true
-                    }
+                    .init(title: Lang.no, style: .text, action: viewModel.disableLaunchAtLogin),
+                    .init(title: Lang.yes, style: .regular, action: viewModel.enableLaunchAtLogin)
                 ]
             )
             .padding(.bottom, .xxl)
+        }
+    }
+}
+
+private class NewsViewModel: ObservableObject {
+    @Inject private var launchAtLogin: LaunchAtLoginUseCase
+    
+    @Published var showStartAtLoginAlert: Bool = false
+    
+    @AppStorage("didShowLaunchAtLoginAlert") private var didShowLaunchAtLoginAlert = false
+    
+    init() {
+        showStartAtLoginAlert = !didShowLaunchAtLoginAlert && launchAtLogin.isAvailable && !launchAtLogin.isEnabled
+        didShowLaunchAtLoginAlert = true
+    }
+    
+    func enableLaunchAtLogin() {
+        launchAtLogin.enable()
+        withAnimation {
+            showStartAtLoginAlert = false
+        }
+    }
+    
+    func disableLaunchAtLogin() {
+        launchAtLogin.disable()
+        withAnimation {
+            showStartAtLoginAlert = false
         }
     }
 }
@@ -35,45 +56,42 @@ private struct NewsBannerAction: Identifiable {
 private struct NewsBanner: View {
     let title: String
     let message: String
-    @Binding var shown: Bool
     let actions: [NewsBannerAction]
     
+    var axis: Axis.Set {
+        DeviceRequirement.iPhone.isSatisfied ? .vertical : .horizontal
+    }
+    
     var body: some View {
-        HStack {
+        VHStack(axis) {
             VStack(spacing: .md) {
                 Text(title).font(.headline).textAlign(.leading)
                 Text(message).textAlign(.leading)
             }
-            Spacer()
-            Actions(actions: actions, onSelection: close)
+            if !DeviceRequirement.iPhone.isSatisfied {
+                Spacer()
+            }
+            HStack {
+                Actions(actions: actions)
+            }
         }
         .padding()
-        .background(Color.secondaryBackground)
+        .background(Color.backgroundSecondary)
         .cornerRadius(DesignSystem.largeCornerRadius)
         .overlay(
             RoundedRectangle(cornerRadius: DesignSystem.largeCornerRadius)
-                .stroke(Color.tertiaryLabel, lineWidth: 1)
+                .stroke(Color.labelTertiary, lineWidth: 1)
         )
-    }
-    
-    func close() {
-        withAnimation {
-            shown = false
-        }
     }
 }
 
 private struct Actions: View {
     let actions: [NewsBannerAction]
-    let onSelection: () -> Void
     
     var body: some View {
         ForEach(actions) { action in
-            Button(action.title) {
-                action.action()
-                onSelection()
-            }
-            .buttonStyle(action.style)
+            Button(action.title) { action.action() }
+                .buttonStyle(action.style)
         }
     }
 }

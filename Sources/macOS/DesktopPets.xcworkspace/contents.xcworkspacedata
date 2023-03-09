@@ -5,18 +5,6 @@
       location = "group:DesktopPets.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Packages/CustomPets">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/DependencyInjectionUtils">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/DesignSystem">
-   </FileRef>
-   <FileRef
-      location = "group:Packages/Rendering">
-   </FileRef>
-   <FileRef
       location = "group:Packages/Yage">
    </FileRef>
 </Workspace>

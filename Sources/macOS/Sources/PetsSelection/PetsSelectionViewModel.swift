@@ -1,11 +1,10 @@
 import Combine
-import DependencyInjectionUtils
-import DesignSystem
 import Schwifty
 import SwiftUI
 import Yage
 
 class PetsSelectionViewModel: ObservableObject {
+    @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider
     @Inject private var speciesProvider: SpeciesProvider
     
@@ -25,7 +24,12 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     var gridColums: [GridItem] {
-        [.init(.adaptive(minimum: 100, maximum: 140), spacing: Spacing.lg.rawValue)]
+        [.init(.adaptive(minimum: 100, maximum: 140), spacing: itemsSpacing)]
+    }
+    
+    private var itemsSpacing: CGFloat {
+        let spacing: Spacing = DeviceRequirement.iOS.isSatisfied ? .md : .lg
+        return spacing.rawValue
     }
     
     private let importPet = ImportPetDragAndDropCoordinator()
@@ -33,9 +37,13 @@ class PetsSelectionViewModel: ObservableObject {
     private var disposables = Set<AnyCancellable>()
 
     init() {
+        bindPets()
+    }
+    
+    private func bindPets() {
         Publishers.CombineLatest3(
             speciesProvider.all,
-            AppState.global.$selectedSpecies,
+            appConfig.$selectedSpecies,
             $selectedTag
         )
         .receive(on: DispatchQueue.main)
@@ -58,7 +66,7 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     func isSelected(_ species: Species) -> Bool {
-        AppState.global.isSelected(species.id)
+        appConfig.isSelected(species.id)
     }
     
     func importView() -> AnyView {

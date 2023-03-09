@@ -1,25 +1,44 @@
 import Combine
-import DependencyInjectionUtils
-import DesignSystem
 import Foundation
 import Schwifty
 import SwiftUI
 import Yage
 
-struct FiltersView: View {
+struct VerticalFiltersView: View {
     @EnvironmentObject var petsSelection: PetsSelectionViewModel
     @StateObject private var viewModel = FiltersViewModel()
-    
+        
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack {
                 ForEach(viewModel.availableTags, id: \.self) {
-                    TagView(tag: $0)
-                        .positioned(.trailing)
+                    TagView(tag: $0).positioned(.trailing)
                 }
                 Spacer()
             }
         }
+        .onReceive(viewModel.$selectedTag) { tag in
+            petsSelection.filterChanged(to: tag == kTagAll ? nil : tag)
+        }
+        .environmentObject(viewModel)
+    }
+}
+
+struct HorizontalFiltersView: View {
+    @EnvironmentObject var petsSelection: PetsSelectionViewModel
+    @StateObject private var viewModel = FiltersViewModel()
+        
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(viewModel.availableTags, id: \.self) {
+                    TagView(tag: $0)
+                }
+                Spacer()
+            }
+            .padding(.horizontal, .md)
+        }
+        .padding(.horizontal, .inverseMd)
         .onReceive(viewModel.$selectedTag) { tag in
             petsSelection.filterChanged(to: tag == kTagAll ? nil : tag)
         }
@@ -73,11 +92,11 @@ private struct TagView: View {
     }
     
     var background: Color {
-        isSelected ? Color.accent : Color.white.opacity(0.8)
+        isSelected ? .accent : .white.opacity(0.8)
     }
     
     var foreground: Color {
-        isSelected ? Color.white : Color.black.opacity(0.8)
+        isSelected ? .white : .black.opacity(0.8)
     }
     
     var body: some View {
@@ -88,9 +107,7 @@ private struct TagView: View {
             .background(background)
             .cornerRadius(DesignSystem.tagsHeight/2)
             .foregroundColor(foreground)
-            .onTapGesture {
-                viewModel.toggleSelection(tag: tag)
-            }
+            .onTapGesture { viewModel.toggleSelection(tag: tag) }
     }
 }
 

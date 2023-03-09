@@ -1,5 +1,5 @@
 import Combine
-import DependencyInjectionUtils
+import NotAGif
 import SwiftUI
 import Yage
 
@@ -35,10 +35,10 @@ private class PetPreviewViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
     
-    let species: Species
-    var previewImage: NSImage?
-    
     @Published var title = ""
+    
+    let species: Species
+    var previewImage: ImageFrame?
     
     private var disposables = Set<AnyCancellable>()
     

@@ -2,20 +2,26 @@ import SwiftUI
 
 enum AppPage: String, CaseIterable {
     case about
-    case home
-    case none
     case contributors
+    case none
+    case petSelection
+    case screensaver
     case settings
 }
 
-extension AppPage: CustomStringConvertible {
-    var description: String {
+extension AppPage: TabBarItem {
+    var icon: String {
         switch self {
-        case .about: return Lang.Page.about
-        case .contributors: return Lang.Page.contributors
-        case .home: return Lang.Page.home
-        case .none: return ""
-        case .settings: return Lang.Page.settings
+        case .about: return "info.circle"
+        case .contributors: return "person.2"
+        case .petSelection: return "pawprint"
+        case .screensaver: return "gamecontroller"
+        case .settings: return "gearshape"
+        case .none: return "questionmark.diamond"
         }
     }
+    
+    var iconSelected: String { "\(icon).fill" }
+    
+    var title: String { description }
 }

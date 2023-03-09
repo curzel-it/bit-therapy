@@ -1,5 +1,4 @@
 import Combine
-import DependencyInjectionUtils
 import Foundation
 import Schwifty
 import Yage
@@ -15,6 +14,8 @@ protocol SpeciesProvider {
 }
 
 class SpeciesProviderImpl: SpeciesProvider {
+    @Inject private var appConfig: AppConfig
+    
     lazy var all: CurrentValueSubject<[Species], Never> = {
         let species = allJsonUrls
             .compactMap { try? Data(contentsOf: $0) }
@@ -38,7 +39,7 @@ class SpeciesProviderImpl: SpeciesProvider {
     }
     
     func unregister(_ species: Species) {
-        AppState.global.deselect(species.id)
+        appConfig.deselect(species.id)
         let newSpecies = all.value.filter { $0 != species }
         all.send(newSpecies)
     }

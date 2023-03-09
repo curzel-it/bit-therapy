@@ -2,6 +2,8 @@ import AppKit
 import SwiftUI
 
 class StatusBarCoordinator {
+    @Inject private var onScreen: OnScreenCoordinator
+    
     static let shared = StatusBarCoordinator()
     private var statusItem: NSStatusItem?
 
@@ -42,8 +44,8 @@ class StatusBarCoordinator {
     }
     
     @objc private func showHome() { MainScene.show() }
-    @objc private func hidePets() { OnScreenCoordinator.hide() }
-    @objc private func showPets() { OnScreenCoordinator.show() }
+    @objc private func hidePets() { onScreen.hide() }
+    @objc private func showPets() { onScreen.show() }
     @objc private func closeApp() { NSApp.terminate(self) }
 }
     

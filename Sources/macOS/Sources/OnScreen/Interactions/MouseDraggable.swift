@@ -1,5 +1,5 @@
-import AppKit
 import Schwifty
+import SwiftUI
 import Yage
 
 class MouseDraggable: Capability {

@@ -1,4 +1,3 @@
-import DependencyInjectionUtils
 import Schwifty
 import SwiftUI
 
@@ -37,8 +36,7 @@ open class Entity: Identifiable {
     
     private func installCapabilities() {
         species.capabilities.forEach {
-            @Inject var discoveryService: CapabilitiesDiscoveryService
-            if let capability = discoveryService.capability(for: $0) {
+            if let capability = Capabilities.discovery.capability(for: $0) {
                 install(capability)
             }
         }
@@ -57,6 +55,10 @@ open class Entity: Identifiable {
         capabilities.forEach {
             $0.update(with: collisions, after: time)
         }
+    }
+    
+    open func worldBoundsChanged() {
+        // ...
     }
 
     // MARK: - State

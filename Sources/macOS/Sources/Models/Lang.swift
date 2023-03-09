@@ -19,21 +19,16 @@ enum Lang {
     static let yes = "yes".localized()
 
     enum About {
-        static let joinReddit = "about.joinReddit".localized()
-        static let joinRedditMessage = "about.joinRedditMessage".localized()
         static let leaveReview = "about.leaveReview".localized()
         static let leaveReviewMessage = "about.leaveReviewMessage".localized()
-        static let mail = "about.mail".localized()
-        static let mailMessage = "about.mailMessage".localized()
         static let privacyPolicy = "about.privacyPolicy".localized()
     }
 
-    enum Cheats {
-        static let enable = "cheats.enable".localized()
-        static let invalidCode = "cheats.invalidCode".localized()
-        static let placeholder = "cheats.placeholder".localized()
-        static let title = "cheats.title".localized()
-        static let validCode = "cheats.validCode".localized()
+    enum Backgrounds {
+        static let BackgroundMountainDay = "backgrounds.BackgroundMountainDay".localized()
+        static let BackgroundMountainDynamic = "backgrounds.BackgroundMountainDynamic".localized()
+        static let BackgroundMountainNight = "backgrounds.BackgroundMountainNight".localized()
+        static let title = "backgrounds.title".localized()
     }
 
     enum Contributors {
@@ -70,12 +65,17 @@ enum Lang {
         static let title = "donations.title".localized()
     }
 
+    enum Onboarding {
+        static let title = "onboarding.title".localized()
+        static let message = "onboarding.message".localized()
+    }
+
     enum Page {
         static let about = "page.about".localized()
         static let contributors = "page.contributors".localized()
         static let help = "page.help".localized()
-        static let home = "page.home".localized()
-        static let news = "page.news".localized()
+        static let screensaver = "page.screensaver".localized()
+        static let petSelection = "page.petSelection".localized()
         static let settings = "page.settings".localized()
     }
 
@@ -113,7 +113,6 @@ enum Lang {
         static let discord = "urls.discord".localized()
         static let donations = "urls.donations".localized()
         static let github = "urls.github".localized()
-        static let mailto = "urls.mailto".localized()
         static let privacy = "urls.privacy".localized()
         static let reddit = "urls.reddit".localized()
         static let twitter = "urls.twitter".localized()
@@ -129,6 +128,19 @@ extension Lang {
 
         static func about(for id: String) -> String {
             "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
+        }
+    }
+}
+
+extension AppPage: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .about: return Lang.Page.about
+        case .contributors: return Lang.Page.contributors
+        case .petSelection: return Lang.Page.petSelection
+        case .screensaver: return Lang.Page.screensaver
+        case .settings: return Lang.Page.settings
+        case .none: return "???"
         }
     }
 }

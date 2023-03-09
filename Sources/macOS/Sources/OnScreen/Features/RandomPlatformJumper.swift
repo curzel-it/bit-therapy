@@ -10,7 +10,6 @@ class RandomPlatformJumper: Capability {
     }
 
     private var lastPlatformId: String?
-    private var platformsProvider: JumperPlatformsProvider!
 
     private var gravity: Gravity? {
         subject?.capability(for: Gravity.self)
@@ -24,8 +23,7 @@ class RandomPlatformJumper: Capability {
         subject?.capability(for: AnimationsScheduler.self)
     }
 
-    public func start(with platformsProvider: JumperPlatformsProvider) {
-        self.platformsProvider = platformsProvider
+    public func start() {
         scheduleJumpAfterRandomInterval()
     }
 
@@ -70,8 +68,8 @@ class RandomPlatformJumper: Capability {
     }
 
     private func findPlatform() -> Entity? {
-        platformsProvider
-            .platforms()
+        subject?.world?.children
+            .filter { $0.isWindowObstacle || $0.id == Hotspot.bottomBound.rawValue }
             .filter { $0.id != lastPlatformId }
             .randomElement()
     }
@@ -93,24 +91,10 @@ class RandomPlatformJumper: Capability {
 // MARK: - Entity Extension
 
 extension Entity {
-    func setupJumperIfPossible(with platforms: JumperPlatformsProvider) {
+    func setupJumperIfPossible() {
         guard RandomPlatformJumper.compatible(with: self) else { return }
         let jumper = RandomPlatformJumper()
         install(jumper)
-        jumper.start(with: platforms)
-    }
-}
-
-// MARK: - Platforms Provider
-
-protocol JumperPlatformsProvider {
-    func platforms() -> [Entity]
-}
-
-extension DesktopObstaclesService: JumperPlatformsProvider {
-    func platforms() -> [Entity] {
-        world.children.filter {
-            $0.isWindowObstacle || $0.id == Hotspot.bottomBound.rawValue
-        }
+        jumper.start()
     }
 }

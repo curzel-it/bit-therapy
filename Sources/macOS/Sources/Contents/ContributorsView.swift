@@ -1,6 +1,5 @@
-import DesignSystem
-import DependencyInjectionUtils
-import Kingfisher
+import NotAGif
+import Swinject
 import SwiftUI
 
 struct ContributorsView: View {
@@ -9,17 +8,27 @@ struct ContributorsView: View {
     private let columns = [GridItem(.adaptive(minimum: 250, maximum: 800), spacing: Spacing.xl.rawValue)]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
-                ForEach(vm.contributors) {
-                    ItemView(contributor: $0)
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: .xl) {
+                Title()
+                LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
+                    ForEach(vm.contributors) {
+                        ItemView(contributor: $0)
+                    }
                 }
             }
-            .padding(.top, .xl)
-            .padding(.horizontal, .lg)
-            .padding(.bottom, .xxl)
+            .padding(.md)
+            .padding(.bottom, .xxxxl)
         }
         .environmentObject(vm)
+    }
+}
+
+private struct Title: View {
+    var body: some View {
+        Text(Lang.Page.contributors)
+            .font(.boldTitle)
+            .positioned(.leading)
     }
 }
 
@@ -40,9 +49,7 @@ private struct ItemView: View {
             Spacer()
         }
         .onTapGesture {
-            if let url = URL(string: contributor.link ?? "") {
-                NSWorkspace.shared.open(url)
-            }
+            URL(string: contributor.link ?? "")?.visit()
         }
     }
 }
@@ -82,7 +89,7 @@ private struct PetThumbnail: View {
     
     var body: some View {
         if let asset = vm.thumbnail(for: species) {
-            Image(nsImage: asset)
+            Image(frame: asset)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32, height: 32)
@@ -130,7 +137,7 @@ private class ContributorsViewModel: ObservableObject {
     
     var contributors: [Contributor] { Contributors.all }
     
-    func thumbnail(for species: String) -> NSImage? {
+    func thumbnail(for species: String) -> ImageFrame? {
         assets.image(sprite: "\(species)_front-1")
     }
 }

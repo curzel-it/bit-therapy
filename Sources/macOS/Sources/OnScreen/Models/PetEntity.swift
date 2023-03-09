@@ -4,13 +4,13 @@ import SwiftUI
 import Yage
 
 open class PetEntity: Entity {
-    private var settings: AppState { AppState.global }
+    @Inject private var settings: AppConfig
 
     public init(of species: Species, in world: World) {
         super.init(
             species: species,
             id: PetEntity.id(for: species),
-            frame: CGRect(square: AppState.global.petSize),
+            frame: PetEntity.initialFrame(),
             in: world
         )
         resetSpeed()
@@ -76,9 +76,14 @@ extension PetEntity {
 
 // MARK: - Speed
 
-public extension PetEntity {
+extension PetEntity {
     internal static let baseSpeed: CGFloat = 30
 
+    static func initialFrame() -> CGRect {
+        @Inject var appConfig: AppConfig
+        return CGRect(square: appConfig.petSize)
+    }
+    
     static func speed(for species: Species, size: CGFloat, settings: CGFloat) -> CGFloat {
         species.speed * speedMultiplier(for: size) * settings
     }
@@ -92,7 +97,7 @@ public extension PetEntity {
 // MARK: - Pet Size
 
 public struct PetSize {
-    public static let defaultSize: CGFloat = 75
-    public static let minSize: CGFloat = 30
+    public static let defaultSize: CGFloat = DeviceRequirement.iOS.isSatisfied ? 50 : 75
+    public static let minSize: CGFloat = 25
     public static let maxSize: CGFloat = 350
 }

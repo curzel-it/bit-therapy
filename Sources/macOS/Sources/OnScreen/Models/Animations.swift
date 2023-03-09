@@ -1,12 +1,7 @@
 import Combine
-import DependencyInjectionUtils
 import Schwifty
 import SwiftUI
 import Yage
-
-public protocol AssetsProvider: AnyObject {
-    func frames(for species: String, animation: String) -> [String]
-}
 
 class PetsSpritesProvider: SpritesProvider {    
     @Inject var assets: PetsAssetsProvider

@@ -1,24 +1,35 @@
-import DesignSystem
 import Schwifty
 import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        VStack(spacing: .xl) {
-            LeaveReview().padding(.top, .xl)
-            DonationsView()
-            Spacer()            
-            Socials()
-            PrivacyPolicy()
-            AppVersion()
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: .xl) {
+                Title()
+                LeaveReview().padding(.top, .xl)                
+                DiscordView()
+                DonationsView().padding(.bottom, .xl)
+                Socials()
+                PrivacyPolicy()
+                AppVersion()
+            }
+            .multilineTextAlignment(.center)
+            .padding(.md)
+            .padding(.bottom, .xxxxl)
         }
-        .multilineTextAlignment(.center)
-        .padding(.md)
+    }
+}
+
+private struct Title: View {
+    var body: some View {
+        Text(Lang.Page.about)
+            .font(.boldTitle)
+            .positioned(.leading)
     }
 }
 
 private struct AppVersion: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
         
     var text: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
@@ -75,6 +86,7 @@ private struct LeaveReview: View {
     var body: some View {
         VStack(spacing: .md) {
             Text(Lang.About.leaveReviewMessage)
+                .multilineTextAlignment(.center)
             Button(Lang.About.leaveReview) {
                 URL.visit(urlString: Lang.Urls.appStore)
             }
@@ -89,5 +101,29 @@ private struct DonationsView: View {
             Text(Lang.Donations.title).font(.title3.bold())
             Text(Lang.Donations.message)
         }
+    }
+}
+
+private struct DiscordView: View {
+    var body: some View {
+        VStack(spacing: .md) {
+            Text(Lang.PetSelection.joinDiscord)
+            JoinOurDiscord()
+        }
+    }
+}
+
+struct JoinOurDiscord: View {
+    var body: some View {
+        Image("discordLarge")
+            .resizable()
+            .antialiased(true)
+            .scaledToFit()
+            .frame(when: .is(.macOS), width: 115, height: 28)
+            .frame(when: .is(.iOS), height: DesignSystem.buttonsHeight)
+            .positioned(when: .is(.iOS), align: .horizontalCenter)
+            .background(Color("DiscordBrandColor"))
+            .cornerRadius(DesignSystem.buttonsCornerRadius)
+            .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }
     }
 }
