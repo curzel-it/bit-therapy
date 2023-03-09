@@ -107,6 +107,26 @@ enum Lang {
         static let useImageInterpolation = "settings.useImageInterpolation".localized()
     }
 
+    enum Tag {
+        static let aliens = "tag.aliens".localized()
+        static let all = "tag.all".localized()
+        static let bear = "tag.bear".localized()
+        static let birds = "tag.birds".localized()
+        static let cats = "tag.cats".localized()
+        static let decorations = "tag.decorations".localized()
+        static let dinos = "tag.dinos".localized()
+        static let dogs = "tag.dogs".localized()
+        static let emoji = "tag.emoji".localized()
+        static let farm = "tag.farm".localized()
+        static let forest = "tag.forest".localized()
+        static let jungle = "tag.jungle".localized()
+        static let memes = "tag.memes".localized()
+        static let plants = "tag.plants".localized()
+        static let pokèmon = "tag.pokèmon".localized()
+        static let slowmotion = "tag.slowmotion".localized()
+        static let water = "tag.water".localized()
+    }
+
     enum Urls {
         static let appStore = "urls.appStore".localized()
         static let customPetsDocs = "urls.customPetsDocs".localized()

@@ -23,7 +23,8 @@ struct PetPreview: View {
             }
             Text(viewModel.title).multilineTextAlignment(.center)
         }
-        .frame(width: size)
+        .frame(minWidth: size)
+        .frame(maxWidth: .infinity)
         .frame(minHeight: size)
         .onTapGesture {
             selectionViewModel.showDetails(of: viewModel.species)
