@@ -82,12 +82,8 @@ public class Gravity: Capability {
 public extension Entity {
     func setGravity(enabled: Bool) {
         let gravity = capability(for: Gravity.self)
-        if enabled {
-            if gravity == nil {
-                install(Gravity())
-            }
-        } else {
-            gravity?.kill()
+        gravity?.isEnabled = enabled
+        if !enabled {
             if direction.dy > 0 {
                 direction = .init(dx: 1, dy: 0)
             }

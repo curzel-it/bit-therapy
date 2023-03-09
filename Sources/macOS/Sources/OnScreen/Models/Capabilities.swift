@@ -11,6 +11,7 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "SleepingPlace": SleepingPlace.self,
         "FlipHorizontallyWhenGoingLeft": FlipHorizontallyWhenGoingLeft.self,
         "GetsAngryWhenMeetingOtherCats": GetsAngryWhenMeetingOtherCats.self,
+        "Gravity": Gravity.self,
         "LeavesPoopStains": LeavesPoopStains.self,
         "LinearMovement": LinearMovement.self,
         "PetsSpritesProvider": PetsSpritesProvider.self,

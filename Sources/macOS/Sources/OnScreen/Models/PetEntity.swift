@@ -3,8 +3,10 @@ import Schwifty
 import SwiftUI
 import Yage
 
-open class PetEntity: Entity {
+class PetEntity: Entity {
     @Inject private var settings: AppConfig
+    
+    private var disposables = Set<AnyCancellable>()
 
     public init(of species: Species, in world: World) {
         super.init(
@@ -14,10 +16,16 @@ open class PetEntity: Entity {
             in: world
         )
         resetSpeed()
-        setGravity()
         setInitialPosition()
         setInitialDirection()
         installAdditionalCapabilities()
+        bindGravity()
+    }
+    
+    private func bindGravity() {
+        settings.$gravityEnabled
+            .sink { [weak self] in self?.setGravity(enabled: $0) }
+            .store(in: &disposables)
     }
     
     private func installAdditionalCapabilities() {
@@ -53,13 +61,10 @@ open class PetEntity: Entity {
     func setInitialDirection() {
         direction = .init(dx: 1, dy: 0)
     }
-
-    public var supportsGravity: Bool {
-        capability(for: WallCrawler.self) == nil
-    }
-
-    public func setGravity() {
-        setGravity(enabled: settings.gravityEnabled && supportsGravity)
+    
+    override open func kill() {
+        disposables.removeAll()
+        super.kill()
     }
 }
 

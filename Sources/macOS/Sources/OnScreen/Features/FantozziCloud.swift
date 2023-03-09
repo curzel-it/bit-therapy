@@ -25,7 +25,6 @@ class RainyCloudUseCaseImpl: RainyCloudUseCase {
     
     private func buildCloud(at origin: CGPoint, in world: World) -> Entity {
         let cloud = PetEntity(of: .cloud, in: world)
-        cloud.capability(for: Gravity.self)?.kill()
         cloud.frame.size = CGSize(
             width: cloud.frame.size.width * 2,
             height: cloud.frame.size.height * 2

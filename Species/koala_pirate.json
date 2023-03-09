@@ -30,6 +30,7 @@
     "AutoRespawn",
     "BounceOnLateralCollisions",
     "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
     "LinearMovement",
     "PetsSpritesProvider",
     "AnimationsScheduler",

@@ -4,6 +4,7 @@
     "AnimatedSprite",
     "AnimationsProvider",
     "AutoRespawn",
+    "Gravity",
     "PetsSpritesProvider",
     "LinearMovement",
     "SleepingPlace"
