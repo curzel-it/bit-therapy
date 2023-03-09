@@ -5,9 +5,11 @@ struct AboutView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
-                Title()
-                LeaveReview().padding(.top, .xl)                
-                DiscordView()
+                PageTitle(text: Lang.Page.about)
+                LeaveReview().padding(.top, .xl)
+                if DeviceRequirement.iOS.isSatisfied {
+                    DiscordView()
+                }
                 DonationsView().padding(.bottom, .xl)
                 Socials()
                 PrivacyPolicy()
@@ -17,14 +19,6 @@ struct AboutView: View {
             .padding(.md)
             .padding(.bottom, .xxxxl)
         }
-    }
-}
-
-private struct Title: View {
-    var body: some View {
-        Text(Lang.Page.about)
-            .font(.boldTitle)
-            .positioned(.leading)
     }
 }
 

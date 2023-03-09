@@ -50,7 +50,7 @@ class SpeciesProviderImpl: SpeciesProvider {
     }
     
     func hasAnyCustomPets() -> Bool {
-        !originalsUrls.isEmpty
+        !customUrls().isEmpty
     }
     
     private lazy var allJsonUrls: [URL] = {

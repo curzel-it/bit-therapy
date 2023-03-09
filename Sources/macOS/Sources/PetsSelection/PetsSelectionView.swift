@@ -37,7 +37,12 @@ private struct MyPets: View {
     
     var body: some View {
         VStack(spacing: .md) {
-            Title(text: Lang.PetSelection.yourPets)
+            HStack {
+                Title(text: Lang.PetSelection.yourPets)
+                if DeviceRequirement.macOS.isSatisfied {
+                    JoinOurDiscord()
+                }
+            }
             PetsGrid(
                 columns: viewModel.gridColums,
                 species: viewModel.selectedSpecies

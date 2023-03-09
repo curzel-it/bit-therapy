@@ -7,25 +7,19 @@ struct SettingsView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
-                Title()
-                Switches()
-                FixOnScreenPets()
-                ScreensOnOffSettings()
-                BackgroundSettings()
+                PageTitle(text: Lang.Page.settings)
+                VStack(spacing: .xl) {
+                    Switches()
+                    FixOnScreenPets()
+                    ScreensOnOffSettings()
+                    BackgroundSettings()
+                }
+                .frame(when: .any(.macOS, .iPad, .landscape), width: 350)
+                .positioned(.leading)
+                .padding(.bottom, .xxxxl)
             }
             .padding(.md)
-            .padding(.bottom, .xxxxl)
-            .frame(when: .any(.macOS, .iPad, .landscape), width: 350)
-            .positioned(.leading)
         }
-    }
-}
-
-private struct Title: View {
-    var body: some View {
-        Text(Lang.Page.settings)
-            .font(.boldTitle)
-            .positioned(.leading)
     }
 }
 

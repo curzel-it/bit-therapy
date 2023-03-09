@@ -10,7 +10,7 @@ struct ContributorsView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
-                Title()
+                PageTitle(text: Lang.Page.contributors)
                 LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
                     ForEach(vm.contributors) {
                         ItemView(contributor: $0)
@@ -21,14 +21,6 @@ struct ContributorsView: View {
             .padding(.bottom, .xxxxl)
         }
         .environmentObject(vm)
-    }
-}
-
-private struct Title: View {
-    var body: some View {
-        Text(Lang.Page.contributors)
-            .font(.boldTitle)
-            .positioned(.leading)
     }
 }
 

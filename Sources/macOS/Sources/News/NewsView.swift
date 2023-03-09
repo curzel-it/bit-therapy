@@ -21,8 +21,8 @@ struct NewsView: View {
                 title: Lang.CustomPets.breakingChanges240Title,
                 message: Lang.CustomPets.breakingChanges240Message,
                 actions: [
-                    .init(title: Lang.CustomPets.readTheDocs, style: .regular, action: viewModel.showCustomPetsDocs),
-                    .init(title: Lang.ok, style: .text) { viewModel.showBreakingChangesForVersion240 = false }
+                    .init(title: Lang.ok, style: .text) { viewModel.showBreakingChangesForVersion240 = false },
+                        .init(title: Lang.CustomPets.readTheDocs, style: .regular, action: viewModel.showCustomPetsDocs)
                 ]
             )
             .padding(.bottom, .xxl)
