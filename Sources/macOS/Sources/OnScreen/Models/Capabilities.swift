@@ -15,6 +15,7 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "LeavesPoopStains": LeavesPoopStains.self,
         "LinearMovement": LinearMovement.self,
         "PetsSpritesProvider": PetsSpritesProvider.self,
+        "RandomPlatformJumper": RandomPlatformJumper.self,
         "Rotating": Rotating.self,
         "WallCrawler": WallCrawler.self
     ]

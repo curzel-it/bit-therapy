@@ -22,13 +22,14 @@
   "capabilities": [
     "AnimatedSprite",
     "AnimationsProvider",
+    "AnimationsScheduler",
     "AutoRespawn",
     "BounceOnLateralCollisions",
     "FlipHorizontallyWhenGoingLeft",
     "Gravity",
     "LinearMovement",
     "PetsSpritesProvider",
-    "AnimationsScheduler",
+    "RandomPlatformJumper",
     "Rotating"
   ],
   "dragPath": "drag",
