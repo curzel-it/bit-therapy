@@ -987,22 +987,22 @@
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
-				1E07314729B9D86500E31EED /* Desktop Pets Screenshots.xctest */,
-				1E9505C129B21342007666BF /* Desktop Pets Tests.xctest */,
-				1E9505CB29B21342007666BF /* Desktop Pets UI Tests.xctest */,
-				1E9505B129B21341007666BF /* Desktop Pets.app */,
 				1E7E218D29B0873700AC9438 /* Docs */,
 				1EFECB5029B6923F00C7A028 /* Frameworks */,
-				1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */,
-				1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */,
-				1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */,
-				1EF863E929B22DD400413AEA /* Mobile Pets.app */,
 				1E7E218E29B0874C00AC9438 /* PetsAssets */,
 				A6FB7D4328740F8E00AB872E /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
 				1E7E218F29B0874C00AC9438 /* Species */,
 				1E9505C429B21342007666BF /* Tests */,
 				1E9505CE29B21342007666BF /* Tests UI */,
+				1E9505B129B21341007666BF /* Desktop Pets.app */,
+				1E07314729B9D86500E31EED /* Desktop Pets Screenshots.xctest */,
+				1E9505C129B21342007666BF /* Desktop Pets Tests.xctest */,
+				1E9505CB29B21342007666BF /* Desktop Pets UI Tests.xctest */,
+				1EF863E929B22DD400413AEA /* Mobile Pets.app */,
+				1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */,
+				1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */,
+				1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1840,7 +1840,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 204011;
+				CURRENT_PROJECT_VERSION = 204012;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1875,7 +1875,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 204011;
+				CURRENT_PROJECT_VERSION = 204012;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -2010,7 +2010,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 102053;
+				CURRENT_PROJECT_VERSION = 102054;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2027,7 +2027,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2047,7 +2047,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 102053;
+				CURRENT_PROJECT_VERSION = 102054;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2064,7 +2064,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
