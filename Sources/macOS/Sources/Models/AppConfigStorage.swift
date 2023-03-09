@@ -7,6 +7,7 @@ protocol AppConfigStorage {
     var desktopInteractions: Bool { get }
     var disabledScreens: [String] { get }
     var gravityEnabled: Bool { get }
+    var launchSilently: Bool { get }
     var names: [String: String] { get }
     var randomEvents: Bool { get }
     var petSize: Double { get }
@@ -22,6 +23,7 @@ class AppConfigStorageImpl: AppConfigStorage {
     @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
     @AppStorage("disabledScreens") var disabledScreensValue: String = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true
+    @AppStorage("launchSilently") var launchSilently = false
     @AppStorage("names") var namesValue: String = ""
     @AppStorage("randomEvents") var randomEvents: Bool = true
     @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
@@ -78,6 +80,10 @@ class AppConfigStorageImpl: AppConfigStorage {
         
         appConfig.$gravityEnabled
             .sink { [weak self] in self?.gravityEnabled = $0 }
+            .store(in: &disposables)
+        
+        appConfig.$launchSilently
+            .sink { [weak self] in self?.launchSilently = $0 }
             .store(in: &disposables)
         
         appConfig.$names

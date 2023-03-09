@@ -13,6 +13,8 @@
 "contributors.owner" = "Founder";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "Translator";
+"customPets.breakingChanges240Title" = "Custom Pets updates in version 2.40";
+"customPets.breakingChanges240Message" = "Version 2.40 introduces some changes in how the json file for custom pets is formatted.\nUnfortunately, this is a breaking change, and you will need to update it... Sorry!\nBut worry not, updating is easy and the Discord community is here to help!";
 "customPets.customPetDescription" = "This is a custom pet";
 "customPets.dragAreaMessage" = "Drag and drop your zip file here";
 "customPets.export" = "Export";
@@ -75,6 +77,8 @@
 "settings.gravity" = "Enable gravity";
 "settings.launchAtLogin" = "Launch automatically";
 "settings.launchAtLoginPromo" = "Would you like the app to start automatically when you login?";
+"settings.launchSilentlyTitle" = "Launch silently";
+"settings.launchSilentlyMessage" = "If enabled, when the app is launched the main window will close automatically, showing only your pets.";
 "settings.randomEventsTitle" = "Random Events";
 "settings.randomEventsMessage" = "If enabled, some extra animations are played at random intervals... Who knows, aliens might even come to visit!";
 "settings.size" = "Pet Size";

@@ -13,6 +13,8 @@
 "contributors.owner" = "创始人";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "翻译家";
+"customPets.breakingChanges240Title" = "版本2.40中的自定义宠物更新";
+"customPets.breakingChanges240Message" = "版本2.40介绍了定制宠物的JSON文件的格式化的一些更改。在这里帮助！";
 "customPets.customPetDescription" = "这是一只自定义的宠物";
 "customPets.dragAreaMessage" = "将您的压缩文件拖放到这里";
 "customPets.export" = "导出";
@@ -75,6 +77,8 @@
 "settings.gravity" = "启用重力感应";
 "settings.launchAtLogin" = "登录时自动启动";
 "settings.launchAtLoginPromo" = "您希望应用程序在您登录时自动启动吗？";
+"settings.launchSilentlyTitle" = "默默地启动";
+"settings.launchSilentlyMessage" = "如果启用，当应用程序启动时，主窗口将自动关闭，仅显示您的宠物。";
 "settings.randomEventsTitle" = "随机活动";
 "settings.randomEventsMessage" = "如果启用，会随机播放一些其他的动画……谁知道呢，外星人甚至可能会来探望我们!";
 "settings.size" = "宠物的大小";

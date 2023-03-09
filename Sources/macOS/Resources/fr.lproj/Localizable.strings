@@ -13,6 +13,8 @@
 "contributors.owner" = "Fondateur";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "Traducteur";
+"customPets.breakingChanges240Title" = "Mises à jour personnalisées des animaux de compagnie dans la version 2.40";
+"customPets.breakingChanges240Message" = "La version 2.40 présente quelques modifications dans la façon dont le fichier JSON pour les animaux de compagnie personnalisés est formaté. \ Nunfortunetly, c'est un changement de rupture, et vous devrez le mettre à jour ... désolé! \ NBUT ne vous inquiétez pas, la mise à jour est facile et la communauté Discord est Ici pour aider!";
 "customPets.customPetDescription" = "Ceci est un animal de compagnie fait sur mesure";
 "customPets.dragAreaMessage" = "Faites glisser et déposez votre fichier zip ici";
 "customPets.export" = "Exporter";
@@ -75,6 +77,8 @@
 "settings.gravity" = "Activer la gravité";
 "settings.launchAtLogin" = "Démarrer automatiquement";
 "settings.launchAtLoginPromo" = "Souhaitez-vous que l'application démarre automatiquement lorsque vous vous connectez ?";
+"settings.launchSilentlyTitle" = "Lancer silencieusement";
+"settings.launchSilentlyMessage" = "Si vous êtes activé, lorsque l'application est lancée, la fenêtre principale se ferme automatiquement, affichant uniquement vos animaux de compagnie.";
 "settings.randomEventsTitle" = "Événements aléatoires";
 "settings.randomEventsMessage" = "Si activé, des animations supplémentaires sont jouées à intervalles aléatoires... Qui sait, des extraterrestres pourraient même venir nous rendre visite !";
 "settings.size" = "Taille des animaux";

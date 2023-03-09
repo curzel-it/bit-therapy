@@ -76,24 +76,24 @@ extension EntityViewModel {
             height: translation.height - lastDragTranslation.height
         )
         lastDragTranslation = translation
-        mouseDragged(eventDelta: delta, viewDelta: delta)
+        dragged(eventDelta: delta, viewDelta: delta)
     }
     
-    func mouseDragged(eventDelta: CGSize, viewDelta: CGSize) {
+    func dragged(eventDelta: CGSize, viewDelta: CGSize) {
         let newOrigin = locationOnLastDrag.offset(by: viewDelta)
         frame.origin = newOrigin
         locationOnLastDrag = newOrigin
-        entity.mouseDragged(currentDelta: eventDelta)
+        entity.dragged(currentDelta: eventDelta)
     }
     
-    func mouseUp() {
+    func dragEnded() {
         guard isMouseDown else { return }
         isMouseDown = false
         let delta = CGSize(
             width: locationOnLastDrag.x - locationOnMouseDown.x,
             height: locationOnMouseDown.y - locationOnLastDrag.y
         )
-        entity.mouseUp(totalDelta: delta)
+        entity.dragEnded(totalDelta: delta)
     }
     
     func rightMouseUp(from window: SomeWindow?, at point: CGPoint) {

@@ -10,7 +10,7 @@ struct PetDetailsHeader: View {
     var body: some View {
         HStack(spacing: .xl) {
             Text(viewModel.title)
-                .font(.largeBoldTitle)
+                .font(.boldTitle)
                 .multilineTextAlignment(.leading)
             
             if DeviceRequirement.macOS.isSatisfied {

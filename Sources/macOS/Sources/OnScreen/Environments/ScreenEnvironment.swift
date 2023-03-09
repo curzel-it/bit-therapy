@@ -53,12 +53,6 @@ class ScreenEnvironment: World {
         guard name == Screen.main?.localizedName else { return }
         desktopObstacles.start(in: self)
     }
-    
-    private func installJumpers() {
-        children
-            .compactMap { $0 as? PetEntity }
-            .forEach { $0.setupJumperIfPossible() }
-    }
 
     private func bindPetsOnStage() {
         settings.$selectedSpecies

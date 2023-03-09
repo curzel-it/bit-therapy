@@ -13,6 +13,8 @@
 "contributors.owner" = "Founder";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "Traduttore";
+"customPets.breakingChanges240Title" = "Custom pets nella versione 2.40";
+"customPets.breakingChanges240Message" = "La versione 2.40 introduce alcune modifiche a come viene formattato il file JSON per gli animali domestici personalizzati. Qui per aiutarti!";
 "customPets.customPetDescription" = "Questo è un pet custom";
 "customPets.dragAreaMessage" = "Trascina il tuo file zip qui";
 "customPets.export" = "Esporta";
@@ -75,6 +77,8 @@
 "settings.gravity" = "Abilita Gravità";
 "settings.launchAtLogin" = "Avvia automaticamente al login";
 "settings.launchAtLoginPromo" = "Vuoi che l'app si avvii automaticamente al login?";
+"settings.launchSilentlyTitle" = "Lancia silenziosamente";
+"settings.launchSilentlyMessage" = "Se abilitato, quando l'app viene lanciata, la finestra principale si chiuderà automaticamente, mostrando solo i tuoi animali domestici.";
 "settings.randomEventsTitle" = "Eventi Casuali";
 "settings.randomEventsMessage" = "Se abilitato, possono succedere cose strane... Potrebbero persino arrivare gli alieni!";
 "settings.size" = "Dimensioni Pet";

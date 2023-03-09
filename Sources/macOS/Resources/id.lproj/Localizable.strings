@@ -13,6 +13,8 @@
 "contributors.owner" = "Pendiri";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "Penerjemah";
+"customPets.breakingChanges240Title" = "Pembaruan Hewan Peliharaan Kustom di Versi 2.40";
+"customPets.breakingChanges240Message" = "Versi 2.40 memperkenalkan beberapa perubahan dalam bagaimana file json untuk hewan peliharaan kustom diformat. \ Nunfort, ini adalah perubahan yang melanggar, dan Anda perlu memperbaruinya ... maaf! \ Nbut tidak khawatir, memperbarui itu mudah dan komunitas perselisihan adalah Di sini untuk membantu!";
 "customPets.customPetDescription" = "Ini adalah hewan peliharaan khusus";
 "customPets.dragAreaMessage" = "Seret dan lepas file zip Anda di sini";
 "customPets.export" = "Ekspor";
@@ -75,6 +77,8 @@
 "settings.gravity" = "Aktifkan gravitasi";
 "settings.launchAtLogin" = "Tampilkan hewan peliharaan saat Login";
 "settings.launchAtLoginPromo" = "Apakah Anda ingin aplikasi dimulai secara otomatis saat Anda masuk?";
+"settings.launchSilentlyTitle" = "Luncurkan diam -diam";
+"settings.launchSilentlyMessage" = "Jika diaktifkan, ketika aplikasi diluncurkan, jendela utama akan ditutup secara otomatis, hanya menunjukkan hewan peliharaan Anda.";
 "settings.randomEventsTitle" = "Acara Acak";
 "settings.randomEventsMessage" = "Jika diaktifkan, beberapa animasi tambahan diputar secara acak... Siapa tahu, alien bahkan mungkin datang berkunjung!";
 "settings.size" = "Ukuran Hewan Peliharaan";

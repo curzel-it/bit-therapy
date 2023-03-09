@@ -16,7 +16,7 @@ private struct OnboardingMod: ViewModifier {
             .sheet(isPresented: $shouldShowWelcome, onDismiss: close) {
                 VStack(spacing: .lg) {
                     Text(Lang.Onboarding.title)
-                        .font(.largeBoldTitle)
+                        .font(.boldTitle)
                         .multilineTextAlignment(.center)
                     Text(Lang.Onboarding.message)
                         .multilineTextAlignment(.center)

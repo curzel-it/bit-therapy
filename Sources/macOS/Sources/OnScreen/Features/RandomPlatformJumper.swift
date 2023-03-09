@@ -2,33 +2,22 @@ import Schwifty
 import SwiftUI
 import Yage
 
-// MARK: - Platform Jumper
-
 class RandomPlatformJumper: Capability {
-    static func compatible(with species: Entity) -> Bool {
-        species.species.movementPath == "fly"
-    }
-
+    private var scheduledJumpDate: Date?
     private var lastPlatformId: String?
-
-    private var gravity: Gravity? {
-        subject?.capability(for: Gravity.self)
-    }
-
-    private var seeker: Seeker? {
-        subject?.capability(for: Seeker.self)
-    }
-
-    private var animations: AnimationsScheduler? {
-        subject?.capability(for: AnimationsScheduler.self)
-    }
-
-    public func start() {
-        scheduleJumpAfterRandomInterval()
+    private var gravity: Gravity? { subject?.capability(for: Gravity.self) }
+    private var seeker: Seeker? { subject?.capability(for: Seeker.self) }
+    private var animations: AnimationsScheduler? { subject?.capability(for: AnimationsScheduler.self) }
+    
+    override func install(on subject: Entity) {
+        super.install(on: subject)
+        DispatchQueue.main.async { [weak self] in
+            self?.scheduleJumpAfterRandomInterval()
+        }
     }
 
     private func scheduleJumpAfterRandomInterval() {
-        let delay = TimeInterval.random(in: 30 ... 120)
+        let delay = TimeInterval.random(in: 20...90)
         scheduleJump(after: delay)
         Logger.log(tag, "Scheduled jump in \(delay)")
     }
@@ -85,16 +74,5 @@ class RandomPlatformJumper: Capability {
     override func kill(autoremove: Bool = true) {
         restoreInitialConditions()
         super.kill(autoremove: autoremove)
-    }
-}
-
-// MARK: - Entity Extension
-
-extension Entity {
-    func setupJumperIfPossible() {
-        guard RandomPlatformJumper.compatible(with: self) else { return }
-        let jumper = RandomPlatformJumper()
-        install(jumper)
-        jumper.start()
     }
 }

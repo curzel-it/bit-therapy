@@ -24,8 +24,8 @@ protocol RenderableEntity {
     var zIndex: Int { get }
     
     func isBeingDragged() -> Bool
-    func mouseDragged(currentDelta: CGSize)
-    func mouseUp(totalDelta: CGSize)
+    func dragged(currentDelta: CGSize)
+    func dragEnded(totalDelta: CGSize)
     func rightClicked(from window: SomeWindow?, at point: CGPoint)
 }
 
@@ -71,12 +71,12 @@ extension Entity: RenderableEntity {
         state == .drag
     }
     
-    func mouseDragged(currentDelta: CGSize) {
-        mouseDrag?.mouseDragged(currentDelta: currentDelta)
+    func dragged(currentDelta: CGSize) {
+        drag?.dragged(currentDelta: currentDelta)
     }
     
-    func mouseUp(totalDelta: CGSize) {
-        mouseDrag?.mouseUp(totalDelta: totalDelta)
+    func dragEnded(totalDelta: CGSize) {
+        drag?.dragEnded(totalDelta: totalDelta)
     }
     
     func rightClicked(from window: SomeWindow?, at point: CGPoint) {

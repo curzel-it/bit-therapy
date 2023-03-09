@@ -1,37 +1,36 @@
 import Schwifty
 import SwiftUI
-import Yage
 
-class MouseDraggable: Capability {
-    var dragEnabled: Bool {
+public class Draggable: Capability {
+    private var dragEnabled: Bool {
         guard let subject else { return false }
         return isEnabled && !subject.isStatic && !subject.isEphemeral
     }
     
-    var isBeingDragged: Bool {
+    public var isBeingDragged: Bool {
         subject?.state == .drag
     }
     
-    func mouseDragged(currentDelta delta: CGSize) {
+    public func dragged(currentDelta delta: CGSize) {
         guard dragEnabled, let subject else { return }
         if !isBeingDragged {
-            mouseDragStarted()
+            dragStarted()
         }
         let newFrame = subject.frame.offset(x: delta.width, y: delta.height)
         subject.frame.origin = nearestPosition(for: newFrame, in: subject.worldBounds)
     }
     
-    func mouseUp(totalDelta _: CGSize) {
+    public func dragEnded(totalDelta _: CGSize) {
         guard dragEnabled, isBeingDragged else { return }
-        mouseDragEnded()
+        dragEnded()
     }
     
-    private func mouseDragStarted() {
+    private func dragStarted() {
         subject?.set(state: .drag)
         subject?.movement?.isEnabled = false
     }
     
-    private func mouseDragEnded() {
+    private func dragEnded() {
         guard let subject else { return }
         subject.set(state: .move)
         subject.movement?.isEnabled = true
@@ -45,8 +44,8 @@ class MouseDraggable: Capability {
     }
 }
 
-extension Entity {
-    var mouseDrag: MouseDraggable? {
-        capability(for: MouseDraggable.self)
+public extension Entity {
+    var drag: Draggable? {
+        capability(for: Draggable.self)
     }
 }

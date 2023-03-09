@@ -42,14 +42,14 @@ class PixelArtEntityView: NSImageView, EntityView {
     }
     
     override func mouseDragged(with event: NSEvent) {
-        viewModel.mouseDragged(
+        viewModel.dragged(
             eventDelta: CGSize(width: event.deltaX, height: event.deltaY),
             viewDelta: CGSize(width: event.deltaX, height: -event.deltaY)
         )
     }
     
     override func mouseUp(with event: NSEvent) {
-        viewModel.mouseUp()
+        viewModel.dragEnded()
     }
     
     override func rightMouseUp(with event: NSEvent) {

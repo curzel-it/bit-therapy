@@ -19,11 +19,11 @@ class AnimationsParsing: XCTestCase {
         XCTAssertEqual(animation?.requiredLoops, 5)
     }
     
-    func testSingleAnimationInLegacyFormatCanBeParsed() {
+    func testSingleAnimationInLegacyFormatCanBeParsedWithFallback() {
         let json = """
 {
   "id": "front",
-  "position": { "fromEntityBottomLeft": {} },
+  "position": { "fromEntityBottomRight": {} },
   "requiredLoops": 5
 }
 """

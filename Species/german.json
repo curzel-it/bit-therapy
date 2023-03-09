@@ -11,11 +11,14 @@
     "AnimationsProvider",
     "AutoRespawn",
     "BounceOnLateralCollisions",
+    "Draggable",
     "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
     "LinearMovement",
     "PetsSpritesProvider",
     "AnimationsScheduler",
-    "Rotating"
+    "Rotating",
+    "ShowsMenuOnRightClick"
   ],
   "dragPath": "front",
   "fps": 10,

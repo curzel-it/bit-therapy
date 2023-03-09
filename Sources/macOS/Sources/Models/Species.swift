@@ -7,6 +7,7 @@ protocol SpeciesProvider {
     var all: CurrentValueSubject<[Species], Never> { get }
     
     func by(id: String) -> Species?
+    func hasAnyCustomPets() -> Bool
     func jsonDefinition(for speciesId: String) -> URL?
     func register(_ species: Species)
     func unregister(_ species: Species)
@@ -46,6 +47,10 @@ class SpeciesProviderImpl: SpeciesProvider {
     
     func isOriginal(_ species: Species) -> Bool {
         originalsUrls.contains { $0.lastPathComponent == "\(species.id).json"}
+    }
+    
+    func hasAnyCustomPets() -> Bool {
+        !customUrls().isEmpty
     }
     
     private lazy var allJsonUrls: [URL] = {
