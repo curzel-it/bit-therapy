@@ -19,7 +19,7 @@ struct MyApp: App {
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    @Inject private var appConfig: AppConfig
+    @Inject private var commandLine: CommandLineUseCase
     @Inject private var onScreen: OnScreenCoordinator
     
     private let tag = "AppDelegate"
@@ -29,31 +29,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         Logger.log(tag, "Did finish launching")
-        loadCommandLineBackground()
-        loadCommandLinePets()
+        commandLine.handleCommandLineArgs()
         onScreen.show()
         return true
     }
-    
-    private func loadCommandLineBackground() {
-        let key = "background="
-        let command = CommandLine.arguments.first { $0.starts(with: key) }
-        guard let value = command?.replacingOccurrences(of: key, with: "") else { return }
-        Logger.log(tag, "Loading background '\(value)' as per command line args")
-        appConfig.background = value
-    }
-    
-    private func loadCommandLinePets() {
-        let key = "pets="
-        let command = CommandLine.arguments.first { $0.starts(with: key) }
-        guard let value = command?.replacingOccurrences(of: key, with: "") else { return }
-        
-        let species = value
-            .components(separatedBy: ",")
-            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-        
-        Logger.log(tag, "Loading pets '\(species)' as per command line args")
-        appConfig.replaceSelectedSpecies(with: species)
-    }
 }
-

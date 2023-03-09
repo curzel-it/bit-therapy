@@ -14,7 +14,7 @@ public class AutoRespawn: Capability {
     public func teleport() {
         guard let subject else { return }
         let worldWidth = subject.worldBounds.width
-        let randomX = worldWidth * CGFloat.random(in: 0.2 ... 0.8)
+        let randomX = worldWidth * CGFloat.random(in: 0.05...0.95)
         subject.frame.origin = CGPoint(x: randomX, y: 30)
         subject.direction = CGVector(dx: 1, dy: 0)
         subject.set(state: .move)

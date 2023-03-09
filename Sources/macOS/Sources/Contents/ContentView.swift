@@ -5,7 +5,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var appConfig: AppConfig
     @StateObject private var viewModel = ContentViewModel()
-
+    
     var body: some View {
         ZStack {
             Background()
@@ -17,10 +17,6 @@ struct ContentView: View {
         }
         .environmentObject(viewModel)
         .preferredColorScheme(viewModel.colorScheme)
-    }
-    
-    private var shouldShowTabBar: Bool {
-        viewModel.selectedPage != .screensaver
     }
     
     @ViewBuilder private func contents(of page: AppPage) -> some View {
@@ -87,7 +83,7 @@ private class ContentViewModel: ObservableObject {
 
 private struct Background: View {
     @EnvironmentObject private var viewModel: ContentViewModel
-        
+    
     var body: some View {
         GeometryReader { geometry in
             Image(viewModel.backgroundImage)

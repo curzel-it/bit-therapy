@@ -20,10 +20,12 @@ struct MyApp: App {
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    @Inject private var commandLine: CommandLineUseCase
     @Inject private var onScreen: OnScreenCoordinator
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         Logger.log("AppDelegate", "Did finish launching")
+        commandLine.handleCommandLineArgs()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.onScreen.show()

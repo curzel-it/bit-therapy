@@ -10,10 +10,22 @@
 		1E07312229B9C13F00E31EED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312129B9C13F00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		1E07312429B9C13F00E31EED /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312329B9C13F00E31EED /* FirebaseCrashlytics */; };
 		1E07312C29B9D64B00E31EED /* MobilePetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8640629B22DD500413AEA /* MobilePetsUITests.swift */; };
-		1E07312D29B9D64B00E31EED /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */; };
 		1E07312E29B9D64B00E31EED /* ScreenshotsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */; };
 		1E07313029B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312829B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		1E07313129B9D64B00E31EED /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312A29B9D64B00E31EED /* FirebaseCrashlytics */; };
+		1E07313F29B9D86500E31EED /* DesktopPetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505CF29B21342007666BF /* DesktopPetsUITests.swift */; };
+		1E07314029B9D86500E31EED /* ScreenshotsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */; };
+		1E07314129B9D86500E31EED /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */; };
+		1E07314929B9D88000E31EED /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07314829B9D88000E31EED /* Languages.swift */; };
+		1E07314A29B9D88000E31EED /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07314829B9D88000E31EED /* Languages.swift */; };
+		1E07314C29B9D89800E31EED /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07314B29B9D89800E31EED /* Themes.swift */; };
+		1E07314D29B9D89800E31EED /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07314B29B9D89800E31EED /* Themes.swift */; };
+		1E07314F29B9D89E00E31EED /* Orientations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07314E29B9D89E00E31EED /* Orientations.swift */; };
+		1E07315029B9D89E00E31EED /* Orientations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07314E29B9D89E00E31EED /* Orientations.swift */; };
+		1E07315529B9E4D100E31EED /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07315329B9E4D100E31EED /* AppStoreScreenshots.swift */; };
+		1E07315729BA077E00E31EED /* CommandLineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07315629BA077E00E31EED /* CommandLineUseCase.swift */; };
+		1E07315829BA077E00E31EED /* CommandLineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07315629BA077E00E31EED /* CommandLineUseCase.swift */; };
+		1E07315A29BA18DD00E31EED /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07315929BA18DD00E31EED /* Schwifty */; };
 		1E09B0A529B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A629B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A829B4C869008967F5 /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */; };
@@ -220,6 +232,13 @@
 			remoteGlobalIDString = 1EF863E829B22DD400413AEA;
 			remoteInfo = "Mobile Pets";
 		};
+		1E07313D29B9D86500E31EED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65FE355283D80C900D1F5C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E9505B029B21341007666BF;
+			remoteInfo = "Desktop Pets";
+		};
 		1E9505C229B21342007666BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A65FE355283D80C900D1F5C8 /* Project object */;
@@ -253,6 +272,12 @@
 /* Begin PBXFileReference section */
 		1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsHelper.swift; sourceTree = "<group>"; };
 		1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E07314729B9D86500E31EED /* Desktop Pets Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Pets Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E07314829B9D88000E31EED /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		1E07314B29B9D89800E31EED /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		1E07314E29B9D89E00E31EED /* Orientations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orientations.swift; sourceTree = "<group>"; };
+		1E07315329B9E4D100E31EED /* AppStoreScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshots.swift; sourceTree = "<group>"; };
+		1E07315629BA077E00E31EED /* CommandLineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineUseCase.swift; sourceTree = "<group>"; };
 		1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewModel.swift; sourceTree = "<group>"; };
 		1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystem.swift; sourceTree = "<group>"; };
 		1E185F4C29B231B90042E537 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
@@ -386,6 +411,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E07314229B9D86500E31EED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E07315A29BA18DD00E31EED /* Schwifty in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E9505AE29B21341007666BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,11 +482,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E07313729B9D68200E31EED /* Products */ = {
+		1E07313A29B9D85400E31EED /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
+				1E07315229B9E4C600E31EED /* iOS */,
+				1E07315129B9E4C100E31EED /* macOS */,
+				1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */,
+				1E07314829B9D88000E31EED /* Languages.swift */,
+				1E07314B29B9D89800E31EED /* Themes.swift */,
+				1E07314E29B9D89E00E31EED /* Orientations.swift */,
 			);
-			path = Products;
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		1E07315129B9E4C100E31EED /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1E07315229B9E4C600E31EED /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E07315329B9E4D100E31EED /* AppStoreScreenshots.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		1E185F4329B230050042E537 /* macOS */ = {
@@ -630,6 +685,7 @@
 		1E2AC742290AB375003D0AB2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1E07315629BA077E00E31EED /* CommandLineUseCase.swift */,
 				1EF8641929B22EAA00413AEA /* iOS */,
 				1EF8641829B22EA400413AEA /* macOS */,
 			);
@@ -766,6 +822,7 @@
 		1E9505CE29B21342007666BF /* Tests UI */ = {
 			isa = PBXGroup;
 			children = (
+				1E07313A29B9D85400E31EED /* Screenshots */,
 				1EF8641729B22E4C00413AEA /* iOS */,
 				1EF8641629B22E4700413AEA /* macOS */,
 			);
@@ -883,8 +940,6 @@
 			isa = PBXGroup;
 			children = (
 				1EF8640629B22DD500413AEA /* MobilePetsUITests.swift */,
-				1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */,
-				1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -923,7 +978,7 @@
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
-				1E07313729B9D68200E31EED /* Products */,
+				1E07314729B9D86500E31EED /* Desktop Pets Screenshots.xctest */,
 				1E9505C129B21342007666BF /* Desktop Pets Tests.xctest */,
 				1E9505CB29B21342007666BF /* Desktop Pets UI Tests.xctest */,
 				1E9505B129B21341007666BF /* Desktop Pets.app */,
@@ -1013,6 +1068,27 @@
 			);
 			productName = "Mobile PetsUITests";
 			productReference = 1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1E07313B29B9D86500E31EED /* Desktop Pets Screenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E07314429B9D86500E31EED /* Build configuration list for PBXNativeTarget "Desktop Pets Screenshots" */;
+			buildPhases = (
+				1E07313E29B9D86500E31EED /* Sources */,
+				1E07314229B9D86500E31EED /* Frameworks */,
+				1E07314329B9D86500E31EED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E07313C29B9D86500E31EED /* PBXTargetDependency */,
+			);
+			name = "Desktop Pets Screenshots";
+			packageProductDependencies = (
+				1E07315929BA18DD00E31EED /* Schwifty */,
+			);
+			productName = "Desktop PetsUITests";
+			productReference = 1E07314729B9D86500E31EED /* Desktop Pets Screenshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		1E9505B029B21341007666BF /* Desktop Pets */ = {
@@ -1160,6 +1236,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					1E07313B29B9D86500E31EED = {
+						TestTargetID = 1E9505B029B21341007666BF;
+					};
 					1E9505B029B21341007666BF = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -1213,6 +1292,7 @@
 				1E9505B029B21341007666BF /* Desktop Pets */,
 				1E9505C029B21342007666BF /* Desktop Pets Tests */,
 				1E9505CA29B21342007666BF /* Desktop Pets UI Tests */,
+				1E07313B29B9D86500E31EED /* Desktop Pets Screenshots */,
 				1EF863E829B22DD400413AEA /* Mobile Pets */,
 				1EF863F729B22DD500413AEA /* Mobile Pets Tests */,
 				1EF8640129B22DD500413AEA /* Mobile Pets UI Tests */,
@@ -1223,6 +1303,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		1E07313229B9D64B00E31EED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E07314329B9D86500E31EED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1350,9 +1437,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E07315529B9E4D100E31EED /* AppStoreScreenshots.swift in Sources */,
 				1E07312C29B9D64B00E31EED /* MobilePetsUITests.swift in Sources */,
-				1E07312D29B9D64B00E31EED /* AppStoreScreenshots.swift in Sources */,
+				1E07314A29B9D88000E31EED /* Languages.swift in Sources */,
+				1E07314D29B9D89800E31EED /* Themes.swift in Sources */,
+				1E07315029B9D89E00E31EED /* Orientations.swift in Sources */,
 				1E07312E29B9D64B00E31EED /* ScreenshotsHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E07313E29B9D86500E31EED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E07313F29B9D86500E31EED /* DesktopPetsUITests.swift in Sources */,
+				1E07314929B9D88000E31EED /* Languages.swift in Sources */,
+				1E07314C29B9D89800E31EED /* Themes.swift in Sources */,
+				1E07314029B9D86500E31EED /* ScreenshotsHelper.swift in Sources */,
+				1E07314F29B9D89E00E31EED /* Orientations.swift in Sources */,
+				1E07314129B9D86500E31EED /* AppStoreScreenshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1400,6 +1503,7 @@
 				1ED44B3929B21A900091CDAE /* ImportVerifier.swift in Sources */,
 				1ED44B5029B21A900091CDAE /* PetsAssets.swift in Sources */,
 				1ED44B6A29B21A900091CDAE /* PetDetailsView.swift in Sources */,
+				1E07315729BA077E00E31EED /* CommandLineUseCase.swift in Sources */,
 				1ED44B4329B21A900091CDAE /* IconButton.swift in Sources */,
 				1ED44B5529B21A900091CDAE /* Tracking.swift in Sources */,
 				1ED44B6929B21A900091CDAE /* MainScene.swift in Sources */,
@@ -1488,6 +1592,7 @@
 				1E1CF22829B2C5B30018A994 /* DesktopObstaclesService.swift in Sources */,
 				1E185F5B29B234970042E537 /* SpeciesNames.swift in Sources */,
 				1EFECB4F29B68B0100C7A028 /* Onboarding.swift in Sources */,
+				1E07315829BA077E00E31EED /* CommandLineUseCase.swift in Sources */,
 				1E185F5C29B234970042E537 /* AppConfig.swift in Sources */,
 				1E76531929B8C031002E6301 /* MobileSettings.swift in Sources */,
 				1EB2BB9F29B29C3B00E7EF8F /* PetEntity.swift in Sources */,
@@ -1574,6 +1679,11 @@
 			target = 1EF863E829B22DD400413AEA /* Mobile Pets */;
 			targetProxy = 1E07312729B9D64B00E31EED /* PBXContainerItemProxy */;
 		};
+		1E07313C29B9D86500E31EED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E9505B029B21341007666BF /* Desktop Pets */;
+			targetProxy = 1E07313D29B9D86500E31EED /* PBXContainerItemProxy */;
+		};
 		1E9505C329B21342007666BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E9505B029B21341007666BF /* Desktop Pets */;
@@ -1658,6 +1768,54 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Mobile Pets";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E07314529B9D86500E31EED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desktop Pets";
+			};
+			name = Debug;
+		};
+		1E07314629B9D86500E31EED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desktop Pets";
 			};
 			name = Release;
 		};
@@ -1801,7 +1959,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1825,7 +1983,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2139,6 +2297,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1E07314429B9D86500E31EED /* Build configuration list for PBXNativeTarget "Desktop Pets Screenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E07314529B9D86500E31EED /* Debug */,
+				1E07314629B9D86500E31EED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E9505D329B21342007666BF /* Build configuration list for PBXNativeTarget "Desktop Pets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2291,6 +2458,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E07312929B9D64B00E31EED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		1E07315929BA18DD00E31EED /* Schwifty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */;
+			productName = Schwifty;
 		};
 		1E185F6429B237EB0042E537 /* Yage */ = {
 			isa = XCSwiftPackageProductDependency;
