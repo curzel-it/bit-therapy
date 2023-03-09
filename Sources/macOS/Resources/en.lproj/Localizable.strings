@@ -77,6 +77,8 @@
 "settings.gravity" = "Enable gravity";
 "settings.launchAtLogin" = "Launch automatically";
 "settings.launchAtLoginPromo" = "Would you like the app to start automatically when you login?";
+"settings.launchSilentlyTitle" = "Launch silently";
+"settings.launchSilentlyMessage" = "If enabled, when the app is launched the main window will close automatically, showing only your pets.";
 "settings.randomEventsTitle" = "Random Events";
 "settings.randomEventsMessage" = "If enabled, some extra animations are played at random intervals... Who knows, aliens might even come to visit!";
 "settings.size" = "Pet Size";

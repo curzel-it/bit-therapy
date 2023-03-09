@@ -101,6 +101,8 @@ enum Lang {
         static let gravity = "settings.gravity".localized()
         static let launchAtLogin = "settings.launchAtLogin".localized()
         static let launchAtLoginPromo = "settings.launchAtLoginPromo".localized()
+        static let launchSilentlyTitle = "settings.launchSilentlyTitle".localized()
+        static let launchSilentlyMessage = "settings.launchSilentlyMessage".localized()
         static let randomEventsTitle = "settings.randomEventsTitle".localized()
         static let randomEventsMessage = "settings.randomEventsMessage".localized()
         static let size = "settings.size".localized()

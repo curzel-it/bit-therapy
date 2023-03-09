@@ -28,6 +28,10 @@
 		1E07315A29BA18DD00E31EED /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07315929BA18DD00E31EED /* Schwifty */; };
 		1E07315C29BA37BD00E31EED /* PageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07315B29BA37BD00E31EED /* PageTitle.swift */; };
 		1E07315D29BA37BD00E31EED /* PageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07315B29BA37BD00E31EED /* PageTitle.swift */; };
+		1E07319729BA9D4500E31EED /* ScreensSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319529BA9D4500E31EED /* ScreensSettings.swift */; };
+		1E07319829BA9D4500E31EED /* LaunchAtLoginSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319629BA9D4500E31EED /* LaunchAtLoginSettings.swift */; };
+		1E07319A29BA9D5900E31EED /* DesktopInteractionsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319929BA9D5800E31EED /* DesktopInteractionsSettings.swift */; };
+		1E07319C29BA9D8100E31EED /* LaunchSilentlySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319B29BA9D8100E31EED /* LaunchSilentlySettings.swift */; };
 		1E09B0A529B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A629B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A829B4C869008967F5 /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */; };
@@ -187,7 +191,6 @@
 		1ED44B6829B21A900091CDAE /* PetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FD2970D32900AB3EB0 /* PetEntity.swift */; };
 		1ED44B6929B21A900091CDAE /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5828740F8E00AB872E /* MainScene.swift */; };
 		1ED44B6A29B21A900091CDAE /* PetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81B295F533D008EFB28 /* PetDetailsView.swift */; };
-		1ED44B6B29B21A900091CDAE /* MacSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D1EA42909C31600CC036B /* MacSettings.swift */; };
 		1ED44B6C29B21A900091CDAE /* OnScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA9012970D32900AB3EB0 /* OnScreenCoordinator.swift */; };
 		1ED44B6D29B21A900091CDAE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059129B210A6007666BF /* Config.swift */; };
 		1ED44B6E29B21A900091CDAE /* PetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81E295F533D008EFB28 /* PetDetailsViewModel.swift */; };
@@ -279,6 +282,10 @@
 		1E07315329B9E4D100E31EED /* AppStoreScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshots.swift; sourceTree = "<group>"; };
 		1E07315629BA077E00E31EED /* CommandLineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineUseCase.swift; sourceTree = "<group>"; };
 		1E07315B29BA37BD00E31EED /* PageTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitle.swift; sourceTree = "<group>"; };
+		1E07319529BA9D4500E31EED /* ScreensSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreensSettings.swift; sourceTree = "<group>"; };
+		1E07319629BA9D4500E31EED /* LaunchAtLoginSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginSettings.swift; sourceTree = "<group>"; };
+		1E07319929BA9D5800E31EED /* DesktopInteractionsSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopInteractionsSettings.swift; sourceTree = "<group>"; };
+		1E07319B29BA9D8100E31EED /* LaunchSilentlySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchSilentlySettings.swift; sourceTree = "<group>"; };
 		1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewModel.swift; sourceTree = "<group>"; };
 		1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystem.swift; sourceTree = "<group>"; };
 		1E185F4C29B231B90042E537 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
@@ -320,7 +327,6 @@
 		1E76531E29B8E069002E6301 /* AppWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowManager.swift; sourceTree = "<group>"; };
 		1E76532029B8E095002E6301 /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
 		1E7B939B298C78B5001F045E /* CustomPetsResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsResources.swift; sourceTree = "<group>"; };
-		1E7D1EA42909C31600CC036B /* MacSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSettings.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
 		1E7E218D29B0873700AC9438 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Docs; path = ../../Docs; sourceTree = "<group>"; };
 		1E7E218E29B0874C00AC9438 /* PetsAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PetsAssets; path = ../../PetsAssets; sourceTree = "<group>"; };
@@ -560,7 +566,10 @@
 		1E185F6729B2381F0042E537 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				1E7D1EA42909C31600CC036B /* MacSettings.swift */,
+				1E07319929BA9D5800E31EED /* DesktopInteractionsSettings.swift */,
+				1E07319629BA9D4500E31EED /* LaunchAtLoginSettings.swift */,
+				1E07319B29BA9D8100E31EED /* LaunchSilentlySettings.swift */,
+				1E07319529BA9D4500E31EED /* ScreensSettings.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -1465,11 +1474,14 @@
 			files = (
 				1ED44B5829B21A900091CDAE /* Firebase.swift in Sources */,
 				1ED44B3429B21A900091CDAE /* Dependencies.swift in Sources */,
+				1E07319729BA9D4500E31EED /* ScreensSettings.swift in Sources */,
 				1ED44B4229B21A900091CDAE /* CustomPetsResources.swift in Sources */,
 				1ED44B4A29B21A900091CDAE /* AppPages.swift in Sources */,
 				1ED44B4E29B21A900091CDAE /* DesktopObstaclesService.swift in Sources */,
 				1E76531F29B8E069002E6301 /* AppWindowManager.swift in Sources */,
+				1E07319C29BA9D8100E31EED /* LaunchSilentlySettings.swift in Sources */,
 				1EFECB4E29B68B0100C7A028 /* Onboarding.swift in Sources */,
+				1E07319A29BA9D5900E31EED /* DesktopInteractionsSettings.swift in Sources */,
 				1ED44B6529B21A900091CDAE /* AppConfig.swift in Sources */,
 				1EFECB4729B67B1000C7A028 /* Settings.swift in Sources */,
 				1EF8642329B22F5C00413AEA /* SwinjectUtils.swift in Sources */,
@@ -1482,7 +1494,6 @@
 				1E1CF22329B2BCF00018A994 /* ScreensaverView.swift in Sources */,
 				1ED44B5D29B21A900091CDAE /* Colors.swift in Sources */,
 				1ED44B4029B21A900091CDAE /* LeavesTracesWhileWalking.swift in Sources */,
-				1ED44B6B29B21A900091CDAE /* MacSettings.swift in Sources */,
 				1ED44B5429B21A900091CDAE /* StatusBar.swift in Sources */,
 				1ED44B3129B21A900091CDAE /* DeletePetUseCase.swift in Sources */,
 				1EFECB5829B72B7600C7A028 /* LaunchAtLogin.swift in Sources */,
@@ -1511,6 +1522,7 @@
 				1E8D068029B4D6DF009C2B34 /* WorldElementsService.swift in Sources */,
 				1ED44B4B29B21A900091CDAE /* SpeciesNames.swift in Sources */,
 				1E09B0A829B4C869008967F5 /* CoordinateSystem.swift in Sources */,
+				1E07319829BA9D4500E31EED /* LaunchAtLoginSettings.swift in Sources */,
 				1ED44B5629B21A900091CDAE /* ImportPetDragAndDropUseCase.swift in Sources */,
 				1E185F8529B247FA0042E537 /* PetDetailsHeader.swift in Sources */,
 				1ED44B6629B21A900091CDAE /* RenamePetButtonCoordinator.swift in Sources */,

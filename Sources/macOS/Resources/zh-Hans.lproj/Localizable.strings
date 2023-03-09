@@ -77,6 +77,8 @@
 "settings.gravity" = "启用重力感应";
 "settings.launchAtLogin" = "登录时自动启动";
 "settings.launchAtLoginPromo" = "您希望应用程序在您登录时自动启动吗？";
+"settings.launchSilentlyTitle" = "默默地启动";
+"settings.launchSilentlyMessage" = "如果启用，当应用程序启动时，主窗口将自动关闭，仅显示您的宠物。";
 "settings.randomEventsTitle" = "随机活动";
 "settings.randomEventsMessage" = "如果启用，会随机播放一些其他的动画……谁知道呢，外星人甚至可能会来探望我们!";
 "settings.size" = "宠物的大小";

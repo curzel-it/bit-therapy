@@ -8,6 +8,7 @@ class AppConfig: ObservableObject {
     @Published var background: String = "BackgroundMountainDynamic"
     @Published var desktopInteractions: Bool = true
     @Published var gravityEnabled: Bool = true
+    @Published var launchSilently: Bool = false
     @Published var names: [String: String] = [:]
     @Published var petSize: CGFloat = PetSize.defaultSize
     @Published var randomEvents: Bool = true
@@ -57,6 +58,7 @@ class AppConfig: ObservableObject {
         background = storage.background
         desktopInteractions = storage.desktopInteractions
         gravityEnabled = storage.gravityEnabled
+        launchSilently = storage.launchSilently
         names = storage.names
         petSize = storage.petSize
         selectedSpecies = storage.selectedSpecies

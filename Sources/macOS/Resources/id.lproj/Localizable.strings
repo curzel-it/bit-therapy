@@ -77,6 +77,8 @@
 "settings.gravity" = "Aktifkan gravitasi";
 "settings.launchAtLogin" = "Tampilkan hewan peliharaan saat Login";
 "settings.launchAtLoginPromo" = "Apakah Anda ingin aplikasi dimulai secara otomatis saat Anda masuk?";
+"settings.launchSilentlyTitle" = "Luncurkan diam -diam";
+"settings.launchSilentlyMessage" = "Jika diaktifkan, ketika aplikasi diluncurkan, jendela utama akan ditutup secara otomatis, hanya menunjukkan hewan peliharaan Anda.";
 "settings.randomEventsTitle" = "Acara Acak";
 "settings.randomEventsMessage" = "Jika diaktifkan, beberapa animasi tambahan diputar secara acak... Siapa tahu, alien bahkan mungkin datang berkunjung!";
 "settings.size" = "Ukuran Hewan Peliharaan";

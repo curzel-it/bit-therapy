@@ -29,6 +29,7 @@ private struct Switches: View {
             SizeControl()
             SpeedControl()
             LaunchAtLoginSwitch()
+            LaunchSilentlySwitch()
             GravitySwitch()
             DesktopInteractionsSwitch()
             RandomEventsSwitch()
