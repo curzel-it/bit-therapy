@@ -1,7 +1,7 @@
 import Combine
 import SwiftUI
 
-enum Theme {
+enum Theme: String {
     case light
     case dark
     case system

@@ -39,13 +39,13 @@ open class PetEntity: Entity {
     }
     
     func setInitialPosition() {
-        let randomX = worldBounds.width * .random(in: 0.2...0.8)
+        let randomX = worldBounds.width * .random(in: 0.05...0.95)
         let randomY: CGFloat
 
         if capability(for: WallCrawler.self) != nil {
             randomY = worldBounds.height - frame.height
         } else {
-            randomY = worldBounds.height * .random(in: 0.1..<0.5)
+            randomY = 60 
         }
         frame.origin = CGPoint(x: randomX, y: randomY)
     }
@@ -97,7 +97,7 @@ extension PetEntity {
 // MARK: - Pet Size
 
 public struct PetSize {
-    public static let defaultSize: CGFloat = DeviceRequirement.iOS.isSatisfied ? 50 : 75
+    public static let defaultSize: CGFloat = DeviceRequirement.iPhone.isSatisfied ? 50 : 75
     public static let minSize: CGFloat = 25
     public static let maxSize: CGFloat = 350
 }

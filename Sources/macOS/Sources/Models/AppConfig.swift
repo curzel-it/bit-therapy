@@ -36,6 +36,10 @@ class AppConfig: ObservableObject {
         selectedSpecies.contains(species)
     }
     
+    func replaceSelectedSpecies(with species: [String]) {
+        selectedSpecies = species
+    }
+    
     func select(_ species: String) {
         deselect(species)
         selectedSpecies.append(species)

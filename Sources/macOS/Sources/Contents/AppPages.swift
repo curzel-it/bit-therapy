@@ -10,6 +10,8 @@ enum AppPage: String, CaseIterable {
 }
 
 extension AppPage: TabBarItem {
+    var accessibilityIdentifier: String { rawValue }
+    
     var icon: String {
         switch self {
         case .about: return "info.circle"
