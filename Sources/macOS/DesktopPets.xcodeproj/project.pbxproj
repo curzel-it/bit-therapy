@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E07312229B9C13F00E31EED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312129B9C13F00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		1E07312429B9C13F00E31EED /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312329B9C13F00E31EED /* FirebaseCrashlytics */; };
+		1E07312C29B9D64B00E31EED /* MobilePetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8640629B22DD500413AEA /* MobilePetsUITests.swift */; };
+		1E07312D29B9D64B00E31EED /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */; };
+		1E07312E29B9D64B00E31EED /* ScreenshotsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */; };
+		1E07313029B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312829B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		1E07313129B9D64B00E31EED /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07312A29B9D64B00E31EED /* FirebaseCrashlytics */; };
 		1E09B0A529B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A629B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A829B4C869008967F5 /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */; };
@@ -70,7 +77,6 @@
 		1E50024A29B7C50C00F6C9B8 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024929B7C50C00F6C9B8 /* Blur.swift */; };
 		1E50024B29B7C50C00F6C9B8 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024929B7C50C00F6C9B8 /* Blur.swift */; };
 		1E50024C29B7D7B200F6C9B8 /* PetDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F8329B246DD0042E537 /* PetDetailsHeader.swift */; };
-		1E50025029B7E1F100F6C9B8 /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */; };
 		1E76531529B8772D002E6301 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531429B8772D002E6301 /* ContentView.swift */; };
 		1E76531629B8772D002E6301 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531429B8772D002E6301 /* ContentView.swift */; };
 		1E76531729B8C009002E6301 /* BackgroundSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185F6929B238340042E537 /* BackgroundSettings.swift */; };
@@ -207,6 +213,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E07312729B9D64B00E31EED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65FE355283D80C900D1F5C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EF863E829B22DD400413AEA;
+			remoteInfo = "Mobile Pets";
+		};
 		1E9505C229B21342007666BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A65FE355283D80C900D1F5C8 /* Project object */;
@@ -238,6 +251,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsHelper.swift; sourceTree = "<group>"; };
+		1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Pets Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewModel.swift; sourceTree = "<group>"; };
 		1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystem.swift; sourceTree = "<group>"; };
 		1E185F4C29B231B90042E537 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
@@ -362,6 +377,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E07312F29B9D64B00E31EED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E07313029B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				1E07313129B9D64B00E31EED /* FirebaseCrashlytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E9505AE29B21341007666BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,12 +441,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E07312229B9C13F00E31EED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				1E07312429B9C13F00E31EED /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E07313729B9D68200E31EED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		1E185F4329B230050042E537 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -851,6 +884,7 @@
 			children = (
 				1EF8640629B22DD500413AEA /* MobilePetsUITests.swift */,
 				1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */,
+				1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -889,10 +923,13 @@
 		A65FE354283D80C900D1F5C8 = {
 			isa = PBXGroup;
 			children = (
+				1E07313729B9D68200E31EED /* Products */,
 				1E9505C129B21342007666BF /* Desktop Pets Tests.xctest */,
 				1E9505CB29B21342007666BF /* Desktop Pets UI Tests.xctest */,
 				1E9505B129B21341007666BF /* Desktop Pets.app */,
 				1E7E218D29B0873700AC9438 /* Docs */,
+				1EFECB5029B6923F00C7A028 /* Frameworks */,
+				1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */,
 				1EF863F829B22DD500413AEA /* Mobile Pets Tests.xctest */,
 				1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */,
 				1EF863E929B22DD400413AEA /* Mobile Pets.app */,
@@ -902,7 +939,6 @@
 				1E7E218F29B0874C00AC9438 /* Species */,
 				1E9505C429B21342007666BF /* Tests */,
 				1E9505CE29B21342007666BF /* Tests UI */,
-				1EFECB5029B6923F00C7A028 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -957,6 +993,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E07312529B9D64B00E31EED /* Mobile Pets Screenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Mobile Pets Screenshots" */;
+			buildPhases = (
+				1E07312B29B9D64B00E31EED /* Sources */,
+				1E07312F29B9D64B00E31EED /* Frameworks */,
+				1E07313229B9D64B00E31EED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E07312629B9D64B00E31EED /* PBXTargetDependency */,
+			);
+			name = "Mobile Pets Screenshots";
+			packageProductDependencies = (
+				1E07312829B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */,
+				1E07312A29B9D64B00E31EED /* FirebaseCrashlytics */,
+			);
+			productName = "Mobile PetsUITests";
+			productReference = 1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		1E9505B029B21341007666BF /* Desktop Pets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E9505D329B21342007666BF /* Build configuration list for PBXNativeTarget "Desktop Pets" */;
@@ -1084,6 +1142,10 @@
 				1EF8640429B22DD500413AEA /* PBXTargetDependency */,
 			);
 			name = "Mobile Pets UI Tests";
+			packageProductDependencies = (
+				1E07312129B9C13F00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */,
+				1E07312329B9C13F00E31EED /* FirebaseCrashlytics */,
+			);
 			productName = "Mobile PetsUITests";
 			productReference = 1EF8640229B22DD500413AEA /* Mobile Pets UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -1154,11 +1216,19 @@
 				1EF863E829B22DD400413AEA /* Mobile Pets */,
 				1EF863F729B22DD500413AEA /* Mobile Pets Tests */,
 				1EF8640129B22DD500413AEA /* Mobile Pets UI Tests */,
+				1E07312529B9D64B00E31EED /* Mobile Pets Screenshots */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E07313229B9D64B00E31EED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E9505AF29B21341007666BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1276,6 +1346,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E07312B29B9D64B00E31EED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E07312C29B9D64B00E31EED /* MobilePetsUITests.swift in Sources */,
+				1E07312D29B9D64B00E31EED /* AppStoreScreenshots.swift in Sources */,
+				1E07312E29B9D64B00E31EED /* ScreenshotsHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E9505AD29B21341007666BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1483,13 +1563,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF8640729B22DD500413AEA /* MobilePetsUITests.swift in Sources */,
-				1E50025029B7E1F100F6C9B8 /* AppStoreScreenshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1E07312629B9D64B00E31EED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EF863E829B22DD400413AEA /* Mobile Pets */;
+			targetProxy = 1E07312729B9D64B00E31EED /* PBXContainerItemProxy */;
+		};
 		1E9505C329B21342007666BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E9505B029B21341007666BF /* Desktop Pets */;
@@ -1528,6 +1612,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E07313429B9D64B00E31EED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobile Pets";
+			};
+			name = Debug;
+		};
+		1E07313529B9D64B00E31EED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobile Pets";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		1E9505D429B21342007666BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1997,6 +2130,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Mobile Pets Screenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E07313429B9D64B00E31EED /* Debug */,
+				1E07313529B9D64B00E31EED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E9505D329B21342007666BF /* Build configuration list for PBXNativeTarget "Desktop Pets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2063,6 +2205,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1E07312929B9D64B00E31EED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.4.0;
+			};
+		};
 		1E2527372989AB2C00756762 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -2122,6 +2272,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E07312129B9C13F00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		1E07312329B9C13F00E31EED /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		1E07312829B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E07312929B9D64B00E31EED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		1E07312A29B9D64B00E31EED /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E07312929B9D64B00E31EED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		1E185F6429B237EB0042E537 /* Yage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Yage;

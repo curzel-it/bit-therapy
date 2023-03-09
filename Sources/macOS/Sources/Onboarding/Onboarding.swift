@@ -27,6 +27,7 @@ private struct OnboardingMod: ViewModifier {
                     
                     Button(Lang.ok, action: close)
                         .buttonStyle(.regular)
+                        .accessibilityIdentifier("close_onboarding")
                 }
                 .padding()
             }

@@ -2,6 +2,7 @@ import Schwifty
 import SwiftUI
 
 protocol TabBarItem: Hashable {
+    var accessibilityIdentifier: String { get }
     var icon: String { get }
     var iconSelected: String { get }
     var title: String { get }
@@ -51,6 +52,7 @@ private struct TabBarItemView<T: TabBarItem>: View {
                 .font(.tabBarItem)
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.8)
+                .accessibilityIdentifier(item.accessibilityIdentifier)
             Spacer()
         }
         .foregroundColor(fgColor)
