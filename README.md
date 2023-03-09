@@ -26,9 +26,8 @@ I'm working on a [Python port](https://github.com/curzel-it/pet-therapy/tree/mai
 
 ## Screenshots
 
-![App running on my mac](docs/demo.gif)
-![PetsSelectionView, light mode](docs/1.png)
-![Settings, light mode](docs/3.png)
+![Homepage, light mode](docs/1.png)
+![Settings, dark mode](docs/2.png)
 
 ## How does it work?
 

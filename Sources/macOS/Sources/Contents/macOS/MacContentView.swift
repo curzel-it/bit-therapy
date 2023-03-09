@@ -3,7 +3,7 @@ import SwiftUI
 import Swinject
 
 struct MacContentView: View {
-    static let minSize = CGSize(square: 700)
+    static let minSize = CGSize(width: 850, height: 700)
     
     var body: some View {
         ContentView()
