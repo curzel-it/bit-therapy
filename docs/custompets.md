@@ -10,6 +10,60 @@ You can now create your own custom pets!
 1. Drag and drop the zip in the app
 1. Show and share your work on [Discord](https://discord.gg/WvvnmPCy)!
 
+## Breaking changes in version 2.40
+...Sorry!
+
+### Gravity
+Starting with version 2.40, the `Gravity` capability is not added by the app automatically anymore.
+
+Updating your custom pets is very easy:
+1. Export them from the app
+1. Delete them from the app
+1. Edit the json file and add `Gravity` to the list of capabiities (including quotes and comma, see other elements in the list).
+1. Re-import them
+1. Done!
+
+See [Species Definition](#species definition) for an example.
+
+### Random Platform Jumper
+Starting with version 2.40, the `RandomPlatformJumper` capability is not added by the app automatically anymore.
+
+Follow the same instructions listed above for the gravity capability, just write `RandomPlatformJumper` instead of `Gravity`!
+
+### Animation Position
+Starting with version 2.40, the `position` parameter for the animations stops supporting the "legacy" format.
+
+Updating is easy, just change your animations from the old format:
+``` json
+{
+  ...
+  "animations": [
+    {
+      "id": "front",
+      "position": { "fromEntityBottomLeft": {} },
+      "requiredLoops": 5
+    },
+    ...
+  ]
+}
+```
+To the new one:
+``` json
+{
+  ...
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
+    },
+    ...
+  ]
+}
+```
+
+You will need to delete your pet from the app and re-import it.
+
 ## Setup
 You only need two things: 
 * An updated version of the app
@@ -38,12 +92,13 @@ All of these need to be defined in a json file, for example:
   "capabilities": [
     "AnimatedSprite",
     "AnimationsProvider",
+    "AnimationsScheduler",
     "AutoRespawn",
     "BounceOnLateralCollisions",
     "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
     "LinearMovement",
     "PetsSpritesProvider",
-    "AnimationsScheduler",
     "Rotating"
   ],
   "animations": [
@@ -60,11 +115,12 @@ All of these need to be defined in a json file, for example:
 Complete json files for all original species can be found [here](https://github.com/curzel-it/pet-therapy/tree/main/Species).
 
 ### Capabilities
-Capabilities are behaviors that can be attached to a Pet to manipulate its state on update - some names are pretty self-explanatory, such as `BounceOnLateralCollisions` or `FlipHorizontallyWhenGoingLeft`.
+Capabilities are behaviors that can be attached to a Pet to manipulate its state on update - some names are pretty self-explanatory, such as `BounceOnLateralCollisions`, `FlipHorizontallyWhenGoingLeft` or `Gravity`.
 
 While I recommend using the set of capabilities in the example above for most pets, not all species have the same capabilities:
 * Grumpy Cat has a special one called `GetsAngryWhenMeetingOtherCats`
 * Snails are missing `BounceOnLateralCollisions` and have a special one called `WallCrawler`, which is what makes them "crawl" along the borders of your screen
+* `RandomPlayformJumper` allows certain pets to "fly" to other windows on your screen
 
 ### Animations
 Animations are picked randomly from the list at a random interval.
