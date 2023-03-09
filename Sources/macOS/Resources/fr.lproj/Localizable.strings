@@ -13,6 +13,8 @@
 "contributors.owner" = "Fondateur";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "Traducteur";
+"customPets.breakingChanges240Title" = "Mises à jour personnalisées des animaux de compagnie dans la version 2.40";
+"customPets.breakingChanges240Message" = "La version 2.40 présente quelques modifications dans la façon dont le fichier JSON pour les animaux de compagnie personnalisés est formaté. \ Nunfortunetly, c'est un changement de rupture, et vous devrez le mettre à jour ... désolé! \ NBUT ne vous inquiétez pas, la mise à jour est facile et la communauté Discord est Ici pour aider!";
 "customPets.customPetDescription" = "Ceci est un animal de compagnie fait sur mesure";
 "customPets.dragAreaMessage" = "Faites glisser et déposez votre fichier zip ici";
 "customPets.export" = "Exporter";

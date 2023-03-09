@@ -16,19 +16,45 @@ struct NewsView: View {
             )
             .padding(.bottom, .xxl)
         }
+        if viewModel.showBreakingChangesForVersion240 {
+            NewsBanner(
+                title: Lang.CustomPets.breakingChanges240Title,
+                message: Lang.CustomPets.breakingChanges240Message,
+                actions: [
+                    .init(title: Lang.CustomPets.readTheDocs, style: .regular, action: viewModel.showCustomPetsDocs),
+                    .init(title: Lang.ok, style: .text) { viewModel.showBreakingChangesForVersion240 = false }
+                ]
+            )
+            .padding(.bottom, .xxl)
+        }
     }
 }
 
 private class NewsViewModel: ObservableObject {
     @Inject private var launchAtLogin: LaunchAtLoginUseCase
+    @Inject private var speciesProvider: SpeciesProvider
     
     @Published var showStartAtLoginAlert: Bool = false
+    @Published var showBreakingChangesForVersion240: Bool = false
     
     @AppStorage("didShowLaunchAtLoginAlert") private var didShowLaunchAtLoginAlert = false
+    @AppStorage("didShowBreakingChangesForVersion240") private var didShowBreakingChangesForVersion240 = false
     
     init() {
         showStartAtLoginAlert = !didShowLaunchAtLoginAlert && launchAtLogin.isAvailable && !launchAtLogin.isEnabled
-        didShowLaunchAtLoginAlert = true
+        if showStartAtLoginAlert {
+            didShowLaunchAtLoginAlert = true
+        }
+        showBreakingChangesForVersion240 = !didShowBreakingChangesForVersion240 && hasAnyCustomPets()
+        didShowBreakingChangesForVersion240 = true
+    }
+    
+    private func hasAnyCustomPets() -> Bool {
+        speciesProvider.hasAnyCustomPets()
+    }
+    
+    func showCustomPetsDocs() {
+        URL(string: Lang.Urls.customPetsDocs)?.visit()
     }
     
     func enableLaunchAtLogin() {
@@ -50,7 +76,7 @@ private struct NewsBannerAction: Identifiable {
     let id = UUID().uuidString
     let title: String
     let style: CustomButtonStyle
-    var action: () -> Void = {}
+    var action: () -> Void
 }
 
 private struct NewsBanner: View {
@@ -58,12 +84,8 @@ private struct NewsBanner: View {
     let message: String
     let actions: [NewsBannerAction]
     
-    var axis: Axis.Set {
-        DeviceRequirement.iPhone.isSatisfied ? .vertical : .horizontal
-    }
-    
     var body: some View {
-        VHStack(axis) {
+        VHStack(DeviceRequirement.iPhone.isSatisfied ? .vertical : .horizontal) {
             VStack(spacing: .md) {
                 Text(title).font(.headline).textAlign(.leading)
                 Text(message).textAlign(.leading)
@@ -71,7 +93,7 @@ private struct NewsBanner: View {
             if !DeviceRequirement.iPhone.isSatisfied {
                 Spacer()
             }
-            HStack {
+            VHStack(DeviceRequirement.iPhone.isSatisfied ? .horizontal : .vertical) {
                 Actions(actions: actions)
             }
         }

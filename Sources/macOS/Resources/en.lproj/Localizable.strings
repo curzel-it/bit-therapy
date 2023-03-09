@@ -13,6 +13,8 @@
 "contributors.owner" = "Founder";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "Translator";
+"customPets.breakingChanges240Title" = "Custom Pets updates in version 2.40";
+"customPets.breakingChanges240Message" = "Version 2.40 introduces some changes in how the json file for custom pets is formatted.\nUnfortunately, this is a breaking change, and you will need to update it... Sorry!\nBut worry not, updating is easy and the Discord community is here to help!";
 "customPets.customPetDescription" = "This is a custom pet";
 "customPets.dragAreaMessage" = "Drag and drop your zip file here";
 "customPets.export" = "Export";

@@ -41,6 +41,8 @@ enum Lang {
     }
 
     enum CustomPets {
+        static let breakingChanges240Title = "customPets.breakingChanges240Title".localized()
+        static let breakingChanges240Message = "customPets.breakingChanges240Message".localized()
         static let customPetDescription = "customPets.customPetDescription".localized()
         static let dragAreaMessage = "customPets.dragAreaMessage".localized()
         static let export = "customPets.export".localized()

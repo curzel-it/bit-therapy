@@ -13,6 +13,8 @@
 "contributors.owner" = "创始人";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "翻译家";
+"customPets.breakingChanges240Title" = "版本2.40中的自定义宠物更新";
+"customPets.breakingChanges240Message" = "版本2.40介绍了定制宠物的JSON文件的格式化的一些更改。在这里帮助！";
 "customPets.customPetDescription" = "这是一只自定义的宠物";
 "customPets.dragAreaMessage" = "将您的压缩文件拖放到这里";
 "customPets.export" = "导出";

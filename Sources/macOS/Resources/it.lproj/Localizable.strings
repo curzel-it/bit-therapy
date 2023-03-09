@@ -13,6 +13,8 @@
 "contributors.owner" = "Founder";
 "contributors.patreon" = "Patreon";
 "contributors.translator" = "Traduttore";
+"customPets.breakingChanges240Title" = "Custom pets nella versione 2.40";
+"customPets.breakingChanges240Message" = "La versione 2.40 introduce alcune modifiche a come viene formattato il file JSON per gli animali domestici personalizzati. Qui per aiutarti!";
 "customPets.customPetDescription" = "Questo è un pet custom";
 "customPets.dragAreaMessage" = "Trascina il tuo file zip qui";
 "customPets.export" = "Esporta";
