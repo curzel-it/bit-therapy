@@ -8,7 +8,7 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "AnimationsScheduler": AnimationsScheduler.self,
         "AutoRespawn": AutoRespawn.self,
         "BounceOnLateralCollisions": BounceOnLateralCollisions.self,
-        "SleepingPlace": SleepingPlace.self,
+        "Draggable": Draggable.self,
         "FlipHorizontallyWhenGoingLeft": FlipHorizontallyWhenGoingLeft.self,
         "GetsAngryWhenMeetingOtherCats": GetsAngryWhenMeetingOtherCats.self,
         "Gravity": Gravity.self,
@@ -17,6 +17,8 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "PetsSpritesProvider": PetsSpritesProvider.self,
         "RandomPlatformJumper": RandomPlatformJumper.self,
         "Rotating": Rotating.self,
+        "ShowsMenuOnRightClick": ShowsMenuOnRightClick.self,
+        "SleepingPlace": SleepingPlace.self,
         "WallCrawler": WallCrawler.self
     ]
     

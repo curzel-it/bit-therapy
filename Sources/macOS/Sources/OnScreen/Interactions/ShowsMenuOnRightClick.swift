@@ -18,7 +18,7 @@ extension Entity {
 }
 
 #if os(macOS)
-class ShowMenuOnRightClick: RightClickable {
+class ShowsMenuOnRightClick: RightClickable {
     weak var lastWindow: SomeWindow?
     
     override func onRightClick(from window: SomeWindow?, at point: CGPoint) {
@@ -71,5 +71,5 @@ class ShowMenuOnRightClick: RightClickable {
     }
 }
 #else
-class ShowMenuOnRightClick: RightClickable {}
+class ShowsMenuOnRightClick: RightClickable {}
 #endif

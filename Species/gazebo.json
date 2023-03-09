@@ -4,9 +4,11 @@
     "AnimatedSprite",
     "AnimationsProvider",
     "AutoRespawn",
+    "Draggable",
     "Gravity",
     "PetsSpritesProvider",
     "LinearMovement",
+    "ShowsMenuOnRightClick",
     "SleepingPlace"
   ],
   "dragPath": "front",

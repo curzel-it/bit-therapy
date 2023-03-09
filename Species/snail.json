@@ -4,10 +4,12 @@
     "AnimatedSprite",
     "AnimationsProvider",
     "AutoRespawn",
+    "Draggable",
     "LinearMovement",
     "PetsSpritesProvider",
     "AnimationsScheduler",
     "Rotating",
+    "ShowsMenuOnRightClick",
     "WallCrawler"
   ],
   "dragPath": "front",

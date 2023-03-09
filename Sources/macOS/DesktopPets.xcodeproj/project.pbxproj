@@ -130,9 +130,8 @@
 		1EB2BBB729B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBB629B2A3CA00E7EF8F /* EntityViewModel.swift */; };
 		1EB2BBB829B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBB629B2A3CA00E7EF8F /* EntityViewModel.swift */; };
 		1EB2BBBE29B2AB5000E7EF8F /* ImageManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2BBBC29B2AB5000E7EF8F /* ImageManipulation.swift */; };
-		1EB2BBBF29B2AED300E7EF8F /* MouseDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */; };
 		1EB2BBC029B2AF3100E7EF8F /* CustomPetsResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B939B298C78B5001F045E /* CustomPetsResources.swift */; };
-		1EB2BBC129B2B02700E7EF8F /* ShowMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */; };
+		1EB2BBC129B2B02700E7EF8F /* ShowsMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowsMenuOnRightClick.swift */; };
 		1ED44B2F29B21A8F0091CDAE /* PetsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36C81A295F533D008EFB28 /* PetsGrid.swift */; };
 		1ED44B3029B21A900091CDAE /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2AC745290B1093003D0AB2 /* Lang.swift */; };
 		1ED44B3129B21A900091CDAE /* DeletePetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89C11E29B1F78800C0EDB9 /* DeletePetUseCase.swift */; };
@@ -147,7 +146,7 @@
 		1ED44B3B29B21A900091CDAE /* ImageInterpolationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A329B211DC007666BF /* ImageInterpolationUseCase.swift */; };
 		1ED44B3C29B21A900091CDAE /* DeletePetButtonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93C60E2962E781007A5B91 /* DeletePetButtonCoordinator.swift */; };
 		1ED44B3D29B21A900091CDAE /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42E4D3295F7A5200F425F8 /* Species.swift */; };
-		1ED44B3E29B21A900091CDAE /* ShowMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */; };
+		1ED44B3E29B21A900091CDAE /* ShowsMenuOnRightClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F42970D32900AB3EB0 /* ShowsMenuOnRightClick.swift */; };
 		1ED44B3F29B21A900091CDAE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7D5628740F8E00AB872E /* App.swift */; };
 		1ED44B4029B21A900091CDAE /* LeavesTracesWhileWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDB7A7298FD078007EFC62 /* LeavesTracesWhileWalking.swift */; };
 		1ED44B4129B21A900091CDAE /* ScreenEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */; };
@@ -177,7 +176,6 @@
 		1ED44B5929B21A900091CDAE /* Contributors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF525822997E710004B64D2 /* Contributors.swift */; };
 		1ED44B5B29B21A900091CDAE /* LeavesPoopStains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDB7A5298F98B5007EFC62 /* LeavesPoopStains.swift */; };
 		1ED44B5D29B21A900091CDAE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95059429B210A6007666BF /* Colors.swift */; };
-		1ED44B5E29B21A900091CDAE /* MouseDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */; };
 		1ED44B6029B21A900091CDAE /* RenderingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A529B211DC007666BF /* RenderingDependencies.swift */; };
 		1ED44B6129B21A900091CDAE /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6AA6FB2996F996002245E7 /* ContributorsView.swift */; };
 		1ED44B6229B21A900091CDAE /* RandomPlatformJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */; };
@@ -361,8 +359,7 @@
 		1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportPetButtonCoordinator.swift; sourceTree = "<group>"; };
 		1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPlatformJumper.swift; sourceTree = "<group>"; };
 		1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopObstaclesService.swift; sourceTree = "<group>"; };
-		1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMenuOnRightClick.swift; sourceTree = "<group>"; };
-		1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseDraggable.swift; sourceTree = "<group>"; };
+		1EAEA8F42970D32900AB3EB0 /* ShowsMenuOnRightClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsMenuOnRightClick.swift; sourceTree = "<group>"; };
 		1EAEA8F82970D32900AB3EB0 /* GetsAngryWhenMeetingOtherCats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetsAngryWhenMeetingOtherCats.swift; sourceTree = "<group>"; };
 		1EAEA8FB2970D32900AB3EB0 /* ScreenEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEnvironment.swift; sourceTree = "<group>"; };
 		1EAEA8FC2970D32900AB3EB0 /* SleepingPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepingPlace.swift; sourceTree = "<group>"; };
@@ -849,8 +846,7 @@
 			isa = PBXGroup;
 			children = (
 				1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */,
-				1EAEA8F62970D32900AB3EB0 /* MouseDraggable.swift */,
-				1EAEA8F42970D32900AB3EB0 /* ShowMenuOnRightClick.swift */,
+				1EAEA8F42970D32900AB3EB0 /* ShowsMenuOnRightClick.swift */,
 			);
 			path = Interactions;
 			sourceTree = "<group>";
@@ -1496,7 +1492,6 @@
 				1ED44B3C29B21A900091CDAE /* DeletePetButtonCoordinator.swift in Sources */,
 				1ED44B5329B21A900091CDAE /* ImportPetDragAndDropCoordinator.swift in Sources */,
 				1E1CF23129B3551D0018A994 /* Typography.swift in Sources */,
-				1ED44B5E29B21A900091CDAE /* MouseDraggable.swift in Sources */,
 				1E09B0A529B3A3E5008967F5 /* WorldViewModel.swift in Sources */,
 				1ED44B6329B21A900091CDAE /* PetsSelectionView.swift in Sources */,
 				1E76531C29B8D864002E6301 /* Themes.swift in Sources */,
@@ -1541,7 +1536,7 @@
 				1E76531529B8772D002E6301 /* ContentView.swift in Sources */,
 				1ED44B3529B21A900091CDAE /* WorldWindow.swift in Sources */,
 				1ED44B3029B21A900091CDAE /* Lang.swift in Sources */,
-				1ED44B3E29B21A900091CDAE /* ShowMenuOnRightClick.swift in Sources */,
+				1ED44B3E29B21A900091CDAE /* ShowsMenuOnRightClick.swift in Sources */,
 				1ED44B6C29B21A900091CDAE /* OnScreenCoordinator.swift in Sources */,
 				1ED44B4729B21A900091CDAE /* Filters.swift in Sources */,
 				1ED44B6429B21A900091CDAE /* Spacing.swift in Sources */,
@@ -1592,7 +1587,7 @@
 				1EB2BBA729B29C4700E7EF8F /* GetsAngryWhenMeetingOtherCats.swift in Sources */,
 				1EB2BBA329B29C4700E7EF8F /* UfoAbduction.swift in Sources */,
 				1EB2BBA529B29C4700E7EF8F /* SleepingPlace.swift in Sources */,
-				1EB2BBC129B2B02700E7EF8F /* ShowMenuOnRightClick.swift in Sources */,
+				1EB2BBC129B2B02700E7EF8F /* ShowsMenuOnRightClick.swift in Sources */,
 				1E185F9D29B24CB50042E537 /* ImportPetUseCaseImpl.swift in Sources */,
 				1E1CF22829B2C5B30018A994 /* DesktopObstaclesService.swift in Sources */,
 				1E185F5B29B234970042E537 /* SpeciesNames.swift in Sources */,
@@ -1655,7 +1650,6 @@
 				1EB2BBB829B2A3CA00E7EF8F /* EntityViewModel.swift in Sources */,
 				1E185F9529B24A5D0042E537 /* DeletePetButtonCoordinator.swift in Sources */,
 				1E185F5F29B234970042E537 /* Lang.swift in Sources */,
-				1EB2BBBF29B2AED300E7EF8F /* MouseDraggable.swift in Sources */,
 				1EB2BBBE29B2AB5000E7EF8F /* ImageManipulation.swift in Sources */,
 				1EB2BB9929B29C2800E7EF8F /* RenderingDependencies.swift in Sources */,
 			);

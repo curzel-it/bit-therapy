@@ -13,53 +13,34 @@ You can now create your own custom pets!
 ## Breaking changes in version 2.40
 ...Sorry!
 
-### Gravity
-Starting with version 2.40, the `Gravity` capability is not added by the app automatically anymore.
+### Explicit Capabilities
+Starting with version 2.40, certain capabilities are not added by the app automatically anymore.
+
+These are:
+* `Gravity` - Allows pets to fall to the bottom of the screen
+* `RandomPlatformJumper` - Allows pets to fly on top of windows
+* `Draggable` - Allows pets to be dragged with the mouse
+* `ShowsMenuOnRightClick` - Allows pets to be right-clicked to open a menu
 
 Updating your custom pets is very easy:
 1. Export them from the app
 1. Delete them from the app
-1. Edit the json file and add `Gravity` to the list of capabiities (including quotes and comma, see other elements in the list).
-1. Re-import them
+1. Edit the json file and add the new items to the list of capabilities
+1. Re-import the pet
 1. Done!
 
 See [Species Definition](#species definition) for an example.
 
-### Random Platform Jumper
-Starting with version 2.40, the `RandomPlatformJumper` capability is not added by the app automatically anymore.
-
-Follow the same instructions listed above for the gravity capability, just write `RandomPlatformJumper` instead of `Gravity`!
-
 ### Animation Position
 Starting with version 2.40, the app will stop supporting the legacy format of the `position` parameter.
 
-Updating is easy, just change your animations from the old format:
+Updating is easy, just change your animations position from the old format:
 ``` json
-{
-  ...
-  "animations": [
-    {
-      "id": "front",
-      "position": { "fromEntityBottomLeft": {} },
-      "requiredLoops": 5
-    },
-    ...
-  ]
-}
+"position": { "fromEntityBottomLeft": {} },
 ```
 To the new one:
 ``` json
-{
-  ...
-  "animations": [
-    {
-      "id": "front",
-      "position": "fromEntityBottomLeft",
-      "requiredLoops": 5
-    },
-    ...
-  ]
-}
+"position": "fromEntityBottomLeft",
 ```
 
 You will need to delete your pet from the app and re-import it.
@@ -95,11 +76,13 @@ All of these need to be defined in a json file, for example:
     "AnimationsScheduler",
     "AutoRespawn",
     "BounceOnLateralCollisions",
+    "Draggable",
     "FlipHorizontallyWhenGoingLeft",
     "Gravity",
     "LinearMovement",
     "PetsSpritesProvider",
-    "Rotating"
+    "Rotating",
+    "ShowsMenuOnRightClick"
   ],
   "animations": [
     {

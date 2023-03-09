@@ -18,7 +18,6 @@ class PetEntity: Entity {
         resetSpeed()
         setInitialPosition()
         setInitialDirection()
-        installAdditionalCapabilities()
         bindGravity()
     }
     
@@ -26,11 +25,6 @@ class PetEntity: Entity {
         settings.$gravityEnabled
             .sink { [weak self] in self?.setGravity(enabled: $0) }
             .store(in: &disposables)
-    }
-    
-    private func installAdditionalCapabilities() {
-        install(MouseDraggable())
-        install(ShowMenuOnRightClick())
     }
 
     override open func set(state: EntityState) {

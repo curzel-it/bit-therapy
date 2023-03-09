@@ -17,7 +17,7 @@ struct ScreensaverEntityView: View {
                 .gesture(
                     DragGesture()
                         .onChanged { viewModel.dragGestureChanged(translation: $0.translation) }
-                        .onEnded { _ in viewModel.mouseUp() }
+                        .onEnded { _ in viewModel.dragEnded() }
                 )
         }
     }
