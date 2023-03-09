@@ -11,7 +11,7 @@ class ImportPetDragAndDropCoordinator {
 }
 
 private struct ImportDragAndDropView: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     @StateObject var viewModel: ImportDragAndDropViewModel
     
     var body: some View {

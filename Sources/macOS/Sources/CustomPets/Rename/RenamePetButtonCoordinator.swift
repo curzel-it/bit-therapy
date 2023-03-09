@@ -21,7 +21,7 @@ class RenamePetButtonCoordinatorImpl: RenamePetButtonCoordinator {
 }
 
 private struct RenamePetButton: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     @StateObject var viewModel: RenamePetButtonViewModel
     
     var body: some View {
@@ -51,7 +51,7 @@ private struct RenamePetButton: View {
 }
 
 private class RenamePetButtonViewModel: ObservableObject {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
     
@@ -76,7 +76,7 @@ private class RenamePetButtonViewModel: ObservableObject {
     }
     
     func confirm() {
-        appState.rename(species: speciesId, to: name)
+        appConfig.rename(species: speciesId, to: name)
         cancel()
     }
 }

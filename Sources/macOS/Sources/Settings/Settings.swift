@@ -2,7 +2,7 @@ import Schwifty
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -58,14 +58,14 @@ struct FixOnScreenPets: View {
 // MARK: - Random Events
 
 private struct RandomEventsSwitch: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     
     @State var showingDetails = false
     
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.randomEventsTitle,
-            value: $appState.randomEvents,
+            value: $appConfig.randomEvents,
             showHelp: $showingDetails
         )
         .sheet(isPresented: $showingDetails) {
@@ -89,12 +89,12 @@ private struct RandomEventsSwitch: View {
 // MARK: - Gravity
 
 struct GravitySwitch: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.gravity,
-            value: $appState.gravityEnabled
+            value: $appConfig.gravityEnabled
         )
         .positioned(.leading)
     }
@@ -103,12 +103,12 @@ struct GravitySwitch: View {
 // MARK: - Pet Size
 
 struct SizeControl: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     
     @State var text: String = ""
     
     var formattedValue: String {
-        "\(Int(appState.petSize))"
+        "\(Int(appConfig.petSize))"
     }
     
     var body: some View {
@@ -122,8 +122,8 @@ struct SizeControl: View {
         .onChange(of: text) { newText in
             guard let value = Float(newText) else { return }
             let newSize = max(min(CGFloat(value), PetSize.maxSize), PetSize.minSize)
-            guard appState.petSize != newSize else { return }
-            appState.petSize = newSize
+            guard appConfig.petSize != newSize else { return }
+            appConfig.petSize = newSize
         }
     }
 }
@@ -131,12 +131,12 @@ struct SizeControl: View {
 // MARK: - Pet Speed Multiplier
 
 struct SpeedControl: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     
     @State var text: String = ""
     
     var formattedValue: String {
-        "\(Int(appState.speedMultiplier * 100))%"
+        "\(Int(appConfig.speedMultiplier * 100))%"
     }
     
     var body: some View {
@@ -150,9 +150,9 @@ struct SpeedControl: View {
         .onChange(of: text) { newText in
             guard let value = Int(newText) else { return }
             let newSpeed = CGFloat(value) / 100
-            guard appState.speedMultiplier != newSpeed else { return }
+            guard appConfig.speedMultiplier != newSpeed else { return }
             guard 0 <= newSpeed && newSpeed <= 3 else { return }
-            appState.speedMultiplier = newSpeed
+            appConfig.speedMultiplier = newSpeed
         }
     }
 }

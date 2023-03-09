@@ -16,7 +16,7 @@ struct BackgroundSettings: View {
 }
 
 private class BackgroundsViewModel: ObservableObject {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     
     @Published private(set) var selectedItem = ""
     
@@ -27,7 +27,7 @@ private class BackgroundsViewModel: ObservableObject {
     ]
     
     init() {
-        selectedItem = appState.background
+        selectedItem = appConfig.background
     }
     
     func title(for item: String) -> String {
@@ -36,7 +36,7 @@ private class BackgroundsViewModel: ObservableObject {
     
     func select(_ item: String) {
         withAnimation {
-            appState.background = item
+            appConfig.background = item
             selectedItem = item
         }
     }

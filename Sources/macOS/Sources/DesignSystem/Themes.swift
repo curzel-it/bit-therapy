@@ -12,10 +12,10 @@ protocol ThemeUseCase {
 }
 
 class ThemeUseCaseImpl: ThemeUseCase {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     
     func theme() -> AnyPublisher<Theme, Never> {
-        appState.$background
+        appConfig.$background
             .map { [weak self] in self?.theme(fromBackgroundName: $0) ?? .system }
             .eraseToAnyPublisher()
     }

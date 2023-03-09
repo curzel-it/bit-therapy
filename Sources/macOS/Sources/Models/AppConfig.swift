@@ -2,8 +2,8 @@ import Combine
 import Schwifty
 import SwiftUI
 
-class AppState: ObservableObject {
-    @Inject private var storage: AppStateStorage
+class AppConfig: ObservableObject {
+    @Inject private var storage: AppConfigStorage
         
     @Published var background: String = "BackgroundMountainDynamic"
     @Published var desktopInteractions: Bool = true
@@ -11,9 +11,9 @@ class AppState: ObservableObject {
     @Published var names: [String: String] = [:]
     @Published var petSize: CGFloat = PetSize.defaultSize
     @Published var randomEvents: Bool = true
-    @Published private(set) var selectedSpecies: [String] = []
     @Published var speedMultiplier: CGFloat = 1
     @Published var disabledScreens: [String] = []
+    @Published private(set) var selectedSpecies: [String] = []
     
     init() {
         readFromStorage()

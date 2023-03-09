@@ -5,7 +5,7 @@ import Yage
 
 class ScreenEnvironment: World {
     @Inject var rainyCloudUseCase: RainyCloudUseCase
-    @Inject var settings: AppState
+    @Inject var settings: AppConfig
     @Inject var ufoAbductionUseCase: UfoAbductionUseCase
     @Inject private var desktopObstacles: DesktopObstaclesService
     @Inject private var speciesProvider: SpeciesProvider

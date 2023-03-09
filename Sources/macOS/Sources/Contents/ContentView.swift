@@ -3,7 +3,7 @@ import Schwifty
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     @StateObject private var viewModel = ContentViewModel()
 
     var body: some View {
@@ -36,7 +36,7 @@ struct ContentView: View {
 }
 
 private class ContentViewModel: ObservableObject {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     @Inject private var theme: ThemeUseCase
     
     @Published var backgroundBlurRadius: CGFloat
@@ -48,7 +48,7 @@ private class ContentViewModel: ObservableObject {
         if DeviceRequirement.iOS.isSatisfied {
             return [.petSelection, .screensaver, .settings, .about]
         } else {
-            return [.petSelection, .screensaver, .settings, .contributors, .about]
+            return [.petSelection, .settings, .contributors, .about]
         }
     }()
     
@@ -57,13 +57,13 @@ private class ContentViewModel: ObservableObject {
     init() {
         selectedPage = .petSelection
         backgroundBlurRadius = 10
-        backgroundImage = appState.background
+        backgroundImage = appConfig.background
         bindBackground()
         bindColorScheme()
     }
     
     private func bindBackground() {
-        appState.$background
+        appConfig.$background
             .sink { [weak self] in self?.backgroundImage = $0 }
             .store(in: &disposables)
         

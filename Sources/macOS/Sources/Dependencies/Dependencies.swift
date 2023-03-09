@@ -5,8 +5,8 @@ import Yage
 class Dependencies {
     static func setup() {
         let container = Container()
-        container.registerSingleton(AppState.self) { _ in AppState() }
-        container.registerSingleton(AppStateStorage.self) { _ in AppStateStorageImpl() }
+        container.registerSingleton(AppConfig.self) { _ in AppConfig() }
+        container.registerSingleton(AppConfigStorage.self) { _ in AppConfigStorageImpl() }
         container.registerSingleton(OnScreenCoordinator.self) { _ in OnScreenCoordinatorImpl() }
         container.registerSingleton(PetsAssetsProvider.self) { _ in PetsAssetsProviderImpl() }
         container.registerSingleton(SpeciesNamesRepository.self) { _ in SpeciesNamesRepositoryImpl() }

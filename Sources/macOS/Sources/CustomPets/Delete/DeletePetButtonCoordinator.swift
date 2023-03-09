@@ -16,7 +16,7 @@ class DeletePetButtonCoordinatorImpl: DeletePetButtonCoordinator {
 }
 
 private struct DeletePetButton: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     @StateObject var viewModel: DeletePetButtonViewModel    
     
     var body: some View {

@@ -3,7 +3,7 @@ import Schwifty
 import Yage
 
 class OnScreenCoordinatorImpl: OnScreenCoordinator {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     
     var worlds: [ScreenEnvironment] = []
     private var windows: [NSWindow] = []
@@ -18,7 +18,7 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     
     private func loadWorlds() {
         worlds = Screen.screens
-            .filter { appState.isEnabled(screen: $0) }
+            .filter { appConfig.isEnabled(screen: $0) }
             .map { ScreenEnvironment(for: $0) }
     }
 

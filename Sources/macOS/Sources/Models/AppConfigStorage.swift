@@ -2,7 +2,7 @@ import Combine
 import Foundation
 import SwiftUI
 
-protocol AppStateStorage {
+protocol AppConfigStorage {
     var background: String { get }
     var desktopInteractions: Bool { get }
     var disabledScreens: [String] { get }
@@ -12,10 +12,10 @@ protocol AppStateStorage {
     var petSize: Double { get }
     var selectedSpecies: [String] { get }
     var speedMultiplier: Double { get }
-    func storeValues(of appState: AppState)
+    func storeValues(of appConfig: AppConfig)
 }
 
-class AppStateStorageImpl: AppStateStorage {
+class AppConfigStorageImpl: AppConfigStorage {
     @Inject private var speciesProvider: SpeciesProvider
     
     @AppStorage("backgroundName") var background: String = "BackgroundMountainDynamic"
@@ -67,40 +67,40 @@ class AppStateStorageImpl: AppStateStorage {
     
     private var disposables = Set<AnyCancellable>()
         
-    func storeValues(of appState: AppState) {
-        appState.$background
+    func storeValues(of appConfig: AppConfig) {
+        appConfig.$background
             .sink { [weak self] in self?.background = $0 }
             .store(in: &disposables)
         
-        appState.$desktopInteractions
+        appConfig.$desktopInteractions
             .sink { [weak self] in self?.desktopInteractions = $0 }
             .store(in: &disposables)
         
-        appState.$gravityEnabled
+        appConfig.$gravityEnabled
             .sink { [weak self] in self?.gravityEnabled = $0 }
             .store(in: &disposables)
         
-        appState.$names
+        appConfig.$names
             .sink { [weak self] in self?.names = $0 }
             .store(in: &disposables)
         
-        appState.$petSize
+        appConfig.$petSize
             .sink { [weak self] in self?.petSize = $0 }
             .store(in: &disposables)
         
-        appState.$selectedSpecies
+        appConfig.$selectedSpecies
             .sink { [weak self] in self?.selectedSpecies = $0 }
             .store(in: &disposables)
         
-        appState.$speedMultiplier
+        appConfig.$speedMultiplier
             .sink { [weak self] in self?.speedMultiplier = $0 }
             .store(in: &disposables)
         
-        appState.$disabledScreens
+        appConfig.$disabledScreens
             .sink { [weak self] in self?.disabledScreens = $0 }
             .store(in: &disposables)
         
-        appState.$randomEvents
+        appConfig.$randomEvents
             .sink { [weak self] in self?.randomEvents = $0 }
             .store(in: &disposables)
     }

@@ -4,7 +4,7 @@ import SwiftUI
 import Yage
 
 class PetsSelectionViewModel: ObservableObject {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider
     @Inject private var speciesProvider: SpeciesProvider
     
@@ -43,7 +43,7 @@ class PetsSelectionViewModel: ObservableObject {
     private func bindPets() {
         Publishers.CombineLatest3(
             speciesProvider.all,
-            appState.$selectedSpecies,
+            appConfig.$selectedSpecies,
             $selectedTag
         )
         .receive(on: DispatchQueue.main)
@@ -66,7 +66,7 @@ class PetsSelectionViewModel: ObservableObject {
     }
 
     func isSelected(_ species: Species) -> Bool {
-        appState.isSelected(species.id)
+        appConfig.isSelected(species.id)
     }
     
     func importView() -> AnyView {

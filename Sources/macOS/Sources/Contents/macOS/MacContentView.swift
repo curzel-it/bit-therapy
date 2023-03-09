@@ -13,10 +13,10 @@ struct MacContentView: View {
                 AppWindowManager.shared.current = window
                 AppWindowManager.shared.customize(window)
             }
-            .environmentObject(appState())
+            .environmentObject(appConfig())
     }
     
-    private func appState() -> AppState {
-        Container.main.resolve(AppState.self)!
+    private func appConfig() -> AppConfig {
+        Container.main.resolve(AppConfig.self)!
     }
 }

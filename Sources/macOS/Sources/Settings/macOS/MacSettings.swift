@@ -29,34 +29,34 @@ private struct ScreenSwitch: View {
 }
 
 private class ViewModel: ObservableObject {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     @Inject private var onScreen: OnScreenCoordinator
     
     let screen: Screen
     
     @Published var isEnabled: Bool {
         didSet {
-            appState.set(screen: screen, enabled: isEnabled)
+            appConfig.set(screen: screen, enabled: isEnabled)
             onScreen.show()
         }
     }
     
     init(screen: Screen) {
-        @Inject var appState: AppState
+        @Inject var appConfig: AppConfig
         self.screen = screen
-        self.isEnabled = appState.isEnabled(screen: screen)
+        self.isEnabled = appConfig.isEnabled(screen: screen)
     }
 }
 
 struct DesktopInteractionsSwitch: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     
     @State var showingDetails = false
     
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.desktopInteractionsTitle,
-            value: $appState.desktopInteractions,
+            value: $appConfig.desktopInteractions,
             showHelp: $showingDetails
         )
         .sheet(isPresented: $showingDetails) {
@@ -78,7 +78,7 @@ struct DesktopInteractionsSwitch: View {
 }
 
 struct LaunchAtLoginSwitch: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     
     var launchAtLogin: Binding<Bool> = Binding {
         LaunchAtLogin.isEnabled

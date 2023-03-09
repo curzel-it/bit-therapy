@@ -37,7 +37,7 @@ private struct About: View {
 }
 
 private struct AnimatedPreview: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     @EnvironmentObject var viewModel: PetDetailsViewModel
     
     var body: some View {

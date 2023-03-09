@@ -26,7 +26,7 @@ protocol UfoAbductionUseCase {
 }
 
 class UfoAbductionUseCaseImpl: UfoAbductionUseCase {
-    @Inject private var settings: AppState
+    @Inject private var settings: AppConfig
     
     func start(with target: Entity, in world: World, completion: @escaping () -> Void) {
         let ufo = buildUfo(in: world)

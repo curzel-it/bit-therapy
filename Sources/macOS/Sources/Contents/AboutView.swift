@@ -29,7 +29,7 @@ private struct Title: View {
 }
 
 private struct AppVersion: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
         
     var text: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String

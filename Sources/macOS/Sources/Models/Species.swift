@@ -14,7 +14,7 @@ protocol SpeciesProvider {
 }
 
 class SpeciesProviderImpl: SpeciesProvider {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     
     lazy var all: CurrentValueSubject<[Species], Never> = {
         let species = allJsonUrls
@@ -39,7 +39,7 @@ class SpeciesProviderImpl: SpeciesProvider {
     }
     
     func unregister(_ species: Species) {
-        appState.deselect(species.id)
+        appConfig.deselect(species.id)
         let newSpecies = all.value.filter { $0 != species }
         all.send(newSpecies)
     }

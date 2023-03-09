@@ -9,7 +9,7 @@ protocol PetDetailsHeaderBuilder {
 }
 
 class PetDetailsViewModel: ObservableObject {
-    @Inject private var appState: AppState
+    @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
     @Inject private var headerBuilder: PetDetailsHeaderBuilder
@@ -21,7 +21,7 @@ class PetDetailsViewModel: ObservableObject {
     let speciesAbout: String
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected }
-    var isSelected: Bool { appState.isSelected(species.id) }
+    var isSelected: Bool { appConfig.isSelected(species.id) }
 
     var animationFrames: [ImageFrame] {
         assets.images(for: species.id, animation: "front")
@@ -47,13 +47,13 @@ class PetDetailsViewModel: ObservableObject {
     }
 
     func selected() {
-        appState.select(species.id)
+        appConfig.select(species.id)
         Tracking.didSelect(species.id)
         close()
     }
 
     func remove() {
-        appState.deselect(species.id)
+        appConfig.deselect(species.id)
         Tracking.didRemove(species.id)
         close()
     }

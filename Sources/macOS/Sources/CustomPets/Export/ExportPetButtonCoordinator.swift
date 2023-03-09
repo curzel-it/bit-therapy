@@ -20,7 +20,7 @@ class ExportPetButtonCoordinatorImpl: ExportPetButtonCoordinator {
 }
 
 private struct ExportSpeciesButton: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appConfig: AppConfig
     @StateObject var viewModel: ExportSpeciesButtonViewModel
     
     var body: some View {

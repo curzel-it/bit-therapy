@@ -4,7 +4,7 @@ import SwiftUI
 import Yage
 
 open class PetEntity: Entity {
-    @Inject private var settings: AppState
+    @Inject private var settings: AppConfig
 
     public init(of species: Species, in world: World) {
         super.init(
@@ -80,8 +80,8 @@ extension PetEntity {
     internal static let baseSpeed: CGFloat = 30
 
     static func initialFrame() -> CGRect {
-        @Inject var appState: AppState
-        return CGRect(square: appState.petSize)
+        @Inject var appConfig: AppConfig
+        return CGRect(square: appConfig.petSize)
     }
     
     static func speed(for species: Species, size: CGFloat, settings: CGFloat) -> CGFloat {

@@ -26,14 +26,14 @@ struct MainScene: Scene {
     }
 
     private static func trackAppLaunched() {
-        @Inject var appState: AppState
+        @Inject var appConfig: AppConfig
         @Inject var launchAtLogin: LaunchAtLoginUseCase
         
         Tracking.didLaunchApp(
-            gravityEnabled: appState.gravityEnabled,
-            petSize: appState.petSize,
+            gravityEnabled: appConfig.gravityEnabled,
+            petSize: appConfig.petSize,
             launchAtLogin: launchAtLogin.isEnabled,
-            selectedSpecies: appState.selectedSpecies
+            selectedSpecies: appConfig.selectedSpecies
         )
     }
 }
