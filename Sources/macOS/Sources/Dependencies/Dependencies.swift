@@ -32,11 +32,3 @@ class Dependencies {
         Capabilities.discovery = PetsCapabilitiesDiscoveryService()
     }
 }
-
-#if os(macOS)
-typealias SomeView = NSView
-typealias SomeWindow = NSWindow
-#else
-typealias SomeView = UIView
-typealias SomeWindow = UIWindow
-#endif

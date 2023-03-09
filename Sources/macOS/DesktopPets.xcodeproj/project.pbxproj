@@ -2100,7 +2100,7 @@
 			repositoryURL = "https://github.com/curzel-it/schwifty";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.11;
+				minimumVersion = 1.1.12;
 			};
 		};
 		1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */ = {

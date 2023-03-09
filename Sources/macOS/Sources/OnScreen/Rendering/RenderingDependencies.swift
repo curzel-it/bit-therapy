@@ -1,5 +1,6 @@
 import Foundation
 import NotAGif
+import Schwifty
 import Yage
 
 protocol RenderableWorld {

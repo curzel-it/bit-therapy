@@ -23,7 +23,7 @@ struct TabBar<T: TabBarItem>: View {
                 TabBarItemView(selection: $selection, item: option)
             }
         }
-        .backgroundBlur()
+        .tabBarBlurBackground()
         .cornerRadius(DesignSystem.largeCornerRadius)
         .positioned(.bottom)
         .padding(when: .is(.macOS), .bottom, .lg)

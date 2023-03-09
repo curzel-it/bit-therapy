@@ -2,7 +2,7 @@ import Schwifty
 import SwiftUI
 
 extension View {
-    func backgroundBlur() -> some View {
+    func tabBarBlurBackground() -> some View {
         modifier(BlurBackgroundMod())
     }
 }
@@ -10,23 +10,14 @@ extension View {
 private struct BlurBackgroundMod: ViewModifier {
     func body(content: Content) -> some View {
         #if os(macOS)
-        if #available(macOS 12.0, *) {
-            content.background { Blur() }
-        } else {
-            ZStack {
-                Blur()
-                content
-            }
-        }
+        content
         #else
         content.background { Blur() }
         #endif
     }
 }
 
-#if os(macOS)
-private typealias Blur = EmptyView
-#else
+#if !os(macOS)
 private struct Blur: UIViewRepresentable {
     var style: UIBlurEffect.Style = .regular
 
