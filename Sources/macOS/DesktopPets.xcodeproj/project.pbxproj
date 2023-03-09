@@ -790,12 +790,12 @@
 				1E95059429B210A6007666BF /* Colors.swift */,
 				1E95059129B210A6007666BF /* Config.swift */,
 				1E95059229B210A6007666BF /* IconButton.swift */,
+				1E07315B29BA37BD00E31EED /* PageTitle.swift */,
 				1E95059329B210A6007666BF /* Spacing.swift */,
 				1E95059629B210A6007666BF /* Stacks.swift */,
 				1EFECB3C29B61AB600C7A028 /* TabBar.swift */,
 				1E76531B29B8D864002E6301 /* Themes.swift */,
 				1E1CF23029B3551D0018A994 /* Typography.swift */,
-				1E07315B29BA37BD00E31EED /* PageTitle.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";

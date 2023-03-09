@@ -29,14 +29,8 @@ public struct EntityAnimation: Codable {
         self.facingDirection = try container.decodeIfPresent(CGVector.self, forKey: .facingDirection)
         self.requiredLoops = try container.decodeIfPresent(Int.self, forKey: .requiredLoops)
         self.size = try container.decodeIfPresent(CGSize.self, forKey: .size)
-        
-        do {
-            self.position = try container.decode(EntityAnimation.Position.self, forKey: .position)
-        } catch {
-            let legacyPosition = try container.decode([String: [String: String]].self, forKey: .position)
-            let positionKey = legacyPosition.keys.first ?? ""
-            self.position = Position(rawValue: positionKey) ?? .fromEntityBottomLeft
-        }
+        let parsedPosition = try? container.decode(EntityAnimation.Position.self, forKey: .position)
+        self.position = parsedPosition ?? .fromEntityBottomLeft
     }
 
     public func frame(for entity: Entity) -> CGRect {

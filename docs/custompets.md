@@ -31,7 +31,7 @@ Starting with version 2.40, the `RandomPlatformJumper` capability is not added b
 Follow the same instructions listed above for the gravity capability, just write `RandomPlatformJumper` instead of `Gravity`!
 
 ### Animation Position
-Starting with version 2.40, the `position` parameter for the animations stops supporting the "legacy" format.
+Starting with version 2.40, the app will stop supporting the legacy format of the `position` parameter.
 
 Updating is easy, just change your animations from the old format:
 ``` json
