@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import Schwifty
 import Swinject
@@ -10,6 +11,7 @@ protocol ImportVerifier {
 class ImportVerifierImpl: ImportVerifier {
     @Inject private var speciesProvider: SpeciesProvider
     
+    private var disposables = Set<AnyCancellable>()
     private let tag = "ImportVerifier"
     
     func verify(json: URL, assets: [URL]) throws -> Species {
@@ -49,6 +51,6 @@ class ImportVerifierImpl: ImportVerifier {
     }
     
     private func doesAlreadyExists(species: Species) -> Bool {
-        speciesProvider.all.value.contains(species)
+        speciesProvider.doesExist(species.id)
     }
 }

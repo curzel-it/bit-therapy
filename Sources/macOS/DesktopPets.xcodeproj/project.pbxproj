@@ -32,6 +32,7 @@
 		1E07319829BA9D4500E31EED /* LaunchAtLoginSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319629BA9D4500E31EED /* LaunchAtLoginSettings.swift */; };
 		1E07319A29BA9D5900E31EED /* DesktopInteractionsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319929BA9D5800E31EED /* DesktopInteractionsSettings.swift */; };
 		1E07319C29BA9D8100E31EED /* LaunchSilentlySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319B29BA9D8100E31EED /* LaunchSilentlySettings.swift */; };
+		1E07319F29BAADF000E31EED /* SpeciesProviderImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319E29BAADF000E31EED /* SpeciesProviderImplTests.swift */; };
 		1E09B0A529B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A629B3A3E5008967F5 /* WorldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */; };
 		1E09B0A829B4C869008967F5 /* CoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */; };
@@ -286,6 +287,7 @@
 		1E07319629BA9D4500E31EED /* LaunchAtLoginSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginSettings.swift; sourceTree = "<group>"; };
 		1E07319929BA9D5800E31EED /* DesktopInteractionsSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopInteractionsSettings.swift; sourceTree = "<group>"; };
 		1E07319B29BA9D8100E31EED /* LaunchSilentlySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchSilentlySettings.swift; sourceTree = "<group>"; };
+		1E07319E29BAADF000E31EED /* SpeciesProviderImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesProviderImplTests.swift; sourceTree = "<group>"; };
 		1E09B0A429B3A3E5008967F5 /* WorldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewModel.swift; sourceTree = "<group>"; };
 		1E09B0A729B4C869008967F5 /* CoordinateSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSystem.swift; sourceTree = "<group>"; };
 		1E185F4C29B231B90042E537 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
@@ -924,6 +926,7 @@
 				1E1CF22729B2C34B0018A994 /* Desktop Pets.xctestplan */,
 				1E9505C529B21342007666BF /* DesktopPetsTests.swift */,
 				1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */,
+				1E07319E29BAADF000E31EED /* SpeciesProviderImplTests.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -1568,6 +1571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED44B8829B221D10091CDAE /* ImageInterpolationUseCaseTests.swift in Sources */,
+				1E07319F29BAADF000E31EED /* SpeciesProviderImplTests.swift in Sources */,
 				1E9505C629B21342007666BF /* DesktopPetsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

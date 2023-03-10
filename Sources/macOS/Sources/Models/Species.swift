@@ -4,8 +4,8 @@ import Schwifty
 import Yage
 
 protocol SpeciesProvider {
-    var all: CurrentValueSubject<[Species], Never> { get }
-    
+    func all() -> AnyPublisher<[Species], Never>
+    func doesExist(_ speciesId: String) -> Bool
     func by(id: String) -> Species?
     func hasAnyCustomPets() -> Bool
     func jsonDefinition(for speciesId: String) -> URL?
@@ -17,17 +17,24 @@ protocol SpeciesProvider {
 class SpeciesProviderImpl: SpeciesProvider {
     @Inject private var appConfig: AppConfig
     
-    lazy var all: CurrentValueSubject<[Species], Never> = {
-        let species = allJsonUrls
-            .compactMap { try? Data(contentsOf: $0) }
-            .compactMap { try? JSONDecoder().decode(Species.self, from: $0) }
-            .sorted { $0.id < $1.id }
-            .removeDuplicates(keepOrder: true)
-        return CurrentValueSubject<[Species], Never>(species)
-    }()
+    private let speciesSubject = CurrentValueSubject<[Species], Never>([])
+    
+    init() {
+        Task { [weak self] in
+            self?.loadSpecies()
+        }
+    }
+    
+    func all() -> AnyPublisher<[Species], Never> {
+        speciesSubject.eraseToAnyPublisher()
+    }
     
     func by(id: String) -> Species? {
-        all.value.first { $0.id == id }
+        speciesSubject.value.first { $0.id == id }
+    }
+    
+    func doesExist(_ speciesId: String) -> Bool {
+        speciesSubject.value.contains { $0.id == speciesId }
     }
     
     func jsonDefinition(for speciesId: String) -> URL? {
@@ -35,14 +42,14 @@ class SpeciesProviderImpl: SpeciesProvider {
     }
     
     func register(_ species: Species) {
-        let newSpecies = all.value + [species]
-        all.send(newSpecies)
+        let newSpecies = speciesSubject.value + [species]
+        speciesSubject.send(newSpecies)
     }
     
     func unregister(_ species: Species) {
         appConfig.deselect(species.id)
-        let newSpecies = all.value.filter { $0 != species }
-        all.send(newSpecies)
+        let newSpecies = speciesSubject.value.filter { $0 != species }
+        speciesSubject.send(newSpecies)
     }
     
     func isOriginal(_ species: Species) -> Bool {
@@ -53,9 +60,18 @@ class SpeciesProviderImpl: SpeciesProvider {
         !customUrls().isEmpty
     }
     
-    private lazy var allJsonUrls: [URL] = {
+    lazy var allJsonUrls: [URL] = {
         originalsUrls + customUrls()
     }()
+    
+    private func loadSpecies() {
+        let species = self.allJsonUrls
+            .compactMap { try? Data(contentsOf: $0) }
+            .compactMap { try? JSONDecoder().decode(Species.self, from: $0) }
+            .sorted { $0.id < $1.id }
+            .removeDuplicates(keepOrder: true)
+        speciesSubject.send(species)
+    }
     
     private lazy var originalsUrls: [URL] = {
         Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: "Species") ?? []
