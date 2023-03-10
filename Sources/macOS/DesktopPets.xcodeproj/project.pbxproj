@@ -104,6 +104,10 @@
 		1E76531D29B8D864002E6301 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531B29B8D864002E6301 /* Themes.swift */; };
 		1E76531F29B8E069002E6301 /* AppWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76531E29B8E069002E6301 /* AppWindowManager.swift */; };
 		1E76532129B8E095002E6301 /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76532029B8E095002E6301 /* MacContentView.swift */; };
+		1E7A9A0629BBA8F20090955F /* MouseChaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7A9A0529BBA8F20090955F /* MouseChaser.swift */; };
+		1E7A9A0729BBA8F20090955F /* MouseChaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7A9A0529BBA8F20090955F /* MouseChaser.swift */; };
+		1E7A9A0929BBAC9F0090955F /* MouseTrackingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7A9A0829BBAC9F0090955F /* MouseTrackingUseCase.swift */; };
+		1E7A9A0A29BBAC9F0090955F /* MouseTrackingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7A9A0829BBAC9F0090955F /* MouseTrackingUseCase.swift */; };
 		1E8D068029B4D6DF009C2B34 /* WorldElementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D067F29B4D6DF009C2B34 /* WorldElementsService.swift */; };
 		1E8D068129B4D6DF009C2B34 /* WorldElementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D067F29B4D6DF009C2B34 /* WorldElementsService.swift */; };
 		1E8D068329B4D6E5009C2B34 /* WorldElementsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D068229B4D6E5009C2B34 /* WorldElementsServiceImpl.swift */; };
@@ -328,6 +332,8 @@
 		1E76531B29B8D864002E6301 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		1E76531E29B8E069002E6301 /* AppWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowManager.swift; sourceTree = "<group>"; };
 		1E76532029B8E095002E6301 /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
+		1E7A9A0529BBA8F20090955F /* MouseChaser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseChaser.swift; sourceTree = "<group>"; };
+		1E7A9A0829BBAC9F0090955F /* MouseTrackingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseTrackingUseCase.swift; sourceTree = "<group>"; };
 		1E7B939B298C78B5001F045E /* CustomPetsResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPetsResources.swift; sourceTree = "<group>"; };
 		1E7D33F22915E2B2002C0188 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
 		1E7E218D29B0873700AC9438 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Docs; path = ../../Docs; sourceTree = "<group>"; };
@@ -857,6 +863,8 @@
 			isa = PBXGroup;
 			children = (
 				1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */,
+				1E7A9A0529BBA8F20090955F /* MouseChaser.swift */,
+				1E7A9A0829BBAC9F0090955F /* MouseTrackingUseCase.swift */,
 				1EAEA8F42970D32900AB3EB0 /* ShowsMenuOnRightClick.swift */,
 			);
 			path = Interactions;
@@ -1505,6 +1513,7 @@
 				1E185F9B29B24CA70042E537 /* ImportPetUseCaseImpl.swift in Sources */,
 				1ED44B3C29B21A900091CDAE /* DeletePetButtonCoordinator.swift in Sources */,
 				1ED44B5329B21A900091CDAE /* ImportPetDragAndDropCoordinator.swift in Sources */,
+				1E7A9A0929BBAC9F0090955F /* MouseTrackingUseCase.swift in Sources */,
 				1E1CF23129B3551D0018A994 /* Typography.swift in Sources */,
 				1E09B0A529B3A3E5008967F5 /* WorldViewModel.swift in Sources */,
 				1ED44B6329B21A900091CDAE /* PetsSelectionView.swift in Sources */,
@@ -1547,6 +1556,7 @@
 				1EB2BBAF29B29DE900E7EF8F /* OnScreenCoordinatorImpl.swift in Sources */,
 				1ED44B4129B21A900091CDAE /* ScreenEnvironment.swift in Sources */,
 				1ED44B3B29B21A900091CDAE /* ImageInterpolationUseCase.swift in Sources */,
+				1E7A9A0629BBA8F20090955F /* MouseChaser.swift in Sources */,
 				1E8D068329B4D6E5009C2B34 /* WorldElementsServiceImpl.swift in Sources */,
 				1E76531529B8772D002E6301 /* ContentView.swift in Sources */,
 				1ED44B3529B21A900091CDAE /* WorldWindow.swift in Sources */,
@@ -1616,6 +1626,7 @@
 				1E185F9329B24A520042E537 /* DeletePetUseCaseImpl.swift in Sources */,
 				1E185F5429B2348A0042E537 /* Stacks.swift in Sources */,
 				1E185F7029B239340042E537 /* PetsGrid.swift in Sources */,
+				1E7A9A0A29BBAC9F0090955F /* MouseTrackingUseCase.swift in Sources */,
 				1EB2BB9E29B29C3B00E7EF8F /* Animations.swift in Sources */,
 				1EB2BBA429B29C4700E7EF8F /* RandomPlatformJumper.swift in Sources */,
 				1EB2BBA129B29C4700E7EF8F /* LeavesPoopStains.swift in Sources */,
@@ -1658,6 +1669,7 @@
 				1E185F5229B2348A0042E537 /* Config.swift in Sources */,
 				1EB2BBC029B2AF3100E7EF8F /* CustomPetsResources.swift in Sources */,
 				1E185F4E29B233D00042E537 /* AppPages.swift in Sources */,
+				1E7A9A0729BBA8F20090955F /* MouseChaser.swift in Sources */,
 				1E185F6D29B239340042E537 /* Filters.swift in Sources */,
 				1EF863EC29B22DD400413AEA /* App.swift in Sources */,
 				1E185FA429B24D330042E537 /* ExportPetUseCase.swift in Sources */,

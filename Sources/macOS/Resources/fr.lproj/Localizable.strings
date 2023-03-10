@@ -40,6 +40,7 @@
 "enable" = "Activer";
 "loading" = "Chargement...";
 "menu.about" = "À propos";
+"menu.followMouse" = "Basculer suivre la souris";
 "menu.hide" = "Masquer cet animal";
 "menu.hideAllPet" = "Masquer tous les animaux";
 "menu.hideThisPet" = "Cacher cet animal";

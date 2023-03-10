@@ -40,6 +40,7 @@
 "enable" = "启用";
 "loading" = "载入中...";
 "menu.about" = "信息";
+"menu.followMouse" = "切换跟随鼠标";
 "menu.hide" = "隐藏宠物";
 "menu.hideAllPet" = "隐藏所有宠物";
 "menu.hideThisPet" = "隐藏这只宠物";

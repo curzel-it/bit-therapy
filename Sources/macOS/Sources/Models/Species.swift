@@ -26,7 +26,9 @@ class SpeciesProviderImpl: SpeciesProvider {
     }
     
     func all() -> AnyPublisher<[Species], Never> {
-        speciesSubject.eraseToAnyPublisher()
+        speciesSubject
+            .filter { !$0.isEmpty }
+            .eraseToAnyPublisher()
     }
     
     func by(id: String) -> Species? {

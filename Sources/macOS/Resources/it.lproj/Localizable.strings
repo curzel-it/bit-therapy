@@ -40,6 +40,7 @@
 "enable" = "Abilita";
 "loading" = "Caricando...";
 "menu.about" = "Informazioni";
+"menu.followMouse" = "Segui il mouse On/Off";
 "menu.hide" = "Nascondi Pet";
 "menu.hideAllPet" = "Nascondi tutti";
 "menu.hideThisPet" = "Nasconti questo Pet";

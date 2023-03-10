@@ -6,7 +6,7 @@ open class Entity: Identifiable {
     public let id: String
     public var capabilities: [Capability] = []
     public let creationDate = Date()
-    public var direction: CGVector = .zero
+    public var direction: CGVector = .zero 
     public var fps: TimeInterval = 10
     public var frame: CGRect 
     public var isAlive = true

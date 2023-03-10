@@ -40,6 +40,7 @@
 "enable" = "Enable";
 "loading" = "Loading...";
 "menu.about" = "About";
+"menu.followMouse" = "Toggle follow mouse";
 "menu.hide" = "Hide Pet";
 "menu.hideAllPet" = "Hide all pets";
 "menu.hideThisPet" = "Hide this pet";

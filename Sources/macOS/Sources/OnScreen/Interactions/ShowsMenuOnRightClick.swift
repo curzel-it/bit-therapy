@@ -19,7 +19,9 @@ extension Entity {
 
 #if os(macOS)
 class ShowsMenuOnRightClick: RightClickable {
-    weak var lastWindow: SomeWindow?
+    @Inject private var onScreen: OnScreenCoordinator
+    
+    private weak var lastWindow: SomeWindow?
     
     override func onRightClick(from window: SomeWindow?, at point: CGPoint) {
         lastWindow = window
@@ -28,46 +30,48 @@ class ShowsMenuOnRightClick: RightClickable {
 
     private func petMenu() -> NSMenu {
         let menu = NSMenu(title: "MainMenu")
-        menu.addItem(hideThisPetItem())
+        menu.addItem(followMouseItem())
+        menu.addItem(showHomeItem())
         menu.addItem(hideAllPetsItem())
         return menu
     }
 
-    private func item(title: String, keyEquivalent: String, action: Selector, target: AnyObject) -> NSMenuItem {
+    private func item(title: String, action: Selector) -> NSMenuItem {
         let item = NSMenuItem(
-            title: NSLocalizedString("menu.\(title)", comment: title),
+            title: "menu.\(title)".localized(),
             action: action,
-            keyEquivalent: keyEquivalent
+            keyEquivalent: ""
         )
         item.target = self
         return item
     }
 
-    private func hideThisPetItem() -> NSMenuItem {
-        item(
-            title: "home",
-            keyEquivalent: "",
-            action: #selector(showHome),
-            target: self
-        )
+    private func showHomeItem() -> NSMenuItem {
+        item(title: "home", action: #selector(showHome))
     }
 
     @objc func showHome() {
         MainScene.show()
     }
-
+    
     private func hideAllPetsItem() -> NSMenuItem {
-        item(
-            title: "hideAllPet",
-            keyEquivalent: "",
-            action: #selector(hideAllPets),
-            target: self
-        )
+        item(title: "hideAllPet", action: #selector(hideAllPets))
     }
 
     @objc func hideAllPets() {
-        @Inject var onScreen: OnScreenCoordinator
         onScreen.hide()
+    }
+    
+    private func followMouseItem() -> NSMenuItem {
+        item(title: "followMouse", action: #selector(toggleFollowMouse))
+    }
+    
+    @objc func toggleFollowMouse() {
+        if let mouseChaser = subject?.capability(for: MouseChaser.self) {
+            mouseChaser.kill()
+        } else {
+            subject?.install(MouseChaser())
+        }
     }
 }
 #else
