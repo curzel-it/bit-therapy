@@ -91,10 +91,12 @@
 "species.about.cat" = "好吧，它只是一只猫!";
 "species.about.cat_black" = "好吧，它只是一只猫!";
 "species.about.cat_blue" = "好吧，它只是一只猫!";
+"species.about.cat_calico" = "好吧，它只是一只猫!";
 "species.about.cat_floppa" = "加入弗洛帕军队";
 "species.about.cat_gray" = "好吧，它只是一只猫!";
 "species.about.cat_grumpy" = "看看他吧，它是怎么评价你的....";
 "species.about.cat_house" = "一个供你的猫睡觉的小房子！\n我们正在寻找更多的设计想法，如果你有任何想法，请在 Discord 上联系我们！";
+"species.about.cat_pinky" = "这绝对不是粉红色的黑豹。";
 "species.about.cat_white" = "好吧，这只是一只猫！";
 "species.about.cayman718" = "唯一我买得起的保时捷...💸";
 "species.about.clockanalog" = "只显示当前时间，没有其他内容... 😅";
@@ -112,6 +114,7 @@
 "species.about.jeansbear" = "由 Chaz 绘制";
 "species.about.koala" = "功能性灭绝！？ 但功能性灭绝的将是你！";
 "species.about.koala_pirate" = "他们说，做海盗很好玩...";
+"species.about.labrador" = "如果你喜欢它，请帮助我来绘制额外的动画！ 请在 Discord 上联系我，我需要帮助！ 😆";
 "species.about.milo" = "也许这并不完全符合您的预期，但老实说，我并不是一个完美的设计师！ 哈哈";
 "species.about.moth" = "让我告诉你，为这些翅膀制作动画简直就是地狱！";
 "species.about.mushroom" = "牛肝菌，绝对是做意大利烩饭的最佳选择!";
@@ -124,6 +127,7 @@
 "species.about.poop" = "它很臭，会在屏幕上留下污渍。";
 "species.about.sheep" = "Windows 95 的“eSheep”是最早的桌面宠物之一，您知道吗？";
 "species.about.sheep_black" = "如果你知道我有多懒，你就知道我只是打翻了颜料";
+"species.about.shiba" = "是表情包狗！";
 "species.about.sloth" = "你知道它们是如此缓慢和懒惰，以至于它们的皮毛上长出了水藻吗？";
 "species.about.sloth_swag" = "缓慢，但有风格...";
 "species.about.snail" = "喵！是你吗，Gary？";
@@ -139,10 +143,12 @@
 "species.name.cat" = "红色猫咪";
 "species.name.cat_black" = "黑色猫咪";
 "species.name.cat_blue" = "蓝色猫咪";
+"species.name.cat_calico" = "三色猫";
 "species.name.cat_floppa" = "弗洛帕";
 "species.name.cat_gray" = "猫咪";
 "species.name.cat_grumpy" = "脾气暴躁的猫咪";
 "species.name.cat_house" = "猫咪之家";
+"species.name.cat_pinky" = "粉红色的猫";
 "species.name.cat_white" = "白猫";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "模拟时钟";
@@ -160,6 +166,7 @@
 "species.name.jeansbear" = "牛仔熊";
 "species.name.koala" = "考拉";
 "species.name.koala_pirate" = "海盗考拉";
+"species.name.labrador" = "拉布拉多犬";
 "species.name.milo" = "米洛";
 "species.name.moth" = "飞蛾";
 "species.name.mushroom" = "牛肝菌";
@@ -172,6 +179,7 @@
 "species.name.poop" = "船尾";
 "species.name.sheep" = "绵羊";
 "species.name.sheep_black" = "黑绵羊";
+"species.name.shiba" = "柴犬";
 "species.name.sloth" = "树懒";
 "species.name.sloth_swag" = "酷炫树懒";
 "species.name.snail" = "蜗牛猫";

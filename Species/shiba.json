@@ -1,0 +1,40 @@
+{
+  "animations": [
+      {
+        "id": "wink",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 4
+      },
+      {
+        "id": "front",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 10
+      },
+      {
+        "id": "sleep",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 50
+      }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["dogs", "memes"],
+  "id": "shiba",
+  "movementPath": "walk",
+  "speed": 1.0
+}

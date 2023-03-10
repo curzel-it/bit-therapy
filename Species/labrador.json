@@ -1,0 +1,30 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 4
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["dogs", "farm"],
+  "id": "labrador",
+  "movementPath": "walk",
+  "speed": 1.0
+}

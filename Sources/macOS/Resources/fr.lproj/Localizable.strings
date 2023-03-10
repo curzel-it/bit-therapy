@@ -91,10 +91,12 @@
 "species.about.cat" = "Bah, c'est juste un chat !";
 "species.about.cat_black" = "Bah, c'est juste un chat !";
 "species.about.cat_blue" = "Bah, c'est juste un chat !";
+"species.about.cat_calico" = "Bah, c'est juste un chat !";
 "species.about.cat_floppa" = "Rejoindre l'armée Floppa";
 "species.about.cat_gray" = "Bah, c'est juste un chat !";
 "species.about.cat_grumpy" = "Vu sa tête, il te juge !";
 "species.about.cat_house" = "Une petite maison pour que votre chat puisse dormir !\nJe cherche d'autres idées de design, si vous en avez, n'hésitez pas à me contacter sur Discord !";
+"species.about.cat_pinky" = "Ce n'est absolument pas une panthère rose.";
 "species.about.cat_white" = "Bah, c'est juste un chat !";
 "species.about.cayman718" = "La seule Porsche que je pourrai jamais m'offrir... 💸";
 "species.about.clockanalog" = "Ça affiche l'heure, rien d'autre... 😅";
@@ -112,6 +114,7 @@
 "species.about.jeansbear" = "Dessiné par Chaz";
 "species.about.koala" = "En voie de disparition !? C'est toi qui es en voie de disparition !";
 "species.about.koala_pirate" = "C'est amusant d'être un pirate, qu'ils disaient...";
+"species.about.labrador" = "Si vous l'aimez, j'ai vraiment besoin d'aide pour dessiner plus d'animations ! Contactez-moi sur Discord 😆";
 "species.about.milo" = "Peut-être que ce n'est pas exactement comme tu l'imaginait, mais je ne suis honnêtement pas vraiment un designer ! Haha";
 "species.about.moth" = "Ces ailes étaient un enfer à animer, crois-moi !";
 "species.about.mushroom" = "Champignon porcini, les meilleurs pour le risotto !";
@@ -124,6 +127,7 @@
 "species.about.poop" = "Il sent et laisse également des taches sur l'écran.";
 "species.about.sheep" = "Le \"eSheep\" pour Windows 95 était l'un des premiers Desktop Pets, le savais-tu?";
 "species.about.sheep_black" = "Si tu sais à quel point je peux être paresseux, tu comprendras que j'ai juste inversé les couleurs.";
+"species.about.shiba" = "C'est le meme chien !";
 "species.about.sloth" = "Savais-tu qu'ils sont si paresseux que de l'algue pousse sur leur fourrure avec le temps ?";
 "species.about.sloth_swag" = "Lent, mais avec style...";
 "species.about.snail" = "Miaou ! Est-ce toi Gary?";
@@ -139,10 +143,12 @@
 "species.name.cat" = "Chat Roux";
 "species.name.cat_black" = "Chat Noir";
 "species.name.cat_blue" = "Chat Bleu";
+"species.name.cat_calico" = "Chat Calicot";
 "species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Chat";
 "species.name.cat_grumpy" = "Grumpy Cat";
 "species.name.cat_house" = "Maison de chat";
+"species.name.cat_pinky" = "Chat Rose";
 "species.name.cat_white" = "Chat Blanc";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Horloge Analogique";
@@ -160,6 +166,7 @@
 "species.name.jeansbear" = "Ours en jean";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Koala Pirate";
+"species.name.labrador" = "Labrador";
 "species.name.milo" = "Milo";
 "species.name.moth" = "Papillon De Nuit";
 "species.name.mushroom" = "Champignon Porcini";
@@ -172,6 +179,7 @@
 "species.name.poop" = "Caca";
 "species.name.sheep" = "Mouton";
 "species.name.sheep_black" = "Mouton noir";
+"species.name.shiba" = "Chien Shiba";
 "species.name.sloth" = "Paresseux";
 "species.name.sloth_swag" = "Paresseux Swag";
 "species.name.snail" = "Escargot-chat";

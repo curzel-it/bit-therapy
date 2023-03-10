@@ -10,6 +10,8 @@ You can now create your own custom pets!
 1. Drag and drop the zip in the app
 1. Show and share your work on [Discord](https://discord.gg/WvvnmPCy)!
 
+I've also made a (terrible) tutorial, you can find it [on YouTube](https://www.youtube.com/watch?v=Mj4U2GIF8MA)! 
+
 ## Breaking changes in version 2.40
 ...Sorry!
 

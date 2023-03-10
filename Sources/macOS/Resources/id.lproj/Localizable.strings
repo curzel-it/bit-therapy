@@ -91,10 +91,12 @@
 "species.about.cat" = "Yah, itu hanya kucing!";
 "species.about.cat_black" = "Yah, itu hanya kucing!";
 "species.about.cat_blue" = "Yah, itu hanya kucing!";
+"species.about.cat_calico" = "Yah, itu hanya kucing!";
 "species.about.cat_floppa" = "Bergabunglah dengan pasukan Floppa";
 "species.about.cat_gray" = "Yah, itu hanya kucing!";
 "species.about.cat_grumpy" = "Wajahnya terlihat sangat judgy!";
 "species.about.cat_house" = "Rumah kecil untuk kucing Anda tidur...\n Saya sedang mencari lebih banyak ide desain, jika ada, silakan hubungi Discord!";
+"species.about.cat_pinky" = "Sama sekali bukan Pink Panther.";
 "species.about.cat_white" = "Yah, itu hanya kucing!";
 "species.about.cayman718" = "Mereka hanya Porsche yang mampu saya beli... 💸";
 "species.about.clockanalog" = "Itu hanya menunjukkan waktu saat ini dan tidak melakukan apa-apa lagi... 😅";
@@ -112,6 +114,7 @@
 "species.about.jeansbear" = "Digambar oleh Chaz";
 "species.about.koala" = "Punah secara fungsional!? Anda secara fungsional punah!";
 "species.about.koala_pirate" = "Menyenangkan menjadi bajak laut kata mereka...";
+"species.about.labrador" = "Jika Anda menyukainya, saya dapat menggunakan bantuan untuk menggambar animasi tambahan! Tolong hubungi saya di Discord, saya butuh bantuan! 😆";
 "species.about.milo" = "Mungkin itu tidak persis seperti yang Anda harapkan, tapi jujur saja saya bukan seorang desainer! Haha";
 "species.about.moth" = "Sayap-sayap itu sangat sulit untuk dihidupkan, izinkan saya memberi tahu Anda sebanyak itu ..!";
 "species.about.mushroom" = "Jamur Porcini, yang terbaik untuk risotto!";
@@ -124,6 +127,7 @@
 "species.about.poop" = "Itu bau dan akan meninggalkan noda di layar Anda.";
 "species.about.sheep" = "eSheep' untuk Windows 95 adalah salah satu Hewan Peliharaan Desktop pertama, tahukah anda?";
 "species.about.sheep_black" = "Jika Anda tahu betapa malasnya saya, Anda juga tahu bahwa saya baru saja membalikkan warna...";
+"species.about.shiba" = "Itu anjing meme!";
 "species.about.sloth" = "Tahukah Anda bahwa alga yang sangat malas tumbuh di bulu mereka seiring berjalannya waktu?";
 "species.about.sloth_swag" = "Lambat, tapi dengan gaya...";
 "species.about.snail" = "Meong! Itu kamu ya Garry.";
@@ -139,10 +143,12 @@
 "species.name.cat" = "Kucing Merah";
 "species.name.cat_black" = "Kucing Hitam";
 "species.name.cat_blue" = "Kucing Biru";
+"species.name.cat_calico" = "Kucing Belacu";
 "species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Kucing";
 "species.name.cat_grumpy" = "Kucing Pemarah";
 "species.name.cat_house" = "Rumah Kucing";
+"species.name.cat_pinky" = "Kucing Merah Muda";
 "species.name.cat_white" = "Kucing putih";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Jam Analog";
@@ -160,6 +166,7 @@
 "species.name.jeansbear" = "Beruang Jeans";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Koala Bajak Laut";
+"species.name.labrador" = "Labrador";
 "species.name.milo" = "Milo";
 "species.name.moth" = "Ngengat";
 "species.name.mushroom" = "Jamur porcini";
@@ -172,6 +179,7 @@
 "species.name.poop" = "Tinja";
 "species.name.sheep" = "Domba";
 "species.name.sheep_black" = "Domba Hitam";
+"species.name.shiba" = "Anjing Shiba";
 "species.name.sloth" = "Sloth";
 "species.name.sloth_swag" = "Swag Sloth";
 "species.name.snail" = "Siput";

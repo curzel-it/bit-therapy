@@ -91,10 +91,12 @@
 "species.about.cat" = "Beh, è un normalissimo gatto!";
 "species.about.cat_black" = "Beh, è un normalissimo gatto!";
 "species.about.cat_blue" = "Beh, è un normalissimo gatto!";
+"species.about.cat_calico" = "Beh, è un normalissimo gatto!";
 "species.about.cat_floppa" = "Unisciti al battaglione Floppa";
 "species.about.cat_gray" = "Beh, è un normalissimo gatto!";
 "species.about.cat_grumpy" = "Guardalo, come ti giudica...";
 "species.about.cat_house" = "Una casetta dove far dormire il tuo gatto!\Se hai qualche idea per altri design, condividile su Discord!";
+"species.about.cat_pinky" = "Non è assolutamente una pantera rosa.";
 "species.about.cat_white" = "Beh, è un normalissimo gatto!";
 "species.about.cayman718" = "L'unica Porsche che potrò mai permettermi... 💸";
 "species.about.clockanalog" = "Mostra l'ora corrente e nient'altro... 😅";
@@ -112,6 +114,7 @@
 "species.about.jeansbear" = "Disegnato da Chaz";
 "species.about.koala" = "Funzionalmente estinto!? Ma funzionalmente estinto sarai te!";
 "species.about.koala_pirate" = "Facciamo i pirati, dicevano. Sarà divertente, dicevano...";
+"species.about.labrador" = "Se ti piace, ho decisamente bisogno di un po' di aiuto per disegnare altre animazioni! Contattami su Discord 😆";
 "species.about.milo" = "Magari non è esattamente come te lo aspettavi, ma non sono esattamente un designer ad essere onesti! haha";
 "species.about.moth" = "Lasciatemelo dire, animare quelle ali è stato un inferno..!";
 "species.about.mushroom" = "Una piccola brisa, il top per il risotto!";
@@ -124,6 +127,7 @@
 "species.about.poop" = "Puzza e lascerà pure delle macchie sullo schermo.";
 "species.about.sheep" = "La 'eSheep' per Windows 95 è stato uno dei primi Desktop Pet, sapevatelo!";
 "species.about.sheep_black" = "Ho solo invertito i colori, lo sapete che sono pigro...";
+"species.about.shiba" = "E' il cane dei meme!";
 "species.about.sloth" = "Lo sapevate che sono così lenti e pigri che gli crescono alghe sul pelo?";
 "species.about.sloth_swag" = "Lento, ma con stile...";
 "species.about.snail" = "Miao! Sei tu Gary?";
@@ -139,10 +143,12 @@
 "species.name.cat" = "Gatto Rosso";
 "species.name.cat_black" = "Gatto Nero";
 "species.name.cat_blue" = "Gatto Blu";
+"species.name.cat_calico" = "Gatto Calico";
 "species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Gatto";
 "species.name.cat_grumpy" = "Gatto Scontroso";
 "species.name.cat_house" = "Casetta per Gatti";
+"species.name.cat_pinky" = "Gatto Rosa";
 "species.name.cat_white" = "Gatto Bianco";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Orologio Analogico";
@@ -160,6 +166,7 @@
 "species.name.jeansbear" = "Orso Jeans";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Koala Pirata";
+"species.name.labrador" = "Labrador";
 "species.name.milo" = "Milo";
 "species.name.moth" = "Falena";
 "species.name.mushroom" = "Brisetta";
@@ -172,6 +179,7 @@
 "species.name.poop" = "Cacca";
 "species.name.sheep" = "Pecora";
 "species.name.sheep_black" = "Pecora Nera";
+"species.name.shiba" = "Shiba Inu";
 "species.name.sloth" = "Bradipo";
 "species.name.sloth_swag" = "Bradipo Stiloso";
 "species.name.snail" = "Lumacamicio";
