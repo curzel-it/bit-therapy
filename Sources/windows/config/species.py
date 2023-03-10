@@ -3,7 +3,7 @@ import re
 from typing import List
 from config.assets import AssetsProvider
 from yage.models import Species
-from yage.models.animations import EntityAnimation, EntityAnimationAnchorPoint
+from yage.models.animations import EntityAnimation, EntityAnimationPosition
 from yage.utils.logger import Logger
 
 class SpeciesProvider:
@@ -31,15 +31,8 @@ class SpeciesProvider:
             return None
 
     def _adjust_animations(self, species):
-        # Need to figure out how to import jsonpickle to do this automatically.
         animations = [_to_snake_case(a) for a in species.animations]
-        animations = [EntityAnimation(**a) for a in animations]        
-        for animation in animations:
-            if animation.anchor.__class__ is not EntityAnimationAnchorPoint:
-                try: 
-                    animation.anchor = EntityAnimationAnchorPoint[animation.anchor]
-                except:
-                    animation.anchor = EntityAnimationAnchorPoint.BOTTOM
+        animations = [EntityAnimation(**a) for a in animations]
         species.animations = animations
 
 

@@ -55,8 +55,7 @@ private class FiltersViewModel: ObservableObject {
     private var disposables = Set<AnyCancellable>()
 
     init() {
-        speciesProvider.all
-            .combineLatest($selectedTag)
+        Publishers.CombineLatest(speciesProvider.all(), $selectedTag)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] species, tag in
                 self?.loadTags(from: species, selectedTag: tag)

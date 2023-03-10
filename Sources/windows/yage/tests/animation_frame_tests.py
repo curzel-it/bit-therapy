@@ -1,6 +1,6 @@
 import unittest
 
-from yage.models.animations import EntityAnimation, EntityAnimationAnchorPoint
+from yage.models.animations import EntityAnimation, EntityAnimationPosition
 from yage.models.entity import Entity
 from yage.utils.geometry import Rect, Size
 from yage.models.species import SPECIES_AGENT
@@ -12,14 +12,14 @@ class AnimationFrameTests(unittest.TestCase):
             SPECIES_AGENT,
             "test",
             Rect(5, 5, 5, 5),
-            Rect(0, 0, 15,  15)
+            World('', Rect(0, 0, 15,  15))
         )
         
     def test_animation_frame_is_same_as_entity_frame_if_no_custom_size_or_position_are_set(self):
         animation = EntityAnimation(
             "test",
             None,
-            EntityAnimationAnchorPoint.TOP,
+            EntityAnimationPosition.ENTITY_TOP_LEFT,
             None
         )
         self.assertEqual(self.entity.frame, animation.frame(self.entity))
@@ -28,7 +28,7 @@ class AnimationFrameTests(unittest.TestCase):
         animation = EntityAnimation(
             "test",
             Size(width=2, height=2),
-            EntityAnimationAnchorPoint.BOTTOM,
+            EntityAnimationPosition.FROM_ENTITY_BOTTOM_LEFT,
             None
         )
         expected = Rect(x=5, y=0, width=10, height=10)

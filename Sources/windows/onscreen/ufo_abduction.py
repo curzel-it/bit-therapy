@@ -3,7 +3,7 @@ from onscreen.pet_entity import PetEntity
 from yage.capabilities.gravity import Gravity
 from yage.capabilities.seeker import Seeker, SeekerState, SeekerTargetPosition
 from yage.capabilities.shape_shifter import ShapeShifter
-from yage.models.animations import EntityAnimation, EntityAnimationAnchorPoint
+from yage.models.animations import EntityAnimation, EntityAnimationPosition
 from yage.models.entity import Entity
 from yage.models.entity_state import EntityState
 from yage.models.species import Species
@@ -122,7 +122,7 @@ class UfoAbduction(PetEntity):
         return EntityAnimation(
             'abduction', 
             Size(1, 3),
-            EntityAnimationAnchorPoint.TOP
+            EntityAnimationPosition.ENTITY_TOP_LEFT
         )
 
     def kill(self):

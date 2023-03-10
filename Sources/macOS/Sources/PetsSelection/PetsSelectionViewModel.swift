@@ -42,7 +42,7 @@ class PetsSelectionViewModel: ObservableObject {
     
     private func bindPets() {
         Publishers.CombineLatest3(
-            speciesProvider.all,
+            speciesProvider.all(),
             appConfig.$selectedSpecies,
             $selectedTag
         )

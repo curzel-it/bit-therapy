@@ -6,7 +6,7 @@ from yage.models.animations import EntityAnimation
 
 class SpeciesProviderTests(unittest.TestCase):
     def setUp(self):
-        AssetsProvider.shared = AssetsProvider(['../Resources'])
+        AssetsProvider.shared = AssetsProvider(['../../PetsAssets'])
         self.provider = SpeciesProvider()
         
     def test_parse_species(self):
@@ -28,17 +28,17 @@ ape_json = '''
   "animations": [
     {
       "id": "front",
-      "anchor": "bottom",
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 5
     },
     {
       "id": "eat",
-      "anchor": "bottom",
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 5
     },
     {
       "id": "sleep",
-      "anchor": "bottom",
+      "position": "fromEntityBottomLeft",
       "requiredLoops": 20
     }
   ],

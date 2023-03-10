@@ -1,6 +1,6 @@
 import pdb
 from typing import List
-from yage.models.animations import EntityAnimationAnchorPoint
+from yage.models.animations import EntityAnimationPosition
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.models.entity_state import EntityState
@@ -72,6 +72,6 @@ class Gravity(Capability):
     def _animation_requires_no_gravity(self) -> bool:
         animation, _ = self.subject.animation()
         if not animation: return False
-        if animation.anchor != EntityAnimationAnchorPoint.BOTTOM: return True
+        if animation.position != EntityAnimationPosition.FROM_ENTITY_BOTTOM_LEFT: return True
         if animation.size is not None: return True
         return False

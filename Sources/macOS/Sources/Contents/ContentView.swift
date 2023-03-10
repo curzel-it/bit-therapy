@@ -9,11 +9,13 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Background()
-            contents(of: viewModel.selectedPage)
-            TabBar(
-                selection: $viewModel.selectedPage,
-                options: viewModel.options
-            )
+            if !viewModel.isLoading {
+                contents(of: viewModel.selectedPage)
+                TabBar(
+                    selection: $viewModel.selectedPage,
+                    options: viewModel.options
+                )
+            }
         }
         .environmentObject(viewModel)
         .preferredColorScheme(viewModel.colorScheme)
@@ -33,8 +35,10 @@ struct ContentView: View {
 
 private class ContentViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
+    @Inject private var species: SpeciesProvider
     @Inject private var theme: ThemeUseCase
     
+    @Published var isLoading: Bool = true
     @Published var backgroundBlurRadius: CGFloat
     @Published var backgroundImage: String = ""
     @Published var colorScheme: ColorScheme?
@@ -56,6 +60,20 @@ private class ContentViewModel: ObservableObject {
         backgroundImage = appConfig.background
         bindBackground()
         bindColorScheme()
+        bindLoading()
+    }
+    
+    private func bindLoading() {
+        species.all()
+            .filter { !$0.isEmpty }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self else { return }
+                withAnimation {
+                    self.isLoading = false
+                }
+            }
+            .store(in: &disposables)
     }
     
     private func bindBackground() {
@@ -63,8 +81,12 @@ private class ContentViewModel: ObservableObject {
             .sink { [weak self] in self?.backgroundImage = $0 }
             .store(in: &disposables)
         
-        $selectedPage
-            .sink { [weak self] in self?.backgroundBlurRadius = $0 != .screensaver ? 10 : 0 }
+        Publishers.CombineLatest($selectedPage, $isLoading)
+            .sink { [weak self] selectedPage, isLoading in
+                guard let self else { return }
+                let shouldBlur = selectedPage != .screensaver && !isLoading
+                self.backgroundBlurRadius = shouldBlur ? 10 : 0
+            }
             .store(in: &disposables)
     }
     
