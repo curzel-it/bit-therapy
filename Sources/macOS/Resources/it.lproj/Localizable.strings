@@ -95,6 +95,7 @@
 "species.about.cat_gray" = "Beh, è un normalissimo gatto!";
 "species.about.cat_grumpy" = "Guardalo, come ti giudica...";
 "species.about.cat_house" = "Una casetta dove far dormire il tuo gatto!\Se hai qualche idea per altri design, condividile su Discord!";
+"species.about.cat_pinky" = "Non è assolutamente una pantera rosa.";
 "species.about.cat_white" = "Beh, è un normalissimo gatto!";
 "species.about.cayman718" = "L'unica Porsche che potrò mai permettermi... 💸";
 "species.about.clockanalog" = "Mostra l'ora corrente e nient'altro... 😅";
@@ -124,6 +125,7 @@
 "species.about.poop" = "Puzza e lascerà pure delle macchie sullo schermo.";
 "species.about.sheep" = "La 'eSheep' per Windows 95 è stato uno dei primi Desktop Pet, sapevatelo!";
 "species.about.sheep_black" = "Ho solo invertito i colori, lo sapete che sono pigro...";
+"species.about.shiba" = "E' il cane dei meme!";
 "species.about.sloth" = "Lo sapevate che sono così lenti e pigri che gli crescono alghe sul pelo?";
 "species.about.sloth_swag" = "Lento, ma con stile...";
 "species.about.snail" = "Miao! Sei tu Gary?";
@@ -143,6 +145,7 @@
 "species.name.cat_gray" = "Gatto";
 "species.name.cat_grumpy" = "Gatto Scontroso";
 "species.name.cat_house" = "Casetta per Gatti";
+"species.name.cat_pinky" = "Gatto Rosa";
 "species.name.cat_white" = "Gatto Bianco";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Orologio Analogico";
@@ -172,6 +175,7 @@
 "species.name.poop" = "Cacca";
 "species.name.sheep" = "Pecora";
 "species.name.sheep_black" = "Pecora Nera";
+"species.name.shiba" = "Shiba Inu";
 "species.name.sloth" = "Bradipo";
 "species.name.sloth_swag" = "Bradipo Stiloso";
 "species.name.snail" = "Lumacamicio";

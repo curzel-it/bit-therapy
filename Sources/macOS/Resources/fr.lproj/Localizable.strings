@@ -95,6 +95,7 @@
 "species.about.cat_gray" = "Bah, c'est juste un chat !";
 "species.about.cat_grumpy" = "Vu sa tête, il te juge !";
 "species.about.cat_house" = "Une petite maison pour que votre chat puisse dormir !\nJe cherche d'autres idées de design, si vous en avez, n'hésitez pas à me contacter sur Discord !";
+"species.about.cat_pinky" = "Ce n'est absolument pas une panthère rose.";
 "species.about.cat_white" = "Bah, c'est juste un chat !";
 "species.about.cayman718" = "La seule Porsche que je pourrai jamais m'offrir... 💸";
 "species.about.clockanalog" = "Ça affiche l'heure, rien d'autre... 😅";
@@ -124,6 +125,7 @@
 "species.about.poop" = "Il sent et laisse également des taches sur l'écran.";
 "species.about.sheep" = "Le \"eSheep\" pour Windows 95 était l'un des premiers Desktop Pets, le savais-tu?";
 "species.about.sheep_black" = "Si tu sais à quel point je peux être paresseux, tu comprendras que j'ai juste inversé les couleurs.";
+"species.about.shiba" = "C'est le meme chien !";
 "species.about.sloth" = "Savais-tu qu'ils sont si paresseux que de l'algue pousse sur leur fourrure avec le temps ?";
 "species.about.sloth_swag" = "Lent, mais avec style...";
 "species.about.snail" = "Miaou ! Est-ce toi Gary?";
@@ -143,6 +145,7 @@
 "species.name.cat_gray" = "Chat";
 "species.name.cat_grumpy" = "Grumpy Cat";
 "species.name.cat_house" = "Maison de chat";
+"species.name.cat_pinky" = "Chat Rose";
 "species.name.cat_white" = "Chat Blanc";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Horloge Analogique";
@@ -172,6 +175,7 @@
 "species.name.poop" = "Caca";
 "species.name.sheep" = "Mouton";
 "species.name.sheep_black" = "Mouton noir";
+"species.name.shiba" = "Chien Shiba";
 "species.name.sloth" = "Paresseux";
 "species.name.sloth_swag" = "Paresseux Swag";
 "species.name.snail" = "Escargot-chat";
