@@ -91,6 +91,7 @@
 "species.about.cat" = "好吧，它只是一只猫!";
 "species.about.cat_black" = "好吧，它只是一只猫!";
 "species.about.cat_blue" = "好吧，它只是一只猫!";
+"species.about.cat_calico" = "好吧，它只是一只猫!";
 "species.about.cat_floppa" = "加入弗洛帕军队";
 "species.about.cat_gray" = "好吧，它只是一只猫!";
 "species.about.cat_grumpy" = "看看他吧，它是怎么评价你的....";
@@ -113,6 +114,7 @@
 "species.about.jeansbear" = "由 Chaz 绘制";
 "species.about.koala" = "功能性灭绝！？ 但功能性灭绝的将是你！";
 "species.about.koala_pirate" = "他们说，做海盗很好玩...";
+"species.about.labrador" = "如果你喜欢它，请帮助我来绘制额外的动画！ 请在 Discord 上联系我，我需要帮助！ 😆";
 "species.about.milo" = "也许这并不完全符合您的预期，但老实说，我并不是一个完美的设计师！ 哈哈";
 "species.about.moth" = "让我告诉你，为这些翅膀制作动画简直就是地狱！";
 "species.about.mushroom" = "牛肝菌，绝对是做意大利烩饭的最佳选择!";
@@ -141,6 +143,7 @@
 "species.name.cat" = "红色猫咪";
 "species.name.cat_black" = "黑色猫咪";
 "species.name.cat_blue" = "蓝色猫咪";
+"species.name.cat_calico" = "三色猫";
 "species.name.cat_floppa" = "弗洛帕";
 "species.name.cat_gray" = "猫咪";
 "species.name.cat_grumpy" = "脾气暴躁的猫咪";
@@ -163,6 +166,7 @@
 "species.name.jeansbear" = "牛仔熊";
 "species.name.koala" = "考拉";
 "species.name.koala_pirate" = "海盗考拉";
+"species.name.labrador" = "拉布拉多犬";
 "species.name.milo" = "米洛";
 "species.name.moth" = "飞蛾";
 "species.name.mushroom" = "牛肝菌";

@@ -91,6 +91,7 @@
 "species.about.cat" = "Well, it's just a cat!";
 "species.about.cat_black" = "Well, it's just a cat!";
 "species.about.cat_blue" = "Well, it's just a cat!";
+"species.about.cat_calico" = "Well, it's just a cat!";
 "species.about.cat_floppa" = "Join the Floppa army";
 "species.about.cat_gray" = "Well, it's just a cat!";
 "species.about.cat_grumpy" = "Such a judgy look on its face!";
@@ -113,6 +114,7 @@
 "species.about.jeansbear" = "Drawn by Chaz";
 "species.about.koala" = "Functionally extinct!? You are functionally extinct!";
 "species.about.koala_pirate" = "It's fun to be a pirate they said...";
+"species.about.labrador" = "If you like it, I could use some help to draw additional animations! Please hit me up on Discord, I need help! 😆";
 "species.about.milo" = "Maybe it's not exactly as you expected, but I'm not exactly a designer to be honest! Haha";
 "species.about.moth" = "Those wings were a pain to animate, let me tell you that much..!";
 "species.about.mushroom" = "Porcini mushroom, the absolute best for risotto!";
@@ -141,6 +143,7 @@
 "species.name.cat" = "Red Cat";
 "species.name.cat_black" = "Black Cat";
 "species.name.cat_blue" = "Blue Cat";
+"species.name.cat_calico" = "Calico Cat";
 "species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Cat";
 "species.name.cat_grumpy" = "Grumpy Cat";
@@ -163,6 +166,7 @@
 "species.name.jeansbear" = "Jeans Bear";
 "species.name.koala" = "Koala";
 "species.name.koala_pirate" = "Pirate Koala";
+"species.name.labrador" = "Labrador";
 "species.name.milo" = "Milo";
 "species.name.moth" = "Moth";
 "species.name.mushroom" = "Porcini Mushroom";
