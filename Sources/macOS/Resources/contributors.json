@@ -52,6 +52,12 @@
         "thumbnail": "contributor_jab"
     },
     {
+        "name": "Cat Man",
+        "roles": ["artist"],
+        "thumbnail": "contributor_catman",
+        "pets": ["cat_pinky"]
+    },
+    {
         "name": "Laksaersa",
         "roles": ["translator"]
     }
