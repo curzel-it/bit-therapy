@@ -95,9 +95,11 @@
 "species.about.cat_calico" = "Well, it's just a cat!";
 "species.about.cat_floppa" = "Join the Floppa army";
 "species.about.cat_gray" = "Well, it's just a cat!";
+"species.about.cat_green" = "Well, it's just a cat!";
 "species.about.cat_grumpy" = "Such a judgy look on its face!";
 "species.about.cat_house" = "A small house for your cat to sleep in!\nI'm looking for more design ideas, if you have any, please reach out on Discord!";
 "species.about.cat_pinky" = "Totally not a pink panther.";
+"species.about.cat_strawberry" = "Well, it's just a cat!";
 "species.about.cat_white" = "Well, it's just a cat!";
 "species.about.cayman718" = "They only Porsche i could ever afford... 💸";
 "species.about.clockanalog" = "It just shows the current time and does nothing else... 😅";
@@ -147,9 +149,11 @@
 "species.name.cat_calico" = "Calico Cat";
 "species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Cat";
+"species.name.cat_green" = "Green Cat";
 "species.name.cat_grumpy" = "Grumpy Cat";
 "species.name.cat_house" = "Cat House";
 "species.name.cat_pinky" = "Pinky Cat";
+"species.name.cat_strawberry" = "Strawberry Cat";
 "species.name.cat_white" = "White Cat";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Analog Clock";

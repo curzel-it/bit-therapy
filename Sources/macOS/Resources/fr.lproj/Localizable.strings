@@ -95,9 +95,11 @@
 "species.about.cat_calico" = "Bah, c'est juste un chat !";
 "species.about.cat_floppa" = "Rejoindre l'armée Floppa";
 "species.about.cat_gray" = "Bah, c'est juste un chat !";
+"species.about.cat_green" = "Bah, c'est juste un chat !";
 "species.about.cat_grumpy" = "Vu sa tête, il te juge !";
 "species.about.cat_house" = "Une petite maison pour que votre chat puisse dormir !\nJe cherche d'autres idées de design, si vous en avez, n'hésitez pas à me contacter sur Discord !";
 "species.about.cat_pinky" = "Ce n'est absolument pas une panthère rose.";
+"species.about.cat_strawberry" = "Bah, c'est juste un chat !";
 "species.about.cat_white" = "Bah, c'est juste un chat !";
 "species.about.cayman718" = "La seule Porsche que je pourrai jamais m'offrir... 💸";
 "species.about.clockanalog" = "Ça affiche l'heure, rien d'autre... 😅";
@@ -147,9 +149,11 @@
 "species.name.cat_calico" = "Chat Calicot";
 "species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Chat";
+"species.name.cat_green" = "Chat Vert";
 "species.name.cat_grumpy" = "Grumpy Cat";
 "species.name.cat_house" = "Maison de chat";
 "species.name.cat_pinky" = "Chat Rose";
+"species.name.cat_strawberry" = "Chat Fraise";
 "species.name.cat_white" = "Chat Blanc";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Horloge Analogique";
