@@ -33,6 +33,7 @@ class RandomPlatformJumper: Capability {
     }
 
     private func jump() {
+        guard isEnabled else { return }
         if let target = findPlatform() {
             jump(to: target)
         } else {

@@ -40,6 +40,7 @@
 "enable" = "启用";
 "loading" = "载入中...";
 "menu.about" = "信息";
+"menu.followMouse" = "切换跟随鼠标";
 "menu.hide" = "隐藏宠物";
 "menu.hideAllPet" = "隐藏所有宠物";
 "menu.hideThisPet" = "隐藏这只宠物";
@@ -94,9 +95,11 @@
 "species.about.cat_calico" = "好吧，它只是一只猫!";
 "species.about.cat_floppa" = "加入弗洛帕军队";
 "species.about.cat_gray" = "好吧，它只是一只猫!";
+"species.about.cat_green" = "好吧，它只是一只猫!";
 "species.about.cat_grumpy" = "看看他吧，它是怎么评价你的....";
 "species.about.cat_house" = "一个供你的猫睡觉的小房子！\n我们正在寻找更多的设计想法，如果你有任何想法，请在 Discord 上联系我们！";
 "species.about.cat_pinky" = "这绝对不是粉红色的黑豹。";
+"species.about.cat_strawberry" = "好吧，它只是一只猫!";
 "species.about.cat_white" = "好吧，这只是一只猫！";
 "species.about.cayman718" = "唯一我买得起的保时捷...💸";
 "species.about.clockanalog" = "只显示当前时间，没有其他内容... 😅";
@@ -146,9 +149,11 @@
 "species.name.cat_calico" = "三色猫";
 "species.name.cat_floppa" = "弗洛帕";
 "species.name.cat_gray" = "猫咪";
+"species.name.cat_green" = "绿猫";
 "species.name.cat_grumpy" = "脾气暴躁的猫咪";
 "species.name.cat_house" = "猫咪之家";
 "species.name.cat_pinky" = "粉红色的猫";
+"species.name.cat_strawberry" = "草莓猫";
 "species.name.cat_white" = "白猫";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "模拟时钟";

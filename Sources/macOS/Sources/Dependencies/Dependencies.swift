@@ -22,6 +22,7 @@ class Dependencies {
         container.register(ImportDragAndDropPetUseCase.self) { _ in ImportDragAndDropPetUseCaseImpl() }
         container.register(ImportVerifier.self) { _ in ImportVerifierImpl() }
         container.register(LaunchAtLoginUseCase.self) { _ in LaunchAtLoginUseCaseImpl() }
+        container.register(MouseTrackingUseCase.self) { _ in MouseTrackingUseCaseImpl() }
         container.register(RainyCloudUseCase.self) { _ in RainyCloudUseCaseImpl() }
         container.register(RenamePetButtonCoordinator.self) { _ in RenamePetButtonCoordinatorImpl() }
         container.register(ThemeUseCase.self) { _ in ThemeUseCaseImpl() }

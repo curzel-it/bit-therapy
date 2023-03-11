@@ -40,6 +40,7 @@
 "enable" = "Abilita";
 "loading" = "Caricando...";
 "menu.about" = "Informazioni";
+"menu.followMouse" = "Segui il mouse On/Off";
 "menu.hide" = "Nascondi Pet";
 "menu.hideAllPet" = "Nascondi tutti";
 "menu.hideThisPet" = "Nasconti questo Pet";
@@ -94,9 +95,11 @@
 "species.about.cat_calico" = "Beh, è un normalissimo gatto!";
 "species.about.cat_floppa" = "Unisciti al battaglione Floppa";
 "species.about.cat_gray" = "Beh, è un normalissimo gatto!";
+"species.about.cat_green" = "Beh, è un normalissimo gatto!";
 "species.about.cat_grumpy" = "Guardalo, come ti giudica...";
 "species.about.cat_house" = "Una casetta dove far dormire il tuo gatto!\Se hai qualche idea per altri design, condividile su Discord!";
 "species.about.cat_pinky" = "Non è assolutamente una pantera rosa.";
+"species.about.cat_strawberry" = "Beh, è un normalissimo gatto!";
 "species.about.cat_white" = "Beh, è un normalissimo gatto!";
 "species.about.cayman718" = "L'unica Porsche che potrò mai permettermi... 💸";
 "species.about.clockanalog" = "Mostra l'ora corrente e nient'altro... 😅";
@@ -146,9 +149,11 @@
 "species.name.cat_calico" = "Gatto Calico";
 "species.name.cat_floppa" = "Floppa";
 "species.name.cat_gray" = "Gatto";
+"species.name.cat_green" = "Gatto Verde";
 "species.name.cat_grumpy" = "Gatto Scontroso";
 "species.name.cat_house" = "Casetta per Gatti";
 "species.name.cat_pinky" = "Gatto Rosa";
+"species.name.cat_strawberry" = "Gatto Fragola";
 "species.name.cat_white" = "Gatto Bianco";
 "species.name.cayman718" = "Cayman 718";
 "species.name.clockanalog" = "Orologio Analogico";

@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from typing import List
 from config.assets import AssetsProvider
@@ -7,12 +8,29 @@ from yage.models.animations import EntityAnimation, EntityAnimationPosition
 from yage.utils.logger import Logger
 
 class SpeciesProvider:
-    def __init__(self):
+    def __init__(self, root):
         self.assets = AssetsProvider.shared
         self.all_species: List[Species] = []
         self.species_by_id = {}
+        self._load_from_folder(root)
 
-    def load(self, species_json_strings: List[str]):
+    def _load_from_folder(self, root: str):
+        paths = [path for path in os.listdir(root)]
+        paths = [path for path in paths if path.endswith('.json')]
+        paths = [os.path.join(root, path) for path in paths]
+        self._load_from_files(paths)
+
+    def _load_from_files(self, files: List[str]):
+        def contents_of_file(path):
+            f = open(path)
+            content = f.read()
+            f.close()
+            return content
+                
+        jsons = [contents_of_file(path) for path in files]
+        self._load_jsons(jsons)
+
+    def _load_jsons(self, species_json_strings: List[str]):
         self.all_species = self._build_species(species_json_strings)
         self.species_by_id = {species.id: species for species in self.all_species}
 

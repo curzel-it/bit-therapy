@@ -11,6 +11,7 @@ protocol EntityView: SomeView {
 }
 
 class WorldWindow: NSWindow {
+    static weak var current: NSWindow?
     private let viewModel: WorldWindowViewModel
     
     init(representing world: RenderableWorld) {
@@ -20,11 +21,13 @@ class WorldWindow: NSWindow {
         viewModel.addSubview = { [weak self] in self?.addSubview(newView: $0) }
         viewModel.entityViews = { [weak self] in self?.entityViews() ?? [] }
         viewModel.start()
+        WorldWindow.current = self
     }
     
     override func close() {
-        super.close()
+        WorldWindow.current = nil
         viewModel.stop()
+        super.close()
     }
     
     private func entityViews() -> [EntityView] {
