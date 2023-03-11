@@ -3,10 +3,10 @@ from config import *
 from onscreen import *
 from yage import *
 
-def initialize(config: Config):
+def initialize(config: Config, assets_folder: str, species_folder: str):
     load_config(config)
-    AssetsProvider.shared = AssetsProvider([])
-    SpeciesProvider.shared = SpeciesProvider()
+    AssetsProvider.shared = AssetsProvider(assets_folder)
+    SpeciesProvider.shared = SpeciesProvider(species_folder)
     CapabilitiesDiscoveryService.shared = MyCapabilities()
 
 def load_config(config: Config) -> Config:

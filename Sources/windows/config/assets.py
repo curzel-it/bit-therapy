@@ -9,7 +9,6 @@ class _Asset:
         self.path = path
         self.sprite = self._sprite_name_from_path(path)        
         tokens = self.sprite.split('-')
-        self.resources_path = ''
         self.key = tokens[0] if len(tokens) > 0 else ''
         self.frame = int(tokens[-1]) if len(tokens) > 1 else 0
 
@@ -26,7 +25,7 @@ class AssetsProvider:
     def frames(self, species: str, animation: str) -> List[str]:
         key = self._key(species, animation)
         assets = self._sorted_assets_by_key.get(key) or []
-        return [asset.sprite for asset in assets]
+        return [asset.path for asset in assets]
     
     def path(self, sprite: str) -> Optional[str]:
         try:
