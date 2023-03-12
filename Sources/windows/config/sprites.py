@@ -1,12 +1,13 @@
 from typing import List
 from config.assets import AssetsProvider
+from di import *
 from yage.models import *
 from yage.capabilities import SpritesProvider
 
 class MySpritesProvider(SpritesProvider):
     def __init__(self, subject: Entity):
         super().__init__(subject)
-        self.assets = AssetsProvider.shared
+        self.assets = Dependencies.instance(AssetsProvider)
 
     def sprite(self, state: EntityState) -> str:
         if state == EntityState.FREE_FALL: return self.subject.species.drag_path

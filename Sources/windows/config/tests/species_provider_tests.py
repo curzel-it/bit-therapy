@@ -1,12 +1,12 @@
 import unittest
 
-from config import SpeciesProvider
-from config.assets import AssetsProvider
+from config import SpeciesProvider, AssetsProvider
+from di import *
 from yage.models.animations import EntityAnimation
 
 class SpeciesProviderTests(unittest.TestCase):
     def setUp(self):
-        AssetsProvider.shared = AssetsProvider(['../../PetsAssets'])
+        Dependencies.register_singleton(AssetsProvider, AssetsProvider(['../../PetsAssets']))
         self.provider = SpeciesProvider()
         
     def test_parse_species(self):

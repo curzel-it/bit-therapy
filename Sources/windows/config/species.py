@@ -3,13 +3,14 @@ import os
 import re
 from typing import List
 from config.assets import AssetsProvider
+from di import *
 from yage.models import Species
 from yage.models.animations import EntityAnimation, EntityAnimationPosition
 from yage.utils.logger import Logger
 
 class SpeciesProvider:
     def __init__(self, root):
-        self.assets = AssetsProvider.shared
+        self.assets = Dependencies.instance(AssetsProvider)
         self.all_species: List[Species] = []
         self.species_by_id = {}
         self._load_from_folder(root)
@@ -37,6 +38,7 @@ class SpeciesProvider:
     def _build_species(self, species_json_strings: List[str]) -> List[Species]:
         species = [self.species_from_json(json) for json in species_json_strings]
         species = list(set([s for s in species if s]))
+        species = sorted(species, key=lambda s: s.id)
         return species
 
     def species_from_json(self, json_string: str) -> Species:

@@ -1,5 +1,6 @@
 import random
 from config.config import Config
+from di import *
 from yage.capabilities import Gravity
 from yage.models import *
 from yage.utils.geometry import *
@@ -19,7 +20,7 @@ class PetEntity(Entity):
         self.set_gravity_enabled(kwargs.get('gravity', True))
     
     def reset_speed(self):
-        config = Config.shared.speed_multiplier
+        config = Dependencies.instance(Config).speed_multiplier
         size = self.frame.size.width / 75.0
         self.speed = config * 30.0 * self.species.speed * size
 
