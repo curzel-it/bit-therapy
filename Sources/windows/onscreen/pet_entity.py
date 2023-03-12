@@ -6,8 +6,11 @@ from yage.models import *
 from yage.utils.geometry import *
 
 class PetEntity(Entity):
-    def __init__(self, species, world, **kwargs):
-        pet_size = kwargs.get('pet_size', 75)
+    def __init__(self, species, world):
+        self.config = Dependencies.instance(Config)
+        pet_size = self.config.pet_size.value
+        gravity_enabled = self.config.gravity_enabled.value
+
         super().__init__(
             species, 
             PetEntity.next_id(species), 
@@ -17,10 +20,10 @@ class PetEntity(Entity):
         self.reset_speed()
         self.place_in_random_position()
         self._set_initial_direction()
-        self.set_gravity_enabled(kwargs.get('gravity', True))
+        self.set_gravity_enabled(gravity_enabled)
     
     def reset_speed(self):
-        config = Dependencies.instance(Config).speed_multiplier
+        config = self.config.speed_multiplier.value
         size = self.frame.size.width / 75.0
         self.speed = config * 30.0 * self.species.speed * size
 

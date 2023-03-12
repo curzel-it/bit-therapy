@@ -42,7 +42,11 @@ class Container:
 
     def instance(self, key):
         try:
-            return self._builders[key]()
+            builder = self._builders[key]
+            try:
+                return builder()
+            except TypeError:
+                return builder
         except KeyError:
             raise Exception(f'Missing builder for `{key}`, did you register it?')
     

@@ -6,7 +6,7 @@ from config import SpeciesProvider
 from di import *
 from qtutils.sizing import pixels
 
-class MainWindow(QMainWindow):
+class AppWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         window_width = pixels(800)
@@ -14,5 +14,3 @@ class MainWindow(QMainWindow):
         self.setContentsMargins(0, 0, 0, 0)
         self.setCentralWidget(self.grid)
         self.setFixedSize(window_width, pixels(700))
-        # self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
-        # self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
