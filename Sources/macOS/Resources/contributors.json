@@ -55,7 +55,7 @@
         "name": "Cat Man",
         "roles": ["artist"],
         "thumbnail": "contributor_catman",
-        "pets": ["cat_pinky", "cat_green", "cat_strawberry"]
+        "pets": ["cat", "cat_pinky", "cat_green", "cat_strawberry"]
     },
     {
         "name": "Laksaersa",
