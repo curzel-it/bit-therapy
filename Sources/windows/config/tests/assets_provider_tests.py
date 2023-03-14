@@ -1,11 +1,11 @@
 import unittest
 
 from config import SpeciesProvider
-from config.assets import AssetsProvider
+from config.assets import AssetsProvider, PetsAssetsProvider
 
 class SpeciesProviderTests(unittest.TestCase):
     def setUp(self):
-        self.provider = AssetsProvider(['../../PetsAssets'])
+        self.provider = PetsAssetsProvider(['../../PetsAssets'])
         
     def test_assets_for_plain_species_id(self):
         species = 'mushroom'

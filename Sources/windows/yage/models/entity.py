@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import Any, List, Optional, Tuple
+from di import *
 from yage.models.animations import EntityAnimation
 from yage.models.capability import CapabilitiesDiscoveryService
 from yage.models.collisions import Collision
@@ -62,7 +63,7 @@ class Entity:
 
     def _install_capabilities(self):
         for capability_id in self.species.capabilities:
-            capability = CapabilitiesDiscoveryService.shared.capability(capability_id)
+            capability = Dependencies.instance(CapabilitiesDiscoveryService).capability(capability_id)
             if capability is not None:
                 self.install(capability)
 

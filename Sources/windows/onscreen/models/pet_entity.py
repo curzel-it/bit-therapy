@@ -1,12 +1,17 @@
 import random
 from config.config import Config
+from di import *
+from onscreen.models.pet_size import PetSize
 from yage.capabilities import Gravity
 from yage.models import *
 from yage.utils.geometry import *
 
 class PetEntity(Entity):
-    def __init__(self, species, world, **kwargs):
-        pet_size = kwargs.get('pet_size', 75)
+    def __init__(self, species, world):
+        self.config = Dependencies.instance(Config)
+        pet_size = self.config.pet_size.value
+        gravity_enabled = self.config.gravity_enabled.value
+
         super().__init__(
             species, 
             PetEntity.next_id(species), 
@@ -16,16 +21,18 @@ class PetEntity(Entity):
         self.reset_speed()
         self.place_in_random_position()
         self._set_initial_direction()
-        self.set_gravity_enabled(kwargs.get('gravity', True))
+        self.set_gravity_enabled(gravity_enabled)
     
     def reset_speed(self):
-        config = Config.shared.speed_multiplier
-        size = self.frame.size.width / 75.0
-        self.speed = config * 30.0 * self.species.speed * size
+        self.speed = PetEntity.speed(
+            self.species, 
+            self.frame.width, 
+            self.config.speed_multiplier.value
+        )
 
     def place_in_random_position(self):
         random_x = random.uniform(0.1, 0.75) * self.world_bounds.width
-        self.frame.origin = Point(random_x, self.world_bounds.height+5)
+        self.frame.origin = Point(random_x, 5)
 
     def _set_initial_direction(self):
         self.direction = Vector(1, 0)
@@ -38,6 +45,20 @@ class PetEntity(Entity):
             if self.direction.dy > 0:
                 self.direction = Vector(1, 0)
             self.state = EntityState.MOVE
+
+    @classmethod
+    def initial_frame(cls) -> Rect:
+        config = Dependencies.instance(Config)
+        return Rect(0, 0, config.pet_cize, config.pet_cize)
+    
+    @classmethod
+    def speed(cls, species: Species, size: float, settings: float) -> float:
+        return species.speed * cls.speed_multiplier(size) * settings
+
+    @classmethod
+    def speed_multiplier(cls, size: float) -> float:
+        size_ratio = size / PetSize.default_size
+        return 30 * size_ratio
 
     @classmethod
     def next_id(cls, species):

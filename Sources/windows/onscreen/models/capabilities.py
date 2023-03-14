@@ -1,10 +1,14 @@
 from typing import Optional
-from onscreen import GetsAngryWhenMeetingOtherCats, LeavesBreadcrumbs, LeavesPoopStains, RandomPlatformJumper, SleepingPlace
+from onscreen.features.gets_angry_when_meeting_other_cats import GetsAngryWhenMeetingOtherCats
+from onscreen.features.leaves_poop_stains import LeavesPoopStains
+from onscreen.features.leaves_traces_while_walking import LeavesTracesWhileWalking
+from onscreen.features.random_platform_jumper import RandomPlatformJumper
+from onscreen.features.sleeping_place import SleepingPlace
+from onscreen.models.sprites import PetsSpritesProvider
 from yage.capabilities import *
 from yage.models import *
-from .sprites import MySpritesProvider
 
-class MyCapabilities(CapabilitiesDiscoveryService):
+class PetsCapabilities(CapabilitiesDiscoveryService):
     def __init__(self):
         self.capabilities = {
             "AnimatedSprite": AnimatedSprite,
@@ -16,10 +20,10 @@ class MyCapabilities(CapabilitiesDiscoveryService):
             "FlipHorizontallyWhenGoingLeft": FlipHorizontallyWhenGoingLeft,
             "GetsAngryWhenMeetingOtherCats": GetsAngryWhenMeetingOtherCats,
             "Gravity": Gravity,
-            "LeavesBreadcrumbs": LeavesBreadcrumbs,
             "LeavesPoopStains": LeavesPoopStains,
+            "LeavesTracesWhileWalking": LeavesTracesWhileWalking,
             "LinearMovement": LinearMovement,
-            "PetsSpritesProvider": MySpritesProvider,
+            "PetsSpritesProvider": PetsSpritesProvider,
             "RandomPlatformJumper": RandomPlatformJumper,
             "Rotating": Rotating,
             "Seeker": Seeker,

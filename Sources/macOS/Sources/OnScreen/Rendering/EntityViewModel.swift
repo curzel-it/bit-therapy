@@ -53,8 +53,7 @@ extension EntityViewModel {
     private func updateImageIfNeeded() {
         let hash = entity.spriteHash()
         guard needsSpriteUpdate(for: hash) else { return }
-        let newImage = nextImage(for: hash)
-        image = newImage
+        image = nextImage(for: hash)
     }
 }
 

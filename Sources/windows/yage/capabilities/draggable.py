@@ -14,7 +14,7 @@ class Draggable(Capability):
         new_frame = self.subject.frame.offset(size=current_delta)
         self.subject.frame.origin = self._nearest_position(new_frame, self.subject.world_bounds)
 
-    def up(self, total_delta: Size) -> Optional[Point]:
+    def drag_ended(self, total_delta: Size) -> Optional[Point]:
         if not self.drag_enabled or not self.is_being_dragged: return None
         return self._drag_ended()
 

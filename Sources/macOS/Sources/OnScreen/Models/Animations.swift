@@ -22,8 +22,3 @@ class PetsSpritesProvider: SpritesProvider {
         return assets.frames(for: species, animation: path)
     }
 }
-
-extension EntityAnimation {
-    public static let front = EntityAnimation(id: "front")
-    public static let sleep = EntityAnimation(id: "sleep")
-}

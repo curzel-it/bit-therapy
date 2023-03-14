@@ -1,7 +1,7 @@
 import os
-import pdb
 from typing import List, Optional
-
+from PyQt6.QtGui import QPixmap
+from yage.models.assets import AssetsProvider
 from yage.utils.logger import Logger
 
 class _Asset:    
@@ -15,8 +15,9 @@ class _Asset:
     def _sprite_name_from_path(self, path: str) -> str:
         return os.path.split(path)[-1].split('.')[0]
 
-class AssetsProvider:
+class PetsAssetsProvider(AssetsProvider):
     def __init__(self, folders: List[str]):
+        super().__init__()
         self.tag = "AssetsProvider"
         self._all_assets_paths = []
         self._sorted_assets_by_key = {}
@@ -26,6 +27,9 @@ class AssetsProvider:
         key = self._key(species, animation)
         assets = self._sorted_assets_by_key.get(key) or []
         return [asset.path for asset in assets]
+    
+    def image(self, sprite: str) -> Optional[QPixmap]:
+        return QPixmap(sprite)
     
     def path(self, sprite: str) -> Optional[str]:
         try:
@@ -37,13 +41,6 @@ class AssetsProvider:
         
     def all_assets_for_species(self, species) -> List[str]:
         return [path for path in self._all_assets_paths if self._is_path_of_species(path, species)]
-
-    def _is_path_of_species(self, path, species) -> bool:
-        file_name = path.split('/')[-1]
-        if not file_name.startswith(species): return False
-        rest_of_file_name = file_name.replace(species, '')
-        if not rest_of_file_name.startswith('_'): return False
-        return len(rest_of_file_name.split('_')) == 2
     
     def reload_assets(self, folders: List[str]):
         Logger.log(self.tag, "Loading assets from", *folders)
@@ -53,6 +50,13 @@ class AssetsProvider:
         assets = [_Asset(path) for path in self._all_assets_paths]
         assets = sorted(assets, key=lambda asset: asset.frame)
         self._build_sorted_assets(assets)
+
+    def _is_path_of_species(self, path, species) -> bool:
+        file_name = path.split('/')[-1]
+        if not file_name.startswith(species): return False
+        rest_of_file_name = file_name.replace(species, '')
+        if not rest_of_file_name.startswith('_'): return False
+        return len(rest_of_file_name.split('_')) == 2
     
     def _build_sorted_assets(self, assets: List[_Asset]):
         by_key = {}

@@ -21,6 +21,7 @@ class MouseChaser: Capability {
         mouse.position()
             .sink { [weak self] in self?.positionChanged(to: $0) }
             .store(in: &disposables)
+        mouse.start()
     }
     
     private func startSeeker() {

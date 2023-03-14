@@ -1,8 +1,8 @@
 
 from yage.models.species import Species
-from .leaves_breadcrumbs import LeavesBreadcrumbs
+from .leaves_traces_while_walking import LeavesTracesWhileWalking
 
-class LeavesPoopStains(LeavesBreadcrumbs):
+class LeavesPoopStains(LeavesTracesWhileWalking):
     def __init__(self, subject):
         super().__init__(subject)
         self.species_for_trace_entities = LeavesPoopStains.poop_stain_species()

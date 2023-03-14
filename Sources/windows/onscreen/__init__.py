@@ -1,8 +1,5 @@
-from .gets_angry_when_meeting_other_cats import GetsAngryWhenMeetingOtherCats
-from .leaves_breadcrumbs import LeavesBreadcrumbs
-from .leaves_poop_stains import LeavesPoopStains
-from .pet_entity import PetEntity
-from .rainy_cloud import RainyCloud
-from .random_platform_jumper import JumpingPlatformsProvider, RandomPlatformJumper
-from .sleeping_place import SleepingPlace
-from .ufo_abduction import UfoAbduction
+from .environments import *
+from .features import *
+from .interactions import *
+from .models import *
+from .rendering import *
