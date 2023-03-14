@@ -17,9 +17,7 @@ class MouseTrackingUseCaseImpl: MouseTrackingUseCase {
     private let interval: TimeInterval = 0.5
     private var timer: Timer!
     
-    init() {
-        start()
-    }
+    init() {}
     
     func start() {
         timer = Timer(timeInterval: interval, repeats: true) { [weak self] _ in self?.update() }
@@ -59,5 +57,9 @@ class MouseTrackingUseCaseImpl: MouseTrackingUseCase {
     func position() -> AnyPublisher<CGPoint, Never> {
         Empty().eraseToAnyPublisher()
     }
+    
+    func start() {}
+    
+    func stop() {}
 }
 #endif

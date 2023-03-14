@@ -9,10 +9,17 @@ from qtutils import *
 class PetsSelection(QWidget):
     def __init__(self, width):
         super().__init__()
+        self._disposables = []
         self.grid_width = width - pixels(Spacing.LG.value * 2)
         self.config = Dependencies.instance(Config)
         self.species_provider = Dependencies.instance(SpeciesProvider)
-        self.config.selected_species.subscribe(self._species_selection_changed)
+        self._bind_selected_species()
+    
+    def _bind_selected_species(self):
+        d = self.config.selected_species.subscribe_on_qt_main_thread(
+            self._species_selection_changed
+        )
+        self._disposables.append(d)
 
     def _species_selection_changed(self, selected):
         all_species = [species.id for species in self.species_provider.all_species]
@@ -34,6 +41,11 @@ class PetsSelection(QWidget):
             spacing = 0
         )
         self.set_scrollable(layout)
+
+    def closeEvent(self, event):
+        for d in self._disposables: d.dispose()
+        self._disposables = []
+        event.accept()
 
 class _PetsGrid(QWidget):
     def __init__(self, species, width):

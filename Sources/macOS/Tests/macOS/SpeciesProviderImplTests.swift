@@ -16,6 +16,7 @@ final class SpeciesProviderImplTests: XCTestCase {
         let expectedCount = provider.allJsonUrls.count
         let actualCount = await withCheckedContinuation { continuation in
             provider.all()
+                .receive(on: DispatchQueue.main)
                 .sink { continuation.resume(returning: $0.count) }
                 .store(in: &disposables)
         }

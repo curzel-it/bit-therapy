@@ -4,7 +4,7 @@ from yage.models.entity import Entity
 from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point
 
-class LeavesBreadcrumbs(Capability):
+class LeavesTracesWhileWalking(Capability):
     def __init__(self, subject):
         super().__init__(subject)
         self.species_for_trace_entities = None
@@ -40,7 +40,7 @@ class LeavesBreadcrumbs(Capability):
         
         entity = Entity(
             species=self.species_for_trace_entities,
-            id=LeavesBreadcrumbs.next_trace_id(),
+            id=LeavesTracesWhileWalking.next_trace_id(),
             frame=self.subject.frame.offset(point=self.trace_offset()),
             world=self.subject.world
         )
@@ -66,7 +66,7 @@ class LeavesBreadcrumbs(Capability):
     @staticmethod
     def next_trace_id():
         try:
-            LeavesBreadcrumbs.incremental_id += 1
+            LeavesTracesWhileWalking.incremental_id += 1
         except AttributeError: 
-            LeavesBreadcrumbs.incremental_id = 1
-        return f'Trace-{LeavesBreadcrumbs.incremental_id}'
+            LeavesTracesWhileWalking.incremental_id = 1
+        return f'Trace-{LeavesTracesWhileWalking.incremental_id}'

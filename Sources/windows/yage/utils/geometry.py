@@ -76,9 +76,16 @@ class Size:
         return Size(0, 0)
 
 class Rect:
-    def __init__(self, x, y, width, height):
-        self.origin = Point(x, y)
-        self.size = Size(width, height)
+    def __init__(self, *args, **kwargs):
+        if len(args) == 4:
+            x, y, width, height = args
+            self.origin = Point(x, y)
+            self.size = Size(width, height)
+        elif len(args) == 2:
+            self.origin, self.size = args
+        else: 
+            self.origin = Point(kwargs['x'], kwargs['y'])
+            self.size = Size(kwargs['width'], kwargs['height'])
 
     def intersection(self, other: 'Rect') -> 'Rect':
         x = max(self.min_x, other.min_x)

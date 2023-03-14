@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import QWidget, QLabel, QScrollArea, QVBoxLayout, QSizePoli
 from PyQt6.QtWidgets import QApplication
 
 from di.di import Dependencies
+from qtutils.screens import Screens
 
 class Spacing(enum.Enum):
     XXXXL = 80
@@ -21,7 +22,7 @@ class Spacing(enum.Enum):
 def pixels(object):
     value = object.value if object.__class__ == Spacing else object
     if value is None: return None    
-    scale_factor = Dependencies.instance("scale_factor")
+    scale_factor = Dependencies.instance(Screens).main.scale_factor
     return int(value * scale_factor)
 
 def _compact(widget):

@@ -1,3 +1,5 @@
+import pdb
+
 class classproperty(object):
     def __init__(self, f):
         self.f = f
@@ -22,7 +24,7 @@ class Dependencies:
     def instance(cls, key):
         try:
             return cls.shared._singletons_container.instance(key)
-        except:
+        except KeyError:
             return cls.shared._container.instance(key)
         
     @classproperty
@@ -38,17 +40,15 @@ class Container:
         self._builders = {}
 
     def register(self, key, builder):
+        if not callable(builder):
+            raise TypeError(f'Tried to register builder {builder} for {key}, which is not a function')
         self._builders[key] = builder
 
     def instance(self, key):
         try:
-            builder = self._builders[key]
-            try:
-                return builder()
-            except TypeError:
-                return builder
+            return self._builders[key]()
         except KeyError:
-            raise Exception(f'Missing builder for `{key}`, did you register it?')
+            raise KeyError(f'Missing builder for `{key}`, did you register it?')
     
 class SingletonContainer(Container):  
     def __init__(self):

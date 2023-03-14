@@ -7,6 +7,7 @@ class ConfigStorage:
     def __init__(self):
         self.config_file_path = 'config.json'
         self._values = {}
+        self._disposables = []
         self._config: Optional[Config] = None
         pass
 
@@ -17,11 +18,13 @@ class ConfigStorage:
     
     def _bind_config(self, config):
         self._config = config
-        config.desktop_interactions.subscribe(lambda _: self._on_config_changed())
-        config.gravity_enabled.subscribe(lambda _: self._on_config_changed())
-        config.pet_size.subscribe(lambda _: self._on_config_changed())
-        config.selected_species.subscribe(lambda _: self._on_config_changed())
-        config.speed_multiplier.subscribe(lambda _: self._on_config_changed())
+        self._disposables += [
+            config.desktop_interactions.subscribe(lambda _: self._on_config_changed()),
+            config.gravity_enabled.subscribe(lambda _: self._on_config_changed()),
+            config.pet_size.subscribe(lambda _: self._on_config_changed()),
+            config.selected_species.subscribe(lambda _: self._on_config_changed()),
+            config.speed_multiplier.subscribe(lambda _: self._on_config_changed())
+        ]
 
     def _on_config_changed(self):
         self._update_values_from_config()
@@ -36,7 +39,7 @@ class ConfigStorage:
     
     def _write_values_to_config_file(self):
         f = open(self.config_file_path, 'w')
-        f.write(json.dumps(self._values))
+        f.write(json.dumps(self._values, indent=2))
         f.close()
         
     def _load_or_create_config(self):

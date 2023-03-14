@@ -69,7 +69,8 @@ class RandomPlatformJumper(Capability):
 
     def _find_platform(self) -> Optional[Entity]:
         platforms = [p for p in self.platforms_provider.platforms if p.id != self._last_platform_id]
-        return random.choice(platforms)
+        if len(platforms) > 0: return random.choice(platforms)
+        return None
     
     def _on_seeker_update(self, state, distance):
         if state not in [SeekerState.CAPTURED, SeekerState.LOST]: return
