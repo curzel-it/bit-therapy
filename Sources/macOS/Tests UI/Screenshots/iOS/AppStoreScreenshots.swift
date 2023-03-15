@@ -1,5 +1,13 @@
 import XCTest
 
+/// Will take screenshots for AppStore page.
+/// Screenshots path can be find in console log at the end of the process. 
+/// Required sizes / devices:
+///  - iPhone 5.5" / iPhone 8 Plus
+///  - iPhone 6.5" / iPhone 11 Pro Max
+///  - iPhone 6.7" / iPhone 14 Pro Max
+///  - iPad 12.9" / iPad Pro 2nd Gen
+///  - iPad 12.9" / iPad Pro 6th Gen
 final class AppStoreScreenshots: XCTestCase {
     override class func tearDown() {
         super.tearDown()
