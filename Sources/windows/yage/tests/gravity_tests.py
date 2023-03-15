@@ -1,4 +1,3 @@
-import pdb
 import unittest
 from yage.capabilities import BounceOnLateralCollisions, Gravity, LinearMovement
 from yage.models.entity import Entity, EntityState
@@ -10,11 +9,13 @@ from yage.models.world import World
 
 class GravityTests(unittest.TestCase):
     def setUp(self):
-        self.env = World(name="test", bounds=Rect(
-            x=0, y=0, width=1000, height=1000))
+        self.env = World(
+            name="test", 
+            bounds=Rect(x=0, y=0, width=1000, height=1000)
+        )
         self.player = Entity(
             species=SPECIES_AGENT,
-            id="player",
+            entity_id="player",
             frame=Rect(x=0, y=0, width=50, height=50),
             world=self.env
         )
@@ -28,7 +29,7 @@ class GravityTests(unittest.TestCase):
     def test_non_static_entities_are_not_used_as_ground(self):
         ground1 = Entity(
             species=SPECIES_AGENT,
-            id="ground1",
+            entity_id="ground1",
             frame=Rect(x=0, y=100, width=200, height=50),
             world=self.env
         )
@@ -52,7 +53,7 @@ class GravityTests(unittest.TestCase):
     def test_entities_can_fall_to_ground(self):
         ground1 = Entity(
             species=SPECIES_AGENT,
-            id="ground1",
+            entity_id="ground1",
             frame=Rect(x=0, y=100, width=200, height=50),
             world=self.env
         )
@@ -99,7 +100,7 @@ class GravityTests(unittest.TestCase):
     def test_entities_raise_above_ground(self):
         ground1 = Entity(
             species=SPECIES_AGENT,
-            id="ground1",
+            entity_id="ground1",
             frame=Rect(x=0, y=100, width=200, height=50),
             world=self.env
         )
@@ -120,7 +121,7 @@ class GravityTests(unittest.TestCase):
     def test_ladder(self):
         ground1 = Entity(
             species=SPECIES_AGENT,
-            id="ground1",
+            entity_id="ground1",
             frame=Rect(x=369, y=354, width=250, height=48),
             world=self.env
         )
@@ -129,7 +130,7 @@ class GravityTests(unittest.TestCase):
 
         ground2 = Entity(
             species=SPECIES_AGENT,
-            id="ground2",
+            entity_id="ground2",
             frame=Rect(x=396, y=402, width=687, height=70),
             world=self.env
         )

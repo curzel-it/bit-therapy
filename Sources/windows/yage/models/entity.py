@@ -10,7 +10,7 @@ from yage.utils.logger import Logger
 
 
 class Entity:
-    def __init__(self, species, id: str, frame, world):
+    def __init__(self, species, entity_id: str, frame, world):
         self._animation = None
         self._animation_loops = None
         self.capabilities = []
@@ -18,7 +18,7 @@ class Entity:
         self.direction = Vector.zero()
         self.fps = species.fps
         self.frame = frame
-        self.id = id
+        self.id = entity_id
         self.is_alive = True
         self.is_ephemeral = False
         self.is_static = False

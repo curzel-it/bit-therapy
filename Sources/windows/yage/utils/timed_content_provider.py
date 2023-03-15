@@ -1,18 +1,18 @@
 import math
-from typing import Callable, Optional, List
+from typing import Callable, Optional
 
 
 class TimedContentProvider:
     def __init__(
         self,
-        id: str,
+        provider_id: str,
         contents,
         fps: float,
         on_first_content_of_loop_loaded: Optional[Callable[[
             int], None]] = None,
         on_loop_completed: Optional[Callable[[int], None]] = None
     ):
-        self.id = id
+        self.id = provider_id
         self.contents = contents
         self.frame_time = 1/fps if fps > 0 else 0
         self.loop_duracy = len(contents) * self.frame_time

@@ -1,5 +1,5 @@
 import unittest
-from yage.capabilities import LinearMovement, Seeker, SeekerState, SeekerTargetPosition
+from yage.capabilities import LinearMovement, Seeker, SeekerTargetPosition
 from yage.models.entity import Entity
 from yage.utils.geometry import Rect, Vector
 from yage.models.species import SPECIES_AGENT
@@ -11,7 +11,7 @@ class SeekerTests(unittest.TestCase):
         world = World('', Rect(x=0, y=0, width=1000, height=1000))
         entity = Entity(
             species=SPECIES_AGENT,
-            id="entity",
+            entity_id="entity",
             frame=Rect(x=0, y=0, width=1, height=1),
             world=world
         )
@@ -21,7 +21,7 @@ class SeekerTests(unittest.TestCase):
 
         target = Entity(
             species=SPECIES_AGENT,
-            id="target",
+            entity_id="target",
             frame=Rect(x=10, y=0, width=1, height=1),
             world=world
         )

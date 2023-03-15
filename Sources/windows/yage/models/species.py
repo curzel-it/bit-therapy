@@ -5,7 +5,7 @@ from yage.models.animations import EntityAnimation
 class Species:
     def __init__(
         self,
-        id: str,
+        species_id: str,
         animations: List[EntityAnimation] = [],
         capabilities: List[str] = [],
         drag_path: str = 'drag',
@@ -15,7 +15,7 @@ class Species:
         tags: List[str] = [],
         z_index: float = 0
     ):
-        self.id = id
+        self.id = species_id
         self.animations = animations
         self.capabilities = capabilities
         self.drag_path = drag_path
@@ -37,5 +37,5 @@ class Species:
         return self.id
 
 
-SPECIES_AGENT = Species("agent")
-SPECIES_HOTSPOT = Species("hotspot")
+SPECIES_AGENT = Species(species_id="agent")
+SPECIES_HOTSPOT = Species(species_id="hotspot")

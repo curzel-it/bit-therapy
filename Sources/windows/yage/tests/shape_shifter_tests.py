@@ -11,7 +11,7 @@ class ShapeShifterTests(unittest.TestCase):
         world = World('', Rect(x=0, y=0, width=1000, height=1000))
         entity = Entity(
             species=SPECIES_AGENT,
-            id="entity",
+            entity_id="entity",
             frame=Rect(x=0, y=0, width=10, height=10),
             world=world
         )

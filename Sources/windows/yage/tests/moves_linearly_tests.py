@@ -10,7 +10,7 @@ class LinearMovementTests(unittest.TestCase):
     def test_position_properly_updates(self):
         entity = Entity(
             species=SPECIES_AGENT,
-            id="entity",
+            entity_id="entity",
             frame=Rect(x=0, y=0, width=1, height=1),
             world=World('', Rect(x=0, y=0, width=1000, height=1000))
         )

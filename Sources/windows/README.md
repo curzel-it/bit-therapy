@@ -9,7 +9,8 @@
 * Can use mouse to drag pets around
 
 ### ❌ What's not working:
-* Animations are resetting the position of the pets to (0, 0)
+* Pet selection image look smoothed even if interpolation is disabled (retina displays)
+* Animations are stuck
 
 ### ⏳ Other stuff in the todo list:
 * All other UI features

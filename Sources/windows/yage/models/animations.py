@@ -15,13 +15,13 @@ class EntityAnimationPosition(Enum):
 class EntityAnimation:
     def __init__(
         self,
-        id: str,
+        animation_id: str,
         size: Optional[Size] = None,
         position: 'EntityAnimationPosition' = EntityAnimationPosition.FROM_ENTITY_BOTTOM_LEFT,
         facing_direction: Optional[Vector] = None,
         required_loops: Optional[int] = None
     ):
-        self.id = id
+        self.id = animation_id
         self.size = size
         self.position = position
         self.facing_direction = facing_direction
@@ -29,8 +29,7 @@ class EntityAnimation:
 
     def frame(self, entity) -> Rect:
         new_size = self._size(entity.frame.size)
-        new_position = self._position(
-            entity.frame, new_size, entity.world_bounds)
+        new_position = self._position(entity.frame, new_size, entity.world_bounds)
         return Rect(new_position.x, new_position.y, new_size.width, new_size.height)
 
     def _size(self, original_size):
@@ -59,7 +58,7 @@ class EntityAnimation:
 
     def with_loops(self, loops: int) -> 'EntityAnimation':
         return EntityAnimation(
-            id=self.id,
+            animation_id=self.id,
             size=self.size,
             position=self.position,
             facing_direction=self.facing_direction,
