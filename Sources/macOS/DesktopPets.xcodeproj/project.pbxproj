@@ -503,11 +503,11 @@
 			isa = PBXGroup;
 			children = (
 				1E07315229B9E4C600E31EED /* iOS */,
-				1E07315129B9E4C100E31EED /* macOS */,
-				1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */,
 				1E07314829B9D88000E31EED /* Languages.swift */,
-				1E07314B29B9D89800E31EED /* Themes.swift */,
+				1E07315129B9E4C100E31EED /* macOS */,
 				1E07314E29B9D89E00E31EED /* Orientations.swift */,
+				1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */,
+				1E07314B29B9D89800E31EED /* Themes.swift */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -1862,7 +1862,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 204120;
+				CURRENT_PROJECT_VERSION = 204310;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1874,7 +1874,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.42;
+				MARKETING_VERSION = 2.43;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1897,7 +1897,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 204120;
+				CURRENT_PROJECT_VERSION = 204310;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1909,7 +1909,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.42;
+				MARKETING_VERSION = 2.43;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
