@@ -3,6 +3,7 @@ from onscreen.models.pet_entity import PetEntity
 from PyQt6.QtCore import QTimer
 from yage import *
 
+
 class RainyCloudUseCase:
     def __init__(self):
         self.target = None
@@ -19,7 +20,6 @@ class RainyCloudUseCase:
         duration = randint(60, 120) * 1000
         QTimer.singleShot(duration, lambda: self._cleanup())
 
-
     def _build_cloud(self, origin: Point, world: World) -> Entity:
         cloud = PetEntity(self._cloud_species(), world)
         cloud.frame.set_size(cloud.frame.size() * 2)
@@ -33,9 +33,9 @@ class RainyCloudUseCase:
         seeker = Seeker()
         self.cloud.install(seeker)
         seeker.follow(
-            self.target, 
-            position=SeekerTargetPosition.ABOVE, 
-            offset=Point(0, y_offset), 
+            self.target,
+            position=SeekerTargetPosition.ABOVE,
+            offset=Point(0, y_offset),
             auto_adjust_speed=True
         )
 

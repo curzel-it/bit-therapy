@@ -4,6 +4,7 @@ from yage.models.entity import Entity
 from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point
 
+
 class LeavesTracesWhileWalking(Capability):
     def __init__(self, subject):
         super().__init__(subject)
@@ -25,19 +26,25 @@ class LeavesTracesWhileWalking(Capability):
         self.traces = []
 
     def should_spawn_trace(self):
-        if self.subject.state != EntityState.MOVE: return False
-        if self._seconds_since(self.last_spawn_date()) <= self.time_between_spawns: return False
+        if self.subject.state != EntityState.MOVE:
+            return False
+        if self._seconds_since(self.last_spawn_date()) <= self.time_between_spawns:
+            return False
         return True
 
     def last_spawn_date(self):
-        if not self.traces: return datetime.fromtimestamp(0)
+        if not self.traces:
+            return datetime.fromtimestamp(0)
         return self.traces[-1].creation_date
 
     def spawn_trace(self):
-        if not self.species_for_trace_entities: return 
-        if not self.subject: return 
-        if not self.subject.world: return
-        
+        if not self.species_for_trace_entities:
+            return
+        if not self.subject:
+            return
+        if not self.subject.world:
+            return
+
         entity = Entity(
             species=self.species_for_trace_entities,
             id=LeavesTracesWhileWalking.next_trace_id(),
@@ -62,11 +69,11 @@ class LeavesTracesWhileWalking(Capability):
     def remove(self, trace):
         trace.kill()
         self.traces.remove(trace)
-    
+
     @staticmethod
     def next_trace_id():
         try:
             LeavesTracesWhileWalking.incremental_id += 1
-        except AttributeError: 
+        except AttributeError:
             LeavesTracesWhileWalking.incremental_id = 1
         return f'Trace-{LeavesTracesWhileWalking.incremental_id}'

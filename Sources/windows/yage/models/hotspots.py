@@ -5,6 +5,7 @@ from yage.utils.geometry import Rect
 
 BOUNDS_THICKNESS = 2
 
+
 class Hotspot(Enum):
     top_bound = 'top_bound'
     left_bound = 'left_bound'

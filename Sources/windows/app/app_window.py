@@ -1,9 +1,7 @@
-from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QMainWindow, QLabel
+from PyQt6.QtWidgets import QMainWindow
 
 from app.pets_selection import PetsSelection
-from config import SpeciesProvider
-from di import *
+
 
 class AppWindow(QMainWindow):
     def __init__(self):

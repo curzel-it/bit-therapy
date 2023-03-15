@@ -7,10 +7,13 @@ from yage.models.hotspots import BOUNDS_THICKNESS
 from yage.utils.geometry import Point, Rect, Vector
 from yage.utils.logger import Logger
 
+
 class AutoRespawn(Capability):
     def do_update(self, collisions: List[Collision], after: float):
-        if self.subject.state == EntityState.DRAG: return
-        if self.is_within_bounds(self.subject.frame.origin): return 
+        if self.subject.state == EntityState.DRAG:
+            return
+        if self.is_within_bounds(self.subject.frame.origin):
+            return
         Logger.log(self.tag, "Outside of bounds, teleporting...")
         self.teleport()
 

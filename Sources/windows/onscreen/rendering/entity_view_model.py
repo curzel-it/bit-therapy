@@ -1,8 +1,7 @@
-from math import sqrt
+from functools import cached_property
 from typing import Optional, Tuple
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap
-from functools import cached_property
 from rx.subject import BehaviorSubject
 from di.di import Dependencies
 from onscreen.rendering.coordinate_system import CoordinateSystem
@@ -13,14 +12,15 @@ from yage.models.assets import AssetsProvider
 from yage.models.entity import Entity
 from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point, Size, Rect
-from yage.utils.logger import Logger
+
 
 class EntityViewModel:
     def __init__(self, entity: Entity):
         self.tag = f'ViewModel-{entity.id}'
         self._assets = Dependencies.instance(AssetsProvider)
         self._coordinate_system = Dependencies.instance(CoordinateSystem)
-        self._image_interpolation = Dependencies.instance(ImageInterpolationUseCase)        
+        self._image_interpolation = Dependencies.instance(
+            ImageInterpolationUseCase)
         screen = Dependencies.instance(Screens).main
         self._scale_factor = screen.scale_factor
         self._screen_size = screen.size
@@ -45,12 +45,14 @@ class EntityViewModel:
 
     def update(self):
         self.is_alive.on_next(self._entity.is_alive)
-        if not self._entity.is_alive: return
+        if not self._entity.is_alive:
+            return
         self._update_frame_if_needed()
         self._update_image_if_needed()
 
     def _update_frame_if_needed(self):
-        if self._entity.state == EntityState.DRAG: return
+        if self._entity.state == EntityState.DRAG:
+            return
         self._update_frame()
 
     def _update_frame(self):
@@ -59,16 +61,19 @@ class EntityViewModel:
 
     def _update_image_if_needed(self):
         hash = self._sprite_hash(self._entity)
-        if not self._needs_sprite_update(hash): return
+        if not self._needs_sprite_update(hash):
+            return
         self.image.on_next(self._next_image(hash))
 
     def mouse_down(self):
-        if not self._is_draggable: return
-        if self._is_mouse_down: return
+        if not self._is_draggable:
+            return
+        if self._is_mouse_down:
+            return
         self._is_mouse_down = True
         self._location_on_last_drag = self.frame.value.origin
         self._location_on_mouse_down = self.frame.value.origin
-        
+
     def dragged_to(self, final_destination: Point) -> bool:
         delta = Size(
             final_destination.x - self._location_on_last_drag.x - self.frame.value.width / 2,
@@ -77,15 +82,18 @@ class EntityViewModel:
         self.dragged_by(delta)
 
     def dragged_by(self, delta: Size) -> bool:
-        if not self._is_draggable: return
+        if not self._is_draggable:
+            return
         new_origin = self._location_on_last_drag.offset(size=delta)
         self.frame.on_next(Rect(new_origin, self.frame.value.size))
         self._location_on_last_drag = new_origin
         self._entity.drag.dragged(delta)
-    
+
     def drag_ended(self):
-        if not self._is_draggable: return
-        if not self._is_mouse_down: return
+        if not self._is_draggable:
+            return
+        if not self._is_mouse_down:
+            return
         self._is_mouse_down = False
         delta = Size(
             self._location_on_last_drag.x - self._location_on_mouse_down.x,
@@ -101,40 +109,47 @@ class EntityViewModel:
         return self._entity.capability(Draggable) is not None
 
     def _next_image(self, hash: int) -> Optional[QPixmap]:
-        if cached := self._image_cache.get(hash): return cached
+        if cached := self._image_cache.get(hash):
+            return cached
         image = self._interpolated_image_for_current_sprite()
-        if not image: return None
+        if not image:
+            return None
         self._image_cache[hash] = image
         return image
-    
+
     def _interpolated_image_for_current_sprite(self) -> Optional[QPixmap]:
         asset = self._assets.image(self._entity.sprite)
-        if not asset: return None
-        interpolation_mode = self._image_interpolation.interpolation_mode(asset, self.frame.value.size)
-        flip_horizontally, flip_vertically, z_angle = self._rotations(self._entity)
+        if not asset:
+            return None
+        interpolation_mode = self._image_interpolation.interpolation_mode(
+            asset, self.frame.value.size)
+        flip_horizontally, flip_vertically, z_angle = self._rotations(
+            self._entity)
 
         return asset \
             .scaled(
-                self.frame.value.size.as_qsize(), 
-                Qt.AspectRatioMode.KeepAspectRatio, 
-                self._image_interpolation.transformation_mode(interpolation_mode)
+                self.frame.value.size.as_qsize(),
+                Qt.AspectRatioMode.KeepAspectRatio,
+                self._image_interpolation.transformation_mode(
+                    interpolation_mode)
             ) \
             .flipped(horizontally=flip_horizontally, vertically=flip_vertically) \
             .rotated(z_angle)
-        
+
     def _rotations(self, entity: Entity) -> Tuple[bool, bool, float]:
         horizontally, vertically, z_angle = False, False, 0
-        try: 
+        try:
             horizontally = entity.rotation.is_flipped_horizontally
             vertically = entity.rotation.is_flipped_vertically
             z_angle = entity.rotation.z_angle
-        except AttributeError: pass
+        except AttributeError:
+            pass
         return horizontally, vertically, z_angle
-    
+
     def _needs_sprite_update(self, new_hash: int) -> bool:
         if new_hash != self._last_sprite_hash:
             self._last_sprite_hash = new_hash
-            return True        
+            return True
         return False
 
     def _sprite_hash(self, entity: Entity) -> int:

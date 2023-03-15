@@ -1,11 +1,12 @@
 from yage.models.capability import Capability
 from yage.utils.geometry import Rect, Size
 
+
 class ShapeShifter(Capability):
     def __init__(self, subject):
         super().__init__(subject)
         self.animation_duracy = 1
-        self.target_size = Size.zero()        
+        self.target_size = Size.zero()
         self.delta = Size.zero()
 
     def scale_linearly(self, size, duracy):

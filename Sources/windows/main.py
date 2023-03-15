@@ -1,11 +1,22 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from app import *
-from config import *
-from di import *
-from onscreen import *
-from qtutils.main_thread import execute_on_main_thread
+from isort import Config
+from app.app_window import AppWindow
+from config.assets import PetsAssetsProvider
+from config.config_storage import ConfigStorage
+from config.species import SpeciesProvider
+from di.di import Dependencies
+from onscreen.environments.on_screen_coordinator import OnScreenCoordinator, OnScreenCoordinatorImpl
+from onscreen.environments.world_elements_service import WorldElementsService
+from onscreen.features.fantozzi_cloud import RainyCloudUseCase
+from onscreen.features.ufo_abduction import UfoAbductionUseCase
+from onscreen.interactions.desktop_obstacles_service import DesktopObstaclesService
+from onscreen.models.capabilities import PetsCapabilities
+from onscreen.rendering.coordinate_system import CoordinateSystem, QtCoordinateSystem
+from onscreen.rendering.image_interpolation import ImageInterpolationUseCase
+from onscreen.rendering.image_interpolation import ImageInterpolationUseCaseImpl
 from qtutils.screens import Screens
+from yage.models.assets import AssetsProvider
 from yage.models.capability import CapabilitiesDiscoveryService
 
 app = QApplication(sys.argv)
@@ -13,20 +24,28 @@ app = QApplication(sys.argv)
 config_storage = ConfigStorage()
 config = config_storage.load_config()
 
-Dependencies.register_singleton(AssetsProvider, lambda: PetsAssetsProvider(['../../PetsAssets']))
-Dependencies.register_singleton(CapabilitiesDiscoveryService, lambda: PetsCapabilities())
-Dependencies.register_singleton(ConfigStorage, lambda: config_storage)
-Dependencies.register_singleton(Config, lambda: config)
-Dependencies.register_singleton(CoordinateSystem, lambda: QtCoordinateSystem())
-Dependencies.register_singleton(ImageInterpolationUseCase, lambda: ImageInterpolationUseCaseImpl())
-Dependencies.register_singleton(OnScreenCoordinator, lambda: OnScreenCoordinatorImpl())
-Dependencies.register_singleton(Screens, lambda: Screens(app))
-Dependencies.register_singleton(SpeciesProvider, lambda: SpeciesProvider('../../Species'))
-Dependencies.register_singleton(WorldElementsService, lambda: WorldElementsService())
+singletons = [
+    (AssetsProvider, lambda: PetsAssetsProvider(['../../PetsAssets'])),
+    (CapabilitiesDiscoveryService, lambda: PetsCapabilities()),
+    (ConfigStorage, lambda: config_storage),
+    (Config, lambda: config),
+    (CoordinateSystem, lambda: QtCoordinateSystem()),
+    (ImageInterpolationUseCase, lambda: ImageInterpolationUseCaseImpl()),
+    (OnScreenCoordinator, lambda: OnScreenCoordinatorImpl()),
+    (Screens, lambda: Screens(app)),
+    (SpeciesProvider, lambda: SpeciesProvider('../../Species')),
+    (WorldElementsService, lambda: WorldElementsService())
+]
+for singleton, builder in singletons:
+    Dependencies.register_singleton(singleton, builder)
 
-Dependencies.register(DesktopObstaclesService, lambda: DesktopObstaclesService())
-Dependencies.register(RainyCloudUseCase, lambda: RainyCloudUseCase())
-Dependencies.register(UfoAbductionUseCase, lambda: UfoAbductionUseCase())
+dependencies = [
+    (DesktopObstaclesService, lambda: DesktopObstaclesService()),
+    (RainyCloudUseCase, lambda: RainyCloudUseCase()),
+    (UfoAbductionUseCase, lambda: UfoAbductionUseCase())
+]
+for dependency, builder in dependencies:
+    Dependencies.register(dependency, builder)
 
 app_window = AppWindow()
 app_window.show()

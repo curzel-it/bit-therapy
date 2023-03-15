@@ -8,6 +8,7 @@ from onscreen.models.sprites import PetsSpritesProvider
 from yage.capabilities import *
 from yage.models import *
 
+
 class PetsCapabilities(CapabilitiesDiscoveryService):
     def __init__(self):
         self.capabilities = {

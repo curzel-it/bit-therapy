@@ -5,6 +5,7 @@ from yage.utils.geometry import Rect, Vector
 from yage.models.species import SPECIES_AGENT
 from yage.models.world import World
 
+
 class SeekerTests(unittest.TestCase):
     def test_reaches_target(self):
         world = World('', Rect(x=0, y=0, width=1000, height=1000))
@@ -28,5 +29,7 @@ class SeekerTests(unittest.TestCase):
         seeker.follow(target, position=SeekerTargetPosition.CENTER)
 
         entity.update([], 10)
-        self.assertAlmostEqual(entity.frame.origin.x, target.frame.origin.x, delta=0.00001)
-        self.assertAlmostEqual(entity.frame.origin.y, target.frame.origin.y, delta=0.00001)
+        self.assertAlmostEqual(entity.frame.origin.x,
+                               target.frame.origin.x, delta=0.00001)
+        self.assertAlmostEqual(entity.frame.origin.y,
+                               target.frame.origin.y, delta=0.00001)

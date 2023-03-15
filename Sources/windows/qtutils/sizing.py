@@ -1,6 +1,7 @@
 import enum
 from PyQt6.QtWidgets import QWidget, QSizePolicy
 
+
 class Spacing(enum.Enum):
     XXXXL = 80
     XXXL = 64
@@ -13,11 +14,13 @@ class Spacing(enum.Enum):
     ZERO = 0
     INVERSE_MD = -16
 
+
 def _compact(widget):
     widget.setSizePolicy(
-        QSizePolicy.Policy.MinimumExpanding, 
+        QSizePolicy.Policy.MinimumExpanding,
         QSizePolicy.Policy.MinimumExpanding
     )
     return widget
+
 
 QWidget.compact = _compact

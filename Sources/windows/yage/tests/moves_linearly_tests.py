@@ -5,6 +5,7 @@ from yage.utils.geometry import Rect, Vector
 from yage.models.species import SPECIES_AGENT
 from yage.models.world import World
 
+
 class LinearMovementTests(unittest.TestCase):
     def test_position_properly_updates(self):
         entity = Entity(

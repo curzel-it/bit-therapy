@@ -8,18 +8,20 @@ from qtutils.screens import Screen, Screens
 from yage.models.species import Species
 from yage.utils.logger import Logger
 
+
 class OnScreenCoordinator:
     def __init__(self):
         self.worlds: List[ScreenEnvironment] = []
-        
-    def show(self): 
+
+    def show(self):
         raise NotImplementedError()
-    
-    def hide(self): 
+
+    def hide(self):
         raise NotImplementedError()
-    
-    def remove(self, species: Species): 
+
+    def remove(self, species: Species):
         raise NotImplementedError()
+
 
 class OnScreenCoordinatorImpl(OnScreenCoordinator):
     def __init__(self):

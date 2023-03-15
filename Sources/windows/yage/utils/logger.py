@@ -1,6 +1,7 @@
 from datetime import datetime
 import enum
 
+
 class Logger:
     _logger = None
 
@@ -25,7 +26,8 @@ class Logger:
         message = f'{level.value}: {date} [{tokens[0]}] {body}'
         print(message)
 
+
 class LogLevel(enum.Enum):
     VERBOSE = 'V'
     DEBUG = 'D'
-    ERROR = 'E'    
+    ERROR = 'E'

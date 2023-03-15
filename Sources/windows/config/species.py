@@ -8,6 +8,7 @@ from yage.models import Species
 from yage.models.animations import EntityAnimation, EntityAnimationPosition
 from yage.utils.logger import Logger
 
+
 class SpeciesProvider:
     def __init__(self, root):
         self.assets = Dependencies.instance(AssetsProvider)
@@ -27,16 +28,18 @@ class SpeciesProvider:
             content = f.read()
             f.close()
             return content
-                
+
         jsons = [contents_of_file(path) for path in files]
         self._load_jsons(jsons)
 
     def _load_jsons(self, species_json_strings: List[str]):
         self.all_species = self._build_species(species_json_strings)
-        self.species_by_id = {species.id: species for species in self.all_species}
+        self.species_by_id = {
+            species.id: species for species in self.all_species}
 
     def _build_species(self, species_json_strings: List[str]) -> List[Species]:
-        species = [self.species_from_json(json) for json in species_json_strings]
+        species = [self.species_from_json(json)
+                   for json in species_json_strings]
         species = list(set([s for s in species if s]))
         species = sorted(species, key=lambda s: s.id)
         return species

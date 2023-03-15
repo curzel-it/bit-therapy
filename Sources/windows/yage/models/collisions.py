@@ -2,6 +2,7 @@ from enum import Enum
 import math
 from yage.utils.geometry import Rect
 
+
 class Collision:
     def __init__(self, source, other, intersection: 'Rect'):
         self.intersection = intersection
@@ -9,18 +10,18 @@ class Collision:
         self.is_overlapping = intersection.width >= 1 and intersection.height >= 1
         self.other = other
         self.source = source
-        
+
     @property
-    def other_id(self): 
+    def other_id(self):
         return self.other.id
 
     @property
-    def other_body(self): 
+    def other_body(self):
         return self.other.frame
 
     @property
-    def source_body(self): 
-        return self.source.frame        
+    def source_body(self):
+        return self.source.frame
 
     def __repr__(self):
         return f'Collision with {self.other.id} at {self.intersection}'
@@ -36,11 +37,16 @@ class Collision:
                     return True
             return angle >= pi1 * math.pi and angle <= pi2 * math.pi
 
-        intersection_edges = [c for c in self.intersection.corners if c.is_on_edge(self.source_body)]
-        touches_top = any(body_center.y < c.y <= self.source_body.max_y for c in intersection_edges)
-        touches_right = any(body_center.x < c.x <= self.source_body.max_x for c in intersection_edges)
-        touches_bottom = any(body_center.y > c.y >= self.source_body.min_y for c in intersection_edges)
-        touches_left = any(body_center.x > c.x >= self.source_body.min_x for c in intersection_edges)
+        intersection_edges = [
+            c for c in self.intersection.corners if c.is_on_edge(self.source_body)]
+        touches_top = any(body_center.y < c.y <=
+                          self.source_body.max_y for c in intersection_edges)
+        touches_right = any(body_center.x < c.x <=
+                            self.source_body.max_x for c in intersection_edges)
+        touches_bottom = any(body_center.y > c.y >=
+                             self.source_body.min_y for c in intersection_edges)
+        touches_left = any(body_center.x > c.x >=
+                           self.source_body.min_x for c in intersection_edges)
 
         if touches_top and in_between(angle, 0.0, 1.0):
             sides.append(CollisionSide.top)
@@ -53,6 +59,7 @@ class Collision:
 
         return sides
 
+
 class CollisionSide(Enum):
     top = "top"
     right = "right"
@@ -61,7 +68,11 @@ class CollisionSide(Enum):
 
     @property
     def opposite(self) -> 'CollisionSide':
-        if self == CollisionSide.top: return CollisionSide.bottom
-        elif self == CollisionSide.bottom: return CollisionSide.top
-        elif self == CollisionSide.left:  return CollisionSide.right
-        else: return CollisionSide.left
+        if self == CollisionSide.top:
+            return CollisionSide.bottom
+        elif self == CollisionSide.bottom:
+            return CollisionSide.top
+        elif self == CollisionSide.left:
+            return CollisionSide.right
+        else:
+            return CollisionSide.left

@@ -5,7 +5,8 @@ from yage.utils.geometry import Rect
 from yage.models.species import SPECIES_AGENT
 from yage.models.world import World
 
-class CollisionsTests(unittest.TestCase):        
+
+class CollisionsTests(unittest.TestCase):
     def setUp(self):
         self.test_bounds = Rect(0, 0, 100, 100)
         self.test_env = World("test", self.test_bounds)
@@ -49,14 +50,17 @@ class CollisionsTests(unittest.TestCase):
         self.assertIsNone(collision)
 
     def test_equal_entities_do_collide(self):
-        entity = Entity(SPECIES_AGENT, "someEntity", Rect(0, 0, 0, 0), self.test_env)
+        entity = Entity(SPECIES_AGENT, "someEntity",
+                        Rect(0, 0, 0, 0), self.test_env)
         collision = entity.collision(entity)
         self.assertIsNotNone(collision)
 
     def test_entities_with_same_frame_collide(self):
 
-        entity1 = Entity(SPECIES_AGENT, "entity1", Rect(0, 0, 0, 0), self.test_env)
-        entity2 = Entity(SPECIES_AGENT, "entity2", Rect(0, 0, 0, 0), self.test_env)
+        entity1 = Entity(SPECIES_AGENT, "entity1",
+                         Rect(0, 0, 0, 0), self.test_env)
+        entity2 = Entity(SPECIES_AGENT, "entity2",
+                         Rect(0, 0, 0, 0), self.test_env)
         collision = entity1.collision(entity2)
         self.assertIsNotNone(collision)
 
@@ -113,7 +117,7 @@ class CollisionsTests(unittest.TestCase):
         expected_intersection = Rect(1, 1, 1, 1)
         self.assertIsNotNone(collision)
         self.assertEqual(collision.intersection, expected_intersection)
-        
+
     def test_overlapping_entities_collide(self):
         entity1 = Entity(
             SPECIES_AGENT,
@@ -154,7 +158,8 @@ class CollisionsTests(unittest.TestCase):
         )
         collision = entity1.collision(entity2)
         sides = collision.sides()
-        self.assertEqual(sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
+        self.assertEqual(
+            sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
 
     def test_sides_detected_when_smaller_collides_on_right(self):
         entity1 = Entity(
@@ -171,7 +176,8 @@ class CollisionsTests(unittest.TestCase):
         )
         collision = entity1.collision(entity2)
         sides = collision.sides()
-        self.assertEqual(sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
+        self.assertEqual(
+            sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
 
     def test_sides_detected_when_larger_collides_on_right(self):
         entity1 = Entity(
@@ -188,7 +194,8 @@ class CollisionsTests(unittest.TestCase):
         )
         collision = entity1.collision(entity2)
         sides = collision.sides()
-        self.assertEqual(sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
+        self.assertEqual(
+            sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
 
     def test_sides_detected_when_object_collides_on_top_right(self):
         entity1 = Entity(

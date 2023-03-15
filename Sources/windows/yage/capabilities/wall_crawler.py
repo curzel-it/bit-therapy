@@ -3,9 +3,12 @@ from yage.models.capability import Capability
 from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point, Vector
 
+
 class WallCrawler(Capability):
     def do_update(self, collisions, time):
-        if self.subject.state != EntityState.MOVE: return
+        if self.subject.state != EntityState.MOVE:
+            return
+
         direction = self.subject.direction
 
         if self._is_going_up(direction) and self.touches_screen_top():

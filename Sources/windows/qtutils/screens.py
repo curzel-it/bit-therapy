@@ -5,14 +5,17 @@ from yage.utils.geometry import Rect, Size
 
 from yage.utils.logger import Logger
 
+
 class Screens:
     def __init__(self, app: QApplication):
         self.main = Screen(app.primaryScreen())
 
         if platform.system() == 'Darwin':
-            Logger.log('Screens', 'Loading mocked screens because... reasons...')
+            Logger.log(
+                'Screens', 'Loading mocked screens because... reasons...')
             self.main.size = Size(800, 600)
             self.main.frame.size = self.main.size
+
 
 class Screen:
     def __init__(self, screen: QScreen):

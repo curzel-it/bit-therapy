@@ -1,9 +1,10 @@
 from typing import List
 from yage.models.animations import EntityAnimation
 
+
 class Species:
     def __init__(
-        self, 
+        self,
         id: str,
         animations: List[EntityAnimation] = [],
         capabilities: List[str] = [],
@@ -22,10 +23,11 @@ class Species:
         self.movement_path = movement_path
         self.speed = speed
         self.tags = tags
-        self.z_index = z_index        
+        self.z_index = z_index
 
     def __eq__(self, other: 'Species'):
-        if other is None: return False
+        if other is None:
+            return False
         return self.id == other.id
 
     def __hash__(self):
@@ -33,6 +35,7 @@ class Species:
 
     def __repr__(self):
         return self.id
+
 
 SPECIES_AGENT = Species("agent")
 SPECIES_HOTSPOT = Species("hotspot")

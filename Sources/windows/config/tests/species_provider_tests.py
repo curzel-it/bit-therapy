@@ -5,11 +5,13 @@ from config.assets import PetsAssetsProvider
 from di import *
 from yage.models.animations import EntityAnimation
 
+
 class SpeciesProviderTests(unittest.TestCase):
     def setUp(self):
-        Dependencies.register_singleton(AssetsProvider, lambda: PetsAssetsProvider([]))
+        Dependencies.register_singleton(
+            AssetsProvider, lambda: PetsAssetsProvider([]))
         self.provider = SpeciesProvider('../../Species')
-        
+
     def test_parse_species(self):
         species = self.provider.species_from_json(ape_json)
         self.assertIsNotNone(species)
@@ -23,6 +25,7 @@ class SpeciesProviderTests(unittest.TestCase):
         self.assertEqual(len(species.capabilities), 11)
         self.assertEqual(len(species.animations), 3)
         self.assertEqual(species.animations[0].__class__, EntityAnimation)
+
 
 ape_json = '''
 {

@@ -1,2 +1,3 @@
+pylint
 pyside6
 rx

@@ -6,6 +6,7 @@ from yage.capabilities import Gravity
 from yage.models import *
 from yage.utils.geometry import *
 
+
 class PetEntity(Entity):
     def __init__(self, species, world):
         self.config = Dependencies.instance(Config)
@@ -13,8 +14,8 @@ class PetEntity(Entity):
         gravity_enabled = self.config.gravity_enabled.value
 
         super().__init__(
-            species, 
-            PetEntity.next_id(species), 
+            species,
+            PetEntity.next_id(species),
             Rect(0, 0, pet_size, pet_size),
             world
         )
@@ -22,11 +23,11 @@ class PetEntity(Entity):
         self.place_in_random_position()
         self._set_initial_direction()
         self.set_gravity_enabled(gravity_enabled)
-    
+
     def reset_speed(self):
         self.speed = PetEntity.speed(
-            self.species, 
-            self.frame.width, 
+            self.species,
+            self.frame.width,
             self.config.speed_multiplier.value
         )
 
@@ -39,7 +40,8 @@ class PetEntity(Entity):
 
     def set_gravity_enabled(self, enabled: bool):
         gravity = self.capability(Gravity)
-        if not gravity: return
+        if not gravity:
+            return
         gravity.is_enabled = enabled
         if not enabled:
             if self.direction.dy > 0:
@@ -50,7 +52,7 @@ class PetEntity(Entity):
     def initial_frame(cls) -> Rect:
         config = Dependencies.instance(Config)
         return Rect(0, 0, config.pet_cize, config.pet_cize)
-    
+
     @classmethod
     def speed(cls, species: Species, size: float, settings: float) -> float:
         return species.speed * cls.speed_multiplier(size) * settings
@@ -62,6 +64,7 @@ class PetEntity(Entity):
 
     @classmethod
     def next_id(cls, species):
-        if not hasattr(cls, 'incremental_id'): cls.incremental_id = 0
+        if not hasattr(cls, 'incremental_id'):
+            cls.incremental_id = 0
         cls.incremental_id += 1
         return f'{species.id}-{cls.incremental_id}'

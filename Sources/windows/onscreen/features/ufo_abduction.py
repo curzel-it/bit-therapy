@@ -5,22 +5,24 @@ from di.di import Dependencies
 from onscreen.models.pet_entity import PetEntity
 from yage import *
 
+
 class UfoAbductionUseCase:
     def __init__(self):
         self.settings = Dependencies.instance(Config)
-    
+
     def start(self, target: Entity, world: World, completion: Callable[[], None]):
         ufo = self._build_ufo(world)
         abduction = ufo.capability(UfoAbduction)
-        abduction.start(target, lambda: self._clean_up_after_abduction(target, ufo, world, completion))
-    
+        abduction.start(target, lambda: self._clean_up_after_abduction(
+            target, ufo, world, completion))
+
     def _clean_up_after_abduction(self, target: Entity, ufo: Entity, world: World, completion: Callable[[], None]):
         ufo.kill()
         target.kill()
         world.children.remove(ufo)
         world.children.remove(target)
         completion()
-    
+
     def _build_ufo(self, world: World) -> Entity:
         ufo = PetEntity(self._ufo_species(), world)
         ufo.frame.origin = world.bounds.top_left
@@ -28,7 +30,7 @@ class UfoAbductionUseCase:
         ufo.install(UfoAbduction())
         world.children.append(ufo)
         return ufo
-    
+
     def _ufo_species(self):
         return Species(
             id="ufo",
@@ -42,6 +44,7 @@ class UfoAbductionUseCase:
             movement_path="front",
             speed=2
         )
+
 
 class UfoAbduction(Capability):
     def __init__(self):
@@ -60,8 +63,8 @@ class UfoAbduction(Capability):
         target.install(seeker)
         distance = Point(0, -50)
         seeker.follow(
-            target, 
-            position=SeekerTargetPosition.ABOVE, 
+            target,
+            position=SeekerTargetPosition.ABOVE,
             offset=distance,
             on_update=lambda s: self._on_capture(s, seeker)
         )
@@ -72,9 +75,9 @@ class UfoAbduction(Capability):
                 self._animation_completed()
         return super().do_update(collisions, time)
 
-
     def _on_capture(self, capture_state, seeker):
-        if capture_state != SeekerState.CAPTURED: return
+        if capture_state != SeekerState.CAPTURED:
+            return
         seeker.is_enabled = False
         self._paralyze_target()
         self._capture_ray_animation()
@@ -82,18 +85,20 @@ class UfoAbduction(Capability):
     def _paralyze_target(self):
         self._target.set_gravity(enabled=False)
         self._target.direction = Point(0, -1)
-        self._target.speed = 1.2 * PetEntity.speed_multiplier(self._target.frame.width)
+        self._target.speed = 1.2 * \
+            PetEntity.speed_multiplier(self._target.frame.width)
 
     def _capture_ray_animation(self):
         self.subject.direction = Vector.zero()
         abduction = EntityAnimation(
-            id='abduction', 
-            size=Size(1, 3), 
+            id='abduction',
+            size=Size(1, 3),
             position=EntityAnimationPosition.ENTITY_TOP_LEFT
         )
         self.subject.set_animation(abduction, loops=1)
         seeker = self.subject.capability(Seeker)
-        if seeker: seeker.kill()
+        if seeker:
+            seeker.kill()
 
         shape = ShapeShifter()
         self._target.install(shape)
@@ -107,7 +112,8 @@ class UfoAbduction(Capability):
         self.subject.direction = Vector(1, -1)
         self.subject.set_state(EntityState.MOVE)
         movement = self.subject.capability(LinearMovement)
-        if movement: movement.is_enabled = True
+        if movement:
+            movement.is_enabled = True
         self.subject.frame.size = self._subject_original_size
         self._on_completion()
         self.kill()
