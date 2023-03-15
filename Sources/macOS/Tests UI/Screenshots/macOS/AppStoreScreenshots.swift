@@ -1,6 +1,11 @@
 import Schwifty
 import XCTest
 
+/// Will take screenshots for AppStore page.
+/// Screenshots path can be find in console log at the end of the process.
+/// Use `Scripts/macos_screnshots_resize.py` to resize screenshots if needed (ie. if using a mb pro with notch).
+///   `python3 macos_screnshots_resize.py <folder from console log>
+/// This will create cropped and resized screenshots in Scripts/generated/screenshots
 final class AppStoreScreenshots: XCTestCase {
     override class func tearDown() {
         super.tearDown()

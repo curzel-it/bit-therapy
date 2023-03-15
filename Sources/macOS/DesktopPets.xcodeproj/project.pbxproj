@@ -120,6 +120,7 @@
 		1E9505DE29B21492007666BF /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
 		1E9505DF29B21494007666BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E219229B0876E00AC9438 /* GoogleService-Info.plist */; };
 		1E9505E029B21496007666BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
+		1EA1679529C1E0E000FAF378 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA1679429C1E0E000FAF378 /* Schwifty */; };
 		1EB2BB9729B29C2800E7EF8F /* ImageInterpolationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A329B211DC007666BF /* ImageInterpolationUseCase.swift */; };
 		1EB2BB9929B29C2800E7EF8F /* RenderingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A529B211DC007666BF /* RenderingDependencies.swift */; };
 		1EB2BB9E29B29C3B00E7EF8F /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FE2970D32900AB3EB0 /* Animations.swift */; };
@@ -389,6 +390,7 @@
 		1EB5E8E729A12E4500FF9C9C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED1D04029130C11004031BC /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterpolationUseCaseTests.swift; sourceTree = "<group>"; };
+		1EDDB01E29C1B770002696D3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EE90BFA299802690019CA9A /* contributors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contributors.json; sourceTree = "<group>"; };
 		1EF525822997E710004B64D2 /* Contributors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributors.swift; sourceTree = "<group>"; };
 		1EF863E929B22DD400413AEA /* Mobile Pets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Pets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,6 +422,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA1679529C1E0E000FAF378 /* Schwifty in Frameworks */,
 				1E07313029B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1E07313129B9D64B00E31EED /* FirebaseCrashlytics in Frameworks */,
 			);
@@ -1085,6 +1088,7 @@
 			packageProductDependencies = (
 				1E07312829B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1E07312A29B9D64B00E31EED /* FirebaseCrashlytics */,
+				1EA1679429C1E0E000FAF378 /* Schwifty */,
 			);
 			productName = "Mobile PetsUITests";
 			productReference = 1E07313629B9D64B00E31EED /* Mobile Pets Screenshots.xctest */;
@@ -1294,6 +1298,7 @@
 				fr,
 				id,
 				"zh-Hans",
+				es,
 			);
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
@@ -1743,6 +1748,7 @@
 				1E93C60229623192007A5B91 /* fr */,
 				1EB5E8E729A12E4500FF9C9C /* id */,
 				1E50295629AE583A00117A23 /* zh-Hans */,
+				1EDDB01E29C1B770002696D3 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -2502,6 +2508,11 @@
 			productName = WindowsDetector;
 		};
 		1E8D068729B4DF8B009C2B34 /* Schwifty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */;
+			productName = Schwifty;
+		};
+		1EA1679429C1E0E000FAF378 /* Schwifty */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
