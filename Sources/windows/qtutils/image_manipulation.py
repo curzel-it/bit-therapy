@@ -1,5 +1,5 @@
-from PyQt6.QtGui import QPixmap, QPainter, QTransform
 import math
+from PyQt6.QtGui import QPixmap, QPainter, QTransform
 
 
 def _rotated_pixmap(pixmap: QPixmap, angle: float) -> QPixmap:

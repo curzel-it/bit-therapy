@@ -29,9 +29,9 @@ class BounceOnLateralCollisions(Capability):
     def target_side(self) -> CollisionSide:
         direction = self.subject.direction.dx
         if direction < -0.0001:
-            return CollisionSide.left
+            return CollisionSide.LEFT
         if direction > 0.0001:
-            return CollisionSide.right
+            return CollisionSide.RIGHT
         return None
 
 

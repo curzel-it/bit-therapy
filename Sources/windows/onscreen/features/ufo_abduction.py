@@ -3,7 +3,16 @@ from typing import Callable
 from config.config import Config
 from di.di import Dependencies
 from onscreen.models.pet_entity import PetEntity
-from yage import *
+from yage.capabilities.linear_movement import LinearMovement
+from yage.capabilities.seeker import Seeker, SeekerState, SeekerTargetPosition
+from yage.capabilities.shape_shifter import ShapeShifter
+from yage.models.animations import EntityAnimation, EntityAnimationPosition
+from yage.models.capability import Capability
+from yage.models.entity import Entity
+from yage.models.entity_state import EntityState
+from yage.models.species import Species
+from yage.models.world import World
+from yage.utils.geometry import Point, Size, Vector
 
 
 class UfoAbductionUseCase:
@@ -27,7 +36,7 @@ class UfoAbductionUseCase:
         ufo = PetEntity(self._ufo_species(), world)
         ufo.frame.origin = world.bounds.top_left
         ufo.is_ephemeral = True
-        ufo.install(UfoAbduction())
+        ufo.install(UfoAbduction)
         world.children.append(ufo)
         return ufo
 
@@ -47,8 +56,8 @@ class UfoAbductionUseCase:
 
 
 class UfoAbduction(Capability):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, subject):
+        super().__init__(subject)
         self._target = None
         self._subject_original_size = None
         self._on_completion = lambda: None
@@ -59,8 +68,7 @@ class UfoAbduction(Capability):
         self._target = target
         self._on_completion = on_completion
 
-        seeker = Seeker()
-        target.install(seeker)
+        seeker = target.install(Seeker)
         distance = Point(0, -50)
         seeker.follow(
             target,
@@ -96,12 +104,10 @@ class UfoAbduction(Capability):
             position=EntityAnimationPosition.ENTITY_TOP_LEFT
         )
         self.subject.set_animation(abduction, loops=1)
-        seeker = self.subject.capability(Seeker)
-        if seeker:
+        if seeker := self.subject.capability(Seeker):
             seeker.kill()
 
-        shape = ShapeShifter()
-        self._target.install(shape)
+        shape = self._target.install(ShapeShifter)
         shape.scale_linearly(Size(5, 5), 1.1)
         self._animation_completion_date = datetime.now() + timedelta(seconds=1.25)
 

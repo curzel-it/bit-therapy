@@ -159,7 +159,7 @@ class CollisionsTests(unittest.TestCase):
         collision = entity1.collision(entity2)
         sides = collision.sides()
         self.assertEqual(
-            sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
+            sides, [CollisionSide.TOP, CollisionSide.RIGHT, CollisionSide.BOTTOM])
 
     def test_sides_detected_when_smaller_collides_on_right(self):
         entity1 = Entity(
@@ -177,7 +177,7 @@ class CollisionsTests(unittest.TestCase):
         collision = entity1.collision(entity2)
         sides = collision.sides()
         self.assertEqual(
-            sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
+            sides, [CollisionSide.TOP, CollisionSide.RIGHT, CollisionSide.BOTTOM])
 
     def test_sides_detected_when_larger_collides_on_right(self):
         entity1 = Entity(
@@ -195,7 +195,7 @@ class CollisionsTests(unittest.TestCase):
         collision = entity1.collision(entity2)
         sides = collision.sides()
         self.assertEqual(
-            sides, [CollisionSide.top, CollisionSide.right, CollisionSide.bottom])
+            sides, [CollisionSide.TOP, CollisionSide.RIGHT, CollisionSide.BOTTOM])
 
     def test_sides_detected_when_object_collides_on_top_right(self):
         entity1 = Entity(
@@ -212,7 +212,7 @@ class CollisionsTests(unittest.TestCase):
         )
         collision = entity1.collision(entity2)
         sides = collision.sides()
-        self.assertEqual(sides, [CollisionSide.top, CollisionSide.right])
+        self.assertEqual(sides, [CollisionSide.TOP, CollisionSide.RIGHT])
 
     def test_sides_detected_when_object_collides_on_bottom_right(self):
         entity1 = Entity(
@@ -229,4 +229,4 @@ class CollisionsTests(unittest.TestCase):
         )
         collision = entity1.collision(entity2)
         sides = collision.sides()
-        self.assertEqual(sides, [CollisionSide.right, CollisionSide.bottom])
+        self.assertEqual(sides, [CollisionSide.RIGHT, CollisionSide.BOTTOM])

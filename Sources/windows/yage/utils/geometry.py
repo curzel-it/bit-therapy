@@ -217,16 +217,16 @@ class Vector:
         return rad if rad >= 0 else rad + 2 * math.pi
 
     @classmethod
-    def from_radians(cls, radians):
+    def from_radians(self, radians):
         rad = math.pi - radians if radians > math.pi else radians
-        return cls(math.cos(rad), math.sin(rad))
+        return self(math.cos(rad), math.sin(rad))
 
     @classmethod
-    def from_degrees(cls, degrees):
-        return cls.from_radians(degrees_to_radians(degrees))
+    def from_degrees(self, degrees):
+        return self.from_radians(degrees_to_radians(degrees))
 
     @classmethod
-    def zero(cls):
+    def zero(self):
         return Vector(0, 0)
 
 

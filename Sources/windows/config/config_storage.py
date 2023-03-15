@@ -42,27 +42,21 @@ class ConfigStorage:
         self._values['speed_multiplier'] = self._config.speed_multiplier.value
 
     def _write_values_to_config_file(self):
-        f = open(self.config_file_path, 'w')
-        f.write(json.dumps(self._values, indent=2))
-        f.close()
+        with open(self.config_file_path, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(self._values, indent=2))
 
     def _load_or_create_config(self):
         try:
             return self._load_config_from_file()
-        except FileNotFoundError as e:
+        except FileNotFoundError:
             self._create_empty_config_file()
             return Config()
 
     def _load_config_from_file(self):
-        f = open(self.config_file_path)
-        config = Config(**json.load(f))
-        f.close()
-        return config
+        with open(self.config_file_path, encoding='utf-8') as f:
+            config = Config(**json.load(f))
+            return config
 
     def _create_empty_config_file(self):
-        try:
-            f = open(self.config_file_path, 'w')
+        with open(self.config_file_path, 'w', encoding='utf-8') as f:
             f.write('{}')
-            f.close()
-        except:
-            pass

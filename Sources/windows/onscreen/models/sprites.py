@@ -1,10 +1,8 @@
-import pdb
 from typing import List
 from config.assets import AssetsProvider
 from di.di import Dependencies
 from yage import SpritesProvider
 from yage.models.entity_state import EntityState
-from yage.utils.logger import Logger
 
 
 class PetsSpritesProvider(SpritesProvider):

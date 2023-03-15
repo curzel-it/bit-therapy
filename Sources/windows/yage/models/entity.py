@@ -1,17 +1,16 @@
 from datetime import datetime
 from typing import Any, List, Optional, Tuple
-from di import *
+from di import Dependencies
 from yage.models.animations import EntityAnimation
 from yage.models.capability import CapabilitiesDiscoveryService
 from yage.models.collisions import Collision
 from yage.models.entity_state import EntityState
-from yage.models.species import Species
-from yage.utils.geometry import Rect, Vector
+from yage.utils.geometry import Vector
 from yage.utils.logger import Logger
 
 
 class Entity:
-    def __init__(self, species, id, frame, world):
+    def __init__(self, species, id: str, frame, world):
         self._animation = None
         self._animation_loops = None
         self.capabilities = []

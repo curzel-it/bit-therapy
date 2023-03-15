@@ -40,12 +40,12 @@ class GravityTests(unittest.TestCase):
         self.player.direction = go_right
         self.player.state = EntityState.MOVE
 
-        self.env.update(after=0.1)
+        self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.FREE_FALL)
         self.assertEqual(self.player.direction, Gravity.fall_direction)
 
         for _ in range(70):
-            self.env.update(after=0.1)
+            self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.FREE_FALL)
         self.assertEqual(self.player.direction, Gravity.fall_direction)
 
@@ -65,12 +65,12 @@ class GravityTests(unittest.TestCase):
         self.player.direction = go_right
         self.player.state = EntityState.MOVE
 
-        self.env.update(after=0.1)
+        self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.FREE_FALL)
         self.assertEqual(self.player.direction, Gravity.fall_direction)
 
         for _ in range(80):
-            self.env.update(after=0.1)
+            self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.MOVE)
         self.assertEqual(self.player.frame.min_y,
                          ground1.frame.min_y - self.player.frame.height)
@@ -78,19 +78,19 @@ class GravityTests(unittest.TestCase):
 
     def test_entities_can_fall_to_world_bottom_bound(self):
         bottom_bound = [c for c in self.env.children if c.id ==
-                        Hotspot.bottom_bound.value][0]
+                        Hotspot.BOTTOM_BOUND.value][0]
         go_right = Vector(1, 0)
         self.player.speed = 1
         self.player.frame.origin = Point(x=50, y=0)
         self.player.direction = go_right
         self.player.state = EntityState.MOVE
 
-        self.env.update(after=0.1)
+        self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.FREE_FALL)
         self.assertEqual(self.player.direction, Gravity.fall_direction)
 
         for _ in range(110):
-            self.env.update(after=0.1)
+            self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.MOVE)
         self.assertEqual(self.player.frame.min_y,
                          bottom_bound.frame.min_y - self.player.frame.height)
@@ -112,7 +112,7 @@ class GravityTests(unittest.TestCase):
         self.player.direction = Vector(1, 0)
         self.player.state = EntityState.MOVE
 
-        self.env.update(after=0.1)
+        self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.MOVE)
         self.assertEqual(self.player.frame.min_y,
                          ground1.frame.min_y - self.player.frame.height)
@@ -147,17 +147,17 @@ class GravityTests(unittest.TestCase):
         self.player.state = EntityState.MOVE
 
         for _ in range(0, 20):
-            self.env.update(after=0.1)
+            self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.MOVE)
 
         for _ in range(20, 51):
-            self.env.update(after=0.1)
+            self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.FREE_FALL)
 
         for _ in range(51, 112):
-            self.env.update(after=0.1)
+            self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.MOVE)
 
         for _ in range(112, 200):
-            self.env.update(after=0.1)
+            self.env.update(0.1)
         self.assertEqual(self.player.state, EntityState.MOVE)

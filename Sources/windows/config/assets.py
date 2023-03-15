@@ -39,7 +39,9 @@ class PetsAssetsProvider(AssetsProvider):
             matches = [
                 asset for asset in self._sorted_assets_by_key[key] if asset.sprite == sprite]
             return matches[0].path
-        except KeyError or AttributeError:
+        except AttributeError:
+            return None
+        except KeyError:
             return None
 
     def all_assets_for_species(self, species) -> List[str]:

@@ -49,30 +49,30 @@ class Collision:
                            self.source_body.min_x for c in intersection_edges)
 
         if touches_top and in_between(angle, 0.0, 1.0):
-            sides.append(CollisionSide.top)
+            sides.append(CollisionSide.TOP)
         if touches_right and (in_between(angle, 0.0, 0.5) or in_between(angle, 1.5, 2.0)):
-            sides.append(CollisionSide.right)
+            sides.append(CollisionSide.RIGHT)
         if touches_bottom and in_between(angle, 1.0, 2.0):
-            sides.append(CollisionSide.bottom)
+            sides.append(CollisionSide.BOTTOM)
         if touches_left and in_between(angle, 0.5, 1.5):
-            sides.append(CollisionSide.left)
+            sides.append(CollisionSide.LEFT)
 
         return sides
 
 
 class CollisionSide(Enum):
-    top = "top"
-    right = "right"
-    bottom = "bottom"
-    left = "left"
+    TOP = "top"
+    RIGHT = "right"
+    BOTTOM = "bottom"
+    LEFT = "left"
 
     @property
     def opposite(self) -> 'CollisionSide':
-        if self == CollisionSide.top:
-            return CollisionSide.bottom
-        elif self == CollisionSide.bottom:
-            return CollisionSide.top
-        elif self == CollisionSide.left:
-            return CollisionSide.right
+        if self == CollisionSide.TOP:
+            return CollisionSide.BOTTOM
+        elif self == CollisionSide.BOTTOM:
+            return CollisionSide.TOP
+        elif self == CollisionSide.LEFT:
+            return CollisionSide.RIGHT
         else:
-            return CollisionSide.left
+            return CollisionSide.LEFT

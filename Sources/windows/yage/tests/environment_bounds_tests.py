@@ -11,7 +11,7 @@ class EnvironmentBoundsNoSafeAreaTests(unittest.TestCase):
 
     def test_top_bound_properly_placed(self):
         bound = next((c for c in self.env.children if c.id ==
-                     Hotspot.top_bound.value), None)
+                     Hotspot.TOP_BOUND.value), None)
         self.assertIsNotNone(bound)
         self.assertEqual(bound.frame.min_x, 0)
         self.assertEqual(bound.frame.max_x, 400)
@@ -20,7 +20,7 @@ class EnvironmentBoundsNoSafeAreaTests(unittest.TestCase):
 
     def test_right_bound_properly_placed(self):
         bound = next((c for c in self.env.children if c.id ==
-                     Hotspot.right_bound.value), None)
+                     Hotspot.RIGHT_BOUND.value), None)
         self.assertIsNotNone(bound)
         self.assertEqual(bound.frame.min_x, 400)
         self.assertEqual(bound.frame.max_x, 402)
@@ -29,7 +29,7 @@ class EnvironmentBoundsNoSafeAreaTests(unittest.TestCase):
 
     def test_bottom_bound_properly_placed(self):
         bound = next((c for c in self.env.children if c.id ==
-                     Hotspot.bottom_bound.value), None)
+                     Hotspot.BOTTOM_BOUND.value), None)
         self.assertIsNotNone(bound)
         self.assertEqual(bound.frame.min_x, 0)
         self.assertEqual(bound.frame.max_x, 400)
@@ -38,7 +38,7 @@ class EnvironmentBoundsNoSafeAreaTests(unittest.TestCase):
 
     def test_left_bound_properly_placed(self):
         bound = next((c for c in self.env.children if c.id ==
-                     Hotspot.left_bound.value), None)
+                     Hotspot.LEFT_BOUND.value), None)
         self.assertIsNotNone(bound)
         self.assertEqual(bound.frame.min_x, 0)
         self.assertEqual(bound.frame.max_x, 2)

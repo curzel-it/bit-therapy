@@ -1,4 +1,4 @@
-from PyQt6.QtCore import Qt, QSize, QPoint, QRect
+from PyQt6.QtCore import QSize, QPoint, QRect
 from yage.utils.geometry import Size, Point, Rect
 
 Point.as_qpoint = lambda value: QPoint(int(value.x), int(value.y))

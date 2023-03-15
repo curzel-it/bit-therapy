@@ -69,7 +69,7 @@ class SleepingPlace(Capability):
             return None
         try:
             return [a for a in entity.species.animations if a.id == 'sleep'][0]
-        except:
+        except IndexError:
             Logger.log(self.tag, entity.id, "has not 'sleep' animation")
             self._cached_without_sleep[entity.id] = True
             return None

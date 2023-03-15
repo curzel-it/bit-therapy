@@ -31,10 +31,10 @@ class AnimatedSprite(Capability):
         self._update_sprite()
 
     def _load_next_content(self, time: float):
-        next = self.animation.next_content(time)
-        if not next:
+        next_content = self.animation.next_content(time)
+        if not next_content:
             return
-        self.subject.sprite = next
+        self.subject.sprite = next_content
 
     def _store_frame_if_needed(self):
         if self.subject.state != EntityState.ANIMATION:
@@ -58,18 +58,28 @@ class AnimatedSprite(Capability):
             Logger.log(self.tag, "No sprites to load")
             return TimedContentProvider.none()
 
-        try:
-            anim, required_loops = self.subject.animation()
-            required_frame = anim.frame(self.subject)
-            return TimedContentProvider(
-                animation, frames, self.subject.fps,
-                lambda completed_loops: self.handle_animation_started_if_needed(
-                    completed_loops, required_frame),
-                lambda completed_loops: self.handle_animation_completion_if_needed(
-                    completed_loops, required_loops)
-            )
-        except:
+        anim, required_loops = self.subject.animation()
+        if anim is None or required_loops is None:
             return TimedContentProvider(animation, frames, self.subject.fps)
+        
+        return self._build_animator_for_animation(animation, frames, anim, required_loops)
+    
+    def _build_animator_for_animation(self, animation, frames, anim, required_loops):
+        required_frame = anim.frame(self.subject)
+
+        def check_animation_started(completed_loops):
+            return self.handle_animation_started_if_needed(completed_loops, required_frame),
+
+        def check_animation_completed(completed_loops):
+            return self.handle_animation_started_if_needed(completed_loops, required_loops),
+
+        return TimedContentProvider(
+            animation,
+            frames,
+            self.subject.fps,
+            check_animation_started,
+            check_animation_completed
+        )
 
     def handle_animation_started_if_needed(self, completed_loops: int, required_frame: Rect):
         if completed_loops != 0:

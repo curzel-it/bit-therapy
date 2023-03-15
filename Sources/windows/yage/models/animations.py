@@ -61,7 +61,7 @@ class EntityAnimation:
         return EntityAnimation(
             id=self.id,
             size=self.size,
-            anchor=self.position,
+            position=self.position,
             facing_direction=self.facing_direction,
             required_loops=loops
         )

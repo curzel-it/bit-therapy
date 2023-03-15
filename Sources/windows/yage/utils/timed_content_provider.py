@@ -23,8 +23,8 @@ class TimedContentProvider:
         self.leftover_time = 0
 
     @classmethod
-    def none(cls):
-        return cls('', [], 10)
+    def none(self):
+        return self('', [], 10)
 
     def current_content(self):
         if self.current_content_index >= len(self.contents):

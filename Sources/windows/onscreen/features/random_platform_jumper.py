@@ -65,12 +65,9 @@ class RandomPlatformJumper(Capability):
             bounce.is_enabled = False
         if movement := self.subject.capability(LinearMovement):
             movement.is_enabled = True
-        try:
-            gravity = self.subject.capability(Gravity)
+        if gravity := self.subject.capability(Gravity):
             self._was_gravity_enabled = gravity.is_enabled
             gravity.is_enabled = False
-        except:
-            pass
         self.subject.reset_speed()
 
     def _find_platform(self) -> Optional[Entity]:
@@ -80,7 +77,7 @@ class RandomPlatformJumper(Capability):
             return random.choice(platforms)
         return None
 
-    def _on_seeker_update(self, state, distance):
+    def _on_seeker_update(self, state: EntityState, _: float):
         if state not in [SeekerState.CAPTURED, SeekerState.LOST]:
             return
         Logger.log(self.tag, "Target reached.")

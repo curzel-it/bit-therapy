@@ -1,8 +1,8 @@
-import enum
+from enum import Enum
 from PyQt6.QtWidgets import QWidget, QSizePolicy
 
 
-class Spacing(enum.Enum):
+class Spacing(Enum):
     XXXXL = 80
     XXXL = 64
     XXL = 48

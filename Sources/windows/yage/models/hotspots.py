@@ -7,15 +7,16 @@ BOUNDS_THICKNESS = 2
 
 
 class Hotspot(Enum):
-    top_bound = 'top_bound'
-    left_bound = 'left_bound'
-    right_bound = 'right_bound'
-    bottom_bound = 'bottom_bound'
+    TOP_BOUND = 'top_bound'
+    LEFT_BOUND = 'left_bound'
+    RIGHT_BOUND = 'right_bound'
+    BOTTOM_BOUND = 'bottom_bound'
 
-    def build_bottom_bound(world) -> Entity:
+    @classmethod
+    def build_bottom_bound(cls, world) -> Entity:
         entity = Entity(
             SPECIES_HOTSPOT,
-            Hotspot.bottom_bound.value,
+            Hotspot.BOTTOM_BOUND.value,
             Rect(
                 0,
                 world.bounds.height,
@@ -27,20 +28,22 @@ class Hotspot(Enum):
         entity.is_static = True
         return entity
 
-    def build_top_bound(world) -> Entity:
+    @classmethod
+    def build_top_bound(cls, world) -> Entity:
         entity = Entity(
             SPECIES_HOTSPOT,
-            Hotspot.top_bound.value,
+            Hotspot.TOP_BOUND.value,
             Rect(0, 0, world.bounds.width, BOUNDS_THICKNESS),
             world
         )
         entity.is_static = True
         return entity
 
-    def build_left_bound(world) -> Entity:
+    @classmethod
+    def build_left_bound(cls, world) -> Entity:
         entity = Entity(
             SPECIES_HOTSPOT,
-            Hotspot.left_bound.value,
+            Hotspot.LEFT_BOUND.value,
             Rect(
                 0,
                 0,
@@ -52,10 +55,11 @@ class Hotspot(Enum):
         entity.is_static = True
         return entity
 
-    def build_right_bound(world) -> Entity:
+    @classmethod
+    def build_right_bound(cls, world) -> Entity:
         entity = Entity(
             SPECIES_HOTSPOT,
-            Hotspot.right_bound.value,
+            Hotspot.RIGHT_BOUND.value,
             Rect(
                 world.bounds.width,
                 0,

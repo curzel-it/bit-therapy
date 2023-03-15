@@ -1,10 +1,8 @@
 from typing import List
-from yage.models.capability import CapabilitiesDiscoveryService
 from yage.models.entity import Entity
 from yage.models.hotspots import Hotspot
 from yage.models.species import Species
 from yage.utils.geometry import Rect
-from yage.utils.logger import Logger
 
 
 class World:
@@ -23,11 +21,11 @@ class World:
             child for child in self.children if child.id not in hotspots]
         self.children += self._hotspot_entities()
 
-    def update(self, after: float):
+    def update(self, time: float):
         for child in self.children:
             if not child.is_static:
                 collisions = child.collisions(self.children)
-                child.update(collisions, after)
+                child.update(collisions, time)
 
     def kill(self):
         for child in self.children:

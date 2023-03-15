@@ -1,13 +1,12 @@
+from enum import Enum
 from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QPixmap
-import enum
 from di.di import Dependencies
 from qtutils.screens import Screens
 
 from yage.utils.geometry import Size
 
 
-class ImageInterpolationMode(enum.Enum):
+class ImageInterpolationMode(Enum):
     NONE = 'none'
     DEFAULT = 'default'
 

@@ -18,14 +18,14 @@ class Draggable(Capability):
         self.subject.frame.origin = self._nearest_position(
             new_frame, self.subject.world_bounds)
 
-    def drag_ended(self, total_delta: Size) -> Optional[Point]:
+    def drag_ended(self, _: Size) -> Optional[Point]:
         if not self.drag_enabled or not self.is_being_dragged:
             return None
         return self._drag_ended()
 
     @property
     def drag_enabled(self):
-        return self.is_enabled and self.subject.is_static == False
+        return self.is_enabled and not self.subject.is_static
 
     @property
     def is_being_dragged(self):

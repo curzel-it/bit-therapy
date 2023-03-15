@@ -9,7 +9,7 @@ from yage.utils.logger import Logger
 
 
 class AutoRespawn(Capability):
-    def do_update(self, collisions: List[Collision], after: float):
+    def do_update(self, collisions: List[Collision], time: float):
         if self.subject.state == EntityState.DRAG:
             return
         if self.is_within_bounds(self.subject.frame.origin):

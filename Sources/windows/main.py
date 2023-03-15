@@ -1,8 +1,8 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from isort import Config
 from app.app_window import AppWindow
 from config.assets import PetsAssetsProvider
+from config.config import Config
 from config.config_storage import ConfigStorage
 from config.species import SpeciesProvider
 from di.di import Dependencies

@@ -6,3 +6,6 @@ disable=W0108
 
 [pycodestyle]
 max-line-length = 100
+
+[FORMAT]
+good-names=x,y,z,id,dx,dy,f

@@ -8,7 +8,6 @@ from onscreen.features.fantozzi_cloud import RainyCloudUseCase
 from onscreen.features.ufo_abduction import UfoAbductionUseCase
 from onscreen.interactions.desktop_obstacles_service import DesktopObstaclesService
 from onscreen.models.pet_entity import PetEntity
-from qtutils.screens import Screens
 from yage.models.species import Species
 from yage.models.world import World
 

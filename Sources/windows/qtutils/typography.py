@@ -1,6 +1,4 @@
-from typing import Tuple
-from PyQt6.QtGui import QPixmap, QFont
-from PyQt6.QtWidgets import QLabel, QScrollArea, QVBoxLayout
+from PyQt6.QtWidgets import QLabel
 
 
 def _set_font_size(widget, size):

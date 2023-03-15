@@ -29,5 +29,6 @@ class Capability:
 
 
 class CapabilitiesDiscoveryService:
-    def capability(self, id: str) -> Optional[Capability]:
+    #pylint: disable=unused-argument
+    def capability(self, capability_id: str) -> Optional[Capability]:
         return None

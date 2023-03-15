@@ -4,6 +4,8 @@ from PyQt6.QtWidgets import QLabel
 from onscreen.rendering.entity_view_model import EntityViewModel
 from yage.models.entity import Entity
 
+# pylint: disable=wildcard-import,unused-wildcard-import
+from qtutils import *
 
 class EntityWidget(QLabel):
     def __init__(self, entity: Entity):

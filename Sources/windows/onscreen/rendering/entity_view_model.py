@@ -19,8 +19,7 @@ class EntityViewModel:
         self.tag = f'ViewModel-{entity.id}'
         self._assets = Dependencies.instance(AssetsProvider)
         self._coordinate_system = Dependencies.instance(CoordinateSystem)
-        self._image_interpolation = Dependencies.instance(
-            ImageInterpolationUseCase)
+        self._image_interpolation = Dependencies.instance(ImageInterpolationUseCase)
         screen = Dependencies.instance(Screens).main
         self._scale_factor = screen.scale_factor
         self._screen_size = screen.size
@@ -38,10 +37,12 @@ class EntityViewModel:
         self._update_frame()
 
     @property
-    def entity_id(self): return self._entity.id
+    def entity_id(self): 
+        return self._entity.id
 
     @property
-    def is_interactable(self): return not self._entity.is_ephemeral
+    def is_interactable(self): 
+        return not self._entity.is_ephemeral
 
     def update(self):
         self.is_alive.on_next(self._entity.is_alive)
@@ -60,10 +61,10 @@ class EntityViewModel:
         self.frame.on_next(new_frame)
 
     def _update_image_if_needed(self):
-        hash = self._sprite_hash(self._entity)
-        if not self._needs_sprite_update(hash):
+        image_hash = self._sprite_hash(self._entity)
+        if not self._needs_sprite_update(image_hash):
             return
-        self.image.on_next(self._next_image(hash))
+        self.image.on_next(self._next_image(image_hash))
 
     def mouse_down(self):
         if not self._is_draggable:
@@ -108,13 +109,13 @@ class EntityViewModel:
     def _is_draggable(self):
         return self._entity.capability(Draggable) is not None
 
-    def _next_image(self, hash: int) -> Optional[QPixmap]:
-        if cached := self._image_cache.get(hash):
+    def _next_image(self, image_hash: int) -> Optional[QPixmap]:
+        if cached := self._image_cache.get(image_hash):
             return cached
         image = self._interpolated_image_for_current_sprite()
         if not image:
             return None
-        self._image_cache[hash] = image
+        self._image_cache[image_hash] = image
         return image
 
     def _interpolated_image_for_current_sprite(self) -> Optional[QPixmap]:

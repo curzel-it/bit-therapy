@@ -1,9 +1,9 @@
 import platform
 from PyQt6.QtCore import Qt, QTimer
-from di import *
+from PyQt6.QtWidgets import QWidget
+from di import Dependencies
 from onscreen.rendering.entity_widget import EntityWidget
 from onscreen.rendering.world_window_view_model import WorldWindowViewModel
-from qtutils import *
 from qtutils.screens import Screens
 from yage.models.world import World
 

@@ -1,4 +1,3 @@
-import pdb
 from typing import List
 from yage.models.animations import EntityAnimationPosition
 from yage.models.capability import Capability
@@ -34,7 +33,9 @@ class Gravity(Capability):
         ground_collisions = self._ground_collisions(body, collisions)
         ground_level = self._ground_level_from_collisions(ground_collisions)
 
-        def touches_ground(c): return c.intersection.min_y == ground_level
+        def touches_ground(collision):
+            return collision.intersection.min_y == ground_level
+
         surface_contact = sum(
             [c.intersection.width for c in ground_collisions if touches_ground(c)])
         return ground_level if surface_contact > required_surface_contact else None
@@ -47,7 +48,7 @@ class Gravity(Capability):
     def _ground_level_from_collisions(self, ground_collisions):
         try:
             return sorted([c.intersection.min_y for c in ground_collisions])[-1]
-        except:
+        except IndexError:
             return None
 
     def _on_ground_reached(self, ground_level: float):
@@ -72,7 +73,7 @@ class Gravity(Capability):
         self.subject.direction = Gravity.fall_direction
         self.subject.speed = 14
         self.subject.movement.is_enabled = True
-        Logger.log(self.tag, f"Started falling")
+        Logger.log(self.tag, 'Started falling')
         return True
 
     def _animation_requires_no_gravity(self) -> bool:

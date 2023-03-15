@@ -1,6 +1,5 @@
-from math import isclose
 from enum import Enum
-from typing import List, Optional, Tuple
+from typing import List, Optional
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.models.entity import Entity
@@ -22,13 +21,13 @@ class SeekerState(Enum):
 
     def __repr__(self):
         if self == SeekerState.CAPTURED:
-            return "Captured"
+            return 'Captured'
         elif self == SeekerState.ESCAPED:
-            return "Escaped"
+            return 'Escaped'
         elif self == SeekerState.LOST:
-            return "Lost"
+            return 'Lost'
         else:
-            return f"Following... {self.distance:.2f}"
+            return 'Following'
 
 
 class Seeker(Capability):

@@ -28,7 +28,9 @@ class GetsAngryWhenMeetingOtherCats(Capability):
     def get_angry(self):
         Logger.log(self.tag, "Getting angry!")
         self.subject.animations_scheduler.load_animation(
-            EntityAnimation("angry"), 4)
+            EntityAnimation("angry"),
+            4
+        )
         self.unlock_date = datetime.now() + timedelta(seconds=30)
 
     def is_touching_another_cat(self, according_to: List[Collision]) -> bool:

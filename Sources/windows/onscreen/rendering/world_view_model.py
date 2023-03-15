@@ -1,9 +1,5 @@
 from datetime import datetime
-from functools import cached_property
 from PyQt6.QtCore import QTimer
-from PyQt6.QtWidgets import QWidget, QLabel
-from onscreen.rendering.entity_view_model import EntityViewModel
-from yage.models.entity import Entity
 from yage.models.world import World
 from yage.utils.logger import Logger
 

@@ -1,14 +1,14 @@
-from PyQt6.QtCore import Qt, QTimer, QMetaObject
+from PyQt6.QtCore import QTimer
 from rx.subject import BehaviorSubject
 
 
-def execute_on_main_thread(foo):
-    QTimer.singleShot(1, lambda: foo())
+def execute_on_main_thread(block):
+    QTimer.singleShot(1, lambda: block())
 
 
-def _subscribe_on_qt_main_thread(signal, foo):
+def _subscribe_on_qt_main_thread(signal, block):
     return signal.subscribe(
-        lambda value: execute_on_main_thread(lambda: foo(value))
+        lambda value: execute_on_main_thread(lambda: block(value))
     )
 
 

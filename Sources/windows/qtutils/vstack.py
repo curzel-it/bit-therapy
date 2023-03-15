@@ -1,5 +1,4 @@
-from typing import Tuple
-from PyQt6.QtWidgets import QWidget, QScrollArea, QVBoxLayout
+from PyQt6.QtWidgets import QVBoxLayout
 
 
 def vertically_stacked(*widgets, **kwargs):

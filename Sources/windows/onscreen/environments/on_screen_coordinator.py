@@ -1,10 +1,9 @@
 from typing import List
 from PyQt6.QtWidgets import QWidget
-from config.config import Config
 from di import Dependencies
 from onscreen.environments.screen_environment import ScreenEnvironment
 from onscreen.rendering.world_window import WorldWindow
-from qtutils.screens import Screen, Screens
+from qtutils.screens import Screens
 from yage.models.species import Species
 from yage.utils.logger import Logger
 
@@ -25,6 +24,7 @@ class OnScreenCoordinator:
 
 class OnScreenCoordinatorImpl(OnScreenCoordinator):
     def __init__(self):
+        super().__init__()
         self.worlds: List[ScreenEnvironment] = []
         self.windows: List[QWidget] = []
 
@@ -32,7 +32,7 @@ class OnScreenCoordinatorImpl(OnScreenCoordinator):
         self.hide()
         Logger.log("OnScreen", "Starting...")
         self.loadWorlds()
-        self.spawnWindows()
+        self.spawn_windows()
 
     def loadWorlds(self):
         screen = Dependencies.instance(Screens).main
@@ -49,9 +49,9 @@ class OnScreenCoordinatorImpl(OnScreenCoordinator):
 
     def remove(self, species: Species):
         for world in self.worlds:
-            world.remove(species=species)
+            world.remove(species)
 
-    def spawnWindows(self):
+    def spawn_windows(self):
         self.windows = [WorldWindow(world) for world in self.worlds]
         for window in self.windows:
             window.show()
