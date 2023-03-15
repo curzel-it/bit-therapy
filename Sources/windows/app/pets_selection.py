@@ -10,7 +10,7 @@ class PetsSelection(QWidget):
     def __init__(self, width):
         super().__init__()
         self._disposables = []
-        self.grid_width = width - pixels(Spacing.LG.value * 2)
+        self.grid_width = width - Spacing.LG.value * 2
         self.config = Dependencies.instance(Config)
         self.species_provider = Dependencies.instance(SpeciesProvider)
         self._bind_selected_species()
@@ -29,15 +29,15 @@ class PetsSelection(QWidget):
         layout = vertically_stacked(
             QLabel('Selected Pets')
                 .title()
-                .withMargins(left=Spacing.MD)
-                .withMargins(top=Spacing.LG),
+                .with_margins(left=Spacing.MD)
+                .with_margins(top=Spacing.LG),
             _PetsGrid(selected_species, self.grid_width),
             QLabel('More Pets')
                 .title()
-                .withMargins(left=Spacing.MD)
-                .withMargins(top=Spacing.XL),
+                .with_margins(left=Spacing.MD)
+                .with_margins(top=Spacing.XL),
             _PetsGrid(all_species, self.grid_width)
-                .withMargins(bottom=Spacing.XXXXL),
+                .with_margins(bottom=Spacing.XXXXL),
             spacing = 0
         )
         self.set_scrollable(layout)
@@ -51,9 +51,9 @@ class _PetsGrid(QWidget):
     def __init__(self, species, width):
         super().__init__()
         self.number_of_columns = 6
-        self.item_width = pixels(120)
+        self.item_width = 120
         layout = QGridLayout(self)
-        layout.setVerticalSpacing(pixels(Spacing.MD))
+        layout.setVerticalSpacing(Spacing.MD.value)
         layout.setAlignment(Qt.AlignmentFlag.AlignLeading)
         self.setFixedWidth(width)        
         
@@ -69,7 +69,7 @@ class PetItem(QWidget):
         super().__init__()
         self.config = Dependencies.instance(Config)
         self.species = species
-        self.width = pixels(120)
+        self.width = 120
 
         layout = vertically_stacked(
             self._preview(),
@@ -90,11 +90,12 @@ class PetItem(QWidget):
         return label
         
     def _preview(self):
-        size = self.width, pixels(80)
+        size = self.width, 80
         path = Dependencies.instance(AssetsProvider).frames(self.species, 'front')[0]
         image = QPixmap(path).scaled(*size, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.FastTransformation)
         label = QLabel()
-        label.setContentsMargins(pixels(Spacing.MD), 0, pixels(Spacing.MD), 0)
+        label.setContentsMargins(Spacing.MD.value, 0, Spacing.MD.value, 0)
+        label.with_margins(horizontal=Spacing.MD)
         label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         label.setPixmap(image)
         label.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)

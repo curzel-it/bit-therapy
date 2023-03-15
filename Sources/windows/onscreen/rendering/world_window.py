@@ -1,12 +1,11 @@
 import platform
 from PyQt6.QtCore import Qt, QTimer
-from PyQt6.QtWidgets import QLabel
 from di import *
 from onscreen.rendering.entity_widget import EntityWidget
 from onscreen.rendering.world_window_view_model import WorldWindowViewModel
 from qtutils import *
+from qtutils.screens import Screens
 from yage.models.world import World
-from yage.utils.logger import Logger
 
 class WorldWindow(QWidget):
     def __init__(self, world: World):

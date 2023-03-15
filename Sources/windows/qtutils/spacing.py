@@ -1,21 +1,24 @@
-from typing import Tuple
-from PyQt6.QtWidgets import QWidget, QLabel, QScrollArea, QVBoxLayout
+import pdb
+from PyQt6.QtWidgets import QWidget, QLabel
 
-from qtutils.sizing import Spacing, pixels
+from qtutils.sizing import Spacing
 
 def _with_margins(widget, **kwargs):
     current_margins = widget.contentsMargins()
 
     def arg(key):
-        return pixels(kwargs.get(key))
+        spacing = kwargs.get(key)
+        if spacing is None: return None
+        value = spacing.value if spacing.__class__ == Spacing else spacing
+        return int(value)
+        
+    left = arg('left') or arg('horizontal') or current_margins.left()
+    top = arg('top') or arg('vertical') or current_margins.top()
+    right = arg('right') or arg('horizontal') or current_margins.right()
+    bottom = arg('bottom') or arg('vertical') or current_margins.bottom()
 
-    widget.setContentsMargins(
-        arg('left') or current_margins.left(),
-        arg('top') or current_margins.top(),
-        arg('right') or current_margins.right(),
-        arg('bottom') or current_margins.bottom()
-    )
+    widget.setContentsMargins(left, top, right, bottom)
     return widget
 
-QLabel.withMargins = _with_margins
-QWidget.withMargins = _with_margins
+QLabel.with_margins = _with_margins
+QWidget.with_margins = _with_margins

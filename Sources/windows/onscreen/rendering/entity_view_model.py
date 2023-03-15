@@ -68,13 +68,7 @@ class EntityViewModel:
         self._is_mouse_down = True
         self._location_on_last_drag = self.frame.value.origin
         self._location_on_mouse_down = self.frame.value.origin
-        self.dragged_by(
-            Size(            
-                -self.frame.value.width / 2,
-                -self.frame.value.height / 2
-            )
-        )
-
+        
     def dragged_to(self, final_destination: Point) -> bool:
         delta = Size(
             final_destination.x - self._location_on_last_drag.x - self.frame.value.width / 2,
@@ -121,7 +115,7 @@ class EntityViewModel:
 
         return asset \
             .scaled(
-                self._rendering_size().as_qsize(), 
+                self.frame.value.size.as_qsize(), 
                 Qt.AspectRatioMode.KeepAspectRatio, 
                 self._image_interpolation.transformation_mode(interpolation_mode)
             ) \
@@ -142,12 +136,6 @@ class EntityViewModel:
             self._last_sprite_hash = new_hash
             return True        
         return False
-    
-    def _rendering_size(self) -> Size:
-        return Size(
-            self.frame.value.size.width * self._scale_factor,
-            self.frame.value.size.height * self._scale_factor
-        )
 
     def _sprite_hash(self, entity: Entity) -> int:
         hasher = hash(entity.sprite)

@@ -1,11 +1,5 @@
 import enum
-import pdb
-from typing import Tuple
-from PyQt6.QtWidgets import QWidget, QLabel, QScrollArea, QVBoxLayout, QSizePolicy
-from PyQt6.QtWidgets import QApplication
-
-from di.di import Dependencies
-from qtutils.screens import Screens
+from PyQt6.QtWidgets import QWidget, QSizePolicy
 
 class Spacing(enum.Enum):
     XXXXL = 80
@@ -18,12 +12,6 @@ class Spacing(enum.Enum):
     XS = 4
     ZERO = 0
     INVERSE_MD = -16
-
-def pixels(object):
-    value = object.value if object.__class__ == Spacing else object
-    if value is None: return None    
-    scale_factor = Dependencies.instance(Screens).main.scale_factor
-    return int(value * scale_factor)
 
 def _compact(widget):
     widget.setSizePolicy(
