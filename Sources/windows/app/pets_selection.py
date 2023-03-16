@@ -4,8 +4,10 @@ from PyQt6.QtWidgets import QWidget, QLabel, QGridLayout, QSizePolicy
 from config import AssetsProvider, Config
 from config.species import SpeciesProvider
 from di.di import Dependencies
-from qtutils.sizing import Spacing
-from qtutils.vstack import vertically_stacked
+from yage.utils.geometry import Size
+
+# pylint: disable=wildcard-import,unused-wildcard-import
+from qtutils import *
 
 
 class PetsSelection(QWidget):
@@ -100,15 +102,25 @@ class PetItem(QWidget):
 
     def _preview(self):
         size = self.width, 80
-        path = Dependencies.instance(
-            AssetsProvider).frames(self.species, 'front')[0]
-        image = QPixmap(path).scaled(
-            *size, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.FastTransformation)
         label = QLabel()
         label.setContentsMargins(Spacing.MD.value, 0, Spacing.MD.value, 0)
         label.with_margins(horizontal=Spacing.MD)
         label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        label.setPixmap(image)
+        label.setPixmap(self._image(size))
         label.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         label.setFixedSize(*size)
         return label
+    
+    def _image(self, size):
+        assets_provider = Dependencies.instance(AssetsProvider)
+        path = assets_provider.frames(self.species, 'front')[0]
+        image_size = Size(*size).as_qsize()
+        # Seems necessary on windows:
+        # scale_factor = Dependencies.instance(Screens).main.scale_factor
+        # image_size = Size(*size).scaled(scale_factor).as_qsize()
+        image = QPixmap(path).scaled(
+            image_size,
+            Qt.AspectRatioMode.KeepAspectRatio,
+            Qt.TransformationMode.FastTransformation
+        )
+        return image

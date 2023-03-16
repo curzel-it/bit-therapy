@@ -122,19 +122,16 @@ class EntityViewModel:
         asset = self._assets.image(self._entity.sprite)
         if not asset:
             return None
-        interpolation_mode = self._image_interpolation.interpolation_mode(
-            asset, self.frame.value.size)
-        flip_horizontally, flip_vertically, z_angle = self._rotations(
-            self._entity)
+        interpolation = self._image_interpolation.interpolation_mode(asset, self.frame.value.size)
+        transformation = self._image_interpolation.transformation_mode(interpolation)
+        hflip, vflip, z_angle = self._rotations(self._entity)
+        # Seems necessary on windows:
+        # image_size = self.frame.value.size.scaled(self._scale_factor).as_qsize()
+        image_size = self.frame.value.size.as_qsize()
 
         return asset \
-            .scaled(
-                self.frame.value.size.as_qsize(),
-                Qt.AspectRatioMode.KeepAspectRatio,
-                self._image_interpolation.transformation_mode(
-                    interpolation_mode)
-            ) \
-            .flipped(horizontally=flip_horizontally, vertically=flip_vertically) \
+            .scaled(image_size, Qt.AspectRatioMode.KeepAspectRatio, transformation) \
+            .flipped(horizontally=hflip, vertically=vflip) \
             .rotated(z_angle)
 
     def _rotations(self, entity: Entity) -> Tuple[bool, bool, float]:

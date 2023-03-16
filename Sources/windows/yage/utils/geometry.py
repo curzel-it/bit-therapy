@@ -81,9 +81,12 @@ class Size:
 
     def diagonal(self) -> float:
         return math.sqrt(pow(self.width, 2) + pow(self.height, 2))
+    
+    def scaled(self, factor) -> 'Size':
+        return Size(self.width * factor, self.height * factor)
 
     @classmethod
-    def zero(self):
+    def zero(cls):
         return Size(0, 0)
 
 

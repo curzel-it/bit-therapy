@@ -1,6 +1,7 @@
 import os
 import sys
 from PyQt6.QtWidgets import QApplication
+from qt_material import apply_stylesheet
 from app.app_window import AppWindow
 from config.assets import PetsAssetsProvider
 from config.config import Config
@@ -51,8 +52,13 @@ def _load_dependencies(
         Dependencies.register(dependency, builder)
 
 
+def load_theme(app):
+    apply_stylesheet(app, theme='dark_pink.xml')
+
+
 def launch_app(config_path, assets_path, species_path):
     app = QApplication([])
+    load_theme(app)
     config_storage = ConfigStorage(config_path)
 
     _load_dependencies(app, config_storage, assets_path, species_path)
@@ -77,5 +83,5 @@ if __name__ == '__main__':
     launch_app(
         os.path.join(config_root, 'config.json'),
         os.path.join(root, 'PetsAssets'),
-        os.path.join(root, 'Species') 
+        os.path.join(root, 'Species')
     )
