@@ -18,8 +18,7 @@ class AnimationsScheduler(Capability):
             return
         loops = animation.required_loops or 1
         self._schedule(animation, loops, 0)
-        Logger.log(self.tag, "Immediate animation requested",
-                   animation, f"x{loops}")
+        Logger.log(self.tag, "Immediate animation requested", animation, f"x{loops}")
 
     def load_animation(self, animation: EntityAnimation, times: int):
         if not self.is_enabled:
@@ -49,6 +48,7 @@ class AnimationsScheduler(Capability):
         try:
             return self.subject.animations_provider.random_animation()
         except TypeError:
+            Logger.log(self.tag, "Could not load any animation...")
             return None
 
     def _schedule(self, animation: EntityAnimation, times: int, delay: float):

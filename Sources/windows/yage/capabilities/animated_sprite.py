@@ -68,10 +68,10 @@ class AnimatedSprite(Capability):
         required_frame = anim.frame(self.subject)
 
         def check_animation_started(completed_loops):
-            return self.handle_animation_started_if_needed(completed_loops, required_frame),
+            return self._handle_animation_started_if_needed(completed_loops, required_frame),
 
         def check_animation_completed(completed_loops):
-            return self.handle_animation_started_if_needed(completed_loops, required_loops),
+            return self._handle_animation_completion_if_needed(completed_loops, required_loops),
 
         return TimedContentProvider(
             animation,
@@ -81,14 +81,14 @@ class AnimatedSprite(Capability):
             check_animation_completed
         )
 
-    def handle_animation_started_if_needed(self, completed_loops: int, required_frame: Rect):
+    def _handle_animation_started_if_needed(self, completed_loops: int, required_frame: Rect):
         if completed_loops != 0:
             return
         Logger.log(self.tag, "Animation started")
         self.subject.frame = required_frame
         self._enable_subject_movement(False)
 
-    def handle_animation_completion_if_needed(self, completed_loops: int, required_loops: int):
+    def _handle_animation_completion_if_needed(self, completed_loops: int, required_loops: int):
         if completed_loops != required_loops:
             return
         Logger.log(self.tag, "Animation completed")
@@ -99,20 +99,21 @@ class AnimatedSprite(Capability):
     def _sprites_for_state(self, state: EntityState) -> List[str]:
         try:
             return self.subject.sprites_provider.frames(state)
-        except AttributeError as e:
-            Logger.log(
-                self.tag, "Please ensure a SpritesProvider is installed and implements `frames(state: EntityState)`")
-            Logger.log(self.tag, e)
+        except AttributeError as exc:
+            self._warn_no_sprite_provider(exc)
             return None
 
     def _sprite_for_state(self, state: EntityState) -> str:
         try:
             return self.subject.sprites_provider.sprite(state)
-        except AttributeError as e:
-            Logger.log(
-                self.tag, "Please ensure a SpritesProvider is installed and implements `sprite(state: EntityState)`")
-            Logger.log(self.tag, e)
-            raise e
+        except AttributeError as exc:
+            self._warn_no_sprite_provider(exc)
+            raise exc
+        
+    def _warn_no_sprite_provider(self, original_exception):
+        message = "Please ensure a SpritesProvider is installed and implements `frames(state: EntityState)`"
+        Logger.log(self.tag, message)
+        Logger.log(self.tag, original_exception)
 
     def _enable_subject_movement(self, enabled: bool):
         try:
