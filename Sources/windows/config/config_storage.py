@@ -5,8 +5,8 @@ from config.config import Config
 
 
 class ConfigStorage:
-    def __init__(self):
-        self.config_file_path = 'config.json'
+    def __init__(self, path: str):
+        self.config_file_path = path
         self._values = {}
         self._disposables = []
         self._config: Optional[Config] = None

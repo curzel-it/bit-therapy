@@ -1,3 +1,4 @@
+import os
 import sys
 from PyQt6.QtWidgets import QApplication
 from app.app_window import AppWindow
@@ -19,38 +20,62 @@ from qtutils.screens import Screens
 from yage.models.assets import AssetsProvider
 from yage.models.capability import CapabilitiesDiscoveryService
 
-app = QApplication(sys.argv)
 
-config_storage = ConfigStorage()
-config = config_storage.load_config()
+def _load_dependencies(
+    app: QApplication,
+    config_storage: ConfigStorage,
+    assets_path: str,
+    species_path: str
+):
+    singletons = [
+        (AssetsProvider, lambda: PetsAssetsProvider([assets_path])),
+        (CapabilitiesDiscoveryService, lambda: PetsCapabilities()),
+        (ConfigStorage, lambda: config_storage),
+        (Config, lambda: config_storage.load_config()),
+        (CoordinateSystem, lambda: QtCoordinateSystem()),
+        (ImageInterpolationUseCase, lambda: ImageInterpolationUseCaseImpl()),
+        (OnScreenCoordinator, lambda: OnScreenCoordinatorImpl()),
+        (Screens, lambda: Screens(app)),
+        (SpeciesProvider, lambda: SpeciesProvider(species_path)),
+        (WorldElementsService, lambda: WorldElementsService())
+    ]
+    for singleton, builder in singletons:
+        Dependencies.register_singleton(singleton, builder)
 
-singletons = [
-    (AssetsProvider, lambda: PetsAssetsProvider(['../../PetsAssets'])),
-    (CapabilitiesDiscoveryService, lambda: PetsCapabilities()),
-    (ConfigStorage, lambda: config_storage),
-    (Config, lambda: config),
-    (CoordinateSystem, lambda: QtCoordinateSystem()),
-    (ImageInterpolationUseCase, lambda: ImageInterpolationUseCaseImpl()),
-    (OnScreenCoordinator, lambda: OnScreenCoordinatorImpl()),
-    (Screens, lambda: Screens(app)),
-    (SpeciesProvider, lambda: SpeciesProvider('../../Species')),
-    (WorldElementsService, lambda: WorldElementsService())
-]
-for singleton, builder in singletons:
-    Dependencies.register_singleton(singleton, builder)
+    dependencies = [
+        (DesktopObstaclesService, lambda: DesktopObstaclesService()),
+        (RainyCloudUseCase, lambda: RainyCloudUseCase()),
+        (UfoAbductionUseCase, lambda: UfoAbductionUseCase())
+    ]
+    for dependency, builder in dependencies:
+        Dependencies.register(dependency, builder)
 
-dependencies = [
-    (DesktopObstaclesService, lambda: DesktopObstaclesService()),
-    (RainyCloudUseCase, lambda: RainyCloudUseCase()),
-    (UfoAbductionUseCase, lambda: UfoAbductionUseCase())
-]
-for dependency, builder in dependencies:
-    Dependencies.register(dependency, builder)
 
-app_window = AppWindow()
-app_window.show()
+def launch_app(config_path, assets_path, species_path):
+    app = QApplication([])
+    config_storage = ConfigStorage(config_path)
 
-on_screen_coordinator = Dependencies.instance(OnScreenCoordinator)
-on_screen_coordinator.show()
+    _load_dependencies(app, config_storage, assets_path, species_path)
 
-app.exec()
+    app_window = AppWindow()
+    app_window.show()
+
+    on_screen_coordinator = Dependencies.instance(OnScreenCoordinator)
+    on_screen_coordinator.show()
+
+    app.exec()
+
+
+if __name__ == '__main__':
+    try:
+        root = sys._MEIPASS
+        config_root = root
+    except AttributeError:
+        root = os.path.join('..', '..')
+        config_root = '.'
+
+    launch_app(
+        os.path.join(config_root, 'config.json'),
+        os.path.join(root, 'PetsAssets'),
+        os.path.join(root, 'Species') 
+    )

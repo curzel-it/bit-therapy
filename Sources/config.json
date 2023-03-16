@@ -1,0 +1,9 @@
+{
+  "desktop_interactions": true,
+  "gravity_enabled": true,
+  "pet_size": 75,
+  "selected_species": [
+    "cat_blue"
+  ],
+  "speed_multiplier": 1
+}

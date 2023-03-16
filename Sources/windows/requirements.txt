@@ -1,3 +1,5 @@
 pylint
 pyside6
 rx
+PyInstaller==5.4.1
+pyinstaller-hooks-contrib

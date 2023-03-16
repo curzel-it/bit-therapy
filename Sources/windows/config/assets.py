@@ -58,7 +58,7 @@ class PetsAssetsProvider(AssetsProvider):
         self._build_sorted_assets(assets)
 
     def _is_path_of_species(self, path, species) -> bool:
-        file_name = path.split('/')[-1]
+        file_name = os.path.split(path)[-1]
         if not file_name.startswith(species):
             return False
         rest_of_file_name = file_name.replace(species, '')
