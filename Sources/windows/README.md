@@ -22,7 +22,7 @@ Works on macOS and Windows, did not test on any Linux distro yet.
 ```bash
 cd Sources/windows
 python3 -m pip install -r requirements.txt
-python3 main.py --config config.json --assets ../../PetsAssets --species ../../Species
+python3 main.py
 ```
 
 ## ⚙️ Running tests
@@ -32,11 +32,10 @@ python3 -m unittest discover -p "*_tests.py"
 ```
 
 ## 🧱 Build from source
-I'm using PyInstaller to package the app.
-
-To build, simply run:
+I'm using PyInstaller to package the app into a Windows executable:
 ```bash
 python3 build.py debug
 ```
+This will create a `DesktopPets.exe` file in the `dist` folder.
 
 See `build.py`, `release.spec` and `debug.spec` for more information.

@@ -75,13 +75,11 @@ def launch_app(config_path, assets_path, species_path):
 if __name__ == '__main__':
     try:
         root = sys._MEIPASS
-        config_root = root
     except AttributeError:
         root = os.path.join('..', '..')
-        config_root = '.'
 
     launch_app(
-        os.path.join(config_root, 'config.json'),
+        'desktop_pets_config.json',
         os.path.join(root, 'PetsAssets'),
         os.path.join(root, 'Species')
     )

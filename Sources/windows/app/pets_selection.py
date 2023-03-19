@@ -79,18 +79,22 @@ class PetItem(QWidget):
         self.config = Dependencies.instance(Config)
         self.species = species
         self.width = 120
+        self._load_layout()
+        self._make_clickable()
 
+    def _load_layout(self):
         layout = vertically_stacked(
             self._preview(),
             self._title(),
             spacing=8
         )
         self.setLayout(layout)
-        self._make_clickable()
 
     def _make_clickable(self):
-        self.mousePressEvent = lambda _: self.config.toggle_species_selected(
-            self.species)
+        self.mousePressEvent = self._on_clicked
+
+    def _on_clicked(self):
+        self.config.toggle_species_selected(self.species)
 
     def _title(self):
         label = QLabel(self.species)
@@ -110,7 +114,7 @@ class PetItem(QWidget):
         label.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         label.setFixedSize(*size)
         return label
-    
+
     def _image(self, size):
         assets_provider = Dependencies.instance(AssetsProvider)
         path = assets_provider.frames(self.species, 'front')[0]
