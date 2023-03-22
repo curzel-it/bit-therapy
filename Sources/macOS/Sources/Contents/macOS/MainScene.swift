@@ -26,6 +26,8 @@ struct MainScene: Scene {
         let window = AppWindowManager.shared.build()
         AppWindowManager.shared.current = window
         window.show()
+        window.makeKeyAndOrderFront(nil)
+        window.becomeMain()
     }
 
     private static func trackAppLaunched() {
