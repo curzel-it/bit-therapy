@@ -1,8 +1,8 @@
 from typing import List
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
-from yage.models.entity_state import EntityState
 from yage.utils.geometry import Vector
+
 
 class FlipHorizontallyWhenGoingLeft(Capability):
     def do_update(self, collisions: List[Collision], time: float):
@@ -11,7 +11,6 @@ class FlipHorizontallyWhenGoingLeft(Capability):
             self._flip_towards(animation.facing_direction)
         else:
             self._flip_towards(self.subject.direction)
-        
 
     def _flip_towards(self, direction: Vector):
         self.subject.rotation.is_flipped_horizontally = direction.dx < -0.0001

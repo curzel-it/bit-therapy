@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         Logger.log("AppDelegate", "Did finish launching")
         commandLine.handleCommandLineArgs()
+        NSApp.setActivationPolicy(.accessory)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.onScreen.show()

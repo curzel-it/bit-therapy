@@ -9,23 +9,33 @@
 * Can use mouse to drag pets around
 
 ### ❌ What's not working:
-* Animations are resetting the position of the pets to (0, 0)
+* Pet selection image look smoothed even if interpolation is disabled (retina displays)
 
 ### ⏳ Other stuff in the todo list:
 * All other UI features
 * Support for multiple screens
 * Detection of windows as obstacles
 * Random events
-* Executable build
 
 ## 🛠️ Running the app
+Works on macOS and Windows, did not test on any Linux distro yet.
 ```bash
 cd Sources/windows
 python3 -m pip install -r requirements.txt
-python3 main.py 
+python3 main.py
 ```
 
 ## ⚙️ Running tests
 ```bash
+cd Sources/windows
 python3 -m unittest discover -p "*_tests.py"
 ```
+
+## 🧱 Build from source
+I'm using PyInstaller to package the app into a Windows executable:
+```bash
+python3 build.py debug
+```
+This will create a `DesktopPets.exe` file in the `dist` folder.
+
+See `build.py`, `release.spec` and `debug.spec` for more information.

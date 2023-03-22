@@ -1,0 +1,11 @@
+[pylint.messages.control]
+disable=C0114,C0115,C0116,E0611
+
+[pylint.'*/main.py']
+disable=W0108
+
+[pycodestyle]
+max-line-length = 120
+
+[FORMAT]
+good-names=x,y,z,id,dx,dy,f

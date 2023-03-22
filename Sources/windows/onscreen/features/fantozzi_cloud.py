@@ -1,7 +1,12 @@
 from random import randint
-from onscreen.models.pet_entity import PetEntity
 from PyQt6.QtCore import QTimer
-from yage import *
+from onscreen.models.pet_entity import PetEntity
+from yage.capabilities.seeker import Seeker, SeekerTargetPosition
+from yage.models.entity import Entity
+from yage.models.species import Species
+from yage.models.world import World
+from yage.utils.geometry import Point
+
 
 class RainyCloudUseCase:
     def __init__(self):
@@ -19,7 +24,6 @@ class RainyCloudUseCase:
         duration = randint(60, 120) * 1000
         QTimer.singleShot(duration, lambda: self._cleanup())
 
-
     def _build_cloud(self, origin: Point, world: World) -> Entity:
         cloud = PetEntity(self._cloud_species(), world)
         cloud.frame.set_size(cloud.frame.size() * 2)
@@ -30,23 +34,18 @@ class RainyCloudUseCase:
 
     def _setup_seeker(self):
         y_offset = self.cloud.frame.height() - self.target.frame.height()
-        seeker = Seeker()
-        self.cloud.install(seeker)
+        seeker = self.cloud.install(Seeker)
         seeker.follow(
-            self.target, 
-            position=SeekerTargetPosition.ABOVE, 
-            offset=Point(0, y_offset), 
+            self.target,
+            position=SeekerTargetPosition.ABOVE,
+            offset=Point(0, y_offset),
             auto_adjust_speed=True
         )
 
-    def _schedule_cleanup(self, cloud: Entity, world: World):
-        duration = int(QTimer.random(60000, 120000))
-        QTimer.singleShot(duration, lambda: self._cleanup(cloud, world))
-
-    def _cleanup(self, cloud: Entity, world: World):
-        if cloud in world.children:
-            cloud.kill()
-            world.children.remove(cloud)
+    def _cleanup(self):
+        if self.cloud in self.cloud.world.children:
+            self.cloud.kill()
+            self.cloud.world.children.remove(self.cloud)
 
     def _cloud_species(self):
         return Species(
@@ -62,17 +61,3 @@ class RainyCloudUseCase:
             speed=2,
             z_index=200
         )
-
-
-class ScreenEnvironment:
-    def schedule_rainy_cloud(self):
-        duration = randint(0*60, 5*60) * 1000
-        QTimer.singleShot(duration, lambda: self._cleanup())
-
-    def _schedule_rainy_cloud(self):
-        if not self.settings.random_events:
-            return
-        victim = self.random_pet()
-        if victim is None:
-            return
-        self.rainy_cloud_use_case.start(victim, self)

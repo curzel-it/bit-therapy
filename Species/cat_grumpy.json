@@ -19,11 +19,6 @@
       "id": "sleep",
       "position": "fromEntityBottomLeft",
       "requiredLoops": 50
-    },
-    {
-      "id": "angry",
-      "position": "fromEntityBottomLeft",
-      "requiredLoops": 7
     }
   ],
   "capabilities": [

@@ -1,16 +1,16 @@
 from datetime import datetime
 from typing import Any, List, Optional, Tuple
-from di import *
+from di import Dependencies
 from yage.models.animations import EntityAnimation
 from yage.models.capability import CapabilitiesDiscoveryService
 from yage.models.collisions import Collision
 from yage.models.entity_state import EntityState
-from yage.models.species import Species
-from yage.utils.geometry import Rect, Vector
+from yage.utils.geometry import Vector
 from yage.utils.logger import Logger
 
+
 class Entity:
-    def __init__(self, species, id, frame, world):
+    def __init__(self, species, entity_id: str, frame, world):
         self._animation = None
         self._animation_loops = None
         self.capabilities = []
@@ -18,7 +18,7 @@ class Entity:
         self.direction = Vector.zero()
         self.fps = species.fps
         self.frame = frame
-        self.id = id
+        self.id = entity_id
         self.is_alive = True
         self.is_ephemeral = False
         self.is_static = False
@@ -35,9 +35,10 @@ class Entity:
         return self.world.bounds
 
     def animation(self) -> Tuple['EntityAnimation', int]:
-        if self.state != EntityState.ANIMATION: return (None, None)
+        if self.state != EntityState.ANIMATION:
+            return (None, None)
         return (self._animation, self._animation_loops)
-    
+
     def set_animation(self, animation: 'EntityAnimation', loops: int):
         self._animation = animation
         self._animation_loops = loops
@@ -51,7 +52,8 @@ class Entity:
 
     def collision(self, other: 'Entity') -> Optional['Collision']:
         intersection = self.frame.intersection(other.frame)
-        if not intersection: return None
+        if not intersection:
+            return None
         return Collision(self, other, intersection)
 
     def __setattr__(self, name: str, value: Any) -> None:
@@ -63,13 +65,14 @@ class Entity:
 
     def _install_capabilities(self):
         for capability_id in self.species.capabilities:
-            capability = Dependencies.instance(CapabilitiesDiscoveryService).capability(capability_id)
+            capability = Dependencies.instance(
+                CapabilitiesDiscoveryService).capability(capability_id)
             if capability is not None:
                 self.install(capability)
 
     def reset_speed(self):
         self.speed = 1
-                
+
     def install(self, capability_type):
         capability = capability_type(self)
         self.capabilities.append(capability)
@@ -82,7 +85,8 @@ class Entity:
         return None
 
     def update(self, collisions, time):
-        if not self.is_alive: return
+        if not self.is_alive:
+            return
         for capability in self.capabilities:
             capability.update(collisions, time)
 
@@ -92,7 +96,7 @@ class Entity:
         self.sprite = None
 
     def _uninstall_all_capabilities(self):
-        for capability in self.capabilities: 
+        for capability in self.capabilities:
             capability.kill(False)
         self.capabilities = []
 
@@ -101,4 +105,3 @@ class Entity:
 
     def __eq__(self, other):
         return self.id == other.id
-

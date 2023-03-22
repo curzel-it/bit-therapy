@@ -1,6 +1,5 @@
-from math import isclose
 from enum import Enum
-from typing import List, Optional, Tuple
+from typing import List, Optional
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.models.entity import Entity
@@ -8,9 +7,11 @@ from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point, Vector
 from yage.utils.logger import Logger
 
+
 class SeekerTargetPosition(Enum):
     CENTER = 'center'
     ABOVE = 'above'
+
 
 class SeekerState(Enum):
     CAPTURED = 'captured'
@@ -19,10 +20,15 @@ class SeekerState(Enum):
     LOST = 'lost'
 
     def __repr__(self):
-        if self == SeekerState.CAPTURED: return "Captured"
-        elif self == SeekerState.ESCAPED: return "Escaped"
-        elif self == SeekerState.LOST: return "Lost"
-        else: return f"Following... {self.distance:.2f}"
+        if self == SeekerState.CAPTURED:
+            return 'Captured'
+        elif self == SeekerState.ESCAPED:
+            return 'Escaped'
+        elif self == SeekerState.LOST:
+            return 'Lost'
+        else:
+            return 'Following'
+
 
 class Seeker(Capability):
     def __init__(self, subject):
@@ -37,15 +43,21 @@ class Seeker(Capability):
         self.target_reached = False
         self.report = lambda state, distance: None
 
-    def follow(self, target: Entity, **kwargs):        
+    def follow(self, target: Entity, **kwargs):
         self.target_entity = target
         self.subject.state = EntityState.MOVE
-        if position := kwargs.get('position'): self.target_position = position
-        if offset := kwargs.get('offset'): self.target_offset = offset
-        if auto_adjust_speed := kwargs.get('auto_adjust_speed'): self.auto_adjust_speed = auto_adjust_speed
-        if min_distance := kwargs.get('min_distance'): self.min_distance = min_distance
-        if max_distance := kwargs.get('max_distance'): self.max_distance = max_distance
-        if on_update := kwargs.get('on_update'): self.report = on_update
+        if position := kwargs.get('position'):
+            self.target_position = position
+        if offset := kwargs.get('offset'):
+            self.target_offset = offset
+        if auto_adjust_speed := kwargs.get('auto_adjust_speed'):
+            self.auto_adjust_speed = auto_adjust_speed
+        if min_distance := kwargs.get('min_distance'):
+            self.min_distance = min_distance
+        if max_distance := kwargs.get('max_distance'):
+            self.max_distance = max_distance
+        if on_update := kwargs.get('on_update'):
+            self.report = on_update
 
     def kill(self, autoremove=True):
         Logger.log(self.tag, "Killed")
@@ -84,7 +96,8 @@ class Seeker(Capability):
             )
 
     def _adjust_speed(self, distance: float):
-        if not self.auto_adjust_speed: return
+        if not self.auto_adjust_speed:
+            return
         if distance < self.min_distance:
             self.subject.speed = self.base_speed * 0.25
         elif distance < self.max_distance:
@@ -93,7 +106,8 @@ class Seeker(Capability):
             self.subject.speed = self.base_speed
 
     def _target_point(self) -> Optional[Point]:
-        if not self.target_entity.is_alive: return None
+        if not self.target_entity.is_alive:
+            return None
         frame = self.subject.frame
         target_frame = self.target_entity.frame
 

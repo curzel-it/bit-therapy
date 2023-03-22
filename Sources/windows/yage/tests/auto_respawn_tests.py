@@ -6,6 +6,7 @@ from yage.utils.geometry import Point, Rect
 from yage.models.species import SPECIES_AGENT
 from yage.models.world import World
 
+
 class AutoRespawnTests(unittest.TestCase):
     def setUp(self):
         self.entity = Entity(

@@ -3,24 +3,29 @@ from yage.models import Capability
 from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point, Rect, Size
 
+
 class Draggable(Capability):
     def __init__(self, subject):
         super().__init__(subject)
         self.subject.drag = self
 
     def dragged(self, current_delta: Size) -> None:
-        if not self.drag_enabled: return
-        if not self.is_being_dragged: self._drag_started()
+        if not self.drag_enabled:
+            return
+        if not self.is_being_dragged:
+            self._drag_started()
         new_frame = self.subject.frame.offset(size=current_delta)
-        self.subject.frame.origin = self._nearest_position(new_frame, self.subject.world_bounds)
+        self.subject.frame.origin = self._nearest_position(
+            new_frame, self.subject.world_bounds)
 
-    def drag_ended(self, total_delta: Size) -> Optional[Point]:
-        if not self.drag_enabled or not self.is_being_dragged: return None
+    def drag_ended(self, _: Size) -> Optional[Point]:
+        if not self.drag_enabled or not self.is_being_dragged:
+            return None
         return self._drag_ended()
 
     @property
     def drag_enabled(self):
-        return self.is_enabled and self.subject.is_static == False
+        return self.is_enabled and not self.subject.is_static
 
     @property
     def is_being_dragged(self):

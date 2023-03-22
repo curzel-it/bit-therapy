@@ -1,8 +1,8 @@
-import json
-from typing import Optional
 from rx.subject import BehaviorSubject
+
+
 class Config:
-    def __init__(self, **kwargs):        
+    def __init__(self, **kwargs):
         self.desktop_interactions = BehaviorSubject(
             kwargs.get('desktop_interactions') or True
         )
@@ -26,4 +26,3 @@ class Config:
         else:
             values.append(species_id)
         self.selected_species.on_next(values)
-        

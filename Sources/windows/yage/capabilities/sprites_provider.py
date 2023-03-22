@@ -1,7 +1,8 @@
 from typing import List
 from yage.models import Capability, EntityState
 
-class SpritesProvider(Capability): 
+
+class SpritesProvider(Capability):
     def __init__(self, subject):
         super().__init__(subject)
         subject.sprites_provider = self

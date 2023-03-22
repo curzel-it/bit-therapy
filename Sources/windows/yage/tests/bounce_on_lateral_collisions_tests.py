@@ -6,6 +6,7 @@ from yage.utils.geometry import Point, Rect, Vector
 from yage.models.species import SPECIES_AGENT
 from yage.models.world import World
 
+
 class BounceOnLateralCollisionsTests(unittest.TestCase):
     def setUp(self):
         self.test_env = World("test", Rect(0, 0, 100, 100))
@@ -55,7 +56,8 @@ class BounceOnLateralCollisionsTests(unittest.TestCase):
         self.assertEqual(angle, math.pi)
 
         self.test_entity.update(collisions, 0.01)
-        self.assertAlmostEqual(self.test_entity.direction.dx, -1, delta=0.00001)
+        self.assertAlmostEqual(
+            self.test_entity.direction.dx, -1, delta=0.00001)
         self.assertAlmostEqual(self.test_entity.direction.dy, 0, delta=0.00001)
 
     def test_bounces_to_right_when_hitting_left(self):

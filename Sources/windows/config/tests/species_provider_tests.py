@@ -1,17 +1,20 @@
+import os
 import unittest
 
 from config import SpeciesProvider, AssetsProvider
 from config.assets import PetsAssetsProvider
-from di import *
+from di import Dependencies
 from yage.models.animations import EntityAnimation
+
 
 class SpeciesProviderTests(unittest.TestCase):
     def setUp(self):
         Dependencies.register_singleton(AssetsProvider, lambda: PetsAssetsProvider([]))
-        self.provider = SpeciesProvider('../../Species')
-        
+        species_path = os.path.join('..', '..', 'Species')
+        self.provider = SpeciesProvider(species_path)
+
     def test_parse_species(self):
-        species = self.provider.species_from_json(ape_json)
+        species = self.provider.species_from_json(APE_JSON)
         self.assertIsNotNone(species)
         self.assertEqual(species.id, 'ape')
         self.assertEqual(species.movement_path, 'walk')
@@ -24,7 +27,8 @@ class SpeciesProviderTests(unittest.TestCase):
         self.assertEqual(len(species.animations), 3)
         self.assertEqual(species.animations[0].__class__, EntityAnimation)
 
-ape_json = '''
+
+APE_JSON = '''
 {
   "animations": [
     {
