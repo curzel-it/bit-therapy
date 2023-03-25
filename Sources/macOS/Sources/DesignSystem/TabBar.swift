@@ -9,15 +9,17 @@ protocol TabBarItem: Hashable {
 }
 
 struct TabBar<T: TabBarItem>: View {
+    @EnvironmentObject var config: AppConfig
     @Binding private var selection: T
-
+    @Binding private var isHidden: Bool
     private let options: [T]
-
-    init(selection: Binding<T>, options: [T]) {
+    
+    init(selection: Binding<T>, options: [T], isHidden: Binding<Bool>) {
         _selection = selection
+        _isHidden = isHidden
         self.options = options
     }
-
+    
     var body: some View {
         HStack(spacing: .zero) {
             ForEach(options, id: \.self) { option in
@@ -28,12 +30,14 @@ struct TabBar<T: TabBarItem>: View {
         .cornerRadius(DesignSystem.largeCornerRadius)
         .positioned(.bottom)
         .padding(when: .is(.macOS), .bottom, .lg)
+        .opacity(isHidden ? 0.2 : 1)
+        .onTapGesture { }
     }
 }
 
 private struct TabBarItemView<T: TabBarItem>: View {
     @Binding var selection: T
-
+    
     let item: T
     
     private var icon: String { isSelected ? item.iconSelected : item.icon }
@@ -75,6 +79,7 @@ private struct TabBarItemView<T: TabBarItem>: View {
         .padding(.horizontal, .sm)
         .background(bgColor)
         .onTapGesture {
+            guard selection != item else { return }
             withAnimation {
                 selection = item
             }

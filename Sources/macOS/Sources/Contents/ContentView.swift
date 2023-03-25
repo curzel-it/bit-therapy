@@ -13,7 +13,8 @@ struct ContentView: View {
                 contents(of: viewModel.selectedPage)
                 TabBar(
                     selection: $viewModel.selectedPage,
-                    options: viewModel.options
+                    options: viewModel.options,
+                    isHidden: $viewModel.tabBarHidden
                 )
             }
         }
@@ -38,6 +39,7 @@ private class ContentViewModel: ObservableObject {
     @Inject private var species: SpeciesProvider
     @Inject private var theme: ThemeUseCase
     
+    @Published var tabBarHidden: Bool = false
     @Published var isLoading: Bool = true
     @Published var backgroundBlurRadius: CGFloat
     @Published var backgroundImage: String = ""
@@ -58,9 +60,20 @@ private class ContentViewModel: ObservableObject {
         selectedPage = .petSelection
         backgroundBlurRadius = 10
         backgroundImage = appConfig.background
+        bindTabBarHidden()
         bindBackground()
         bindColorScheme()
         bindLoading()
+    }
+    
+    private func bindTabBarHidden() {
+        $selectedPage
+            .sink { [weak self] selection in
+                withAnimation {
+                    self?.tabBarHidden = selection == .screensaver
+                }
+            }
+            .store(in: &disposables)
     }
     
     private func bindLoading() {

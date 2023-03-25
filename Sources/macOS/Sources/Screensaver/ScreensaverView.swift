@@ -4,15 +4,14 @@ import SwiftUI
 import Yage
 
 struct ScreensaverView: View {
+    @EnvironmentObject var appConfig: AppConfig
     @StateObject private var viewModel: ScreensaverViewModel
     @State private var worldSize: CGSize = .zero
     
+    private let tag = "ScreensaverView"
+    
     init() {
-        @Inject var onScreen: OnScreenCoordinator
-        onScreen.hide()
-        onScreen.show()
-        let world = onScreen.worlds.first ?? World(name: "screensaver", bounds: .zero)
-        let vm = ScreensaverViewModel(representing: world)
+        let vm = ScreensaverViewModel()
         vm.start()
         _viewModel = StateObject(wrappedValue: vm)
     }
@@ -33,7 +32,18 @@ struct ScreensaverView: View {
 }
 
 private class ScreensaverViewModel: WorldViewModel, ObservableObject {
+    @Inject var config: AppConfig
     @Published var entities: [EntityViewModel] = []
+    
+    private let tag = "screensaver"
+    
+    init() {
+        @Inject var onScreen: OnScreenCoordinator
+        onScreen.hide()
+        onScreen.show()
+        let world = onScreen.worlds.first ?? World(name: "screensaver", bounds: .zero)
+        super.init(representing: world)
+    }
     
     func updateWorldSize(to size: CGSize) {
         world.set(bounds: CGRect(origin: .zero, size: size))
@@ -63,14 +73,13 @@ private class ScreensaverViewModel: WorldViewModel, ObservableObject {
     
     private func addNewEntities() {
         let previousEntitiesIds = entities.map { $0.entityId }
-        world.renderableChildren.forEach { entity in
-            guard !previousEntitiesIds.contains(entity.id) else { return }
-            add(entity)
-        }
+        world.renderableChildren
+            .filter { !previousEntitiesIds.contains($0.id) }
+            .forEach { add($0) }
     }
     
     private func add(_ entity: RenderableEntity) {
-        let vm = EntityViewModel(representing: entity, in: .bottomUp)
+        let vm = EntityViewModel(representing: entity, in: .topDown)
         vm.scaleFactor = Screen.main?.scale ?? 1
         entities.append(vm)
     }
