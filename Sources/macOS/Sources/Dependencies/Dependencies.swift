@@ -27,6 +27,7 @@ class Dependencies {
         container.register(RenamePetButtonCoordinator.self) { _ in RenamePetButtonCoordinatorImpl() }
         container.register(ThemeUseCase.self) { _ in ThemeUseCaseImpl() }
         container.register(WorldElementsService.self) { _ in WorldElementsServiceImpl() }
+        container.register(ScreensaverElementsService.self) { _ in ScreensaverElementsServiceImpl() }
         container.register(UfoAbductionUseCase.self) { _ in UfoAbductionUseCaseImpl() }
         
         Container.main = container.synchronize()

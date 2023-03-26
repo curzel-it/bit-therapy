@@ -8,10 +8,11 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     var worlds: [ScreenEnvironment] = []
     private var windows: [NSWindow] = []
     private let windowsProvider = WorldWindowsProvider()
+    private let tag = "OnScreen"
 
     func show() {
         hide()
-        Logger.log("OnScreen", "Starting...")
+        Logger.log(tag, "Starting...")
         loadWorlds()
         spawnWindows()
     }
@@ -23,7 +24,7 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     }
 
     func hide() {
-        Logger.log("OnScreen", "Hiding everything...")
+        Logger.log(tag, "Hiding everything...")
         worlds.forEach { $0.kill() }
         worlds.removeAll()
         windows.forEach { $0.close() }
@@ -41,7 +42,7 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
 }
 
 class WorldWindowsProvider {
-    func window(representing world: RenderableWorld) -> NSWindow {
+    func window(representing world: World) -> NSWindow {
         WorldWindow(representing: world)
     }
 }

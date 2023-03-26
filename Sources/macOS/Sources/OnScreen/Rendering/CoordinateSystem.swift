@@ -2,7 +2,7 @@ import Schwifty
 import SwiftUI
 
 class CoordinateSystem {
-    static let topDown = CoordinateSystem { entity in
+    static let bottomUp = CoordinateSystem { entity in
         let size = max(entity.frame.size, .oneByOne) ?? entity.frame.size
         return CGRect(
             origin: .zero
@@ -13,7 +13,7 @@ class CoordinateSystem {
         )
     }
     
-    static let bottomUp = CoordinateSystem { entity in
+    static let topDown = CoordinateSystem { entity in
         let size = max(entity.frame.size, .oneByOne) ?? entity.frame.size
         return CGRect(origin: entity.frame.origin, size: size)
     }
@@ -26,5 +26,11 @@ class CoordinateSystem {
     
     func frame(of entity: RenderableEntity) -> CGRect {
         frameBuilder(entity)
+    }
+}
+
+private extension CGSize {
+    var center: CGPoint {
+        CGRect(size: self).center
     }
 }

@@ -11,10 +11,8 @@ struct ContentView: View {
             Background()
             if !viewModel.isLoading {
                 contents(of: viewModel.selectedPage)
-                TabBar(
-                    selection: $viewModel.selectedPage,
-                    options: viewModel.options
-                )
+                TabBar(viewModel: viewModel)
+                BackToHomeButton()
             }
         }
         .environmentObject(viewModel)
@@ -38,6 +36,7 @@ private class ContentViewModel: ObservableObject {
     @Inject private var species: SpeciesProvider
     @Inject private var theme: ThemeUseCase
     
+    @Published var tabBarHidden: Bool = false
     @Published var isLoading: Bool = true
     @Published var backgroundBlurRadius: CGFloat
     @Published var backgroundImage: String = ""
@@ -48,7 +47,7 @@ private class ContentViewModel: ObservableObject {
         if DeviceRequirement.iOS.isSatisfied {
             return [.petSelection, .screensaver, .settings, .about]
         } else {
-            return [.petSelection, .settings, .contributors, .about]
+            return [.petSelection, .screensaver, .settings, .contributors, .about]
         }
     }()
     
@@ -58,9 +57,20 @@ private class ContentViewModel: ObservableObject {
         selectedPage = .petSelection
         backgroundBlurRadius = 10
         backgroundImage = appConfig.background
+        bindTabBarHidden()
         bindBackground()
         bindColorScheme()
         bindLoading()
+    }
+    
+    private func bindTabBarHidden() {
+        $selectedPage
+            .sink { [weak self] selection in
+                withAnimation {
+                    self?.tabBarHidden = selection == .screensaver
+                }
+            }
+            .store(in: &disposables)
     }
     
     private func bindLoading() {
@@ -100,6 +110,29 @@ private class ContentViewModel: ObservableObject {
             }
             .store(in: &disposables)
         
+    }
+}
+
+extension ContentViewModel: TabBarViewModel {
+    // ...
+}
+
+private struct BackToHomeButton: View {
+    @EnvironmentObject var viewModel: ContentViewModel
+    
+    var body: some View {
+        if viewModel.tabBarHidden {
+            Image(systemName: "pawprint")
+                .font(.title)
+                .onTapGesture {
+                    withAnimation {
+                        viewModel.selectedPage = .petSelection
+                    }
+                }
+                .positioned(.leadingTop)
+                .padding(.top, .md)
+                .padding(.leading, .md)
+        }
     }
 }
 

@@ -7,13 +7,13 @@ class AppConfig: ObservableObject {
         
     @Published var background: String = "BackgroundMountainDynamic"
     @Published var desktopInteractions: Bool = true
-    @Published var gravityEnabled: Bool = true
-    @Published var launchSilently: Bool = false
+    @Published var disabledScreens: [String] = []
+    @Published var gravityEnabled = true
+    @Published var launchSilently = false
     @Published var names: [String: String] = [:]
     @Published var petSize: CGFloat = PetSize.defaultSize
-    @Published var randomEvents: Bool = true
+    @Published var randomEvents = true
     @Published var speedMultiplier: CGFloat = 1
-    @Published var disabledScreens: [String] = []
     @Published private(set) var selectedSpecies: [String] = []
     
     init() {
