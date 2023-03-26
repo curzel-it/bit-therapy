@@ -16,9 +16,9 @@ class AppWindowManager {
     }
     
     func build() -> NSWindow {
-        let window = NSWindow(
+        let window = AppWindow(
             contentRect: initialContentRect(),
-            styleMask: [.resizable, .closable, .titled, .miniaturizable],
+            styleMask: [.resizable, .closable, .titled, .miniaturizable, .fullScreen, .fullSizeContentView],
             backing: .buffered,
             defer: false
         )
@@ -32,10 +32,12 @@ class AppWindowManager {
         window.minSize = MacContentView.minSize
         window.title = Lang.appName
         window.appearance = appearance
+        window.collectionBehavior = [.fullScreenPrimary, .fullScreenAllowsTiling]        
     }
     
     private func loadContents(into contentView: NSView?) {
         let view = NSHostingView(rootView: MacContentView())
+        view.translatesAutoresizingMaskIntoConstraints = false
         contentView?.addSubview(view)
         view.constrainToFillParent()
     }
@@ -56,5 +58,12 @@ class AppWindowManager {
         return CGRect(origin: center, size: size)
             .offset(x: -size.width/2)
             .offset(y: -size.height/2)
+    }
+}
+
+private class AppWindow: NSWindow {
+    override func close() {
+        super.close()
+        AppWindowManager.shared.current = nil
     }
 }

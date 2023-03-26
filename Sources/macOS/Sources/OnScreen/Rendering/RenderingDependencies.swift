@@ -3,16 +3,6 @@ import NotAGif
 import Schwifty
 import Yage
 
-protocol RenderableWorld {
-    var bounds: CGRect { get }
-    var renderableChildren: [RenderableEntity] { get }
-    var name: String { get }
-    
-    func kill()
-    func set(bounds newBounds: CGRect)
-    func update(after: TimeInterval)
-}
-
 protocol RenderableEntity {
     var frame: CGRect { get }
     var id: String { get }
@@ -84,7 +74,7 @@ extension Entity: RenderableEntity {
     }
 }
 
-extension World: RenderableWorld {
+extension World {
     var renderableChildren: [RenderableEntity] {
         children.filter { $0.isRenderable }
     }

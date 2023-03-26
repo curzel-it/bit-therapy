@@ -11,11 +11,8 @@ struct ContentView: View {
             Background()
             if !viewModel.isLoading {
                 contents(of: viewModel.selectedPage)
-                TabBar(
-                    selection: $viewModel.selectedPage,
-                    options: viewModel.options,
-                    isHidden: $viewModel.tabBarHidden
-                )
+                TabBar(viewModel: viewModel)
+                BackToHomeButton()
             }
         }
         .environmentObject(viewModel)
@@ -50,7 +47,7 @@ private class ContentViewModel: ObservableObject {
         if DeviceRequirement.iOS.isSatisfied {
             return [.petSelection, .screensaver, .settings, .about]
         } else {
-            return [.petSelection, .settings, .contributors, .about]
+            return [.petSelection, .screensaver, .settings, .contributors, .about]
         }
     }()
     
@@ -113,6 +110,29 @@ private class ContentViewModel: ObservableObject {
             }
             .store(in: &disposables)
         
+    }
+}
+
+extension ContentViewModel: TabBarViewModel {
+    // ...
+}
+
+private struct BackToHomeButton: View {
+    @EnvironmentObject var viewModel: ContentViewModel
+    
+    var body: some View {
+        if viewModel.tabBarHidden {
+            Image(systemName: "pawprint")
+                .font(.title)
+                .onTapGesture {
+                    withAnimation {
+                        viewModel.selectedPage = .petSelection
+                    }
+                }
+                .positioned(.leadingTop)
+                .padding(.top, .md)
+                .padding(.leading, .md)
+        }
     }
 }
 

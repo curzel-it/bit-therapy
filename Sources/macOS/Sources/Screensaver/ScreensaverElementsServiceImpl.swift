@@ -1,7 +1,11 @@
 import Foundation
 import Yage
 
-class WorldElementsServiceImpl: WorldElementsService {
+protocol ScreensaverElementsService: WorldElementsService {
+    // ...
+}
+
+class ScreensaverElementsServiceImpl: ScreensaverElementsService {
     func elements(for world: World) -> [Entity] {
         [ground(for: world)]
     }

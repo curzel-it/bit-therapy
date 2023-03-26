@@ -13,6 +13,10 @@ struct MacContentView: View {
                 AppWindowManager.shared.current = window
                 AppWindowManager.shared.customize(window)
             }
+            .onDisappear {
+                Logger.log("MacContentView", "Did disappear")
+                AppWindowManager.shared.current = nil
+            }
             .environmentObject(appConfig())
     }
     

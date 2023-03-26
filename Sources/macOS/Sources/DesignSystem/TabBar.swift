@@ -8,40 +8,43 @@ protocol TabBarItem: Hashable {
     var title: String { get }
 }
 
-struct TabBar<T: TabBarItem>: View {
+protocol TabBarViewModel: ObservableObject {
+    associatedtype Item: TabBarItem
+    var selectedPage: Item { get set }
+    var options: [Item] { get }
+    var tabBarHidden: Bool { get }
+}
+
+struct TabBar<ViewModel: TabBarViewModel>: View {
     @EnvironmentObject var config: AppConfig
-    @Binding private var selection: T
-    @Binding private var isHidden: Bool
-    private let options: [T]
+    @StateObject private var viewModel: ViewModel
     
-    init(selection: Binding<T>, options: [T], isHidden: Binding<Bool>) {
-        _selection = selection
-        _isHidden = isHidden
-        self.options = options
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
-        HStack(spacing: .zero) {
-            ForEach(options, id: \.self) { option in
-                TabBarItemView(selection: $selection, item: option)
+        if !viewModel.tabBarHidden {
+            HStack(spacing: .zero) {
+                ForEach(viewModel.options, id: \.self) { option in
+                    TabBarItemView(selectedPage: $viewModel.selectedPage, item: option)
+                }
             }
+            .tabBarBlurBackground()
+            .cornerRadius(DesignSystem.largeCornerRadius)
+            .positioned(.bottom)
+            .padding(when: .is(.macOS), .bottom, .lg)
         }
-        .tabBarBlurBackground()
-        .cornerRadius(DesignSystem.largeCornerRadius)
-        .positioned(.bottom)
-        .padding(when: .is(.macOS), .bottom, .lg)
-        .opacity(isHidden ? 0.2 : 1)
-        .onTapGesture { }
     }
 }
 
 private struct TabBarItemView<T: TabBarItem>: View {
-    @Binding var selection: T
+    @Binding var selectedPage: T
     
     let item: T
     
     private var icon: String { isSelected ? item.iconSelected : item.icon }
-    private var isSelected: Bool { item == selection }
+    private var isSelected: Bool { item == selectedPage }
     private var fgColor: Color { isSelected ? .accent : .labelSecondary }
     
     private var bgColor: Color {
@@ -79,9 +82,9 @@ private struct TabBarItemView<T: TabBarItem>: View {
         .padding(.horizontal, .sm)
         .background(bgColor)
         .onTapGesture {
-            guard selection != item else { return }
+            guard selectedPage != item else { return }
             withAnimation {
-                selection = item
+                selectedPage = item
             }
         }
     }

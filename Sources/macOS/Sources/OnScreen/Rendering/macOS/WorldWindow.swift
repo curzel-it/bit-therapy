@@ -3,6 +3,7 @@ import Combine
 import Swinject
 import Schwifty
 import SwiftUI
+import Yage
 
 protocol EntityView: SomeView {
     var entityId: String { get }
@@ -14,7 +15,7 @@ class WorldWindow: NSWindow {
     static weak var current: NSWindow?
     private let viewModel: WorldWindowViewModel
     
-    init(representing world: RenderableWorld) {
+    init(representing world: World) {
         self.viewModel = WorldWindowViewModel(representing: world)
         super.init(contentRect: .zero, styleMask: .borderless, backing: .buffered, defer: false)
         configureWindow()
