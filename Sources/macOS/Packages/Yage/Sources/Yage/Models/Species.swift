@@ -7,6 +7,7 @@ public struct Species: Codable, Hashable {
     public let dragPath: String
     public let fps: TimeInterval
     public let movementPath: String
+    public let scale: CGFloat
     public let speed: CGFloat
     public let tags: [String]
     public let zIndex: Int
@@ -28,9 +29,24 @@ public struct Species: Codable, Hashable {
         self.fps = fps
         self.movementPath = movementPath
         self.dragPath = dragPath
+        self.scale = 1
         self.speed = speed
         self.tags = tags
         self.zIndex = zIndex
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
+        self.animations = try container.decode([EntityAnimation].self, forKey: .animations)
+        self.capabilities = try container.decode([String].self, forKey: .capabilities)
+        self.dragPath = try container.decode(String.self, forKey: .dragPath)
+        self.fps = try container.decode(TimeInterval.self, forKey: .fps)
+        self.movementPath = try container.decode(String.self, forKey: .movementPath)
+        self.scale = (try? container.decode(CGFloat.self, forKey: .scale)) ?? 1
+        self.speed = try container.decode(CGFloat.self, forKey: .speed)
+        self.tags = try container.decode([String].self, forKey: .tags)
+        self.zIndex = try container.decode(Int.self, forKey: .zIndex)
     }
     
     public func hash(into hasher: inout Hasher) {

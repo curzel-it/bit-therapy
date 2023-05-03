@@ -141,6 +141,12 @@
 "species.about.trex_violet" = "This one gives off some Flintstones vibes :D";
 "species.about.trex_yellow" = "Gotta have a golden one";
 "species.about.ufo" = "Does calling it an UAP makes you more comfortable?";
+"species.about.klee" = "Klee from Genshin Impact!";
+"species.about.raiden" = "Raiden from Genshin Impact!";
+"species.about.keqing" = "Keqing from Genshin Impact!";
+"species.name.klee" = "Klee";
+"species.name.raiden" = "Raiden";
+"species.name.keqing" = "Keqing";
 "species.name.ape" = "Ape";
 "species.name.betta" = "Betta";
 "species.name.cat" = "Red Cat";

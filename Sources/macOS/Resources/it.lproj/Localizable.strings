@@ -141,6 +141,12 @@
 "species.about.trex_violet" = "Questo sembra il dinosauro dei Flintstones :D";
 "species.about.trex_yellow" = "Una versione dorata doveva pur esserci, no?";
 "species.about.ufo" = "Chiamarlo UAP ti farebbe sentire meglio?";
+"species.about.klee" = "Klee di Genshin Impact!";
+"species.about.raiden" = "Raiden di Genshin Impact!";
+"species.about.keqing" = "Keqing di Genshin Impact!";
+"species.name.klee" = "Klee";
+"species.name.raiden" = "Raiden";
+"species.name.keqing" = "Keqing";
 "species.name.ape" = "Scimmia";
 "species.name.betta" = "Betta";
 "species.name.cat" = "Gatto Rosso";

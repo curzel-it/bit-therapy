@@ -141,6 +141,12 @@
 "species.about.trex_violet" = "这看起来像摩登原始人中的恐龙 :D";
 "species.about.trex_yellow" = "应该有黄金版吧？";
 "species.about.ufo" = "称它为 UAP 是否让你更舒服？";
+"species.about.klee" = "来自Genshin Impact的Klee！";
+"species.about.raiden" = "来自 Genshin Impact 的雷电！";
+"species.about.keqing" = "来自Genshin Impact的客卿！";
+"species.name.klee" = "Klee";
+"species.name.raiden" = "Raiden";
+"species.name.keqing" = "Keqing";
 "species.name.ape" = "猴子";
 "species.name.betta" = "斗鱼";
 "species.name.cat" = "红色猫咪";

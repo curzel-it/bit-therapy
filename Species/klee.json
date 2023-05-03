@@ -1,0 +1,71 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
+    },
+    {
+      "id": "noisy",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 10
+    },
+    {
+      "id": "jumpBomb",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    },
+    {
+      "id": "jump",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    },
+    {
+      "id": "bombBurst",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    },
+    {
+      "id": "boom",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    },
+    {
+      "id": "run",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 3
+    },
+    {
+      "id": "shin",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    },
+    {
+      "id": "rotate",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "AnimationsScheduler",
+    "Draggable",
+    "Gravity",
+    "ShowsMenuOnRightClick",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating"
+  ],
+  "dragPath": "flight",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["genshin", "anime"],
+  "id": "klee",
+  "movementPath": "walk",
+  "speed": 0.8
+}

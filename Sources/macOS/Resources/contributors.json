@@ -7,6 +7,13 @@
         "pets": ["ape", "cat_floppa", "cat_grumpy", "frog", "german", "mushroom_amanita", "mushroomwizard", "sheep", "snail", "ufo"]
     },
     {
+        "name": "Catknow",
+        "roles": ["artist", "translator"],
+        "link": "https://space.bilibili.com/889964",
+        "thumbnail": "contributors_catknow",
+        "pets": ["keqing", "raiden", "klee"]
+    },
+    {
         "name": "Jayped",
         "roles": ["artist"],
         "link": "https://linktr.ee/Jayped",

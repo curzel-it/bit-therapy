@@ -141,6 +141,12 @@
 "species.about.trex_violet" = "Celui-là rappelle Les Pierrafeu :D";
 "species.about.trex_yellow" = "Il en fallait un doré !";
 "species.about.ufo" = "Tout droit sorti de la zone 51";
+"species.about.klee" = "Klee de Genshin Impact !";
+"species.about.raiden" = "Raiden de Genshin Impact !";
+"species.about.keqing" = "Keqing de Genshin Impact !";
+"species.name.klee" = "Klee";
+"species.name.raiden" = "Raiden";
+"species.name.keqing" = "Keqing";
 "species.name.ape" = "Gorille";
 "species.name.betta" = "Betta";
 "species.name.cat" = "Chat Roux";
