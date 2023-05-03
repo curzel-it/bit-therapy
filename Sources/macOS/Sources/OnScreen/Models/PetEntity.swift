@@ -12,7 +12,7 @@ class PetEntity: Entity {
         super.init(
             species: species,
             id: PetEntity.id(for: species),
-            frame: PetEntity.initialFrame(),
+            frame: PetEntity.initialFrame(for: species),
             in: world
         )
         resetSpeed()
@@ -78,9 +78,9 @@ extension PetEntity {
 extension PetEntity {
     internal static let baseSpeed: CGFloat = 30
 
-    static func initialFrame() -> CGRect {
+    static func initialFrame(for species: Species) -> CGRect {
         @Inject var appConfig: AppConfig
-        return CGRect(square: appConfig.petSize)
+        return CGRect(square: appConfig.petSize * species.scale)
     }
     
     static func speed(for species: Species, size: CGFloat, settings: CGFloat) -> CGFloat {

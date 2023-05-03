@@ -1,0 +1,46 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 2
+    },
+    {
+      "id": "change",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    },
+    {
+      "id": "attack",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    },
+    {
+      "id": "endingSkills",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "AnimationsScheduler",
+    "Draggable",
+    "Gravity",
+    "ShowsMenuOnRightClick",
+    "FlipHorizontallyWhenGoingLeft",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating"
+  ],
+  "dragPath": "flight",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["genshin", "anime"],
+  "id": "keqing",
+  "movementPath": "walk",
+  "speed": 0.8
+}

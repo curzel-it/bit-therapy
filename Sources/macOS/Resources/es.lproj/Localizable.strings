@@ -141,6 +141,12 @@
 "species.about.trex_violet" = "Este emite algunas vibraciones como el de los Picapiedra : D";
 "species.about.trex_yellow" = "Tengo que tener uno de oro'";
 "species.about.ufo" = "¿Llamarlo OVNI te hace sentir más cómodo?";
+"species.about.klee" = "¡Klee de Genshin Impact!";
+"species.about.raiden" = "¡Raiden de Genshin Impact!";
+"species.about.keqing" = "¡Keqing de Genshin Impact!";
+"species.name.klee" = "Klee";
+"species.name.raiden" = "Raiden";
+"species.name.keqing" = "Keqing";
 "species.name.ape" = "Mono";
 "species.name.betta" = "Betta";
 "species.name.cat" = "Gato Rojo";
