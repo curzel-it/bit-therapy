@@ -9,6 +9,7 @@ class AppConfig: ObservableObject {
     @Published var desktopInteractions: Bool = true
     @Published var disabledScreens: [String] = []
     @Published var gravityEnabled = true
+    @Published var bounceOffPetsEnabled = false
     @Published var launchSilently = false
     @Published var names: [String: String] = [:]
     @Published var petSize: CGFloat = PetSize.defaultSize
@@ -56,6 +57,7 @@ class AppConfig: ObservableObject {
 
     private func readFromStorage() {
         background = storage.background
+        bounceOffPetsEnabled = storage.bounceOffPetsEnabled
         desktopInteractions = storage.desktopInteractions
         gravityEnabled = storage.gravityEnabled
         launchSilently = storage.launchSilently

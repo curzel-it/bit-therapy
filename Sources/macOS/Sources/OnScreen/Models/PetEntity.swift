@@ -19,6 +19,22 @@ class PetEntity: Entity {
         setInitialPosition()
         setInitialDirection()
         bindGravity()
+        bindBounceOffPets()
+    }
+    
+    private func bindBounceOffPets() {
+        settings.$bounceOffPetsEnabled
+            .sink { [weak self] in self?.setBounceOffPets(enabled: $0) }
+            .store(in: &disposables)
+    }
+    
+    private func setBounceOffPets(enabled: Bool) {
+        guard let bounce = capability(for: BounceOnLateralCollisions.self) else { return }
+        if enabled {
+            bounce.customCollisionsFilter = { _ in true }
+        } else {
+            bounce.customCollisionsFilter = nil
+        }
     }
     
     private func bindGravity() {

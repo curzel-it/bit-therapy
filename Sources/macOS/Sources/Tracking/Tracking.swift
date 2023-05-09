@@ -17,6 +17,7 @@ public struct Tracking {
 
 public extension Tracking {
     static func didLaunchApp(
+        bounceOffPets: Bool,
         gravityEnabled: Bool,
         petSize: CGFloat,
         launchAtLogin: Bool,
@@ -24,6 +25,7 @@ public extension Tracking {
     ) {
         log(AnalyticsEventAppOpen, with: [
             "gravity_enabled": gravityEnabled,
+            "bounce_off_pets": bounceOffPets,
             "pet_size": petSize,
             "launch_at_login": launchAtLogin,
             "selected_pets": selectedSpecies.joined(separator: ", ")

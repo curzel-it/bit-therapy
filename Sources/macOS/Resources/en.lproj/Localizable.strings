@@ -72,6 +72,7 @@
 "settings.anonymousTracking" = "Enable anonymous usage stats";
 "settings.anonymousTrackingMessage" = "No personal information is acquired, we only track a few, anonymous, usage stats.\n\nWhy is this important you might ask?\nIt allows us to answer even the simplest of questions, such as which pet is the most popular... Which sounds pretty critical, doesn't it? 😂\n\nUsage stats are gathered and stored using Firebase.";
 "settings.anonymousTrackingTitle" = "Anonymous Usage Stats";
+"settings.bounceOffPets" = "Pets bounce off each other";
 "settings.desktopInteractionsMessage" = "Allows pets to walk on the title bar of other apps windows.\nThis will only works on your main display.";
 "settings.desktopInteractionsTitle" = "Desktop Interactions";
 "settings.enabledDisplays" = "Enabled Displays";

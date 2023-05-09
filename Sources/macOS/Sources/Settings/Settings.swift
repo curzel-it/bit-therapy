@@ -31,6 +31,7 @@ private struct Switches: View {
             LaunchAtLoginSwitch()
             LaunchSilentlySwitch()
             GravitySwitch()
+            BounceOffOtherPets()
             DesktopInteractionsSwitch()
             RandomEventsSwitch()
         }
@@ -90,6 +91,20 @@ struct GravitySwitch: View {
         SettingsSwitch(
             label: Lang.Settings.gravity,
             value: $appConfig.gravityEnabled
+        )
+        .positioned(.leading)
+    }
+}
+
+// MARK: - Bounce off other pets
+
+struct BounceOffOtherPets: View {
+    @EnvironmentObject var appConfig: AppConfig
+    
+    var body: some View {
+        SettingsSwitch(
+            label: Lang.Settings.bounceOffPets,
+            value: $appConfig.bounceOffPetsEnabled
         )
         .positioned(.leading)
     }

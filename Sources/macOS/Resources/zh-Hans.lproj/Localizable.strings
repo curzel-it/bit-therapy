@@ -72,6 +72,7 @@
 "settings.anonymousTracking" = "启用匿名统计";
 "settings.anonymousTrackingMessage" = "不会获取任何的个人信息，我们只会跟踪一些匿名的使用情况统计信息。\n\n您可能会问为什么这很重要？\n它让我们能够知道一些最简单的问题，例如哪种宠物最受欢迎.. . 这听起来很关键，不是吗？ 😂\n\n通过 Firebase 收集和存储统计数据。";
 "settings.anonymousTrackingTitle" = "匿名统计";
+"settings.bounceOffPets" = "Pets bounce off each other";
 "settings.desktopInteractionsMessage" = "允许宠物在其他应用程序窗口的标题栏上行走。\n这很酷吧，但很抱歉仅当你有只一个显示器时才生效！";
 "settings.desktopInteractionsTitle" = "窗口互动";
 "settings.enabledDisplays" = "开启功能的显示器";
