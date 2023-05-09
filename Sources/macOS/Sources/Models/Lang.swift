@@ -95,6 +95,7 @@ enum Lang {
         static let anonymousTracking = "settings.anonymousTracking".localized()
         static let anonymousTrackingMessage = "settings.anonymousTrackingMessage".localized()
         static let anonymousTrackingTitle = "settings.anonymousTrackingTitle".localized()
+        static let bounceOffPets = "settings.bounceOffPets".localized()
         static let desktopInteractionsMessage = "settings.desktopInteractionsMessage".localized()
         static let desktopInteractionsTitle = "settings.desktopInteractionsTitle".localized()
         static let enabledDisplays = "settings.enabledDisplays".localized()

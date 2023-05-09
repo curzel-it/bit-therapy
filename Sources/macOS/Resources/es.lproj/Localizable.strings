@@ -72,6 +72,7 @@
 "settings.anonymousTracking" = "Habilitar estadísticas de uso anónimas";
 "settings.anonymousTrackingMessage" = "No se requiere información personal, solo rastreamos unas pocas estadísticas de uso anónimas.\n\n¿Por qué es esto importante?\nNos permite responder incluso a las preguntas más simples, como qué mascota es la más popular... Lo cual suena bastante crítico, ¿no? 😂 \n\nLas estadísticas de uso se recopilan y almacenan con Firebase.";
 "settings.anonymousTrackingTitle" = "Estadísticas de uso anónimas";
+"settings.bounceOffPets" = "Pets bounce off each other";
 "settings.desktopInteractionsMessage" = "Permite que las mascotas caminen por la barra de título de otras ventanas de aplicaciones.\nEs genial, pero solo funciona si tienes una sola pantalla, ¡lo siento!";
 "settings.desktopInteractionsTitle" = "Interacciones de escritorio";
 "settings.enabledDisplays" = "Pantallas habilitadas";

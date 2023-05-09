@@ -35,6 +35,7 @@ struct MainScene: Scene {
         @Inject var launchAtLogin: LaunchAtLoginUseCase
         
         Tracking.didLaunchApp(
+            bounceOffPets: appConfig.bounceOffPetsEnabled,
             gravityEnabled: appConfig.gravityEnabled,
             petSize: appConfig.petSize,
             launchAtLogin: launchAtLogin.isEnabled,

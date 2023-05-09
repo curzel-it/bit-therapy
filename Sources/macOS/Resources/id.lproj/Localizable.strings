@@ -72,6 +72,7 @@
 "settings.anonymousTracking" = "Aktifkan statistik penggunaan anonim";
 "settings.anonymousTrackingMessage" = "Tidak ada informasi pribadi yang diperoleh, kami hanya melacak beberapa, anonim, statistik penggunaan.\n\nMengapa ini penting yang mungkin Anda tanyakan?\nIni memungkinkan kami untuk menjawab pertanyaan yang paling sederhana sekalipun, seperti hewan peliharaan mana yang paling populer.. Kedengarannya cukup kritis, bukan? 😂\n\nStatistik penggunaan dikumpulkan dan disimpan menggunakan Firebase.";
 "settings.anonymousTrackingTitle" = "Statistik Penggunaan Anonim";
+"settings.bounceOffPets" = "Pets bounce off each other";
 "settings.desktopInteractionsMessage" = "Mengizinkan hewan peliharaan berjalan di bilah judul jendela aplikasi lain.\nIni hanya akan berfungsi di layar utama Anda.";
 "settings.desktopInteractionsTitle" = "Interaksi Layar";
 "settings.enabledDisplays" = "Tampilan yang Diaktifkan";

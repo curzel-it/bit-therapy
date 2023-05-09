@@ -1,6 +1,8 @@
 import SwiftUI
 
 public class BounceOnLateralCollisions: Capability {
+    public var customCollisionsFilter: ((Collision) -> Bool)?
+    
     override public func doUpdate(with collisions: Collisions, after time: TimeInterval) {
         guard let subject, !subject.isEphemeral, subject.state == .move else { return }
         guard let angle = bouncingAngle(from: subject.direction.radians, with: collisions) else { return }
@@ -9,10 +11,18 @@ public class BounceOnLateralCollisions: Capability {
 
     func bouncingAngle(from currentAngle: CGFloat, with collisions: Collisions) -> CGFloat? {
         guard let targetSide = targetSide() else { return nil }
-        let validCollisions = collisions.filter { $0.other?.isStatic == true }
+        let validCollisions = collisions.filter { isValidCollision($0) }
         guard validCollisions.contains(overlapOnSide: targetSide) else { return nil }
         guard !validCollisions.contains(overlapOnSide: targetSide.opposite) else { return nil }
         return CGFloat.pi - currentAngle
+    }
+    
+    private func isValidCollision(_ collision: Collision) -> Bool {
+        if let filter = customCollisionsFilter {
+            return filter(collision)
+        } else {
+            return collision.other?.isStatic == true
+        }
     }
 
     private func targetSide() -> Collision.Side? {

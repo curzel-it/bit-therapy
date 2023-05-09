@@ -4,6 +4,7 @@ import SwiftUI
 
 protocol AppConfigStorage {
     var background: String { get }
+    var bounceOffPetsEnabled: Bool { get }
     var desktopInteractions: Bool { get }
     var disabledScreens: [String] { get }
     var gravityEnabled: Bool { get }
@@ -19,15 +20,16 @@ protocol AppConfigStorage {
 class AppConfigStorageImpl: AppConfigStorage {
     @Inject private var speciesProvider: SpeciesProvider
     
-    @AppStorage("backgroundName") var background: String = "BackgroundMountainDynamic"
-    @AppStorage("desktopInteractions") var desktopInteractions: Bool = true
-    @AppStorage("disabledScreens") var disabledScreensValue: String = ""
+    @AppStorage("backgroundName") var background = "BackgroundMountainDynamic"
+    @AppStorage("bounceOffPetsEnabled") var bounceOffPetsEnabled = false
+    @AppStorage("desktopInteractions") var desktopInteractions = true
+    @AppStorage("disabledScreens") var disabledScreensValue = ""
     @AppStorage("gravityEnabled") var gravityEnabled = true
     @AppStorage("launchSilently") var launchSilently = false
     @AppStorage("names") var namesValue: String = ""
-    @AppStorage("randomEvents") var randomEvents: Bool = true
-    @AppStorage("petSize") var petSize: Double = PetSize.defaultSize
-    @AppStorage("petId") private var selectedSpeciesValue: String = kInitialPetId
+    @AppStorage("randomEvents") var randomEvents = true
+    @AppStorage("petSize") var petSize = PetSize.defaultSize
+    @AppStorage("petId") private var selectedSpeciesValue = kInitialPetId
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     
     var disabledScreens: [String] {
@@ -72,6 +74,10 @@ class AppConfigStorageImpl: AppConfigStorage {
     func storeValues(of appConfig: AppConfig) {
         appConfig.$background
             .sink { [weak self] in self?.background = $0 }
+            .store(in: &disposables)
+        
+        appConfig.$bounceOffPetsEnabled
+            .sink { [weak self] in self?.bounceOffPetsEnabled = $0 }
             .store(in: &disposables)
         
         appConfig.$desktopInteractions

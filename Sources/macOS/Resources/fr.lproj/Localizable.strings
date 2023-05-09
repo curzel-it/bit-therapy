@@ -72,6 +72,7 @@
 "settings.anonymousTracking" = "Activer les statistiques d'utilisation anonymes";
 "settings.anonymousTrackingMessage" = "Aucune information personnelle n'est récupérée, nous ne récupérons que quelques statistiques d'utilisation anonymes.\n\nDans quel but, tu te demandes ?\nCela nous permet de repondre à des questions simples, telles que : quel est l'animal le plus populaire... Ce qui est indispensable, n'est-ce pas ? 😂\n\nLes statistiques d'utilisation sont récupérées et hébergées sur Firebase.";
 "settings.anonymousTrackingTitle" = "Statistiques d'utilisation anonymes";
+"settings.bounceOffPets" = "Pets bounce off each other";
 "settings.desktopInteractionsMessage" = "Autorise les animaux domestiques à marcher sur la barre de titre des autres fenêtres d'applications.\nCela ne fonctionnera que sur votre écran principal.";
 "settings.desktopInteractionsTitle" = "Interactions avec les fenêtres";
 "settings.enabledDisplays" = "Écrans activés";
