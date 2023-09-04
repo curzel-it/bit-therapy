@@ -44,6 +44,43 @@ Contributors get a shout out in the app, just saying... 😏
 
 If you wish to improve support for your language, join our [Discord](https://discord.gg/MCdEgXKSH5) and let us know!
 
+## 🔔 Interoperability
+
+Since version 2.48 you can use `DistributedNotificationCenter` to send basic commands to your pets.
+
+Here's the payload:
+
+```json
+{
+    # Species id
+    "subject": "sloth",
+    
+    # Animation id
+    "action": "eat",
+    
+    # Optional, both x and y required 
+    "x": 100,
+    "y": 100
+}
+```
+
+Sample Python script to send out notifications:
+```python
+from Foundation import NSDistributedNotificationCenter, NSDictionary
+
+def send_notification():
+    notification_name = "it.curzel.pets.Api"
+    message = {...}
+    user_info = NSDictionary.dictionaryWithDictionary_(message)
+    center = NSDistributedNotificationCenter.defaultCenter()
+    center.postNotificationName_object_userInfo_deliverImmediately_(
+        notification_name, None, user_info, True
+    )
+
+if __name__ == "__main__":
+    send_notification()
+```
+
 ## 🛠️ Build from Source
 1. Download and setup Xcode
 1. Open the `Sources/macOS/DesktopPets.xcworkspace`
