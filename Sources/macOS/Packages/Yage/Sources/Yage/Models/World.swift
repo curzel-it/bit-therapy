@@ -35,4 +35,15 @@ open class World {
         children.forEach { $0.kill() }
         children.removeAll()
     }
+    
+    public func animate(id: String, action: String, position: CGPoint?) {
+        let subject = children.first { $0.species.id == id }
+        let animation = subject?.species.animations.first { $0.id == action }
+        guard let subject, let animation else { return }
+        
+        if let position {
+            subject.frame.origin = position
+        }
+        subject.set(state: .action(action: animation, loops: nil))
+    }
 }

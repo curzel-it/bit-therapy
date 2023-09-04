@@ -230,6 +230,8 @@
 		1EFECB5829B72B7600C7A028 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFECB5729B72B7600C7A028 /* LaunchAtLogin.swift */; };
 		1EFECB5929B72B7600C7A028 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFECB5729B72B7600C7A028 /* LaunchAtLogin.swift */; };
 		1EFECB5A29B72C2E00C7A028 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D7D4829747D9400DC7D5F /* NewsView.swift */; };
+		641E19702AA674C2002899D8 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641E196F2AA674C2002899D8 /* NotificationsService.swift */; };
+		641E19712AA674C2002899D8 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641E196F2AA674C2002899D8 /* NotificationsService.swift */; };
 		64689ADE29D01D07005B21DE /* ScreensaverElementsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D068429B4D737009C2B34 /* ScreensaverElementsServiceImpl.swift */; };
 		64CAD2FA29D05519002CD98A /* ScreensaverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CAD2F929D05519002CD98A /* ScreensaverViewModel.swift */; };
 		64CAD2FB29D05519002CD98A /* ScreensaverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CAD2F929D05519002CD98A /* ScreensaverViewModel.swift */; };
@@ -408,6 +410,7 @@
 		1EFECB4629B67B1000C7A028 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1EFECB4D29B68B0100C7A028 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		1EFECB5729B72B7600C7A028 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		641E196F2AA674C2002899D8 /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
 		64CAD2F929D05519002CD98A /* ScreensaverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensaverViewModel.swift; sourceTree = "<group>"; };
 		A6FB7D4628740F8E00AB872E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6FB7D4728740F8E00AB872E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -712,6 +715,7 @@
 				1E07315629BA077E00E31EED /* CommandLineUseCase.swift */,
 				1EF8641929B22EAA00413AEA /* iOS */,
 				1EF8641829B22EA400413AEA /* macOS */,
+				641E196F2AA674C2002899D8 /* NotificationsService.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1502,6 +1506,7 @@
 				1E07319A29BA9D5900E31EED /* DesktopInteractionsSettings.swift in Sources */,
 				1ED44B6529B21A900091CDAE /* AppConfig.swift in Sources */,
 				1EFECB4729B67B1000C7A028 /* Settings.swift in Sources */,
+				641E19702AA674C2002899D8 /* NotificationsService.swift in Sources */,
 				1EF8642329B22F5C00413AEA /* SwinjectUtils.swift in Sources */,
 				1EFECB4229B65E1700C7A028 /* ScreensaverEntityView.swift in Sources */,
 				1ED44B4D29B21A900091CDAE /* ExportPetUseCase.swift in Sources */,
@@ -1606,6 +1611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641E19712AA674C2002899D8 /* NotificationsService.swift in Sources */,
 				1E76531629B8772D002E6301 /* ContentView.swift in Sources */,
 				1E185F9729B24A960042E537 /* Dependencies.swift in Sources */,
 				1E185F7229B239530042E537 /* Tracking.swift in Sources */,
@@ -1866,7 +1872,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 204701;
+				CURRENT_PROJECT_VERSION = 204801;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1878,7 +1884,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.47;
+				MARKETING_VERSION = 2.48;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1901,7 +1907,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/macOS/DesktopPets.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 204701;
+				CURRENT_PROJECT_VERSION = 204801;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1913,7 +1919,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.47;
+				MARKETING_VERSION = 2.48;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -22,6 +22,12 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
             .filter { appConfig.isEnabled(screen: $0) }
             .map { ScreenEnvironment(for: $0) }
     }
+    
+    func animate(petId: String, actionId: String, position: CGPoint?) {
+        worlds.forEach {
+            $0.animate(id: petId, action: actionId, position: position)
+        }
+    }
 
     func hide() {
         Logger.log(tag, "Hiding everything...")
