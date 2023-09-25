@@ -1,5 +1,6 @@
 import json
 import os
+from PIL import Image
 
 def _load_species_from_file(path):
     with open(path, 'r') as f:
@@ -21,6 +22,19 @@ def _load_all_sprites():
             if file.endswith('.png'):
                 paths.append(os.path.join(root, file))
     return paths
+
+def is_image_completely_transparent(image_path):
+    try:
+        with Image.open(image_path) as img:
+            rgba = img.convert('RGBA')
+            pixels = list(rgba.getdata())
+
+            for _, _, _, alpha in pixels:
+                if alpha != 0:
+                    return False
+            return True
+    except Exception as e:
+        return False
 
 def _load_sprites_by_species_and_animation():
     sprites = _load_all_sprites()
@@ -66,6 +80,10 @@ def _check_assets_for_species(species, all_animations):
             missing = sorted(list(missing))
             for index in missing:
                 print(f'  {id}_{animation}-{index}.png')
+
+        for asset in assets:
+            if is_image_completely_transparent(asset):
+                print(f'ERROR: Image is blank: {asset}')
 
 def check_sprites_for_all_species():
     print('Checking assets...')
