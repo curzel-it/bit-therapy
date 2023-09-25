@@ -4,11 +4,12 @@ from sprites_checker import check_sprites_for_all_species
 aseprite_path = "/Applications/Aseprite.app/Contents/MacOS/aseprite"
 aseprite_assets = "../Aseprite"
 pngs_folder = "../PetsAssets"
+ignore_layers = '--ignore-layer "Talking" --ignore-layer "talking"'
 
 def export_aseprite(file_path, destination_folder):
     asset_name = file_path.split('/')[-1].split('.')[0]
     asset_name = asset_name[:-1] if asset_name.endswith('-') else asset_name
-    os.system(f'{aseprite_path} -b {file_path} --save-as {destination_folder}/{asset_name}-0.png')
+    os.system(f'{aseprite_path} -b {file_path} {ignore_layers} --save-as {destination_folder}/{asset_name}-0.png')
 
 def find_aseprite_files(folder):
     paths = []
