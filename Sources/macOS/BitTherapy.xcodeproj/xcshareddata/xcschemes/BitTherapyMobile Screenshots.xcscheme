@@ -13,13 +13,12 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EF8640129B22DD500413AEA"
-               BuildableName = "BitTherapy Mobile UITests.xctest"
-               BlueprintName = "BitTherapy Mobile UITests"
+               BlueprintIdentifier = "1E07312529B9D64B00E31EED"
+               BuildableName = "BitTherapyMobile Screenshots.xctest"
+               BlueprintName = "BitTherapyMobile Screenshots"
                ReferencedContainer = "container:BitTherapy.xcodeproj">
             </BuildableReference>
          </TestableReference>

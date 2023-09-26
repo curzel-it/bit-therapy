@@ -1,6 +1,6 @@
 import XCTest
 
-final class MobilePetsUITests: XCTestCase {
+final class BitTherapyMobileUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
     }

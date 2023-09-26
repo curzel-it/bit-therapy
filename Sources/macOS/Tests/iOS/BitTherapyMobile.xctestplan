@@ -14,16 +14,16 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:DesktopPets.xcodeproj",
+        "containerPath" : "container:BitTherapy.xcodeproj",
         "identifier" : "1EF863F729B22DD500413AEA",
-        "name" : "Mobile Pets Tests"
+        "name" : "BitTherapyMobile Tests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:DesktopPets.xcodeproj",
+        "containerPath" : "container:BitTherapy.xcodeproj",
         "identifier" : "1EF8640129B22DD500413AEA",
-        "name" : "Mobile Pets UI Tests"
+        "name" : "BitTherapyMobile UITests"
       }
     },
     {

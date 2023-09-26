@@ -1,7 +1,7 @@
 import AppKit
 import XCTest
 
-@testable import Desktop_Pets
+@testable import BitTherapy
 
 final class ImageInterpolationUseCaseTests: XCTestCase {
     let image50by50 = NSImage().scaled(to: .init(square: 50), with: .default)

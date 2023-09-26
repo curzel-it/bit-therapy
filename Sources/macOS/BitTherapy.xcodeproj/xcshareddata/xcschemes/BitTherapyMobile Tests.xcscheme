@@ -18,8 +18,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1EF863F729B22DD500413AEA"
-               BuildableName = "BitTherapy Mobile Tests.xctest"
-               BlueprintName = "BitTherapy Mobile Tests"
+               BuildableName = "BitTherapyMobile Tests.xctest"
+               BlueprintName = "BitTherapyMobile Tests"
                ReferencedContainer = "container:BitTherapy.xcodeproj">
             </BuildableReference>
          </TestableReference>
