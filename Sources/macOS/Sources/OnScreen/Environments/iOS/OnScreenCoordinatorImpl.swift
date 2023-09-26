@@ -1,3 +1,4 @@
+import SwiftUI
 import Schwifty
 import Yage
 
@@ -15,4 +16,10 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     func hide() {}
 
     func remove(species: Species) {}
+    
+    func animate(petId: String, actionId: String, position: CGPoint?) {
+        worlds.forEach {
+            $0.animate(id: petId, action: actionId, position: position)
+        }
+    }
 }
