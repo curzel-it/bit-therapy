@@ -108,11 +108,3 @@ extension PetEntity {
         return baseSpeed * sizeRatio
     }
 }
-
-// MARK: - Pet Size
-
-public struct PetSize {
-    public static let defaultSize: CGFloat = DeviceRequirement.iPhone.isSatisfied ? 50 : 75
-    public static let minSize: CGFloat = 25
-    public static let maxSize: CGFloat = 350
-}
