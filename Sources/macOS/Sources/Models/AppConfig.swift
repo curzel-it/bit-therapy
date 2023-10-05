@@ -15,7 +15,6 @@ class AppConfig: ObservableObject {
     @Published var petSize: CGFloat = PetSize.defaultSize
     @Published var randomEvents = true
     @Published var speedMultiplier: CGFloat = 1
-    @Published var widgetSpecies: String?
     @Published private(set) var selectedSpecies: [String] = []
     
     init() {
@@ -68,7 +67,6 @@ class AppConfig: ObservableObject {
         speedMultiplier = storage.speedMultiplier
         disabledScreens = storage.disabledScreens
         randomEvents = storage.randomEvents
-        widgetSpecies = storage.widgetSpecies
     }
 }
 
