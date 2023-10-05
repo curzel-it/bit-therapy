@@ -58,7 +58,7 @@ private struct Socials: View {
             SocialIcon(name: "twitter", link: Lang.Urls.twitter)
             SocialIcon(name: "reddit", link: Lang.Urls.reddit)
             SocialIcon(name: "discord", link: Lang.Urls.discord)
-            // SocialIcon(name: "patreon", link: Lang.Urls.donations)
+            SocialIcon(name: "youtube", link: Lang.Urls.youtube)
         }
     }
 }
@@ -119,5 +119,20 @@ struct JoinOurDiscord: View {
             .background(Color("DiscordBrandColor"))
             .cornerRadius(DesignSystem.buttonsCornerRadius)
             .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }
+    }
+}
+
+struct YouTubeView: View {
+    var body: some View {
+        Image("youtubeLarge")
+            .resizable()
+            .antialiased(true)
+            .scaledToFit()
+            .frame(when: .is(.macOS), width: 110, height: 28)
+            .frame(when: .is(.iOS), height: DesignSystem.buttonsHeight)
+            .positioned(when: .is(.iOS), align: .horizontalCenter)
+            .background(Color("YoutubeBrandColor"))
+            .cornerRadius(DesignSystem.buttonsCornerRadius)
+            .onTapGesture { URL.visit(urlString: Lang.Urls.youtube) }
     }
 }

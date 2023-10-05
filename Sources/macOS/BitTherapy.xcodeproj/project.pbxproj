@@ -233,10 +233,6 @@
 		641BE4F22AC2F54700A87232 /* BitTherapyMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE4EF2AC2F54100A87232 /* BitTherapyMobileTests.swift */; };
 		641BE4F82AC30ABD00A87232 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644D7A572AC088ED00EDA4A9 /* WidgetKit.framework */; };
 		641BE4F92AC30ABD00A87232 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644D7A592AC088ED00EDA4A9 /* SwiftUI.framework */; };
-		641BE4FC2AC30ABD00A87232 /* MobileWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE4FB2AC30ABD00A87232 /* MobileWidgetBundle.swift */; };
-		641BE4FE2AC30ABD00A87232 /* MobileWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE4FD2AC30ABD00A87232 /* MobileWidgetLiveActivity.swift */; };
-		641BE5002AC30ABD00A87232 /* MobileWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE4FF2AC30ABD00A87232 /* MobileWidget.swift */; };
-		641BE5022AC30ABD00A87232 /* MobileWidgetAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE5012AC30ABD00A87232 /* MobileWidgetAppIntent.swift */; };
 		641BE5042AC30AC000A87232 /* MobileWidgetAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641BE5032AC30AC000A87232 /* MobileWidgetAssets.xcassets */; };
 		641BE5082AC30AC000A87232 /* BitTherapyMobileWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 641BE4F72AC30ABD00A87232 /* BitTherapyMobileWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		641BE50E2AC31A0E00A87232 /* Yage in Frameworks */ = {isa = PBXBuildFile; productRef = 641BE50D2AC31A0E00A87232 /* Yage */; };
@@ -252,6 +248,12 @@
 		641BE51A2AC31CF400A87232 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 641BE5192AC31CF400A87232 /* Schwifty */; };
 		641BE51C2AC31D7A00A87232 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 641BE51B2AC31D7A00A87232 /* Swinject */; };
 		641E19702AA674C2002899D8 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641E196F2AA674C2002899D8 /* NotificationsService.swift */; };
+		6437A2E22ACF528E00232851 /* PetWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437A2DC2ACF524100232851 /* PetWidget.swift */; };
+		6437A2E42ACF530500232851 /* PetWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437A2E32ACF530500232851 /* PetWidgetEntry.swift */; };
+		6437A2E52ACF530800232851 /* PetWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437A2DD2ACF524100232851 /* PetWidgetProvider.swift */; };
+		6437A2E62ACF530800232851 /* PetWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437A2DE2ACF524100232851 /* PetWidgetView.swift */; };
+		6437A2E72ACF54B800232851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
+		6437A2E92ACF5FA900232851 /* PetWidgetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437A2E82ACF5FA900232851 /* PetWidgetConfig.swift */; };
 		64689ADE29D01D07005B21DE /* ScreensaverElementsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D068429B4D737009C2B34 /* ScreensaverElementsServiceImpl.swift */; };
 		64799F392AC2E1D80049CCC2 /* DistributedNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64799F372AC2E1D00049CCC2 /* DistributedNotificationsService.swift */; };
 		64799F3B2AC2E1FB0049CCC2 /* DummyNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64799F3A2AC2E1FB0049CCC2 /* DummyNotificationsService.swift */; };
@@ -465,14 +467,15 @@
 		641BE4EE2AC2F54100A87232 /* BitTherapyMobile.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BitTherapyMobile.xctestplan; sourceTree = "<group>"; };
 		641BE4EF2AC2F54100A87232 /* BitTherapyMobileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileTests.swift; sourceTree = "<group>"; };
 		641BE4F72AC30ABD00A87232 /* BitTherapyMobileWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BitTherapyMobileWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		641BE4FB2AC30ABD00A87232 /* MobileWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWidgetBundle.swift; sourceTree = "<group>"; };
-		641BE4FD2AC30ABD00A87232 /* MobileWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		641BE4FF2AC30ABD00A87232 /* MobileWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWidget.swift; sourceTree = "<group>"; };
-		641BE5012AC30ABD00A87232 /* MobileWidgetAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWidgetAppIntent.swift; sourceTree = "<group>"; };
 		641BE5032AC30AC000A87232 /* MobileWidgetAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MobileWidgetAssets.xcassets; sourceTree = "<group>"; };
 		641BE5052AC30AC000A87232 /* MobileWidgetInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MobileWidgetInfo.plist; sourceTree = "<group>"; };
 		641BE5132AC31C9300A87232 /* PetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSize.swift; sourceTree = "<group>"; };
 		641E196F2AA674C2002899D8 /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
+		6437A2DC2ACF524100232851 /* PetWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetWidget.swift; sourceTree = "<group>"; };
+		6437A2DD2ACF524100232851 /* PetWidgetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetWidgetProvider.swift; sourceTree = "<group>"; };
+		6437A2DE2ACF524100232851 /* PetWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetWidgetView.swift; sourceTree = "<group>"; };
+		6437A2E32ACF530500232851 /* PetWidgetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetWidgetEntry.swift; sourceTree = "<group>"; };
+		6437A2E82ACF5FA900232851 /* PetWidgetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetWidgetConfig.swift; sourceTree = "<group>"; };
 		644D7A572AC088ED00EDA4A9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		644D7A592AC088ED00EDA4A9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		64799F372AC2E1D00049CCC2 /* DistributedNotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributedNotificationsService.swift; sourceTree = "<group>"; };
@@ -1090,12 +1093,13 @@
 		641BE4FA2AC30ABD00A87232 /* MobileWidget */ = {
 			isa = PBXGroup;
 			children = (
-				641BE4FB2AC30ABD00A87232 /* MobileWidgetBundle.swift */,
-				641BE4FD2AC30ABD00A87232 /* MobileWidgetLiveActivity.swift */,
-				641BE4FF2AC30ABD00A87232 /* MobileWidget.swift */,
-				641BE5012AC30ABD00A87232 /* MobileWidgetAppIntent.swift */,
 				641BE5032AC30AC000A87232 /* MobileWidgetAssets.xcassets */,
 				641BE5052AC30AC000A87232 /* MobileWidgetInfo.plist */,
+				6437A2DC2ACF524100232851 /* PetWidget.swift */,
+				6437A2E82ACF5FA900232851 /* PetWidgetConfig.swift */,
+				6437A2E32ACF530500232851 /* PetWidgetEntry.swift */,
+				6437A2DD2ACF524100232851 /* PetWidgetProvider.swift */,
+				6437A2DE2ACF524100232851 /* PetWidgetView.swift */,
 			);
 			path = MobileWidget;
 			sourceTree = "<group>";
@@ -1535,6 +1539,7 @@
 			files = (
 				641BE5102AC31A3000A87232 /* PetsAssets in Resources */,
 				641BE5042AC30AC000A87232 /* MobileWidgetAssets.xcassets in Resources */,
+				6437A2E72ACF54B800232851 /* Assets.xcassets in Resources */,
 				641BE50F2AC31A2800A87232 /* Species in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1860,15 +1865,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				641BE5002AC30ABD00A87232 /* MobileWidget.swift in Sources */,
+				6437A2E62ACF530800232851 /* PetWidgetView.swift in Sources */,
+				6437A2E92ACF5FA900232851 /* PetWidgetConfig.swift in Sources */,
 				641BE5112AC31C4D00A87232 /* AppConfig.swift in Sources */,
-				641BE5022AC30ABD00A87232 /* MobileWidgetAppIntent.swift in Sources */,
 				641BE5162AC31CB000A87232 /* PetSize.swift in Sources */,
 				641BE5122AC31C7E00A87232 /* AppConfigStorage.swift in Sources */,
-				641BE4FE2AC30ABD00A87232 /* MobileWidgetLiveActivity.swift in Sources */,
+				6437A2E42ACF530500232851 /* PetWidgetEntry.swift in Sources */,
 				641BE5172AC31CBB00A87232 /* SwinjectUtils.swift in Sources */,
 				641BE5182AC31CC900A87232 /* Species.swift in Sources */,
-				641BE4FC2AC30ABD00A87232 /* MobileWidgetBundle.swift in Sources */,
+				6437A2E22ACF528E00232851 /* PetWidget.swift in Sources */,
+				6437A2E52ACF530800232851 /* PetWidgetProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1938,7 +1944,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1962,7 +1968,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2220,7 +2226,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2258,7 +2264,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2288,7 +2294,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2314,7 +2320,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2339,7 +2345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2363,7 +2369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2387,7 +2393,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 106010;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -2422,7 +2428,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 106010;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
