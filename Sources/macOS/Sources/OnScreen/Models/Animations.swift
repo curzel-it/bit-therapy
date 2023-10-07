@@ -9,7 +9,7 @@ class PetsSpritesProvider: SpritesProvider {
     override func sprite(state: EntityState) -> String {
         guard let species = subject?.species else { return "" }
         switch state {
-        case .freeFall: return species.dragPath
+        case .freeFall: return species.fallPath
         case .drag: return species.dragPath
         case .move: return species.movementPath
         case .action(let action, _): return action.id
