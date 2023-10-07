@@ -26,11 +26,6 @@
       "requiredLoops": 1
     },
     {
-      "id": "boom",
-      "position": "fromEntityBottomLeft",
-      "requiredLoops": 1
-    },
-    {
       "id": "run",
       "position": "fromEntityBottomLeft",
       "requiredLoops": 3
