@@ -1,6 +1,6 @@
-# Desktop Pets
+# BitTherapy (Desktop Pets)
 
-This is the source code of my macOS app [Desktop Pets](https://apps.apple.com/app/desktop-pets/id1575542220)!.
+This is the source code of my macOS app [BitTherapy](https://apps.apple.com/app/desktop-pets/id1575542220)!.
 
 As you can guess, it brings Desktop Pets to macOS 🚀
 
@@ -24,7 +24,7 @@ For daily use I recommend getting the App from the App Store.
 
 Alternatively, you can download the latest release from [GitHub]( https://github.com/curzel-it/pet-therapy/releases/latest) or build from source (see below).
 
-[![Get it on the App Store](docs/appstore_badge.png)](https://apps.apple.com/app/desktop-pets/id1575542220)
+[![Get it on the App Store](docs/appstore_badge.png)](https://apps.apple.com/app/id1575542220)
 
 ## 🔥 Screenshots
 
@@ -83,6 +83,6 @@ if __name__ == "__main__":
 
 ## 🛠️ Build from Source
 1. Download and setup Xcode
-1. Open the `Sources/macOS/DesktopPets.xcworkspace`
+1. Open the `Sources/macOS/BitTherapy.xcworkspace`
 1. Give Xcode some time to figure out dependencies...
 1. Run
