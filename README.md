@@ -86,3 +86,8 @@ if __name__ == "__main__":
 1. Open the `Sources/macOS/DesktopPets.xcworkspace`
 1. Give Xcode some time to figure out dependencies...
 1. Run
+
+## YouTube
+The pets now have an official [YouTube Channel](https://www.youtube.com/@BitTherapy)!
+
+It's still cringe, but it will get better
