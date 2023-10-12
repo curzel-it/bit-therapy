@@ -52,7 +52,7 @@ You only need two things:
 * An updated version of the app
 * Some tool do design your own sprites (I use [Aseprite](https://github.com/aseprite/aseprite), but any other will work just fine!)
 
-Building the app from source it's not required for creating custom pets, but you can build the app using Xcode if you want, here are [some instructions](https://github.com/curzel-it/pet-therapy) for that. 
+Building the app from source it's not required for creating custom pets, but you can build the app using Xcode if you want, here are [some instructions](https://github.com/curzel-it/bit-therapy) for that. 
 
 ## Species Definition
 A `Species` is defined by the following: 
@@ -98,7 +98,7 @@ All of these need to be defined in a json file, for example:
 }
 ```
 
-Complete json files for all original species can be found [here](https://github.com/curzel-it/pet-therapy/tree/main/Species).
+Complete json files for all original species can be found [here](https://github.com/curzel-it/bit-therapy/tree/main/Species).
 
 ### Capabilities
 Capabilities are behaviors that can be attached to a Pet to manipulate its state on update - some names are pretty self-explanatory, such as `BounceOnLateralCollisions`, `FlipHorizontallyWhenGoingLeft` or `Gravity`.
@@ -114,7 +114,7 @@ Animations are picked randomly from the list at a random interval.
 Each animation has: 
 * `id` which determinates the sprite to be rendered
 * `position` 
-* `size` see sloth's [lightsaber animation](https://github.com/curzel-it/pet-therapy/blob/main/Species/sloth.json)
+* `size` see sloth's [lightsaber animation](https://github.com/curzel-it/bit-therapy/blob/main/Species/sloth.json)
 * `requiredLoops` number of times the animation will be repeated
 
 Each species needs to have at least a `front` animation, which is loaded in homepage and pet details.
@@ -122,7 +122,7 @@ Each species needs to have at least a `front` animation, which is loaded in home
 ### Other properties
 * `movementPath` determinates which sprite set should be used to render the movement animation (usally `walk` or `fly`)
 * `dragPath` determinates which sprite is used when the pet is being dragged around with the mouse (usually `drag` or `front`)
-* `fallPath`, **v2.48+**, determinates which sprite is used when the pet is "falling" (optional, same as `dragPath` if not preset, see [mushroom](https://github.com/curzel-it/pet-therapy/blob/main/Species/mushroom.json) for an example) 
+* `fallPath`, **v2.48+**, determinates which sprite is used when the pet is "falling" (optional, same as `dragPath` if not preset, see [mushroom](https://github.com/curzel-it/bit-therapy/blob/main/Species/mushroom.json) for an example) 
 * `speed` is self-explanatory
 * `fps` animations in some species are *slower* (such as snail or the sunflower), so no need to render them as fast
 
@@ -148,7 +148,7 @@ For example:
 * `sloth_swag_lightsaber-0.png`
 * ...
 
-To get you quickstarted, you can take a look at the [Aseprite files](https://github.com/curzel-it/pet-therapy/tree/main/Aseprite) for my pets!
+To get you quickstarted, you can take a look at the [Aseprite files](https://github.com/curzel-it/bit-therapy/tree/main/Aseprite) for my pets!
 
 Aseprite is a great tool, more info [here](https://github.com/aseprite/aseprite).
 

@@ -219,13 +219,13 @@
 "tag.pokèmon" = "Pokèmon";
 "tag.slowmotion" = "Slow Motion";
 "tag.water" = "Water";
-"urls.appStore" = "https://apps.apple.com/app/desktop-pets/id1575542220";
-"urls.customPetsDocs" = "https://curzel.it/pet-therapy/custompets";
+"urls.appStore" = "https://apps.apple.com/app/id1575542220";
+"urls.customPetsDocs" = "https://curzel.it/bit-therapy/custompets";
 "urls.discord" = "https://discord.gg/MCdEgXKSH5";
 "urls.donations" = "https://www.patreon.com/urinamara";
-"urls.github" = "https://github.com/curzel-it/pet-therapy";
+"urls.github" = "https://github.com/curzel-it/bit-therapy";
 "urls.privacy" = "https://curzel.it/privacy.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
-"urls.twitter" = "https://twitter.com/DesktopPets";
+"urls.twitter" = "https://twitter.com/TheBitTherapy";
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Yes";
