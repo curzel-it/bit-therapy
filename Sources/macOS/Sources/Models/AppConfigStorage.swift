@@ -14,6 +14,7 @@ protocol AppConfigStorage {
     var petSize: Double { get }
     var selectedSpecies: [String] { get }
     var speedMultiplier: Double { get }
+    
     func storeValues(of appConfig: AppConfig)
 }
 

@@ -41,6 +41,7 @@ private struct MyPets: View {
                 Title(text: Lang.PetSelection.yourPets)
                 if DeviceRequirement.macOS.isSatisfied {
                     JoinOurDiscord()
+                    YouTubeView()
                 }
             }
             PetsGrid(

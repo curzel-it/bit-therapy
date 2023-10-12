@@ -31,7 +31,8 @@ class PetsAssetsProviderImpl: PetsAssetsProvider {
     func image(sprite: String?) -> ImageFrame? {
         guard let sprite else { return nil }
         guard let url = url(sprite: sprite) else { return nil }
-        return ImageFrame(contentsOf: url)
+        guard let data = try? Data(contentsOf: url) else { return nil }
+        return ImageFrame(data: data)
     }
     
     func allAssets(for species: String) -> [URL] {

@@ -1,7 +1,7 @@
 "about.leaveReview" = "Laisser un avis";
 "about.leaveReviewMessage" = "Soutenez-nous en laissant une belle critique!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Politique de confidentialité";
-"appName" = "Desktop Pets";
+"appName" = "BitTherapy";
 "backgrounds.BackgroundMountainDay" = "Montagne, Jour";
 "backgrounds.BackgroundMountainDynamic" = "Montagne";
 "backgrounds.BackgroundMountainNight" = "Montagne, Nuit";
@@ -227,4 +227,5 @@
 "urls.privacy" = "https://curzel.it/privacy.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.twitter" = "https://twitter.com/DesktopPets";
+"urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Oui";

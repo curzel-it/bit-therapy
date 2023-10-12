@@ -141,6 +141,7 @@ enum Lang {
         static let privacy = "urls.privacy".localized()
         static let reddit = "urls.reddit".localized()
         static let twitter = "urls.twitter".localized()
+        static let youtube = "urls.youtube".localized()
     }
 }
 

@@ -10,6 +10,7 @@ struct PageTitle: View {
             Spacer()
             if DeviceRequirement.macOS.isSatisfied {
                 JoinOurDiscord()
+                YouTubeView()
             }
         }
     }

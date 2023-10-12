@@ -67,6 +67,7 @@ All of these need to be defined in a json file, for example:
 {
   "id": "ape",
   "dragPath": "drag",
+  "fallPath": "drag",
   "fps": 10,
   "zIndex": 0,
   "tags": ["jungle"],
@@ -120,7 +121,8 @@ Each species needs to have at least a `front` animation, which is loaded in home
 
 ### Other properties
 * `movementPath` determinates which sprite set should be used to render the movement animation (usally `walk` or `fly`)
-* `dragPath` determinates which sprite set should be used to render the "falling" and "drag" animations (usally `drag` or `front`)
+* `dragPath` determinates which sprite is used when the pet is being dragged around with the mouse (usually `drag` or `front`)
+* `fallPath`, **v2.48+**, determinates which sprite is used when the pet is "falling" (optional, same as `dragPath` if not preset, see [mushroom](https://github.com/curzel-it/pet-therapy/blob/main/Species/mushroom.json) for an example) 
 * `speed` is self-explanatory
 * `fps` animations in some species are *slower* (such as snail or the sunflower), so no need to render them as fast
 

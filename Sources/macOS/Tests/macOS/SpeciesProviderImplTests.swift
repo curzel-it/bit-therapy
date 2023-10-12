@@ -2,7 +2,7 @@ import AppKit
 import Combine
 import XCTest
 
-@testable import Desktop_Pets
+@testable import BitTherapy
 
 final class SpeciesProviderImplTests: XCTestCase {
     private var disposables = Set<AnyCancellable>()

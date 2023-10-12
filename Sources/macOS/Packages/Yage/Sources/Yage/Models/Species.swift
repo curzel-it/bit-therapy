@@ -5,6 +5,7 @@ public struct Species: Codable, Hashable {
     public let animations: [EntityAnimation]
     public let capabilities: [String]
     public let dragPath: String
+    public let fallPath: String
     public let fps: TimeInterval
     public let movementPath: String
     public let scale: CGFloat
@@ -17,6 +18,7 @@ public struct Species: Codable, Hashable {
         animations: [EntityAnimation] = [],
         capabilities: [String] = [],
         dragPath: String = "drag",
+        fallPath: String = "drag",
         fps: TimeInterval = 10,
         movementPath: String = "walk",
         speed: CGFloat = 1,
@@ -29,6 +31,7 @@ public struct Species: Codable, Hashable {
         self.fps = fps
         self.movementPath = movementPath
         self.dragPath = dragPath
+        self.fallPath = fallPath
         self.scale = 1
         self.speed = speed
         self.tags = tags
@@ -47,6 +50,12 @@ public struct Species: Codable, Hashable {
         self.speed = try container.decode(CGFloat.self, forKey: .speed)
         self.tags = try container.decode([String].self, forKey: .tags)
         self.zIndex = try container.decode(Int.self, forKey: .zIndex)
+        
+        if let fallPath = try? container.decode(String.self, forKey: .fallPath) {
+            self.fallPath = fallPath
+        } else {
+            self.fallPath = dragPath
+        }
     }
     
     public func hash(into hasher: inout Hasher) {
