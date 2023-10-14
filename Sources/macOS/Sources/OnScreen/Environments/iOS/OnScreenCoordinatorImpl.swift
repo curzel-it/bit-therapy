@@ -1,6 +1,5 @@
 import SwiftUI
 import Schwifty
-import Yage
 
 class OnScreenCoordinatorImpl: OnScreenCoordinator {    
     var worlds: [ScreenEnvironment] = []

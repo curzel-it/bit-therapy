@@ -25,13 +25,6 @@
         "identifier" : "1EF8640129B22DD500413AEA",
         "name" : "BitTherapyMobile UITests"
       }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Packages\/Yage",
-        "identifier" : "YageTests",
-        "name" : "YageTests"
-      }
     }
   ],
   "version" : 1

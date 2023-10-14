@@ -2,7 +2,6 @@ import Foundation
 import Schwifty
 import SwiftUI
 import Swinject
-import Yage
 
 protocol DeletePetButtonCoordinator {
     func view(for species: Species, completion: @escaping (Bool) -> Void) -> AnyView

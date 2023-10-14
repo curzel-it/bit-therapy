@@ -1,7 +1,6 @@
 import Foundation
 import NotAGif
 import Schwifty
-import Yage
 
 protocol RenderableEntity {
     var frame: CGRect { get }

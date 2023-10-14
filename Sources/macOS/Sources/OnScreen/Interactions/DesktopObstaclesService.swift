@@ -2,7 +2,6 @@ import Combine
 import Schwifty
 import SwiftUI
 import WindowsDetector
-import Yage
 
 protocol DesktopObstaclesService {
     func start(in world: World)

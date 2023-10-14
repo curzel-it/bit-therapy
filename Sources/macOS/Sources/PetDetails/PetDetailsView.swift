@@ -1,7 +1,6 @@
 import NotAGif
 import Schwifty
 import SwiftUI
-import Yage
 
 struct PetDetailsView: View {
     @StateObject private var viewModel: PetDetailsViewModel

@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import Yage
+@testable import BitTherapy
 
 class CollisionsTests: XCTestCase {
     private lazy var testEnv: World = {

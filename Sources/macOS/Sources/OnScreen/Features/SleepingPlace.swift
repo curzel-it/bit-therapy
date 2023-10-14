@@ -1,5 +1,4 @@
 import Foundation
-import Yage
 
 class SleepingPlace: Capability {
     override func install(on subject: Entity) {

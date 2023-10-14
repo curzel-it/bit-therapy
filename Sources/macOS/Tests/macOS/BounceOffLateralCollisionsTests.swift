@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import Yage
+@testable import BitTherapy
 
 class BounceOnLateralCollisionsTests: XCTestCase {
     private let testEnv = World(name: "test", bounds: CGRect(x: 0, y: 0, width: 100, height: 100))

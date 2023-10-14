@@ -1,6 +1,5 @@
 import Foundation
 import Swinject
-import Yage
 
 protocol CustomPetsResourcesProvider {
     func allResources(for itemId: String) -> [URL]

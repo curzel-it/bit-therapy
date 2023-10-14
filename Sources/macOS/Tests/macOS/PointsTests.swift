@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import Yage
+@testable import BitTherapy
 
 // swiftlint:disable identifier_name
 class PointsTests: XCTestCase {

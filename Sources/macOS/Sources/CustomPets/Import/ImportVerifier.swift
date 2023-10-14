@@ -2,7 +2,6 @@ import Combine
 import Foundation
 import Schwifty
 import Swinject
-import Yage
 
 protocol ImportVerifier {
     func verify(json: URL, assets: [URL]) throws -> Species

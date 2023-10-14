@@ -1,5 +1,4 @@
 import Foundation
-import Yage
 
 protocol ScreensaverElementsService: WorldElementsService {
     // ...

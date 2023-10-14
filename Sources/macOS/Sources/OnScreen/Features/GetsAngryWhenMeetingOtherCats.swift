@@ -1,6 +1,5 @@
 import Foundation
 import Schwifty
-import Yage
 
 class GetsAngryWhenMeetingOtherCats: Capability {
     override func doUpdate(with collisions: Collisions, after time: TimeInterval) {

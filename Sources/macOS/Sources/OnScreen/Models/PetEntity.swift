@@ -1,7 +1,6 @@
 import Combine
 import Schwifty
 import SwiftUI
-import Yage
 
 class PetEntity: Entity {
     @Inject private var settings: AppConfig

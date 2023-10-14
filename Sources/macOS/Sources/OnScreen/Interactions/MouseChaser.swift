@@ -1,7 +1,6 @@
 import Combine
 import Schwifty
 import SwiftUI
-import Yage
 
 class MouseChaser: Capability {
     @Inject private var appConfig: AppConfig

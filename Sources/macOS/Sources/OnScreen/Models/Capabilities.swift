@@ -1,5 +1,4 @@
 import Foundation
-import Yage
 
 class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
     let capabilities: [String: Capability.Type] = [

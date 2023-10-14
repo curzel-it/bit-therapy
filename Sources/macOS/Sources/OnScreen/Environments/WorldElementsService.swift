@@ -1,5 +1,4 @@
 import Foundation
-import Yage
 
 protocol WorldElementsService {
     func elements(for world: World) -> [Entity]

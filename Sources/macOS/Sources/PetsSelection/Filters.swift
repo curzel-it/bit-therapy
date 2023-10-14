@@ -2,7 +2,6 @@ import Combine
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 
 struct VerticalFiltersView: View {
     @EnvironmentObject var petsSelection: PetsSelectionViewModel

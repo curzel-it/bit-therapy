@@ -2,7 +2,6 @@ import AppKit
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 import ZIPFoundation
 
 class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {

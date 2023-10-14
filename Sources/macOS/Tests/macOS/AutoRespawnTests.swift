@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import Yage
+@testable import BitTherapy
 
 class AutoRespawnTests: XCTestCase {
     var entity: Entity!

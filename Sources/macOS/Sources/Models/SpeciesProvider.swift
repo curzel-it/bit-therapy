@@ -1,7 +1,6 @@
 import Combine
 import Foundation
 import Schwifty
-import Yage
 
 protocol SpeciesProvider {
     func all() -> AnyPublisher<[Species], Never>

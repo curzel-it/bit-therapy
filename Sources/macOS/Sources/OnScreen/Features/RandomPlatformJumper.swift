@@ -1,6 +1,5 @@
 import Schwifty
 import SwiftUI
-import Yage
 
 class RandomPlatformJumper: Capability {
     private var animations: AnimationsScheduler? { subject?.capability(for: AnimationsScheduler.self) }

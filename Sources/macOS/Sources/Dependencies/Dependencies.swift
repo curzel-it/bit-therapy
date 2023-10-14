@@ -1,6 +1,5 @@
 import SwiftUI
 import Swinject
-import Yage
 
 class Dependencies {
     static func setup() {

@@ -1,7 +1,7 @@
 import Schwifty
 import XCTest
 
-@testable import Yage
+@testable import BitTherapy
 
 class RadiansTests: XCTestCase {
     func testCorrectRadiansFromVector() {

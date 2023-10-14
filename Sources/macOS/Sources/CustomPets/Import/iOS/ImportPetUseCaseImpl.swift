@@ -1,7 +1,6 @@
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 
 class ImportDragAndDropPetUseCaseImpl: ImportDragAndDropPetUseCase {
     var supportedTypeId: String { "" }

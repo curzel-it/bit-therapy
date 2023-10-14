@@ -2,7 +2,6 @@ import Foundation
 import Schwifty
 import SwiftUI
 import Swinject
-import Yage
 
 class DeletePetUseCaseImpl: DeletePetUseCase {
     @Inject private var resources: CustomPetsResourcesProvider

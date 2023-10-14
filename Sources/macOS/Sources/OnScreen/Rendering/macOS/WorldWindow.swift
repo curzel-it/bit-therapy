@@ -3,7 +3,6 @@ import Combine
 import Swinject
 import Schwifty
 import SwiftUI
-import Yage
 
 protocol EntityView: SomeView {
     var entityId: String { get }

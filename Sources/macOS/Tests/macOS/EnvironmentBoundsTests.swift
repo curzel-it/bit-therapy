@@ -1,7 +1,7 @@
 import SwiftUI
 import XCTest
 
-@testable import Yage
+@testable import BitTherapy
 
 class EnvironmentBoundsNoSafeAreaTests: XCTestCase {
     let env = World(name: "test", bounds: CGRect(x: 0, y: 50, width: 400, height: 900))

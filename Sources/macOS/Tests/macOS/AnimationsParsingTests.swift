@@ -1,7 +1,7 @@
 import SwiftUI
 import XCTest
 
-@testable import Yage
+@testable import BitTherapy
 
 class AnimationsParsing: XCTestCase {
     func testSingleAnimationCanBeParsed() {
