@@ -1,7 +1,6 @@
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 
 protocol ExportPetButtonCoordinator {
     func view(for species: Species) -> AnyView

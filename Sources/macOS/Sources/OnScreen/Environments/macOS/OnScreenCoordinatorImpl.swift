@@ -1,6 +1,5 @@
 import AppKit
 import Schwifty
-import Yage
 
 class OnScreenCoordinatorImpl: OnScreenCoordinator {
     @Inject private var appConfig: AppConfig

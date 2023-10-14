@@ -1,7 +1,6 @@
 import Combine
 import Schwifty
 import SwiftUI
-import Yage
 
 struct PetsGrid: View {
     let columns: [GridItem]

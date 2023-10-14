@@ -1,7 +1,6 @@
 import Combine
 import Foundation
 import Schwifty
-import Yage
 
 class ScreenEnvironment: World {
     @Inject var rainyCloudUseCase: RainyCloudUseCase

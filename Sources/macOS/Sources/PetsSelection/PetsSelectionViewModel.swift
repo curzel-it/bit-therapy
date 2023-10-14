@@ -1,7 +1,6 @@
 import Combine
 import Schwifty
 import SwiftUI
-import Yage
 
 class PetsSelectionViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig

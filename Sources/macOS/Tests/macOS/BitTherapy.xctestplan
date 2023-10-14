@@ -14,13 +14,6 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:Packages\/Yage",
-        "identifier" : "YageTests",
-        "name" : "YageTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:BitTherapy.xcodeproj",
         "identifier" : "1E9505C029B21342007666BF",
         "name" : "BitTherapy Tests"

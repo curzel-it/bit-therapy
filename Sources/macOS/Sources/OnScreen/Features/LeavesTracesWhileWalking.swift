@@ -1,5 +1,4 @@
 import Foundation
-import Yage
 
 class LeavesTracesWhileWalking: Capability {
     var speciesForTraceEntities: Species!

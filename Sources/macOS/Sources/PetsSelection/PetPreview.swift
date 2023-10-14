@@ -1,7 +1,6 @@
 import Combine
 import NotAGif
 import SwiftUI
-import Yage
 
 struct PetPreview: View {
     @EnvironmentObject private var selectionViewModel: PetsSelectionViewModel

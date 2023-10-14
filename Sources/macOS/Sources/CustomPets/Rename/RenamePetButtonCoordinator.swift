@@ -2,7 +2,6 @@ import Foundation
 import Schwifty
 import Swinject
 import SwiftUI
-import Yage
 
 protocol RenamePetButtonCoordinator {
     func view(for species: Species) -> AnyView

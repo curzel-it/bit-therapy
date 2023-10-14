@@ -1,6 +1,5 @@
 import Schwifty
 import SwiftUI
-import Yage
 
 class RightClickable: Capability {
     override func install(on subject: Entity) {

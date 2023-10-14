@@ -1,5 +1,4 @@
 import SwiftUI
-import Yage
 
 protocol OnScreenCoordinator {
     var worlds: [ScreenEnvironment] { get }

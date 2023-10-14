@@ -1,5 +1,4 @@
 import Foundation
-import Yage
 
 class LeavesPoopStains: LeavesTracesWhileWalking {
     override func install(on subject: Entity) {

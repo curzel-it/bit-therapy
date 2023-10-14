@@ -1,7 +1,6 @@
 import Combine
 import Schwifty
 import SwiftUI
-import Yage
 
 class ScreensaverViewModel: WorldViewModel, ObservableObject {
     @Inject var config: AppConfig

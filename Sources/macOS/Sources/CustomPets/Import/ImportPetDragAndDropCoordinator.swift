@@ -1,7 +1,6 @@
 import Foundation
 import Schwifty
 import SwiftUI
-import Yage
 
 class ImportPetDragAndDropCoordinator {
     func view() -> AnyView {

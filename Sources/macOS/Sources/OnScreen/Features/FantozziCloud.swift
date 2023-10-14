@@ -1,5 +1,4 @@
 import Foundation
-import Yage
 
 extension ScreenEnvironment {
     func scheduleRainyCloud() {

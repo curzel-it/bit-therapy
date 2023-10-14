@@ -2,7 +2,6 @@ import Combine
 import NotAGif
 import Schwifty
 import SwiftUI
-import Yage
 
 protocol PetDetailsHeaderBuilder {
     func build(with viewModel: PetDetailsViewModel) -> AnyView
