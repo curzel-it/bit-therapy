@@ -38,9 +38,7 @@ class ExportPetUseCaseImpl: ExportPetUseCase {
     }
     
     private func export(urls: [URL], to destination: URL) throws {
-        guard let archive = ZIPFoundation.Archive(url: destination, accessMode: .create) else {
-            throw ExporterError.failedToCreateZipArchive
-        }
+        let archive = try ZIPFoundation.Archive(url: destination, accessMode: .create, pathEncoding: .utf8)
         try urls.forEach {
             try archive.addEntry(with: $0.lastPathComponent, fileURL: $0)
         }
