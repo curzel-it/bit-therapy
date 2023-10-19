@@ -30,3 +30,9 @@ def export_all_aseprite(root_folder, destination_folder):
 
 export_all_aseprite(aseprite_assets, pngs_folder)
 check_sprites_for_all_species()
+
+os.system(f'rm -rf {pngs_folder}/alpaca*')
+os.system(f'rm -rf {pngs_folder}/foods*')
+os.system(f'rm -rf {pngs_folder}/overlay*')
+os.system(f'rm -rf {pngs_folder}/viking*')
+os.system(f'rm -rf {pngs_folder}/_talk-*')
