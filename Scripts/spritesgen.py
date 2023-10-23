@@ -1,3 +1,4 @@
+import sys
 import pdb
 import json
 import os
@@ -54,11 +55,13 @@ def exportable_file_paths():
     valid_file_names = export_list()
     return [path for path in paths if any(path.endswith(filename) for filename in valid_file_names)]
 
-def export_all_valid_files():
+def export_all_valid_files(name):
     paths = exportable_file_paths()
     for path in paths:
+        if not name in path: continue
         print(f'Exporting {path}')
         export_aseprite(path, PNGS_FOLDER)
 
 if __name__ == '__main__':
-    export_all_valid_files()
+    name = sys.argv[-1] if len(sys.argv) == 2 else ""
+    export_all_valid_files(name)
