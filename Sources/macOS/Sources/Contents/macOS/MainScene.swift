@@ -26,6 +26,7 @@ struct MainScene: Scene {
         let window = AppWindowManager.shared.build()
         AppWindowManager.shared.current = window
         window.show()
+        window.orderFront(nil)
         window.makeKeyAndOrderFront(nil)
         window.becomeMain()
     }

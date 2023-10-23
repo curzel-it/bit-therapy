@@ -153,7 +153,7 @@ extension Lang {
         }
 
         static func about(for id: String) -> String {
-            "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
+            "species.about.\(id)".localized(or: "")
         }
     }
 }

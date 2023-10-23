@@ -18,7 +18,7 @@ class AppWindowManager {
     func build() -> NSWindow {
         let window = AppWindow(
             contentRect: initialContentRect(),
-            styleMask: [.resizable, .closable, .titled, .miniaturizable, .fullScreen, .fullSizeContentView],
+            styleMask: [.resizable, .closable, .titled, .miniaturizable],// .fullScreen, .fullSizeContentView],
             backing: .buffered,
             defer: false
         )
