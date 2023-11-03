@@ -36,9 +36,10 @@ private class ContentViewModel: ObservableObject {
     @Inject private var species: SpeciesProvider
     @Inject private var theme: ThemeUseCase
     
+    let backgroundBlurRadius: CGFloat = 10
+    
     @Published var tabBarHidden: Bool = false
     @Published var isLoading: Bool = true
-    @Published var backgroundBlurRadius: CGFloat
     @Published var backgroundImage: String = ""
     @Published var colorScheme: ColorScheme?
     @Published var selectedPage: AppPage = .petSelection
@@ -55,7 +56,6 @@ private class ContentViewModel: ObservableObject {
     
     init() {
         selectedPage = .petSelection
-        backgroundBlurRadius = 10
         backgroundImage = appConfig.background
         bindTabBarHidden()
         bindBackground()
@@ -89,14 +89,6 @@ private class ContentViewModel: ObservableObject {
     private func bindBackground() {
         appConfig.$background
             .sink { [weak self] in self?.backgroundImage = $0 }
-            .store(in: &disposables)
-        
-        Publishers.CombineLatest($selectedPage, $isLoading)
-            .sink { [weak self] selectedPage, isLoading in
-                guard let self else { return }
-                let shouldBlur = selectedPage != .screensaver && !isLoading
-                self.backgroundBlurRadius = shouldBlur ? 10 : 0
-            }
             .store(in: &disposables)
     }
     

@@ -25,6 +25,9 @@ class AppConfig: ObservableObject {
             if !showInMenuBar {
                 launchSilently = false
             }
+            if showInMenuBar && !oldValue {
+                StatusBarCoordinator.shared.show()
+            }
         }
     }
     @Published var speedMultiplier: CGFloat = 1

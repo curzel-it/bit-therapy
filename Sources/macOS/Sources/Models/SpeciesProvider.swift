@@ -16,12 +16,11 @@ protocol SpeciesProvider {
 class SpeciesProviderImpl: SpeciesProvider {
     @Inject private var appConfig: AppConfig
     
+    private let tag = "SpeciesProvider"
     private let speciesSubject = CurrentValueSubject<[Species], Never>([])
     
     init() {
-        Task { [weak self] in
-            self?.loadSpecies()
-        }
+        loadSpecies()
     }
     
     func all() -> AnyPublisher<[Species], Never> {
@@ -69,8 +68,8 @@ class SpeciesProviderImpl: SpeciesProvider {
         let species = self.allJsonUrls
             .compactMap { try? Data(contentsOf: $0) }
             .compactMap { try? JSONDecoder().decode(Species.self, from: $0) }
+            .removeDuplicates(keepOrder: false)
             .sorted { $0.id < $1.id }
-            .removeDuplicates(keepOrder: true)
         speciesSubject.send(species)
     }
     

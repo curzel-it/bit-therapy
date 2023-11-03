@@ -3,6 +3,7 @@ import Schwifty
 import SwiftUI
 
 protocol PetsAssetsProvider {
+    func previewImage(for species: String) -> ImageFrame?
     func frames(for species: String, animation: String) -> [String]
     func images(for species: String, animation: String) -> [ImageFrame]
     func image(sprite: String?) -> ImageFrame?
@@ -13,9 +14,16 @@ protocol PetsAssetsProvider {
 class PetsAssetsProviderImpl: PetsAssetsProvider {    
     private var allAssetsUrls: [URL] = []
     private var sortedAssetsByKey: [String: [Asset]] = [:]
+    private let tag = "PetsAssetsProvider"
     
     init() {
         reloadAssets()
+    }
+    
+    func previewImage(for species: String) -> ImageFrame? {
+        let assets = sortedAssetsByKey[key(for: species, animation: "front")] ?? []
+        let path = assets.first?.sprite
+        return image(sprite: path)
     }
     
     func frames(for species: String, animation: String) -> [String] {
