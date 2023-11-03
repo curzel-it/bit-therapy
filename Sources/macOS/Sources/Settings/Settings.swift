@@ -32,6 +32,7 @@ private struct Switches: View {
             LaunchSilentlySwitch()
             GravitySwitch()
             BounceOffOtherPets()
+            MenuBarSwitch()
             DesktopInteractionsSwitch()
             RandomEventsSwitch()
         }

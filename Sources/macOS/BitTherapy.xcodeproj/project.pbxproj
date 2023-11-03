@@ -227,6 +227,7 @@
 		1EFECB5829B72B7600C7A028 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFECB5729B72B7600C7A028 /* LaunchAtLogin.swift */; };
 		1EFECB5929B72B7600C7A028 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFECB5729B72B7600C7A028 /* LaunchAtLogin.swift */; };
 		1EFECB5A29B72C2E00C7A028 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D7D4829747D9400DC7D5F /* NewsView.swift */; };
+		641658912AF59982003C08EF /* MenuBarSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641658902AF59982003C08EF /* MenuBarSwitch.swift */; };
 		641BE4F02AC2F54100A87232 /* BitTherapyMobile.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 641BE4EE2AC2F54100A87232 /* BitTherapyMobile.xctestplan */; };
 		641BE4F22AC2F54700A87232 /* BitTherapyMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE4EF2AC2F54100A87232 /* BitTherapyMobileTests.swift */; };
 		641BE5142AC31C9300A87232 /* PetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE5132AC31C9300A87232 /* PetSize.swift */; };
@@ -491,6 +492,7 @@
 		1EFECB4629B67B1000C7A028 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1EFECB4D29B68B0100C7A028 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		1EFECB5729B72B7600C7A028 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		641658902AF59982003C08EF /* MenuBarSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarSwitch.swift; sourceTree = "<group>"; };
 		641BE4EE2AC2F54100A87232 /* BitTherapyMobile.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BitTherapyMobile.xctestplan; sourceTree = "<group>"; };
 		641BE4EF2AC2F54100A87232 /* BitTherapyMobileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileTests.swift; sourceTree = "<group>"; };
 		641BE5132AC31C9300A87232 /* PetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSize.swift; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 				1E07319629BA9D4500E31EED /* LaunchAtLoginSettings.swift */,
 				1E07319B29BA9D8100E31EED /* LaunchSilentlySettings.swift */,
 				1E07319529BA9D4500E31EED /* ScreensSettings.swift */,
+				641658902AF59982003C08EF /* MenuBarSwitch.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -1731,6 +1734,7 @@
 				1E185F9929B24CA00042E537 /* ExportPetUseCaseImpl.swift in Sources */,
 				1ED44B3729B21A900091CDAE /* NewsView.swift in Sources */,
 				1E50024A29B7C50C00F6C9B8 /* Blur.swift in Sources */,
+				641658912AF59982003C08EF /* MenuBarSwitch.swift in Sources */,
 				1ED44B6029B21A900091CDAE /* RenderingDependencies.swift in Sources */,
 				1ED44B3929B21A900091CDAE /* ImportVerifier.swift in Sources */,
 				1ED44B5029B21A900091CDAE /* PetsAssets.swift in Sources */,

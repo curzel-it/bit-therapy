@@ -10,10 +10,23 @@ class AppConfig: ObservableObject {
     @Published var disabledScreens: [String] = []
     @Published var gravityEnabled = true
     @Published var bounceOffPetsEnabled = false
-    @Published var launchSilently = false
+    @Published var launchSilently = false {
+        didSet {
+            if launchSilently {
+                showInMenuBar = true
+            }
+        }
+    }
     @Published var names: [String: String] = [:]
     @Published var petSize: CGFloat = PetSize.defaultSize
     @Published var randomEvents = true
+    @Published var showInMenuBar = true {
+        didSet {
+            if !showInMenuBar {
+                launchSilently = false
+            }
+        }
+    }
     @Published var speedMultiplier: CGFloat = 1
     @Published private(set) var selectedSpecies: [String] = []
     
@@ -67,6 +80,7 @@ class AppConfig: ObservableObject {
         speedMultiplier = storage.speedMultiplier
         disabledScreens = storage.disabledScreens
         randomEvents = storage.randomEvents
+        showInMenuBar = storage.showInMenuBar
     }
 }
 
