@@ -42,7 +42,7 @@ Updating is easy, just change your animations position from the old format:
 ```
 To the new one:
 ``` json
-"position": "fromEntityBottomLeft",
+"position": "fromEntityBottomLeft"
 ```
 
 You will need to delete your pet from the app and re-import it.
