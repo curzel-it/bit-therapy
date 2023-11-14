@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "barebones",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/barebones",
+      "state" : {
+        "revision" : "3c0d647c8be47247aaeaafc41acfc0e538cdf716",
+        "version" : "1.0.4"
+      }
+    },
+    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk.git",

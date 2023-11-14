@@ -143,6 +143,13 @@ enum Lang {
         static let twitter = "urls.twitter".localized()
         static let youtube = "urls.youtube".localized()
     }
+
+    enum Youtube {
+        static let cybertruckTitle = "youtube.cybertruckTitle".localized()
+        static let cybertruckMessage = "youtube.cybertruckMessage".localized()
+        static let cybertruckAction = "youtube.cybertruckAction".localized()
+        static let cybertruckLink = "youtube.cybertruckLink".localized()
+    }
 }
 
 extension Lang {
@@ -153,7 +160,7 @@ extension Lang {
         }
 
         static func about(for id: String) -> String {
-            "species.about.\(id)".localized(or: "")
+            "species.about.\(id)".localized(or: Lang.CustomPets.customPetDescription)
         }
     }
 }

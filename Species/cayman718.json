@@ -26,5 +26,6 @@
   "tags": ["memes"],
   "id": "cayman718",
   "movementPath": "walk",
-  "speed": 1.7
+  "speed": 1.7,
+  "scale": 1.5
 }

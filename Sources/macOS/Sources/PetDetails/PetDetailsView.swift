@@ -60,7 +60,7 @@ private struct Footer: View {
     
     var body: some View {
         VHStack(axis) {
-            if viewModel.canSelect {
+            if viewModel.canSelect && viewModel.canBeAdded {
                 Button(Lang.PetSelection.addPet, action: viewModel.selected)
                     .buttonStyle(.regular)
             }

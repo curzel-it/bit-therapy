@@ -233,6 +233,10 @@
 		641BE5142AC31C9300A87232 /* PetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE5132AC31C9300A87232 /* PetSize.swift */; };
 		641BE5152AC31C9300A87232 /* PetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BE5132AC31C9300A87232 /* PetSize.swift */; };
 		641E19702AA674C2002899D8 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641E196F2AA674C2002899D8 /* NotificationsService.swift */; };
+		6437A6D42B041ACD00C2D8D7 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437A6D32B041ACD00C2D8D7 /* RemoteConfig.swift */; };
+		6437A6D52B041ACD00C2D8D7 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437A6D32B041ACD00C2D8D7 /* RemoteConfig.swift */; };
+		6437A6D72B041AE300C2D8D7 /* BareBones in Frameworks */ = {isa = PBXBuildFile; productRef = 6437A6D62B041AE300C2D8D7 /* BareBones */; };
+		6437A6D92B041AEA00C2D8D7 /* BareBones in Frameworks */ = {isa = PBXBuildFile; productRef = 6437A6D82B041AEA00C2D8D7 /* BareBones */; };
 		643C2FA02ADAF70400BC3C32 /* NotAGif in Frameworks */ = {isa = PBXBuildFile; productRef = 643C2F9F2ADAF70400BC3C32 /* NotAGif */; };
 		643C2FA22ADAF70C00BC3C32 /* NotAGif in Frameworks */ = {isa = PBXBuildFile; productRef = 643C2FA12ADAF70C00BC3C32 /* NotAGif */; };
 		643C2FA42ADAF75800BC3C32 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 643C2FA32ADAF75800BC3C32 /* Schwifty */; };
@@ -497,6 +501,7 @@
 		641BE4EF2AC2F54100A87232 /* BitTherapyMobileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileTests.swift; sourceTree = "<group>"; };
 		641BE5132AC31C9300A87232 /* PetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSize.swift; sourceTree = "<group>"; };
 		641E196F2AA674C2002899D8 /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
+		6437A6D32B041ACD00C2D8D7 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		644D7A572AC088ED00EDA4A9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		644D7A592AC088ED00EDA4A9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		6457E5B12ADAF5BC00F1D7A7 /* MovesLinearlyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesLinearlyTests.swift; sourceTree = "<group>"; };
@@ -569,6 +574,7 @@
 			files = (
 				1E8D068829B4DF8B009C2B34 /* Schwifty in Frameworks */,
 				1ED44B7C29B21AD50091CDAE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				6437A6D72B041AE300C2D8D7 /* BareBones in Frameworks */,
 				1ED44B7E29B21AD50091CDAE /* FirebaseCrashlytics in Frameworks */,
 				1ED44B7429B21AD50091CDAE /* LaunchAtLogin in Frameworks */,
 				1ED44B7829B21AD50091CDAE /* RateKit in Frameworks */,
@@ -599,6 +605,7 @@
 			files = (
 				1EF8641F29B22F2500413AEA /* FirebaseCrashlytics in Frameworks */,
 				1E1CF22A29B2C5E30018A994 /* WindowsDetector in Frameworks */,
+				6437A6D92B041AEA00C2D8D7 /* BareBones in Frameworks */,
 				1EF8641D29B22F2500413AEA /* FirebaseAnalyticsSwift in Frameworks */,
 				643C2FA42ADAF75800BC3C32 /* Schwifty in Frameworks */,
 				1EF8642129B22F2500413AEA /* Swinject in Frameworks */,
@@ -1143,6 +1150,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6437A6D22B041AB600C2D8D7 /* RemoteConfig */ = {
+			isa = PBXGroup;
+			children = (
+				6437A6D32B041ACD00C2D8D7 /* RemoteConfig.swift */,
+			);
+			path = RemoteConfig;
+			sourceTree = "<group>";
+		};
 		6457E5C52ADAF5C700F1D7A7 /* Yage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1237,6 +1252,7 @@
 				1EAEA8F02970D32900AB3EB0 /* OnScreen */,
 				1E185F7429B2450E0042E537 /* PetDetails */,
 				1E36C818295F533D008EFB28 /* PetsSelection */,
+				6437A6D22B041AB600C2D8D7 /* RemoteConfig */,
 				1E1CF22129B2BCE80018A994 /* Screensaver */,
 				1E185F6629B2381B0042E537 /* Settings */,
 				1E36C811295F4DB6008EFB28 /* StatusBar */,
@@ -1332,6 +1348,7 @@
 				1ED44B8E29B229180091CDAE /* WindowsDetector */,
 				1E8D068729B4DF8B009C2B34 /* Schwifty */,
 				643C2F9F2ADAF70400BC3C32 /* NotAGif */,
+				6437A6D62B041AE300C2D8D7 /* BareBones */,
 			);
 			productName = "Desktop Pets";
 			productReference = 1E9505B129B21341007666BF /* BitTherapy.app */;
@@ -1395,6 +1412,7 @@
 				1E1CF22929B2C5E30018A994 /* WindowsDetector */,
 				643C2FA12ADAF70C00BC3C32 /* NotAGif */,
 				643C2FA32ADAF75800BC3C32 /* Schwifty */,
+				6437A6D82B041AEA00C2D8D7 /* BareBones */,
 			);
 			productName = "Mobile Pets";
 			productReference = 1EF863E929B22DD400413AEA /* BitTherapyMobile.app */;
@@ -1504,6 +1522,7 @@
 				1ED44B8B29B228FC0091CDAE /* XCRemoteSwiftPackageReference "WindowsDetector" */,
 				1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */,
 				643C2F9E2ADAF6F400BC3C32 /* XCRemoteSwiftPackageReference "NotAGif" */,
+				6437A6D12B04160400C2D8D7 /* XCRemoteSwiftPackageReference "barebones" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -1751,6 +1770,7 @@
 				6457E6082ADAF62000F1D7A7 /* Seeker.swift in Sources */,
 				1E07319829BA9D4500E31EED /* LaunchAtLoginSettings.swift in Sources */,
 				1ED44B5629B21A900091CDAE /* ImportPetDragAndDropUseCase.swift in Sources */,
+				6437A6D42B041ACD00C2D8D7 /* RemoteConfig.swift in Sources */,
 				1E185F8529B247FA0042E537 /* PetDetailsHeader.swift in Sources */,
 				1ED44B6629B21A900091CDAE /* RenamePetButtonCoordinator.swift in Sources */,
 				1ED44B4629B21A900091CDAE /* ExportPetButtonCoordinator.swift in Sources */,
@@ -1908,6 +1928,7 @@
 				1E185F6C29B239340042E537 /* PetsSelectionViewModel.swift in Sources */,
 				1E185F5929B234970042E537 /* AppConfigStorage.swift in Sources */,
 				1EFECB5929B72B7600C7A028 /* LaunchAtLogin.swift in Sources */,
+				6437A6D52B041ACD00C2D8D7 /* RemoteConfig.swift in Sources */,
 				1EF8642429B22F5C00413AEA /* SwinjectUtils.swift in Sources */,
 				1E185F5629B2348A0042E537 /* Spacing.swift in Sources */,
 				1EB2BBB029B29E1600E7EF8F /* OnScreenCoordinatorImpl.swift in Sources */,
@@ -2122,7 +2143,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 205102;
+				CURRENT_PROJECT_VERSION = 205202;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -2135,7 +2156,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.51;
+				MARKETING_VERSION = 2.52;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2159,7 +2180,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 205102;
+				CURRENT_PROJECT_VERSION = 205202;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -2172,7 +2193,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.51;
+				MARKETING_VERSION = 2.52;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2725,6 +2746,14 @@
 				minimumVersion = 1.0.5;
 			};
 		};
+		6437A6D12B04160400C2D8D7 /* XCRemoteSwiftPackageReference "barebones" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/curzel-it/barebones";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 		643C2F9E2ADAF6F400BC3C32 /* XCRemoteSwiftPackageReference "NotAGif" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/curzel-it/NotAGif";
@@ -2843,6 +2872,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E5AACAA29716C2E007531DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		6437A6D62B041AE300C2D8D7 /* BareBones */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6437A6D12B04160400C2D8D7 /* XCRemoteSwiftPackageReference "barebones" */;
+			productName = BareBones;
+		};
+		6437A6D82B041AEA00C2D8D7 /* BareBones */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6437A6D12B04160400C2D8D7 /* XCRemoteSwiftPackageReference "barebones" */;
+			productName = BareBones;
 		};
 		643C2F9F2ADAF70400BC3C32 /* NotAGif */ = {
 			isa = XCSwiftPackageProductDependency;

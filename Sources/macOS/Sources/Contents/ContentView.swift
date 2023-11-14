@@ -10,7 +10,7 @@ struct ContentView: View {
         ZStack {
             Background()
             if !viewModel.isLoading {
-                contents(of: viewModel.selectedPage)
+                contents(of: viewModel.selectedPage).padding(.top, .md)
                 TabBar(viewModel: viewModel)
                 BackToHomeButton()
             }
