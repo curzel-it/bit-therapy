@@ -47,8 +47,7 @@ private struct PetChilling: View {
         animationFrames = assets.images(for: "cat_blue", animation: "front")
     }
     
-    var body: some View {
-        
+    var body: some View {        
         AnimatedContent(frames: animationFrames, fps: fps) { frame in
             Image(frame: frame)
                 .pixelArt()

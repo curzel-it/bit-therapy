@@ -1,7 +1,7 @@
 "about.leaveReview" = "Deja un comentario";
 "about.leaveReviewMessage" = "¡Apóyanos gratis dejando un comentario!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Política de privacidad";
-"appName" = "BitTherapy";
+"appName" = "Desktop Pets";
 "backgrounds.BackgroundMountainDay" = "Montaña, Dia";
 "backgrounds.BackgroundMountainDynamic" = "Montaña";
 "backgrounds.BackgroundMountainNight" = "Montaña, Noche";
@@ -15,7 +15,7 @@
 "contributors.translator" = "Traductor";
 "customPets.breakingChanges240Title" = "Personaliazar mascotas en version 2.40";
 "customPets.breakingChanges240Message" = "La versión 2.40 introduce algunos cambios en la forma en que se formatea el archivo json para las mascotas personalizadas.\nDesafortunadamente, este es un cambio importante y deberás actualizarlo... ¡Lo sentimos!\nPero no se preocupe, la actualización es fácil y la comunidad de Discord esta ¡aquí para ayudar!";
-"customPets.customPetDescription" = "Esta es una mascota personalizada";
+"customPets.customPetDescription" = "\n";
 "customPets.dragAreaMessage" = "Arrasta y suelta su archivo zip aquí";
 "customPets.export" = "Exportar";
 "customPets.exportSuccess" = "¡Exportacion satisfactoria!";
@@ -229,3 +229,7 @@
 "urls.twitter" = "https://twitter.com/TheBitTherapy";
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Sí";
+"youtube.cybertruckTitle" = "Nueva Mascota: Cybertruck!";
+"youtube.cybertruckMessage" = "En toda su gloria poligonal, ¡ni siquiera notarás que es arte pixelado! Solo hay una pega... ¿Puedes ayudarme a que este video súper incómodo en mi canal de YouTube alcance los 30 me gusta? ¡El Cybertruck estará disponible una vez que lleguemos allí!";
+"youtube.cybertruckAction" = "Ver video";
+"youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

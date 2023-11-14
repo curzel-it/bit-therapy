@@ -44,13 +44,12 @@ private class PetPreviewViewModel: ObservableObject {
     
     init(species: Species) {
         self.species = species
-        loadImage()
         bindTitle()
+        loadImage()
     }
     
     func loadImage() {
-        let path = assets.frames(for: species.id, animation: "front").first
-        previewImage = assets.image(sprite: path)
+        previewImage = assets.previewImage(for: species.id)
     }
     
     private func bindTitle() {

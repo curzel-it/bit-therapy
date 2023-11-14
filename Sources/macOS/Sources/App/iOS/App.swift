@@ -21,6 +21,7 @@ struct MyApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate {
     @Inject private var commandLine: CommandLineUseCase
     @Inject private var onScreen: OnScreenCoordinator
+    @Inject private var remoteConfig: RemoteConfigProvider
     
     private let tag = "AppDelegate"
     
@@ -29,6 +30,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         Logger.log(tag, "Did finish launching")
+        remoteConfig.fetch()
         commandLine.handleCommandLineArgs()
         onScreen.show()
         return true

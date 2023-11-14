@@ -1,7 +1,7 @@
 "about.leaveReview" = "Leave a review";
 "about.leaveReviewMessage" = "Support us for free by leaving a review!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Privacy Policy";
-"appName" = "BitTherapy";
+"appName" = "Desktop Pets";
 "backgrounds.BackgroundMountainDay" = "Mountain, Day";
 "backgrounds.BackgroundMountainDynamic" = "Mountain";
 "backgrounds.BackgroundMountainNight" = "Mountain, Night";
@@ -15,7 +15,7 @@
 "contributors.translator" = "Translator";
 "customPets.breakingChanges240Title" = "Custom Pets updates in version 2.40";
 "customPets.breakingChanges240Message" = "Version 2.40 introduces some changes in how the json file for custom pets is formatted.\nUnfortunately, this is a breaking change, and you will need to update it... Sorry!\nBut worry not, updating is easy and the Discord community is here to help!";
-"customPets.customPetDescription" = "This is a custom pet";
+"customPets.customPetDescription" = "\n";
 "customPets.dragAreaMessage" = "Drag and drop your zip file here";
 "customPets.export" = "Export";
 "customPets.exportSuccess" = "Exported!";
@@ -229,3 +229,7 @@
 "urls.twitter" = "https://twitter.com/TheBitTherapy";
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Yes";
+"youtube.cybertruckTitle" = "New Pet: Cybertruck!";
+"youtube.cybertruckMessage" = "In all it's polygonal glory, you won't even notice it's pixel art!\nJust one catch... Can you help me get this super cringe video on my YouTube channel reach 30 likes?\nCybertruck will become available once we get there!";
+"youtube.cybertruckAction" = "Watch video";
+"youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

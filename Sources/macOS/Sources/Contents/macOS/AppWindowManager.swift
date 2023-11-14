@@ -18,7 +18,7 @@ class AppWindowManager {
     func build() -> NSWindow {
         let window = AppWindow(
             contentRect: initialContentRect(),
-            styleMask: [.resizable, .closable, .titled, .miniaturizable],// .fullScreen, .fullSizeContentView],
+            styleMask: [.resizable, .closable, .titled, .miniaturizable],
             backing: .buffered,
             defer: false
         )
@@ -28,6 +28,7 @@ class AppWindowManager {
     }
     
     func customize(_ window: NSWindow) {
+        window.styleMask = [.resizable, .closable, .titled, .miniaturizable]
         window.setFrame(initialContentRect(), display: true)
         window.minSize = MacContentView.minSize
         window.title = Lang.appName

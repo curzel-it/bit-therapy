@@ -15,7 +15,7 @@
 "contributors.translator" = "翻译家";
 "customPets.breakingChanges240Title" = "版本2.40中的自定义宠物更新";
 "customPets.breakingChanges240Message" = "版本2.40介绍了定制宠物的JSON文件的格式化的一些更改。在这里帮助！";
-"customPets.customPetDescription" = "这是一只自定义的宠物";
+"customPets.customPetDescription" = "\n";
 "customPets.dragAreaMessage" = "将您的压缩文件拖放到这里";
 "customPets.export" = "导出";
 "customPets.exportSuccess" = "导出成功!";
@@ -229,3 +229,7 @@
 "urls.twitter" = "https://twitter.com/TheBitTherapy";
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "是的";
+"youtube.cybertruckTitle" = "新宠物：赛博卡车！";
+"youtube.cybertruckMessage" = "在它所有的多边形荣耀中，你甚至不会注意到它是像素艺术！只有一个问题... 你能帮我让我的 YouTube 频道上这个超级尴尬的视频达到30个赞吗？一旦我们达到那里，赛博卡车就会变得可用！";
+"youtube.cybertruckAction" = "看视频";
+"youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

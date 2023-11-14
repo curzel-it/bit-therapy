@@ -12,8 +12,10 @@ class PetDetailsViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
     @Inject private var headerBuilder: PetDetailsHeaderBuilder
+    @Inject private var remoteConfig: RemoteConfigProvider
     
     @Binding var isShown: Bool
+    @Published var canBeAdded = true
     @Published var title: String = ""
     
     let species: Species
@@ -37,6 +39,7 @@ class PetDetailsViewModel: ObservableObject {
         self.speciesAbout = Lang.Species.about(for: species.id)
         self.species = species
         self.bindTitle()
+        self.canBeAdded = !remoteConfig.current().disabledPets.contains(species.id)
     }
     
     func close() {

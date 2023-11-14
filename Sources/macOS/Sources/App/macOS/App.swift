@@ -20,31 +20,37 @@ struct MyApp: App {
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    @Inject private var config: AppConfig
     @Inject private var commandLine: CommandLineUseCase
     @Inject private var notifications: NotificationsService
     @Inject private var onScreen: OnScreenCoordinator
+    @Inject private var remoteConfig: RemoteConfigProvider
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         Logger.log("AppDelegate", "Did finish launching")
         commandLine.handleCommandLineArgs()
         notifications.start()
+        remoteConfig.fetch()
         NSApp.setActivationPolicy(.accessory)
         startApp()
         scheduleAskForRatingIfNeeded()
     }
     
     func applicationDidChangeScreenParameters(_ notification: Notification) {
-        Logger.log("App", "Screen params changed, relaunching species...")
+        Logger.log("App", "Screen params changed, relaunching...")
         onScreen.hide()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             self?.onScreen.show()
         }
     }
     
     private func startApp() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            self?.onScreen.show()
-            StatusBarCoordinator.shared.show()
+            guard let self else { return }
+            self.onScreen.show()
+            if config.showInMenuBar {
+                StatusBarCoordinator.shared.show()
+            }
         }
     }
     

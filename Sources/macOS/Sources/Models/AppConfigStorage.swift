@@ -14,6 +14,7 @@ protocol AppConfigStorage {
     var petSize: Double { get }
     var selectedSpecies: [String] { get }
     var speedMultiplier: Double { get }
+    var showInMenuBar: Bool { get }
     
     func storeValues(of appConfig: AppConfig)
 }
@@ -32,6 +33,7 @@ class AppConfigStorageImpl: AppConfigStorage {
     @AppStorage("petSize") var petSize = PetSize.defaultSize
     @AppStorage("petId") private var selectedSpeciesValue = kInitialPetId
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
+    @AppStorage("showInMenuBar") var showInMenuBar: Bool = true
     
     var disabledScreens: [String] {
         get {
@@ -115,6 +117,10 @@ class AppConfigStorageImpl: AppConfigStorage {
         
         appConfig.$randomEvents
             .sink { [weak self] in self?.randomEvents = $0 }
+            .store(in: &disposables)
+        
+        appConfig.$showInMenuBar
+            .sink { [weak self] in self?.showInMenuBar = $0 }
             .store(in: &disposables)
     }
 }

@@ -1,7 +1,7 @@
 "about.leaveReview" = "Lascia una recensione";
 "about.leaveReviewMessage" = "Supportaci lasciando una bella recensione!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Privacy Policy";
-"appName" = "BitTherapy";
+"appName" = "Desktop Pets";
 "backgrounds.BackgroundMountainDay" = "Montagna, Giorno";
 "backgrounds.BackgroundMountainDynamic" = "Montagna";
 "backgrounds.BackgroundMountainNight" = "Montagna, Notte";
@@ -15,7 +15,7 @@
 "contributors.translator" = "Traduttore";
 "customPets.breakingChanges240Title" = "Custom pets nella versione 2.40";
 "customPets.breakingChanges240Message" = "La versione 2.40 introduce alcune modifiche a come viene formattato il file JSON per gli animali domestici personalizzati. Qui per aiutarti!";
-"customPets.customPetDescription" = "Questo è un pet custom";
+"customPets.customPetDescription" = "\n";
 "customPets.dragAreaMessage" = "Trascina il tuo file zip qui";
 "customPets.export" = "Esporta";
 "customPets.exportSuccess" = "Fatto!";
@@ -51,7 +51,7 @@
 "no" = "No";
 "ok" = "Ok";
 "onboarding.title" = "Benvenuto!";
-"onboarding.message" = "Questa è un'app pensata per il relax e la meditazione ... Scegli i tuoi personaggi preferiti e guardali camminare e scherzare nell'app mentre studi o lavori, ti terranno compagnia!";
+"onboarding.message" = "Questa è un'app destinata a rilassarsi e meditazione ... scegli i tuoi personaggi preferiti e guardali andare intorno all'app mentre studi o lavori, ti terranno compagnia!";
 "page.about" = "Informazioni";
 "page.contributors" = "Contributors";
 "page.help" = "Aiuto";
@@ -229,3 +229,7 @@
 "urls.twitter" = "https://twitter.com/TheBitTherapy";
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Sì";
+"youtube.cybertruckTitle" = "Nuovo Pet: Cybertruck!";
+"youtube.cybertruckMessage" = "In tutta la sua gloria poligonale, non noterai nemmeno che è pixel art! C'è solo una condizione... Diventerà disponibile solo se questo video terribile e super-cringe raggiungerà i 30 like!";
+"youtube.cybertruckAction" = "Guarda il video";
+"youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

@@ -16,13 +16,15 @@ struct NewsView: View {
             )
             .padding(.bottom, .xxl)
         }
-        if viewModel.showBreakingChangesForVersion240 {
+        if viewModel.showCybertruckAlert {
             NewsBanner(
-                title: Lang.CustomPets.breakingChanges240Title,
-                message: Lang.CustomPets.breakingChanges240Message,
+                title: Lang.Youtube.cybertruckTitle,
+                message: Lang.Youtube.cybertruckMessage,
                 actions: [
-                    .init(title: Lang.ok, style: .text) { viewModel.showBreakingChangesForVersion240 = false },
-                        .init(title: Lang.CustomPets.readTheDocs, style: .regular, action: viewModel.showCustomPetsDocs)
+                    .init(title: Lang.Youtube.cybertruckAction, style: .regular) {
+                        let url = URL(string: Lang.Youtube.cybertruckLink) ?? URL(string: Lang.Urls.youtube)
+                        url?.visit()
+                    }
                 ]
             )
             .padding(.bottom, .xxl)
@@ -35,18 +37,19 @@ private class NewsViewModel: ObservableObject {
     @Inject private var speciesProvider: SpeciesProvider
     
     @Published var showStartAtLoginAlert: Bool = false
-    @Published var showBreakingChangesForVersion240: Bool = false
+    @Published var showCybertruckAlert: Bool = false
     
     @AppStorage("didShowLaunchAtLoginAlert") private var didShowLaunchAtLoginAlert = false
-    @AppStorage("didShowBreakingChangesForVersion240") private var didShowBreakingChangesForVersion240 = false
+    @AppStorage("didShowCybertruckLaunchVideo") private var didShowCybertruckLaunchVideo = false
     
     init() {
         showStartAtLoginAlert = !didShowLaunchAtLoginAlert && launchAtLogin.isAvailable && !launchAtLogin.isEnabled
         if showStartAtLoginAlert {
             didShowLaunchAtLoginAlert = true
         }
-        showBreakingChangesForVersion240 = !didShowBreakingChangesForVersion240 && hasAnyCustomPets()
-        didShowBreakingChangesForVersion240 = true
+        
+        showCybertruckAlert = !didShowCybertruckLaunchVideo
+        didShowCybertruckLaunchVideo = true
     }
     
     private func hasAnyCustomPets() -> Bool {
