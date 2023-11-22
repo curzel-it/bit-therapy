@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "欢迎！";
 "onboarding.message" = "这是一个用于放松和冥想的应用程序...挑选您喜欢的角色，并在您学习或工作时看着他们在应用程序中漫步，他们会让您保持陪伴！";
+"onboarding.customPetsTitle" = "定制角色？";
+"onboarding.customPetsMessage" = "你知道你可以创建自己的角色吗？滚动到页面底部学习如何做！";
 "page.about" = "信息";
 "page.contributors" = "贡献者";
 "page.help" = "帮助";

@@ -70,6 +70,8 @@ enum Lang {
     enum Onboarding {
         static let title = "onboarding.title".localized()
         static let message = "onboarding.message".localized()
+        static let customPetsTitle = "onboarding.customPetsTitle".localized()
+        static let customPetsMessage = "onboarding.customPetsMessage".localized()
     }
 
     enum Page {

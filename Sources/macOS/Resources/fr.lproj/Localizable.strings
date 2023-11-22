@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "Accueillir!";
 "onboarding.message" = "Ceci est une application destinée à la détente et à la méditation ... choisissez vos personnages préférés et regardez-les se promener dans l'application pendant que vous étudiez ou travaillez, ils vous tiendront compagnie!";
+"onboarding.customPetsTitle" = "Personnages personnalisés ?";
+"onboarding.customPetsMessage" = "Saviez-vous que vous pouvez créer vos propres personnages ? Faites défiler jusqu'en bas de la page pour apprendre comment !";
 "page.about" = "À propos";
 "page.contributors" = "Contributors";
 "page.help" = "Aide";

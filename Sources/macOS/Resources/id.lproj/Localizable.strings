@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "Selamat datang!";
 "onboarding.message" = "Ini adalah aplikasi yang dimaksudkan untuk bersantai dan meditasi ... pilihlah karakter favorit Anda dan tontonlah mereka berjalan di sekitar aplikasi saat Anda belajar atau bekerja, mereka akan menemani Anda!";
+"onboarding.customPetsTitle" = "Karakter kustom?";
+"onboarding.customPetsMessage" = "Tahukah Anda bahwa Anda dapat membuat karakter Anda sendiri? Gulir ke bawah halaman untuk mengetahui caranya!";
 "page.about" = "Tentang";
 "page.contributors" = "Kontributor";
 "page.help" = "Bantuan";

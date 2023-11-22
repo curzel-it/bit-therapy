@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "Welcome!";
 "onboarding.message" = "This is an app meant for relax and meditation... Pick you favorite characters and watch them walk around the app while you study or work, they'll keep you company!";
+"onboarding.customPetsTitle" = "Custom characters?";
+"onboarding.customPetsMessage" = "Did you know you can create your own characters? Scroll to the bottom of the homepage to learn how!";
 "page.about" = "About";
 "page.contributors" = "Contributors";
 "page.help" = "Help";

@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "¡Bienvenido!";
 "onboarding.message" = "Esta es una aplicación destinada a la relajación y la meditación... Elige a tus personajes favoritos y míralos caminar y jugar en la pantalla de tu dispositivo mientras estudias o trabajas, ¡te harán compañía!";
+"onboarding.customPetsTitle" = "¿Personajes personalizados?";
+"onboarding.customPetsMessage" = "¿Sabías que puedes crear tus propios personajes? Desplázate hasta el final de la página para aprender cómo!";
 "page.about" = "Acerca de";
 "page.contributors" = "Colaboradores";
 "page.help" = "Ayuda";
