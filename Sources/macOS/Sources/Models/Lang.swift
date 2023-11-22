@@ -99,6 +99,7 @@ enum Lang {
         static let desktopInteractionsMessage = "settings.desktopInteractionsMessage".localized()
         static let desktopInteractionsTitle = "settings.desktopInteractionsTitle".localized()
         static let enabledDisplays = "settings.enabledDisplays".localized()
+        static let floatOverFullscreenApps = "settings.floatOverFullscreenApps".localized()
         static let gravity = "settings.gravity".localized()
         static let launchAtLogin = "settings.launchAtLogin".localized()
         static let launchAtLoginPromo = "settings.launchAtLoginPromo".localized()

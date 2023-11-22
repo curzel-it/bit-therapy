@@ -76,6 +76,7 @@
 "settings.desktopInteractionsMessage" = "Permite que las mascotas caminen por la barra de título de otras ventanas de aplicaciones.\nEs genial, pero solo funciona si tienes una sola pantalla, ¡lo siento!";
 "settings.desktopInteractionsTitle" = "Interacciones de escritorio";
 "settings.enabledDisplays" = "Pantallas habilitadas";
+"settings.floatOverFullscreenApps" = "Επιτρέψτε πάνω από εφαρμογές πλήρους οθόνης\n(Απαιτεί επανεκκίνηση της εφαρμογής)";
 "settings.gravity" = "Habilitar la gravedad";
 "settings.launchAtLogin" = "Iniciar automáticamente";
 "settings.launchAtLoginPromo" = "¿Desea que la aplicación se inicie automáticamente cuando inicie sesión?";
@@ -230,6 +231,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Sí";
 "youtube.cybertruckTitle" = "Nueva Mascota: Cybertruck!";
-"youtube.cybertruckMessage" = "En toda su gloria poligonal, ¡ni siquiera notarás que es arte pixelado! Solo hay una pega... ¿Puedes ayudarme a que este video súper incómodo en mi canal de YouTube alcance los 30 me gusta? ¡El Cybertruck estará disponible una vez que lleguemos allí!";
+"youtube.cybertruckMessage" = "En toda su gloria poligonal, ¡ni siquiera notarás que es arte en píxeles!\nComo agradecimiento, ¿por qué no ves un video súper vergonzoso protagonizado por el Cybertruck en mi canal de YouTube?";
 "youtube.cybertruckAction" = "Ver video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

@@ -76,6 +76,7 @@
 "settings.desktopInteractionsMessage" = "Allows pets to walk on the title bar of other apps windows.\nThis will only works on your main display.";
 "settings.desktopInteractionsTitle" = "Desktop Interactions";
 "settings.enabledDisplays" = "Enabled Displays";
+"settings.floatOverFullscreenApps" = "Allow over fullscreen apps\n(Requires relaunching the app)";
 "settings.gravity" = "Enable gravity";
 "settings.launchAtLogin" = "Launch automatically";
 "settings.launchAtLoginPromo" = "Would you like the app to start automatically when you login?";
@@ -230,6 +231,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Yes";
 "youtube.cybertruckTitle" = "New Pet: Cybertruck!";
-"youtube.cybertruckMessage" = "In all it's polygonal glory, you won't even notice it's pixel art!\nJust one catch... Can you help me get this super cringe video on my YouTube channel reach 30 likes?\nCybertruck will become available once we get there!";
+"youtube.cybertruckMessage" = "In all it's polygonal glory, you won't even notice it's pixel art!\nAs a thanks, why not watch a super cringe video starring the Cybertruck on my YouTube channel?";
 "youtube.cybertruckAction" = "Watch video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

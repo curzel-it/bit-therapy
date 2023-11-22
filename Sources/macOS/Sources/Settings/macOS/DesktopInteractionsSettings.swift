@@ -29,3 +29,17 @@ struct DesktopInteractionsSwitch: View {
         .positioned(.leading)
     }
 }
+
+struct FloatOverFullScreenAppsSwitch: View {
+    @EnvironmentObject private var appConfig: AppConfig
+    
+    @State private var showingDetails = false
+    
+    var body: some View {
+        SettingsSwitch(
+            label: Lang.Settings.floatOverFullscreenApps,
+            value: $appConfig.floatOverFullscreenApps
+        )
+        .positioned(.leading)
+    }
+}

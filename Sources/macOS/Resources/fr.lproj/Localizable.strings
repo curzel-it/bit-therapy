@@ -76,6 +76,7 @@
 "settings.desktopInteractionsMessage" = "Autorise les animaux domestiques à marcher sur la barre de titre des autres fenêtres d'applications.\nCela ne fonctionnera que sur votre écran principal.";
 "settings.desktopInteractionsTitle" = "Interactions avec les fenêtres";
 "settings.enabledDisplays" = "Écrans activés";
+"settings.floatOverFullscreenApps" = "Toestaan over volledigscherm-apps\n(Vereist het opnieuw starten van de app)";
 "settings.gravity" = "Activer la gravité";
 "settings.launchAtLogin" = "Démarrer automatiquement";
 "settings.launchAtLoginPromo" = "Souhaitez-vous que l'application démarre automatiquement lorsque vous vous connectez ?";
@@ -230,6 +231,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Oui";
 "youtube.cybertruckTitle" = "Nouvel Animal de Compagnie : Cybertruck !";
-"youtube.cybertruckMessage" = "Dans toute sa gloire polygonale, vous ne remarquerez même pas que c'est de l'art en pixels ! Juste un hic... Pouvez-vous m'aider à obtenir 30 j'aime sur cette vidéo super gênante sur ma chaîne YouTube ? Le Cybertruck sera disponible une fois que nous y serons !";
+"youtube.cybertruckMessage" = "Dans toute sa gloire polygonale, vous ne remarquerez même pas que c'est de l'art en pixel !\nEn guise de remerciement, pourquoi ne pas regarder une vidéo super gênante avec le Cybertruck sur ma chaîne YouTube ?";
 "youtube.cybertruckAction" = "Regarder la vidéo";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

@@ -85,6 +85,7 @@ if __name__ == "__main__":
 1. Download and setup Xcode
 1. Open the `Sources/macOS/BitTherapy.xcworkspace`
 1. Give Xcode some time to figure out dependencies...
+1. The project includes a file called `GoogleService-Info.plist` which is not being versioned, remove it and the app will start without Firebase being enabled
 1. Run
 
 ## YouTube

@@ -76,6 +76,7 @@
 "settings.desktopInteractionsMessage" = "Permette ai pet di muoversi sulla barra del titolo di app e finestre.\nFunzionerà solo sullo schermo principale.";
 "settings.desktopInteractionsTitle" = "Interazioni Desktop";
 "settings.enabledDisplays" = "Display Abilitati";
+"settings.floatOverFullscreenApps" = "Povolit nad aplikacemi na celou obrazovku\n(Vyžaduje restartování aplikace)";
 "settings.gravity" = "Abilita Gravità";
 "settings.launchAtLogin" = "Avvia automaticamente al login";
 "settings.launchAtLoginPromo" = "Vuoi che l'app si avvii automaticamente al login?";
@@ -230,6 +231,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Sì";
 "youtube.cybertruckTitle" = "Nuovo Pet: Cybertruck!";
-"youtube.cybertruckMessage" = "In tutta la sua gloria poligonale, non noterai nemmeno che è pixel art! C'è solo una condizione... Diventerà disponibile solo se questo video terribile e super-cringe raggiungerà i 30 like!";
+"youtube.cybertruckMessage" = "In tutta la sua gloria poligonale, non ti accorgerai nemmeno che è pixel art!\nGià che ci siamo, perché non guardi un video super cringe sulle origini del Cybertruck sul mio canale YouTube?";
 "youtube.cybertruckAction" = "Guarda il video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

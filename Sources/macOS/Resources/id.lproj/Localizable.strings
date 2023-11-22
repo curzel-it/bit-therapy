@@ -76,6 +76,7 @@
 "settings.desktopInteractionsMessage" = "Mengizinkan hewan peliharaan berjalan di bilah judul jendela aplikasi lain.\nIni hanya akan berfungsi di layar utama Anda.";
 "settings.desktopInteractionsTitle" = "Interaksi Layar";
 "settings.enabledDisplays" = "Tampilan yang Diaktifkan";
+"settings.floatOverFullscreenApps" = "Autoriser par-dessus les applications en plein écran\n(Nécessite le redémarrage de l'application)";
 "settings.gravity" = "Aktifkan gravitasi";
 "settings.launchAtLogin" = "Tampilkan hewan peliharaan saat Login";
 "settings.launchAtLoginPromo" = "Apakah Anda ingin aplikasi dimulai secara otomatis saat Anda masuk?";
@@ -230,6 +231,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Ya";
 "youtube.cybertruckTitle" = "Hewan Peliharaan Baru: Cybertruck!";
-"youtube.cybertruckMessage" = "Dalam segala kemegahan poligonalnya, Anda bahkan tidak akan menyadari itu adalah seni piksel! Hanya satu masalah... Bisakah Anda membantu saya membuat video super canggung ini di saluran YouTube saya mencapai 30 suka? Cybertruck akan tersedia setelah kita sampai di sana!";
+"youtube.cybertruckMessage" = "Dalam kemegahan poligonalnya, kamu bahkan tidak akan menyadari bahwa ini adalah seni piksel! Sebagai ucapan terima kasih, mengapa tidak menonton video super memalukan yang dibintangi oleh Cybertruck di saluran YouTube saya?";
 "youtube.cybertruckAction" = "Menonton video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

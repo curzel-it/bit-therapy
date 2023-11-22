@@ -76,6 +76,7 @@
 "settings.desktopInteractionsMessage" = "允许宠物在其他应用程序窗口的标题栏上行走。\n这很酷吧，但很抱歉仅当你有只一个显示器时才生效！";
 "settings.desktopInteractionsTitle" = "窗口互动";
 "settings.enabledDisplays" = "开启功能的显示器";
+"settings.floatOverFullscreenApps" = "Erlauben über Vollbild-Apps\n(Erfordert das Neustarten der App)";
 "settings.gravity" = "启用重力感应";
 "settings.launchAtLogin" = "登录时自动启动";
 "settings.launchAtLoginPromo" = "您希望应用程序在您登录时自动启动吗？";
@@ -230,6 +231,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "是的";
 "youtube.cybertruckTitle" = "新宠物：赛博卡车！";
-"youtube.cybertruckMessage" = "在它所有的多边形荣耀中，你甚至不会注意到它是像素艺术！只有一个问题... 你能帮我让我的 YouTube 频道上这个超级尴尬的视频达到30个赞吗？一旦我们达到那里，赛博卡车就会变得可用！";
+"youtube.cybertruckMessage" = "在它的多边形荣耀中，你甚至不会注意到这是像素艺术！作为感谢，为什么不在我的YouTube频道上观看一个由Cybertruck主演的超尴尬视频呢？";
 "youtube.cybertruckAction" = "看视频";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

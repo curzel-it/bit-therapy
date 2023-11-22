@@ -7,6 +7,7 @@ class AppConfig: ObservableObject {
         
     @Published var background: String = "BackgroundMountainDynamic"
     @Published var desktopInteractions: Bool = true
+    @Published var floatOverFullscreenApps: Bool = true
     @Published var disabledScreens: [String] = []
     @Published var gravityEnabled = true
     @Published var bounceOffPetsEnabled = false
@@ -84,6 +85,7 @@ class AppConfig: ObservableObject {
         disabledScreens = storage.disabledScreens
         randomEvents = storage.randomEvents
         showInMenuBar = storage.showInMenuBar
+        floatOverFullscreenApps = storage.floatOverFullscreenApps
     }
 }
 
