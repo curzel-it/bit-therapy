@@ -113,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Une espèce d'êtres planétaires en forme de têtes humaines géantes...\nMontrez-moi ce que vous avez !";
 "species.about.crow" = "Ils volent maintenant ?!";
 "species.about.crow_white" = "L'hiver est arrivé...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Pratique pour retirer les mouches de ton écran.";
 "species.about.frog_venom" = "Qu'est-ce que tu fait ? Arrête de lécher son dos ! 😆";
 "species.about.gazebo" = "A little shade in the garden, to sleep on the grass...";
@@ -173,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Grosse Tête Arc-En-Ciel";
 "species.name.crow" = "Corbeau";
 "species.name.crow_white" = "Corbeau Blanc";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Grenouille";
 "species.name.frog_venom" = "Grenouille Vénonimeuse";
 "species.name.gazebo" = "Belvédère";

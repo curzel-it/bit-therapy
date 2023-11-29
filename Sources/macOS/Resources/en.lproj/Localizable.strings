@@ -113,6 +113,7 @@
 "species.about.cromulon_rainbow" = "A species of planet-sized beings shaped as giant human heads...\nShow me what you got!";
 "species.about.crow" = "They fly now!?";
 "species.about.crow_white" = "Winter is here...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Useful to remove flies off your screen.";
 "species.about.frog_venom" = "What are you doing? Stop licking its back! 😆";
 "species.about.gazebo" = "A little shade in the garden, to sleep on the grass...";
@@ -173,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Big Head Rainbow";
 "species.name.crow" = "Crow";
 "species.name.crow_white" = "White Crow";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Frog";
 "species.name.frog_venom" = "Venomous Frog";
 "species.name.gazebo" = "Gazebo";

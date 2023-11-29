@@ -113,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\Mostrami cosa sai fare!";
 "species.about.crow" = "Il preferito del designer!";
 "species.about.crow_white" = "L'inverno è arrivato...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Mangia le zanzare, quello nello schermo.";
 "species.about.frog_venom" = "Ma che fai? Smetti di leccarle la schiena! 😆";
 "species.about.gazebo" = "Un po di ombra in giardino, per dormire sull'erba...";
@@ -173,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Testone Figo";
 "species.name.crow" = "Corvo";
 "species.name.crow_white" = "Corvo Bianco";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Rana";
 "species.name.frog_venom" = "Rana Velenosa";
 "species.name.gazebo" = "Gazebo";

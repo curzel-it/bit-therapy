@@ -113,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Spesies makhluk seukuran planet berbentuk kepala manusia raksasa...\nTunjukkan kemampuanmu!";
 "species.about.crow" = "Mereka terbang sekarang!?";
 "species.about.crow_white" = "Musim dingin di sini...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Berguna untuk menghilangkan lalat dari layar anda.";
 "species.about.frog_venom" = "Apa yang kamu lakukan? Berhenti menjilati punggungnya! 😆";
 "species.about.gazebo" = "Sedikit berteduh di taman, untuk tidur di rerumputan...";
@@ -173,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Kepala Besar Pelangi";
 "species.name.crow" = "Burung Gagak";
 "species.name.crow_white" = "Burung Gagak Putih";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Katak";
 "species.name.frog_venom" = "Katak Beracun";
 "species.name.gazebo" = "Gazebo";

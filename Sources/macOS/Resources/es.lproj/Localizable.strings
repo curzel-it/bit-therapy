@@ -113,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Una especie de seres del tamaño de un planeta con forma de cabezas humanas gigantes... \n '¡Muéstrame lo que tienes!'";
 "species.about.crow" = "¿¡Vuelan ahora!?";
 "species.about.crow_white" = "El invierno ya está aquí...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Útil para eliminar las moscas de la pantalla.";
 "species.about.frog_venom" = "¿Qué estás haciendo? ¡Deja de lamerle la espalda! 😆";
 "species.about.gazebo" = "Un poco de sombra en el jardín, para dormir en la hierba...";
@@ -173,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Cabeza grande Arcoíris";
 "species.name.crow" = "Cuervo";
 "species.name.crow_white" = "Cuervo blanco";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Rana";
 "species.name.frog_venom" = "Rana venenosa";
 "species.name.gazebo" = "Gazebo";
