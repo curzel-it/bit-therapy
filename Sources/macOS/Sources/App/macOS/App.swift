@@ -31,7 +31,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         commandLine.handleCommandLineArgs()
         notifications.start()
         remoteConfig.fetch()
-        NSApp.setActivationPolicy(.accessory)
+        
+        if config.floatOverFullscreenApps {
+            NSApp.setActivationPolicy(.accessory)
+        } else {
+            NSApp.setActivationPolicy(.regular)
+        }
         startApp()
         scheduleAskForRatingIfNeeded()
     }

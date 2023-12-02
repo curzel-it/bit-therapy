@@ -7,6 +7,7 @@ protocol AppConfigStorage {
     var bounceOffPetsEnabled: Bool { get }
     var desktopInteractions: Bool { get }
     var disabledScreens: [String] { get }
+    var floatOverFullscreenApps: Bool { get }
     var gravityEnabled: Bool { get }
     var launchSilently: Bool { get }
     var names: [String: String] { get }
@@ -34,6 +35,7 @@ class AppConfigStorageImpl: AppConfigStorage {
     @AppStorage("petId") private var selectedSpeciesValue = kInitialPetId
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("showInMenuBar") var showInMenuBar: Bool = true
+    @AppStorage("floatOverFullscreenApps") var floatOverFullscreenApps: Bool = true
     
     var disabledScreens: [String] {
         get {
@@ -85,6 +87,10 @@ class AppConfigStorageImpl: AppConfigStorage {
         
         appConfig.$desktopInteractions
             .sink { [weak self] in self?.desktopInteractions = $0 }
+            .store(in: &disposables)
+        
+        appConfig.$floatOverFullscreenApps
+            .sink { [weak self] in self?.floatOverFullscreenApps = $0 }
             .store(in: &disposables)
         
         appConfig.$gravityEnabled

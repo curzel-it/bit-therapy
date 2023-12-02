@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "欢迎！";
 "onboarding.message" = "这是一个用于放松和冥想的应用程序...挑选您喜欢的角色，并在您学习或工作时看着他们在应用程序中漫步，他们会让您保持陪伴！";
+"onboarding.customPetsTitle" = "定制角色？";
+"onboarding.customPetsMessage" = "你知道你可以创建自己的角色吗？滚动到页面底部学习如何做！";
 "page.about" = "信息";
 "page.contributors" = "贡献者";
 "page.help" = "帮助";
@@ -76,6 +78,7 @@
 "settings.desktopInteractionsMessage" = "允许宠物在其他应用程序窗口的标题栏上行走。\n这很酷吧，但很抱歉仅当你有只一个显示器时才生效！";
 "settings.desktopInteractionsTitle" = "窗口互动";
 "settings.enabledDisplays" = "开启功能的显示器";
+"settings.floatOverFullscreenApps" = "Erlauben über Vollbild-Apps\n(Erfordert das Neustarten der App)";
 "settings.gravity" = "启用重力感应";
 "settings.launchAtLogin" = "登录时自动启动";
 "settings.launchAtLoginPromo" = "您希望应用程序在您登录时自动启动吗？";
@@ -110,6 +113,7 @@
 "species.about.cromulon_rainbow" = "形状像人头，像行星一样大的外星人...\n'让我看看你能做什么!'";
 "species.about.crow" = "设计师们的最爱!";
 "species.about.crow_white" = "冬天来了...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "他吃蚊子，就是屏幕上的那只。";
 "species.about.frog_venom" = "你在干什么？ 别再舔它的背了！ 😆";
 "species.about.gazebo" = "在花园里找个阴凉处，睡在草地上……";
@@ -170,6 +174,7 @@
 "species.name.cromulon_rainbow" = "彩虹色大脑袋";
 "species.name.crow" = "乌鸦";
 "species.name.crow_white" = "白色乌鸦";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "青蛙";
 "species.name.frog_venom" = "有毒青蛙";
 "species.name.gazebo" = "帐篷";
@@ -230,6 +235,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "是的";
 "youtube.cybertruckTitle" = "新宠物：赛博卡车！";
-"youtube.cybertruckMessage" = "在它所有的多边形荣耀中，你甚至不会注意到它是像素艺术！只有一个问题... 你能帮我让我的 YouTube 频道上这个超级尴尬的视频达到30个赞吗？一旦我们达到那里，赛博卡车就会变得可用！";
+"youtube.cybertruckMessage" = "在它的多边形荣耀中，你甚至不会注意到这是像素艺术！作为感谢，为什么不在我的YouTube频道上观看一个由Cybertruck主演的超尴尬视频呢？";
 "youtube.cybertruckAction" = "看视频";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

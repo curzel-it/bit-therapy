@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "Accueillir!";
 "onboarding.message" = "Ceci est une application destinée à la détente et à la méditation ... choisissez vos personnages préférés et regardez-les se promener dans l'application pendant que vous étudiez ou travaillez, ils vous tiendront compagnie!";
+"onboarding.customPetsTitle" = "Personnages personnalisés ?";
+"onboarding.customPetsMessage" = "Saviez-vous que vous pouvez créer vos propres personnages ? Faites défiler jusqu'en bas de la page pour apprendre comment !";
 "page.about" = "À propos";
 "page.contributors" = "Contributors";
 "page.help" = "Aide";
@@ -76,6 +78,7 @@
 "settings.desktopInteractionsMessage" = "Autorise les animaux domestiques à marcher sur la barre de titre des autres fenêtres d'applications.\nCela ne fonctionnera que sur votre écran principal.";
 "settings.desktopInteractionsTitle" = "Interactions avec les fenêtres";
 "settings.enabledDisplays" = "Écrans activés";
+"settings.floatOverFullscreenApps" = "Toestaan over volledigscherm-apps\n(Vereist het opnieuw starten van de app)";
 "settings.gravity" = "Activer la gravité";
 "settings.launchAtLogin" = "Démarrer automatiquement";
 "settings.launchAtLoginPromo" = "Souhaitez-vous que l'application démarre automatiquement lorsque vous vous connectez ?";
@@ -110,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Une espèce d'êtres planétaires en forme de têtes humaines géantes...\nMontrez-moi ce que vous avez !";
 "species.about.crow" = "Ils volent maintenant ?!";
 "species.about.crow_white" = "L'hiver est arrivé...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Pratique pour retirer les mouches de ton écran.";
 "species.about.frog_venom" = "Qu'est-ce que tu fait ? Arrête de lécher son dos ! 😆";
 "species.about.gazebo" = "A little shade in the garden, to sleep on the grass...";
@@ -170,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Grosse Tête Arc-En-Ciel";
 "species.name.crow" = "Corbeau";
 "species.name.crow_white" = "Corbeau Blanc";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Grenouille";
 "species.name.frog_venom" = "Grenouille Vénonimeuse";
 "species.name.gazebo" = "Belvédère";
@@ -230,6 +235,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Oui";
 "youtube.cybertruckTitle" = "Nouvel Animal de Compagnie : Cybertruck !";
-"youtube.cybertruckMessage" = "Dans toute sa gloire polygonale, vous ne remarquerez même pas que c'est de l'art en pixels ! Juste un hic... Pouvez-vous m'aider à obtenir 30 j'aime sur cette vidéo super gênante sur ma chaîne YouTube ? Le Cybertruck sera disponible une fois que nous y serons !";
+"youtube.cybertruckMessage" = "Dans toute sa gloire polygonale, vous ne remarquerez même pas que c'est de l'art en pixel !\nEn guise de remerciement, pourquoi ne pas regarder une vidéo super gênante avec le Cybertruck sur ma chaîne YouTube ?";
 "youtube.cybertruckAction" = "Regarder la vidéo";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

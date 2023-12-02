@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "Benvenuto!";
 "onboarding.message" = "Questa è un'app destinata a rilassarsi e meditazione ... scegli i tuoi personaggi preferiti e guardali andare intorno all'app mentre studi o lavori, ti terranno compagnia!";
+"onboarding.customPetsTitle" = "Personaggi fatti in casa?";
+"onboarding.customPetsMessage" = "Sapevi che puoi creare i tuoi personaggi? Scorri fino in fondo alla pagina per scoprire come!";
 "page.about" = "Informazioni";
 "page.contributors" = "Contributors";
 "page.help" = "Aiuto";
@@ -76,6 +78,7 @@
 "settings.desktopInteractionsMessage" = "Permette ai pet di muoversi sulla barra del titolo di app e finestre.\nFunzionerà solo sullo schermo principale.";
 "settings.desktopInteractionsTitle" = "Interazioni Desktop";
 "settings.enabledDisplays" = "Display Abilitati";
+"settings.floatOverFullscreenApps" = "Povolit nad aplikacemi na celou obrazovku\n(Vyžaduje restartování aplikace)";
 "settings.gravity" = "Abilita Gravità";
 "settings.launchAtLogin" = "Avvia automaticamente al login";
 "settings.launchAtLoginPromo" = "Vuoi che l'app si avvii automaticamente al login?";
@@ -110,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Alieni a forma di teste umane, ma grandi come un pianeta...\n\Mostrami cosa sai fare!";
 "species.about.crow" = "Il preferito del designer!";
 "species.about.crow_white" = "L'inverno è arrivato...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Mangia le zanzare, quello nello schermo.";
 "species.about.frog_venom" = "Ma che fai? Smetti di leccarle la schiena! 😆";
 "species.about.gazebo" = "Un po di ombra in giardino, per dormire sull'erba...";
@@ -170,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Testone Figo";
 "species.name.crow" = "Corvo";
 "species.name.crow_white" = "Corvo Bianco";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Rana";
 "species.name.frog_venom" = "Rana Velenosa";
 "species.name.gazebo" = "Gazebo";
@@ -230,6 +235,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Sì";
 "youtube.cybertruckTitle" = "Nuovo Pet: Cybertruck!";
-"youtube.cybertruckMessage" = "In tutta la sua gloria poligonale, non noterai nemmeno che è pixel art! C'è solo una condizione... Diventerà disponibile solo se questo video terribile e super-cringe raggiungerà i 30 like!";
+"youtube.cybertruckMessage" = "In tutta la sua gloria poligonale, non ti accorgerai nemmeno che è pixel art!\nGià che ci siamo, perché non guardi un video super cringe sulle origini del Cybertruck sul mio canale YouTube?";
 "youtube.cybertruckAction" = "Guarda il video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

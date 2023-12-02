@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "Selamat datang!";
 "onboarding.message" = "Ini adalah aplikasi yang dimaksudkan untuk bersantai dan meditasi ... pilihlah karakter favorit Anda dan tontonlah mereka berjalan di sekitar aplikasi saat Anda belajar atau bekerja, mereka akan menemani Anda!";
+"onboarding.customPetsTitle" = "Karakter kustom?";
+"onboarding.customPetsMessage" = "Tahukah Anda bahwa Anda dapat membuat karakter Anda sendiri? Gulir ke bawah halaman untuk mengetahui caranya!";
 "page.about" = "Tentang";
 "page.contributors" = "Kontributor";
 "page.help" = "Bantuan";
@@ -76,6 +78,7 @@
 "settings.desktopInteractionsMessage" = "Mengizinkan hewan peliharaan berjalan di bilah judul jendela aplikasi lain.\nIni hanya akan berfungsi di layar utama Anda.";
 "settings.desktopInteractionsTitle" = "Interaksi Layar";
 "settings.enabledDisplays" = "Tampilan yang Diaktifkan";
+"settings.floatOverFullscreenApps" = "Autoriser par-dessus les applications en plein écran\n(Nécessite le redémarrage de l'application)";
 "settings.gravity" = "Aktifkan gravitasi";
 "settings.launchAtLogin" = "Tampilkan hewan peliharaan saat Login";
 "settings.launchAtLoginPromo" = "Apakah Anda ingin aplikasi dimulai secara otomatis saat Anda masuk?";
@@ -110,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Spesies makhluk seukuran planet berbentuk kepala manusia raksasa...\nTunjukkan kemampuanmu!";
 "species.about.crow" = "Mereka terbang sekarang!?";
 "species.about.crow_white" = "Musim dingin di sini...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Berguna untuk menghilangkan lalat dari layar anda.";
 "species.about.frog_venom" = "Apa yang kamu lakukan? Berhenti menjilati punggungnya! 😆";
 "species.about.gazebo" = "Sedikit berteduh di taman, untuk tidur di rerumputan...";
@@ -170,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Kepala Besar Pelangi";
 "species.name.crow" = "Burung Gagak";
 "species.name.crow_white" = "Burung Gagak Putih";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Katak";
 "species.name.frog_venom" = "Katak Beracun";
 "species.name.gazebo" = "Gazebo";
@@ -230,6 +235,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Ya";
 "youtube.cybertruckTitle" = "Hewan Peliharaan Baru: Cybertruck!";
-"youtube.cybertruckMessage" = "Dalam segala kemegahan poligonalnya, Anda bahkan tidak akan menyadari itu adalah seni piksel! Hanya satu masalah... Bisakah Anda membantu saya membuat video super canggung ini di saluran YouTube saya mencapai 30 suka? Cybertruck akan tersedia setelah kita sampai di sana!";
+"youtube.cybertruckMessage" = "Dalam kemegahan poligonalnya, kamu bahkan tidak akan menyadari bahwa ini adalah seni piksel! Sebagai ucapan terima kasih, mengapa tidak menonton video super memalukan yang dibintangi oleh Cybertruck di saluran YouTube saya?";
 "youtube.cybertruckAction" = "Menonton video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

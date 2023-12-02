@@ -52,6 +52,8 @@
 "ok" = "Ok";
 "onboarding.title" = "¡Bienvenido!";
 "onboarding.message" = "Esta es una aplicación destinada a la relajación y la meditación... Elige a tus personajes favoritos y míralos caminar y jugar en la pantalla de tu dispositivo mientras estudias o trabajas, ¡te harán compañía!";
+"onboarding.customPetsTitle" = "¿Personajes personalizados?";
+"onboarding.customPetsMessage" = "¿Sabías que puedes crear tus propios personajes? Desplázate hasta el final de la página para aprender cómo!";
 "page.about" = "Acerca de";
 "page.contributors" = "Colaboradores";
 "page.help" = "Ayuda";
@@ -76,6 +78,7 @@
 "settings.desktopInteractionsMessage" = "Permite que las mascotas caminen por la barra de título de otras ventanas de aplicaciones.\nEs genial, pero solo funciona si tienes una sola pantalla, ¡lo siento!";
 "settings.desktopInteractionsTitle" = "Interacciones de escritorio";
 "settings.enabledDisplays" = "Pantallas habilitadas";
+"settings.floatOverFullscreenApps" = "Επιτρέψτε πάνω από εφαρμογές πλήρους οθόνης\n(Απαιτεί επανεκκίνηση της εφαρμογής)";
 "settings.gravity" = "Habilitar la gravedad";
 "settings.launchAtLogin" = "Iniciar automáticamente";
 "settings.launchAtLoginPromo" = "¿Desea que la aplicación se inicie automáticamente cuando inicie sesión?";
@@ -110,6 +113,7 @@
 "species.about.cromulon_rainbow" = "Una especie de seres del tamaño de un planeta con forma de cabezas humanas gigantes... \n '¡Muéstrame lo que tienes!'";
 "species.about.crow" = "¿¡Vuelan ahora!?";
 "species.about.crow_white" = "El invierno ya está aquí...";
+"species.about.cybertruck" = "🔲⚡💪🛠️🪟🔒💥";
 "species.about.frog" = "Útil para eliminar las moscas de la pantalla.";
 "species.about.frog_venom" = "¿Qué estás haciendo? ¡Deja de lamerle la espalda! 😆";
 "species.about.gazebo" = "Un poco de sombra en el jardín, para dormir en la hierba...";
@@ -170,6 +174,7 @@
 "species.name.cromulon_rainbow" = "Cabeza grande Arcoíris";
 "species.name.crow" = "Cuervo";
 "species.name.crow_white" = "Cuervo blanco";
+"species.name.cybertruck" = "Cybertruck";
 "species.name.frog" = "Rana";
 "species.name.frog_venom" = "Rana venenosa";
 "species.name.gazebo" = "Gazebo";
@@ -230,6 +235,6 @@
 "urls.youtube" = "https://www.youtube.com/@BitTherapy";
 "yes" = "Sí";
 "youtube.cybertruckTitle" = "Nueva Mascota: Cybertruck!";
-"youtube.cybertruckMessage" = "En toda su gloria poligonal, ¡ni siquiera notarás que es arte pixelado! Solo hay una pega... ¿Puedes ayudarme a que este video súper incómodo en mi canal de YouTube alcance los 30 me gusta? ¡El Cybertruck estará disponible una vez que lleguemos allí!";
+"youtube.cybertruckMessage" = "En toda su gloria poligonal, ¡ni siquiera notarás que es arte en píxeles!\nComo agradecimiento, ¿por qué no ves un video súper vergonzoso protagonizado por el Cybertruck en mi canal de YouTube?";
 "youtube.cybertruckAction" = "Ver video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

@@ -6,3 +6,4 @@ typealias LaunchAtLoginSwitch = EmptyView
 typealias LaunchSilentlySwitch = EmptyView
 typealias ScreensOnOffSettings = EmptyView
 typealias MenuBarSwitch = EmptyView
+typealias FloatOverFullScreenAppsSwitch = EmptyView

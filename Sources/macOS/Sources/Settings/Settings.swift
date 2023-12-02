@@ -34,6 +34,7 @@ private struct Switches: View {
             BounceOffOtherPets()
             MenuBarSwitch()
             DesktopInteractionsSwitch()
+            FloatOverFullScreenAppsSwitch()
             RandomEventsSwitch()
         }
     }

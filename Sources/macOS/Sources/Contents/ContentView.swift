@@ -35,14 +35,13 @@ private class ContentViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
     @Inject private var species: SpeciesProvider
     @Inject private var theme: ThemeUseCase
-    
-    let backgroundBlurRadius: CGFloat = 10
-    
+        
     @Published var tabBarHidden: Bool = false
     @Published var isLoading: Bool = true
     @Published var backgroundImage: String = ""
     @Published var colorScheme: ColorScheme?
     @Published var selectedPage: AppPage = .petSelection
+    @Published var backgroundBlurRadius: CGFloat = 10
     
     lazy var options: [AppPage] = {
         if DeviceRequirement.iOS.isSatisfied {
@@ -57,17 +56,18 @@ private class ContentViewModel: ObservableObject {
     init() {
         selectedPage = .petSelection
         backgroundImage = appConfig.background
-        bindTabBarHidden()
+        bindScreensaverSettings()
         bindBackground()
         bindColorScheme()
         bindLoading()
     }
     
-    private func bindTabBarHidden() {
+    private func bindScreensaverSettings() {
         $selectedPage
             .sink { [weak self] selection in
                 withAnimation {
                     self?.tabBarHidden = selection == .screensaver
+                    self?.backgroundBlurRadius = selection == .screensaver ? 0 : 10
                 }
             }
             .store(in: &disposables)

@@ -11,6 +11,8 @@ protocol EntityView: SomeView {
 }
 
 class WorldWindow: NSWindow {
+    @Inject private var appConfig: AppConfig
+    
     static weak var current: NSWindow?
     private let viewModel: WorldWindowViewModel
     
