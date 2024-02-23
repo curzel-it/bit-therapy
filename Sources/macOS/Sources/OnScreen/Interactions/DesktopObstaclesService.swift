@@ -41,7 +41,7 @@ extension World {
 
 class DesktopObstaclesServiceImpl: DesktopObstaclesService {
     @Inject private var appConfig: AppConfig
-    
+
     private static let windowsDetector = WindowsDetector().started(pollInterval: 1)
     private weak var world: World?
     private var disposables = Set<AnyCancellable>()
@@ -56,7 +56,7 @@ class DesktopObstaclesServiceImpl: DesktopObstaclesService {
     func stop() {
         disposables.removeAll()
     }
-    
+
     func obstacles(from frame: CGRect, borderThickness: CGFloat) -> [CGRect] {
         [CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: borderThickness)]
     }

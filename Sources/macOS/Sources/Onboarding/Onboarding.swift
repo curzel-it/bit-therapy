@@ -10,7 +10,7 @@ extension View {
 
 private struct OnboardingMod: ViewModifier {
     @AppStorage("shouldShowWelcome") var shouldShowWelcome: Bool = true
-    
+
     func body(content: Content) -> some View {
         content
             .sheet(isPresented: $shouldShowWelcome, onDismiss: close) {
@@ -20,11 +20,11 @@ private struct OnboardingMod: ViewModifier {
                         .multilineTextAlignment(.center)
                     Text(Lang.Onboarding.message)
                         .multilineTextAlignment(.center)
-                    
+
                     Spacer()
                     PetChilling()
                     Spacer()
-                    
+
                     Button(Lang.ok, action: close)
                         .buttonStyle(.regular)
                         .accessibilityIdentifier("close_onboarding")
@@ -32,7 +32,7 @@ private struct OnboardingMod: ViewModifier {
                 .padding()
             }
     }
-    
+
     private func close() {
         shouldShowWelcome = false
     }
@@ -41,13 +41,13 @@ private struct OnboardingMod: ViewModifier {
 private struct PetChilling: View {
     let animationFrames: [ImageFrame]
     let fps: TimeInterval = 10
-    
+
     init() {
         @Inject var assets: PetsAssetsProvider
         animationFrames = assets.images(for: "cat_blue", animation: "front")
     }
-    
-    var body: some View {        
+
+    var body: some View {
         AnimatedContent(frames: animationFrames, fps: fps) { frame in
             Image(frame: frame)
                 .pixelArt()

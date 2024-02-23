@@ -1,5 +1,5 @@
-import XCTest
 @testable import BitTherapyMobile
+import XCTest
 
 final class BitTherapyMobileTests: XCTestCase {
     func testExample() throws {

@@ -2,9 +2,9 @@ import Combine
 import Schwifty
 import SwiftUI
 
-class PetsSpritesProvider: SpritesProvider {    
+class PetsSpritesProvider: SpritesProvider {
     @Inject var assets: PetsAssetsProvider
-    
+
     override func sprite(state: EntityState) -> String {
         guard let species = subject?.species else { return "" }
         switch state {

@@ -13,7 +13,7 @@ final class AppStoreScreenshots: XCTestCase {
         print("You can find screenshots at: \(path)")
         print("open \(path.replacingOccurrences(of: "file:///", with: "/"))")
     }
-    
+
     func testTakeHomeScreenshots() {
         for lang in Language.allCases {
             for theme in Theme.allCases {
@@ -26,7 +26,7 @@ final class AppStoreScreenshots: XCTestCase {
             }
         }
     }
-    
+
     func testTakeSettingsScreenshots() {
         for lang in Language.allCases {
             for theme in Theme.allCases {
@@ -39,17 +39,16 @@ final class AppStoreScreenshots: XCTestCase {
             }
         }
     }
-    
+
     private func navigateToHome(in app: XCUIApplication) {
         let closeOnboarding = app.buttons["close_onboarding"]
         if closeOnboarding.exists {
             closeOnboarding.tap()
         }
     }
-    
+
     private func navigateToSettings(in app: XCUIApplication) {
         navigateToHome(in: app)
         app.staticTexts["settings"].tap()
     }
 }
-

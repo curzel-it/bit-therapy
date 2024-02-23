@@ -3,7 +3,7 @@ import Schwifty
 
 class OnScreenCoordinatorImpl: OnScreenCoordinator {
     @Inject private var appConfig: AppConfig
-    
+
     var worlds: [ScreenEnvironment] = []
     private var windows: [NSWindow] = []
     private let windowsProvider = WorldWindowsProvider()
@@ -15,13 +15,13 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
         loadWorlds()
         spawnWindows()
     }
-    
+
     private func loadWorlds() {
         worlds = Screen.screens
             .filter { appConfig.isEnabled(screen: $0) }
             .map { ScreenEnvironment(for: $0) }
     }
-    
+
     func animate(petId: String, actionId: String, position: CGPoint?) {
         worlds.forEach {
             $0.animate(id: petId, action: actionId, position: position)
@@ -39,7 +39,7 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     func remove(species: Species) {
         worlds.forEach { $0.remove(species: species) }
     }
-    
+
     private func spawnWindows() {
         windows = worlds.map { windowsProvider.window(representing: $0) }
         windows.forEach { $0.show() }

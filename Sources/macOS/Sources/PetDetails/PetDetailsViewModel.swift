@@ -13,11 +13,11 @@ class PetDetailsViewModel: ObservableObject {
     @Inject private var names: SpeciesNamesRepository
     @Inject private var headerBuilder: PetDetailsHeaderBuilder
     @Inject private var remoteConfig: RemoteConfigProvider
-    
+
     @Binding var isShown: Bool
     @Published var canBeAdded = true
     @Published var title: String = ""
-    
+
     let species: Species
     let speciesAbout: String
     var canRemove: Bool { isSelected }
@@ -31,17 +31,17 @@ class PetDetailsViewModel: ObservableObject {
     var animationFps: TimeInterval {
         max(3, species.fps)
     }
-    
+
     private var disposables = Set<AnyCancellable>()
 
     init(isShown: Binding<Bool>, species: Species) {
-        self._isShown = isShown
-        self.speciesAbout = Lang.Species.about(for: species.id)
+        _isShown = isShown
+        speciesAbout = Lang.Species.about(for: species.id)
         self.species = species
-        self.bindTitle()
-        self.canBeAdded = !remoteConfig.current().disabledPets.contains(species.id)
+        bindTitle()
+        canBeAdded = !remoteConfig.current().disabledPets.contains(species.id)
     }
-    
+
     func close() {
         withAnimation {
             isShown = false
@@ -59,7 +59,7 @@ class PetDetailsViewModel: ObservableObject {
         Tracking.didRemove(species.id)
         close()
     }
-    
+
     func didAppear() {
         Tracking.didEnterDetails(
             species: species.id,
@@ -68,7 +68,7 @@ class PetDetailsViewModel: ObservableObject {
             purchased: false
         )
     }
-    
+
     private func bindTitle() {
         names.name(forSpecies: species.id)
             .sink { [weak self] name in self?.title = name }

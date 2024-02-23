@@ -6,13 +6,13 @@ struct PetDetailsHeader: View {
     @Inject private var deletePet: DeletePetButtonCoordinator
     @Inject private var exportPet: ExportPetButtonCoordinator
     @Inject private var renamePet: RenamePetButtonCoordinator
-        
+
     var body: some View {
         HStack(spacing: .xl) {
             Text(viewModel.title)
                 .font(.boldTitle)
                 .multilineTextAlignment(.leading)
-            
+
             if DeviceRequirement.macOS.isSatisfied {
                 Spacer()
                 renamePet.view(for: viewModel.species)

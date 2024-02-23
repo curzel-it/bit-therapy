@@ -3,7 +3,7 @@ import SwiftUI
 
 class StatusBarCoordinator {
     @Inject private var onScreen: OnScreenCoordinator
-    
+
     static let shared = StatusBarCoordinator()
     private var statusItem: NSStatusItem?
 
@@ -42,19 +42,19 @@ class StatusBarCoordinator {
         item.target = self
         return item
     }
-    
+
     @objc private func showHome() { MainScene.show() }
     @objc private func hidePets() { onScreen.hide() }
     @objc private func showPets() { onScreen.show() }
     @objc private func closeApp() { NSApp.terminate(self) }
 }
-    
+
 private enum MenuItem: String {
     case home
     case hide
     case show
     case quit
-        
+
     var name: String {
         Lang.name(forMenuItem: rawValue)
     }

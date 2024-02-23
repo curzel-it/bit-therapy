@@ -4,7 +4,7 @@ import SwiftUI
 
 protocol ImportDragAndDropPetUseCase {
     var supportedTypeId: String { get }
-    
+
     func isAvailable() -> Bool
     func handleDrop(of items: [NSItemProvider], completion: @escaping (Species?, String?) -> Void) -> Bool
 }

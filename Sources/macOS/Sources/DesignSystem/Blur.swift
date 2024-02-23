@@ -10,23 +10,23 @@ extension View {
 private struct BlurBackgroundMod: ViewModifier {
     func body(content: Content) -> some View {
         #if os(macOS)
-        content
+            content
         #else
-        content.background { Blur() }
+            content.background { Blur() }
         #endif
     }
 }
 
 #if !os(macOS)
-private struct Blur: UIViewRepresentable {
-    var style: UIBlurEffect.Style = .regular
+    private struct Blur: UIViewRepresentable {
+        var style: UIBlurEffect.Style = .regular
 
-    func makeUIView(context: Context) -> UIVisualEffectView {
-        UIVisualEffectView(effect: UIBlurEffect(style: style))
-    }
+        func makeUIView(context: Context) -> UIVisualEffectView {
+            UIVisualEffectView(effect: UIBlurEffect(style: style))
+        }
 
-    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
-        uiView.effect = UIBlurEffect(style: style)
+        func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+            uiView.effect = UIBlurEffect(style: style)
+        }
     }
-}
 #endif

@@ -4,7 +4,7 @@ import Swinject
 
 struct MacContentView: View {
     static let minSize = CGSize(width: 850, height: 760)
-    
+
     var body: some View {
         ContentView()
             .frame(minWidth: MacContentView.minSize.width)
@@ -17,9 +17,9 @@ struct MacContentView: View {
                 Logger.log("MacContentView", "Did disappear")
                 AppWindowManager.shared.current = nil
             }
-            .environmentObject(appConfig())            
+            .environmentObject(appConfig())
     }
-    
+
     private func appConfig() -> AppConfig {
         Container.main.resolve(AppConfig.self)!
     }

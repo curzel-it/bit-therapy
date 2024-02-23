@@ -22,7 +22,7 @@ public class ShapeShifter: Capability {
         subject?.frame = updatedFrame(given: time)
         checkCompletion(given: time)
     }
-    
+
     private func updatedFrame(given time: TimeInterval) -> CGRect {
         guard let subject else { return .zero }
         let delta = CGSize(

@@ -8,7 +8,7 @@ struct Contributors {
             let data = try Data(contentsOf: url)
             let items = try JSONDecoder().decode([Contributor].self, from: data)
             return items
-        } catch let error {
+        } catch {
             Logger.log("Contributors", "Could not read contributors \(error)")
         }
         return []
@@ -30,7 +30,7 @@ enum Role: String, Codable {
     case owner
     case patreon
     case translator
-    
+
     var isHightlighted: Bool {
         self == .owner || self == .patreon
     }

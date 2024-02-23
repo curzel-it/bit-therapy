@@ -5,11 +5,11 @@ import SwiftUI
 class MouseChaser: Capability {
     @Inject private var appConfig: AppConfig
     @Inject private var mouse: MouseTrackingUseCase
-    
+
     private let seeker = Seeker()
     private let mousePosition = MousePosition()
     private var disposables = Set<AnyCancellable>()
-        
+
     override func install(on subject: Entity) {
         super.install(on: subject)
         subject.capabilities.filter { $0 is Seeker }.forEach { $0.kill() }
@@ -22,7 +22,7 @@ class MouseChaser: Capability {
             .store(in: &disposables)
         mouse.start()
     }
-    
+
     private func startSeeker() {
         subject?.install(seeker)
         seeker.follow(
@@ -33,7 +33,7 @@ class MouseChaser: Capability {
             maxDistance: 60
         ) { [weak self] in self?.handleCapture(state: $0) }
     }
-    
+
     private func handleCapture(state: Seeker.State) {
         switch state {
         case .captured: playIdleAnimation()
@@ -41,24 +41,24 @@ class MouseChaser: Capability {
         case .following: break
         }
     }
-    
+
     private func startMoving() {
         guard let subject else { return }
         subject.set(state: .move)
         subject.direction = CGVector(dx: 1, dy: 0)
         subject.movement?.isEnabled = true
     }
-    
+
     private func playIdleAnimation() {
         let animation = subject?.species.animations.first { $0.id == "front" }
         guard let animation else { return }
         subject?.animationsScheduler?.load(animation, times: 100)
     }
-    
+
     private func positionChanged(to point: CGPoint) {
         mousePosition.frame = CGRect(origin: point, size: .zero)
     }
-    
+
     override func kill(autoremove: Bool = true) {
         mouse.stop()
         seeker.kill()

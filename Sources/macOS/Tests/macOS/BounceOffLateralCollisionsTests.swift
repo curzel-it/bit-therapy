@@ -21,7 +21,7 @@ class BounceOnLateralCollisionsTests: XCTestCase {
         testEnv.children.append(entity)
         return entity
     }()
-    
+
     func testDoesNotBounceWhenHittingANonStaticEntity() {
         testEntity.frame.origin = CGPoint(x: 50, y: 0)
         testEntity.direction = .init(dx: 1, dy: 0)
@@ -44,7 +44,7 @@ class BounceOnLateralCollisionsTests: XCTestCase {
         XCTAssertEqual(testEntity.direction.dx, 1, accuracy: 0.00001)
         XCTAssertEqual(testEntity.direction.dy, 0, accuracy: 0.00001)
     }
-    
+
     func testBouncesToLeftWhenHittingRight() {
         testEntity.frame.origin = CGPoint(x: 50, y: 0)
         testEntity.direction = .init(dx: 1, dy: 0)

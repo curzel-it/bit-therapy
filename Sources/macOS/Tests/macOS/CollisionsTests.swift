@@ -3,9 +3,8 @@ import XCTest
 @testable import BitTherapy
 
 class CollisionsTests: XCTestCase {
-    private lazy var testEnv: World = {
-        World(name: "test", bounds: testBounds)
-    }()
+    private lazy var testEnv: World = .init(name: "test", bounds: testBounds)
+
     private let testBounds = CGRect(x: 0, y: 0, width: 100, height: 100)
 
     func testMultipleCollisionsCanBeDetected() {

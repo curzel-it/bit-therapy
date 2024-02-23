@@ -8,19 +8,19 @@ protocol LaunchAtLoginUseCase {
 }
 
 #if os(macOS)
-import LaunchAtLogin
+    import LaunchAtLogin
 
-class LaunchAtLoginUseCaseImpl: LaunchAtLoginUseCase {
-    var isAvailable: Bool { true }
-    var isEnabled: Bool { LaunchAtLogin.isEnabled }
-    func disable() { LaunchAtLogin.isEnabled = false }
-    func enable() { LaunchAtLogin.isEnabled = true }
-}
+    class LaunchAtLoginUseCaseImpl: LaunchAtLoginUseCase {
+        var isAvailable: Bool { true }
+        var isEnabled: Bool { LaunchAtLogin.isEnabled }
+        func disable() { LaunchAtLogin.isEnabled = false }
+        func enable() { LaunchAtLogin.isEnabled = true }
+    }
 #else
-class LaunchAtLoginUseCaseImpl: LaunchAtLoginUseCase {
-    var isAvailable: Bool { false }
-    var isEnabled: Bool { false }
-    func disable() {}
-    func enable() {}
-}
+    class LaunchAtLoginUseCaseImpl: LaunchAtLoginUseCase {
+        var isAvailable: Bool { false }
+        var isEnabled: Bool { false }
+        func disable() {}
+        func enable() {}
+    }
 #endif

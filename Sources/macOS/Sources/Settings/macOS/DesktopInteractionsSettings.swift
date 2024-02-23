@@ -3,9 +3,9 @@ import SwiftUI
 
 struct DesktopInteractionsSwitch: View {
     @EnvironmentObject private var appConfig: AppConfig
-    
+
     @State private var showingDetails = false
-    
+
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.desktopInteractionsTitle,
@@ -32,9 +32,9 @@ struct DesktopInteractionsSwitch: View {
 
 struct FloatOverFullScreenAppsSwitch: View {
     @EnvironmentObject private var appConfig: AppConfig
-    
+
     @State private var showingDetails = false
-    
+
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.floatOverFullscreenApps,

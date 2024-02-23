@@ -21,7 +21,7 @@ class ExportPetButtonCoordinatorImpl: ExportPetButtonCoordinator {
 private struct ExportSpeciesButton: View {
     @EnvironmentObject var appConfig: AppConfig
     @StateObject var viewModel: ExportSpeciesButtonViewModel
-    
+
     var body: some View {
         IconButton(systemName: viewModel.icon, action: viewModel.export)
             .sheet(isPresented: viewModel.isAlertShown) {
@@ -35,7 +35,7 @@ private struct ExportSpeciesButton: View {
                     HStack {
                         Button(Lang.CustomPets.readTheDocs, action: viewModel.readTheDocs)
                             .buttonStyle(.text)
-                        
+
                         Button(Lang.ok, action: viewModel.clearMessages)
                             .buttonStyle(.regular)
                     }
@@ -48,24 +48,22 @@ private struct ExportSpeciesButton: View {
 private class ExportSpeciesButtonViewModel: ObservableObject {
     @Published var title: String?
     @Published var message: String?
-    
+
     @Inject var exportPetUseCase: ExportPetUseCase
-    
+
     let icon = "square.and.arrow.up.on.square"
-    
+
     private let species: Species
-    
+
     init(species: Species) {
         self.species = species
     }
-    
-    lazy var isAlertShown: Binding<Bool> = {
-        Binding(
-            get: { self.message != nil },
-            set: { _ in }
-        )
-    }()
-    
+
+    lazy var isAlertShown: Binding<Bool> = Binding(
+        get: { self.message != nil },
+        set: { _ in }
+    )
+
     func export() {
         exportPetUseCase.export(item: species) { [weak self] destination in
             Task { @MainActor [weak self] in
@@ -73,7 +71,7 @@ private class ExportSpeciesButtonViewModel: ObservableObject {
             }
         }
     }
-    
+
     private func doneExporting(to destination: URL?) {
         if let destination {
             destination.visit()
@@ -84,13 +82,13 @@ private class ExportSpeciesButtonViewModel: ObservableObject {
             message = Lang.CustomPets.genericExportError
         }
     }
-    
+
     func readTheDocs() {
         title = nil
         message = nil
         URL(string: Lang.Urls.customPetsDocs)?.visit()
     }
-    
+
     func clearMessages() {
         withAnimation {
             title = nil

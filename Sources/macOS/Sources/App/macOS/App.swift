@@ -25,13 +25,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @Inject private var notifications: NotificationsService
     @Inject private var onScreen: OnScreenCoordinator
     @Inject private var remoteConfig: RemoteConfigProvider
-    
+
     func applicationDidFinishLaunching(_ notification: Notification) {
         Logger.log("AppDelegate", "Did finish launching")
         commandLine.handleCommandLineArgs()
         notifications.start()
         remoteConfig.fetch()
-        
+
         if config.floatOverFullscreenApps {
             NSApp.setActivationPolicy(.accessory)
         } else {
@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         startApp()
         scheduleAskForRatingIfNeeded()
     }
-    
+
     func applicationDidChangeScreenParameters(_ notification: Notification) {
         Logger.log("App", "Screen params changed, relaunching...")
         onScreen.hide()
@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self?.onScreen.show()
         }
     }
-    
+
     private func startApp() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             guard let self else { return }
@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    
+
     private func scheduleAskForRatingIfNeeded() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             RateKit.ratingsService(debug: true, launchesBeforeAskingForReview: 10)
@@ -66,4 +66,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 }
-

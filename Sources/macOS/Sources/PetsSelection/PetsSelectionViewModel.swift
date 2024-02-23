@@ -6,7 +6,7 @@ class PetsSelectionViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider
     @Inject private var speciesProvider: SpeciesProvider
-    
+
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
     @Published var unselectedSpecies: [Species] = []
@@ -25,12 +25,12 @@ class PetsSelectionViewModel: ObservableObject {
     var gridColums: [GridItem] {
         [.init(.adaptive(minimum: 100, maximum: 140), spacing: itemsSpacing)]
     }
-    
+
     private var itemsSpacing: CGFloat {
         let spacing: Spacing = DeviceRequirement.iOS.isSatisfied ? .md : .lg
         return spacing.rawValue
     }
-    
+
     private let importPet = ImportPetDragAndDropCoordinator()
 
     private var disposables = Set<AnyCancellable>()
@@ -38,7 +38,7 @@ class PetsSelectionViewModel: ObservableObject {
     init() {
         bindPets()
     }
-    
+
     private func bindPets() {
         Publishers.CombineLatest3(
             speciesProvider.all(),
@@ -51,7 +51,7 @@ class PetsSelectionViewModel: ObservableObject {
         }
         .store(in: &disposables)
     }
-    
+
     func filterChanged(to tag: String?) {
         selectedTag = tag
     }
@@ -67,7 +67,7 @@ class PetsSelectionViewModel: ObservableObject {
     func isSelected(_ species: Species) -> Bool {
         appConfig.isSelected(species.id)
     }
-    
+
     func importView() -> AnyView {
         importPet.view()
     }

@@ -11,7 +11,7 @@ struct MainScene: Scene {
                 .environmentObject(appConfig())
         }
     }
-    
+
     private func appConfig() -> AppConfig {
         Container.main.resolve(AppConfig.self)!
     }

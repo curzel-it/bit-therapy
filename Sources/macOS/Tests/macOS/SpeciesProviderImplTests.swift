@@ -6,11 +6,11 @@ import XCTest
 
 final class SpeciesProviderImplTests: XCTestCase {
     private var disposables = Set<AnyCancellable>()
-    
+
     override func tearDown() {
         disposables = Set<AnyCancellable>()
     }
-    
+
     func testCanParseAllSpecies() async {
         let provider = SpeciesProviderImpl()
         let expectedCount = provider.allJsonUrls.count

@@ -4,11 +4,11 @@ import SwiftUI
 
 struct PetDetailsView: View {
     @StateObject private var viewModel: PetDetailsViewModel
-    
+
     init(isShown: Binding<Bool>, species: Species) {
         _viewModel = StateObject(wrappedValue: PetDetailsViewModel(isShown: isShown, species: species))
     }
-    
+
     var body: some View {
         VStack(spacing: .xl) {
             PetDetailsHeader()
@@ -26,7 +26,7 @@ struct PetDetailsView: View {
 
 private struct About: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
-    
+
     var body: some View {
         Text(viewModel.speciesAbout)
             .lineLimit(10)
@@ -38,7 +38,7 @@ private struct About: View {
 private struct AnimatedPreview: View {
     @EnvironmentObject var appConfig: AppConfig
     @EnvironmentObject var viewModel: PetDetailsViewModel
-    
+
     var body: some View {
         ZStack {
             AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { frame in
@@ -53,11 +53,11 @@ private struct AnimatedPreview: View {
 
 private struct Footer: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
-    
+
     var axis: Axis.Set {
         DeviceRequirement.allSatisfied(.iOS, .portrait) ? .vertical : .horizontal
     }
-    
+
     var body: some View {
         VHStack(axis) {
             if viewModel.canSelect && viewModel.canBeAdded {
@@ -68,7 +68,7 @@ private struct Footer: View {
                 Button(Lang.remove, action: viewModel.remove)
                     .buttonStyle(.regular)
             }
-            
+
             Button(Lang.cancel, action: viewModel.close)
                 .buttonStyle(.text)
         }

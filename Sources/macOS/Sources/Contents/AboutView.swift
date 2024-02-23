@@ -24,19 +24,19 @@ struct AboutView: View {
 
 private struct AppVersion: View {
     @EnvironmentObject var appConfig: AppConfig
-        
+
     var text: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let dev = isDevApp ? "Dev" : ""
         return ["v.", version ?? "n/a", dev]
             .filter { !$0.isEmpty }.joined(separator: " ")
     }
-    
+
     var isDevApp: Bool {
         let bundle = Bundle.main.bundleIdentifier ?? ""
         return bundle.contains(".dev")
     }
-    
+
     var body: some View {
         Text(text)
     }
@@ -66,7 +66,7 @@ private struct Socials: View {
 private struct SocialIcon: View {
     let name: String
     let link: String
-    
+
     var body: some View {
         Image(name)
             .resizable()

@@ -13,13 +13,13 @@ protocol ThemeUseCase {
 
 class ThemeUseCaseImpl: ThemeUseCase {
     @Inject private var appConfig: AppConfig
-    
+
     func theme() -> AnyPublisher<Theme, Never> {
         appConfig.$background
             .map { [weak self] in self?.theme(fromBackgroundName: $0) ?? .system }
             .eraseToAnyPublisher()
     }
-    
+
     private func theme(fromBackgroundName backgroundName: String) -> Theme {
         let name = backgroundName.lowercased()
         switch true {
@@ -41,13 +41,13 @@ extension Theme {
 }
 
 #if os(macOS)
-extension Theme {
-    var appearance: NSAppearance? {
-        switch self {
-        case .light: return NSAppearance(named: .aqua)
-        case .dark: return NSAppearance(named: .darkAqua)
-        case .system: return nil
+    extension Theme {
+        var appearance: NSAppearance? {
+            switch self {
+            case .light: return NSAppearance(named: .aqua)
+            case .dark: return NSAppearance(named: .darkAqua)
+            case .system: return nil
+            }
         }
     }
-}
 #endif

@@ -1,0 +1,40 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
+    },
+    {
+      "id": "eat",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 10
+    },
+    {
+      "id": "eat",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 25
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["pokèmon"],
+  "id": "pikachu",
+  "movementPath": "walk",
+  "speed": 0.8
+}

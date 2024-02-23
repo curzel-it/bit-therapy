@@ -32,32 +32,32 @@ public struct Species: Codable, Hashable {
         self.movementPath = movementPath
         self.dragPath = dragPath
         self.fallPath = fallPath
-        self.scale = 1
+        scale = 1
         self.speed = speed
         self.tags = tags
         self.zIndex = zIndex
     }
-    
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(String.self, forKey: .id)
-        self.animations = try container.decode([EntityAnimation].self, forKey: .animations)
-        self.capabilities = try container.decode([String].self, forKey: .capabilities)
-        self.dragPath = try container.decode(String.self, forKey: .dragPath)
-        self.fps = try container.decode(TimeInterval.self, forKey: .fps)
-        self.movementPath = try container.decode(String.self, forKey: .movementPath)
-        self.scale = (try? container.decode(CGFloat.self, forKey: .scale)) ?? 1
-        self.speed = try container.decode(CGFloat.self, forKey: .speed)
-        self.tags = try container.decode([String].self, forKey: .tags)
-        self.zIndex = try container.decode(Int.self, forKey: .zIndex)
-        
+        id = try container.decode(String.self, forKey: .id)
+        animations = try container.decode([EntityAnimation].self, forKey: .animations)
+        capabilities = try container.decode([String].self, forKey: .capabilities)
+        dragPath = try container.decode(String.self, forKey: .dragPath)
+        fps = try container.decode(TimeInterval.self, forKey: .fps)
+        movementPath = try container.decode(String.self, forKey: .movementPath)
+        scale = (try? container.decode(CGFloat.self, forKey: .scale)) ?? 1
+        speed = try container.decode(CGFloat.self, forKey: .speed)
+        tags = try container.decode([String].self, forKey: .tags)
+        zIndex = try container.decode(Int.self, forKey: .zIndex)
+
         if let fallPath = try? container.decode(String.self, forKey: .fallPath) {
             self.fallPath = fallPath
         } else {
-            self.fallPath = dragPath
+            fallPath = dragPath
         }
     }
-    
+
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

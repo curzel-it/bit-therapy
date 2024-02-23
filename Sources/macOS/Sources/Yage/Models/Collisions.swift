@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct Collision: Equatable {
-    public weak private(set) var other: Entity?
+    public private(set) weak var other: Entity?
     public let otherId: String
     public let isEphemeral: Bool
     public let intersection: CGRect

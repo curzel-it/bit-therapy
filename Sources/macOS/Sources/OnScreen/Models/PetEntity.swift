@@ -4,7 +4,7 @@ import SwiftUI
 
 class PetEntity: Entity {
     @Inject private var settings: AppConfig
-    
+
     private var disposables = Set<AnyCancellable>()
 
     public init(of species: Species, in world: World) {
@@ -20,13 +20,13 @@ class PetEntity: Entity {
         bindGravity()
         bindBounceOffPets()
     }
-    
+
     private func bindBounceOffPets() {
         settings.$bounceOffPetsEnabled
             .sink { [weak self] in self?.setBounceOffPets(enabled: $0) }
             .store(in: &disposables)
     }
-    
+
     private func setBounceOffPets(enabled: Bool) {
         guard let bounce = capability(for: BounceOnLateralCollisions.self) else { return }
         if enabled {
@@ -35,7 +35,7 @@ class PetEntity: Entity {
             bounce.customCollisionsFilter = nil
         }
     }
-    
+
     private func bindGravity() {
         settings.$gravityEnabled
             .sink { [weak self] in self?.setGravity(enabled: $0) }
@@ -54,15 +54,15 @@ class PetEntity: Entity {
             settings: settings.speedMultiplier
         )
     }
-    
+
     func setInitialPosition() {
-        let randomX = worldBounds.width * .random(in: 0.05...0.95)
+        let randomX = worldBounds.width * .random(in: 0.05 ... 0.95)
         let randomY: CGFloat
 
         if capability(for: WallCrawler.self) != nil {
             randomY = worldBounds.height - frame.height
         } else {
-            randomY = 60 
+            randomY = 60
         }
         frame.origin = CGPoint(x: randomX, y: randomY)
     }
@@ -70,7 +70,7 @@ class PetEntity: Entity {
     func setInitialDirection() {
         direction = .init(dx: 1, dy: 0)
     }
-    
+
     override open func kill() {
         disposables.removeAll()
         super.kill()
@@ -91,13 +91,13 @@ extension PetEntity {
 // MARK: - Speed
 
 extension PetEntity {
-    internal static let baseSpeed: CGFloat = 30
+    static let baseSpeed: CGFloat = 30
 
     static func initialFrame(for species: Species) -> CGRect {
         @Inject var appConfig: AppConfig
         return CGRect(square: appConfig.petSize * species.scale)
     }
-    
+
     static func speed(for species: Species, size: CGFloat, settings: CGFloat) -> CGFloat {
         species.speed * speedMultiplier(for: size) * settings
     }

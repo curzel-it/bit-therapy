@@ -6,7 +6,7 @@ import SwiftUI
 struct VerticalFiltersView: View {
     @EnvironmentObject var petsSelection: PetsSelectionViewModel
     @StateObject private var viewModel = FiltersViewModel()
-        
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -26,7 +26,7 @@ struct VerticalFiltersView: View {
 struct HorizontalFiltersView: View {
     @EnvironmentObject var petsSelection: PetsSelectionViewModel
     @StateObject private var viewModel = FiltersViewModel()
-        
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
@@ -47,10 +47,10 @@ struct HorizontalFiltersView: View {
 
 private class FiltersViewModel: ObservableObject {
     @Inject private var speciesProvider: SpeciesProvider
-    
+
     @Published var availableTags: [String] = []
     @Published var selectedTag = kTagAll
-    
+
     private var disposables = Set<AnyCancellable>()
 
     init() {
@@ -61,18 +61,18 @@ private class FiltersViewModel: ObservableObject {
             }
             .store(in: &disposables)
     }
-    
+
     private func loadTags(from species: [Species], selectedTag: String?) {
         availableTags = [kTagAll] + species
             .flatMap { $0.tags }
             .removeDuplicates(keepOrder: false)
             .sorted()
     }
-        
+
     func isSelected(tag: String) -> Bool {
         selectedTag == tag
     }
-    
+
     func toggleSelection(tag: String) {
         withAnimation {
             selectedTag = tag
@@ -82,28 +82,28 @@ private class FiltersViewModel: ObservableObject {
 
 private struct TagView: View {
     @EnvironmentObject var viewModel: FiltersViewModel
-    
+
     let tag: String
-    
+
     var isSelected: Bool {
         viewModel.isSelected(tag: tag)
     }
-    
+
     var background: Color {
         isSelected ? .accent : .white.opacity(0.8)
     }
-    
+
     var foreground: Color {
         isSelected ? .white : .black.opacity(0.8)
     }
-    
+
     var body: some View {
         Text(Lang.name(forTag: tag).uppercased())
             .font(.headline)
             .padding(.horizontal)
             .frame(height: DesignSystem.tagsHeight)
             .background(background)
-            .cornerRadius(DesignSystem.tagsHeight/2)
+            .cornerRadius(DesignSystem.tagsHeight / 2)
             .foregroundColor(foreground)
             .onTapGesture { viewModel.toggleSelection(tag: tag) }
     }

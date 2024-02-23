@@ -9,4 +9,3 @@ protocol ExportPetUseCase {
 enum ExporterError: Error {
     case failedToCreateZipArchive
 }
-

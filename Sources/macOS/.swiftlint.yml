@@ -3,33 +3,24 @@ disabled_rules:
   - trailing_newline
 
 excluded:
-  - Tools 
+  - EZAudio
+  - fastlane
+  - MappingLib2
   - Pods
-  - .idea
-  - ./*/.build
-  - ./*/Tests
+  - S3
 
 identifier_name:
-  min_length: 
-    error: 3
   excluded:
-    - ok
-    - no
     - x
     - y
-    - z
-    - on
-    - up
-    - js
-    - id
-    - to
-    - tz
-    - vc
+    - dx
+    - dy
     - vm
-    - xs
-    - sm
-    - md
-    - lg
+    - id
     - xl
-    - qa
-
+    - lg
+    - md
+    - sm
+    - xs
+    - no
+    - ok

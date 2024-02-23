@@ -24,7 +24,7 @@ class GravityTests: XCTestCase {
         player.install(Gravity())
         env.children.append(player)
     }
-    
+
     func testNonStaticEntitiesAreNotRecognizedAsGround() {
         let ground1 = Entity(
             species: .agent,
@@ -47,7 +47,7 @@ class GravityTests: XCTestCase {
         for _ in 0 ..< 70 { env.update(after: 0.1) }
         XCTAssertEqual(player.state, .freeFall)
     }
-    
+
     func testEntitiesCanFallToGround() {
         let ground1 = Entity(
             species: .agent,

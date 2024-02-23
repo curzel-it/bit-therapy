@@ -12,7 +12,7 @@ class ImportPetDragAndDropCoordinator {
 private struct ImportDragAndDropView: View {
     @EnvironmentObject var appConfig: AppConfig
     @StateObject var viewModel: ImportDragAndDropViewModel
-    
+
     var body: some View {
         if viewModel.canImport() {
             VStack(spacing: .zero) {
@@ -37,7 +37,7 @@ private struct LinkToDocs: View {
 
 private struct DragAndDropView: View {
     @EnvironmentObject var viewModel: ImportDragAndDropViewModel
-    
+
     var body: some View {
         Text(Lang.CustomPets.dragAreaMessage)
             .padding(.horizontal, .xl)
@@ -47,7 +47,7 @@ private struct DragAndDropView: View {
                     .stroke(style: StrokeStyle(lineWidth: 2, dash: [8, 4]))
                     .fill(Color.label)
             )
-            .onDrop(of: viewModel.supportedTypesIdentifiers, isTargeted: nil) { (items) -> Bool in
+            .onDrop(of: viewModel.supportedTypesIdentifiers, isTargeted: nil) { items -> Bool in
                 viewModel.handleDrop(of: items)
             }
             .sheet(isPresented: viewModel.isAlertShown) {
@@ -67,30 +67,28 @@ private struct DragAndDropView: View {
 private class ImportDragAndDropViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
     @Inject private var speciesProvider: SpeciesProvider
-    
+
     @Published private(set) var message: String?
-    
-    lazy var isAlertShown: Binding<Bool> = {
-        Binding(
-            get: { self.message != nil },
-            set: { _ in }
-        )
-    }()
-    
+
+    lazy var isAlertShown: Binding<Bool> = Binding(
+        get: { self.message != nil },
+        set: { _ in }
+    )
+
     var supportedTypesIdentifiers: [String] {
         [importPetUseCase.supportedTypeId]
     }
-    
+
     @Inject var importPetUseCase: ImportDragAndDropPetUseCase
-    
+
     func canImport() -> Bool {
         importPetUseCase.isAvailable()
     }
-    
+
     func clearMessage() {
         message = nil
     }
-    
+
     func handleDrop(of items: [NSItemProvider]) -> Bool {
         importPetUseCase.handleDrop(of: items) { species, errorMessage in
             Task { @MainActor [weak self] in

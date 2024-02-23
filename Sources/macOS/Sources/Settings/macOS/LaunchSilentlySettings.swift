@@ -3,9 +3,9 @@ import SwiftUI
 
 struct LaunchSilentlySwitch: View {
     @EnvironmentObject private var appConfig: AppConfig
-    
+
     @State private var showingDetails = false
-    
+
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.launchSilentlyTitle,
