@@ -10,7 +10,6 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
     @Published var unselectedSpecies: [Species] = []
-    @Published var canShowDiscordBanner: Bool = true
     @Published private var selectedTag: String?
 
     lazy var showingDetails: Binding<Bool> = Binding {

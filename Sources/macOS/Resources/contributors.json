@@ -34,11 +34,6 @@
         "pets": ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
     },
     {
-        "name": "Solomanolo",
-        "roles": ["translator"],
-        "thumbnail": "contributor_solomanolo"
-    },
-    {
         "name": "Curren",
         "roles": ["artist"],
         "link": "https://curren.carrd.co/",
@@ -51,6 +46,16 @@
         "link": "https://www.instagram.com/mar_vvan",
         "thumbnail": "contributor_marwan",
         "pets": ["cayman718", "pikachu"]
+    },
+    {
+        "name": "Solomanolo",
+        "roles": ["translator"],
+        "thumbnail": "contributor_solomanolo"
+    },
+    {
+        "name": "Just Vlad",
+        "roles": ["translator"],
+        "thumbnail": "contributor_justvlad"
     },
     {
         "name": "Bicus",
