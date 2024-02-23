@@ -18,7 +18,7 @@ public class Seeker: Capability {
     private var targetReached: Bool = false
     private var report: (State) -> Void = { _ in }
 
-    public override func install(on subject: Entity) {
+    override public func install(on subject: Entity) {
         super.install(on: subject)
         baseSpeed = subject.speed
     }
@@ -39,8 +39,8 @@ public class Seeker: Capability {
         self.maxDistance = maxDistance
         self.report = report
         self.target = target
-        self.targetOffset = offset
-        self.targetPosition = position
+        targetOffset = offset
+        targetPosition = position
     }
 
     // MARK: - Update
@@ -51,7 +51,7 @@ public class Seeker: Capability {
         let totalDistance = subject.frame.origin.distance(from: target)
         let horizontalDistance = abs(subject.frame.origin.x - target.x)
         let distance = canFly ? totalDistance : horizontalDistance
-        
+
         checkTargetReached(with: distance, horizontally: horizontalDistance)
         adjustSpeedIfNeeded(with: distance)
         adjustDirection(towards: target, with: distance)
@@ -81,7 +81,7 @@ public class Seeker: Capability {
     }
 
     // MARK: - Direction
-    
+
     private func adjustDirection(towards target: CGPoint, with distance: CGFloat) {
         guard let subject else { return }
         let direction = linearDirection(towards: target, with: distance)
@@ -94,7 +94,7 @@ public class Seeker: Capability {
             )
         }
     }
-    
+
     private func linearDirection(towards target: CGPoint, with distance: CGFloat) -> CGVector {
         guard let subject else { return .zero }
         if distance < minDistance {
@@ -103,7 +103,7 @@ public class Seeker: Capability {
             return .unit(from: subject.frame.origin, to: target)
         }
     }
-    
+
     private var canFly: Bool {
         let gravity = subject?.capability(for: Gravity.self)
         if gravity == nil || gravity?.isEnabled == false { return true }

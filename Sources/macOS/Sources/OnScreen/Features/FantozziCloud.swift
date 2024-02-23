@@ -2,7 +2,7 @@ import Foundation
 
 extension ScreenEnvironment {
     func scheduleRainyCloud() {
-        scheduleRandomly(withinHours: 0..<5) { [weak self] in
+        scheduleRandomly(withinHours: 0 ..< 5) { [weak self] in
             guard let self else { return }
             guard self.settings.randomEvents else { return }
             guard let victim = self.randomPet() else { return }
@@ -21,7 +21,7 @@ class RainyCloudUseCaseImpl: RainyCloudUseCase {
         setupSeeker(for: cloud, to: target)
         scheduleCleanUp(cloud: cloud, world: world)
     }
-    
+
     private func buildCloud(at origin: CGPoint, in world: World) -> Entity {
         let cloud = PetEntity(of: .cloud, in: world)
         cloud.frame.size = CGSize(
@@ -33,7 +33,7 @@ class RainyCloudUseCaseImpl: RainyCloudUseCase {
         world.children.append(cloud)
         return cloud
     }
-    
+
     private func setupSeeker(for cloud: Entity, to target: Entity) {
         let yOffset = cloud.frame.height - target.frame.height
         let seeker = Seeker()
@@ -45,9 +45,9 @@ class RainyCloudUseCaseImpl: RainyCloudUseCase {
             autoAdjustSpeed: true
         ) { _ in }
     }
-    
+
     private func scheduleCleanUp(cloud: Entity, world: World) {
-        let duracy = TimeInterval.random(in: 60..<120)
+        let duracy = TimeInterval.random(in: 60 ..< 120)
         DispatchQueue.main.asyncAfter(deadline: .now() + duracy) { [weak world] in
             cloud.kill()
             world?.children.remove(cloud)

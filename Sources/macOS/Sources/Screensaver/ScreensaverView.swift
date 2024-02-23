@@ -6,15 +6,15 @@ struct ScreensaverView: View {
     @EnvironmentObject var appConfig: AppConfig
     @StateObject private var viewModel: ScreensaverViewModel
     @State private var worldSize: CGSize = .zero
-    
+
     private let tag = "ScreensaverView"
-    
+
     init() {
         let vm = ScreensaverViewModel()
         vm.start()
         _viewModel = StateObject(wrappedValue: vm)
     }
-    
+
     var body: some View {
         ZStack {
             ForEach(viewModel.entities, id: \.entityId) {

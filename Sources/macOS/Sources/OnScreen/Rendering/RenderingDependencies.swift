@@ -11,7 +11,7 @@ protocol RenderableEntity {
     var spriteRotation: SpriteRotation? { get }
     var windowSize: CGSize { get }
     var zIndex: Int { get }
-    
+
     func isBeingDragged() -> Bool
     func dragged(currentDelta: CGSize)
     func dragEnded(totalDelta: CGSize)
@@ -47,27 +47,27 @@ extension Entity: RenderableEntity {
     var isInteractable: Bool {
         !isEphemeral
     }
-    
+
     var spriteRotation: SpriteRotation? {
         rotation
     }
-    
+
     var windowSize: CGSize {
         worldBounds.size
     }
-    
+
     func isBeingDragged() -> Bool {
         state == .drag
     }
-    
+
     func dragged(currentDelta: CGSize) {
         drag?.dragged(currentDelta: currentDelta)
     }
-    
+
     func dragEnded(totalDelta: CGSize) {
         drag?.dragEnded(totalDelta: totalDelta)
     }
-    
+
     func rightClicked(from window: SomeWindow?, at point: CGPoint) {
         rightClick?.onRightClick(from: window, at: point)
     }

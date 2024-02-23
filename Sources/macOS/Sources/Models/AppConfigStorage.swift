@@ -16,13 +16,13 @@ protocol AppConfigStorage {
     var selectedSpecies: [String] { get }
     var speedMultiplier: Double { get }
     var showInMenuBar: Bool { get }
-    
+
     func storeValues(of appConfig: AppConfig)
 }
 
 class AppConfigStorageImpl: AppConfigStorage {
     @Inject private var speciesProvider: SpeciesProvider
-    
+
     @AppStorage("backgroundName") var background = "BackgroundMountainDynamic"
     @AppStorage("bounceOffPetsEnabled") var bounceOffPetsEnabled = false
     @AppStorage("desktopInteractions") var desktopInteractions = true
@@ -36,7 +36,7 @@ class AppConfigStorageImpl: AppConfigStorage {
     @AppStorage("speedMultiplier") var speedMultiplier: Double = 1
     @AppStorage("showInMenuBar") var showInMenuBar: Bool = true
     @AppStorage("floatOverFullscreenApps") var floatOverFullscreenApps: Bool = true
-    
+
     var disabledScreens: [String] {
         get {
             disabledScreensValue
@@ -48,7 +48,7 @@ class AppConfigStorageImpl: AppConfigStorage {
             disabledScreensValue = newValue.joined(separator: ",")
         }
     }
-    
+
     var names: [String: String] {
         get {
             guard let data = namesValue.data(using: .utf8) else { return [:] }
@@ -61,7 +61,7 @@ class AppConfigStorageImpl: AppConfigStorage {
             namesValue = string
         }
     }
-    
+
     var selectedSpecies: [String] {
         get {
             let storedIds = selectedSpeciesValue
@@ -73,58 +73,58 @@ class AppConfigStorageImpl: AppConfigStorage {
             selectedSpeciesValue = newValue.joined(separator: ",")
         }
     }
-    
+
     private var disposables = Set<AnyCancellable>()
-        
+
     func storeValues(of appConfig: AppConfig) {
         appConfig.$background
             .sink { [weak self] in self?.background = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$bounceOffPetsEnabled
             .sink { [weak self] in self?.bounceOffPetsEnabled = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$desktopInteractions
             .sink { [weak self] in self?.desktopInteractions = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$floatOverFullscreenApps
             .sink { [weak self] in self?.floatOverFullscreenApps = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$gravityEnabled
             .sink { [weak self] in self?.gravityEnabled = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$launchSilently
             .sink { [weak self] in self?.launchSilently = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$names
             .sink { [weak self] in self?.names = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$petSize
             .sink { [weak self] in self?.petSize = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$selectedSpecies
             .sink { [weak self] in self?.selectedSpecies = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$speedMultiplier
             .sink { [weak self] in self?.speedMultiplier = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$disabledScreens
             .sink { [weak self] in self?.disabledScreens = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$randomEvents
             .sink { [weak self] in self?.randomEvents = $0 }
             .store(in: &disposables)
-        
+
         appConfig.$showInMenuBar
             .sink { [weak self] in self?.showInMenuBar = $0 }
             .store(in: &disposables)

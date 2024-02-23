@@ -20,7 +20,7 @@ class AutoRespawnTests: XCTestCase {
     }
 
     func testEntityInsideBoundsIsUntouched() {
-        for y in 0..<10 {
+        for y in 0 ..< 10 {
             let point = CGPoint(x: 0, y: y)
             XCTAssertTrue(respawner.isWithinBounds(point: point))
         }

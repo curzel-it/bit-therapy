@@ -8,7 +8,7 @@ class ScreensaverElementsServiceImpl: ScreensaverElementsService {
     func elements(for world: World) -> [Entity] {
         [ground(for: world)]
     }
-    
+
     private func ground(for world: World) -> Entity {
         GroundEntity(for: world)
     }
@@ -20,12 +20,12 @@ private class GroundEntity: Entity {
         isStatic = true
         updateFrame()
     }
-    
+
     override func worldBoundsChanged() {
         super.worldBoundsChanged()
         updateFrame()
     }
-    
+
     private func updateFrame() {
         guard let world else { return }
         frame = CGRect(
@@ -35,7 +35,7 @@ private class GroundEntity: Entity {
             height: 50
         )
     }
-    
+
     private func groundLevel(for size: CGSize) -> CGFloat {
         if size.width > size.height { return size.height - 100 }
         if size.height / size.width > 1.7 { return size.height * 0.75 }

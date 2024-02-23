@@ -18,11 +18,11 @@ protocol TabBarViewModel: ObservableObject {
 struct TabBar<ViewModel: TabBarViewModel>: View {
     @EnvironmentObject var config: AppConfig
     @StateObject private var viewModel: ViewModel
-    
+
     init(viewModel: ViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
-    
+
     var body: some View {
         if !viewModel.tabBarHidden {
             HStack(spacing: .zero) {
@@ -40,31 +40,31 @@ struct TabBar<ViewModel: TabBarViewModel>: View {
 
 private struct TabBarItemView<T: TabBarItem>: View {
     @Binding var selectedPage: T
-    
+
     let item: T
-    
+
     private var icon: String { isSelected ? item.iconSelected : item.icon }
     private var isSelected: Bool { item == selectedPage }
     private var fgColor: Color { isSelected ? .accent : .labelSecondary }
-    
+
     private var bgColor: Color {
         let opacity = DeviceRequirement.macOS.isSatisfied ? 0.8 : 0.05
         return .background.opacity(opacity)
     }
-    
+
     private var width: CGFloat {
         DeviceRequirement.macOS.isSatisfied ? 72 : 60
     }
-    
+
     private var height: CGFloat {
         DeviceRequirement.macOS.isSatisfied ? 62 : 60
     }
-    
+
     private var font: Font {
         let size: CGFloat = DeviceRequirement.macOS.isSatisfied ? 12 : 10
         return .system(size: size, weight: .light)
     }
-    
+
     var body: some View {
         VStack {
             Spacer()

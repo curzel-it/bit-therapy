@@ -1,12 +1,12 @@
 import NotAGif
-import Swinject
 import SwiftUI
+import Swinject
 
 struct ContributorsView: View {
     @StateObject private var vm = ContributorsViewModel()
-    
+
     private let columns = [GridItem(.adaptive(minimum: 250, maximum: 800), spacing: Spacing.xl.rawValue)]
-    
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
@@ -26,7 +26,7 @@ struct ContributorsView: View {
 
 private struct ItemView: View {
     let contributor: Contributor
-    
+
     var body: some View {
         VStack {
             HStack(spacing: .md) {
@@ -48,9 +48,9 @@ private struct ItemView: View {
 
 private struct PetsView: View {
     let pets: [String]
-    
+
     private let columns = [GridItem(.adaptive(minimum: 32, maximum: 200), spacing: Spacing.xs.rawValue)]
-    
+
     var body: some View {
         LazyVGrid(columns: columns, spacing: Spacing.sm.rawValue) {
             ForEach(pets, id: \.self) {
@@ -63,7 +63,7 @@ private struct PetsView: View {
 
 private struct RolesView: View {
     let roles: [Role]
-    
+
     var body: some View {
         HStack(spacing: .sm) {
             ForEach(roles, id: \.self) {
@@ -76,9 +76,9 @@ private struct RolesView: View {
 
 private struct PetThumbnail: View {
     @EnvironmentObject var vm: ContributorsViewModel
-    
+
     let species: String
-    
+
     var body: some View {
         if let asset = vm.thumbnail(for: species) {
             Image(frame: asset)
@@ -91,7 +91,7 @@ private struct PetThumbnail: View {
 
 private struct ProfilePic: View {
     let name: String?
-    
+
     var body: some View {
         Image(name ?? "anonymous")
             .resizable()
@@ -104,15 +104,15 @@ private struct ProfilePic: View {
 
 private struct RoleView: View {
     let role: Role
-    
+
     private var background: Color {
         role.isHightlighted ? .accent : .white.opacity(0.8)
     }
-    
+
     private var foreground: Color {
         role.isHightlighted ? .white : .black.opacity(0.8)
     }
-    
+
     var body: some View {
         Text(role.description)
             .font(.caption.bold())
@@ -126,9 +126,9 @@ private struct RoleView: View {
 
 private class ContributorsViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
-    
+
     var contributors: [Contributor] { Contributors.all }
-    
+
     func thumbnail(for species: String) -> ImageFrame? {
         assets.image(sprite: "\(species)_front-1")
     }

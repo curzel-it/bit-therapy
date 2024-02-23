@@ -1,7 +1,7 @@
 import Foundation
 import Schwifty
-import Swinject
 import SwiftUI
+import Swinject
 
 protocol RenamePetButtonCoordinator {
     func view(for species: Species) -> AnyView
@@ -22,7 +22,7 @@ class RenamePetButtonCoordinatorImpl: RenamePetButtonCoordinator {
 private struct RenamePetButton: View {
     @EnvironmentObject var appConfig: AppConfig
     @StateObject var viewModel: RenamePetButtonViewModel
-    
+
     var body: some View {
         IconButton(systemName: viewModel.icon, action: viewModel.startRenaming)
             .sheet(isPresented: $viewModel.isRenaming) {
@@ -33,9 +33,9 @@ private struct RenamePetButton: View {
                     Text(Lang.CustomPets.setNameMessage)
                         .font(.body)
                         .multilineTextAlignment(.center)
-                    
+
                     TextField("", text: $viewModel.name)
-                    
+
                     HStack {
                         Button(Lang.cancel, action: viewModel.cancel)
                             .buttonStyle(.text)
@@ -53,27 +53,27 @@ private class RenamePetButtonViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
-    
+
     @Published var isRenaming = false
     @Published var name: String = ""
-    
+
     let icon = "character.cursor.ibeam"
     private let speciesId: String
-    
+
     init(speciesId: String) {
         self.speciesId = speciesId
-        self.name = names.currentName(forSpecies: speciesId)
+        name = names.currentName(forSpecies: speciesId)
     }
-    
+
     func cancel() {
         isRenaming = false
         name = names.currentName(forSpecies: speciesId)
     }
-    
+
     func startRenaming() {
         isRenaming = true
     }
-    
+
     func confirm() {
         appConfig.rename(species: speciesId, to: name)
         cancel()

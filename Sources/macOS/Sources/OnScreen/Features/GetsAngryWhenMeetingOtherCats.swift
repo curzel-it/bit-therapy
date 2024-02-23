@@ -7,7 +7,7 @@ class GetsAngryWhenMeetingOtherCats: Capability {
         guard isTouchingAnotherCat(accordingTo: collisions) else { return }
         getAngry()
     }
-    
+
     private func getAngry() {
         guard let subject else { return }
         Logger.log(subject.id, "Getting angry!")
@@ -20,7 +20,7 @@ class GetsAngryWhenMeetingOtherCats: Capability {
             self?.isEnabled = true
         }
     }
-    
+
     private func stopBeingAngry() {
         guard let subject = subject as? PetEntity else { return }
         guard case .action(let action, _) = subject.state else { return }

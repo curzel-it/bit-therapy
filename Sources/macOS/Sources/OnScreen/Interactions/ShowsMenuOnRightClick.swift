@@ -6,7 +6,7 @@ class RightClickable: Capability {
         super.install(on: subject)
         isEnabled = !subject.isEphemeral
     }
-    
+
     func onRightClick(from window: SomeWindow?, at point: CGPoint) {
         // ...
     }
@@ -17,62 +17,62 @@ extension Entity {
 }
 
 #if os(macOS)
-class ShowsMenuOnRightClick: RightClickable {
-    @Inject private var onScreen: OnScreenCoordinator
-    
-    private weak var lastWindow: SomeWindow?
-    
-    override func onRightClick(from window: SomeWindow?, at point: CGPoint) {
-        lastWindow = window
-        lastWindow?.contentView?.menu = petMenu()
-    }
+    class ShowsMenuOnRightClick: RightClickable {
+        @Inject private var onScreen: OnScreenCoordinator
 
-    private func petMenu() -> NSMenu {
-        let menu = NSMenu(title: "MainMenu")
-        menu.addItem(followMouseItem())
-        menu.addItem(showHomeItem())
-        menu.addItem(hideAllPetsItem())
-        return menu
-    }
+        private weak var lastWindow: SomeWindow?
 
-    private func item(title: String, action: Selector) -> NSMenuItem {
-        let item = NSMenuItem(
-            title: "menu.\(title)".localized(),
-            action: action,
-            keyEquivalent: ""
-        )
-        item.target = self
-        return item
-    }
+        override func onRightClick(from window: SomeWindow?, at point: CGPoint) {
+            lastWindow = window
+            lastWindow?.contentView?.menu = petMenu()
+        }
 
-    private func showHomeItem() -> NSMenuItem {
-        item(title: "home", action: #selector(showHome))
-    }
+        private func petMenu() -> NSMenu {
+            let menu = NSMenu(title: "MainMenu")
+            menu.addItem(followMouseItem())
+            menu.addItem(showHomeItem())
+            menu.addItem(hideAllPetsItem())
+            return menu
+        }
 
-    @objc func showHome() {
-        MainScene.show()
-    }
-    
-    private func hideAllPetsItem() -> NSMenuItem {
-        item(title: "hideAllPet", action: #selector(hideAllPets))
-    }
+        private func item(title: String, action: Selector) -> NSMenuItem {
+            let item = NSMenuItem(
+                title: "menu.\(title)".localized(),
+                action: action,
+                keyEquivalent: ""
+            )
+            item.target = self
+            return item
+        }
 
-    @objc func hideAllPets() {
-        onScreen.hide()
-    }
-    
-    private func followMouseItem() -> NSMenuItem {
-        item(title: "followMouse", action: #selector(toggleFollowMouse))
-    }
-    
-    @objc func toggleFollowMouse() {
-        if let mouseChaser = subject?.capability(for: MouseChaser.self) {
-            mouseChaser.kill()
-        } else {
-            subject?.install(MouseChaser())
+        private func showHomeItem() -> NSMenuItem {
+            item(title: "home", action: #selector(showHome))
+        }
+
+        @objc func showHome() {
+            MainScene.show()
+        }
+
+        private func hideAllPetsItem() -> NSMenuItem {
+            item(title: "hideAllPet", action: #selector(hideAllPets))
+        }
+
+        @objc func hideAllPets() {
+            onScreen.hide()
+        }
+
+        private func followMouseItem() -> NSMenuItem {
+            item(title: "followMouse", action: #selector(toggleFollowMouse))
+        }
+
+        @objc func toggleFollowMouse() {
+            if let mouseChaser = subject?.capability(for: MouseChaser.self) {
+                mouseChaser.kill()
+            } else {
+                subject?.install(MouseChaser())
+            }
         }
     }
-}
 #else
-class ShowsMenuOnRightClick: RightClickable {}
+    class ShowsMenuOnRightClick: RightClickable {}
 #endif

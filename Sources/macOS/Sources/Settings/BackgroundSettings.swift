@@ -3,7 +3,7 @@ import SwiftUI
 
 struct BackgroundSettings: View {
     @StateObject private var viewModel = BackgroundsViewModel()
-    
+
     var body: some View {
         VStack {
             Text(Lang.Backgrounds.title).font(.headline).textAlign(.leading)
@@ -17,23 +17,23 @@ struct BackgroundSettings: View {
 
 private class BackgroundsViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
-    
+
     @Published private(set) var selectedItem = ""
-    
+
     let backgrounds: [String] = [
         "BackgroundMountainDynamic",
         "BackgroundMountainDay",
         "BackgroundMountainNight"
     ]
-    
+
     init() {
         selectedItem = appConfig.background
     }
-    
+
     func title(for item: String) -> String {
         "backgrounds.\(item)".localized()
     }
-    
+
     func select(_ item: String) {
         withAnimation {
             appConfig.background = item
@@ -44,9 +44,9 @@ private class BackgroundsViewModel: ObservableObject {
 
 private struct BackgroundSettingsItem: View {
     @EnvironmentObject var viewModel: BackgroundsViewModel
-    
+
     let item: String
-    
+
     var body: some View {
         HStack {
             Text(viewModel.title(for: item))
@@ -67,4 +67,3 @@ private struct BackgroundSettingsItem: View {
         }
     }
 }
-

@@ -5,9 +5,9 @@ import SwiftUI
 struct PetPreview: View {
     @EnvironmentObject private var selectionViewModel: PetsSelectionViewModel
     @StateObject private var viewModel: PetPreviewViewModel
-    
+
     let size: CGFloat = 80
-    
+
     init(species: Species) {
         let vm = PetPreviewViewModel(species: species)
         _viewModel = StateObject(wrappedValue: vm)
@@ -34,24 +34,24 @@ struct PetPreview: View {
 private class PetPreviewViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
     @Inject private var names: SpeciesNamesRepository
-    
+
     @Published var title = ""
-    
+
     let species: Species
     var previewImage: ImageFrame?
-    
+
     private var disposables = Set<AnyCancellable>()
-    
+
     init(species: Species) {
         self.species = species
         bindTitle()
         loadImage()
     }
-    
+
     func loadImage() {
         previewImage = assets.previewImage(for: species.id)
     }
-    
+
     private func bindTitle() {
         names.name(forSpecies: species.id)
             .sink { [weak self] name in self?.title = name }

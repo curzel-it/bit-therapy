@@ -6,9 +6,9 @@ open class Entity: Identifiable {
     public let id: String
     public var capabilities: [Capability] = []
     public let creationDate = Date()
-    public var direction: CGVector = .zero 
+    public var direction: CGVector = .zero
     public var fps: TimeInterval = 10
-    public var frame: CGRect 
+    public var frame: CGRect
     public var isAlive = true
     public var isEphemeral: Bool = false
     public var isStatic: Bool = false
@@ -25,15 +25,15 @@ open class Entity: Identifiable {
         frame: CGRect,
         in world: World
     ) {
-        self.fps = species.fps
+        fps = species.fps
         self.frame = frame
         self.id = id
         self.species = species
         self.world = world
-        self.zIndex = species.zIndex
+        zIndex = species.zIndex
         installCapabilities()
     }
-    
+
     private func installCapabilities() {
         species.capabilities.forEach {
             if let capability = Capabilities.discovery.capability(for: $0) {
@@ -56,7 +56,7 @@ open class Entity: Identifiable {
             $0.update(with: collisions, after: time)
         }
     }
-    
+
     open func worldBoundsChanged() {
         // ...
     }

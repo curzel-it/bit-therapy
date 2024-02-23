@@ -3,7 +3,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var appConfig: AppConfig
-    
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
@@ -57,9 +57,9 @@ struct FixOnScreenPets: View {
 
 private struct RandomEventsSwitch: View {
     @EnvironmentObject var appConfig: AppConfig
-    
+
     @State var showingDetails = false
-    
+
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.randomEventsTitle,
@@ -88,7 +88,7 @@ private struct RandomEventsSwitch: View {
 
 struct GravitySwitch: View {
     @EnvironmentObject var appConfig: AppConfig
-    
+
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.gravity,
@@ -102,7 +102,7 @@ struct GravitySwitch: View {
 
 struct BounceOffOtherPets: View {
     @EnvironmentObject var appConfig: AppConfig
-    
+
     var body: some View {
         SettingsSwitch(
             label: Lang.Settings.bounceOffPets,
@@ -116,13 +116,13 @@ struct BounceOffOtherPets: View {
 
 struct SizeControl: View {
     @EnvironmentObject var appConfig: AppConfig
-    
+
     @State var text: String = ""
-    
+
     var formattedValue: String {
         "\(Int(appConfig.petSize))"
     }
-    
+
     var body: some View {
         HStack {
             Text(Lang.Settings.size)
@@ -144,13 +144,13 @@ struct SizeControl: View {
 
 struct SpeedControl: View {
     @EnvironmentObject var appConfig: AppConfig
-    
+
     @State var text: String = ""
-    
+
     var formattedValue: String {
         "\(Int(appConfig.speedMultiplier * 100))%"
     }
-    
+
     var body: some View {
         HStack {
             Text(Lang.Settings.speed)
@@ -163,7 +163,7 @@ struct SpeedControl: View {
             guard let value = Int(newText) else { return }
             let newSpeed = CGFloat(value) / 100
             guard appConfig.speedMultiplier != newSpeed else { return }
-            guard 0 <= newSpeed && newSpeed <= 3 else { return }
+            guard newSpeed >= 0 && newSpeed <= 3 else { return }
             appConfig.speedMultiplier = newSpeed
         }
     }
@@ -175,7 +175,7 @@ struct SettingsSwitch: View {
     let label: String
     let value: Binding<Bool>
     var showHelp: Binding<Bool>?
-    
+
     var body: some View {
         HStack {
             Text(label)

@@ -1,7 +1,7 @@
 import XCTest
 
 /// Will take screenshots for AppStore page.
-/// Screenshots path can be find in console log at the end of the process. 
+/// Screenshots path can be find in console log at the end of the process.
 /// Required sizes / devices:
 ///  - iPhone 5.5" / iPhone 8 Plus
 ///  - iPhone 6.5" / iPhone 11 Pro Max
@@ -15,7 +15,7 @@ final class AppStoreScreenshots: XCTestCase {
         print("You can find screenshots at: \(path)")
         print("open \(path.replacingOccurrences(of: "file:///", with: "/"))")
     }
-    
+
     func testTakeHomeScreenshots() {
         for lang in Language.allCases {
             for theme in Theme.allCases {
@@ -27,7 +27,7 @@ final class AppStoreScreenshots: XCTestCase {
             }
         }
     }
-    
+
     func testTakeScreensaverScreenshots() {
         for lang in Language.allCases {
             for theme in Theme.allCases {
@@ -42,17 +42,16 @@ final class AppStoreScreenshots: XCTestCase {
             }
         }
     }
-    
+
     private func navigateToHome(in app: XCUIApplication) {
         let closeOnboarding = app.buttons["close_onboarding"]
         if closeOnboarding.exists {
             closeOnboarding.tap()
         }
     }
-    
+
     private func navigateToScreensaver(in app: XCUIApplication) {
         navigateToHome(in: app)
         app.staticTexts["screensaver"].tap()
     }
 }
-

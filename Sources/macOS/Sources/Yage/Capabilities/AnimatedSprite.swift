@@ -8,7 +8,7 @@ public class AnimatedSprite: Capability {
     private var lastFrameBeforeAnimations: CGRect = .zero
     private var lastState: EntityState = .drag
 
-    public override func install(on subject: Entity) {
+    override public func install(on subject: Entity) {
         super.install(on: subject)
         lastFrameBeforeAnimations = subject.frame
     }

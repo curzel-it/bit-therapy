@@ -6,28 +6,28 @@ import ZIPFoundation
 
 class ExportPetUseCaseImpl: ExportPetUseCase {
     @Inject private var resources: CustomPetsResourcesProvider
-    
+
     private let tag = "ExportPetUseCase"
-    
+
     func export(item: Species, completion: @escaping (URL?) -> Void) {
         Logger.log(tag, "Exporting", item.id)
         guard let destination = exportUrl(for: item) else { return }
         guard let exportables = exportableUrls(for: item) else { return }
-        
+
         try? FileManager.default.removeItem(at: destination)
-        
+
         do {
             try export(urls: exportables, to: destination)
             completion(destination)
-        } catch let error {
+        } catch {
             Logger.log(tag, "Failed to export: \(error)")
             completion(nil)
         }
     }
-    
+
     private func exportableUrls(for item: Species) -> [URL]? {
         let urls = resources.allResources(for: item.id)
-        
+
         if urls.count > 0 {
             Logger.log(tag, "Found \(urls.count) exportables")
             return urls
@@ -36,7 +36,7 @@ class ExportPetUseCaseImpl: ExportPetUseCase {
             return nil
         }
     }
-    
+
     private func export(urls: [URL], to destination: URL) throws {
         let archive = try ZIPFoundation.Archive(url: destination, accessMode: .create, pathEncoding: .utf8)
         try urls.forEach {
@@ -44,7 +44,7 @@ class ExportPetUseCaseImpl: ExportPetUseCase {
         }
         Logger.log(tag, "Archive created!")
     }
-    
+
     private func exportUrl(for item: Species) -> URL? {
         Logger.log(tag, "Asking path to export", item.id)
         let dialog = NSSavePanel()

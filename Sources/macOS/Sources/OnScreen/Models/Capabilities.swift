@@ -21,7 +21,7 @@ class PetsCapabilitiesDiscoveryService: CapabilitiesDiscoveryService {
         "SleepingPlace": SleepingPlace.self,
         "WallCrawler": WallCrawler.self
     ]
-    
+
     func capability(for id: String) -> Capability? {
         capabilities[id]?.init()
     }

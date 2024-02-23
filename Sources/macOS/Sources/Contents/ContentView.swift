@@ -5,7 +5,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var appConfig: AppConfig
     @StateObject private var viewModel = ContentViewModel()
-    
+
     var body: some View {
         ZStack {
             Background()
@@ -18,7 +18,7 @@ struct ContentView: View {
         .environmentObject(viewModel)
         .preferredColorScheme(viewModel.colorScheme)
     }
-    
+
     @ViewBuilder private func contents(of page: AppPage) -> some View {
         switch page {
         case .about: AboutView()
@@ -35,14 +35,14 @@ private class ContentViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
     @Inject private var species: SpeciesProvider
     @Inject private var theme: ThemeUseCase
-        
+
     @Published var tabBarHidden: Bool = false
     @Published var isLoading: Bool = true
     @Published var backgroundImage: String = ""
     @Published var colorScheme: ColorScheme?
     @Published var selectedPage: AppPage = .petSelection
     @Published var backgroundBlurRadius: CGFloat = 10
-    
+
     lazy var options: [AppPage] = {
         if DeviceRequirement.iOS.isSatisfied {
             return [.petSelection, .screensaver, .settings, .about]
@@ -50,9 +50,9 @@ private class ContentViewModel: ObservableObject {
             return [.petSelection, .screensaver, .settings, .contributors, .about]
         }
     }()
-    
+
     private var disposables = Set<AnyCancellable>()
-    
+
     init() {
         selectedPage = .petSelection
         backgroundImage = appConfig.background
@@ -61,7 +61,7 @@ private class ContentViewModel: ObservableObject {
         bindColorScheme()
         bindLoading()
     }
-    
+
     private func bindScreensaverSettings() {
         $selectedPage
             .sink { [weak self] selection in
@@ -72,7 +72,7 @@ private class ContentViewModel: ObservableObject {
             }
             .store(in: &disposables)
     }
-    
+
     private func bindLoading() {
         species.all()
             .filter { !$0.isEmpty }
@@ -85,13 +85,13 @@ private class ContentViewModel: ObservableObject {
             }
             .store(in: &disposables)
     }
-    
+
     private func bindBackground() {
         appConfig.$background
             .sink { [weak self] in self?.backgroundImage = $0 }
             .store(in: &disposables)
     }
-    
+
     private func bindColorScheme() {
         theme.theme()
             .sink { [weak self] theme in
@@ -101,7 +101,6 @@ private class ContentViewModel: ObservableObject {
                 }
             }
             .store(in: &disposables)
-        
     }
 }
 
@@ -111,7 +110,7 @@ extension ContentViewModel: TabBarViewModel {
 
 private struct BackToHomeButton: View {
     @EnvironmentObject var viewModel: ContentViewModel
-    
+
     var body: some View {
         if viewModel.tabBarHidden {
             Image(systemName: "pawprint")
@@ -130,7 +129,7 @@ private struct BackToHomeButton: View {
 
 private struct Background: View {
     @EnvironmentObject private var viewModel: ContentViewModel
-    
+
     var body: some View {
         GeometryReader { geometry in
             Image(viewModel.backgroundImage)

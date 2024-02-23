@@ -2,17 +2,17 @@ import SwiftUI
 
 struct IconButton: View {
     @StateObject private var viewModel: ViewModel
-    
+
     init(systemName: String, action: @escaping () -> Void) {
         let vm = ViewModel(imageName: nil, systemName: systemName, in: nil, action: action)
         _viewModel = StateObject(wrappedValue: vm)
     }
-    
+
     init(imageName: String, in bundle: Bundle? = nil, action: @escaping () -> Void) {
         let vm = ViewModel(imageName: imageName, systemName: nil, in: bundle, action: action)
         _viewModel = StateObject(wrappedValue: vm)
     }
-    
+
     var body: some View {
         Icon()
             .font(.title)
@@ -26,7 +26,7 @@ private class ViewModel: ObservableObject {
     let bundle: Bundle?
     let imageName: String?
     let systemName: String?
-    
+
     init(
         imageName: String?,
         systemName: String?,
@@ -42,7 +42,7 @@ private class ViewModel: ObservableObject {
 
 private struct Icon: View {
     @EnvironmentObject var viewModel: ViewModel
-    
+
     var body: some View {
         if let name = viewModel.imageName {
             Image(name, bundle: viewModel.bundle)
@@ -53,4 +53,3 @@ private struct Icon: View {
         }
     }
 }
-

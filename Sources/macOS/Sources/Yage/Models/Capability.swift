@@ -10,19 +10,19 @@ open class Capability {
         let id = subject?.id ?? "n/a"
         return "\(name)-\(id)"
     }()
-    
+
     public required init() {}
 
     open func install(on subject: Entity) {
         Logger.log(subject.id, "Installing", String(describing: self))
         self.subject = subject
     }
-    
+
     func update(with collisions: Collisions, after time: TimeInterval) {
         guard isEnabled else { return }
         doUpdate(with: collisions, after: time)
     }
-    
+
     open func doUpdate(with collisions: Collisions, after time: TimeInterval) {
         // ...
     }

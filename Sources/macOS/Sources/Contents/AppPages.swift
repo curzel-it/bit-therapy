@@ -11,7 +11,7 @@ enum AppPage: String, CaseIterable {
 
 extension AppPage: TabBarItem {
     var accessibilityIdentifier: String { rawValue }
-    
+
     var icon: String {
         switch self {
         case .about: return "info.circle"
@@ -22,8 +22,8 @@ extension AppPage: TabBarItem {
         case .none: return "questionmark.diamond"
         }
     }
-    
+
     var iconSelected: String { "\(icon).fill" }
-    
+
     var title: String { description }
 }

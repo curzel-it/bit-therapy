@@ -19,9 +19,9 @@ extension Container {
 @propertyWrapper
 class Inject<Value> {
     private var storage: Value?
-    
+
     init() {}
-    
+
     var wrappedValue: Value {
         storage ?? {
             guard let resolver = Container.main else {

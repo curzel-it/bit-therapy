@@ -3,7 +3,7 @@ import SwiftUI
 
 struct NewsView: View {
     @StateObject private var viewModel = NewsViewModel()
-    
+
     var body: some View {
         VStack(spacing: .md) {
             if viewModel.showStartAtLoginAlert {
@@ -43,31 +43,31 @@ struct NewsView: View {
 private class NewsViewModel: ObservableObject {
     @Inject private var launchAtLogin: LaunchAtLoginUseCase
     @Inject private var speciesProvider: SpeciesProvider
-    
+
     @Published var showStartAtLoginAlert: Bool = false
     @Published var showCybertruckAlert: Bool = false
     @Published var showCustomPetsAlert: Bool = false
     @Published var bottomPadding: Spacing = .zero
-    
+
     @AppStorage("didShowLaunchAtLoginAlertxx") private var didShowLaunchAtLoginAlert = false
     @AppStorage("didShowCybertruckLaunchVideo") private var didShowCybertruckLaunchVideo = false
     @AppStorage("didShowCustomPetsAlert") private var didShowCustomPetsAlert = false
-    
+
     init() {
         showStartAtLoginAlert = !didShowLaunchAtLoginAlert && launchAtLogin.isAvailable && !launchAtLogin.isEnabled
         if showStartAtLoginAlert {
             didShowLaunchAtLoginAlert = true
         }
-        
+
         showCybertruckAlert = !didShowCybertruckLaunchVideo
         didShowCybertruckLaunchVideo = true
-        
+
         showCustomPetsAlert = !didShowCustomPetsAlert
         didShowCustomPetsAlert = true
-        
+
         bottomPadding = showStartAtLoginAlert || showCybertruckAlert || showCustomPetsAlert ? .xxl : .zero
     }
-    
+
     func enableLaunchAtLogin() {
         showStartAtLoginAlert = false
         launchAtLogin.enable()
@@ -75,7 +75,7 @@ private class NewsViewModel: ObservableObject {
             showStartAtLoginAlert = false
         }
     }
-    
+
     func disableLaunchAtLogin() {
         showStartAtLoginAlert = false
         launchAtLogin.disable()
@@ -96,7 +96,7 @@ private struct NewsBanner: View {
     let title: String
     let message: String
     let actions: [NewsBannerAction]
-    
+
     var body: some View {
         VHStack(DeviceRequirement.iPhone.isSatisfied ? .vertical : .horizontal) {
             VStack(spacing: .md) {
@@ -122,7 +122,7 @@ private struct NewsBanner: View {
 
 private struct Actions: View {
     let actions: [NewsBannerAction]
-    
+
     var body: some View {
         ForEach(actions) { action in
             Button(action.title) { action.action() }

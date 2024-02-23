@@ -11,7 +11,7 @@ class Dependencies {
         container.registerSingleton(SpeciesNamesRepository.self) { _ in SpeciesNamesRepositoryImpl() }
         container.registerSingleton(SpeciesProvider.self) { _ in SpeciesProviderImpl() }
         container.registerSingleton(RemoteConfigProvider.self) { _ in RemoteConfigFromGitHubRepo() }
-        
+
         container.register(CommandLineUseCase.self) { _ in CommandLineUseCaseImpl() }
         container.register(CustomPetsResourcesProvider.self) { _ in CustomPetsResourcesProviderImpl() }
         container.register(DeletePetButtonCoordinator.self) { _ in DeletePetButtonCoordinatorImpl() }
@@ -30,9 +30,9 @@ class Dependencies {
         container.register(WorldElementsService.self) { _ in WorldElementsServiceImpl() }
         container.register(ScreensaverElementsService.self) { _ in ScreensaverElementsServiceImpl() }
         container.register(UfoAbductionUseCase.self) { _ in UfoAbductionUseCaseImpl() }
-        
+
         Container.main = container.synchronize()
-        
+
         Capabilities.discovery = PetsCapabilitiesDiscoveryService()
     }
 }

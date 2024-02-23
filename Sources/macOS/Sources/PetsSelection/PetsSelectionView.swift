@@ -5,9 +5,9 @@ struct PetsSelectionView: View {
     @StateObject var viewModel: PetsSelectionViewModel
 
     init() {
-        self._viewModel = StateObject(wrappedValue: PetsSelectionViewModel())
+        _viewModel = StateObject(wrappedValue: PetsSelectionViewModel())
     }
-    
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .zero) {
@@ -34,7 +34,7 @@ struct PetsSelectionView: View {
 
 private struct MyPets: View {
     @EnvironmentObject var viewModel: PetsSelectionViewModel
-    
+
     var body: some View {
         VStack(spacing: .md) {
             HStack {
@@ -69,7 +69,7 @@ private struct MorePets: View {
 
 private struct GridAndFiltersVerticallyStacked: View {
     @EnvironmentObject var viewModel: PetsSelectionViewModel
-    
+
     var body: some View {
         VStack(spacing: .lg) {
             HorizontalFiltersView()
@@ -84,7 +84,7 @@ private struct GridAndFiltersVerticallyStacked: View {
 
 private struct GridAndFiltersSideToSide: View {
     @EnvironmentObject var viewModel: PetsSelectionViewModel
-    
+
     var body: some View {
         HStack {
             VStack {
@@ -106,7 +106,7 @@ private struct GridAndFiltersSideToSide: View {
 
 private struct Title: View {
     let text: String
-    
+
     var body: some View {
         Text(text)
             .font(.title.bold())

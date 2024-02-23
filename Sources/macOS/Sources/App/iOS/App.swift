@@ -22,9 +22,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     @Inject private var commandLine: CommandLineUseCase
     @Inject private var onScreen: OnScreenCoordinator
     @Inject private var remoteConfig: RemoteConfigProvider
-    
+
     private let tag = "AppDelegate"
-    
+
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
