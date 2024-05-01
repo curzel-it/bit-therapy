@@ -1,4 +1,5 @@
 import random
+
 from config.config import Config
 from di.di import Dependencies
 from onscreen.models.pet_size import PetSize
@@ -17,10 +18,7 @@ class PetEntity(Entity):
         gravity_enabled = self.config.gravity_enabled.value
 
         super().__init__(
-            species,
-            PetEntity.next_id(species),
-            Rect(0, 0, pet_size, pet_size),
-            world
+            species, PetEntity.next_id(species), Rect(0, 0, pet_size, pet_size), world
         )
         self.reset_speed()
         self.place_in_random_position()
@@ -29,9 +27,7 @@ class PetEntity(Entity):
 
     def reset_speed(self):
         self.speed = PetEntity.default_speed(
-            self.species,
-            self.frame.width,
-            self.config.speed_multiplier.value
+            self.species, self.frame.width, self.config.speed_multiplier.value
         )
 
     def place_in_random_position(self):
@@ -67,7 +63,7 @@ class PetEntity(Entity):
 
     @classmethod
     def next_id(cls, species):
-        if not hasattr(cls, 'incremental_id'):
+        if not hasattr(cls, "incremental_id"):
             cls.incremental_id = 0
         cls.incremental_id += 1
-        return f'{species.id}-{cls.incremental_id}'
+        return f"{species.id}-{cls.incremental_id}"

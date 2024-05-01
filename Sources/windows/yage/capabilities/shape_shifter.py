@@ -14,7 +14,7 @@ class ShapeShifter(Capability):
         self.target_size = size
         self.delta = Size(
             width=size.width - self.subject.frame.width,
-            height=size.height - self.subject.frame.height
+            height=size.height - self.subject.frame.height,
         )
         self.animation_duracy = duracy
         self.remaining_time = duracy
@@ -27,13 +27,13 @@ class ShapeShifter(Capability):
     def _updated_frame(self, time):
         delta = Size(
             width=time * self.delta.width / self.animation_duracy,
-            height=time * self.delta.height / self.animation_duracy
+            height=time * self.delta.height / self.animation_duracy,
         )
         return Rect(
             x=self.subject.frame.origin.x - delta.width / 2,
             y=self.subject.frame.origin.y - delta.height / 2,
             width=self.subject.frame.width + delta.width,
-            height=self.subject.frame.height + delta.height
+            height=self.subject.frame.height + delta.height,
         )
 
     def _check_completion(self, time):

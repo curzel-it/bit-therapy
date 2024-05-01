@@ -1,22 +1,26 @@
 from functools import cached_property
 from typing import Optional, Tuple
-from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QPixmap
-from rx.subject import BehaviorSubject
+
 from di.di import Dependencies
 from onscreen.rendering.coordinate_system import CoordinateSystem
-from onscreen.rendering.image_interpolation import ImageInterpolationMode, ImageInterpolationUseCase
+from onscreen.rendering.image_interpolation import (
+    ImageInterpolationMode,
+    ImageInterpolationUseCase,
+)
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QPixmap
 from qtutils.screens import Screens
+from rx.subject import BehaviorSubject
 from yage.capabilities.draggable import Draggable
 from yage.models.assets import AssetsProvider
 from yage.models.entity import Entity
 from yage.models.entity_state import EntityState
-from yage.utils.geometry import Point, Size, Rect
+from yage.utils.geometry import Point, Rect, Size
 
 
 class EntityViewModel:
     def __init__(self, entity: Entity):
-        self.tag = f'ViewModel-{entity.id}'
+        self.tag = f"ViewModel-{entity.id}"
         self._assets = Dependencies.instance(AssetsProvider)
         self._coordinate_system = Dependencies.instance(CoordinateSystem)
         self._image_interpolation = Dependencies.instance(ImageInterpolationUseCase)
@@ -37,11 +41,11 @@ class EntityViewModel:
         self._update_frame()
 
     @property
-    def entity_id(self): 
+    def entity_id(self):
         return self._entity.id
 
     @property
-    def is_interactable(self): 
+    def is_interactable(self):
         return not self._entity.is_ephemeral
 
     def update(self):
@@ -77,8 +81,12 @@ class EntityViewModel:
 
     def dragged_to(self, final_destination: Point) -> bool:
         delta = Size(
-            final_destination.x - self._location_on_last_drag.x - self.frame.value.width / 2,
-            final_destination.y - self._location_on_last_drag.y - self.frame.value.height / 2
+            final_destination.x
+            - self._location_on_last_drag.x
+            - self.frame.value.width / 2,
+            final_destination.y
+            - self._location_on_last_drag.y
+            - self.frame.value.height / 2,
         )
         self.dragged_by(delta)
 
@@ -98,7 +106,7 @@ class EntityViewModel:
         self._is_mouse_down = False
         delta = Size(
             self._location_on_last_drag.x - self._location_on_mouse_down.x,
-            self._location_on_mouse_down.y - self._location_on_last_drag.y
+            self._location_on_mouse_down.y - self._location_on_last_drag.y,
         )
         self._entity.drag.drag_ended(delta)
 
@@ -122,17 +130,20 @@ class EntityViewModel:
         asset = self._assets.image(self._entity.sprite)
         if not asset:
             return None
-        interpolation = self._image_interpolation.interpolation_mode(asset, self.frame.value.size)
+        interpolation = self._image_interpolation.interpolation_mode(
+            asset, self.frame.value.size
+        )
         transformation = self._image_interpolation.transformation_mode(interpolation)
         hflip, vflip, z_angle = self._rotations(self._entity)
         # Seems necessary on windows:
         # image_size = self.frame.value.size.scaled(self._scale_factor).as_qsize()
         image_size = self.frame.value.size.as_qsize()
 
-        return asset \
-            .scaled(image_size, Qt.AspectRatioMode.KeepAspectRatio, transformation) \
-            .flipped(horizontally=hflip, vertically=vflip) \
+        return (
+            asset.scaled(image_size, Qt.AspectRatioMode.KeepAspectRatio, transformation)
+            .flipped(horizontally=hflip, vertically=vflip)
             .rotated(z_angle)
+        )
 
     def _rotations(self, entity: Entity) -> Tuple[bool, bool, float]:
         horizontally, vertically, z_angle = False, False, 0

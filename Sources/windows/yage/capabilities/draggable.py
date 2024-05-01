@@ -1,4 +1,5 @@
 from typing import Optional
+
 from yage.models import Capability
 from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point, Rect, Size
@@ -16,7 +17,8 @@ class Draggable(Capability):
             self._drag_started()
         new_frame = self.subject.frame.offset(size=current_delta)
         self.subject.frame.origin = self._nearest_position(
-            new_frame, self.subject.world_bounds)
+            new_frame, self.subject.world_bounds
+        )
 
     def drag_ended(self, _: Size) -> Optional[Point]:
         if not self.drag_enabled or not self.is_being_dragged:
@@ -42,5 +44,5 @@ class Draggable(Capability):
     def _nearest_position(self, rect: Rect, bounds: Rect) -> Point:
         return Point(
             min(max(rect.min_x, 0), bounds.width - rect.width),
-            min(max(rect.min_y, 0), bounds.height - rect.height)
+            min(max(rect.min_y, 0), bounds.height - rect.height),
         )

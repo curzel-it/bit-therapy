@@ -8,7 +8,7 @@ from .flip_horizontally_when_going_left import FlipHorizontallyWhenGoingLeft
 from .gravity import Gravity
 from .linear_movement import LinearMovement
 from .rotating import Rotating
-from .sprites_provider import SpritesProvider
-from .seeker import Seeker, SeekerTargetPosition, SeekerState
+from .seeker import Seeker, SeekerState, SeekerTargetPosition
 from .shape_shifter import ShapeShifter
+from .sprites_provider import SpritesProvider
 from .wall_crawler import WallCrawler

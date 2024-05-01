@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from yage.models.capability import Capability
 from yage.models.entity import Entity
 from yage.models.entity_state import EntityState
@@ -49,7 +50,7 @@ class LeavesTracesWhileWalking(Capability):
             species=self.species_for_trace_entities,
             id=LeavesTracesWhileWalking.next_trace_id(),
             frame=self.subject.frame.offset(point=self.trace_offset()),
-            world=self.subject.world
+            world=self.subject.world,
         )
         entity.is_ephemeral = True
         self.subject.world.children.append(entity)
@@ -76,4 +77,4 @@ class LeavesTracesWhileWalking(Capability):
             LeavesTracesWhileWalking.incremental_id += 1
         except AttributeError:
             LeavesTracesWhileWalking.incremental_id = 1
-        return f'Trace-{LeavesTracesWhileWalking.incremental_id}'
+        return f"Trace-{LeavesTracesWhileWalking.incremental_id}"

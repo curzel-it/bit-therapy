@@ -1,5 +1,6 @@
 import random
 from typing import List
+
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.models.entity_state import EntityState

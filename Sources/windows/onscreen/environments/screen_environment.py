@@ -1,5 +1,6 @@
 import random
 from typing import List, Optional
+
 from config.config import Config
 from config.species import SpeciesProvider
 from di.di import Dependencies
@@ -18,10 +19,8 @@ class ScreenEnvironment(World):
         self._disposables = []
         self._rainy_cloud_use_case = Dependencies.instance(RainyCloudUseCase)
         self._settings = Dependencies.instance(Config)
-        self._ufo_abduction_use_case = Dependencies.instance(
-            UfoAbductionUseCase)
-        self._desktop_obstacles = Dependencies.instance(
-            DesktopObstaclesService)
+        self._ufo_abduction_use_case = Dependencies.instance(UfoAbductionUseCase)
+        self._desktop_obstacles = Dependencies.instance(DesktopObstaclesService)
         self._species_provider = Dependencies.instance(SpeciesProvider)
         self._world_elements = Dependencies.instance(WorldElementsService)
         self._load_additional_elements()
@@ -34,10 +33,8 @@ class ScreenEnvironment(World):
         return any(isinstance(child, PetEntity) for child in self.children)
 
     def random_pet(self) -> Optional[PetEntity]:
-        pets = [child for child in self.children if isinstance(
-            child, PetEntity)]
-        pets = [child for child in pets if child.speed !=
-                0 and not child.is_ephemeral]
+        pets = [child for child in self.children if isinstance(child, PetEntity)]
+        pets = [child for child in pets if child.speed != 0 and not child.is_ephemeral]
         if len(pets) > 0:
             return random.choice(pets)
         return None
@@ -49,7 +46,8 @@ class ScreenEnvironment(World):
     def remove(self, species_to_remove: Species):
         self._settings.deselect(species_to_remove.id)
         to_remove = [
-            child for child in self.children if child.species == species_to_remove]
+            child for child in self.children if child.species == species_to_remove
+        ]
         for child in to_remove:
             child.kill()
             self.children.remove(child)
@@ -81,10 +79,10 @@ class ScreenEnvironment(World):
         self._add_new_pets(new_selected_species)
 
     def _remove_unselected_pets(self, new_selected_species: List[str]):
+        to_remove = [child for child in self.children if isinstance(child, PetEntity)]
         to_remove = [
-            child for child in self.children if isinstance(child, PetEntity)]
-        to_remove = [
-            child for child in to_remove if child.species.id not in new_selected_species]
+            child for child in to_remove if child.species.id not in new_selected_species
+        ]
         for child in to_remove:
             child.kill()
             self.children.remove(child)

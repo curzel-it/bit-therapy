@@ -1,8 +1,9 @@
 from typing import List
-from PyQt6.QtWidgets import QWidget
+
 from di import Dependencies
 from onscreen.environments.screen_environment import ScreenEnvironment
 from onscreen.rendering.world_window import WorldWindow
+from PyQt6.QtWidgets import QWidget
 from qtutils.screens import Screens
 from yage.models.species import Species
 from yage.utils.logger import Logger

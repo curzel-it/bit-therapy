@@ -1,5 +1,6 @@
 # pylint: disable=no-member
 
+
 class ClassProperty(object):
     def __init__(self, f):
         self.f = f
@@ -31,7 +32,7 @@ class Dependencies:
             return cls.shared.container.instance(key)
 
     @ClassProperty
-    def shared(self) -> 'Dependencies':
+    def shared(self) -> "Dependencies":
         if self._instance is not None:
             return self._instance
         else:
@@ -46,14 +47,15 @@ class Container:
     def register(self, key, builder):
         if not callable(builder):
             raise TypeError(
-                f'Tried to register builder {builder} for {key}, which is not a function')
+                f"Tried to register builder {builder} for {key}, which is not a function"
+            )
         self._builders[key] = builder
 
     def instance(self, key):
         try:
             return self._builders[key]()
         except KeyError as exc:
-            message = f'Missing builder for `{key}`, did you register it?'
+            message = f"Missing builder for `{key}`, did you register it?"
             raise KeyError(message) from exc
 
 

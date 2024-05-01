@@ -16,25 +16,6 @@ struct NewsView: View {
                     ]
                 )
             }
-            if viewModel.showCustomPetsAlert {
-                NewsBanner(
-                    title: Lang.Onboarding.customPetsTitle,
-                    message: Lang.Onboarding.customPetsMessage,
-                    actions: []
-                )
-            }
-            if viewModel.showCybertruckAlert {
-                NewsBanner(
-                    title: Lang.Youtube.cybertruckTitle,
-                    message: Lang.Youtube.cybertruckMessage,
-                    actions: [
-                        .init(title: Lang.Youtube.cybertruckAction, style: .regular) {
-                            let url = URL(string: Lang.Youtube.cybertruckLink) ?? URL(string: Lang.Urls.youtube)
-                            url?.visit()
-                        }
-                    ]
-                )
-            }
         }
         .padding(.bottom, viewModel.bottomPadding)
     }
@@ -45,13 +26,9 @@ private class NewsViewModel: ObservableObject {
     @Inject private var speciesProvider: SpeciesProvider
 
     @Published var showStartAtLoginAlert: Bool = false
-    @Published var showCybertruckAlert: Bool = false
-    @Published var showCustomPetsAlert: Bool = false
     @Published var bottomPadding: Spacing = .zero
 
     @AppStorage("didShowLaunchAtLoginAlertxx") private var didShowLaunchAtLoginAlert = false
-    @AppStorage("didShowCybertruckLaunchVideo") private var didShowCybertruckLaunchVideo = false
-    @AppStorage("didShowCustomPetsAlert") private var didShowCustomPetsAlert = false
 
     init() {
         showStartAtLoginAlert = !didShowLaunchAtLoginAlert && launchAtLogin.isAvailable && !launchAtLogin.isEnabled
@@ -59,13 +36,7 @@ private class NewsViewModel: ObservableObject {
             didShowLaunchAtLoginAlert = true
         }
 
-        showCybertruckAlert = !didShowCybertruckLaunchVideo
-        didShowCybertruckLaunchVideo = true
-
-        showCustomPetsAlert = !didShowCustomPetsAlert
-        didShowCustomPetsAlert = true
-
-        bottomPadding = showStartAtLoginAlert || showCybertruckAlert || showCustomPetsAlert ? .xxl : .zero
+        bottomPadding = showStartAtLoginAlert ? .xxl : .zero
     }
 
     func enableLaunchAtLogin() {

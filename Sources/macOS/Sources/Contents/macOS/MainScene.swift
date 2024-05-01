@@ -19,7 +19,6 @@ struct MainScene: Scene {
         } else {
             showMainWindow()
         }
-        trackAppLaunched()
     }
 
     private static func showMainWindow() {
@@ -29,19 +28,6 @@ struct MainScene: Scene {
         window.orderFront(nil)
         window.makeKeyAndOrderFront(nil)
         window.becomeMain()
-    }
-
-    private static func trackAppLaunched() {
-        @Inject var appConfig: AppConfig
-        @Inject var launchAtLogin: LaunchAtLoginUseCase
-
-        Tracking.didLaunchApp(
-            bounceOffPets: appConfig.bounceOffPetsEnabled,
-            gravityEnabled: appConfig.gravityEnabled,
-            petSize: appConfig.petSize,
-            launchAtLogin: launchAtLogin.isEnabled,
-            selectedSpecies: appConfig.selectedSpecies
-        )
     }
 }
 

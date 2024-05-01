@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import Any, List, Optional, Tuple
+
 from di import Dependencies
 from yage.models.animations import EntityAnimation
 from yage.models.capability import CapabilitiesDiscoveryService
@@ -34,23 +35,23 @@ class Entity:
     def world_bounds(self):
         return self.world.bounds
 
-    def animation(self) -> Tuple['EntityAnimation', int]:
+    def animation(self) -> Tuple["EntityAnimation", int]:
         if self.state != EntityState.ANIMATION:
             return (None, None)
         return (self._animation, self._animation_loops)
 
-    def set_animation(self, animation: 'EntityAnimation', loops: int):
+    def set_animation(self, animation: "EntityAnimation", loops: int):
         self._animation = animation
         self._animation_loops = loops
         self.state = EntityState.ANIMATION
 
-    def collisions(self, neighbors: List['Entity']) -> List['Collision']:
+    def collisions(self, neighbors: List["Entity"]) -> List["Collision"]:
         valid_neighbors = [n for n in neighbors if n != self]
         collisions = [self.collision(n) for n in valid_neighbors]
         collisions = [c for c in collisions if c is not None]
         return collisions
 
-    def collision(self, other: 'Entity') -> Optional['Collision']:
+    def collision(self, other: "Entity") -> Optional["Collision"]:
         intersection = self.frame.intersection(other.frame)
         if not intersection:
             return None
@@ -58,15 +59,16 @@ class Entity:
 
     def __setattr__(self, name: str, value: Any) -> None:
         super().__setattr__(name, value)
-        if name == 'state':
-            Logger.log(self.id, 'State changed to', self.state)
+        if name == "state":
+            Logger.log(self.id, "State changed to", self.state)
             if self.state == EntityState.MOVE:
                 self.reset_speed()
 
     def _install_capabilities(self):
         for capability_id in self.species.capabilities:
-            capability = Dependencies.instance(
-                CapabilitiesDiscoveryService).capability(capability_id)
+            capability = Dependencies.instance(CapabilitiesDiscoveryService).capability(
+                capability_id
+            )
             if capability is not None:
                 self.install(capability)
 

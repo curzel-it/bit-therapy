@@ -1,5 +1,8 @@
 from typing import Optional
-from onscreen.features.gets_angry_when_meeting_other_cats import GetsAngryWhenMeetingOtherCats
+
+from onscreen.features.gets_angry_when_meeting_other_cats import (
+    GetsAngryWhenMeetingOtherCats,
+)
 from onscreen.features.leaves_poop_stains import LeavesPoopStains
 from onscreen.features.leaves_traces_while_walking import LeavesTracesWhileWalking
 from onscreen.features.random_platform_jumper import RandomPlatformJumper
@@ -11,7 +14,9 @@ from yage.capabilities.animations_scheduler import AnimationsScheduler
 from yage.capabilities.auto_respawn import AutoRespawn
 from yage.capabilities.bounce_on_lateral_collisions import BounceOnLateralCollisions
 from yage.capabilities.draggable import Draggable
-from yage.capabilities.flip_horizontally_when_going_left import FlipHorizontallyWhenGoingLeft
+from yage.capabilities.flip_horizontally_when_going_left import (
+    FlipHorizontallyWhenGoingLeft,
+)
 from yage.capabilities.gravity import Gravity
 from yage.capabilities.linear_movement import LinearMovement
 from yage.capabilities.rotating import Rotating
@@ -40,7 +45,7 @@ class PetsCapabilities(CapabilitiesDiscoveryService):
             "Rotating": Rotating,
             "Seeker": Seeker,
             "SleepingPlace": SleepingPlace,
-            "WallCrawler": WallCrawler
+            "WallCrawler": WallCrawler,
         }
 
     def capability(self, capability_id: str) -> Optional[Capability]:

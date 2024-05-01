@@ -94,9 +94,6 @@ enum Lang {
     }
 
     enum Settings {
-        static let anonymousTracking = "settings.anonymousTracking".localized()
-        static let anonymousTrackingMessage = "settings.anonymousTrackingMessage".localized()
-        static let anonymousTrackingTitle = "settings.anonymousTrackingTitle".localized()
         static let bounceOffPets = "settings.bounceOffPets".localized()
         static let desktopInteractionsMessage = "settings.desktopInteractionsMessage".localized()
         static let desktopInteractionsTitle = "settings.desktopInteractionsTitle".localized()
@@ -145,13 +142,6 @@ enum Lang {
         static let reddit = "urls.reddit".localized()
         static let twitter = "urls.twitter".localized()
         static let youtube = "urls.youtube".localized()
-    }
-
-    enum Youtube {
-        static let cybertruckTitle = "youtube.cybertruckTitle".localized()
-        static let cybertruckMessage = "youtube.cybertruckMessage".localized()
-        static let cybertruckAction = "youtube.cybertruckAction".localized()
-        static let cybertruckLink = "youtube.cybertruckLink".localized()
     }
 }
 

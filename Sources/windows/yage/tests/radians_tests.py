@@ -1,5 +1,6 @@
 import math
 import unittest
+
 from yage.utils.geometry import Vector, degrees_to_radians
 
 
@@ -20,20 +21,17 @@ class RadiansTests(unittest.TestCase):
 
     def test_can_convert_degrees_to_radians(self):
         self.assertAlmostEqual(degrees_to_radians(0), 0, delta=0.0001)
-        self.assertAlmostEqual(degrees_to_radians(
-            90), math.pi * 0.5, delta=0.0001)
-        self.assertAlmostEqual(degrees_to_radians(
-            180), math.pi * 1.0, delta=0.0001)
+        self.assertAlmostEqual(degrees_to_radians(90), math.pi * 0.5, delta=0.0001)
+        self.assertAlmostEqual(degrees_to_radians(180), math.pi * 1.0, delta=0.0001)
         self.assertAlmostEqual(degrees_to_radians(0), 0, delta=0.0001)
-        self.assertAlmostEqual(degrees_to_radians(
-            90), math.pi * 0.5, delta=0.0001)
-        self.assertAlmostEqual(degrees_to_radians(
-            180), math.pi * 1.0, delta=0.0001)
-        self.assertAlmostEqual(degrees_to_radians(
-            270), math.pi * 1.5, delta=0.0001)
+        self.assertAlmostEqual(degrees_to_radians(90), math.pi * 0.5, delta=0.0001)
+        self.assertAlmostEqual(degrees_to_radians(180), math.pi * 1.0, delta=0.0001)
+        self.assertAlmostEqual(degrees_to_radians(270), math.pi * 1.5, delta=0.0001)
         self.assertAlmostEqual(degrees_to_radians(360), 0, delta=0.0001)
         self.assertAlmostEqual(degrees_to_radians(720), 0, delta=0.0001)
-        self.assertAlmostEqual(degrees_to_radians(-123),
-                               degrees_to_radians(360 - 123), delta=0.0001)
-        self.assertAlmostEqual(degrees_to_radians(
-            360 + 123), degrees_to_radians(123), delta=0.0001)
+        self.assertAlmostEqual(
+            degrees_to_radians(-123), degrees_to_radians(360 - 123), delta=0.0001
+        )
+        self.assertAlmostEqual(
+            degrees_to_radians(360 + 123), degrees_to_radians(123), delta=0.0001
+        )

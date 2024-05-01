@@ -1,4 +1,5 @@
 from typing import List
+
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.models.entity_state import EntityState
@@ -52,7 +53,9 @@ class AnimatedSprite(Capability):
         if sprite:
             self.subject.sprite = sprite
 
-    def _build_animator(self, animation: str, state: EntityState) -> TimedContentProvider:
+    def _build_animator(
+        self, animation: str, state: EntityState
+    ) -> TimedContentProvider:
         frames = self._sprites_for_state(state)
         if not frames or len(frames) == 0:
             Logger.log(self.tag, "No sprites to load")
@@ -61,34 +64,48 @@ class AnimatedSprite(Capability):
         anim, required_loops = self.subject.animation()
         if anim is None or required_loops is None:
             return TimedContentProvider(animation, frames, self.subject.fps)
-        
-        return self._build_animator_for_animation(animation, frames, anim, required_loops)
-    
+
+        return self._build_animator_for_animation(
+            animation, frames, anim, required_loops
+        )
+
     def _build_animator_for_animation(self, animation, frames, anim, required_loops):
         required_frame = anim.frame(self.subject)
 
         def check_animation_started(completed_loops):
-            return self._handle_animation_started_if_needed(completed_loops, required_frame),
+            return (
+                self._handle_animation_started_if_needed(
+                    completed_loops, required_frame
+                ),
+            )
 
         def check_animation_completed(completed_loops):
-            return self._handle_animation_completion_if_needed(completed_loops, required_loops),
+            return (
+                self._handle_animation_completion_if_needed(
+                    completed_loops, required_loops
+                ),
+            )
 
         return TimedContentProvider(
             animation,
             frames,
             self.subject.fps,
             check_animation_started,
-            check_animation_completed
+            check_animation_completed,
         )
 
-    def _handle_animation_started_if_needed(self, completed_loops: int, required_frame: Rect):
+    def _handle_animation_started_if_needed(
+        self, completed_loops: int, required_frame: Rect
+    ):
         if completed_loops != 0:
             return
         Logger.log(self.tag, "Animation started")
         self.subject.frame = required_frame
         self._enable_subject_movement(False)
 
-    def _handle_animation_completion_if_needed(self, completed_loops: int, required_loops: int):
+    def _handle_animation_completion_if_needed(
+        self, completed_loops: int, required_loops: int
+    ):
         if completed_loops != required_loops:
             return
         Logger.log(self.tag, "Animation completed")
@@ -109,7 +126,7 @@ class AnimatedSprite(Capability):
         except AttributeError as exc:
             self._warn_no_sprite_provider(exc)
             raise exc
-        
+
     def _warn_no_sprite_provider(self, original_exception):
         message = "Please ensure a SpritesProvider is installed and implements `frames(state: EntityState)`"
         Logger.log(self.tag, message)

@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from PyQt6.QtCore import QTimer
 from yage.models.world import World
 from yage.utils.logger import Logger
@@ -7,7 +8,7 @@ from yage.utils.logger import Logger
 class WorldViewModel:
     def __init__(self, world: World):
         self.world = world
-        self.tag = f'Win-{world.name}'
+        self.tag = f"Win-{world.name}"
         self._last_update = datetime.now()
         self._timer = None
 

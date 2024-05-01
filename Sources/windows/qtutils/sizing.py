@@ -1,5 +1,6 @@
 from enum import Enum
-from PyQt6.QtWidgets import QWidget, QSizePolicy
+
+from PyQt6.QtWidgets import QSizePolicy, QWidget
 
 
 class Spacing(Enum):
@@ -17,8 +18,7 @@ class Spacing(Enum):
 
 def _compact(widget):
     widget.setSizePolicy(
-        QSizePolicy.Policy.MinimumExpanding,
-        QSizePolicy.Policy.MinimumExpanding
+        QSizePolicy.Policy.MinimumExpanding, QSizePolicy.Policy.MinimumExpanding
     )
     return widget
 

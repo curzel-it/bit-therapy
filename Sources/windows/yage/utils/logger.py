@@ -19,15 +19,15 @@ class Logger:
 
     @classmethod
     def log(self, *args, **kwargs):
-        date = datetime.now().strftime('%H:%M:%S.%f')[:-3]
+        date = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         tokens = [str(it) for it in args]
-        body = ' '.join(tokens[1:])
-        level = kwargs.get('level') or LogLevel.VERBOSE
-        message = f'{level.value}: {date} [{tokens[0]}] {body}'
+        body = " ".join(tokens[1:])
+        level = kwargs.get("level") or LogLevel.VERBOSE
+        message = f"{level.value}: {date} [{tokens[0]}] {body}"
         print(message)
 
 
 class LogLevel(Enum):
-    VERBOSE = 'V'
-    DEBUG = 'D'
-    ERROR = 'E'
+    VERBOSE = "V"
+    DEBUG = "D"
+    ERROR = "E"

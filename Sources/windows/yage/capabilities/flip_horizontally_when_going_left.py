@@ -1,4 +1,5 @@
 from typing import List
+
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.utils.geometry import Vector

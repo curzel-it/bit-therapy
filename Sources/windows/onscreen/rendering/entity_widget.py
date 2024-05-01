@@ -1,18 +1,20 @@
 from functools import cached_property
+
+from onscreen.rendering.entity_view_model import EntityViewModel
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QLabel
-from onscreen.rendering.entity_view_model import EntityViewModel
-from yage.models.entity import Entity
 
 # pylint: disable=wildcard-import,unused-wildcard-import
 from qtutils import *
+from yage.models.entity import Entity
+
 
 class EntityWidget(QLabel):
     def __init__(self, entity: Entity):
         super().__init__()
         self._disposables = []
         self._view_model = EntityViewModel(entity)
-        self.tag = f'View-{self._view_model.entity_id}'
+        self.tag = f"View-{self._view_model.entity_id}"
         self._update_frame_from_entity_frame(entity.frame)
         self._bind_frame()
         self._bind_image()
@@ -39,6 +41,7 @@ class EntityWidget(QLabel):
         def update_image(self, image):
             if image:
                 self.setPixmap(image)
+
         disposable = self._view_model.image.subscribe_on_qt_main_thread(
             lambda f: update_image(self, f)
         )
@@ -48,6 +51,7 @@ class EntityWidget(QLabel):
         def check_alive(self, is_alive):
             if not is_alive:
                 self._kill()
+
         disposable = self._view_model.is_alive.subscribe_on_qt_main_thread(
             lambda f: check_alive(self, f)
         )

@@ -1,4 +1,5 @@
 from random import choice
+
 from yage.models.animations import EntityAnimation
 from yage.models.capability import Capability
 

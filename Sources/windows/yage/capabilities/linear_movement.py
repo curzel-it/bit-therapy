@@ -1,4 +1,5 @@
 from typing import List
+
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.models.entity_state import EntityState
@@ -20,7 +21,7 @@ class LinearMovement(Capability):
     def movement_given_time(self, time: float) -> Point:
         return Point(
             self.subject.direction.dx * self.subject.speed * time,
-            self.subject.direction.dy * self.subject.speed * time
+            self.subject.direction.dy * self.subject.speed * time,
         )
 
     @property

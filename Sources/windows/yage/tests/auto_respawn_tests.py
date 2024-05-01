@@ -2,18 +2,15 @@ import unittest
 
 from yage.capabilities import AutoRespawn
 from yage.models.entity import Entity
-from yage.utils.geometry import Point, Rect
 from yage.models.species import SPECIES_AGENT
 from yage.models.world import World
+from yage.utils.geometry import Point, Rect
 
 
 class AutoRespawnTests(unittest.TestCase):
     def setUp(self):
         self.entity = Entity(
-            SPECIES_AGENT,
-            "test",
-            Rect(0, 0, 1, 1),
-            World('', Rect(0, 0, 10, 10))
+            SPECIES_AGENT, "test", Rect(0, 0, 1, 1), World("", Rect(0, 0, 10, 10))
         )
         self.respawner = self.entity.install(AutoRespawn)
         self.respawner.kill()

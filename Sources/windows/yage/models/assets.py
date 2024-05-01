@@ -1,7 +1,7 @@
 from typing import List, Optional
 
 
-class AssetsProvider():
+class AssetsProvider:
     def frames(self, species: str, animation: str) -> List[str]:
         raise NotImplementedError()
 

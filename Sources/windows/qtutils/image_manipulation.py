@@ -1,5 +1,6 @@
 import math
-from PyQt6.QtGui import QPixmap, QPainter, QTransform
+
+from PyQt6.QtGui import QPainter, QPixmap, QTransform
 
 
 def _rotated_pixmap(pixmap: QPixmap, angle: float) -> QPixmap:
@@ -17,9 +18,9 @@ QPixmap.rotated = _rotated_pixmap
 
 def _flipped_pixmap(pixmap: QPixmap, **kwargs) -> QPixmap:
     transform = QTransform()
-    if kwargs.get('horizontally'):
+    if kwargs.get("horizontally"):
         transform = transform.scale(-1, 1)
-    if kwargs.get('vertically'):
+    if kwargs.get("vertically"):
         transform = transform.scale(1, -1)
     return pixmap.transformed(transform)
 
