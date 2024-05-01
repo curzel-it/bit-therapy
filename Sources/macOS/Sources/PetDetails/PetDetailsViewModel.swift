@@ -50,23 +50,16 @@ class PetDetailsViewModel: ObservableObject {
 
     func selected() {
         appConfig.select(species.id)
-        Tracking.didSelect(species.id)
         close()
     }
 
     func remove() {
         appConfig.deselect(species.id)
-        Tracking.didRemove(species.id)
         close()
     }
 
     func didAppear() {
-        Tracking.didEnterDetails(
-            species: species.id,
-            name: species.id,
-            price: nil,
-            purchased: false
-        )
+        // ...
     }
 
     private func bindTitle() {

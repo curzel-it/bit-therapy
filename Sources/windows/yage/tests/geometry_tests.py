@@ -1,12 +1,14 @@
 import unittest
+
 from yage.utils.geometry import Point, Rect, Size
 
 
 class GeometryTests(unittest.TestCase):
     def test_rect_from_geometry(self):
         self.assertEqual(Rect(1, 2, 3, 4), Rect.from_geometry("3x4+1+2"))
-        self.assertEqual(Rect(1.1, 2.2, 3.3, 4.4),
-                         Rect.from_geometry("3.3x4.4+1.1+2.2"))
+        self.assertEqual(
+            Rect(1.1, 2.2, 3.3, 4.4), Rect.from_geometry("3.3x4.4+1.1+2.2")
+        )
 
     def test_rect_intersection_bottom_with_smaller_rect(self):
         rect1 = Rect(0, 0, 10, 10)

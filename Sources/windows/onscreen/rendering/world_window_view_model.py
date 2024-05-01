@@ -1,14 +1,21 @@
 from typing import Callable, List
-from PyQt6.QtWidgets import QWidget
+
 from onscreen.rendering.entity_widget import EntityWidget
+from PyQt6.QtWidgets import QWidget
 from yage.models.entity import Entity
 from yage.models.world import World
 from yage.utils.logger import Logger
+
 from .world_view_model import WorldViewModel
 
 
 class WorldWindowViewModel(WorldViewModel):
-    def __init__(self, world: World, entity_widgets: Callable[[], List[QWidget]], add_widget: Callable[[QWidget], None]):
+    def __init__(
+        self,
+        world: World,
+        entity_widgets: Callable[[], List[QWidget]],
+        add_widget: Callable[[QWidget], None],
+    ):
         super().__init__(world)
         Logger.log(self.tag, "Init...")
         self._previous_entities_ids = []

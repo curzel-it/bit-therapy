@@ -1,5 +1,6 @@
 import os
 
+
 def rename_files(root_path):
     # Walk through root_path
     for dirpath, dirnames, filenames in os.walk(root_path):
@@ -15,7 +16,8 @@ def rename_files(root_path):
                 os.rename(old_path, new_path)
                 print(f"Renamed {old_path} to {new_path}")
 
+
 # Test
 # Provide the desired root path as an argument
 # path = "/path/to/directory"
-rename_files('../Aseprite')
+rename_files("../Aseprite")

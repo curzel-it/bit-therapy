@@ -1,20 +1,18 @@
 import math
 import unittest
+
 from yage.capabilities import BounceOnLateralCollisions, LinearMovement
 from yage.models.entity import Entity
-from yage.utils.geometry import Point, Rect, Vector
 from yage.models.species import SPECIES_AGENT
 from yage.models.world import World
+from yage.utils.geometry import Point, Rect, Vector
 
 
 class BounceOnLateralCollisionsTests(unittest.TestCase):
     def setUp(self):
         self.test_env = World("test", Rect(0, 0, 100, 100))
         self.test_entity = Entity(
-            SPECIES_AGENT,
-            "entity",
-            Rect(50, 0, 10, 10),
-            self.test_env
+            SPECIES_AGENT, "entity", Rect(50, 0, 10, 10), self.test_env
         )
         self.bounce = self.test_entity.install(BounceOnLateralCollisions)
         self.movement = self.test_entity.install(LinearMovement)
@@ -27,7 +25,7 @@ class BounceOnLateralCollisionsTests(unittest.TestCase):
             SPECIES_AGENT,
             "right",
             Rect(self.test_entity.frame.max_x - 5, 0, 50, 50),
-            self.test_env
+            self.test_env,
         )
         self.test_env.children.append(test_right)
 
@@ -46,7 +44,7 @@ class BounceOnLateralCollisionsTests(unittest.TestCase):
             SPECIES_AGENT,
             "right",
             Rect(self.test_entity.frame.max_x - 5, 0, 50, 50),
-            self.test_env
+            self.test_env,
         )
         test_right.is_static = True
         self.test_env.children.append(test_right)
@@ -56,8 +54,7 @@ class BounceOnLateralCollisionsTests(unittest.TestCase):
         self.assertEqual(angle, math.pi)
 
         self.test_entity.update(collisions, 0.01)
-        self.assertAlmostEqual(
-            self.test_entity.direction.dx, -1, delta=0.00001)
+        self.assertAlmostEqual(self.test_entity.direction.dx, -1, delta=0.00001)
         self.assertAlmostEqual(self.test_entity.direction.dy, 0, delta=0.00001)
 
     def test_bounces_to_right_when_hitting_left(self):
@@ -67,7 +64,7 @@ class BounceOnLateralCollisionsTests(unittest.TestCase):
             SPECIES_AGENT,
             "left",
             Rect(self.test_entity.frame.min_x - 50 + 5, 0, 50, 50),
-            self.test_env
+            self.test_env,
         )
         test_left.is_static = True
         self.test_env.children.append(test_left)

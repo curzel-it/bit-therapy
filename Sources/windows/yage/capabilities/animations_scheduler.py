@@ -1,5 +1,6 @@
-from datetime import datetime, timedelta
 import random
+from datetime import datetime, timedelta
+
 from yage.models.animations import EntityAnimation
 from yage.models.capability import Capability
 from yage.models.entity_state import EntityState

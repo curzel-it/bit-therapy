@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from typing import List
+
 from yage.models.animations import EntityAnimation
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
@@ -27,10 +28,7 @@ class GetsAngryWhenMeetingOtherCats(Capability):
 
     def get_angry(self):
         Logger.log(self.tag, "Getting angry!")
-        self.subject.animations_scheduler.load_animation(
-            EntityAnimation("angry"),
-            4
-        )
+        self.subject.animations_scheduler.load_animation(EntityAnimation("angry"), 4)
         self.unlock_date = datetime.now() + timedelta(seconds=30)
 
     def is_touching_another_cat(self, according_to: List[Collision]) -> bool:

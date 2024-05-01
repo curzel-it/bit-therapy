@@ -1,7 +1,16 @@
-from datetime import datetime, timedelta
 import random
+from datetime import datetime, timedelta
 from typing import List, Optional
-from yage.capabilities import AnimationsScheduler, BounceOnLateralCollisions, Gravity, LinearMovement, Seeker, SeekerState, SeekerTargetPosition
+
+from yage.capabilities import (
+    AnimationsScheduler,
+    BounceOnLateralCollisions,
+    Gravity,
+    LinearMovement,
+    Seeker,
+    SeekerState,
+    SeekerTargetPosition,
+)
 from yage.models.capability import Capability
 from yage.models.entity import Entity
 from yage.models.entity_state import EntityState
@@ -55,7 +64,7 @@ class RandomPlatformJumper(Capability):
             target,
             position=SeekerTargetPosition.ABOVE,
             auto_adjust_speed=False,
-            on_update=self._on_seeker_update
+            on_update=self._on_seeker_update,
         )
 
     def _prepare_subject_for_travel(self):
@@ -72,7 +81,10 @@ class RandomPlatformJumper(Capability):
 
     def _find_platform(self) -> Optional[Entity]:
         platforms = [
-            p for p in self.platforms_provider.platforms if p.id != self._last_platform_id]
+            p
+            for p in self.platforms_provider.platforms
+            if p.id != self._last_platform_id
+        ]
         if len(platforms) > 0:
             return random.choice(platforms)
         return None

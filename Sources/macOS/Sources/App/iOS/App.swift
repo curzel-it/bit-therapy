@@ -10,7 +10,6 @@ struct MyApp: App {
         Dependencies.setup()
         Logger.isEnabled = true
         Logger.log("MyApp", "Init")
-        Tracking.setup()
     }
 
     var body: some Scene {

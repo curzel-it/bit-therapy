@@ -1,6 +1,7 @@
 from typing import Tuple
-from PyQt6.QtWidgets import QWidget, QScrollArea, QVBoxLayout
+
 from PyQt6.QtCore import QObjectCleanupHandler
+from PyQt6.QtWidgets import QScrollArea, QVBoxLayout, QWidget
 
 
 def _set_scrollable_to_widget(widget, layout):

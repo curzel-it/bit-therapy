@@ -1,10 +1,11 @@
 from typing import List
+
 from yage.models.animations import EntityAnimationPosition
 from yage.models.capability import Capability
 from yage.models.collisions import Collision
 from yage.models.entity_state import EntityState
-from yage.utils.geometry import Point, Vector
 from yage.utils import Logger
+from yage.utils.geometry import Point, Vector
 
 
 class Gravity(Capability):
@@ -37,12 +38,18 @@ class Gravity(Capability):
             return collision.intersection.min_y == ground_level
 
         surface_contact = sum(
-            [c.intersection.width for c in ground_collisions if touches_ground(c)])
+            [c.intersection.width for c in ground_collisions if touches_ground(c)]
+        )
         return ground_level if surface_contact > required_surface_contact else None
 
     def _ground_collisions(self, body, collisions):
         def is_ground_collision(c):
-            return c.other.is_static and body.min_y < c.intersection.min_y and not c.is_ephemeral
+            return (
+                c.other.is_static
+                and body.min_y < c.intersection.min_y
+                and not c.is_ephemeral
+            )
+
         return [c for c in collisions if is_ground_collision(c)]
 
     def _ground_level_from_collisions(self, ground_collisions):
@@ -57,8 +64,7 @@ class Gravity(Capability):
         is_raising = self.subject.frame.min_y != target_y and not self.is_falling
 
         if is_landing or is_raising:
-            self.subject.frame.origin = Point(
-                self.subject.frame.origin.x, target_y)
+            self.subject.frame.origin = Point(self.subject.frame.origin.x, target_y)
 
         if is_landing:
             Logger.log(self.tag, f"Safely landed at {target_y}")
@@ -73,7 +79,7 @@ class Gravity(Capability):
         self.subject.direction = Gravity.fall_direction
         self.subject.speed = 14
         self.subject.movement.is_enabled = True
-        Logger.log(self.tag, 'Started falling')
+        Logger.log(self.tag, "Started falling")
         return True
 
     def _animation_requires_no_gravity(self) -> bool:

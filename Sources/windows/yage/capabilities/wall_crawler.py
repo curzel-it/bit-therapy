@@ -1,4 +1,5 @@
 import math
+
 from yage.models.capability import Capability
 from yage.models.entity_state import EntityState
 from yage.utils.geometry import Point, Vector
@@ -51,7 +52,7 @@ class WallCrawler(Capability):
         self.subject.direction = direction
         self.subject.frame.origin = Point(
             self.subject.world_bounds.width - self.subject.frame.width,
-            self.subject.frame.origin.y
+            self.subject.frame.origin.y,
         )
         rotation = self.subject.rotation
         if rotation:
@@ -64,7 +65,7 @@ class WallCrawler(Capability):
         self.subject.direction = direction
         self.subject.frame.origin = Point(
             self.subject.frame.origin.x,
-            self.subject.world_bounds.height - self.subject.frame.height
+            self.subject.world_bounds.height - self.subject.frame.height,
         )
         rotation = self.subject.rotation
         if rotation:

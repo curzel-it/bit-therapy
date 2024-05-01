@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from typing import Callable
+
 from config.config import Config
 from di.di import Dependencies
 from onscreen.models.pet_entity import PetEntity
@@ -22,10 +23,14 @@ class UfoAbductionUseCase:
     def start(self, target: Entity, world: World, completion: Callable[[], None]):
         ufo = self._build_ufo(world)
         abduction = ufo.capability(UfoAbduction)
-        abduction.start(target, lambda: self._clean_up_after_abduction(
-            target, ufo, world, completion))
+        abduction.start(
+            target,
+            lambda: self._clean_up_after_abduction(target, ufo, world, completion),
+        )
 
-    def _clean_up_after_abduction(self, target: Entity, ufo: Entity, world: World, completion: Callable[[], None]):
+    def _clean_up_after_abduction(
+        self, target: Entity, ufo: Entity, world: World, completion: Callable[[], None]
+    ):
         ufo.kill()
         target.kill()
         world.children.remove(ufo)
@@ -47,11 +52,11 @@ class UfoAbductionUseCase:
                 "AnimatedSprite",
                 "AnimationsProvider",
                 "LinearMovement",
-                "PetsSpritesProvider"
+                "PetsSpritesProvider",
             ],
             drag_path="front",
             movement_path="front",
-            speed=2
+            speed=2,
         )
 
 
@@ -74,7 +79,7 @@ class UfoAbduction(Capability):
             target,
             position=SeekerTargetPosition.ABOVE,
             offset=distance,
-            on_update=lambda s: self._on_capture(s, seeker)
+            on_update=lambda s: self._on_capture(s, seeker),
         )
 
     def do_update(self, collisions, time):
@@ -93,15 +98,14 @@ class UfoAbduction(Capability):
     def _paralyze_target(self):
         self._target.set_gravity(enabled=False)
         self._target.direction = Point(0, -1)
-        self._target.speed = 1.2 * \
-            PetEntity.speed_multiplier(self._target.frame.width)
+        self._target.speed = 1.2 * PetEntity.speed_multiplier(self._target.frame.width)
 
     def _capture_ray_animation(self):
         self.subject.direction = Vector.zero()
         abduction = EntityAnimation(
-            id='abduction',
+            id="abduction",
             size=Size(1, 3),
-            position=EntityAnimationPosition.ENTITY_TOP_LEFT
+            position=EntityAnimationPosition.ENTITY_TOP_LEFT,
         )
         self.subject.set_animation(abduction, loops=1)
         if seeker := self.subject.capability(Seeker):

@@ -1,6 +1,5 @@
-from PyQt6.QtWidgets import QMainWindow
-
 from app.pets_selection import PetsSelection
+from PyQt6.QtWidgets import QMainWindow
 
 
 class AppWindow(QMainWindow):

@@ -1,5 +1,5 @@
-
 from yage.models.species import Species
+
 from .leaves_traces_while_walking import LeavesTracesWhileWalking
 
 
@@ -13,17 +13,17 @@ class LeavesPoopStains(LeavesTracesWhileWalking):
     @classmethod
     def poop_stain_species(cls) -> Species:
         return Species(
-            id='poopstain',
+            id="poopstain",
             animations=[],
             capabilities=[
                 "AnimatedSprite",
                 "AnimationsProvider",
-                "PetsSpritesProvider"
+                "PetsSpritesProvider",
             ],
-            drag_path='front',
+            drag_path="front",
             fps=4,
-            movement_path='front',
+            movement_path="front",
             speed=0,
             tags=[],
-            z_index=-100
+            z_index=-100,
         )

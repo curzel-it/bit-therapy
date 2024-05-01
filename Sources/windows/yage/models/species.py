@@ -1,4 +1,5 @@
 from typing import List
+
 from yage.models.animations import EntityAnimation
 
 
@@ -8,12 +9,12 @@ class Species:
         species_id: str,
         animations: List[EntityAnimation] = [],
         capabilities: List[str] = [],
-        drag_path: str = 'drag',
+        drag_path: str = "drag",
         fps: float = 10,
-        movement_path: str = 'walk',
+        movement_path: str = "walk",
         speed: float = 1,
         tags: List[str] = [],
-        z_index: float = 0
+        z_index: float = 0,
     ):
         self.id = species_id
         self.animations = animations
@@ -25,7 +26,7 @@ class Species:
         self.tags = tags
         self.z_index = z_index
 
-    def __eq__(self, other: 'Species'):
+    def __eq__(self, other: "Species"):
         if other is None:
             return False
         return self.id == other.id

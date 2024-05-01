@@ -1,6 +1,7 @@
 from random import randint
-from PyQt6.QtCore import QTimer
+
 from onscreen.models.pet_entity import PetEntity
+from PyQt6.QtCore import QTimer
 from yage.capabilities.seeker import Seeker, SeekerTargetPosition
 from yage.models.entity import Entity
 from yage.models.species import Species
@@ -39,7 +40,7 @@ class RainyCloudUseCase:
             self.target,
             position=SeekerTargetPosition.ABOVE,
             offset=Point(0, y_offset),
-            auto_adjust_speed=True
+            auto_adjust_speed=True,
         )
 
     def _cleanup(self):
@@ -54,10 +55,10 @@ class RainyCloudUseCase:
                 "AnimatedSprite",
                 "AnimationsProvider",
                 "LinearMovement",
-                "PetsSpritesProvider"
+                "PetsSpritesProvider",
             ],
             drag_path="front",
             movement_path="front",
             speed=2,
-            z_index=200
+            z_index=200,
         )

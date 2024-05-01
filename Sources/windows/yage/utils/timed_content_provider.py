@@ -8,13 +8,12 @@ class TimedContentProvider:
         provider_id: str,
         contents,
         fps: float,
-        on_first_content_of_loop_loaded: Optional[Callable[[
-            int], None]] = None,
-        on_loop_completed: Optional[Callable[[int], None]] = None
+        on_first_content_of_loop_loaded: Optional[Callable[[int], None]] = None,
+        on_loop_completed: Optional[Callable[[int], None]] = None,
     ):
         self.id = provider_id
         self.contents = contents
-        self.frame_time = 1/fps if fps > 0 else 0
+        self.frame_time = 1 / fps if fps > 0 else 0
         self.loop_duracy = len(contents) * self.frame_time
         self.on_first_content_of_loop_loaded = on_first_content_of_loop_loaded
         self.on_loop_completed = on_loop_completed
@@ -24,7 +23,7 @@ class TimedContentProvider:
 
     @classmethod
     def none(self):
-        return self('', [], 10)
+        return self("", [], 10)
 
     def current_content(self):
         if self.current_content_index >= len(self.contents):
@@ -42,13 +41,15 @@ class TimedContentProvider:
             self.leftover_time = time_since_last_content_change
             return None
 
-        contents_skipped = int(math.floor(
-            time_since_last_content_change / self.frame_time))
+        contents_skipped = int(
+            math.floor(time_since_last_content_change / self.frame_time)
+        )
         used_time = contents_skipped * self.frame_time
         self.leftover_time = time_since_last_content_change - used_time
 
-        next_index = (self.current_content_index +
-                      contents_skipped) % len(self.contents)
+        next_index = (self.current_content_index + contents_skipped) % len(
+            self.contents
+        )
         if self.current_content_index != next_index:
             self._check_loop_completion(next_index)
             return self.contents[next_index]
@@ -56,7 +57,11 @@ class TimedContentProvider:
         return None
 
     def _handle_first_content_of_first_loop_if_needed(self) -> None:
-        if self.completed_loops == 0 and self.current_content_index == 0 and self.leftover_time == 0:
+        if (
+            self.completed_loops == 0
+            and self.current_content_index == 0
+            and self.leftover_time == 0
+        ):
             if self.on_first_content_of_loop_loaded:
                 self.on_first_content_of_loop_loaded(0)
 

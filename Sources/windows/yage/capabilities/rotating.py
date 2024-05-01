@@ -1,5 +1,6 @@
 from yage.models.capability import Capability
 
+
 class Rotating(Capability):
     def __init__(self, subject):
         super().__init__(subject)

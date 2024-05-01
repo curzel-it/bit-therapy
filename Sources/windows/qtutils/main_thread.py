@@ -7,9 +7,7 @@ def execute_on_main_thread(block):
 
 
 def _subscribe_on_qt_main_thread(signal, block):
-    return signal.subscribe(
-        lambda value: execute_on_main_thread(lambda: block(value))
-    )
+    return signal.subscribe(lambda value: execute_on_main_thread(lambda: block(value)))
 
 
 BehaviorSubject.subscribe_on_qt_main_thread = _subscribe_on_qt_main_thread
