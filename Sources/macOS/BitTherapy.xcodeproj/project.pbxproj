@@ -113,6 +113,7 @@
 		1E9505DE29B21492007666BF /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
 		1E9505E029B21496007666BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		1EA1679529C1E0E000FAF378 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA1679429C1E0E000FAF378 /* Schwifty */; };
+		1EA8A2822C1497C2008DC4AD /* NoStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8A2812C1497C2008DC4AD /* NoStatusBar.swift */; };
 		1EB2BB9729B29C2800E7EF8F /* ImageInterpolationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A329B211DC007666BF /* ImageInterpolationUseCase.swift */; };
 		1EB2BB9929B29C2800E7EF8F /* RenderingDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505A529B211DC007666BF /* RenderingDependencies.swift */; };
 		1EB2BB9E29B29C3B00E7EF8F /* PetsSpritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEA8FE2970D32900AB3EB0 /* PetsSpritesProvider.swift */; };
@@ -445,6 +446,7 @@
 		1E98A006298C7E7800CD88B9 /* ImportVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportVerifier.swift; sourceTree = "<group>"; };
 		1E991F342991A33100AB2F6A /* FantozziCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantozziCloud.swift; sourceTree = "<group>"; };
 		1EA0D847298C6A0400FA07F5 /* ExportPetButtonCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportPetButtonCoordinator.swift; sourceTree = "<group>"; };
+		1EA8A2812C1497C2008DC4AD /* NoStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoStatusBar.swift; sourceTree = "<group>"; };
 		1EAEA8F22970D32900AB3EB0 /* RandomPlatformJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPlatformJumper.swift; sourceTree = "<group>"; };
 		1EAEA8F32970D32900AB3EB0 /* DesktopObstaclesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopObstaclesService.swift; sourceTree = "<group>"; };
 		1EAEA8F42970D32900AB3EB0 /* ShowsMenuOnRightClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsMenuOnRightClick.swift; sourceTree = "<group>"; };
@@ -854,6 +856,7 @@
 			isa = PBXGroup;
 			children = (
 				1ED1D04029130C11004031BC /* StatusBar.swift */,
+				1EA8A2812C1497C2008DC4AD /* NoStatusBar.swift */,
 			);
 			path = StatusBar;
 			sourceTree = "<group>";
@@ -1889,6 +1892,7 @@
 				1EB2BBA629B29C4700E7EF8F /* FantozziCloud.swift in Sources */,
 				6457E61C2ADAF62100F1D7A7 /* ShapeShifter.swift in Sources */,
 				6457E6192ADAF62100F1D7A7 /* AnimationsProvider.swift in Sources */,
+				1EA8A2822C1497C2008DC4AD /* NoStatusBar.swift in Sources */,
 				1E09B0A929B4C869008967F5 /* CoordinateSystem.swift in Sources */,
 				1E185FA529B24D330042E537 /* ExportPetButtonCoordinator.swift in Sources */,
 				1E185F4D29B231B90042E537 /* MainScene.swift in Sources */,
