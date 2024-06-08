@@ -3,41 +3,17 @@ import Foundation
 import Schwifty
 import SwiftUI
 
-struct VerticalFiltersView: View {
-    @EnvironmentObject var petsSelection: PetsSelectionViewModel
-    @StateObject private var viewModel = FiltersViewModel()
-
-    var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack {
-                ForEach(viewModel.availableTags, id: \.self) {
-                    TagView(tag: $0).positioned(.trailing)
-                }
-                Spacer()
-            }
-        }
-        .onReceive(viewModel.$selectedTag) { tag in
-            petsSelection.filterChanged(to: tag == kTagAll ? nil : tag)
-        }
-        .environmentObject(viewModel)
-    }
-}
-
 struct HorizontalFiltersView: View {
     @EnvironmentObject var petsSelection: PetsSelectionViewModel
     @StateObject private var viewModel = FiltersViewModel()
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(viewModel.availableTags, id: \.self) {
-                    TagView(tag: $0)
-                }
-                Spacer()
+        HStack(spacing: .sm) {
+            ForEach(viewModel.availableTags, id: \.self) {
+                TagView(tag: $0)
             }
-            .padding(.horizontal, .md)
+            Spacer()
         }
-        .padding(.horizontal, .inverseMd)
         .onReceive(viewModel.$selectedTag) { tag in
             petsSelection.filterChanged(to: tag == kTagAll ? nil : tag)
         }
@@ -100,7 +76,7 @@ private struct TagView: View {
     var body: some View {
         Text(Lang.name(forTag: tag).uppercased())
             .font(.headline)
-            .padding(.horizontal)
+            .padding(.horizontal, .sm)
             .frame(height: DesignSystem.tagsHeight)
             .background(background)
             .cornerRadius(DesignSystem.tagsHeight / 2)

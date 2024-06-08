@@ -38,7 +38,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["jungle"],
+  "tags": ["forest"],
   "id": "frog_venom",
   "movementPath": "walk",
   "speed": 1

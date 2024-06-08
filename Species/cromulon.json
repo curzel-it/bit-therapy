@@ -42,7 +42,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["aliens", "memes"],
+  "tags": ["memes"],
   "id": "cromulon",
   "movementPath": "front",
   "speed": 0.6
