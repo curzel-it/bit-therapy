@@ -48,6 +48,12 @@
         "pets": ["cayman718", "pikachu"]
     },
     {
+        "name": "Leo728",
+        "roles": ["translator"],
+        "thumbnail": "contributor_leo728",
+        "link": "https://leoze.top/"
+    },
+    {
         "name": "Solomanolo",
         "roles": ["translator"],
         "thumbnail": "contributor_solomanolo"
