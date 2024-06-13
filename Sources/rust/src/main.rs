@@ -2,7 +2,7 @@
 #![allow(rustdoc::missing_crate_level_docs)]
 
 use std::path::Path;
-use std::sync::mpsc;
+use std::sync::{Arc, Mutex};
 use std::thread::{self, JoinHandle};
 use std::time::{Duration, Instant};
 
@@ -33,10 +33,10 @@ fn main() -> Result<(), eframe::Error> {
     let options = eframe::NativeOptions {
         viewport: ViewportBuilder::default()
             .with_position([0.0, 0.0])
-            .with_inner_size([1000.0, 1000.0])
-            .with_always_on_top()
+            .with_inner_size([600.0, 600.0]),
+            // .with_always_on_top()
             // .with_transparent(true)
-            .with_drag_and_drop(true),
+            // .with_drag_and_drop(true),
             // .with_decorations(false),
         ..Default::default()
     };
@@ -53,21 +53,23 @@ fn main() -> Result<(), eframe::Error> {
 }
 
 struct MyApp {
-    game: Game
+    game: Arc<Mutex<Game>>
 }
 
 impl MyApp {
     fn new(_cc: &eframe::CreationContext<'_>) -> Self {
-        let path = Path::new("../../PetsAssets");
+        let path = Path::new("../../ApesAssets");
         let sprites_provider = SpritesProvider::new(path);
-        let entity_builder = EntityBuilder::new(sprites_provider, 10.0, 1.0, 100.0);
-        let bounds = Rect::new_at_origin(1920.0, 1080.0);
+        let entity_builder = EntityBuilder::new(sprites_provider, 10.0, 1.0, 150.0);
+        let bounds = Rect::new_at_origin(600.0, 600.0);
         
         let mut game = Game::new(entity_builder, bounds);
         game.add("ape".to_string());
-        game.add("cat_blue".to_string());
+        // game.add("ape_chef".to_string());
         
-        let mut app = MyApp { game };
+        let mut app = MyApp {
+            game: Arc::new(Mutex::new(game)),
+        };
         app.start_game_loop();
         return app;
     }
@@ -76,9 +78,11 @@ impl MyApp {
 impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default()
-            .frame(Frame::none().fill(Color32::from_black_alpha(0)))
-            .show(ctx, |ui| {                
-                for entity in self.game.entities.iter() {            
+            .frame(Frame::none().fill(Color32::from_black_alpha(128)))
+            .show(ctx, |ui| {            
+                let game = self.game.lock().unwrap();    
+
+                for entity in game.entities.iter() {            
                     self.render_entity(ui, entity);   
                 }
             });
@@ -107,11 +111,11 @@ impl MyApp {
 }
 
 impl MyApp {
-    fn start_game_loop(&mut self) -> JoinHandle<i32> {
-        let (tx, rx) = mpsc::channel::<u128>();
+    fn start_game_loop(&mut self) -> JoinHandle<()> {
+        let game_mutex = self.game.clone();
 
         let handler = thread::spawn(move || {
-            let frame_duration = Duration::from_millis(1000 / 60);
+            let frame_duration = Duration::from_millis(1000 / 30); // Target 60 FPS
             let mut last_update_time = Instant::now();
 
             loop {
@@ -119,14 +123,13 @@ impl MyApp {
                 let elapsed_time = (now - last_update_time).as_millis();
                 last_update_time = now;
 
-                tx.send(elapsed_time).unwrap();
+                let mut game = game_mutex.lock().unwrap();
+                game.update(elapsed_time);
+                
                 thread::sleep(frame_duration);
+                // thread::sleep_until(now + frame_duration);
             }
         });
-        
-        while let Ok(elapsed_time) = rx.recv() {
-            self.game.update(elapsed_time); 
-        }
 
         return handler;
     }

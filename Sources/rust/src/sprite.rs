@@ -6,16 +6,7 @@ pub struct Sprite {
 
 impl Sprite {
     pub fn new(frames: Vec<String>, fps: f32) -> Self {
-        let on_loop_completed = |loops: u128| {
-            println!("Loop completed {} times", loops);
-        };
-
-        let content_provider = TimedContentProvider::new(
-            frames, 
-            fps, 
-            Some(Box::new(on_loop_completed) as Box<dyn Fn(u128)>)
-        );
-
+        let content_provider = TimedContentProvider::new(frames, fps);
         return Sprite {
             content_provider
         };
