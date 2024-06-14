@@ -10,9 +10,9 @@ The app is currently available for macOS only via the [App Store](https://apps.a
 
 Is this coming to Windows or Linux? Yes... But... Hear me out...
 
-I'm currently using this project to learn a bit more about [Rust](https://github.com/curzel-it/pet-therapy/tree/main/Sources/rust/README.md) and [C++](https://github.com/curzel-it/pet-therapy/tree/main/Sources/cpp/README.md), I'm actively working on both ports.
+I'm currently using this project to learn a bit more about [Rust](https://github.com/curzel-it/bit-therapy/tree/main/Sources/rust/README.md) and [C++](https://github.com/curzel-it/bit-therapy/tree/main/Sources/cpp/README.md), I'm actively working on both ports.
 
-Previously, I've also started working on a [Python/QT](https://github.com/curzel-it/pet-therapy/tree/main/Sources/python/README.md) port of the app, but to be honest, it's been quite boring and I will likely never touch it again.
+Previously, I've also started working on a [Python/QT](https://github.com/curzel-it/bit-therapy/tree/main/Sources/python/README.md) port of the app, but to be honest, it's been quite boring and I will likely never touch it again.
 
 ## 🤔 What's a Desktop Pet?
 It's just a cute little pet or animal that lives in your computer.
@@ -24,7 +24,7 @@ Hope you like them too!
 ## 📲 Get the app
 For daily use I recommend getting the App from the App Store.
 
-Alternatively, you can download the latest release from [GitHub]( https://github.com/curzel-it/pet-therapy/releases/latest) or build from source (see below).
+Alternatively, you can download the latest release from [GitHub]( https://github.com/curzel-it/bit-therapy/releases/latest) or build from source (see below).
 
 [![Get it on the App Store](docs/appstore_badge.png)](https://apps.apple.com/app/id1575542220)
 
@@ -33,9 +33,9 @@ Alternatively, you can download the latest release from [GitHub]( https://github
 ![Settings, dark mode](docs/2.png)
 
 ## 🎨 Create custom pets
-Starting from version 2.20 you can now create custom pets, please check [the documentation](https://curzel.it/pet-therapy/custompets).
+Starting from version 2.20 you can now create custom pets, please check [the documentation](https://curzel.it/bit-therapy/custompets).
 
-You do not need any programming knowledge or Xcode to create your own pets, just design your characters and follow [the instructions](https://curzel.it/pet-therapy/custompets), good luck!
+You do not need any programming knowledge or Xcode to create your own pets, just design your characters and follow [the instructions](https://curzel.it/bit-therapy/custompets), good luck!
 
 ## 🙏 Contribute
 Contributors get a shout out in the app, just saying... 😏
@@ -47,20 +47,18 @@ If you wish to improve support for your language, join our [Discord](https://dis
 Since version 2.48 you can use `DistributedNotificationCenter` to send basic commands to your pets.
 
 Here's the payload:
-
 ```json
 {
-    # Species id
     "subject": "sloth",
-    
-    # Animation id
     "action": "eat",
-    
-    # Optional, both x and y required 
     "x": 100,
     "y": 100
 }
 ```
+* `x` and `y` are optional
+* `subject` is the id of a species
+* `action` the id of an animation
+You can look up species and their animations [here](https://github.com/curzel-it/bit-therapy/tree/main/Species).
 
 Sample Python script to send out notifications:
 ```python
