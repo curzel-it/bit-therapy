@@ -1,12 +1,15 @@
-# Python + Qt porting
+# Python/Qt Porting
+
+> **Warning!**<br>
+> I got bored, I will probably never finish this port!
 
 ## ⏳ Status
 
 ### ✅ What's working:
-* Tests are passing
 * Can select and deselect pets
 * Pets are shown on the screen
 * Can use mouse to drag pets around
+* Tests are passing
 
 ### ❌ What's not working:
 * Pet selection image look smoothed even if interpolation is disabled (retina displays)
@@ -20,14 +23,14 @@
 ## 🛠️ Running the app
 Works on macOS and Windows, did not test on any Linux distro yet.
 ```bash
-cd Sources/windows
+cd Sources/python
 python3 -m pip install -r requirements.txt
 python3 main.py
 ```
 
 ## ⚙️ Running tests
 ```bash
-cd Sources/windows
+cd Sources/python
 python3 -m unittest discover -p "*_tests.py"
 ```
 
