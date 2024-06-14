@@ -7,9 +7,13 @@ As you can guess, it brings Desktop Pets to macOS 🚀
 Like the app? Join our [Discord](https://discord.gg/MCdEgXKSH5)!
 
 ## 🎮 Supported Systems
-The app is currently available for macOS and iOS (with slightly different features).
+The app is currently available for macOS only via the [App Store](https://apps.apple.com/app/id1575542220).
 
-I'm working on a [Python port](https://github.com/curzel-it/pet-therapy/tree/main/Sources/windows/README.md) using Qt, which will be targeting Windows and Linux systems.
+Is this coming to Windows or Linux? Yes... But... Hear me out...
+
+I'm currently using this project to learn a bit more about [Rust](https://github.com/curzel-it/pet-therapy/tree/main/Sources/rust/README.md) and [C++](https://github.com/curzel-it/pet-therapy/tree/main/Sources/cpp/README.md), I'm actively working on both ports.
+
+Previously, I've also started working on a [Python/QT](https://github.com/curzel-it/pet-therapy/tree/main/Sources/python/README.md) port of the app, but to be honest, it's been quite boring and I will likely never touch it again.
 
 ## 🤔 What's a Desktop Pet?
 
@@ -88,7 +92,5 @@ if __name__ == "__main__":
 1. The project includes a file called `GoogleService-Info.plist` which is not being versioned, remove it and the app will start without Firebase being enabled
 1. Run
 
-## YouTube
-The pets now have an official [YouTube Channel](https://www.youtube.com/@BitTherapy)!
-
-It's still cringe, but it will get better
+## About me
+I have a [YouTube Channel](https://www.youtube.com/@HiddenMugs)! which has been gathering lots of dust lately.
