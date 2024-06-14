@@ -1,5 +1,4 @@
 # BitTherapy (Desktop Pets)
-
 This is the source code of my macOS app [BitTherapy](https://apps.apple.com/app/desktop-pets/id1575542220)!.
 
 As you can guess, it brings Desktop Pets to macOS 🚀
@@ -16,7 +15,6 @@ I'm currently using this project to learn a bit more about [Rust](https://github
 Previously, I've also started working on a [Python/QT](https://github.com/curzel-it/pet-therapy/tree/main/Sources/python/README.md) port of the app, but to be honest, it's been quite boring and I will likely never touch it again.
 
 ## 🤔 What's a Desktop Pet?
-
 It's just a cute little pet or animal that lives in your computer.
 
 The most popular one was probably the [eSheep](https://github.com/Adrianotiger/desktopPet) for Windows 95.
@@ -31,25 +29,21 @@ Alternatively, you can download the latest release from [GitHub]( https://github
 [![Get it on the App Store](docs/appstore_badge.png)](https://apps.apple.com/app/id1575542220)
 
 ## 🔥 Screenshots
-
 ![Homepage, light mode](docs/1.png)
 ![Settings, dark mode](docs/2.png)
 
 ## 🎨 Create custom pets
-
 Starting from version 2.20 you can now create custom pets, please check [the documentation](https://curzel.it/pet-therapy/custompets).
 
 You do not need any programming knowledge or Xcode to create your own pets, just design your characters and follow [the instructions](https://curzel.it/pet-therapy/custompets), good luck!
 
 ## 🙏 Contribute
-
 Contributors get a shout out in the app, just saying... 😏
 ![Contributors, dark mode](docs/contributors.png)
 
 If you wish to improve support for your language, join our [Discord](https://discord.gg/MCdEgXKSH5) and let us know!
 
 ## 🔔 Interoperability
-
 Since version 2.48 you can use `DistributedNotificationCenter` to send basic commands to your pets.
 
 Here's the payload:
@@ -89,8 +83,7 @@ if __name__ == "__main__":
 1. Download and setup Xcode
 1. Open the `Sources/swift/BitTherapy.xcworkspace`
 1. Give Xcode some time to figure out dependencies...
-1. The project includes a file called `GoogleService-Info.plist` which is not being versioned, remove it and the app will start without Firebase being enabled
 1. Run
 
 ## About me
-I have a [YouTube Channel](https://www.youtube.com/@HiddenMugs)! which has been gathering lots of dust lately.
+I have a [YouTube Channel](https://www.youtube.com/@HiddenMugs) which has been gathering lots of dust lately.
