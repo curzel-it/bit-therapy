@@ -74,6 +74,16 @@
         "utility": "cpp",
         "format": "cpp",
         "text_encoding": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "__hash_table": "cpp",
+        "numbers": "cpp",
+        "numeric": "cpp",
+        "regex": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "unordered_set": "cpp",
+        "__memory": "cpp",
+        "qscrollarea": "cpp",
+        "qstring": "cpp"
     }
 }

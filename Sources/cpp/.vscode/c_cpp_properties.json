@@ -4,8 +4,8 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/homebrew/opt",
-                "/opt/homebrew/opt/googletest"
+                "/opt/homebrew/opt/googletest",
+                "/opt/homebrew/Cellar/qt/6.7.0_1/lib/**"
             ],
             "defines": [],
             "macFrameworkPath": [

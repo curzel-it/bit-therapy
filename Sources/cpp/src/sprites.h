@@ -12,7 +12,7 @@ private:
 
 public:
     Sprite(const std::vector<std::string> frames, double fps);
-    const std::string& current_frame() const;
+    const std::string& currentFrame() const;
     void update(long time_since_last_update);
 };
 
