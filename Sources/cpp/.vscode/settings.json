@@ -88,6 +88,8 @@
         "codecvt": "cpp",
         "fstream": "cpp",
         "semaphore": "cpp",
-        "shared_mutex": "cpp"
+        "shared_mutex": "cpp",
+        "__assert": "cpp",
+        "__availability": "cpp"
     }
 }

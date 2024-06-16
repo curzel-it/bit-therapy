@@ -7,6 +7,7 @@
 #include "sprite_set.h"
 
 Entity::Entity(double fps, std::string species, SpriteSet spriteSet) : 
+    tag(""),
     species(species), 
     spriteSet(spriteSet), 
     fps(fps),
@@ -15,6 +16,9 @@ Entity::Entity(double fps, std::string species, SpriteSet spriteSet) :
     changeSprite(SPRITE_NAME_FRONT); 
 }
 
+const std::string Entity::speciesId() const {
+    return species;
+}
 
 void Entity::update(long timeSinceLastUpdate) {
     currentSprite.update(timeSinceLastUpdate);
