@@ -6,7 +6,7 @@
 #include <vector>
 #include "timed_content_provider.h"
 
-struct Sprite {
+class Sprite {
 private:
     TimedContentProvider<std::string> timed_content_provider;
 

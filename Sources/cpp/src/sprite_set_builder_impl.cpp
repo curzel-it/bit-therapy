@@ -18,7 +18,6 @@ std::map<std::string, std::vector<SpriteFrame>> SpriteSetBuilderImpl::aggregateF
     return aggregate<SpriteFrame, std::string>(frames, [](const SpriteFrame& frame) { return frame.species; });
 }
 
-// Construct sprite sets from a list of paths
 std::map<std::string, SpriteSet> SpriteSetBuilderImpl::spriteSets(const std::vector<std::string>& paths) const {
     auto frames = spriteFramesFromPaths(paths);
     auto framesBySpecies = aggregateFramesBySpecies(frames);
@@ -34,7 +33,6 @@ std::map<std::string, SpriteSet> SpriteSetBuilderImpl::spriteSets(const std::vec
     return setsBySpecies;
 }
 
-// Create a SpriteSet from a vector of SpriteFrame
 std::optional<SpriteSet> SpriteSetBuilderImpl::spriteSet(const std::vector<SpriteFrame>& frames) const {
     auto framesByAnimation = aggregateMap<SpriteFrame, std::string, std::string>(
         frames, 
@@ -50,7 +48,6 @@ std::optional<SpriteSet> SpriteSetBuilderImpl::spriteSet(const std::vector<Sprit
     );
 }
 
-// Retrieve sprite frames from file paths
 std::vector<SpriteFrame> SpriteSetBuilderImpl::spriteFramesFromPaths(const std::vector<std::string>& paths) const {
     std::vector<SpriteFrame> frames;
     frames.reserve(paths.size());
@@ -63,7 +60,6 @@ std::vector<SpriteFrame> SpriteSetBuilderImpl::spriteFramesFromPaths(const std::
     return frames;
 }
 
-// Parse a path into a SpriteFrame
 std::optional<SpriteFrame> SpriteSetBuilderImpl::spriteFrameFromPath(const std::string& path) const {
     std::regex re("^(.+?)_([a-zA-Z]+)-([0-9]+)$");
     std::smatch matches;

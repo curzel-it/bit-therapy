@@ -81,13 +81,13 @@ TEST(SpriteSetBuilderTests, CanGenerateSpriteSetFromFrames) {
     SpriteSetBuilderImpl builder({});
 
     const std::vector<SpriteFrame> frames({
-        SpriteFrame({"a_movement-0", "a", "movement", 0}),
-        SpriteFrame({"a_movement-1", "a", "movement", 1}),
-        SpriteFrame({"a_movement-2", "a", "movement", 2}),
-        SpriteFrame({"a_fall-0", "a", "fall", 0}),
-        SpriteFrame({"a_fall-1", "a", "fall", 1}),
-        SpriteFrame({"a_front-0", "a", "front", 0}),
-        SpriteFrame({"a_front-1", "a", "front", 1}),
+        SpriteFrame({"a_movement-0", "a", SPRITE_NAME_MOVEMENT, 0}),
+        SpriteFrame({"a_movement-1", "a", SPRITE_NAME_MOVEMENT, 1}),
+        SpriteFrame({"a_movement-2", "a", SPRITE_NAME_MOVEMENT, 2}),
+        SpriteFrame({"a_fall-0", "a", SPRITE_NAME_FALL, 0}),
+        SpriteFrame({"a_fall-1", "a", SPRITE_NAME_FALL, 1}),
+        SpriteFrame({"a_front-0", "a", SPRITE_NAME_FRONT, 0}),
+        SpriteFrame({"a_front-1", "a", SPRITE_NAME_FRONT, 1}),
         SpriteFrame({"a_eat-0", "a", "eat", 0}),
         SpriteFrame({"a_eat-1", "a", "eat", 1})
     });
