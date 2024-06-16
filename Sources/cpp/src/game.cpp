@@ -2,8 +2,12 @@
 
 Game::Game(double fps) : fps(fps), entities(std::vector<Entity>({})) {}
 
-void Game::update(long time_since_last_update) {
+void Game::update(long timeSinceLastUpdate) {
     for (auto& entity : entities) {
-        entity.update(time_since_last_update);
+        entity.update(timeSinceLastUpdate);
     }
+}
+
+void Game::add(Entity entity) {
+    entities.push_back(entity);
 }

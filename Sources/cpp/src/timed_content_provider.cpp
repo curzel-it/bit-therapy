@@ -5,40 +5,40 @@
 template<typename T>
 TimedContentProvider<T>::TimedContentProvider(const std::vector<T> frames, double fps)
     : frames(frames),
-      currentFrame_index(0),
-      completed_loops(0),
-      last_update_time(0),
-      last_frame_change_time(0)
+      currentFrameIndex(0),
+      completedLoops(0),
+      lastUpdateTime(0),
+      lastFrameChangeTime(0)
 {
-    frame_duration = fps > 0.0f ? static_cast<long>(1000.0 / fps) : 0;
+    frameDuration = fps > 0.0f ? static_cast<long>(1000.0 / fps) : 0;
 }
 
 template<typename T>
 const T& TimedContentProvider<T>::currentFrame() const {
-    return frames[currentFrame_index];
+    return frames[currentFrameIndex];
 }
 
 template<typename T>
-void TimedContentProvider<T>::update(long time_since_last_update) {
-    last_update_time += time_since_last_update;
+void TimedContentProvider<T>::update(long timeSinceLastUpdate) {
+    lastUpdateTime += timeSinceLastUpdate;
 
-    if ((last_update_time - last_frame_change_time) >= frame_duration) {
+    if ((lastUpdateTime - lastFrameChangeTime) >= frameDuration) {
         loadNextFrame();
-        last_frame_change_time = last_update_time;
+        lastFrameChangeTime = lastUpdateTime;
     }
 }
 
 template<typename T>
 void TimedContentProvider<T>::loadNextFrame() {
-    int next_index = (currentFrame_index + 1) % frames.size();
-    checkLoopCompletion(next_index);
-    currentFrame_index = next_index;
+    int nextIndex = (currentFrameIndex + 1) % frames.size();
+    checkLoopCompletion(nextIndex);
+    currentFrameIndex = nextIndex;
 }
 
 template<typename T>
-void TimedContentProvider<T>::checkLoopCompletion(int next_index) {
-    if (next_index < currentFrame_index) {
-        completed_loops++;
+void TimedContentProvider<T>::checkLoopCompletion(int nextIndex) {
+    if (nextIndex < currentFrameIndex) {
+        completedLoops++;
     }
 }
 

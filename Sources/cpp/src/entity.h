@@ -17,7 +17,7 @@ private:
 public:
     Entity(double fps, std::string species, SpriteSet spriteSet);
     
-    void update(long time_since_last_update);
+    void update(long timeSinceLastUpdate);
     void changeSprite(std::string animationName);
 };
 

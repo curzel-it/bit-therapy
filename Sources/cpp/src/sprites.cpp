@@ -11,6 +11,6 @@ const std::string& Sprite::currentFrame() const {
     return timed_content_provider.currentFrame();
 }
 
-void Sprite::update(long time_since_last_update) {
-    timed_content_provider.update(time_since_last_update);
+void Sprite::update(long timeSinceLastUpdate) {
+    timed_content_provider.update(timeSinceLastUpdate);
 }

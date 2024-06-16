@@ -7,20 +7,20 @@ template<typename T>
 class TimedContentProvider {
 private:
     std::vector<T> frames;
-    int frame_duration;
-    int currentFrame_index;
-    long completed_loops;
-    long last_update_time;
-    long last_frame_change_time;
+    int frameDuration;
+    int currentFrameIndex;
+    long completedLoops;
+    long lastUpdateTime;
+    long lastFrameChangeTime;
 
 public:
     TimedContentProvider(const std::vector<T> frames, double fps);
     const T& currentFrame() const;
-    void update(long time_since_last_update);
+    void update(long timeSinceLastUpdate);
 
 private:
     void loadNextFrame();
-    void checkLoopCompletion(int next_index);
+    void checkLoopCompletion(int nextIndex);
 };
 
 #endif

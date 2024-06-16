@@ -13,7 +13,9 @@ private:
 public:
     Game(double fps);
     
-    void update(long time_since_last_update);
+    void update(long timeSinceLastUpdate);
+
+    void add(Entity entity);
 };
 
 #endif

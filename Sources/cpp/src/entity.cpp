@@ -16,8 +16,8 @@ Entity::Entity(double fps, std::string species, SpriteSet spriteSet) :
 }
 
 
-void Entity::update(long time_since_last_update) {
-    currentSprite.update(time_since_last_update);
+void Entity::update(long timeSinceLastUpdate) {
+    currentSprite.update(timeSinceLastUpdate);
 }
 
 void Entity::changeSprite(std::string animationName) {
