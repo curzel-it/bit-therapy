@@ -3,18 +3,23 @@
 
 #include "game.h"
 
+#include <QLabel>
 #include <QWidget>
 
-class GameWindow {    
-private:
-    QWidget window;
-    Game * game;
+class GameWindow : public QWidget {    
+    Q_OBJECT
 
-    void setup();
+private:
+    QLabel *gameStateLabel;
+    Game *game;
+
+    void setupTimer();
+    void buildUi();
 
 public:
-    GameWindow(Game * game);
-    void show();
+    GameWindow(QWidget *parent = nullptr);
+    void setup(Game *game);
+    void updateUi();
 };
 
 #endif

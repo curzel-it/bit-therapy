@@ -1,8 +1,11 @@
-#include <QWidget>
 #include <QLabel>
-#include <QVBoxLayout>
-#include <QString>
+#include <QPainter>
 #include <QScrollArea>
+#include <QString>
+#include <QTimer>
+#include <QTime>
+#include <QVBoxLayout>
+#include <QWidget>
 
 #include <format>
 
@@ -13,23 +16,34 @@
 #include "sprite_set_builder.h"
 #include "sprite_set_builder_impl.h"
 
-GameWindow::GameWindow(Game * game): game(game) {
-    setup();
+GameWindow::GameWindow(QWidget *parent): QWidget(parent) {}
+
+void GameWindow::setup(Game *game) {
+    this->game = game;
+    buildUi();
+    setupTimer();
 }
 
-void GameWindow::show() {
-    window.show();
+void GameWindow::setupTimer() {
+    QTimer *timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &GameWindow::updateUi);
+    timer->start(2 * 1000.0 / game->fps);
 }
 
-void GameWindow::setup() {
+void GameWindow::buildUi() {
     QVBoxLayout *layout = new QVBoxLayout();
 
-    QLabel *label = new QLabel(QString::fromStdString(game->description()));
-    layout->addWidget(label);
+    gameStateLabel = new QLabel(QString("Loading..."));
+    layout->addWidget(gameStateLabel);
 
-    window.setLayout(layout);
+    setLayout(layout);
     
-    window.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    window.setAttribute(Qt::WA_TranslucentBackground);
-    window.setWindowTitle("Game Window");
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    setAttribute(Qt::WA_TranslucentBackground);
+    setWindowTitle("Game Window");
+}
+
+void GameWindow::updateUi() {
+    QString description = QString::fromStdString(game->description());
+    gameStateLabel->setText(description);
 }

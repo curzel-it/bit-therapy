@@ -57,7 +57,8 @@ int main(int argc, char *argv[]) {
     // gameLoop.join();
 
     QApplication app(argc, argv);    
-    GameWindow gameWindow(&game);
+    GameWindow gameWindow;
+    gameWindow.setup(&game);
     gameWindow.show();
 
     return app.exec();

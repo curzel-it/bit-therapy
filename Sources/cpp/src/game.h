@@ -10,18 +10,16 @@
 class Game {    
 private:
     std::mutex mtx;
-    double fps;
     std::vector<Entity> entities;
 
 public:
+    double fps;
+
     Game(double fps);
     
-    void update(long timeSinceLastUpdate);
-    
-    Entity * add(Entity entity);
-    
+    void update(long timeSinceLastUpdate);    
+    Entity * add(Entity entity);    
     const int numberOfEntities();
-
     std::string description() const;
 };
 
