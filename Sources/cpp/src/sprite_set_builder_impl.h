@@ -21,8 +21,9 @@ struct SpriteFrame {
 
 class SpriteSetBuilderImpl : public SpriteSetBuilder {
 public:
+    std::map<std::string, SpriteSet> spriteSets(const std::vector<std::string>& paths) const override;
+     
     std::map<std::string, std::vector<SpriteFrame>> aggregateFramesBySpecies(const std::vector<SpriteFrame>& frames) const;
-    std::map<std::string, SpriteSet> spriteSets(const std::vector<std::string>& paths) const;
     std::optional<SpriteSet> spriteSet(const std::vector<SpriteFrame>& frames) const;
     std::vector<SpriteFrame> spriteFramesFromPaths(const std::vector<std::string>& paths) const;
     std::optional<SpriteFrame> spriteFrameFromPath(const std::string& path) const;

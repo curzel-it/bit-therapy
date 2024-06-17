@@ -14,10 +14,6 @@
 #include <execution>
 #include <algorithm>
 
-std::map<std::string, std::vector<SpriteFrame>> SpriteSetBuilderImpl::aggregateFramesBySpecies(const std::vector<SpriteFrame>& frames) const {
-    return aggregate<SpriteFrame, std::string>(frames, [](const SpriteFrame& frame) { return frame.species; });
-}
-
 std::map<std::string, SpriteSet> SpriteSetBuilderImpl::spriteSets(const std::vector<std::string>& paths) const {
     auto frames = spriteFramesFromPaths(paths);
     auto framesBySpecies = aggregateFramesBySpecies(frames);
@@ -31,6 +27,10 @@ std::map<std::string, SpriteSet> SpriteSetBuilderImpl::spriteSets(const std::vec
         }
     }
     return setsBySpecies;
+}
+
+std::map<std::string, std::vector<SpriteFrame>> SpriteSetBuilderImpl::aggregateFramesBySpecies(const std::vector<SpriteFrame>& frames) const {
+    return aggregate<SpriteFrame, std::string>(frames, [](const SpriteFrame& frame) { return frame.species; });
 }
 
 std::optional<SpriteSet> SpriteSetBuilderImpl::spriteSet(const std::vector<SpriteFrame>& frames) const {
