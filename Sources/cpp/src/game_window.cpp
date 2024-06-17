@@ -1,3 +1,4 @@
+#include <QImage>
 #include <QLabel>
 #include <QPainter>
 #include <QScrollArea>
@@ -33,8 +34,15 @@ void GameWindow::setupTimer() {
 void GameWindow::buildUi() {
     QVBoxLayout *layout = new QVBoxLayout();
 
-    gameStateLabel = new QLabel(QString("Loading..."));
-    layout->addWidget(gameStateLabel);
+    gameState = new QLabel(QString("Loading..."));
+    layout->addWidget(gameState);
+
+    spriteView = new QLabel();
+    // QPixmap pm("/Users/curzel/dev/bit-therapy/PetsAssets/ape_front-1.png");
+    // spriteView->setPixmap(pm);
+    spriteView->setScaledContents(true);
+
+    layout->addWidget(spriteView);
 
     setLayout(layout);
     
@@ -45,5 +53,7 @@ void GameWindow::buildUi() {
 
 void GameWindow::updateUi() {
     QString description = QString::fromStdString(game->description());
-    gameStateLabel->setText(description);
+    gameState->setText(description);
+    QPixmap pm("/Users/curzel/dev/bit-therapy/PetsAssets/ape_front-1.png");
+    spriteView->setPixmap(pm);
 }

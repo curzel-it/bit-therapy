@@ -3,6 +3,7 @@
 
 #include "game.h"
 
+#include <QImage>
 #include <QLabel>
 #include <QWidget>
 
@@ -10,7 +11,8 @@ class GameWindow : public QWidget {
     Q_OBJECT
 
 private:
-    QLabel *gameStateLabel;
+    QLabel *gameState;
+    QLabel *spriteView;
     Game *game;
 
     void setupTimer();
