@@ -100,6 +100,10 @@ All of these need to be defined in a json file, for example:
 
 Complete json files for all original species can be found [here](https://github.com/curzel-it/bit-therapy/tree/main/Species).
 
+> **Warning!**<br>
+> Do not include `_` (underscore) in your `species.id`.<br>
+> The `_` character is used to "separate" the name of the species from the name of the animation (`ape_eat` => `ape` + `eat`), so do `apechef` instead of `ape_chef`!
+
 ### Capabilities
 Capabilities are behaviors that can be attached to a Pet to manipulate its state on update - some names are pretty self-explanatory, such as `BounceOnLateralCollisions`, `FlipHorizontallyWhenGoingLeft` or `Gravity`.
 
@@ -119,6 +123,10 @@ Each animation has:
 
 Each species needs to have at least a `front` animation, which is loaded in homepage and pet details.
 
+> **Warning!**<br>
+> Do not include `_` (underscore) in your `animation.id`.<br>
+> The `_` character is used to "separate" the name of the species from the name of the animation (`ape_eat` => `ape` + `eat`), so do `attackloop` instead of `attack_loop`!
+
 ### Other properties
 * `movementPath` determinates which sprite set should be used to render the movement animation (usally `walk` or `fly`)
 * `dragPath` determinates which sprite is used when the pet is being dragged around with the mouse (usually `drag` or `front`)
@@ -127,7 +135,6 @@ Each species needs to have at least a `front` animation, which is loaded in home
 * `fps` animations in some species are *slower* (such as snail or the sunflower), so no need to render them as fast
 
 ## Sprites
-
 Each animations is composed of multiple sprites, each in a dedicated `png` image file.
 
 Each file **must** follow this convention: 
