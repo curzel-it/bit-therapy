@@ -23,6 +23,8 @@ public:
 
     void update(long timeSinceLastUpdate);
     void changeSprite(std::string animationName);
+
+    std::string description() const;
 };
 
 #endif

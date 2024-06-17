@@ -1,6 +1,6 @@
 #include "game.h"
 
-#include <iostream>
+#include <sstream>
 
 Game::Game(double fps) : fps(fps), entities(std::vector<Entity>({})) {}
 
@@ -20,4 +20,18 @@ Entity * Game::add(Entity entity) {
 const int Game::numberOfEntities() {
     std::lock_guard<std::mutex> lock(mtx);
     return entities.size();
+}
+
+std::string Game::description() const {
+    std::stringstream ss; 
+
+    ss << entities.size() << " entities:" << std::endl;
+
+    for (const auto& entity : entities) {
+        auto s = entity.description();
+        s.erase(std::remove_if(s.begin(), s.end(), ::isspace), s.end());
+        ss << "  - " << s << " @ " << &entity << std::endl;
+    }
+
+    return ss.str();
 }

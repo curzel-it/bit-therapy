@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <format>
 #include <mutex>
 #include <vector>
 
@@ -20,6 +21,8 @@ public:
     Entity * add(Entity entity);
     
     const int numberOfEntities();
+
+    std::string description() const;
 };
 
 #endif

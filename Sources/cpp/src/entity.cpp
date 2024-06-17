@@ -1,5 +1,6 @@
 #include "entity.h"
 
+#include <sstream>
 #include <string>
 #include <vector>
 
@@ -26,4 +27,10 @@ void Entity::update(long timeSinceLastUpdate) {
 
 void Entity::changeSprite(std::string animationName) {
     currentSprite = spriteSet.sprite(animationName, fps);
+}
+
+std::string Entity::description() const {
+    std::stringstream ss; 
+    ss << speciesId() << std::endl;
+    return ss.str();
 }

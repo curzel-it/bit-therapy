@@ -1,15 +1,17 @@
+#include <QWidget>
+#include <QLabel>
+#include <QVBoxLayout>
+#include <QString>
+#include <QScrollArea>
+
+#include <format>
+
 #include "game.h"
 #include "game_window.h"
 #include "geometry.h"
 #include "file_utils.h"
 #include "sprite_set_builder.h"
 #include "sprite_set_builder_impl.h"
-
-#include <QWidget>
-#include <QLabel>
-#include <QVBoxLayout>
-#include <QString>
-#include <QScrollArea>
 
 GameWindow::GameWindow(Game * game): game(game) {
     setup();
@@ -22,8 +24,8 @@ void GameWindow::show() {
 void GameWindow::setup() {
     QVBoxLayout *layout = new QVBoxLayout();
 
-    QLabel *hello = new QLabel("Hello World!");
-    layout->addWidget(hello);
+    QLabel *label = new QLabel(QString::fromStdString(game->description()));
+    layout->addWidget(label);
 
     window.setLayout(layout);
     
