@@ -16,3 +16,15 @@ TEST(StringUtilsTests, StringReplaceWithoutSideEffects) {
     ASSERT_EQ(replace(initial, "ciao", "hi"), "hi Bella");
     ASSERT_EQ(initial, "ciao Bella");
 }
+
+TEST(StringUtilsTests, CanTrimLeft) {
+    ASSERT_EQ(ltrim_copy(" ciao "), "ciao ");
+}
+
+TEST(StringUtilsTests, CanTrimRight) {
+    ASSERT_EQ(rtrim_copy(" ciao "), " ciao");
+}
+
+TEST(StringUtilsTests, CanTrimLeftAndRight) {
+    ASSERT_EQ(trim_copy(" ciao "), "ciao");
+}

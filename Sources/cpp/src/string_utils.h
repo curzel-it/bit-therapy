@@ -10,4 +10,11 @@ std::string replace(const std::string input, const std::string& old_token, const
 
 std::optional<int> parseInt(const std::string s);
 
+void trim(std::string &s);
+void ltrim(std::string &s);
+void rtrim(std::string &s);
+std::string ltrim_copy(std::string s);
+std::string rtrim_copy(std::string s);
+std::string trim_copy(std::string s);
+
 #endif

@@ -1,5 +1,7 @@
 #include "geometry.h"
 
+#include <sstream>
+
 Vector2d::Vector2d(double x, double y) : x(x), y(y) {};
 
 double Vector2d::magnitude() const {
@@ -22,7 +24,6 @@ bool Vector2d::operator!=(const Vector2d& other) const {
     return x != other.x || y != other.y;
 }
 
-
 Rect::Rect(double x, double y, double w, double h) : x(x), y(y), w(w), h(h) {};
 
 bool Rect::operator==(const Rect& other) const {
@@ -35,4 +36,10 @@ bool Rect::operator!=(const Rect& other) const {
 
 Rect Rect::offset(const Vector2d& v) const {
     return Rect(x + v.x, y + v.y, w, h);
+}
+
+std::string Rect::description() const {
+    std::stringstream ss; 
+    ss << "{ x: " << x << ", y: " << y << ", w: " << w << ", h: " << h << " }" << std::endl;
+    return ss.str();
 }

@@ -21,7 +21,9 @@ void setupGame(Game * game, SpriteSetBuilder& builder) {
     auto spriteSets = builder.spriteSets(assetPaths);
     auto apeSprites = spriteSets["ape"];
 
-    Entity ape(GAME_FPS, "ape", apeSprites);
+    auto frame = Rect(0.0, 0.0, 50.0, 50.0);
+
+    Entity ape(GAME_FPS, "ape", apeSprites, frame);
     game->add(ape);
 }
 

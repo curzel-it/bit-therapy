@@ -2,6 +2,7 @@
 #define GEOMETRY_H
 
 #include <cmath>
+#include <string>
 
 struct Vector2d {
     double x, y;
@@ -26,6 +27,8 @@ struct Rect {
     bool operator!=(const Rect& other) const;
 
     Rect offset(const Vector2d& v) const;
+
+    std::string description() const;
 };
 
 #endif

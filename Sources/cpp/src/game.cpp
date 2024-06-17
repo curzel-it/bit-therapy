@@ -2,6 +2,8 @@
 
 #include <sstream>
 
+#include "string_utils.h"
+
 Game::Game(double fps) : fps(fps), entities(std::vector<Entity>({})) {}
 
 void Game::update(long timeSinceLastUpdate) {
@@ -24,12 +26,11 @@ const int Game::numberOfEntities() {
 
 std::string Game::description() const {
     std::stringstream ss; 
-
     ss << entities.size() << " entities:" << std::endl;
 
     for (const auto& entity : entities) {
         auto s = entity.description();
-        s.erase(std::remove_if(s.begin(), s.end(), ::isspace), s.end());
+        trim(s);
         ss << "  - " << s << " @ " << &entity << std::endl;
     }
 
