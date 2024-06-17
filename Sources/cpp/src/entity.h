@@ -16,13 +16,17 @@ private:
     double fps;
     std::string species;
     SpriteSet spriteSet;
-    Rect frame;
     std::vector<std::shared_ptr<EntityCapability>> capabilities;
     Sprite currentSprite;
 
 public:
+    Rect frame;
+    Vector2d direction;
+    double speed;
+
     Entity(
         double fps, 
+        double speed, 
         std::string species, 
         SpriteSet spriteSet, 
         Rect frame
@@ -32,6 +36,7 @@ public:
 
     void update(long timeSinceLastUpdate);
     void changeSprite(std::string animationName);
+    void setFrame(Rect newFrame);
 
     std::string description() const;
 };

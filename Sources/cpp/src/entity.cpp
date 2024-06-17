@@ -5,20 +5,24 @@
 #include <string>
 #include <vector>
 
+#include "geometry.h"
 #include "linear_movement.h"
 #include "sprites.h"
 #include "sprite_set.h"
 
 Entity::Entity(
     double fps, 
+    double speed,
     std::string species, 
     SpriteSet spriteSet, 
     Rect frame
 ) :
     fps(fps),
+    speed(speed),
     species(species), 
     spriteSet(spriteSet), 
     frame(frame),
+    direction(Vector2d(1.0, 0.0)),
     capabilities(std::vector<std::shared_ptr<EntityCapability>>()),
     currentSprite(Sprite({}, fps))
 {

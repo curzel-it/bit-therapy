@@ -15,6 +15,7 @@
 #include "sprite_set_builder_impl.h"
 
 const double GAME_FPS = 30.0;
+const double BASE_SPEED = 0.1;
 
 void setupGame(Game * game, SpriteSetBuilder& builder) {
     auto assetPaths = listFiles("/Users/curzel/dev/bit-therapy/PetsAssets", ".png");
@@ -23,7 +24,7 @@ void setupGame(Game * game, SpriteSetBuilder& builder) {
 
     auto frame = Rect(0.0, 0.0, 50.0, 50.0);
 
-    Entity ape(GAME_FPS, "ape", apeSprites, frame);
+    Entity ape(GAME_FPS, BASE_SPEED, "ape", apeSprites, frame);
     game->add(ape);
 }
 
