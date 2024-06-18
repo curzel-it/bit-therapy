@@ -59,18 +59,19 @@ void GameWindow::updateUi() {
     QString description = QString::fromStdString(game->description());
     QGraphicsTextItem *gameStateText = scene->addText(description);
     gameStateText->setDefaultTextColor(Qt::white);
-    gameStateText->setFont(QFont("Arial", 24, QFont::Bold));
-    gameStateText->setPos(
-        (scene->width() - gameStateText->boundingRect().width()) / 2, 
-        (scene->height() - gameStateText->boundingRect().height()) / 2
-    );
+    gameStateText->setFont(QFont("Courier New", 16, QFont::Bold));
 
-    auto pathString = game->entities[0].currentSpriteFrame();
-    auto path = QString::fromStdString(pathString);
-
-    QPixmap pixmap(path);
-    QPixmap scaledPixmap = pixmap.scaled(100, 100, Qt::KeepAspectRatio, Qt::FastTransformation);
-    QGraphicsPixmapItem *item = new QGraphicsPixmapItem(scaledPixmap);
-    item->setPos(50, 50);
-    scene->addItem(item);
+    for (const auto& item : game->render()) {
+        auto path = QString::fromStdString(item.spritePath);        
+        QPixmap pixmap(path);
+        QPixmap scaledPixmap = pixmap.scaled(
+            item.frame.w, 
+            item.frame.h, 
+            Qt::KeepAspectRatio, 
+            Qt::FastTransformation
+        );
+        QGraphicsPixmapItem *pixmapItem = new QGraphicsPixmapItem(scaledPixmap);
+        pixmapItem->setPos(item.frame.x, item.frame.h);
+        scene->addItem(pixmapItem);
+    }
 }

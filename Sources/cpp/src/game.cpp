@@ -2,7 +2,10 @@
 
 #include <sstream>
 
+#include "geometry.h"
 #include "string_utils.h"
+
+RenderedItem::RenderedItem(std::string spritePath, Rect frame) : spritePath(spritePath), frame(frame) {}
 
 Game::Game(double fps) : fps(fps), entities(std::vector<Entity>({})) {}
 
@@ -24,8 +27,21 @@ const int Game::numberOfEntities() {
     return entities.size();
 }
 
-std::string Game::description() const {
+std::vector<RenderedItem> Game::render() {
+    std::lock_guard<std::mutex> lock(mtx);
+    std::vector<RenderedItem> renderedItems({});
+
+    for (const auto& entity : entities) {
+        auto item = RenderedItem(entity.currentSpriteFrame(), entity.frame);
+        renderedItems.push_back(item);
+    }
+    return renderedItems;
+}
+
+std::string Game::description() {
+    std::lock_guard<std::mutex> lock(mtx);
     std::stringstream ss; 
+
     ss << entities.size() << " entities:" << std::endl;
 
     for (const auto& entity : entities) {
@@ -33,6 +49,5 @@ std::string Game::description() const {
         trim(s);
         ss << "  - " << s << " @ " << &entity << std::endl;
     }
-
     return ss.str();
 }
