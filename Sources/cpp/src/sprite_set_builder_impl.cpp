@@ -29,6 +29,18 @@ std::map<std::string, SpriteSet> SpriteSetBuilderImpl::spriteSets(const std::vec
     return setsBySpecies;
 }
 
+void sortSpriteFrames(std::vector<SpriteFrame>& frames) {
+    std::sort(frames.begin(), frames.end(),
+        [](const SpriteFrame& a, const SpriteFrame& b) {
+            if (a.species < b.species) return true;
+            if (a.species > b.species) return false;
+            if (a.animation < b.animation) return true;
+            if (a.animation > b.animation) return false;
+            return a.index < b.index;
+        }
+    );
+}
+
 std::map<std::string, std::vector<SpriteFrame>> SpriteSetBuilderImpl::aggregateFramesBySpecies(const std::vector<SpriteFrame>& frames) const {
     return aggregate<SpriteFrame, std::string>(frames, [](const SpriteFrame& frame) { return frame.species; });
 }
@@ -57,6 +69,8 @@ std::vector<SpriteFrame> SpriteSetBuilderImpl::spriteFramesFromPaths(const std::
             frames.push_back(*optionalFrame);
         }
     }
+
+    sortSpriteFrames(frames);
     return frames;
 }
 

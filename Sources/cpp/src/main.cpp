@@ -15,7 +15,8 @@
 #include "sprite_set_builder_impl.h"
 
 const double GAME_FPS = 30.0;
-const double BASE_SPEED = 0.1;
+const double ANIMATIONS_FPS = 10.0;
+const double BASE_SPEED = 0.05;
 
 void setupGame(Game * game, SpriteSetBuilder& builder) {
     auto assetPaths = listFiles("/Users/curzel/dev/bit-therapy/PetsAssets", ".png");
@@ -24,7 +25,7 @@ void setupGame(Game * game, SpriteSetBuilder& builder) {
 
     auto frame = Rect(0.0, 0.0, 50.0, 50.0);
 
-    Entity ape(GAME_FPS, BASE_SPEED, "ape", apeSprites, frame);
+    Entity ape(ANIMATIONS_FPS, BASE_SPEED, "ape", apeSprites, frame);
     game->add(ape);
 }
 
@@ -57,8 +58,11 @@ int main(int argc, char *argv[]) {
     // gameLoop.join();
 
     QApplication app(argc, argv);    
+
+    Rect frame(0, 0, 1920, 1080);
+
     GameWindow gameWindow;
-    gameWindow.setup(&game);
+    gameWindow.setup(&game, frame);
     gameWindow.show();
 
     return app.exec();

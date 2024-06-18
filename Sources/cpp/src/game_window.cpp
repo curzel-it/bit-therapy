@@ -21,8 +21,9 @@
 
 GameWindow::GameWindow(QWidget *parent): QWidget(parent) {}
 
-void GameWindow::setup(Game *game) {
+void GameWindow::setup(Game *game, Rect frame) {
     this->game = game;
+    this->frame = frame;
     buildUi();
     setupTimer();
 }
@@ -35,7 +36,7 @@ void GameWindow::setupTimer() {
 
 void GameWindow::buildUi() {
     scene = new QGraphicsScene();
-    scene->setSceneRect(0, 0, 800, 600);
+    scene->setSceneRect(frame.x, frame.y, frame.w, frame.h);
     QGraphicsView *sceneView = new QGraphicsView(scene);
     sceneView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     sceneView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -47,9 +48,9 @@ void GameWindow::buildUi() {
     layout->addWidget(sceneView);
     setLayout(layout);
 
-    setGeometry(0, 0, 800, 600);
-    // setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    // setAttribute(Qt::WA_TranslucentBackground);
+    setGeometry(frame.x, frame.y, frame.w, frame.h);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    setAttribute(Qt::WA_TranslucentBackground);
     setWindowTitle("Game Window");
 }
 
@@ -59,7 +60,7 @@ void GameWindow::updateUi() {
     QString description = QString::fromStdString(game->description());
     QGraphicsTextItem *gameStateText = scene->addText(description);
     gameStateText->setDefaultTextColor(Qt::white);
-    gameStateText->setFont(QFont("Courier New", 16, QFont::Bold));
+    gameStateText->setFont(QFont("Courier New", 16, QFont::DemiBold));
 
     for (const auto& item : game->render()) {
         auto path = QString::fromStdString(item.spritePath);        

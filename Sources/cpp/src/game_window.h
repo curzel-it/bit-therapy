@@ -2,6 +2,7 @@
 #define GAME_WINDOW_H
 
 #include "game.h"
+#include "geometry.h"
 
 #include <QGraphicsScene>
 #include <QLabel>
@@ -13,13 +14,14 @@ class GameWindow : public QWidget {
 private:
     QGraphicsScene *scene;
     Game *game;
+    Rect frame;
 
     void setupTimer();
     void buildUi();
 
 public:
     GameWindow(QWidget *parent = nullptr);
-    void setup(Game *game);
+    void setup(Game *game, Rect frame);
     void updateUi();
 };
 

@@ -92,6 +92,7 @@
         "__assert": "cpp",
         "__availability": "cpp",
         "qgraphicsscene": "cpp",
-        "qpainter": "cpp"
+        "qpainter": "cpp",
+        "qlabel": "cpp"
     }
 }

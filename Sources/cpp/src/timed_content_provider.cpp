@@ -1,5 +1,6 @@
 #include "timed_content_provider.h"
 
+#include <iostream>
 #include <vector>
 
 template<typename T>
@@ -30,9 +31,11 @@ void TimedContentProvider<T>::update(long timeSinceLastUpdate) {
 
 template<typename T>
 void TimedContentProvider<T>::loadNextFrame() {
+    auto original = currentFrameIndex;
     int nextIndex = (currentFrameIndex + 1) % frames.size();
     checkLoopCompletion(nextIndex);
     currentFrameIndex = nextIndex;
+    auto frame = currentFrame();
 }
 
 template<typename T>

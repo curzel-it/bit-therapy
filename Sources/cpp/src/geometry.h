@@ -7,7 +7,8 @@
 struct Vector2d {
     double x, y;
 
-    Vector2d(double x = 0.0, double y = 0.0);
+    Vector2d(double x, double y);
+    Vector2d() : Vector2d(0, 0) {};
 
     double magnitude() const;
 
@@ -22,6 +23,7 @@ struct Rect {
     double x, y, w, h;
 
     Rect(double x, double y, double w, double h);
+    Rect() : Rect(0, 0, 0, 0) {};
 
     bool operator==(const Rect& other) const;
     bool operator!=(const Rect& other) const;

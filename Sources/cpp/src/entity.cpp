@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "geometry.h"
+#include "file_utils.h"
 #include "linear_movement.h"
 #include "sprites.h"
 #include "sprite_set.h"
@@ -51,7 +52,8 @@ void Entity::changeSprite(std::string animationName) {
 }
 
 std::string Entity::description() const {
+    auto spriteName = fileName(currentSpriteFrame());
     std::stringstream ss; 
-    ss << species << " " << frame.description() << std::endl;
+    ss << species << " " << spriteName << " " << frame.description() << std::endl;
     return ss.str();
 }
