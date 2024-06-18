@@ -32,6 +32,7 @@ public:
         Rect frame
     );
     
+    const std::string currentSpriteFrame() const;
     const std::string speciesId() const;
 
     void update(long timeSinceLastUpdate);

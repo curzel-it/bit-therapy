@@ -90,6 +90,8 @@
         "semaphore": "cpp",
         "shared_mutex": "cpp",
         "__assert": "cpp",
-        "__availability": "cpp"
+        "__availability": "cpp",
+        "qgraphicsscene": "cpp",
+        "qpainter": "cpp"
     }
 }

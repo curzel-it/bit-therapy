@@ -31,6 +31,10 @@ Entity::Entity(
     capabilities.push_back(lm);
 }
 
+const std::string Entity::currentSpriteFrame() const {
+    return currentSprite.currentFrame();
+}
+
 const std::string Entity::speciesId() const {
     return species;
 }

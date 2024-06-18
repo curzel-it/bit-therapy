@@ -10,10 +10,10 @@
 class Game {    
 private:
     std::mutex mtx;
-    std::vector<Entity> entities;
 
 public:
     double fps;
+    std::vector<Entity> entities;
 
     Game(double fps);
     
