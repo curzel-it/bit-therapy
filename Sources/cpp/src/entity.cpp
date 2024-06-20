@@ -13,21 +13,23 @@
 
 Entity::Entity(
     double fps, 
-    double speed,
-    std::string species, 
+    double settingsBaseSize, 
+    double settingsSpeedMultiplier,
+    Species species, 
     SpriteSet spriteSet, 
     Rect frame
 ) :
     fps(fps),
-    speed(speed),
+    speed(0.0),
     species(species), 
     spriteSet(spriteSet), 
     frame(frame),
     direction(Vector2d(1.0, 0.0)),
     capabilities(std::vector<std::shared_ptr<EntityCapability>>()),
-    currentSprite(Sprite({}, fps))
+    currentSprite(spriteSet.movementSprite(fps))
 {
-    changeSprite(SPRITE_NAME_FRONT); 
+    resetSpeed(settingsBaseSize, settingsSpeedMultiplier);
+    changeSprite(SPRITE_NAME_MOVEMENT); 
     std::shared_ptr<LinearMovement> lm = std::make_shared<LinearMovement>();
     capabilities.push_back(lm);
 }
@@ -37,7 +39,7 @@ const std::string Entity::currentSpriteFrame() const {
 }
 
 const std::string Entity::speciesId() const {
-    return species;
+    return species.id;
 }
 
 void Entity::update(long timeSinceLastUpdate) {
@@ -54,6 +56,11 @@ void Entity::changeSprite(std::string animationName) {
 std::string Entity::description() const {
     auto spriteName = fileName(currentSpriteFrame());
     std::stringstream ss; 
-    ss << species << " " << spriteName << " " << frame.description() << std::endl;
+    ss << species.id << " " << spriteName << " " << frame.description() << std::endl;
     return ss.str();
+}
+
+void Entity::resetSpeed(double settingsBaseSize, double settingsSpeedMultiplier) {
+    double sizeMultiplier = frame.w / settingsBaseSize;
+    speed = 30.0 * species.speed * sizeMultiplier * settingsSpeedMultiplier;
 }

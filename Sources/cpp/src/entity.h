@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "geometry.h"
+#include "species.h"
 #include "sprites.h"
 #include "sprite_set.h"
 
@@ -14,10 +15,12 @@ class EntityCapability;
 class Entity {    
 private:
     double fps;
-    std::string species;
+    Species species;
     SpriteSet spriteSet;
     std::vector<std::shared_ptr<EntityCapability>> capabilities;
     Sprite currentSprite;
+
+    void resetSpeed(double settingsBaseSize, double settingsSpeedMultiplier);
 
 public:
     Rect frame;
@@ -26,8 +29,9 @@ public:
 
     Entity(
         double fps, 
-        double speed, 
-        std::string species, 
+        double settingsBaseSize, 
+        double settingsSpeedMultiplier,
+        Species species, 
         SpriteSet spriteSet, 
         Rect frame
     );

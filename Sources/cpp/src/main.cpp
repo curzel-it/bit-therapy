@@ -16,7 +16,6 @@
 
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
-const double BASE_SPEED = 0.05;
 
 void setupGame(Game * game, SpriteSetBuilder& builder) {
     auto assetPaths = listFiles("/Users/curzel/dev/bit-therapy/PetsAssets", ".png");
@@ -25,7 +24,9 @@ void setupGame(Game * game, SpriteSetBuilder& builder) {
 
     auto frame = Rect(0.0, 0.0, 50.0, 50.0);
 
-    Entity ape(ANIMATIONS_FPS, BASE_SPEED, "ape", apeSprites, frame);
+    Species apeSpecies("ape", 1.0, 1.0);
+    Entity ape(ANIMATIONS_FPS, 50.0, 1.0, apeSpecies, apeSprites, frame);
+
     game->add(ape);
 }
 
@@ -50,6 +51,8 @@ std::thread startGameLoop(Game * game) {
 }
 
 int main(int argc, char *argv[]) {
+    std::cout << "Starting..." << std::endl;
+
     SpriteSetBuilderImpl builderImpl = SpriteSetBuilderImpl({});    
 
     Game game(GAME_FPS);

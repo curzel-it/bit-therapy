@@ -1,8 +1,9 @@
 #include "sprites.h"
 #include "sprite_set.h"
 
-#include <vector>
+#include <iostream>
 #include <string>
+#include <vector>
 
 SpriteSet::SpriteSet(
     const std::vector<std::string> movement, 

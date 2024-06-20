@@ -1,5 +1,6 @@
 #include "game.h"
 
+#include <iostream>
 #include <sstream>
 
 #include "geometry.h"
@@ -30,7 +31,7 @@ const int Game::numberOfEntities() {
 std::vector<RenderedItem> Game::render() {
     std::lock_guard<std::mutex> lock(mtx);
     std::vector<RenderedItem> renderedItems({});
-
+    
     for (const auto& entity : entities) {
         auto item = RenderedItem(entity.currentSpriteFrame(), entity.frame);
         renderedItems.push_back(item);

@@ -112,3 +112,24 @@ TEST(SpriteSetBuilderTests, CanGenerateSpriteSetFromFrames) {
     EXPECT_EQ(result.frontSprite(1.0).currentFrame(), "a_front-0");
     EXPECT_EQ(result.sprite("eat", 1.0).currentFrame(), "a_eat-0");
 };
+
+TEST(SpriteSetBuilderTests, CanAssignWalkToMovement) {
+    SpriteSetBuilderImpl builder({});
+
+    EXPECT_EQ(
+        builder.spriteFrameFromPath("./ape_movement-9.png"),
+        SpriteFrame({"./ape_movement-9.png", "ape", "movement", 9})
+    );
+    EXPECT_EQ(
+        builder.spriteFrameFromPath("./ape_fly-9.png"),
+        SpriteFrame({"./ape_fly-9.png", "ape", "movement", 9})
+    );
+    EXPECT_EQ(
+        builder.spriteFrameFromPath("./ape_walk-9.png"),
+        SpriteFrame({"./ape_walk-9.png", "ape", "movement", 9})
+    );
+    EXPECT_EQ(
+        builder.spriteFrameFromPath("./ape_move-9.png"),
+        SpriteFrame({"./ape_move-9.png", "ape", "movement", 9})
+    );
+}

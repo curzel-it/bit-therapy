@@ -80,8 +80,11 @@ std::optional<SpriteFrame> SpriteSetBuilderImpl::spriteFrameFromPath(const std::
 
     auto name = fileName(
         replace(
-            replace(path, "_walk.", "_movement."), 
-            "_fly.", "_movement."
+            replace(
+                replace(path, "_walk-", "_movement-"), 
+                "_fly-", "_movement-"
+            ), 
+            "_move-", "_movement-"
         )
     );
 

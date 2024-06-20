@@ -61,6 +61,7 @@ void GameWindow::updateUi() {
     QGraphicsTextItem *gameStateText = scene->addText(description);
     gameStateText->setDefaultTextColor(Qt::white);
     gameStateText->setFont(QFont("Courier New", 16, QFont::DemiBold));
+    gameStateText->setPos(0, 50);
 
     for (const auto& item : game->render()) {
         auto path = QString::fromStdString(item.spritePath);        

@@ -1,5 +1,5 @@
-#ifndef TIMED_CONTENT_PROVIDER_H
-#define TIMED_CONTENT_PROVIDER_H
+#ifndef timedContentProvider_H
+#define timedContentProvider_H
 
 #include <vector>
 

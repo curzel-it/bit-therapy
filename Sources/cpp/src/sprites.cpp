@@ -1,16 +1,16 @@
 #include "sprites.h"
 #include "timed_content_provider.h"
 
-#include <vector>
+#include <iostream>
 #include <string>
+#include <vector>
 
-Sprite::Sprite(const std::vector<std::string> frames, double fps)
-    : timed_content_provider(frames, fps) {}
+Sprite::Sprite(const std::vector<std::string> frames, double fps) : timedContentProvider(frames, fps) {}
 
-const std::string& Sprite::currentFrame() const {
-    return timed_content_provider.currentFrame();
+const std::string& Sprite::currentFrame() const {    
+    return timedContentProvider.currentFrame();
 }
 
 void Sprite::update(long timeSinceLastUpdate) {
-    timed_content_provider.update(timeSinceLastUpdate);
+    timedContentProvider.update(timeSinceLastUpdate);
 }

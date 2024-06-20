@@ -8,7 +8,7 @@
 
 class Sprite {
 private:
-    TimedContentProvider<std::string> timed_content_provider;
+    TimedContentProvider<std::string> timedContentProvider;
 
 public:
     Sprite(const std::vector<std::string> frames, double fps);
