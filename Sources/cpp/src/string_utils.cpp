@@ -18,9 +18,9 @@ std::string replace(const std::string input, const std::string& old_token, const
     return working;
 }
 
-std::optional<int> parseInt(const std::string s) {
+std::optional<uint32_t> parseInt(const std::string s) {
     try {
-        int value = std::stoi(s);
+        uint32_t value = std::stoi(s);
         return value;
     } catch (...) {
         return std::nullopt;

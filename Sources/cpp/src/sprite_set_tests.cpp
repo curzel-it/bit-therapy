@@ -4,9 +4,9 @@
 #include <vector>
 #include <string>
 
-std::vector<std::string> generate_sprite_names(const std::string& base_name, int count) {
+std::vector<std::string> generate_sprite_names(const std::string& base_name, uint32_t count) {
     std::vector<std::string> names;
-    for (int i = 0; i < count; i++) {
+    for (uint32_t i = 0; i < count; i++) {
         names.push_back(base_name + "-" + std::to_string(i));
     }
     return names;

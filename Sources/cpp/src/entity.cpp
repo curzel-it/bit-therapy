@@ -1,5 +1,6 @@
 #include "entity.h"
 
+#include <chrono>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -42,7 +43,7 @@ const std::string Entity::speciesId() const {
     return species.id;
 }
 
-void Entity::update(long timeSinceLastUpdate) {
+void Entity::update(std::chrono::milliseconds timeSinceLastUpdate) {
     for (auto& capability : capabilities) {
         capability->update(timeSinceLastUpdate, this);
     }

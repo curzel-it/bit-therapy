@@ -1,11 +1,13 @@
 #include "linear_movement.h"
 
+#include <chrono>
 #include <iostream>
 
 #include "geometry.h"
 
-void LinearMovement::update(long timeSinceLastUpdate, Entity * entity) {
-    auto offset = entity->direction * entity->speed * timeSinceLastUpdate * 0.001;
+void LinearMovement::update(std::chrono::milliseconds timeSinceLastUpdate, Entity * entity) {
+    auto frameDuration = std::chrono::duration_cast<std::chrono::milliseconds>(timeSinceLastUpdate).count();
+    auto offset = entity->direction * entity->speed * frameDuration * 0.001;
     auto updatedFrame = entity->frame.offset(offset);
     entity->frame = updatedFrame;
 }

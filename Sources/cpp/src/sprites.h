@@ -1,6 +1,7 @@
 #ifndef SPRITES_H
 #define SPRITES_H
 
+#include <chrono>
 #include <cmath>
 #include <string>
 #include <vector>
@@ -13,7 +14,7 @@ private:
 public:
     Sprite(const std::vector<std::string> frames, double fps);
     const std::string& currentFrame() const;
-    void update(long timeSinceLastUpdate);
+    void update(std::chrono::milliseconds timeSinceLastUpdate);
 };
 
 #endif

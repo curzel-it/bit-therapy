@@ -1,6 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#include <chrono>
 #include <memory>
 #include <string>
 #include <vector>
@@ -39,7 +40,7 @@ public:
     const std::string currentSpriteFrame() const;
     const std::string speciesId() const;
 
-    void update(long timeSinceLastUpdate);
+    void update(std::chrono::milliseconds timeSinceLastUpdate);
     void changeSprite(std::string animationName);
     void setFrame(Rect newFrame);
 
@@ -49,7 +50,7 @@ public:
 class EntityCapability {
 public:
     virtual ~EntityCapability() = default;
-    virtual void update(long timeSinceLastUpdate, Entity * entity) {};
+    virtual void update(std::chrono::milliseconds timeSinceLastUpdate, Entity * entity) {};
 };
 
 #endif

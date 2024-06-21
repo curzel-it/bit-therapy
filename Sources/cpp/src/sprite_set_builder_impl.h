@@ -14,7 +14,7 @@ struct SpriteFrame {
     std::string path;
     std::string species;
     std::string animation;
-    int index;
+    uint32_t index;
 
     bool operator==(const SpriteFrame& other) const;
 };

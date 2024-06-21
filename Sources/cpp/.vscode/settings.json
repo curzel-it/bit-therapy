@@ -93,6 +93,7 @@
         "__availability": "cpp",
         "qgraphicsscene": "cpp",
         "qpainter": "cpp",
-        "qlabel": "cpp"
+        "qlabel": "cpp",
+        "thread": "cpp"
     }
 }

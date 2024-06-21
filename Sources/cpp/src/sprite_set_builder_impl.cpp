@@ -91,7 +91,7 @@ std::optional<SpriteFrame> SpriteSetBuilderImpl::spriteFrameFromPath(const std::
     if (std::regex_match(name, matches, re)) {
         std::string species = matches[1];
         std::string animationName = matches[2];
-        int index = parseInt(matches[3]).value_or(-1);
+        uint32_t index = parseInt(matches[3]).value_or(-1);
 
         if (index >= 0) {
             return std::make_optional<SpriteFrame>({

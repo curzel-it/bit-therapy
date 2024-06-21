@@ -3,6 +3,7 @@
 #include "species.h"
 #include "sprite_set.h"
 
+#include <chrono>
 #include <gtest/gtest.h>
 #include <iostream>
 #include <string>
@@ -24,27 +25,27 @@ TEST(GameTests, CanUpdateCascade) {
 
     std::vector<RenderedItem> results({});
 
-    game.update(100);
+    game.update(std::chrono::milliseconds(100));
     results = game.render();
     EXPECT_EQ(results.size(), 1);
     EXPECT_EQ(results[0].frame.x, 0.06);
 
-    game.update(100);
+    game.update(std::chrono::milliseconds(100));
     results = game.render();
     EXPECT_EQ(results.size(), 1);
     EXPECT_EQ(results[0].frame, Rect(0.12, 0.0, 1.0, 1.0));
 
-    game.update(100);
+    game.update(std::chrono::milliseconds(100));
     results = game.render();
     EXPECT_EQ(results.size(), 1);
     EXPECT_EQ(results[0].frame, Rect(0.18, 0.0, 1.0, 1.0));
 
-    game.update(100);
+    game.update(std::chrono::milliseconds(100));
     results = game.render();
     EXPECT_EQ(results.size(), 1);
     EXPECT_EQ(results[0].frame, Rect(0.24, 0.0, 1.0, 1.0));
 
-    game.update(100);
+    game.update(std::chrono::milliseconds(100));
     results = game.render();
     EXPECT_EQ(results.size(), 1);
     EXPECT_EQ(results[0].frame, Rect(0.3, 0.0, 1.0, 1.0));

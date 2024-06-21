@@ -6,8 +6,8 @@
 #include <vector>
 
 TEST(VectorUtilsTests, CanRemoveDuplicates) {
-    std::vector<int> all({1, 2, 2, 2, 3, 4});
-    std::vector<int> expected({1, 2, 3, 4});
+    std::vector<uint32_t> all({1, 2, 2, 2, 3, 4});
+    std::vector<uint32_t> expected({1, 2, 3, 4});
 
     auto result = distinct(all);
 
@@ -15,9 +15,9 @@ TEST(VectorUtilsTests, CanRemoveDuplicates) {
 }
 
 TEST(VectorUtilsTests, CanRemoveDuplicatesWithoutSideEffects) {
-    std::vector<int> all({1, 2, 2, 2, 3, 4});
-    std::vector<int> allOriginal({1, 2, 2, 2, 3, 4});
-    std::vector<int> expected({1, 2, 3, 4});
+    std::vector<uint32_t> all({1, 2, 2, 2, 3, 4});
+    std::vector<uint32_t> allOriginal({1, 2, 2, 2, 3, 4});
+    std::vector<uint32_t> expected({1, 2, 3, 4});
 
     auto result = distinct(all);
 

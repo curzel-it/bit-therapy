@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <chrono>
 #include <format>
 #include <mutex>
 #include <vector>
@@ -24,9 +25,9 @@ public:
 
     Game(double fps);
     
-    void update(long timeSinceLastUpdate);    
+    void update(std::chrono::milliseconds timeSinceLastUpdate);    
     Entity * add(Entity entity);    
-    const int numberOfEntities();
+    const uint32_t numberOfEntities();
     std::vector<RenderedItem> render();
     std::string description();
 };

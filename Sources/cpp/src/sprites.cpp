@@ -1,6 +1,7 @@
 #include "sprites.h"
 #include "timed_content_provider.h"
 
+#include <chrono>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -11,6 +12,6 @@ const std::string& Sprite::currentFrame() const {
     return timedContentProvider.currentFrame();
 }
 
-void Sprite::update(long timeSinceLastUpdate) {
+void Sprite::update(std::chrono::milliseconds timeSinceLastUpdate) {
     timedContentProvider.update(timeSinceLastUpdate);
 }

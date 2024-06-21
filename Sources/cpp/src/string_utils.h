@@ -8,7 +8,7 @@
 void updateByReplacing(std::string& input, const std::string& old_token, const std::string& new_token);
 std::string replace(const std::string input, const std::string& old_token, const std::string& new_token);
 
-std::optional<int> parseInt(const std::string s);
+std::optional<uint32_t> parseInt(const std::string s);
 
 void trim(std::string &s);
 void ltrim(std::string &s);

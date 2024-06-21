@@ -1,5 +1,6 @@
 #include "timed_content_provider.h"
 
+#include <chrono>
 #include <iostream>
 #include <vector>
 
@@ -11,7 +12,8 @@ TimedContentProvider<T>::TimedContentProvider(const std::vector<T> frames, doubl
       lastUpdateTime(0),
       lastFrameChangeTime(0)
 {
-    frameDuration = fps > 0.0f ? static_cast<long>(1000.0 / fps) : 0;
+    auto frameDurationMs = fps > 0.0f ? 1000.0 / fps : 0;
+    frameDuration = std::chrono::milliseconds(uint32_t(frameDurationMs));
 }
 
 template<typename T>
@@ -20,7 +22,7 @@ const T& TimedContentProvider<T>::currentFrame() const {
 }
 
 template<typename T>
-void TimedContentProvider<T>::update(long timeSinceLastUpdate) {
+void TimedContentProvider<T>::update(std::chrono::milliseconds timeSinceLastUpdate) {
     lastUpdateTime += timeSinceLastUpdate;
 
     if ((lastUpdateTime - lastFrameChangeTime) >= frameDuration) {
@@ -32,18 +34,18 @@ void TimedContentProvider<T>::update(long timeSinceLastUpdate) {
 template<typename T>
 void TimedContentProvider<T>::loadNextFrame() {
     auto original = currentFrameIndex;
-    int nextIndex = (currentFrameIndex + 1) % frames.size();
+    uint32_t nextIndex = (currentFrameIndex + 1) % frames.size();
     checkLoopCompletion(nextIndex);
     currentFrameIndex = nextIndex;
     auto frame = currentFrame();
 }
 
 template<typename T>
-void TimedContentProvider<T>::checkLoopCompletion(int nextIndex) {
+void TimedContentProvider<T>::checkLoopCompletion(uint32_t nextIndex) {
     if (nextIndex < currentFrameIndex) {
         completedLoops++;
     }
 }
 
-template class TimedContentProvider<int>;
+template class TimedContentProvider<uint32_t>;
 template class TimedContentProvider<std::string>;

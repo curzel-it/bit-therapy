@@ -33,12 +33,11 @@ void setupGame(Game * game, SpriteSetBuilder& builder) {
 std::thread startGameLoop(Game * game) {
     return std::thread([game]() {
         bool gameIsRunning = true;
-        auto frameDuration = std::chrono::milliseconds(int(1000 / GAME_FPS));
-        auto frameDurationMs = std::chrono::duration_cast<std::chrono::milliseconds>(frameDuration).count();
+        auto frameDuration = std::chrono::milliseconds(uint32_t(1000 / GAME_FPS));
         
         while (gameIsRunning) { 
             auto frameStart = std::chrono::steady_clock::now();
-            game->update(frameDurationMs);
+            game->update(frameDuration);
             auto frameEnd = std::chrono::steady_clock::now();
             auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(frameEnd - frameStart);
             

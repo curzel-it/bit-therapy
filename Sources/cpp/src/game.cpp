@@ -1,5 +1,6 @@
 #include "game.h"
 
+#include <chrono>
 #include <iostream>
 #include <sstream>
 
@@ -10,7 +11,7 @@ RenderedItem::RenderedItem(std::string spritePath, Rect frame) : spritePath(spri
 
 Game::Game(double fps) : fps(fps), entities(std::vector<Entity>({})) {}
 
-void Game::update(long timeSinceLastUpdate) {
+void Game::update(std::chrono::milliseconds timeSinceLastUpdate) {
     std::lock_guard<std::mutex> lock(mtx);
     for (auto& entity : entities) {
         entity.update(timeSinceLastUpdate);
@@ -23,7 +24,7 @@ Entity * Game::add(Entity entity) {
     return &entities.back();
 }
 
-const int Game::numberOfEntities() {
+const uint32_t Game::numberOfEntities() {
     std::lock_guard<std::mutex> lock(mtx);
     return entities.size();
 }
