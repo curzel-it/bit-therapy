@@ -3,6 +3,7 @@
 
 #include <functional>
 #include <map>
+#include <numeric>
 #include <set>
 #include <vector>
 
