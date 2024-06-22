@@ -7,7 +7,10 @@
 #include <optional>
 #include <ranges>
 
-SpeciesRepository::SpeciesRepository(const SpeciesParser& parser) : parser(parser) {}
+SpeciesRepository::SpeciesRepository(const SpeciesParser& parser) : 
+    parser(parser),
+    speciesById(std::map<std::string, Species>{}) 
+{}
 
 void SpeciesRepository::setup(const std::string rootPath) {
     auto paths = listFiles(rootPath, ".json");

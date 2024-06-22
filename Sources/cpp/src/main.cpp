@@ -16,6 +16,8 @@
 
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
+const std::string SPECIES_PATH = "/Users/curzel/dev/bit-therapy/Species";
+const std::string ASSETS_PATH = "/Users/curzel/dev/bit-therapy/PetsAssets";
 
 void setupGame(Game * game, SpriteSetBuilder& builder);
 std::thread startGameLoop(Game * game);
@@ -45,7 +47,7 @@ int main(int argc, char *argv[]) {
 }
 
 void setupGame(Game * game, SpriteSetBuilder& builder) {
-    auto assetPaths = listFiles("/Users/curzel/dev/bit-therapy/PetsAssets", ".png");
+    auto assetPaths = listFiles(ASSETS_PATH, ".png");
     auto spriteSets = builder.spriteSets(assetPaths);
     auto apeSprites = spriteSets["ape"];
 

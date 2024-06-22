@@ -14,6 +14,7 @@ private:
 public:
     Sprite(const std::vector<std::string> frames, double fps);
     const std::string& currentFrame() const;
+    const uint32_t numberOfFrames() const;
     void update(std::chrono::milliseconds timeSinceLastUpdate);
 };
 

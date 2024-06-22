@@ -4,11 +4,10 @@
 #include <string>
 #include <vector>
 
+#include "config_tests.h"
 #include "file_utils.h"
 #include "species_repository.h"
 #include "species_parser.h"
-
-std::string SPECIES_PATH = "/Users/curzel/dev/bit-therapy/Species";
 
 TEST(SpeciesRepositoryTests, CanBeSetupAndLoadAllSpecies) {
     SpeciesParser parser;

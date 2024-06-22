@@ -17,6 +17,11 @@ TimedContentProvider<T>::TimedContentProvider(const std::vector<T> frames, doubl
 }
 
 template<typename T>
+const uint32_t TimedContentProvider<T>::numberOfFrames() const {
+    return frames.size();
+}
+
+template<typename T>
 const T& TimedContentProvider<T>::currentFrame() const {
     return frames[currentFrameIndex];
 }

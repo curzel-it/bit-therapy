@@ -83,6 +83,7 @@
         "format": "cpp",
         "stop_token": "cpp",
         "thread": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "ranges": "cpp"
     }
 }

@@ -15,3 +15,7 @@ const std::string& Sprite::currentFrame() const {
 void Sprite::update(std::chrono::milliseconds timeSinceLastUpdate) {
     timedContentProvider.update(timeSinceLastUpdate);
 }
+
+const uint32_t Sprite::numberOfFrames() const {
+    return timedContentProvider.numberOfFrames();
+}

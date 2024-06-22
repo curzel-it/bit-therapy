@@ -14,14 +14,14 @@ private:
     std::chrono::milliseconds lastUpdateTime;
     std::chrono::milliseconds lastFrameChangeTime;
 
+    void loadNextFrame();
+    void checkLoopCompletion(uint32_t nextIndex);
+
 public:
     TimedContentProvider(const std::vector<T> frames, double fps);
     const T& currentFrame() const;
     void update(std::chrono::milliseconds timeSinceLastUpdate);
-
-private:
-    void loadNextFrame();
-    void checkLoopCompletion(uint32_t nextIndex);
+    const uint32_t numberOfFrames() const;
 };
 
 #endif
