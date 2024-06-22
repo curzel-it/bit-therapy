@@ -17,6 +17,33 @@
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
 
+void setupGame(Game * game, SpriteSetBuilder& builder);
+std::thread startGameLoop(Game * game);
+
+int main(int argc, char *argv[]) {
+    std::cout << "Starting..." << std::endl;
+
+    SpriteSetBuilderImpl builderImpl = SpriteSetBuilderImpl({});    
+
+    Game game(GAME_FPS);
+    setupGame(&game, builderImpl);    
+    auto gameLoop = startGameLoop(&game);
+    // gameLoop.join();
+
+    QApplication app(argc, argv);    
+
+    Rect frame(0, 0, 1920, 1080);
+
+    GameWindow gameWindow;
+    gameWindow.setup(&game, frame);
+    gameWindow.show();
+
+    // AppWindow appWindow;
+    // appWindow.show();
+
+    return app.exec();
+}
+
 void setupGame(Game * game, SpriteSetBuilder& builder) {
     auto assetPaths = listFiles("/Users/curzel/dev/bit-therapy/PetsAssets", ".png");
     auto spriteSets = builder.spriteSets(assetPaths);
@@ -47,25 +74,4 @@ std::thread startGameLoop(Game * game) {
             }
         }
     });
-}
-
-int main(int argc, char *argv[]) {
-    std::cout << "Starting..." << std::endl;
-
-    SpriteSetBuilderImpl builderImpl = SpriteSetBuilderImpl({});    
-
-    Game game(GAME_FPS);
-    setupGame(&game, builderImpl);    
-    auto gameLoop = startGameLoop(&game);
-    // gameLoop.join();
-
-    QApplication app(argc, argv);    
-
-    Rect frame(0, 0, 1920, 1080);
-
-    GameWindow gameWindow;
-    gameWindow.setup(&game, frame);
-    gameWindow.show();
-
-    return app.exec();
 }

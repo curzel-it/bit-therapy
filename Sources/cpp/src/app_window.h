@@ -1,17 +1,19 @@
 #ifndef APP_WINDOW_H
 #define APP_WINDOW_H
 
+#include <QLabel>
 #include <QWidget>
 
-class AppWindow {    
-private:
-    QWidget window;
+class AppWindow : public QWidget {    
+    Q_OBJECT
 
-    void setup();
+private:
+    QLabel * title;
+
+    void buildUi();
 
 public:
-    explicit AppWindow();
-    void show();
+    AppWindow(QWidget *parent = nullptr);
 };
 
 #endif

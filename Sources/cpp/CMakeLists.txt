@@ -1,38 +1,39 @@
 cmake_minimum_required(VERSION 3.10)
 
-# Set the project name and version
 project(BitTherapy VERSION 1.0)
 
-# Specify the C++ standard
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Find the Qt package
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
-find_package(Qt6 COMPONENTS Widgets REQUIRED)  # Change Qt6 to Qt5 if you are using Qt5
-
-# Collect all regular .cpp files in the src directory but exclude *_tests.cpp files
+# Get all sources except tests
 file(GLOB MAIN_SOURCES "src/*.cpp")
 list(FILTER MAIN_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
 
-# Add executable for the main application
-add_executable(Main ${MAIN_SOURCES})
-target_link_libraries(Main Qt6::Widgets)  # Link against the Qt Widgets module
+# Qt
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+find_package(Qt6 COMPONENTS Widgets REQUIRED)
 
-# Google Test setup
+# Json
+find_package(nlohmann_json 3.2.0 REQUIRED)
+
+# App executable
+add_executable(Main ${MAIN_SOURCES})
+target_link_libraries(Main PRIVATE nlohmann_json::nlohmann_json Qt6::Widgets)
+
+# Google Test
 enable_testing()
 find_package(GTest REQUIRED)
 include(GoogleTest)
 
-# Collect all test .cpp files in the src directory
+# Get all sources except main 
 file(GLOB TEST_SOURCES "src/*.cpp")
 list(FILTER TEST_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
-# Add executable for the tests
+# Test executable
 add_executable(Test ${TEST_SOURCES})
 target_link_libraries(Test GTest::GTest GTest::Main Qt6::Widgets)  # Also link tests against Qt Widgets
 
-# Add the test to be run by CMake's testing system
+# Test discovery
 gtest_discover_tests(Test)

@@ -29,7 +29,7 @@ Entity::Entity(
     capabilities(std::vector<std::shared_ptr<EntityCapability>>()),
     currentSprite(spriteSet.movementSprite(fps))
 {
-    resetSpeed(settingsBaseSize, settingsSpeedMultiplier);
+    setupSpeed(settingsBaseSize, settingsSpeedMultiplier);
     changeSprite(SPRITE_NAME_MOVEMENT); 
     std::shared_ptr<LinearMovement> lm = std::make_shared<LinearMovement>();
     capabilities.push_back(lm);
@@ -61,7 +61,7 @@ std::string Entity::description() const {
     return ss.str();
 }
 
-void Entity::resetSpeed(double settingsBaseSize, double settingsSpeedMultiplier) {
+void Entity::setupSpeed(double settingsBaseSize, double settingsSpeedMultiplier) {
     double sizeMultiplier = frame.w / settingsBaseSize;
     speed = 30.0 * species.speed * sizeMultiplier * settingsSpeedMultiplier;
 }

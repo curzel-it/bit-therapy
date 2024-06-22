@@ -21,7 +21,7 @@ private:
     std::vector<std::shared_ptr<EntityCapability>> capabilities;
     Sprite currentSprite;
 
-    void resetSpeed(double settingsBaseSize, double settingsSpeedMultiplier);
+    void setupSpeed(double settingsBaseSize, double settingsSpeedMultiplier);
 
 public:
     Rect frame;

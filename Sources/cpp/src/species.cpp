@@ -3,5 +3,5 @@
 Species::Species(
     std::string id,
     double speed,
-    double size
-) : id(id), speed(speed), size(size) {}
+    double scale
+) : id(id), speed(speed), scale(scale) {}

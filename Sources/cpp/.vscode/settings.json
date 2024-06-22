@@ -94,6 +94,7 @@
         "qgraphicsscene": "cpp",
         "qpainter": "cpp",
         "qlabel": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "qwidget": "cpp"
     }
 }

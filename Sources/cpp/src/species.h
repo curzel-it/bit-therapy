@@ -7,12 +7,12 @@ class Species {
 public:
     std::string id;
     double speed;
-    double size;
+    double scale;
 
     Species(
         std::string id,
         double speed,
-        double size
+        double scale
     );
 };
 

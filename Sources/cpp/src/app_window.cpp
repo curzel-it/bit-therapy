@@ -10,16 +10,11 @@
 #include <QString>
 #include <QScrollArea>
 
-AppWindow::AppWindow() {
-    setup();
+AppWindow::AppWindow(QWidget *parent): QWidget(parent) {
+    buildUi();
 }
 
-void AppWindow::show() {
-    window.move(100, 150);
-    window.show();
-}
-
-void AppWindow::setup() {
+void AppWindow::buildUi() {
     Vector2d vector1(3.5, 2.5);
     Vector2d vector2(1.5, 4.0);
     Vector2d sum = vector1 + vector2;
@@ -58,7 +53,6 @@ void AppWindow::setup() {
 
     layout->addWidget(scrollArea);
 
-    window.setLayout(layout);
-    window.setWindowFlags(Qt::WindowStaysOnTopHint);
-    window.setWindowTitle("Bit Therapy");
+    setLayout(layout);
+    setWindowTitle("Bit Therapy");
 }
