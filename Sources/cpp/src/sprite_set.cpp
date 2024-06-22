@@ -1,4 +1,4 @@
-#include "sprites.h"
+#include "sprite.h"
 #include "sprite_set.h"
 
 #include <iostream>

@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "sprite_set.h"
+#include "sprites.h"
 
 class Species {
 public:

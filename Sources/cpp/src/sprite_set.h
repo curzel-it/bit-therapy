@@ -5,7 +5,7 @@
 #include <map>
 #include <string>
 #include <vector>
-#include "sprites.h"
+#include "sprite.h"
 
 struct SpriteSet {
 private:

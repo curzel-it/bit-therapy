@@ -1,5 +1,5 @@
 #include "species.h"
-#include "sprite_set.h"
+#include "sprites.h"
 
 Species::Species(
     std::string id,

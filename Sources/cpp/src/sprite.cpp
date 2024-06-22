@@ -1,4 +1,4 @@
-#include "sprites.h"
+#include "sprite.h"
 #include "timed_content_provider.h"
 
 #include <chrono>

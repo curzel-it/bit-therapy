@@ -1,4 +1,4 @@
-#include "sprites.h"
+#include "sprite.h"
 
 #include <chrono>
 #include <gtest/gtest.h>

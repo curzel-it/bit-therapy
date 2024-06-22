@@ -6,7 +6,7 @@
 #include <string>
 
 #include "file_utils.h"
-#include "sprites.h"
+#include "sprite.h"
 #include "sprite_set.h"
 #include "sprite_set_builder.h"
 #include "sprites_repository.h"

@@ -11,8 +11,7 @@
 #include "geometry.h"
 #include "entity.h"
 #include "file_utils.h"
-#include "sprite_set_builder.h"
-#include "sprite_set_builder.h"
+#include "sprites.h"
 
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
