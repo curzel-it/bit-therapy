@@ -95,6 +95,9 @@
         "qpainter": "cpp",
         "qlabel": "cpp",
         "thread": "cpp",
-        "qwidget": "cpp"
-    }
+        "qwidget": "cpp",
+        "forward_list": "cpp",
+        "valarray": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

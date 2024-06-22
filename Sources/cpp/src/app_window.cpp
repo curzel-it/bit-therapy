@@ -2,7 +2,7 @@
 #include "geometry.h"
 #include "file_utils.h"
 #include "sprite_set_builder.h"
-#include "sprite_set_builder_impl.h"
+#include "sprite_set_builder.h"
 
 #include <QWidget>
 #include <QLabel>
@@ -21,8 +21,7 @@ void AppWindow::buildUi() {
     
     auto paths = listFiles("/Users/curzel/dev/bit-therapy/PetsAssets", ".png");
     
-    SpriteSetBuilderImpl builderImpl = SpriteSetBuilderImpl({});
-    SpriteSetBuilder& builder = builderImpl;
+    SpriteSetBuilder builder({});
     auto spriteSets = builder.spriteSets(paths);
 
     QVBoxLayout *layout = new QVBoxLayout();

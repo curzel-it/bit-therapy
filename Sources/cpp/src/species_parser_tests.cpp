@@ -1,21 +1,24 @@
-#include "species_parser_impl.h"
-#include <gtest/gtest.h>
+#include "species_parser.h"
 
-TEST(SpeciesParserImplTests, ReturnsNullWithEmptyString) {
-    SpeciesParserImpl parser;
+#include <gtest/gtest.h>
+#include <string>
+#include <vector>
+
+TEST(SpeciesParserTests, ReturnsNullWithEmptyString) {
+    SpeciesParser parser;
     std::optional<Species> result = parser.parse("");
     EXPECT_FALSE(result.has_value()); 
 }
 
-TEST(SpeciesParserImplTests, ReturnsNullWithMalformedJson) {
-    SpeciesParserImpl parser;
+TEST(SpeciesParserTests, ReturnsNullWithMalformedJson) {
+    SpeciesParser parser;
     std::string malformedJson = "{id:\"Tiger\", \"speed\":35.5, \"scale\":1.2";
     std::optional<Species> result = parser.parse(malformedJson);
     EXPECT_FALSE(result.has_value()); 
 }
 
-TEST(SpeciesParserImplTests, CanParseSpeciesFromString) {
-    SpeciesParserImpl parser;
+TEST(SpeciesParserTests, CanParseSpeciesFromString) {
+    SpeciesParser parser;
     std::string correctJson = "{\"id\":\"Tiger\", \"speed\":35.5, \"scale\":1.2}";
     std::optional<Species> result = parser.parse(correctJson);
     ASSERT_TRUE(result.has_value());
@@ -24,8 +27,8 @@ TEST(SpeciesParserImplTests, CanParseSpeciesFromString) {
     EXPECT_DOUBLE_EQ(result->scale, 1.2);
 }
 
-TEST(SpeciesParserImplTests, CanParseSpeciesFromFilePathWithoutScale) {
-    SpeciesParserImpl parser;
+TEST(SpeciesParserTests, CanParseSpeciesFromFilePathWithoutScale) {
+    SpeciesParser parser;
     auto path = "/Users/curzel/dev/bit-therapy/Species/panda.json";
     auto result = parser.parseFromFile(path);
 
@@ -35,8 +38,8 @@ TEST(SpeciesParserImplTests, CanParseSpeciesFromFilePathWithoutScale) {
     EXPECT_DOUBLE_EQ(result->scale, 1.0);
 }
 
-TEST(SpeciesParserImplTests, CanParseSpeciesFromFilePathWithScale) {
-    SpeciesParserImpl parser;
+TEST(SpeciesParserTests, CanParseSpeciesFromFilePathWithScale) {
+    SpeciesParser parser;
     auto path = "/Users/curzel/dev/bit-therapy/Species/cayman718.json";
     auto result = parser.parseFromFile(path);
 
@@ -44,4 +47,19 @@ TEST(SpeciesParserImplTests, CanParseSpeciesFromFilePathWithScale) {
     EXPECT_EQ(result->id, "cayman718");
     EXPECT_DOUBLE_EQ(result->speed, 1.7);
     EXPECT_DOUBLE_EQ(result->scale, 1.5);
+}
+
+TEST(SpeciesParserTests, CanParseMultipleSpeciesFromFilePaths) {
+    SpeciesParser parser;
+    std::vector<std::string> paths({
+        "/Users/curzel/dev/bit-therapy/Species/ape.json",
+        "/Users/curzel/dev/bit-therapy/Species/cayman718.json",
+        "/Users/curzel/dev/bit-therapy/Species/panda.json"
+    });
+    auto results = parser.parseFromFiles(paths);
+
+    EXPECT_EQ(results.size(), 3);
+    EXPECT_EQ(results[0].id, "ape");
+    EXPECT_EQ(results[1].id, "cayman718");
+    EXPECT_EQ(results[2].id, "panda");
 }

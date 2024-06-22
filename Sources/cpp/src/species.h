@@ -3,16 +3,26 @@
 
 #include <string>
 
+#include "sprite_set.h"
+
 class Species {
 public:
     std::string id;
     double speed;
     double scale;
+    SpriteSet spriteSet;
 
     Species(
         std::string id,
         double speed,
         double scale
+    );
+
+    Species(
+        std::string id,
+        double speed,
+        double scale,
+        SpriteSet spriteSet
     );
 };
 

@@ -4,6 +4,7 @@
 #include <chrono>
 #include <format>
 #include <mutex>
+#include <string>
 #include <vector>
 
 #include "entity.h"

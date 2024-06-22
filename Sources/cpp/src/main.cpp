@@ -12,7 +12,7 @@
 #include "entity.h"
 #include "file_utils.h"
 #include "sprite_set_builder.h"
-#include "sprite_set_builder_impl.h"
+#include "sprite_set_builder.h"
 
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
@@ -23,10 +23,10 @@ std::thread startGameLoop(Game * game);
 int main(int argc, char *argv[]) {
     std::cout << "Starting..." << std::endl;
 
-    SpriteSetBuilderImpl builderImpl = SpriteSetBuilderImpl({});    
+    SpriteSetBuilder builder = SpriteSetBuilder({});    
 
     Game game(GAME_FPS);
-    setupGame(&game, builderImpl);    
+    setupGame(&game, builder);    
     auto gameLoop = startGameLoop(&game);
     // gameLoop.join();
 

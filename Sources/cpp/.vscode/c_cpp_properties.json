@@ -5,7 +5,10 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/opt/homebrew/opt/googletest",
-                "/opt/homebrew/Cellar/qt/6.7.0_1/lib/**"
+                "/opt/homebrew/opt/nlohmann-json",
+                "/opt/homebrew/Cellar/qt/6.7.0_1/lib/**",
+                "/opt/homebrew/Cellar/nlohmann-json/3.11.3/include",
+                "/opt/homebrew/Cellar/googletest/1.14.0/include"
             ],
             "defines": [],
             "macFrameworkPath": [

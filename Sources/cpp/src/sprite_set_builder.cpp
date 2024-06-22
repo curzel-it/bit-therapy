@@ -1,6 +1,6 @@
 #include "file_utils.h"
 #include "sprite_set.h"
-#include "sprite_set_builder_impl.h"
+#include "sprite_set_builder.h"
 #include "string_utils.h"
 #include "vector_utils.h"
 
@@ -14,7 +14,7 @@
 #include <execution>
 #include <algorithm>
 
-std::map<std::string, SpriteSet> SpriteSetBuilderImpl::spriteSets(const std::vector<std::string>& paths) const {
+std::map<std::string, SpriteSet> SpriteSetBuilder::spriteSets(const std::vector<std::string>& paths) const {
     auto frames = spriteFramesFromPaths(paths);
     auto framesBySpecies = aggregateFramesBySpecies(frames);
 
@@ -41,11 +41,11 @@ void sortSpriteFrames(std::vector<SpriteFrame>& frames) {
     );
 }
 
-std::map<std::string, std::vector<SpriteFrame>> SpriteSetBuilderImpl::aggregateFramesBySpecies(const std::vector<SpriteFrame>& frames) const {
+std::map<std::string, std::vector<SpriteFrame>> SpriteSetBuilder::aggregateFramesBySpecies(const std::vector<SpriteFrame>& frames) const {
     return aggregate<SpriteFrame, std::string>(frames, [](const SpriteFrame& frame) { return frame.species; });
 }
 
-std::optional<SpriteSet> SpriteSetBuilderImpl::spriteSet(const std::vector<SpriteFrame>& frames) const {
+std::optional<SpriteSet> SpriteSetBuilder::spriteSet(const std::vector<SpriteFrame>& frames) const {
     auto framesByAnimation = aggregateMap<SpriteFrame, std::string, std::string>(
         frames, 
         [](const SpriteFrame& frame) { return frame.animation; }, 
@@ -60,7 +60,7 @@ std::optional<SpriteSet> SpriteSetBuilderImpl::spriteSet(const std::vector<Sprit
     );
 }
 
-std::vector<SpriteFrame> SpriteSetBuilderImpl::spriteFramesFromPaths(const std::vector<std::string>& paths) const {
+std::vector<SpriteFrame> SpriteSetBuilder::spriteFramesFromPaths(const std::vector<std::string>& paths) const {
     std::vector<SpriteFrame> frames;
     frames.reserve(paths.size());
 
@@ -74,7 +74,7 @@ std::vector<SpriteFrame> SpriteSetBuilderImpl::spriteFramesFromPaths(const std::
     return frames;
 }
 
-std::optional<SpriteFrame> SpriteSetBuilderImpl::spriteFrameFromPath(const std::string& path) const {
+std::optional<SpriteFrame> SpriteSetBuilder::spriteFrameFromPath(const std::string& path) const {
     std::regex re("^(.+?)_([a-zA-Z]+)-([0-9]+)$");
     std::smatch matches;
 

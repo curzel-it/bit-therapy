@@ -4,6 +4,7 @@
 #include <functional>
 #include <map>
 #include <numeric>
+#include <optional>
 #include <set>
 #include <vector>
 
@@ -21,6 +22,18 @@ std::vector<K> map(const std::vector<T>& items, std::function<K(const T&)> mappe
     std::vector<K> results;
     for (const auto& item : items) {
         results.push_back(mapper(item));
+    }
+    return results;
+}
+
+template <typename T, typename K>
+std::vector<K> compactMap(const std::vector<T>& items, std::function<std::optional<K>(const T&)> mapper) {
+    std::vector<K> results;
+    for (const auto& item : items) {
+        std::optional<K> value = mapper(item);
+        if (value.has_value()) {
+            results.push_back(value.value());
+        }        
     }
     return results;
 }

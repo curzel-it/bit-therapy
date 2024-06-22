@@ -17,7 +17,7 @@
 #include "geometry.h"
 #include "file_utils.h"
 #include "sprite_set_builder.h"
-#include "sprite_set_builder_impl.h"
+#include "sprite_set_builder.h"
 
 GameWindow::GameWindow(QWidget *parent): QWidget(parent) {}
 

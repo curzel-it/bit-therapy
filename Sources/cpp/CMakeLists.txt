@@ -33,7 +33,7 @@ list(FILTER TEST_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
 # Test executable
 add_executable(Test ${TEST_SOURCES})
-target_link_libraries(Test GTest::GTest GTest::Main Qt6::Widgets)  # Also link tests against Qt Widgets
+target_link_libraries(Test GTest::GTest GTest::Main Qt6::Widgets)
 
 # Test discovery
 gtest_discover_tests(Test)

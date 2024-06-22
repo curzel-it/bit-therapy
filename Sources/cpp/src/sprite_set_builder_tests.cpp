@@ -1,5 +1,5 @@
 #include "sprite_set.h"
-#include "sprite_set_builder_impl.h"
+#include "sprite_set_builder.h"
 
 #include <gtest/gtest.h>
 #include <map>
@@ -8,7 +8,7 @@
 #include <vector>
 
 TEST(SpriteSetBuilderTests, SpriteFrameFromPath) {
-    SpriteSetBuilderImpl builder({});
+    SpriteSetBuilder builder({});
 
     EXPECT_EQ(
         builder.spriteFrameFromPath("/ape_eat-0.png").value(), 
@@ -29,7 +29,7 @@ TEST(SpriteSetBuilderTests, SpriteFrameFromPath) {
 };
 
 TEST(SpriteSetBuilderTests, SpriteFramesFromPaths) {
-    SpriteSetBuilderImpl builder({});
+    SpriteSetBuilder builder({});
 
     std::vector<std::string> paths({
         "/ape_chef_eat-1.png",
@@ -43,7 +43,7 @@ TEST(SpriteSetBuilderTests, SpriteFramesFromPaths) {
 };
 
 TEST(SpriteSetBuilderTests, CanAggregateFramesBySpecies) {
-    SpriteSetBuilderImpl builder({});
+    SpriteSetBuilder builder({});
 
     const std::vector<SpriteFrame> frames({
         SpriteFrame({"a_b-0", "a", "b", 0}),
@@ -78,7 +78,7 @@ TEST(SpriteSetBuilderTests, CanAggregateFramesBySpecies) {
 };
 
 TEST(SpriteSetBuilderTests, CanGenerateSpriteSetFromFrames) {
-    SpriteSetBuilderImpl builder({});
+    SpriteSetBuilder builder({});
 
     const std::vector<SpriteFrame> frames({
         SpriteFrame({"a_movement-0", "a", SPRITE_NAME_MOVEMENT, 0}),
@@ -114,7 +114,7 @@ TEST(SpriteSetBuilderTests, CanGenerateSpriteSetFromFrames) {
 };
 
 TEST(SpriteSetBuilderTests, CanAssignWalkToMovement) {
-    SpriteSetBuilderImpl builder({});
+    SpriteSetBuilder builder({});
 
     EXPECT_EQ(
         builder.spriteFrameFromPath("./ape_movement-9.png"),
