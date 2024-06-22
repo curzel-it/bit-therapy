@@ -9,13 +9,7 @@
 #include "species.h"
 #include "vector_utils.h"
 
-std::vector<Species> SpeciesParser::parseFromFiles(const std::vector<std::string> paths) {
-    return compactMap<std::string, Species>(paths, [this](const std::string path) {
-        return parseFromFile(path);
-    });
-}
-
-std::optional<Species> SpeciesParser::parseFromFile(const std::string& filePath) {
+std::optional<Species> SpeciesParser::parseFromFile(const std::string& filePath) const {
     std::ifstream file(filePath);
     if (!file.is_open()) {
         return std::nullopt;
@@ -25,7 +19,7 @@ std::optional<Species> SpeciesParser::parseFromFile(const std::string& filePath)
     return parse(buffer.str()); 
 }
 
-std::optional<Species> SpeciesParser::parse(const std::string& jsonString) {
+std::optional<Species> SpeciesParser::parse(const std::string& jsonString) const {
     try {
         auto json = nlohmann::json::parse(jsonString);
         Species species(
@@ -35,7 +29,6 @@ std::optional<Species> SpeciesParser::parse(const std::string& jsonString) {
         );
         return species;
     } catch (const std::exception& e) {
-        std::cerr << "Failed to parse species: " << e.what() << std::endl;
         return std::nullopt;
     }
 }

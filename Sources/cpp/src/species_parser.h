@@ -9,9 +9,8 @@
 
 class SpeciesParser {
 public:
-    std::vector<Species> parseFromFiles(const std::vector<std::string> paths);
-    std::optional<Species> parseFromFile(const std::string& filePath);
-    std::optional<Species> parse(const std::string& jsonString);
+    std::optional<Species> parseFromFile(const std::string& filePath) const;
+    std::optional<Species> parse(const std::string& jsonString) const;
 };
 
 #endif

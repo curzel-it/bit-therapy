@@ -6,18 +6,19 @@
                 "${workspaceFolder}/**",
                 "/opt/homebrew/opt/googletest",
                 "/opt/homebrew/opt/nlohmann-json",
-                "/opt/homebrew/Cellar/qt/6.7.0_1/lib/**",
-                "/opt/homebrew/Cellar/nlohmann-json/3.11.3/include",
-                "/opt/homebrew/Cellar/googletest/1.14.0/include"
+                "/opt/homebrew/Cellar/qt/6.7.0_1/**",
+                "/opt/homebrew/Cellar/nlohmann-json/3.11.3/include"
             ],
             "defines": [],
             "macFrameworkPath": [
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX14.5.sdk/System/Library/Frameworks"
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX14.5.sdk/System/Library/Frameworks",
+                "/opt/homebrew/Cellar/qt/6.7.0_1/lib/"
             ],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c23",
             "cppStandard": "c++23",
-            "intelliSenseMode": "macos-clang-arm64"
+            "intelliSenseMode": "macos-clang-arm64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

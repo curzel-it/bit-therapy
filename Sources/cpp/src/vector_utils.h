@@ -80,6 +80,22 @@ std::map<K, std::vector<V>> aggregateMap(
 }
 
 template <typename T, typename K>
+std::map<K, T> makeLookup(
+    const std::vector<T>& items, 
+    std::function<K(const T&)> keyer
+) {
+    auto merger = [keyer](std::map<K, T> accum, const T& item) -> std::map<K, T> {
+        accum.emplace(keyer(item), item);
+        return accum;
+    };
+    return std::reduce(
+        items.begin(), items.end(),
+        std::map<K, T>{},
+        merger
+    );
+}
+
+template <typename T, typename K>
 void sort(std::vector<T>& items, std::function<K(const T&)> mapper) {
     std::sort(
         items.begin(), items.end(), 
