@@ -13,6 +13,8 @@
 #include "file_utils.h"
 #include "sprites.h"
 
+#include "sprites/asdf.h"
+
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
 const std::string SPECIES_PATH = "/Users/curzel/dev/bit-therapy/Species";
@@ -23,6 +25,7 @@ std::thread startGameLoop(Game * game);
 
 int main(int argc, char *argv[]) {
     std::cout << "Starting..." << std::endl;
+    hello();
 
     SpriteSetBuilder builder = SpriteSetBuilder({});    
 

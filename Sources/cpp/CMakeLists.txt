@@ -9,6 +9,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 file(GLOB MAIN_SOURCES "src/*.cpp")
 list(FILTER MAIN_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
 
+file(GLOB SPRITES_SOURCES "src/sprites/*.cpp")
+list(FILTER SPRITES_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
+
 # Qt
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
@@ -19,7 +22,7 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(nlohmann_json 3.2.0 REQUIRED)
 
 # App executable
-add_executable(Main ${MAIN_SOURCES})
+add_executable(Main ${MAIN_SOURCES} ${SPRITES_SOURCES})
 target_link_libraries(Main PRIVATE nlohmann_json::nlohmann_json Qt6::Widgets)
 
 # Google Test
