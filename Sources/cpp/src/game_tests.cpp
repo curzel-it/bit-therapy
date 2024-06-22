@@ -1,7 +1,7 @@
 #include "game.h"
 #include "geometry.h"
 #include "species.h"
-#include "sprite_set.h"
+#include "sprites.h"
 
 #include <chrono>
 #include <gtest/gtest.h>
