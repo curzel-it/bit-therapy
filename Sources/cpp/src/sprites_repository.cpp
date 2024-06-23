@@ -5,12 +5,12 @@
 #include <ranges>
 #include <string>
 
-#include "file_utils.h"
+#include "utils/utils.h"
 #include "sprite.h"
 #include "sprite_set.h"
 #include "sprite_set_builder.h"
 #include "sprites_repository.h"
-#include "vector_utils.h"
+#include "utils/utils.h"
 
 SpritesRepository::SpritesRepository(const SpriteSetBuilder& builder) : 
     builder(builder),

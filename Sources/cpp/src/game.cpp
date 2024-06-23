@@ -5,7 +5,7 @@
 #include <sstream>
 
 #include "geometry.h"
-#include "string_utils.h"
+#include "utils/utils.h"
 
 RenderedItem::RenderedItem(std::string spritePath, Rect frame) : spritePath(spritePath), frame(frame) {}
 

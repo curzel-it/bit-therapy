@@ -84,6 +84,7 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "numeric": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "qlabel": "cpp"
     }
 }

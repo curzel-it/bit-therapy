@@ -7,9 +7,9 @@
 #include <vector>
 
 #include "geometry.h"
-#include "file_utils.h"
 #include "linear_movement.h"
 #include "sprites.h"
+#include "utils/utils.h"
 
 Entity::Entity(
     double fps, 

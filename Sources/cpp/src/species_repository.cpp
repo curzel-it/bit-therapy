@@ -2,10 +2,9 @@
 #include <optional>
 #include <ranges>
 
-#include "file_utils.h"
+#include "utils/utils.h"
 #include "species_repository.h"
 #include "species_parser.h"
-#include "vector_utils.h"
 
 SpeciesRepository::SpeciesRepository(const SpeciesParser& parser) : 
     parser(parser),
