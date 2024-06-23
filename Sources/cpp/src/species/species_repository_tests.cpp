@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 
-#include "config_tests.h"
-#include "utils/utils.h"
+#include "../config_tests.h"
+#include "../utils/utils.h"
 #include "species_repository.h"
 #include "species_parser.h"
 

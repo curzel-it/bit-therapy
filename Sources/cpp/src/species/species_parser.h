@@ -4,7 +4,7 @@
 #include <optional>
 #include <string>
 #include "nlohmann/json.hpp"
-#include "species.h"
+#include "species_model.h"
 #include "species_parser.h"
 
 class SpeciesParser {

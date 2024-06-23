@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "geometry.h"
-#include "species.h"
+#include "species/species.h"
 #include "sprites/sprites.h"
 
 class EntityCapability;

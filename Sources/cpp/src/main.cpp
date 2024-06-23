@@ -10,8 +10,10 @@
 #include "game_window.h"
 #include "geometry.h"
 #include "entity.h"
-#include "utils/utils.h"
+
+#include "species/species.h"
 #include "sprites/sprites.h"
+#include "utils/utils.h"
 
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;

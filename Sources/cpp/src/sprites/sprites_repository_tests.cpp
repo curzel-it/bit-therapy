@@ -5,9 +5,9 @@
 #include <string>
 #include <vector>
 
-#include "config_tests.h"
-#include "species.h"
-#include "species_repository.h"
+#include "../config_tests.h"
+#include "../species/species.h"
+#include "../species/species_repository.h"
 #include "sprites_repository.h"
 #include "sprite_set_builder.h"
 

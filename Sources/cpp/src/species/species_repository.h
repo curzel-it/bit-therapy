@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-#include "species.h"
+#include "species_model.h"
 #include "species_parser.h"
 
 class SpeciesRepository {

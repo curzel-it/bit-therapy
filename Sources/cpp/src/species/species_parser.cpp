@@ -6,8 +6,8 @@
 #include <sstream>
 #include <vector>
 
-#include "species.h"
-#include "utils/utils.h"
+#include "species_model.h"
+#include "../utils/utils.h"
 
 std::optional<Species> SpeciesParser::parseFromFile(const std::string& filePath) const {
     std::ifstream file(filePath);
