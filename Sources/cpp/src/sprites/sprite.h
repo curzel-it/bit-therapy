@@ -1,5 +1,4 @@
-#ifndef SPRITE_H
-#define SPRITE_H
+#pragma once
 
 #include <chrono>
 #include <cmath>
@@ -17,5 +16,3 @@ public:
     const uint32_t numberOfFrames() const;
     void update(std::chrono::milliseconds timeSinceLastUpdate);
 };
-
-#endif

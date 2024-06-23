@@ -1,5 +1,4 @@
-#ifndef SPRITE_SET_BUILDER_H
-#define SPRITE_SET_BUILDER_H
+#pragma once
 
 #include "sprite_set.h"
 
@@ -27,5 +26,3 @@ public:
     std::vector<SpriteFrame> spriteFramesFromPaths(const std::vector<std::string>& paths) const;
     std::optional<SpriteFrame> spriteFrameFromPath(const std::string& path) const;
 };
-
-#endif

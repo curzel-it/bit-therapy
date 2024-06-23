@@ -1,5 +1,4 @@
-#ifndef SPRITES_SET_H
-#define SPRITES_SET_H
+#pragma once
 
 #include <cmath>
 #include <map>
@@ -35,5 +34,3 @@ public:
 const std::string SPRITE_NAME_MOVEMENT = "movement";
 const std::string SPRITE_NAME_FALL = "fall";
 const std::string SPRITE_NAME_FRONT = "front";
-
-#endif

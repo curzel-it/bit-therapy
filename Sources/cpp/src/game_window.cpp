@@ -16,7 +16,7 @@
 #include "game_window.h"
 #include "geometry.h"
 #include "utils/utils.h"
-#include "sprites.h"
+#include "sprites/sprites.h"
 
 GameWindow::GameWindow(QWidget *parent): QWidget(parent) {}
 

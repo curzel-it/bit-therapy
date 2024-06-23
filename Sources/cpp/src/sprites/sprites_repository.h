@@ -1,5 +1,4 @@
-#ifndef SPRITES_REPOSITORY_H
-#define SPRITES_REPOSITORY_H
+#pragma once
 
 #include <map>
 #include <optional>
@@ -21,5 +20,3 @@ public:
     
     std::optional<const SpriteSet*> sprites(std::string speciesId) const;
 };
-
-#endif

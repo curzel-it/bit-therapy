@@ -8,7 +8,7 @@
 
 #include "geometry.h"
 #include "linear_movement.h"
-#include "sprites.h"
+#include "sprites/sprites.h"
 #include "utils/utils.h"
 
 Entity::Entity(

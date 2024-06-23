@@ -1,5 +1,4 @@
-#ifndef timedContentProvider_H
-#define timedContentProvider_H
+#pragma once
 
 #include <chrono>
 #include <vector>
@@ -23,5 +22,3 @@ public:
     void update(std::chrono::milliseconds timeSinceLastUpdate);
     const uint32_t numberOfFrames() const;
 };
-
-#endif

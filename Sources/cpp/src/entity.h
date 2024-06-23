@@ -8,7 +8,7 @@
 
 #include "geometry.h"
 #include "species.h"
-#include "sprites.h"
+#include "sprites/sprites.h"
 
 class EntityCapability;
 

@@ -1,7 +1,6 @@
-#include "utils/utils.h"
+#include "../utils/utils.h"
 #include "sprite_set.h"
 #include "sprite_set_builder.h"
-#include "utils/utils.h"
 
 #include <map>
 #include <optional>

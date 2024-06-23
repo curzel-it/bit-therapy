@@ -11,8 +11,7 @@
 #include "geometry.h"
 #include "entity.h"
 #include "utils/utils.h"
-#include "sprites.h"
-#include "sprites/asdf.h"
+#include "sprites/sprites.h"
 
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
@@ -24,7 +23,6 @@ std::thread startGameLoop(Game * game);
 
 int main(int argc, char *argv[]) {
     std::cout << "Starting..." << std::endl;
-    hello();
 
     SpriteSetBuilder builder = SpriteSetBuilder({});    
 

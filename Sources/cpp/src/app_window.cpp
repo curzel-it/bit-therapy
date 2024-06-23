@@ -1,7 +1,7 @@
 #include "app_window.h"
 #include "geometry.h"
 #include "utils/utils.h"
-#include "sprites.h"
+#include "sprites/sprites.h"
 
 #include <QWidget>
 #include <QLabel>

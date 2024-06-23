@@ -29,7 +29,7 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(nlohmann_json 3.2.0 REQUIRED)
 
 # App executable
-add_executable(Main ${MAIN_SOURCES} ${SPRITES_SOURCES} ${UTILS_SOURCES})
+add_executable(Main ${MAIN_SOURCES} ${UTILS_SOURCES} ${SPRITES_SOURCES})
 target_link_libraries(Main PRIVATE nlohmann_json::nlohmann_json Qt6::Widgets)
 
 # Google Test
@@ -41,12 +41,12 @@ include(GoogleTest)
 file(GLOB TEST_SOURCES "src/*.cpp")
 list(FILTER TEST_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
-file(GLOB TEST_SPRITES_SOURCES "src/species/*.cpp")
+file(GLOB TEST_SPRITES_SOURCES "src/sprites/*.cpp")
 
 file(GLOB TEST_UTILS_SOURCES "src/utils/*.cpp")
 
 # Test executable
-add_executable(Test ${TEST_SOURCES}  ${TEST_SPRITES_SOURCES} ${TEST_UTILS_SOURCES})
+add_executable(Test ${TEST_SOURCES} ${TEST_SPRITES_SOURCES} ${TEST_UTILS_SOURCES})
 target_link_libraries(Test GTest::GTest GTest::Main Qt6::Widgets)
 
 # Test discovery
