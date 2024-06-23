@@ -86,6 +86,7 @@
         "numeric": "cpp",
         "ranges": "cpp",
         "qlabel": "cpp",
-        "qapplication": "cpp"
+        "qapplication": "cpp",
+        "*.tcc": "cpp"
     }
 }

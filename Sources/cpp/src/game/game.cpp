@@ -7,15 +7,57 @@
 #include "geometry.h"
 #include "../utils/utils.h"
 
-RenderedItem::RenderedItem(std::string spritePath, Rect frame) : spritePath(spritePath), frame(frame) {}
+RenderedItem::RenderedItem(std::string spritePath, Rect frame) : 
+    spritePath(spritePath), 
+    frame(frame) 
+{}
 
-Game::Game(double fps) : fps(fps), entities(std::vector<Entity>({})) {}
+Game::Game(
+    const SpritesRepository* spritesRepo,
+    const SpeciesRepository* speciesRepo,
+    double gameFps, 
+    double animationFps, 
+    double baseEntitySize
+) : 
+    spritesRepo(spritesRepo), 
+    speciesRepo(speciesRepo), 
+    gameFps(gameFps), 
+    animationFps(animationFps), 
+    baseEntitySize(baseEntitySize), 
+    entities(std::vector<Entity>({})) 
+{}
 
 void Game::update(std::chrono::milliseconds timeSinceLastUpdate) {
     std::lock_guard<std::mutex> lock(mtx);
     for (auto& entity : entities) {
         entity.update(timeSinceLastUpdate);
     }
+}
+
+std::vector<Entity *> Game::addEntities(std::vector<std::string> species) {
+    return compactMap<std::string, Entity*>(species, [this](const std::string aSpecies) {
+        return addEntity(aSpecies);
+    });
+}
+
+std::optional<Entity *> Game::addEntity(std::string speciesId) {
+    auto speciesOpt = speciesRepo->species(speciesId);
+    auto spritesOpt = spritesRepo->sprites(speciesId);
+
+    if (!speciesOpt.has_value() || !spritesOpt.has_value()) {
+        std::cerr << "Species `" << speciesId << "` not found!" << std::endl;
+        return std::nullopt;
+    }
+    auto species = speciesOpt.value();
+    auto sprites = spritesOpt.value();  
+    auto frame = Rect(
+        0.0, 0.0, 
+        baseEntitySize * species->scale, 
+        baseEntitySize * species->scale
+    );
+
+    Entity entity(animationFps, 50.0, 1.0, species, sprites, frame);
+    return add(entity);
 }
 
 Entity * Game::add(Entity entity) {

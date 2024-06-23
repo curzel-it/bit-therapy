@@ -30,7 +30,7 @@ void GameWindow::setup(Game *game, Rect frame) {
 void GameWindow::setupTimer() {
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &GameWindow::updateUi);
-    timer->start(2 * 1000.0 / game->fps);
+    timer->start(50);
 }
 
 void GameWindow::buildUi() {
@@ -48,7 +48,6 @@ void GameWindow::buildUi() {
     setLayout(layout);
 
     setGeometry(frame.x, frame.y, frame.w, frame.h);
-    // setWindowFlags(Qt::FramelessWindowHint);
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     setAttribute(Qt::WA_TranslucentBackground);
     setWindowTitle("Game Window");

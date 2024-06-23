@@ -18,6 +18,7 @@ namespace po = boost::program_options;
 
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
+const double BASE_ENTITY_SIZE = 50.0;
 const std::string SPECIES_PATH = "/Users/curzel/dev/bit-therapy/Species";
 const std::string ASSETS_PATH = "/Users/curzel/dev/bit-therapy/PetsAssets";
 
@@ -26,38 +27,23 @@ SpritesRepository spritesRepo(builder);
 SpeciesParser parser;
 SpeciesRepository speciesRepo(parser);
 
-void setupGame(Game * game, std::string selectedSpecies);
-std::thread startGameLoop(Game * game);
 po::variables_map parseArgs(int argc, char *argv[]);
+std::vector<Screen> screensMatching(po::variables_map args);
+std::vector<std::string> selectedSpecies(po::variables_map args);
 
 int main(int argc, char *argv[]) {
     auto args = parseArgs(argc, argv);
-    std::string selectedSpecies = "ape";
     
-    if (args.count("species")) {
-        selectedSpecies = args["species"].as<std::string>();
-    } else {
-        std::cout << "No species specified.\n";
-    }
-
-    std::cout << "Starting..." << std::endl;
     QApplication app(argc, argv);    
 
-    auto screens = listAvailableScreens();
-    std::cout << "Found " << screens.size() << " monitors" << std::endl;
-    for (const Screen& screen : screens) {
-        std::cout << "  Found monitor: " << screen.description() << std::endl;
-    }
-    if (screens.size() == 0) {
-        std::cerr << "No monitor found!" << std::endl;
-        std::exit(EXIT_FAILURE);
-    }
+    auto screens = screensMatching(args);
+    auto species = selectedSpecies(args);
 
     spritesRepo.setup(ASSETS_PATH);
     speciesRepo.setup(SPECIES_PATH);
     
-    Game game(GAME_FPS);
-    setupGame(&game, selectedSpecies);    
+    Game game(&spritesRepo, &speciesRepo, GAME_FPS, ANIMATIONS_FPS, BASE_ENTITY_SIZE);
+    game.addEntities(species);
     auto gameLoop = startGameLoop(&game);
     // gameLoop.join();
 
@@ -74,8 +60,9 @@ int main(int argc, char *argv[]) {
 po::variables_map parseArgs(int argc, char *argv[]) {
     po::options_description desc("Allowed options");
     desc.add_options()
-        ("help,h", "produce help message")
-        ("species", po::value<std::string>(), "enter species name");
+        ("help,h", "Shows this help message")
+        ("species", po::value<std::vector<std::string>>()->multitoken(), "Species of pets to spawn")
+        ("screens", po::value<std::vector<std::string>>()->multitoken(), "Monitors the app will display on");
 
     po::variables_map vm;
     po::store(po::parse_command_line(argc, argv, desc), vm);
@@ -87,35 +74,36 @@ po::variables_map parseArgs(int argc, char *argv[]) {
     return vm;
 }
 
-void setupGame(Game * game, std::string selectedSpecies) {
-    auto frame = Rect(0.0, 0.0, 50.0, 50.0);
-    auto species = speciesRepo.species(selectedSpecies);
-    auto sprites = spritesRepo.sprites(selectedSpecies);
+std::vector<Screen> screensMatching(po::variables_map args) {
+    if (args.count("screens")) {
+        auto names = args["screens"].as<std::vector<std::string>>();
+        auto screens = screensMatching(names);
 
-    if (!species.has_value() || !sprites.has_value()) {
-        std::cerr << "Species `" << selectedSpecies << "` not found!" << std::endl;
+        if (screens.size() == 0) {
+            std::cerr << "No matching screens found! The following one(s) should be available:" << std::endl;
+
+            for (const Screen& screen : listAvailableScreens()) {
+                std::cerr << "  - " << screen.description() << std::endl;
+            }
+            std::exit(EXIT_FAILURE);
+        }
+        return screens;
+    } else {
+        auto screens = listAvailableScreens();
+        if (screens.size() == 0) {
+            std::cerr << "No screen found!" << std::endl;
+            std::exit(EXIT_FAILURE);
+        }
+        return screens;
+    }
+}
+
+std::vector<std::string> selectedSpecies(po::variables_map args) {
+    if (args.count("species")) {
+        return args["species"].as<std::vector<std::string>>();
+    } else {
+        std::cerr << "No species selected, plase run with `--species ape` or something" << std::endl;
         std::exit(EXIT_FAILURE);
     }
-
-    Entity ape(ANIMATIONS_FPS, 50.0, 1.0, species.value(), sprites.value(), frame);
-    game->add(ape);
 }
 
-std::thread startGameLoop(Game * game) {
-    return std::thread([game]() {
-        bool gameIsRunning = true;
-        auto frameDuration = std::chrono::milliseconds(uint32_t(1000 / GAME_FPS));
-        
-        while (gameIsRunning) { 
-            auto frameStart = std::chrono::steady_clock::now();
-            game->update(frameDuration);
-            auto frameEnd = std::chrono::steady_clock::now();
-            auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(frameEnd - frameStart);
-            
-            auto sleepDuration = frameDuration - elapsedTime;
-            if (sleepDuration > std::chrono::milliseconds(0)) {
-                std::this_thread::sleep_for(sleepDuration);
-            }
-        }
-    });
-}
