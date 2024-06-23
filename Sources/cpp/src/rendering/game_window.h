@@ -11,17 +11,18 @@ class GameWindow : public QWidget {
     Q_OBJECT
 
 private:
-    QGraphicsScene *scene;
-    Game *game;
+    QGraphicsScene* scene;
+    Game* game;
     std::string screenName;
     Rect frame;
+    bool debugEnabled;
 
     void setupTimer();
     void buildUi();
 
 public:
     GameWindow(QWidget *parent = nullptr);
-    void setup(Game *game, std::string screenName, Rect frame);
+    void setup(Game *game, bool debugEnabled, std::string screenName, Rect frame);
     void updateUi();
 };
 

@@ -28,14 +28,15 @@ sh build.sh
 ```
 
 ## 🚀 Running
-Well, first follow the building steps, then tou can run the app from the command line, on any number of monitors with any number of pets.
+Well, first follow the building steps, then tou can run the app from the command line, on any number of monitors with any number of pets.<br>
+Run with `--help` for more information.
 
-### `--help`
 ```
 Allowed options:
-  -h [ --help ]   Shows this help message
-  --species arg   Species of pets to spawn (required)
-  --screen arg    Monitors the app will display on
+  -h [ --help ]         Shows this help message
+  --species arg         Species of pets to spawn (required)
+  --screen arg          Monitors the app will display on (part of the name)
+  --debug               Enable debug hud
 ```
 
 ### `--species`

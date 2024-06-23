@@ -32,8 +32,8 @@ std::vector<std::thread> gameThreads;
 po::variables_map parseArgs(int argc, char *argv[]);
 std::vector<Screen> screensMatching(po::variables_map args);
 std::vector<std::string> selectedSpecies(po::variables_map args);
-void startGame(Screen screen, std::vector<std::string> species);
-void startGames(std::vector<Screen> screens, std::vector<std::string> species);
+void startGame(Screen screen, std::vector<std::string> species, bool debugEnabled);
+void startGames(std::vector<Screen> screens, std::vector<std::string> species, bool debugEnabled);
 void joinGameThreads();
 std::thread startGameLoop(Game* game);
 
@@ -46,10 +46,11 @@ int main(int argc, char* argv[]) {
     if (args.count("help")) {
         return EXIT_SUCCESS;
     }
+    auto debugEnabled = args.count("debug") > 0;
     auto screens = screensMatching(args);
     auto species = selectedSpecies(args);
 
-    startGames(screens, species);
+    startGames(screens, species, debugEnabled);
 
     // AppWindow appWindow;
     // appWindow.show();
@@ -64,8 +65,9 @@ po::variables_map parseArgs(int argc, char* argv[]) {
     po::options_description desc("Allowed options");
     desc.add_options()
         ("help,h", "Shows this help message")
-        ("species", po::value<std::vector<std::string>>()->multitoken(), "Species of pets to spawn (exact id)")
-        ("screen", po::value<std::vector<std::string>>()->multitoken(), "Monitors the app will display on (part of the name)");
+        ("species", po::value<std::vector<std::string>>()->multitoken(), "Species of pets to spawn (required)")
+        ("screen", po::value<std::vector<std::string>>()->multitoken(), "Monitors the app will display on (part of the name)")
+        ("debug", "Enable debug hud");
 
     po::variables_map vm;
     po::store(po::parse_command_line(argc, argv, desc), vm);
@@ -85,18 +87,18 @@ void joinGameThreads() {
     }
 }
 
-void startGames(std::vector<Screen> screens, std::vector<std::string> species) {
+void startGames(std::vector<Screen> screens, std::vector<std::string> species, bool debugEnabled) {
     for (const Screen& screen : screens) {
-        startGame(screen, species);
+        startGame(screen, species, debugEnabled);
     }
 }
 
-void startGame(Screen screen, std::vector<std::string> species) {
+void startGame(Screen screen, std::vector<std::string> species, bool debugEnabled) {
     Game* game = new Game(&spritesRepo, &speciesRepo, screen.name, GAME_FPS, ANIMATIONS_FPS, BASE_ENTITY_SIZE);
     game->addEntities(species);
 
     GameWindow* window = new GameWindow();
-    window->setup(game, screen.name, screen.frame);
+    window->setup(game, debugEnabled, screen.name, screen.frame);
     window->show();
 
     auto newThread = startGameLoop(game);

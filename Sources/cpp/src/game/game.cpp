@@ -88,10 +88,12 @@ std::string Game::description() {
     std::lock_guard<std::mutex> lock(mtx);
     std::stringstream ss; 
 
-    ss << entities.size() << " entities:" << std::endl;
+    ss << "Game @" << this << std::endl;
+    ss << "  Running on " << screenName << std::endl;
+    ss << "  Entities (" << entities.size() << "):" << std::endl;
 
     for (const auto& entity : entities) {
-        ss << "  - " << entity.description() << " @ " << &entity << std::endl;
+        ss << "    - " << entity.description() << " @ " << &entity << std::endl;
     }
     return ss.str();
 }

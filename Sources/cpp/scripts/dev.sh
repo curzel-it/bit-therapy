@@ -1,1 +1,1 @@
-cd ../build && cmake .. && make && ./Main --species ape --species betta --screen ben
+cd ../build && cmake .. && make && ./Main --species ape --species betta --screen ben --debug

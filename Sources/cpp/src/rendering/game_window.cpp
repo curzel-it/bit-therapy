@@ -1,3 +1,4 @@
+#include <QGraphicsDropShadowEffect>
 #include <QGraphicsPixmapitem>
 #include <QGraphicsView>
 #include <QImage>
@@ -20,7 +21,8 @@
 
 GameWindow::GameWindow(QWidget *parent): QWidget(parent) {}
 
-void GameWindow::setup(Game *game, std::string screenName, Rect frame) {
+void GameWindow::setup(Game *game, bool debugEnabled, std::string screenName, Rect frame) {
+    this->debugEnabled = debugEnabled;
     this->game = game;
     this->screenName = screenName;
     this->frame = frame;
@@ -57,12 +59,6 @@ void GameWindow::buildUi() {
 void GameWindow::updateUi() {
     scene->clear();
 
-    QString description = QString::fromStdString(game->description());
-    QGraphicsTextItem *gameStateText = scene->addText(description);
-    gameStateText->setDefaultTextColor(Qt::white);
-    gameStateText->setFont(QFont("Courier New", 16, QFont::DemiBold));
-    gameStateText->setPos(frame.x + 50, frame.y + 50);
-
     for (const auto& item : game->render()) {
         auto path = QString::fromStdString(item.spritePath);        
         QPixmap pixmap(path);
@@ -75,5 +71,18 @@ void GameWindow::updateUi() {
         QGraphicsPixmapItem *pixmapItem = new QGraphicsPixmapItem(scaledPixmap);
         pixmapItem->setPos(frame.x + item.frame.x, frame.y + item.frame.h);
         scene->addItem(pixmapItem);
+    }
+
+    if (debugEnabled) {
+        QString description = QString::fromStdString(game->description());
+        QGraphicsTextItem *gameStateText = scene->addText(description);
+        gameStateText->setDefaultTextColor(Qt::green);
+        gameStateText->setFont(QFont("Courier New", 15, QFont::Medium));
+        gameStateText->setPos(frame.x + 10, frame.y + 30);
+
+        QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect();
+        shadowEffect->setBlurRadius(10);
+        shadowEffect->setColor(Qt::black);
+        gameStateText->setGraphicsEffect(shadowEffect);
     }
 }
