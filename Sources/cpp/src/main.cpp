@@ -4,6 +4,7 @@
 #include <iostream>
 #include <memory>
 #include <thread>
+#include <boost/program_options.hpp>
 
 #include "app_window.h"
 #include "game/game.h"
@@ -18,16 +19,28 @@ const double ANIMATIONS_FPS = 10.0;
 const std::string SPECIES_PATH = "/Users/curzel/dev/bit-therapy/Species";
 const std::string ASSETS_PATH = "/Users/curzel/dev/bit-therapy/PetsAssets";
 
-void setupGame(Game * game, SpriteSetBuilder& builder);
+namespace po = boost::program_options;
+
+void setupGame(Game * game, SpriteSetBuilder& builder, std::string selectedSpecies);
 std::thread startGameLoop(Game * game);
+po::variables_map parseArgs(int argc, char *argv[]);
 
 int main(int argc, char *argv[]) {
+    auto args = parseArgs(argc, argv);
+    std::string selectedSpecies = "ape";
+    
+    if (args.count("species")) {
+        selectedSpecies = args["species"].as<std::string>();
+    } else {
+        std::cout << "No species specified.\n";
+    }
+
     std::cout << "Starting..." << std::endl;
 
     SpriteSetBuilder builder = SpriteSetBuilder({});    
 
     Game game(GAME_FPS);
-    setupGame(&game, builder);    
+    setupGame(&game, builder, selectedSpecies);    
     auto gameLoop = startGameLoop(&game);
     // gameLoop.join();
 
@@ -45,14 +58,30 @@ int main(int argc, char *argv[]) {
     return app.exec();
 }
 
-void setupGame(Game * game, SpriteSetBuilder& builder) {
+po::variables_map parseArgs(int argc, char *argv[]) {
+    po::options_description desc("Allowed options");
+    desc.add_options()
+        ("help,h", "produce help message")
+        ("species", po::value<std::string>(), "enter species name");
+
+    po::variables_map vm;
+    po::store(po::parse_command_line(argc, argv, desc), vm);
+    po::notify(vm);
+
+    if (vm.count("help")) {
+        std::cout << desc << "\n";
+    }
+    return vm;
+}
+
+void setupGame(Game * game, SpriteSetBuilder& builder, std::string selectedSpecies) {
     auto assetPaths = listFiles(ASSETS_PATH, ".png");
     auto spriteSets = builder.spriteSets(assetPaths);
-    auto apeSprites = spriteSets["ape"];
+    auto apeSprites = spriteSets[selectedSpecies];
 
     auto frame = Rect(0.0, 0.0, 50.0, 50.0);
 
-    Species apeSpecies("ape", 1.0, 1.0);
+    Species apeSpecies(selectedSpecies, 1.0, 1.0);
     Entity ape(ANIMATIONS_FPS, 50.0, 1.0, apeSpecies, apeSprites, frame);
 
     game->add(ape);
