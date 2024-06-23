@@ -85,6 +85,7 @@
         "thread": "cpp",
         "numeric": "cpp",
         "ranges": "cpp",
-        "qlabel": "cpp"
+        "qlabel": "cpp",
+        "qapplication": "cpp"
     }
 }

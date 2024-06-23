@@ -1,13 +1,14 @@
-#include "game.h"
-#include "geometry.h"
-#include "../species/species.h"
-#include "../sprites/sprites.h"
-
 #include <chrono>
 #include <gtest/gtest.h>
 #include <iostream>
 #include <string>
 #include <vector>
+
+#include "../species/species.h"
+#include "../sprites/sprites.h"
+
+#include "game.h"
+#include "geometry.h"
 
 TEST(GameTests, CanUpdateCascade) {
     Game game(10.0);

@@ -1,15 +1,15 @@
 #include <QApplication>
 
+#include <boost/program_options.hpp>
 #include <chrono>
 #include <iostream>
 #include <memory>
 #include <thread>
-#include <boost/program_options.hpp>
 
 #include "app_window.h"
-#include "game/game.h"
-#include "game_window.h"
 
+#include "game/game.h"
+#include "rendering/rendering.h"
 #include "species/species.h"
 #include "sprites/sprites.h"
 #include "utils/utils.h"
@@ -41,6 +41,17 @@ int main(int argc, char *argv[]) {
     }
 
     std::cout << "Starting..." << std::endl;
+    QApplication app(argc, argv);    
+
+    auto screens = listAvailableScreens();
+    std::cout << "Found " << screens.size() << " monitors" << std::endl;
+    for (const Screen& screen : screens) {
+        std::cout << "  Found monitor: " << screen.description() << std::endl;
+    }
+    if (screens.size() == 0) {
+        std::cerr << "No monitor found!" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
 
     spritesRepo.setup(ASSETS_PATH);
     speciesRepo.setup(SPECIES_PATH);
@@ -50,12 +61,8 @@ int main(int argc, char *argv[]) {
     auto gameLoop = startGameLoop(&game);
     // gameLoop.join();
 
-    QApplication app(argc, argv);    
-
-    Rect frame(0, 0, 1920, 1080);
-
     GameWindow gameWindow;
-    gameWindow.setup(&game, frame);
+    gameWindow.setup(&game, screens[screens.size()-1].frame);
     gameWindow.show();
 
     // AppWindow appWindow;

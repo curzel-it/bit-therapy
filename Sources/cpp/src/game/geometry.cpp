@@ -42,6 +42,6 @@ Rect Rect::offset(const Vector2d& v) const {
 std::string Rect::description() const {
     std::stringstream ss; 
     ss << std::fixed << std::setprecision(1);
-    ss << "{ x: " << x << ", y: " << y << ", w: " << w << ", h: " << h << " }" << std::endl;
+    ss << "{ x: " << x << ", y: " << y << ", w: " << w << ", h: " << h << " }";
     return ss.str();
 }

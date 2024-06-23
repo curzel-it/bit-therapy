@@ -47,9 +47,7 @@ std::string Game::description() {
     ss << entities.size() << " entities:" << std::endl;
 
     for (const auto& entity : entities) {
-        auto s = entity.description();
-        trim(s);
-        ss << "  - " << s << " @ " << &entity << std::endl;
+        ss << "  - " << entity.description() << " @ " << &entity << std::endl;
     }
     return ss.str();
 }

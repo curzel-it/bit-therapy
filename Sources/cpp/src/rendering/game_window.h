@@ -1,11 +1,11 @@
 #ifndef GAME_WINDOW_H
 #define GAME_WINDOW_H
 
-#include "game/game.h"
-
 #include <QGraphicsScene>
 #include <QLabel>
 #include <QWidget>
+
+#include "../game/game.h"
 
 class GameWindow : public QWidget {    
     Q_OBJECT

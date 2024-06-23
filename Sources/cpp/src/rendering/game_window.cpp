@@ -12,10 +12,11 @@
 
 #include <format>
 
-#include "game/game.h"
+#include "../game/game.h"
+#include "../sprites/sprites.h"
+#include "../utils/utils.h"
+
 #include "game_window.h"
-#include "utils/utils.h"
-#include "sprites/sprites.h"
 
 GameWindow::GameWindow(QWidget *parent): QWidget(parent) {}
 
@@ -47,8 +48,9 @@ void GameWindow::buildUi() {
     setLayout(layout);
 
     setGeometry(frame.x, frame.y, frame.w, frame.h);
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    setAttribute(Qt::WA_TranslucentBackground);
+    setWindowFlags(Qt::FramelessWindowHint);
+    // setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    // setAttribute(Qt::WA_TranslucentBackground);
     setWindowTitle("Game Window");
 }
 
