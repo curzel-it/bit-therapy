@@ -14,14 +14,19 @@
 #include "sprites/sprites.h"
 #include "utils/utils.h"
 
+namespace po = boost::program_options;
+
 const double GAME_FPS = 30.0;
 const double ANIMATIONS_FPS = 10.0;
 const std::string SPECIES_PATH = "/Users/curzel/dev/bit-therapy/Species";
 const std::string ASSETS_PATH = "/Users/curzel/dev/bit-therapy/PetsAssets";
 
-namespace po = boost::program_options;
+SpriteSetBuilder builder;
+SpritesRepository spritesRepo(builder);
+SpeciesParser parser;
+SpeciesRepository speciesRepo(parser);
 
-void setupGame(Game * game, SpriteSetBuilder& builder, std::string selectedSpecies);
+void setupGame(Game * game, std::string selectedSpecies);
 std::thread startGameLoop(Game * game);
 po::variables_map parseArgs(int argc, char *argv[]);
 
@@ -37,10 +42,11 @@ int main(int argc, char *argv[]) {
 
     std::cout << "Starting..." << std::endl;
 
-    SpriteSetBuilder builder = SpriteSetBuilder({});    
-
+    spritesRepo.setup(ASSETS_PATH);
+    speciesRepo.setup(SPECIES_PATH);
+    
     Game game(GAME_FPS);
-    setupGame(&game, builder, selectedSpecies);    
+    setupGame(&game, selectedSpecies);    
     auto gameLoop = startGameLoop(&game);
     // gameLoop.join();
 
@@ -74,16 +80,17 @@ po::variables_map parseArgs(int argc, char *argv[]) {
     return vm;
 }
 
-void setupGame(Game * game, SpriteSetBuilder& builder, std::string selectedSpecies) {
-    auto assetPaths = listFiles(ASSETS_PATH, ".png");
-    auto spriteSets = builder.spriteSets(assetPaths);
-    auto apeSprites = spriteSets[selectedSpecies];
-
+void setupGame(Game * game, std::string selectedSpecies) {
     auto frame = Rect(0.0, 0.0, 50.0, 50.0);
+    auto species = speciesRepo.species(selectedSpecies);
+    auto sprites = spritesRepo.sprites(selectedSpecies);
 
-    Species apeSpecies(selectedSpecies, 1.0, 1.0);
-    Entity ape(ANIMATIONS_FPS, 50.0, 1.0, apeSpecies, apeSprites, frame);
+    if (!species.has_value() || !sprites.has_value()) {
+        std::cerr << "Species `" << selectedSpecies << "` not found!" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
 
+    Entity ape(ANIMATIONS_FPS, 50.0, 1.0, species.value(), sprites.value(), frame);
     game->add(ape);
 }
 

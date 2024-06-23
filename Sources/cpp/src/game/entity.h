@@ -15,8 +15,8 @@ class EntityCapability;
 class Entity {    
 private:
     double fps;
-    Species species;
-    SpriteSet spriteSet;
+    const Species* species;
+    const SpriteSet* spriteSet;
     std::vector<std::shared_ptr<EntityCapability>> capabilities;
     Sprite currentSprite;
 
@@ -31,8 +31,8 @@ public:
         double fps, 
         double settingsBaseSize, 
         double settingsSpeedMultiplier,
-        Species species, 
-        SpriteSet spriteSet, 
+        const Species* species,
+        const SpriteSet* spriteSet,
         Rect frame
     );
     

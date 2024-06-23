@@ -20,7 +20,7 @@ TEST(GameTests, CanUpdateCascade) {
     );
     Rect initialFrame = Rect(0.0, 0.0, 1.0, 1.0);        
     Species species("test", 1.0, 1.0);    
-    Entity ape(10.0, 50.0, 1.0, species, spriteSet, initialFrame);
+    Entity ape(10.0, 50.0, 1.0, &species, &spriteSet, initialFrame);
     game.add(ape); 
 
     std::vector<RenderedItem> results({});
