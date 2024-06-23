@@ -6,10 +6,10 @@
 #include <string>
 #include <vector>
 
-#include "geometry.h"
-#include "linear_movement.h"
-#include "sprites/sprites.h"
-#include "utils/utils.h"
+#include "../game/game.h"
+#include "../capabilities/capabilities.h"
+#include "../sprites/sprites.h"
+#include "../utils/utils.h"
 
 Entity::Entity(
     double fps, 

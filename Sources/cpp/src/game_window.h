@@ -1,8 +1,7 @@
 #ifndef GAME_WINDOW_H
 #define GAME_WINDOW_H
 
-#include "game.h"
-#include "geometry.h"
+#include "game/game.h"
 
 #include <QGraphicsScene>
 #include <QLabel>

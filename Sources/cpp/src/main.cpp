@@ -6,10 +6,8 @@
 #include <thread>
 
 #include "app_window.h"
-#include "game.h"
+#include "game/game.h"
 #include "game_window.h"
-#include "geometry.h"
-#include "entity.h"
 
 #include "species/species.h"
 #include "sprites/sprites.h"

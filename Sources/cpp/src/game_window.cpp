@@ -12,9 +12,8 @@
 
 #include <format>
 
-#include "game.h"
+#include "game/game.h"
 #include "game_window.h"
-#include "geometry.h"
 #include "utils/utils.h"
 #include "sprites/sprites.h"
 

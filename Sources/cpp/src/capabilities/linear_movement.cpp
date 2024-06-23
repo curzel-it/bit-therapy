@@ -3,7 +3,7 @@
 #include <chrono>
 #include <iostream>
 
-#include "geometry.h"
+#include "../game/game.h"
 
 void LinearMovement::update(std::chrono::milliseconds timeSinceLastUpdate, Entity * entity) {
     auto frameDuration = std::chrono::duration_cast<std::chrono::milliseconds>(timeSinceLastUpdate).count();

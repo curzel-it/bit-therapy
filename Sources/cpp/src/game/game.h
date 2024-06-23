@@ -8,6 +8,7 @@
 #include <vector>
 
 #include "entity.h"
+#include "geometry.h"
 
 struct RenderedItem {
     std::string spritePath;

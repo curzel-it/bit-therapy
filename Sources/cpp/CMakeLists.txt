@@ -6,19 +6,27 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories("src")
-include_directories("src/sprites")
+include_directories("src/capabilities")
+include_directories("src/game")
 include_directories("src/species")
+include_directories("src/sprites")
 include_directories("src/utils")
 
 # Get all sources except tests
 file(GLOB MAIN_SOURCES "src/*.cpp")
 list(FILTER MAIN_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
 
-file(GLOB SPRITES_SOURCES "src/sprites/*.cpp")
-list(FILTER SPRITES_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
+file(GLOB CAPABILITIES_SOURCES "src/capabilities/*.cpp")
+list(FILTER CAPABILITIES_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
+
+file(GLOB GAME_SOURCES "src/game/*.cpp")
+list(FILTER GAME_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
 
 file(GLOB SPECIES_SOURCES "src/species/*.cpp")
 list(FILTER SPECIES_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
+
+file(GLOB SPRITES_SOURCES "src/sprites/*.cpp")
+list(FILTER SPRITES_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
 
 file(GLOB UTILS_SOURCES "src/utils/*.cpp")
 list(FILTER UTILS_SOURCES EXCLUDE REGEX ".*_tests\\.cpp$")
@@ -33,7 +41,7 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(nlohmann_json 3.2.0 REQUIRED)
 
 # App executable
-add_executable(Main ${MAIN_SOURCES} ${UTILS_SOURCES} ${SPECIES_SOURCES} ${SPRITES_SOURCES})
+add_executable(Main ${MAIN_SOURCES} ${CAPABILITIES_SOURCES} ${GAME_SOURCES} ${SPECIES_SOURCES} ${SPRITES_SOURCES} ${UTILS_SOURCES})
 target_link_libraries(Main PRIVATE nlohmann_json::nlohmann_json Qt6::Widgets)
 
 # Google Test
@@ -45,14 +53,18 @@ include(GoogleTest)
 file(GLOB TEST_SOURCES "src/*.cpp")
 list(FILTER TEST_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
-file(GLOB TEST_SPRITES_SOURCES "src/sprites/*.cpp")
+file(GLOB TEST_CAPABILITIES_SOURCES "src/capabilities/*.cpp")
+
+file(GLOB TEST_GAME_SOURCES "src/game/*.cpp")
 
 file(GLOB TEST_SPECIES_SOURCES "src/species/*.cpp")
+
+file(GLOB TEST_SPRITES_SOURCES "src/sprites/*.cpp")
 
 file(GLOB TEST_UTILS_SOURCES "src/utils/*.cpp")
 
 # Test executable
-add_executable(Test ${TEST_SOURCES} ${TEST_SPRITES_SOURCES} ${TEST_SPECIES_SOURCES} ${TEST_UTILS_SOURCES})
+add_executable(Test ${TEST_SOURCES} ${TEST_CAPABILITIES_SOURCES} ${TEST_GAME_SOURCES} ${TEST_SPECIES_SOURCES} ${TEST_SPRITES_SOURCES} ${TEST_UTILS_SOURCES})
 target_link_libraries(Test GTest::GTest GTest::Main Qt6::Widgets)
 
 # Test discovery

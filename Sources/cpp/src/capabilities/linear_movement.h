@@ -3,7 +3,7 @@
 
 #include <chrono>
 
-#include "entity.h"
+#include "../game/game.h"
 
 class LinearMovement : public EntityCapability {
 public:
