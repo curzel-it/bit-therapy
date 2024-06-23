@@ -1,7 +1,6 @@
 #include "linear_movement.h"
 
 #include <chrono>
-#include <iostream>
 
 #include "../game/game.h"
 

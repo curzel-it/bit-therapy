@@ -4,7 +4,7 @@
 
 #include "../game/game.h"
 
-class LinearMovement : public EntityCapability {
+class Gravity : public EntityCapability {
 public:
     void update(std::chrono::milliseconds timeSinceLastUpdate, Entity * entity) override;
 };

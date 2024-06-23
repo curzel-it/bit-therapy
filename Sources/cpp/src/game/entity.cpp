@@ -30,8 +30,8 @@ Entity::Entity(
 {
     setupSpeed(settingsBaseSize, settingsSpeedMultiplier);
     changeSprite(SPRITE_NAME_MOVEMENT); 
-    std::shared_ptr<LinearMovement> lm = std::make_shared<LinearMovement>();
-    capabilities.push_back(lm);
+    capabilities.push_back(std::make_shared<LinearMovement>());
+    capabilities.push_back(std::make_shared<Gravity>());
 }
 
 const std::string Entity::currentSpriteFrame() const {

@@ -69,7 +69,7 @@ void GameWindow::updateUi() {
             Qt::FastTransformation
         );
         QGraphicsPixmapItem *pixmapItem = new QGraphicsPixmapItem(scaledPixmap);
-        pixmapItem->setPos(frame.x + item.frame.x, frame.y + item.frame.h);
+        pixmapItem->setPos(frame.x + item.frame.x, frame.y + item.frame.y);
         scene->addItem(pixmapItem);
     }
 
