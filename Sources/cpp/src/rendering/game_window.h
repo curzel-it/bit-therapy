@@ -13,6 +13,7 @@ class GameWindow : public QWidget {
 private:
     QGraphicsScene *scene;
     Game *game;
+    std::string screenName;
     Rect frame;
 
     void setupTimer();
@@ -20,7 +21,7 @@ private:
 
 public:
     GameWindow(QWidget *parent = nullptr);
-    void setup(Game *game, Rect frame);
+    void setup(Game *game, std::string screenName, Rect frame);
     void updateUi();
 };
 

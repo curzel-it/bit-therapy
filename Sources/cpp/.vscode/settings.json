@@ -87,6 +87,8 @@
         "ranges": "cpp",
         "qlabel": "cpp",
         "qapplication": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "typeindex": "cpp",
+        "text_encoding": "cpp"
     }
 }

@@ -15,12 +15,14 @@ RenderedItem::RenderedItem(std::string spritePath, Rect frame) :
 Game::Game(
     const SpritesRepository* spritesRepo,
     const SpeciesRepository* speciesRepo,
+    std::string screenName,
     double gameFps, 
     double animationFps, 
     double baseEntitySize
 ) : 
     spritesRepo(spritesRepo), 
     speciesRepo(speciesRepo), 
+    screenName(screenName),
     gameFps(gameFps), 
     animationFps(animationFps), 
     baseEntitySize(baseEntitySize), 
@@ -34,13 +36,13 @@ void Game::update(std::chrono::milliseconds timeSinceLastUpdate) {
     }
 }
 
-std::vector<Entity *> Game::addEntities(std::vector<std::string> species) {
+std::vector<Entity *> Game::addEntities(const std::vector<std::string>& species) {
     return compactMap<std::string, Entity*>(species, [this](const std::string aSpecies) {
         return addEntity(aSpecies);
     });
 }
 
-std::optional<Entity *> Game::addEntity(std::string speciesId) {
+std::optional<Entity *> Game::addEntity(const std::string& speciesId) {
     auto speciesOpt = speciesRepo->species(speciesId);
     auto spritesOpt = spritesRepo->sprites(speciesId);
 

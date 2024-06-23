@@ -20,8 +20,9 @@
 
 GameWindow::GameWindow(QWidget *parent): QWidget(parent) {}
 
-void GameWindow::setup(Game *game, Rect frame) {
+void GameWindow::setup(Game *game, std::string screenName, Rect frame) {
     this->game = game;
+    this->screenName = screenName;
     this->frame = frame;
     buildUi();
     setupTimer();
