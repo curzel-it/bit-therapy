@@ -48,9 +48,9 @@ void GameWindow::buildUi() {
     setLayout(layout);
 
     setGeometry(frame.x, frame.y, frame.w, frame.h);
-    setWindowFlags(Qt::FramelessWindowHint);
-    // setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    // setAttribute(Qt::WA_TranslucentBackground);
+    // setWindowFlags(Qt::FramelessWindowHint);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    setAttribute(Qt::WA_TranslucentBackground);
     setWindowTitle("Game Window");
 }
 
@@ -61,7 +61,7 @@ void GameWindow::updateUi() {
     QGraphicsTextItem *gameStateText = scene->addText(description);
     gameStateText->setDefaultTextColor(Qt::white);
     gameStateText->setFont(QFont("Courier New", 16, QFont::DemiBold));
-    gameStateText->setPos(0, 50);
+    gameStateText->setPos(frame.x + 50, frame.y + 50);
 
     for (const auto& item : game->render()) {
         auto path = QString::fromStdString(item.spritePath);        
@@ -73,7 +73,7 @@ void GameWindow::updateUi() {
             Qt::FastTransformation
         );
         QGraphicsPixmapItem *pixmapItem = new QGraphicsPixmapItem(scaledPixmap);
-        pixmapItem->setPos(item.frame.x, item.frame.h);
+        pixmapItem->setPos(frame.x + item.frame.x, frame.y + item.frame.h);
         scene->addItem(pixmapItem);
     }
 }
