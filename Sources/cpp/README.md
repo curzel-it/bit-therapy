@@ -6,15 +6,15 @@
 ## ⏳ Status
 
 ### ✅ What's working:
-* Basic game engine primitives
-* Basic game rendering primitives
-* Basic geometry primitives
+* Basic Command line interface
+* Multi-monitor support
+* Multi-pet support
 * Tests are passing
 
-### ❌ What's not working:
-* n/a
+### ⏳ Coming soon:
+* Support for most capabilities available in Swift
 
-### ⏳ Other stuff in the todo list:
+### ❌ Known issues:
 * n/a
 
 ## 🛠️ Building 
@@ -54,7 +54,6 @@ Here's some examples with the following setup:
 * `--screen ben` only runs the app on "BenQ LCD"
 * `--screen u34 --screen ben` runs on both displays
 * Omitting the `--screen` param runs on all available displays
-
 
 ## ⚙️ Testing
 ```bash
