@@ -9,6 +9,7 @@
 #include "app_window.h"
 
 #include "game/game.h"
+#include "pets/pets.h"
 #include "rendering/rendering.h"
 #include "species/species.h"
 #include "sprites/sprites.h"
@@ -22,10 +23,11 @@ static const double BASE_ENTITY_SIZE = 50.0;
 static const std::string SPECIES_PATH = "/Users/curzel/dev/bit-therapy/Species";
 static const std::string ASSETS_PATH = "/Users/curzel/dev/bit-therapy/PetsAssets";
 
-static SpriteSetBuilder builder;
-static SpritesRepository spritesRepo(builder);
-static SpeciesParser parser;
-static SpeciesRepository speciesRepo(parser);
+static SpriteSetBuilder* spriteSetBuilder = new SpriteSetBuilder();
+static SpritesRepository* spritesRepo = new SpritesRepository(spriteSetBuilder);
+static SpeciesParser* speciesParser = new SpeciesParser();
+static SpeciesRepository* speciesRepo = new SpeciesRepository(speciesParser);
+static PetsBuilder* petsBuilder = new PetsBuilder(speciesRepo, spritesRepo, ANIMATIONS_FPS, BASE_ENTITY_SIZE);
 
 std::vector<std::thread> gameThreads;
 
@@ -39,8 +41,8 @@ std::thread startGameLoop(Game* game);
 
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
-    spritesRepo.setup(ASSETS_PATH);
-    speciesRepo.setup(SPECIES_PATH);
+    spritesRepo->setup(ASSETS_PATH);
+    speciesRepo->setup(SPECIES_PATH);
 
     auto args = parseArgs(argc, argv);
     if (args.count("help")) {
@@ -94,8 +96,12 @@ void startGames(std::vector<Screen> screens, std::vector<std::string> species, b
 }
 
 void startGame(Screen screen, std::vector<std::string> species, bool debugEnabled) {
-    Game* game = new Game(&spritesRepo, &speciesRepo, screen.name, GAME_FPS, ANIMATIONS_FPS, BASE_ENTITY_SIZE);
-    game->addEntities(species);
+    Game* game = new Game(spritesRepo, speciesRepo, screen.name, GAME_FPS, ANIMATIONS_FPS, BASE_ENTITY_SIZE);
+
+    auto entities = compactMap<std::string, Entity*>(species, [](const std::string species) {
+        return petsBuilder->build(species);
+    });
+    game->addEntities(entities);
 
     GameWindow* window = new GameWindow();
     window->setup(game, debugEnabled, screen.name, screen.frame);

@@ -89,6 +89,9 @@
         "qapplication": "cpp",
         "*.tcc": "cpp",
         "typeindex": "cpp",
-        "text_encoding": "cpp"
+        "text_encoding": "cpp",
+        "algorithm": "cpp",
+        "source_location": "cpp",
+        "strstream": "cpp"
     }
 }

@@ -6,7 +6,7 @@
 #include "species_repository.h"
 #include "species_parser.h"
 
-SpeciesRepository::SpeciesRepository(const SpeciesParser& parser) : 
+SpeciesRepository::SpeciesRepository(const SpeciesParser* parser) : 
     parser(parser),
     speciesById(std::map<std::string, Species>{}) 
 {}
@@ -15,7 +15,7 @@ void SpeciesRepository::setup(const std::string rootPath) {
     auto paths = listFiles(rootPath, ".json");
 
     auto allSpecies = compactMap<std::string, Species>(paths, [this](const std::string path) {
-        return parser.parseFromFile(path);
+        return parser->parseFromFile(path);
     });
     
     speciesById = makeLookup<Species, std::string>(allSpecies, [](const Species species) {

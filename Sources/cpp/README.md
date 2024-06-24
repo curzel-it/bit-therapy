@@ -49,7 +49,7 @@ For example:
 
 ### `--screen`
 Monitors/screens are identified simply by part of the name.<br>
-Here's some examples with the following setup:
+Here are some examples with the following setup:<br>
 ![Screenshot of Settings > Displays](docs/displays.png)<br>
 * `--screen u34` only runs the app on the "U34G2G4R3"
 * `--screen ben` only runs the app on "BenQ LCD"

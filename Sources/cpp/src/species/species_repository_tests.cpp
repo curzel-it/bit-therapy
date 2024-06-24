@@ -11,7 +11,7 @@
 
 TEST(SpeciesRepositoryTests, CanBeSetupAndLoadAllSpecies) {
     SpeciesParser parser;
-    SpeciesRepository repo(parser);
+    SpeciesRepository repo(&parser);
     repo.setup(SPECIES_PATH);
 
     auto expectedNumberOfSpecies = listFiles(SPECIES_PATH, ".json").size();    

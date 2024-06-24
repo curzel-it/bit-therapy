@@ -7,7 +7,6 @@
 #include <vector>
 
 #include "../game/game.h"
-#include "../capabilities/capabilities.h"
 #include "../sprites/sprites.h"
 #include "../utils/utils.h"
 
@@ -30,8 +29,10 @@ Entity::Entity(
 {
     setupSpeed(settingsBaseSize, settingsSpeedMultiplier);
     changeSprite(SPRITE_NAME_MOVEMENT); 
-    capabilities.push_back(std::make_shared<LinearMovement>());
-    capabilities.push_back(std::make_shared<Gravity>());
+}
+
+void Entity::addCapability(std::shared_ptr<EntityCapability> capability) {
+    capabilities.push_back(capability);
 }
 
 const std::string Entity::currentSpriteFrame() const {

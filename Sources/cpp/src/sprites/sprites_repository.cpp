@@ -11,14 +11,14 @@
 #include "sprite_set_builder.h"
 #include "sprites_repository.h"
 
-SpritesRepository::SpritesRepository(const SpriteSetBuilder& builder) : 
+SpritesRepository::SpritesRepository(const SpriteSetBuilder* builder) : 
     builder(builder),
     spriteSets(std::map<std::string, SpriteSet>{})
 {}
 
 void SpritesRepository::setup(const std::string rootPath) {
     auto paths = listFiles(rootPath, ".png");
-    spriteSets = builder.spriteSets(paths);
+    spriteSets = builder->spriteSets(paths);
 }
 
 std::optional<const SpriteSet*> SpritesRepository::sprites(std::string speciesId) const {

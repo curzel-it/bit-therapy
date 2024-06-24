@@ -13,9 +13,9 @@
 
 TEST(SpritesRepositoryTests, CanLoadSpritesForAllSpecies) {
     SpriteSetBuilder builder;
-    SpritesRepository spritesRepo(builder);
+    SpritesRepository spritesRepo(&builder);
     SpeciesParser parser;
-    SpeciesRepository speciesRepo(parser);
+    SpeciesRepository speciesRepo(&parser);
     
     spritesRepo.setup(ASSETS_PATH);
     speciesRepo.setup(SPECIES_PATH);

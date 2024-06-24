@@ -10,11 +10,11 @@
 #include "species_parser.h"
 
 class SpeciesRepository {
-    const SpeciesParser& parser;
+    const SpeciesParser* parser;
     std::map<std::string, Species> speciesById;
 
 public:
-    SpeciesRepository(const SpeciesParser& parser);
+    SpeciesRepository(const SpeciesParser* parser);
 
     void setup(const std::string rootPath);
     

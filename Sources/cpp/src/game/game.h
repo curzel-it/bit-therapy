@@ -29,7 +29,7 @@ private:
     const double animationFps;
     const double baseEntitySize;
 
-    std::vector<Entity> entities;
+    std::vector<Entity*> entities;
 
 public:
     const double gameFps;
@@ -45,9 +45,8 @@ public:
     );
     
     void update(std::chrono::milliseconds timeSinceLastUpdate);    
-    std::optional<Entity *> addEntity(const std::string& species);
-    std::vector<Entity *> addEntities(const std::vector<std::string>& species);
-    Entity * add(Entity entity);    
+    void addEntity(Entity* entity);    
+    void addEntities(const std::vector<Entity*> entities);
     const uint32_t numberOfEntities();
     std::vector<RenderedItem> render();
     std::string description();
