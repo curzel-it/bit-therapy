@@ -8,12 +8,11 @@ The app is currently available for macOS only via the [App Store](https://apps.a
 
 Is this coming to Windows or Linux? Yes... But... Hear me out...
 
-I'm currently rewriting the app in [C++](https://github.com/curzel-it/bit-therapy-pp) with QT, the primary goal is to learn more about the language.
+I'm currently rewriting the app in [C++](https://github.com/curzel-it/bit-therapy-cpp) with QT, the primary goal is to learn more about the language.
 
 Previously, I've also started porting the app in other languages (no ETA available):
 * [Python/QT](https://github.com/curzel-it/bit-therapy/tree/main/Sources/python/README.md)
 * [Rust/egui](https://github.com/curzel-it/bit-therapy/tree/main/Sources/rust/README.md) 
-
 
 ## 🤔 What's a Desktop Pet?
 It's just a cute little pet or animal that lives in your computer.
@@ -25,7 +24,7 @@ Hope you like them too!
 ## 📲 Get the app
 For daily use I recommend getting the App from the App Store.
 
-Alternatively, you can download the latest release from [GitHub]( https://github.com/curzel-it/bit-therapy/releases/latest) or build from source (see below).
+Alternatively, you can download the latest release from [GitHub](https://github.com/curzel-it/bit-therapy/releases/latest) or build from source (see below).
 
 [![Get it on the App Store](docs/appstore_badge.png)](https://apps.apple.com/app/id1575542220)
 
@@ -44,7 +43,12 @@ Contributors get a shout out in the app, just saying... 😏
 
 If you wish to improve support for your language, join our [Discord](https://discord.gg/MCdEgXKSH5) and let us know!
 
-## 🔔 Interoperability
+## ⛓️ Command Line
+* For integrating with the App Store / production app, see [interoperability](#interoperability)
+* For using it as a command line tool, see [the C++ / QT version](https://github.com/curzel-it/bit-therapy-cpp)
+
+## 🔔 Interoperability 
+<a name="interoperability"></a>
 Since version 2.48 you can use `DistributedNotificationCenter` to send basic commands to your pets.
 
 Here's the payload:
