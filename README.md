@@ -1,7 +1,5 @@
 # BitTherapy (Desktop Pets)
-This is the source code of my macOS app [BitTherapy](https://apps.apple.com/app/desktop-pets/id1575542220)!.
-
-As you can guess, it brings Desktop Pets to macOS 🚀
+This is the source code of my macOS app [BitTherapy](https://apps.apple.com/app/desktop-pets/id1575542220), which brings Desktop Pets to macOS! 🚀
 
 Like the app? Join our [Discord](https://discord.gg/MCdEgXKSH5)!
 
@@ -10,9 +8,12 @@ The app is currently available for macOS only via the [App Store](https://apps.a
 
 Is this coming to Windows or Linux? Yes... But... Hear me out...
 
-I'm currently using this project to learn a bit more about [Rust](https://github.com/curzel-it/bit-therapy/tree/main/Sources/rust/README.md) and [C++](https://github.com/curzel-it/bit-therapy/tree/main/Sources/cpp/README.md), I'm actively working on both ports.
+I'm currently rewriting the app in [C++](https://github.com/curzel-it/bit-therapy-pp) with QT, the primary goal is to learn more about the language.
 
-Previously, I've also started working on a [Python/QT](https://github.com/curzel-it/bit-therapy/tree/main/Sources/python/README.md) port of the app, but to be honest, it's been quite boring and I will likely never touch it again.
+Previously, I've also started porting the app in other languages (no ETA available):
+* [Python/QT](https://github.com/curzel-it/bit-therapy/tree/main/Sources/python/README.md)
+* [Rust/egui](https://github.com/curzel-it/bit-therapy/tree/main/Sources/rust/README.md) 
+
 
 ## 🤔 What's a Desktop Pet?
 It's just a cute little pet or animal that lives in your computer.
