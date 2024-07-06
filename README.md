@@ -6,13 +6,9 @@ Like the app? Join our [Discord](https://discord.gg/MCdEgXKSH5)!
 ## 🎮 Supported Systems
 The app is currently available for macOS only via the [App Store](https://apps.apple.com/app/id1575542220).
 
-Is this coming to Windows or Linux? Yes... But... Hear me out...
+Is this coming to Windows or Linux? _Possibly_...
 
 I'm currently rewriting the app in [C++](https://github.com/curzel-it/bit-therapy-cpp) with QT, the primary goal is to learn more about the language.
-
-Previously, I've also started porting the app in other languages (no ETA available):
-* [Python/QT](https://github.com/curzel-it/bit-therapy/tree/main/Sources/python/README.md)
-* [Rust/egui](https://github.com/curzel-it/bit-therapy/tree/main/Sources/rust/README.md) 
 
 ## 🤔 What's a Desktop Pet?
 It's just a cute little pet or animal that lives in your computer.
