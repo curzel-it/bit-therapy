@@ -12,18 +12,25 @@
   <ItemGroup>
     <ProjectReference Include="..\BitTherapyCLR\BitTherapyCLR.vcxproj" />
   </ItemGroup>
+  
+  <PropertyGroup>
+    <SpeciesPath>../../../Species</SpeciesPath>
+    <PetsAssetsPath>../../../PetsAssets</PetsAssetsPath>
+  </PropertyGroup>
 
-  <ItemGroup>
-      <Content Include="PetsAssets\**">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-  </ItemGroup>
+  <Target Name="CopySpeciesFiles" AfterTargets="Build">
+    <ItemGroup>
+      <SpeciesFiles Include="$(SpeciesPath)\**\*.json" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SpeciesFiles)" DestinationFolder="$(OutDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
 
-  <ItemGroup>
-      <Content Include="Species\**">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-  </ItemGroup>
+  <Target Name="CopyPetsAssetsFiles" AfterTargets="Build">
+    <ItemGroup>
+      <PetsAssetsFiles Include="$(PetsAssetsPath)\**\*.png" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PetsAssetsFiles)" DestinationFolder="$(OutDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
 
   <ItemGroup>
     <Content Include="512.ico" />
