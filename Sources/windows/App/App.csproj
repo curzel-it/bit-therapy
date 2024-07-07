@@ -13,24 +13,21 @@
     <ProjectReference Include="..\BitTherapyCLR\BitTherapyCLR.vcxproj" />
   </ItemGroup>
   
-  <PropertyGroup>
-    <SpeciesPath>../../../Species</SpeciesPath>
-    <PetsAssetsPath>../../../PetsAssets</PetsAssetsPath>
-  </PropertyGroup>
-
-  <Target Name="CopySpeciesFiles" AfterTargets="Build">
     <ItemGroup>
-      <SpeciesFiles Include="$(SpeciesPath)\**\*.json" />
+        <SpeciesFiles Include="..\..\..\Species\**" />
     </ItemGroup>
-    <Copy SourceFiles="@(SpeciesFiles)" DestinationFolder="$(OutDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
-  </Target>
 
-  <Target Name="CopyPetsAssetsFiles" AfterTargets="Build">
     <ItemGroup>
-      <PetsAssetsFiles Include="$(PetsAssetsPath)\**\*.png" />
+        <PetsAssetsFiles Include="..\..\..\PetsAssets\**" />
     </ItemGroup>
-    <Copy SourceFiles="@(PetsAssetsFiles)" DestinationFolder="$(OutDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
-  </Target>
+
+    <Target Name="CopySpeciesFiles" AfterTargets="Build">
+        <Copy SourceFiles="@(SpeciesFiles)" DestinationFolder="$(OutputPath)\Species" SkipUnchangedFiles="true" />
+    </Target>
+
+    <Target Name="CopyPetsAssetsFiles" AfterTargets="Build">
+        <Copy SourceFiles="@(PetsAssetsFiles)" DestinationFolder="$(OutputPath)\PetsAssets" SkipUnchangedFiles="true" />
+    </Target>
 
   <ItemGroup>
     <Content Include="512.ico" />
