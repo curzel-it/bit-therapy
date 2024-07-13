@@ -10,31 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BitTherapyCLR\BitTherapyCLR.vcxproj" />
-  </ItemGroup>
-  
-    <ItemGroup>
-        <SpeciesFiles Include="..\..\..\Species\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <PetsAssetsFiles Include="..\..\..\PetsAssets\**" />
-    </ItemGroup>
-
-    <Target Name="CopySpeciesFiles" AfterTargets="Build">
-        <Copy SourceFiles="@(SpeciesFiles)" DestinationFolder="$(OutputPath)\Species" SkipUnchangedFiles="true" />
-    </Target>
-
-    <Target Name="CopyPetsAssetsFiles" AfterTargets="Build">
-        <Copy SourceFiles="@(PetsAssetsFiles)" DestinationFolder="$(OutputPath)\PetsAssets" SkipUnchangedFiles="true" />
-    </Target>
-
-  <ItemGroup>
     <Content Include="512.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="PetsAssets\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Species\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

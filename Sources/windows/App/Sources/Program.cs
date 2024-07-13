@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using BitTherapyCLR;
-using BitTherapyWinForms;
+using App.Sources.Utils;
 
 namespace App
 {
@@ -15,6 +14,17 @@ namespace App
 
         private static List<GameForm> gameForms = new List<GameForm>();
 
+        private static SpeciesParser speciesParser;
+        private static SpeciesRepository speciesRepo;
+        private static SpriteSetBuilder spriteSetBuilder;
+        private static SpritesRepository spritesRepo;
+        private static PetsBuilder petsBuilder;
+
+        private static double animationFps = 10.0;
+        private static double baseSize = 50.0;
+        private static double scaleMultiplier = 1.0;
+        private static double speedMultiplier = 1.0;
+
         [STAThread]
         static void Main()
         {
@@ -23,13 +33,27 @@ namespace App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            var species = ResourcesHelper.GetSpecies();
+            var assets = ResourcesHelper.GetAssets();
+
+            speciesParser = new SpeciesParser();
+            speciesRepo = new SpeciesRepository(speciesParser);
+            spriteSetBuilder = new SpriteSetBuilder();
+            spritesRepo = new SpritesRepository(spriteSetBuilder);
+            petsBuilder = new PetsBuilder(speciesRepo, spritesRepo, animationFps, baseSize, scaleMultiplier, speedMultiplier);
+
+            spritesRepo.Setup(assets);
+            speciesRepo.Setup(species);
+
             LoadGameForms();
 
-            Application.Run(new AvailableSpeciesForm(ResourcesHelper.GetSpecies(), ResourcesHelper.GetAssets()));
+            Application.Run(new AvailableSpeciesForm(speciesRepo, spritesRepo));
         }
 
         private static void LoadGameForms()
         {
+            var selectedSpecies = AppConfigRepository.GetSelectedSpecies();
+
             // Close existing forms
             foreach (var form in gameForms)
             {
@@ -38,32 +62,19 @@ namespace App
             }
             gameForms.Clear();
 
-            var species = ResourcesHelper.GetSpecies();
-            var assets = ResourcesHelper.GetAssets();
-            var selectedSpecies = AppConfigRepository.GetSelectedSpecies();
-
             foreach (var screen in Screen.AllScreens)
             {
-                var bounds = screen.Bounds;
+                var bounds = new App.Rect(screen.Bounds.X, screen.Bounds.Y, screen.Bounds.Width, screen.Bounds.Height);
 
-                ManagedGame game = new ManagedGame(
-                    screen.DeviceName,
-                    bounds.X, // x
-                    bounds.Y, // y
-                    bounds.Width, // w
-                    bounds.Height, // h
-                    1.0, // scaleMultiplier 
-                    1.0, // speedMultiplier
-                    10.0, // animationFps
-                    50.0, // baseEntitySize
-                    species, // speciesPaths
-                    assets // assetsPaths
-                );
+                Game game = new Game(screen.DeviceName, bounds);
 
                 // Add the persisted species to the game
                 foreach (var speciesId in selectedSpecies)
                 {
-                    game.AddEntity(speciesId);
+                    var entity = petsBuilder.Build(speciesId, bounds);
+                    if (entity != null) {
+                        game.AddEntity(entity);
+                    }
                 }
 
                 GameForm gameForm = new GameForm(30.0, game, false);
