@@ -1,0 +1,30 @@
+{
+    "animations": [
+        {
+          "id": "front",
+          "position": "fromEntityBottomLeft",
+          "requiredLoops": 5
+        }
+    ],
+    "capabilities": [
+        "AnimatedSprite",
+        "AnimationsProvider",
+        "AutoRespawn",
+        "Draggable",
+        "LinearMovement",
+        "PetsSpritesProvider",
+        "AnimationsScheduler",
+        "Rotating",
+        "ShowsMenuOnRightClick",
+        "WallCrawler"
+    ],
+    "dragPath": "front",
+    "fps": 10,
+    "zIndex": 0,
+    "tags": ["sneakbit"],
+    "id": "sneakbitmonster_strawberry",
+    "movementPath": "walk",
+    "scale": 1,
+    "speed": 0.9
+  }
+  

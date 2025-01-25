@@ -1,0 +1,61 @@
+{
+    "animations": [
+      {
+        "id": "front",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 5
+      },
+      {
+        "id": "lateral",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 5
+      },
+      {
+        "id": "swingback",
+        "position": "fromEntityBottomLeft",
+        "size": [
+          3,
+          3
+        ]
+      },
+      {
+        "id": "swingfront",
+        "position": "fromEntityBottomLeft",
+        "size": [
+          3,
+          3
+        ]
+      },
+      {
+        "id": "swinglateral",
+        "position": "fromEntityBottomLeft",
+        "size": [
+          3,
+          3
+        ]
+      }
+    ],
+    "capabilities": [
+      "AnimatedSprite",
+      "AnimationsProvider",
+      "AutoRespawn",
+      "BounceOnLateralCollisions",
+      "Draggable",
+      "FlipHorizontallyWhenGoingLeft",
+      "Gravity",
+      "LinearMovement",
+      "PetsSpritesProvider",
+      "AnimationsScheduler",
+      "Rotating",
+      "ShowsMenuOnRightClick"
+    ],
+    "dragPath": "front",
+    "fps": 10,
+    "zIndex": 0,
+    "tags": ["sneakbit"],
+    "id": "sneakbithero",
+    "movementPath": "walk",
+    "speed": 2.0,
+    "scale": 0.5
+  }
+  

@@ -1,0 +1,49 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft"
+    },
+    {
+      "id": "bored",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 15
+    },
+    {
+      "id": "talking",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 2
+    },
+    {
+      "id": "staring",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 15
+    },
+    {
+      "id": "shouting",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 2
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["memes"],
+  "id": "cromulon",
+  "movementPath": "front",
+  "speed": 0.6
+}

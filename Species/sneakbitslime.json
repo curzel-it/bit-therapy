@@ -1,0 +1,24 @@
+{
+    "animations": [],
+    "capabilities": [
+        "AnimatedSprite",
+        "AnimationsProvider",
+        "AutoRespawn",
+        "Draggable",
+        "LinearMovement",
+        "PetsSpritesProvider",
+        "AnimationsScheduler",
+        "Rotating",
+        "ShowsMenuOnRightClick",
+        "WallCrawler"
+    ],
+    "dragPath": "front",
+    "fps": 10,
+    "zIndex": 0,
+    "tags": ["sneakbit"],
+    "id": "sneakbitslime",
+    "movementPath": "walk",
+    "scale": 0.5,
+    "speed": 0.7
+  }
+  

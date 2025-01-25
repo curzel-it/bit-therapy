@@ -1,0 +1,22 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "Draggable",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick",
+    "WallCrawler"
+  ],
+  "dragPath": "front",
+  "fps": 1,
+  "zIndex": 0,
+  "tags": ["memes"],
+  "id": "snail_nicky",
+  "movementPath": "front",
+  "speed": 0.2
+}

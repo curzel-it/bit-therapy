@@ -1,0 +1,47 @@
+{
+    "animations": [
+        {
+          "id": "charging",
+          "position": "fromEntityBottomLeft",
+          "requiredLoops": 40
+        },
+        {
+          "id": "front",
+          "position": "fromEntityBottomLeft",
+          "requiredLoops": 10
+        },
+        {
+          "id": "window_shatters",
+          "position": "fromEntityBottomLeft",
+          "requiredLoops": 1
+        },
+        {
+          "id": "semaphore",
+          "position": "fromEntityBottomLeft",
+          "requiredLoops": 1
+        }
+    ],
+    "capabilities": [
+      "AnimatedSprite",
+      "AnimationsProvider",
+      "AutoRespawn",
+      "BounceOnLateralCollisions",
+      "Draggable",
+      "FlipHorizontallyWhenGoingLeft",
+      "Gravity",
+      "LinearMovement",
+      "PetsSpritesProvider",
+      "AnimationsScheduler",
+      "Rotating",
+      "ShowsMenuOnRightClick"
+    ],
+    "dragPath": "front",
+    "fps": 10,
+    "scale": 2,
+    "zIndex": 0,
+    "tags": ["memes"],
+    "id": "cybertruck",
+    "movementPath": "walk",
+    "speed": 1.65
+  }
+  

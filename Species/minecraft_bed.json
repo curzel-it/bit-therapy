@@ -1,0 +1,24 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "Draggable",
+    "Gravity",
+    "PetsSpritesProvider",
+    "LinearMovement",
+    "ShowsMenuOnRightClick",
+    "SleepingPlace"
+  ],
+  "dragPath": "front",
+  "fps": 0.5,
+  "zIndex": -1,
+  "tags": ["memes"],
+  "id": "minecraft_bed",
+  "movementPath": "front",
+  "speed": 0,
+  "params": {
+      "sleepOffsetY": "22"
+  }
+}

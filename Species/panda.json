@@ -1,0 +1,66 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 3
+    },
+    {
+      "id": "idle",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 2
+    },
+    {
+      "id": "eat",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
+    },
+    {
+      "id": "love",
+      "position": "fromEntityBottomLeft"
+    },
+    {
+      "id": "backflip",
+      "position": "fromEntityBottomLeft"
+    },
+    {
+      "id": "meditate",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 20
+    },
+    {
+      "id": "selfie",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 3
+    },
+    {
+      "id": "lightsaber",
+      "position": "fromEntityBottomLeft",
+      "size": [
+        1.42,
+        1.2
+      ]
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["forest"],
+  "id": "panda",
+  "movementPath": "walk",
+  "speed": 0.8
+}

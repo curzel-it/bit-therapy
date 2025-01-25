@@ -1,0 +1,53 @@
+{
+  "animations": [
+    {
+      "id": "bombing",
+      "position": "fromEntityBottomLeft",
+      "size": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "landing",
+      "position": "fromEntityBottomLeft"
+    },
+    {
+      "id": "portal",
+      "position": "fromEntityBottomLeft",
+      "size": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "crash",
+      "position": "fromEntityBottomLeft",
+      "size": [
+        2,
+        1
+      ]
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["memes"],
+  "id": "ufo",
+  "movementPath": "front",
+  "speed": 2
+}

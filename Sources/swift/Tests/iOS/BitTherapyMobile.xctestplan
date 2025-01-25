@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "1A2ED1C9-0DC8-4437-B2E8-BC923CC678CC",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BitTherapy.xcodeproj",
+        "identifier" : "1EF863F729B22DD500413AEA",
+        "name" : "BitTherapyMobile Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:BitTherapy.xcodeproj",
+        "identifier" : "1EF8640129B22DD500413AEA",
+        "name" : "BitTherapyMobile UITests"
+      }
+    }
+  ],
+  "version" : 1
+}

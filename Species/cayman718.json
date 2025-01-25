@@ -1,0 +1,31 @@
+{
+  "animations": [
+    {
+      "id": "semaphore",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 1
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "front",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["memes"],
+  "id": "cayman718",
+  "movementPath": "walk",
+  "speed": 1.7,
+  "scale": 1.5
+}

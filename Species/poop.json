@@ -1,0 +1,46 @@
+{
+  "animations": [
+      {
+        "id": "front",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 10
+      },
+      {
+        "id": "smell",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 10
+      },
+      {
+        "id": "talk",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 20
+      },
+      {
+        "id": "power",
+        "position": "fromEntityBottomLeft",
+        "requiredLoops": 10
+      }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "AnimationsScheduler",
+    "Rotating",
+    "ShowsMenuOnRightClick",
+    "LeavesPoopStains"
+  ],
+  "dragPath": "drag",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["memes"],
+  "id": "poop",
+  "movementPath": "walk",
+  "speed": 0.65
+}

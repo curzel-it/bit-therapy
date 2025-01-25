@@ -1,0 +1,88 @@
+[
+    {
+        "name": "Curzel-it",
+        "roles": ["owner", "artist"],
+        "link": "https://www.youtube.com/@HiddenMugs",
+        "thumbnail": "contributor_urinamara",
+        "pets": ["ape", "cat_floppa", "cat_grumpy", "frog", "german", "mushroom_amanita", "mushroomwizard", "sheep", "snail", "ufo"]
+    },
+    {
+        "name": "Catknow",
+        "roles": ["artist", "translator"],
+        "link": "https://space.bilibili.com/889964",
+        "thumbnail": "contributor_catknow",
+        "pets": ["keqing", "raiden", "klee"]
+    },
+    {
+        "name": "Jayped",
+        "roles": ["artist"],
+        "link": "https://linktr.ee/Jayped",
+        "thumbnail": "contributor_jayped",
+        "pets": ["sloth", "crow", "crow_white", "koala", "panda", "betta"]
+    },
+    {
+        "name": "Chaz",
+        "roles": ["artist"],
+        "link": "https://twitter.com/chamorr__",
+        "thumbnail": "contributor_chaz",
+        "pets": ["jeansbear"]
+    },
+    {
+        "name": "Dimitirinhas",
+        "roles": ["artist"],
+        "thumbnail": "contributor_dimitirinhas",
+        "pets": ["trex", "trex_violet", "trex_blue", "trex_yellow", "cat", "cromulon", "cromulon_pink"]
+    },
+    {
+        "name": "Curren",
+        "roles": ["artist"],
+        "link": "https://curren.carrd.co/",
+        "thumbnail": "contributor_curren",
+        "pets": ["milo"]
+    },
+    {
+        "name": "Marwan",
+        "roles": ["artist"],
+        "link": "https://www.instagram.com/mar_vvan",
+        "thumbnail": "contributor_marwan",
+        "pets": ["cayman718", "pikachu"]
+    },
+    {
+        "name": "Leo",
+        "roles": ["translator"],
+        "thumbnail": "contributor_leo728",
+        "link": "https://leoze.top/"
+    },
+    {
+        "name": "Solomanolo",
+        "roles": ["translator"],
+        "thumbnail": "contributor_solomanolo"
+    },
+    {
+        "name": "Just Vlad",
+        "roles": ["translator"],
+        "thumbnail": "contributor_justvlad"
+    },
+    {
+        "name": "Bicus",
+        "roles": ["translator"],
+        "thumbnail": "contributor_bicus"
+    },
+    {
+        "name": "Jab",
+        "roles": ["translator"],
+        "link": "https://linktr.ee/agentpie",
+        "thumbnail": "contributor_jab"
+    },
+    {
+        "name": "Cat Man",
+        "roles": ["artist"],
+        "thumbnail": "contributor_catman",
+        "pets": ["cat", "cat_pinky", "cat_green", "cat_strawberry"]
+    },
+    {
+        "name": "Laksaersa",
+        "roles": ["translator"]
+    }
+    
+]

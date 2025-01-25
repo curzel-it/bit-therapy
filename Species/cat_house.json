@@ -1,0 +1,21 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "Draggable",
+    "Gravity",
+    "PetsSpritesProvider",
+    "LinearMovement",
+    "ShowsMenuOnRightClick",
+    "SleepingPlace"
+  ],
+  "dragPath": "front",
+  "fps": 0.5,
+  "zIndex": 100,
+  "tags": ["cats"],
+  "id": "cat_house",
+  "movementPath": "front",
+  "speed": 0
+}

@@ -1,0 +1,26 @@
+disabled_rules:
+  - trailing_whitespace
+  - trailing_newline
+
+excluded:
+  - EZAudio
+  - fastlane
+  - MappingLib2
+  - Pods
+  - S3
+
+identifier_name:
+  excluded:
+    - x
+    - y
+    - dx
+    - dy
+    - vm
+    - id
+    - xl
+    - lg
+    - md
+    - sm
+    - xs
+    - no
+    - ok

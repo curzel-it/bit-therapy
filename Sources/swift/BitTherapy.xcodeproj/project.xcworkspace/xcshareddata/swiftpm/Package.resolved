@@ -1,0 +1,78 @@
+{
+  "originHash" : "cc791f1adf525c1deb172c17c45ff3cb8861beeae9940a0e8a6d4af0dd0ad9f0",
+  "pins" : [
+    {
+      "identity" : "barebones",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/barebones",
+      "state" : {
+        "revision" : "3c0d647c8be47247aaeaafc41acfc0e538cdf716",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "launchatlogin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin",
+      "state" : {
+        "revision" : "e8171b3e38a2816f579f58f3dac1522aa39efe41",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "notagif",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/NotAGif",
+      "state" : {
+        "revision" : "cdcff2cd114aac80724b562cd5305df04a7b9995",
+        "version" : "1.0.8"
+      }
+    },
+    {
+      "identity" : "ratekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/RateKit",
+      "state" : {
+        "revision" : "017437decc247e675186d60b4d1cee0d971dd41e",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "schwifty",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/schwifty",
+      "state" : {
+        "revision" : "ae4b35c9ab87ca3468a5d53fe2875fe9a3aa0ec4",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject",
+      "state" : {
+        "revision" : "463cb2d659c8ae34899d18057ea5b1bb86fc3178",
+        "version" : "2.8.4"
+      }
+    },
+    {
+      "identity" : "windowsdetector",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/curzel-it/WindowsDetector",
+      "state" : {
+        "revision" : "9649d329e30e692c32787dfb022119d0f6b173e8",
+        "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "a3f5c2bae0f04b0bce9ef3c4ba6bd1031a0564c4",
+        "version" : "0.9.17"
+      }
+    }
+  ],
+  "version" : 3
+}
