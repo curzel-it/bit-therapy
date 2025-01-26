@@ -1,6 +1,7 @@
 "about.leaveReview" = "留下评论";
 "about.leaveReviewMessage" = "通过留下免费的评论来支持我们！\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "隐私条款";
+"about.termsAndConditions" = "Terms and Conditions";
 "appName" = "桌面宠物";
 "backgrounds.BackgroundMountainDay" = "山，早上";
 "backgrounds.BackgroundMountainDynamic" = "山";
@@ -236,6 +237,7 @@
 "urls.donations" = "https://www.patreon.com/urinamara";
 "urls.github" = "https://github.com/curzel-it/bit-therapy";
 "urls.privacy" = "https://curzel.it/privacy.html";
+"urls.tncs" = "https://curzel.it/terms-and-conditions.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.twitter" = "https://twitter.com/HiddenMugs";
 "urls.youtube" = "https://www.youtube.com/@HiddenMugs";

@@ -22,6 +22,7 @@ enum Lang {
         static let leaveReview = "about.leaveReview".localized()
         static let leaveReviewMessage = "about.leaveReviewMessage".localized()
         static let privacyPolicy = "about.privacyPolicy".localized()
+        static let termsAndConditions = "about.termsAndConditions".localized()
     }
 
     enum Backgrounds {
@@ -147,6 +148,7 @@ enum Lang {
         static let donations = "urls.donations".localized()
         static let github = "urls.github".localized()
         static let privacy = "urls.privacy".localized()
+        static let termsAndConditions = "urls.tncs".localized()
         static let reddit = "urls.reddit".localized()
         static let twitter = "urls.twitter".localized()
         static let youtube = "urls.youtube".localized()

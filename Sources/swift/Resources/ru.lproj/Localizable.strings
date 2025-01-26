@@ -1,6 +1,7 @@
 "about.leaveReview" = "Оставить отзыв";
 "about.leaveReviewMessage" = "Поддержите нас бесплатно, оставив отзыв! \N⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Политика конфиденциальности";
+"about.termsAndConditions" = "Terms and Conditions";
 "appName" = "Настольные питомцы";
 "backgrounds.BackgroundMountainDay" = "Гора, дневная";
 "backgrounds.BackgroundMountainDynamic" = "Гора";
@@ -236,6 +237,7 @@
 "urls.donations" = "https://www.patreon.com/urinamara";
 "urls.github" = "https://github.com/curzel-it/bit-therapy";
 "urls.privacy" = "https://curzel.it/privacy.html";
+"urls.tncs" = "https://curzel.it/terms-and-conditions.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.twitter" = "https://twitter.com/HiddenMugs";
 "urls.youtube" = "https://www.youtube.com/@HiddenMugs";

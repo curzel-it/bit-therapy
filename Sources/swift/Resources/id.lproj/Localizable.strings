@@ -1,6 +1,7 @@
 "about.leaveReview" = "Tinggalkan review";
 "about.leaveReviewMessage" = "Dukung kami secara gratis dengan memberikan ulasan!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Kebijakan Privasi";
+"about.termsAndConditions" = "Terms and Conditions";
 "appName" = "Desktop Pets";
 "backgrounds.BackgroundMountainDay" = "Gunung, Hari";
 "backgrounds.BackgroundMountainDynamic" = "Gunung";
@@ -236,6 +237,7 @@
 "urls.donations" = "https://www.patreon.com/urinamara";
 "urls.github" = "https://github.com/curzel-it/bit-therapy";
 "urls.privacy" = "https://curzel.it/privacy.html";
+"urls.tncs" = "https://curzel.it/terms-and-conditions.html";
 "urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
 "urls.twitter" = "https://twitter.com/HiddenMugs";
 "urls.youtube" = "https://www.youtube.com/@HiddenMugs";

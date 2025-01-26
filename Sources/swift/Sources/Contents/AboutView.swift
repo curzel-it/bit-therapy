@@ -14,6 +14,7 @@ struct AboutView: View {
                 RestorePurchasesButton().padding(.vertical)
                 Socials()
                 PrivacyPolicy()
+                TermsAndConditions()
                 AppVersion()
             }
             .multilineTextAlignment(.center)
@@ -47,6 +48,15 @@ private struct PrivacyPolicy: View {
     var body: some View {
         Button(Lang.About.privacyPolicy) {
             URL.visit(urlString: Lang.Urls.privacy)
+        }
+        .buttonStyle(.text)
+    }
+}
+
+private struct TermsAndConditions: View {
+    var body: some View {
+        Button(Lang.About.termsAndConditions) {
+            URL.visit(urlString: Lang.Urls.termsAndConditions)
         }
         .buttonStyle(.text)
     }
