@@ -253,3 +253,8 @@
 "youtube.cybertruckMessage" = "In all it's polygonal glory, you won't even notice it's pixel art!\nAs a thanks, why not watch a super cringe video starring the Cybertruck on my YouTube channel?";
 "youtube.cybertruckAction" = "Watch video";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";
+
+"species.name.bunnym" = "Bunny";
+"species.about.bunnym" = "🐰♂";
+"species.name.bunnyf" = "Bunny";
+"species.about.bunnyf" = "🐰♀";

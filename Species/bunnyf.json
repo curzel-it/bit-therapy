@@ -1,0 +1,41 @@
+{
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
+    },
+    {
+      "id": "eat",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
+    },
+    {
+      "id": "sleep",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 20
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AnimationsScheduler",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "scale": 1.33,
+  "dragPath": "fall",
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["forest", "supporters-only"],
+  "id": "bunnyf",
+  "movementPath": "walk",
+  "speed": 1.0
+}
