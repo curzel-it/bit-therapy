@@ -23,25 +23,27 @@ private struct ExportSpeciesButton: View {
     @StateObject var viewModel: ExportSpeciesButtonViewModel
 
     var body: some View {
-        IconButton(systemName: viewModel.icon, action: viewModel.export)
-            .sheet(isPresented: viewModel.isAlertShown) {
-                VStack(spacing: .zero) {
-                    if let title = viewModel.title {
-                        Text(title).padding(.top, .lg)
+        if viewModel.isAvailable {
+            IconButton(systemName: viewModel.icon, action: viewModel.export)
+                .sheet(isPresented: viewModel.isAlertShown) {
+                    VStack(spacing: .zero) {
+                        if let title = viewModel.title {
+                            Text(title).padding(.top, .lg)
+                        }
+                        Text(viewModel.message ?? "")
+                            .padding(.top, .lg)
+                            .padding(.bottom, .lg)
+                        HStack {
+                            Button(Lang.CustomPets.readTheDocs, action: viewModel.readTheDocs)
+                                .buttonStyle(.text)
+                            
+                            Button(Lang.ok, action: viewModel.clearMessages)
+                                .buttonStyle(.regular)
+                        }
                     }
-                    Text(viewModel.message ?? "")
-                        .padding(.top, .lg)
-                        .padding(.bottom, .lg)
-                    HStack {
-                        Button(Lang.CustomPets.readTheDocs, action: viewModel.readTheDocs)
-                            .buttonStyle(.text)
-
-                        Button(Lang.ok, action: viewModel.clearMessages)
-                            .buttonStyle(.regular)
-                    }
+                    .padding(.md)
                 }
-                .padding(.md)
-            }
+        }
     }
 }
 
@@ -52,11 +54,13 @@ private class ExportSpeciesButtonViewModel: ObservableObject {
     @Inject var exportPetUseCase: ExportPetUseCase
 
     let icon = "square.and.arrow.up.on.square"
+    let isAvailable: Bool
 
     private let species: Species
 
     init(species: Species) {
         self.species = species
+        self.isAvailable = !species.tags.contains("supporters-only")
     }
 
     lazy var isAlertShown: Binding<Bool> = Binding(
