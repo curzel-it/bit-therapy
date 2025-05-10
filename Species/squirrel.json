@@ -1,0 +1,36 @@
+{
+  "animations": [
+    {
+      "id": "idle",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 10
+    },
+    {
+      "id": "sleep",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 20
+    }
+  ],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AnimationsScheduler",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "dragPath": "drag",
+  "scale": 1,
+  "fps": 10,
+  "zIndex": 0,
+  "tags": ["forest", "supporters-only"],
+  "id": "squirrel",
+  "movementPath": "walk",
+  "speed": 2.0
+}
