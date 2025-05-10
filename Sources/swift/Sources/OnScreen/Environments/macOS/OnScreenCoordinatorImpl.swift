@@ -8,32 +8,34 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     private var windows: [NSWindow] = []
     private let windowsProvider = WorldWindowsProvider()
     private let tag = "OnScreen"
-
+    
+    func togglePetsVisibility() {
+        if arePetsVisible() {
+            hide()
+        } else {
+            show()
+        }
+    }
+    
     func show() {
         hide()
         Logger.log(tag, "Starting...")
         loadWorlds()
         spawnWindows()
     }
-
-    private func loadWorlds() {
-        worlds = Screen.screens
-            .filter { appConfig.isEnabled(screen: $0) }
-            .map { ScreenEnvironment(for: $0) }
-    }
-
-    func animate(petId: String, actionId: String, position: CGPoint?) {
-        worlds.forEach {
-            $0.animate(id: petId, action: actionId, position: position)
-        }
-    }
-
+    
     func hide() {
         Logger.log(tag, "Hiding everything...")
         worlds.forEach { $0.kill() }
         worlds.removeAll()
         windows.forEach { $0.close() }
         windows.removeAll()
+    }
+
+    func animate(petId: String, actionId: String, position: CGPoint?) {
+        worlds.forEach {
+            $0.animate(id: petId, action: actionId, position: position)
+        }
     }
 
     func remove(species: Species) {
@@ -43,6 +45,16 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
     private func spawnWindows() {
         windows = worlds.map { windowsProvider.window(representing: $0) }
         windows.forEach { $0.show() }
+    }
+    
+    private func arePetsVisible() -> Bool {
+        !worlds.isEmpty
+    }
+    
+    private func loadWorlds() {
+        worlds = Screen.screens
+            .filter { appConfig.isEnabled(screen: $0) }
+            .map { ScreenEnvironment(for: $0) }
     }
 }
 

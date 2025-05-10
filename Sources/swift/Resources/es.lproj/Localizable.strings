@@ -42,6 +42,7 @@
 "loading" = "Cargando...";
 "menu.about" = "Acerca de";
 "menu.followMouse" = "Seguir el raton On/Off";
+"menu.toggle" = "Ocultar/Mostrar mascota";
 "menu.hide" = "Ocultar mascota";
 "menu.hideAllPet" = "Ocultar todas las mascotas";
 "menu.hideThisPet" = "Oculta esta mascota";

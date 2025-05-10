@@ -42,6 +42,7 @@
 "loading" = "Loading...";
 "menu.about" = "About";
 "menu.followMouse" = "Toggle follow mouse";
+"menu.toggle" = "Hide/Show Pets";
 "menu.hide" = "Hide Pet";
 "menu.hideAllPet" = "Hide all pets";
 "menu.hideThisPet" = "Hide this pet";
