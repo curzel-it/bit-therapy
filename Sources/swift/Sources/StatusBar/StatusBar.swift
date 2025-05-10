@@ -23,10 +23,10 @@ class StatusBarCoordinator {
 
     private func buildMenu() -> NSMenu {
         let menu = NSMenu(title: Lang.appName)
+        
         menu.items = [
             buildItem(key: .home, action: #selector(showHome)),
-            buildItem(key: .hide, action: #selector(hidePets)),
-            buildItem(key: .show, action: #selector(showPets)),
+            buildItem(key: .toggle, action: #selector(togglePets)),
             buildItem(key: .quit, action: #selector(closeApp))
         ]
         return menu
@@ -44,15 +44,13 @@ class StatusBarCoordinator {
     }
 
     @objc private func showHome() { MainScene.show() }
-    @objc private func hidePets() { onScreen.hide() }
-    @objc private func showPets() { onScreen.show() }
+    @objc private func togglePets() { onScreen.togglePetsVisibility() }
     @objc private func closeApp() { NSApp.terminate(self) }
 }
 
 private enum MenuItem: String {
     case home
-    case hide
-    case show
+    case toggle
     case quit
 
     var name: String {

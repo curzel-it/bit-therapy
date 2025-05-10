@@ -6,12 +6,8 @@ class OnScreenCoordinatorImpl: OnScreenCoordinator {
 
     private let tag = "OnScreen"
 
-    func show() {
-        Logger.log(tag, "Not supported on mobile.")
-    }
-
-    private func loadWorlds() {}
-
+    func togglePetsVisibility() {}
+    func show() {}
     func hide() {}
 
     func remove(species: Species) {}

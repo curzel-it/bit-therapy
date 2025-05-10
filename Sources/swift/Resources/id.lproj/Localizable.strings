@@ -42,6 +42,7 @@
 "loading" = "Memuat...";
 "menu.about" = "Tentang";
 "menu.followMouse" = "Alihkan ikuti mouse";
+"menu.toggle" = "Hide/Show Peliharaan";
 "menu.hide" = "Sembunyikan Peliharaan";
 "menu.hideAllPet" = "Sembunyikan semua peliharaan";
 "menu.hideThisPet" = "Hapus peliharaan ini";

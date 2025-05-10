@@ -42,6 +42,7 @@
 "loading" = "Загрузка...";
 "menu.about" = "О проекте";
 "menu.followMouse" = "Вкл/Выкл Следить за мышью";
+"menu.toggle" = "скрыть/показать питомцев";
 "menu.hide" = "Скрыть питомнца";
 "menu.hideAllPet" = "Скрыть всех питомнцев";
 "menu.hideThisPet" = "Скрыть этого питомца";
