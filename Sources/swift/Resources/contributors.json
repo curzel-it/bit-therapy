@@ -48,10 +48,36 @@
         "pets": ["cayman718", "pikachu"]
     },
     {
+        "name": "Sinna",
+        "thumbnail": "contributor_sinna",
+        "link": "mailto:matess774084997@yahoo.com",
+        "roles": ["artist"],
+        "pets": ["strawberryhouse", "lattehouse"]
+    },
+    {
+        "name": "Ryleigh",
+        "thumbnail": "contributor_ryleigh_newman",
+        "link": "https://funnycowjokes.com",
+        "roles": ["artist"],
+        "pets": ["rysblueydawg"]
+    },
+    {
         "name": "Leo",
         "roles": ["translator"],
         "thumbnail": "contributor_leo728",
         "link": "https://leoze.top/"
+    },
+    {
+        "name": "Jab",
+        "roles": ["translator"],
+        "link": "https://linktr.ee/agentpie",
+        "thumbnail": "contributor_jab"
+    },
+    {
+        "name": "Cat Man",
+        "roles": ["artist"],
+        "thumbnail": "contributor_catman",
+        "pets": ["cat", "cat_pinky", "cat_green", "cat_strawberry"]
     },
     {
         "name": "Solomanolo",
@@ -69,20 +95,7 @@
         "thumbnail": "contributor_bicus"
     },
     {
-        "name": "Jab",
-        "roles": ["translator"],
-        "link": "https://linktr.ee/agentpie",
-        "thumbnail": "contributor_jab"
-    },
-    {
-        "name": "Cat Man",
-        "roles": ["artist"],
-        "thumbnail": "contributor_catman",
-        "pets": ["cat", "cat_pinky", "cat_green", "cat_strawberry"]
-    },
-    {
         "name": "Laksaersa",
         "roles": ["translator"]
     }
-    
 ]

@@ -1,0 +1,23 @@
+{
+  "animations": [],
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AutoRespawn",
+    "Draggable",
+    "Gravity",
+    "PetsSpritesProvider",
+    "LinearMovement",
+    "ShowsMenuOnRightClick",
+    "SleepingPlace"
+  ],
+  "dragPath": "front",
+  "fps": 0.5,
+  "zIndex": 100,
+  "tags": ["cats"],
+  "id": "strawberryhouse",
+  "movementPath": "front",
+  "speed": 0,
+  "scale": 0.5
+  
+}
