@@ -1,0 +1,37 @@
+{
+    "animations": [
+        {
+          "id": "charging",
+          "position": "fromEntityBottomLeft",
+          "requiredLoops": 40
+        },
+        {
+          "id": "semaphore",
+          "position": "fromEntityBottomLeft",
+          "requiredLoops": 1
+        }
+    ],
+    "capabilities": [
+      "AnimatedSprite",
+      "AnimationsProvider",
+      "AutoRespawn",
+      "BounceOnLateralCollisions",
+      "Draggable",
+      "FlipHorizontallyWhenGoingLeft",
+      "Gravity",
+      "LinearMovement",
+      "PetsSpritesProvider",
+      "AnimationsScheduler",
+      "Rotating",
+      "ShowsMenuOnRightClick"
+    ],
+    "dragPath": "front",
+    "fps": 10,
+    "scale": 1,
+    "zIndex": 0,
+    "tags": ["memes"],
+    "id": "teslamodel3",
+    "movementPath": "walk",
+    "speed": 1.65
+  }
+  
